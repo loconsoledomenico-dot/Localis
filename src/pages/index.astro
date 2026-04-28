@@ -1,17 +1,50 @@
 ---
-
+import '../styles/global.css';
 ---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localis — design tokens preview</title>
+</head>
+<body>
+  <main class="max-w-wrap mx-auto px-md py-2xl">
+    <h1 class="font-display text-4xl mb-md">Design tokens preview</h1>
+    <p class="text-base text-ink-muted mb-xl max-w-prose">
+      Verifica visiva palette + typography + spacing. Pagina temporanea, sostituita in Milestone B con homepage reale.
+    </p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <section class="mb-2xl">
+      <h2 class="font-display text-3xl mb-lg">Colori</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-md">
+        <div class="p-md bg-surface border border-border rounded-md">surface</div>
+        <div class="p-md bg-surface-elev border border-border rounded-md">surface-elev</div>
+        <div class="p-md bg-ink text-surface rounded-md">ink</div>
+        <div class="p-md bg-accent text-surface rounded-md">accent</div>
+        <div class="p-md text-link border border-link rounded-md">link</div>
+        <div class="p-md text-ink-muted border border-border rounded-md">ink-muted</div>
+      </div>
+    </section>
+
+    <section class="mb-2xl">
+      <h2 class="font-display text-3xl mb-lg">Type scale</h2>
+      <div class="space-y-md">
+        <p class="font-display text-5xl">Display 5xl · Spectral</p>
+        <p class="font-display text-4xl">Heading 4xl · h1 hero</p>
+        <p class="font-display text-3xl">Heading 3xl · h2</p>
+        <p class="font-display text-2xl">Heading 2xl · h3</p>
+        <p class="text-lg">Lead body · Schibsted Grotesk</p>
+        <p class="text-base">Body 16px regular</p>
+        <p class="text-sm text-ink-muted">Secondary text 14px</p>
+        <p class="text-xs uppercase tracking-[0.22em] text-accent font-semibold">Eyebrow label</p>
+      </div>
+    </section>
+
+    <section class="mb-2xl">
+      <h2 class="font-display text-3xl mb-lg">Italic narrative</h2>
+      <p class="font-display text-2xl italic text-accent">Mentre sei lì.</p>
+    </section>
+  </main>
+</body>
 </html>
