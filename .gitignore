@@ -1,0 +1,44 @@
+# Node
+node_modules/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Astro
+dist/
+.astro/
+
+# Env vars (never commit)
+.env
+.env.local
+.env.production
+.env.development
+!.env.example
+
+# Build / deploy
+.netlify/
+.vercel/
+.turbo/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Brainstorming artifacts (local-only)
+.superpowers/
+
+# Existing legacy static site (replaced in Milestone B)
+/index.html
+/bari-vecchia-audioguida-v2.html
+/il-meglio-di-bari-audioguida.html
+/porto-bari-audioguida.html
+/san-nicola-audioguida-completa.html
+/tre-teatri-bari-audioguida.html
+/*.mp3
+/*.jpg
