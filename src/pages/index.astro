@@ -1,42 +1,94 @@
 ---
 import Layout from '../components/Layout.astro';
+import Hero from '../components/Hero.astro';
+import GuideCard from '../components/GuideCard.astro';
+import TrailerPlayer from '../components/TrailerPlayer.astro';
+import PriceCard from '../components/PriceCard.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+import { getCollection } from 'astro:content';
+
+const guides = (await getCollection('guides'))
+  .filter((g) => g.data.city === 'bari')
+  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
+
+const liveGuides = guides.filter((g) => g.data.status === 'live');
+
+const featuredTrailer = liveGuides[0]; // Bari Vecchia
 ---
-<Layout title="Localis — design tokens preview" lang="it">
-  <main class="max-w-wrap mx-auto px-md py-2xl">
-    <h1 class="font-display text-4xl mb-md">Design tokens preview</h1>
-    <p class="text-base text-ink-muted mb-xl max-w-prose">
-      Verifica visiva palette + typography + spacing. Pagina temporanea, sostituita in Milestone B.
+<Layout
+  title="Localis — audioguide narrative della Puglia"
+  description="Audioguide narrative di Bari e Puglia. Storie vere, senza app. Per sempre tue. €4.99 a guida."
+  lang="it"
+>
+  <Hero lang="it" />
+
+  <section class="max-w-narrow mx-auto px-md py-2xl">
+    <SectionDivider label="Prima di decidere, ascolta questo" />
+    {featuredTrailer && (
+      <TrailerPlayer
+        src={featuredTrailer.data.audio_trailer_path}
+        label={`~${Math.round(60)}s · ${featuredTrailer.data.title_it.split('—')[0].trim()}`}
+        lang="it"
+      />
+    )}
+    <p class="text-center font-display italic text-2xl text-ink-muted mt-lg max-w-prose mx-auto">
+      "Fermati. Guarda il mare davanti a te. Questo non è uno sfondo. È il posto dove tutto è successo davvero."
     </p>
+  </section>
 
-    <section class="mb-2xl">
-      <h2 class="font-display text-3xl mb-lg">Colori</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-md">
-        <div class="p-md bg-surface border border-border rounded-md">surface</div>
-        <div class="p-md bg-surface-elev border border-border rounded-md">surface-elev</div>
-        <div class="p-md bg-ink text-surface rounded-md">ink</div>
-        <div class="p-md bg-accent text-surface rounded-md">accent</div>
-        <div class="p-md text-link border border-link rounded-md">link</div>
-        <div class="p-md text-ink-muted border border-border rounded-md">ink-muted</div>
-      </div>
-    </section>
+  <section id="guide" class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Scegli la tua esperienza" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+      {guides.map((g, i) => (
+        <GuideCard guide={g} lang="it" index={i} />
+      ))}
+    </div>
+  </section>
 
-    <section class="mb-2xl">
-      <h2 class="font-display text-3xl mb-lg">Type scale</h2>
-      <div class="space-y-md">
-        <p class="font-display text-5xl">Display 5xl · Spectral</p>
-        <p class="font-display text-4xl">Heading 4xl · h1 hero</p>
-        <p class="font-display text-3xl">Heading 3xl · h2</p>
-        <p class="font-display text-2xl">Heading 2xl · h3</p>
-        <p class="text-lg">Lead body · Schibsted Grotesk</p>
-        <p class="text-base">Body 16px regular</p>
-        <p class="text-sm text-ink-muted">Secondary text 14px</p>
-        <p class="text-xs uppercase tracking-[0.22em] text-accent font-semibold">Eyebrow label</p>
-      </div>
-    </section>
+  <section class="max-w-narrow mx-auto px-md py-2xl text-center">
+    <p class="font-display italic text-3xl text-ink mb-md">
+      Queste non sono guide turistiche.
+    </p>
+    <p class="text-base text-ink-muted leading-relaxed max-w-prose mx-auto">
+      Non troverai indicazioni su dove mangiare o cosa evitare. Qui ascolti storie vere, costruite sui luoghi reali della città. E mentre ascolti, sei esattamente lì dove tutto è successo.
+    </p>
+  </section>
 
-    <section class="mb-2xl">
-      <h2 class="font-display text-3xl mb-lg">Italic narrative</h2>
-      <p class="font-display text-2xl italic text-accent">Mentre sei lì.</p>
-    </section>
-  </main>
+  <section id="prezzi" class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Scegli il tuo piano" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-3xl mx-auto">
+      <PriceCard
+        product="single"
+        guideSlug="bari-vecchia"
+        lang="it"
+        features={[
+          '1 guida a scelta',
+          'Accesso illimitato',
+          'Senza app, dal browser',
+          'Italiano e inglese',
+        ]}
+      />
+      <PriceCard
+        product="bundle"
+        lang="it"
+        primary
+        features={[
+          'Bari Vecchia — Dentro la Città',
+          'Porto di Bari — Dove è Successo Tutto',
+          'San Nicola — Il Santo Rubato',
+          'Accesso illimitato · Senza app',
+        ]}
+      />
+    </div>
+  </section>
+
+  <section class="max-w-wrap mx-auto px-md py-3xl text-center">
+    <p class="font-display italic text-2xl text-ink-muted mb-xs">
+      Se vuoi visitare Bari, puoi farlo.
+    </p>
+    <p class="font-display text-3xl text-ink mb-lg">Se vuoi capirla, ascoltala.</p>
+    <a href="#guide" class="inline-flex items-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline">
+      Inizia il percorso →
+    </a>
+  </section>
 </Layout>
