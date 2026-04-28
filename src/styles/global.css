@@ -85,6 +85,8 @@
 
   /* === Animation duration === */
   --duration-fast: 150ms;
+  --duration-med: 250ms;
+  --duration-slow: 600ms;
 }
 
 /* === Custom utilities for layout containers ===
@@ -110,6 +112,16 @@
 @utility duration-fast {
   --tw-duration: var(--duration-fast);
   transition-duration: var(--duration-fast);
+}
+
+@utility duration-med {
+  --tw-duration: var(--duration-med);
+  transition-duration: var(--duration-med);
+}
+
+@utility duration-slow {
+  --tw-duration: var(--duration-slow);
+  transition-duration: var(--duration-slow);
 }
 
 /* === Base layer: resets and intentional defaults === */

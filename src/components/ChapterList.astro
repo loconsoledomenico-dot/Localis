@@ -1,0 +1,29 @@
+---
+import { formatDuration } from '../lib/format';
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  chapters: Array<{
+    title_it: string;
+    title_en: string;
+    start_seconds: number;
+  }>;
+  lang: Lang;
+}
+
+const { chapters, lang } = Astro.props;
+---
+<ol class="flex flex-col gap-sm">
+  {chapters.map((ch, i) => {
+    const title = lang === 'it' ? ch.title_it : ch.title_en;
+    const time = formatDuration(ch.start_seconds, 'long');
+    const num = String(i + 1).padStart(2, '0');
+    return (
+      <li class="flex items-baseline gap-md py-xs border-b border-border last:border-0">
+        <span class="font-display text-sm tabular-nums text-ink-subtle flex-shrink-0 w-6">{num}</span>
+        <span class="flex-1 text-base text-ink">{title}</span>
+        <span class="font-mono text-xs text-ink-subtle tabular-nums">{time}</span>
+      </li>
+    );
+  })}
+</ol>

@@ -1,0 +1,88 @@
+---
+import { formatPrice } from '../lib/format';
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  product: 'single' | 'bundle';
+  guideSlug?: string;
+  lang: Lang;
+  features: string[];
+  primary?: boolean;
+}
+
+const { product, guideSlug, lang, features, primary = false } = Astro.props;
+
+const isBundle = product === 'bundle';
+const priceCents = isBundle ? 999 : 499;
+const priceLabel = formatPrice(priceCents);
+
+const title = isBundle
+  ? lang === 'it' ? 'Bari completa' : 'Complete Bari'
+  : lang === 'it' ? 'Guida singola' : 'Single guide';
+
+const description = isBundle
+  ? lang === 'it'
+    ? 'Tutte le 3 guide live di Bari. Risparmi €4.98.'
+    : 'All 3 live Bari guides. Save €4.98.'
+  : lang === 'it'
+    ? 'Una guida a scelta, tua per sempre.'
+    : 'One guide of your choice, yours forever.';
+
+const ctaLabel = isBundle
+  ? lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari'
+  : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
+
+const productKey = isBundle ? 'bari-completa' : guideSlug;
+---
+<article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
+  <header>
+    {primary && (
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-xs">
+        {lang === 'it' ? 'Più scelto' : 'Most popular'}
+      </p>
+    )}
+    <h3 class="font-display text-2xl text-ink leading-tight">{title}</h3>
+    <p class="text-sm text-ink-muted mt-xs">{description}</p>
+  </header>
+
+  <div class="flex items-baseline gap-xs">
+    <span class="font-display text-4xl text-ink">{priceLabel}</span>
+    <span class="text-sm text-ink-muted">
+      {isBundle ? (lang === 'it' ? '/ 3 guide' : '/ 3 guides') : (lang === 'it' ? '/ guida' : '/ guide')}
+    </span>
+  </div>
+
+  <ul class="flex flex-col gap-xs">
+    {features.map((f) => (
+      <li class="text-sm text-ink-muted flex items-start gap-sm">
+        <span class="text-accent flex-shrink-0 mt-1">✦</span>
+        <span>{f}</span>
+      </li>
+    ))}
+  </ul>
+
+  <button
+    type="button"
+    class={`checkout-btn mt-auto px-md py-sm rounded-md font-semibold text-sm transition-colors duration-fast ${primary ? 'bg-ink text-surface hover:bg-ink/90' : 'border border-ink text-ink hover:bg-ink hover:text-surface'}`}
+    data-product={productKey}
+    data-lang={lang}
+  >
+    {ctaLabel} · {priceLabel}
+  </button>
+</article>
+
+<script>
+  // Stub: real checkout wired in Milestone C
+  document.querySelectorAll<HTMLButtonElement>('.checkout-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const product = btn.dataset.product;
+      const lang = btn.dataset.lang;
+      alert(
+        lang === 'it'
+          ? `Pagamento per "${product}" disponibile a breve. Stripe in arrivo nella prossima fase.`
+          : `Checkout for "${product}" available soon. Stripe arriving in next phase.`,
+      );
+    });
+  });
+</script>

@@ -1,0 +1,59 @@
+---
+import { type Lang } from '../lib/i18n';
+import Eyebrow from './Eyebrow.astro';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const eyebrow = lang === 'it' ? 'Audioguide narrative · Puglia' : 'Narrative audio guides · Puglia';
+const heading = lang === 'it' ? 'Ascolta Bari' : 'Listen to Bari';
+const heading2 = lang === 'it' ? 'come una storia.' : 'as a story.';
+const italic = lang === 'it' ? 'Mentre sei lì.' : "While you're there.";
+const sub = lang === 'it'
+  ? 'Storie vere sui luoghi reali della città. Senza app, dal browser del telefono. Per sempre tue.'
+  : 'Real stories of real places. No app, opens in your phone browser. Yours forever.';
+const ctaPrimary = lang === 'it' ? 'Ascolta le guide' : 'Listen to the guides';
+const ctaSecondary = lang === 'it' ? 'Vedi i prezzi' : 'See pricing';
+---
+<section class="relative bg-surface overflow-hidden">
+  <div class="max-w-wrap mx-auto px-md pt-2xl pb-3xl grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2xl items-start">
+    <div>
+      <Eyebrow class="mb-lg">{eyebrow}</Eyebrow>
+
+      <h1 class="font-display text-4xl text-ink leading-[0.95] tracking-tight mb-md">
+        {heading}<br />
+        {heading2}<br />
+        <em class="text-accent font-normal">{italic}</em>
+      </h1>
+
+      <p class="text-lg text-ink-muted leading-relaxed max-w-prose mb-lg">{sub}</p>
+
+      <div class="flex flex-wrap gap-sm">
+        <a
+          href="#guide"
+          class="inline-flex items-center gap-xs px-md py-sm bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline"
+        >
+          {ctaPrimary} →
+        </a>
+        <a
+          href="#prezzi"
+          class="inline-flex items-center gap-xs px-md py-sm border border-border text-ink rounded-md font-semibold text-sm hover:border-ink transition-colors duration-fast no-underline"
+        >
+          {ctaSecondary}
+        </a>
+      </div>
+    </div>
+
+    <aside class="hidden lg:block">
+      <img
+        src="/images/hero/home-it.jpg"
+        alt=""
+        class="w-full aspect-[4/5] object-cover rounded-lg"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </aside>
+  </div>
+</section>

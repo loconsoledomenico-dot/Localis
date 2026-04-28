@@ -1,0 +1,124 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  src: string;
+  label?: string;
+  lang: Lang;
+}
+
+const { src, label, lang } = Astro.props;
+const playLabel = lang === 'it' ? 'Riproduci anteprima' : 'Play preview';
+---
+<div class="trailer-player border border-border rounded-lg p-md bg-surface-elev" data-src={src}>
+  <div class="flex items-center gap-md">
+    <button
+      type="button"
+      class="trailer-toggle flex-shrink-0 w-12 h-12 rounded-full bg-ink text-surface flex items-center justify-center transition-transform duration-fast hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+      aria-label={playLabel}
+    >
+      <svg class="trailer-icon-play" width="14" height="16" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
+        <path d="M0 0l10 6-10 6z" />
+      </svg>
+      <svg class="trailer-icon-pause hidden" width="14" height="16" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
+        <path d="M2 0h3v14H2zM7 0h3v14H7z" />
+      </svg>
+    </button>
+
+    <div class="flex-1 min-w-0">
+      {label && (
+        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink-subtle mb-xs">
+          {label}
+        </p>
+      )}
+      <div class="trailer-progress h-1 bg-ink/10 rounded-full overflow-hidden cursor-pointer" role="progressbar" aria-label="Trailer progress" tabindex="0">
+        <div class="trailer-fill h-full bg-accent rounded-full transition-[width] duration-fast" style="width: 0%;"></div>
+      </div>
+      <div class="flex justify-between mt-xs text-xs text-ink-subtle">
+        <span class="trailer-current">0:00</span>
+        <span class="trailer-duration">--:--</span>
+      </div>
+    </div>
+  </div>
+
+  <audio class="trailer-audio" preload="metadata">
+    <source src={src} type="audio/mpeg" />
+  </audio>
+</div>
+
+<script>
+  function fmtTime(seconds: number): string {
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return `${m}:${s.toString().padStart(2, '0')}`;
+  }
+
+  function initTrailer(player: HTMLElement) {
+    const audio = player.querySelector<HTMLAudioElement>('.trailer-audio')!;
+    const toggle = player.querySelector<HTMLButtonElement>('.trailer-toggle')!;
+    const iconPlay = player.querySelector<SVGElement>('.trailer-icon-play')!;
+    const iconPause = player.querySelector<SVGElement>('.trailer-icon-pause')!;
+    const progress = player.querySelector<HTMLElement>('.trailer-progress')!;
+    const fill = player.querySelector<HTMLElement>('.trailer-fill')!;
+    const cur = player.querySelector<HTMLElement>('.trailer-current')!;
+    const dur = player.querySelector<HTMLElement>('.trailer-duration')!;
+
+    audio.addEventListener('loadedmetadata', () => {
+      dur.textContent = fmtTime(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      if (!audio.duration) return;
+      const pct = (audio.currentTime / audio.duration) * 100;
+      fill.style.width = `${pct}%`;
+      cur.textContent = fmtTime(audio.currentTime);
+    });
+
+    audio.addEventListener('ended', () => {
+      iconPlay.classList.remove('hidden');
+      iconPause.classList.add('hidden');
+    });
+
+    toggle.addEventListener('click', () => {
+      if (audio.paused) {
+        // Pause any other trailer playing
+        document.querySelectorAll<HTMLAudioElement>('.trailer-audio').forEach((a) => {
+          if (a !== audio) {
+            a.pause();
+            const otherPlayer = a.closest('.trailer-player')!;
+            otherPlayer.querySelector('.trailer-icon-play')!.classList.remove('hidden');
+            otherPlayer.querySelector('.trailer-icon-pause')!.classList.add('hidden');
+          }
+        });
+        audio.play();
+        iconPlay.classList.add('hidden');
+        iconPause.classList.remove('hidden');
+      } else {
+        audio.pause();
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+      }
+    });
+
+    progress.addEventListener('click', (e) => {
+      if (!audio.duration) return;
+      const rect = progress.getBoundingClientRect();
+      const pct = (e.clientX - rect.left) / rect.width;
+      audio.currentTime = audio.duration * pct;
+    });
+
+    progress.addEventListener('keydown', (e) => {
+      if (!audio.duration) return;
+      const STEP = 5;
+      if (e.key === 'ArrowRight') {
+        audio.currentTime = Math.min(audio.duration, audio.currentTime + STEP);
+        e.preventDefault();
+      } else if (e.key === 'ArrowLeft') {
+        audio.currentTime = Math.max(0, audio.currentTime - STEP);
+        e.preventDefault();
+      }
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>('.trailer-player').forEach(initTrailer);
+</script>

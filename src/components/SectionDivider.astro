@@ -1,0 +1,16 @@
+---
+export interface Props {
+  label?: string;
+}
+
+const { label } = Astro.props;
+---
+<div class="flex items-center gap-md my-2xl">
+  <div class="flex-1 h-px bg-border"></div>
+  {label && (
+    <span class="text-xs font-semibold tracking-[0.2em] uppercase text-ink-subtle whitespace-nowrap">
+      {label}
+    </span>
+  )}
+  <div class="flex-1 h-px bg-border"></div>
+</div>
