@@ -1,0 +1,40 @@
+[build]
+  publish = "dist"
+  command = "pnpm build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-frozen-lockfile"
+
+# Cache headers for build assets (Astro outputs to /_astro/)
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for trailers (immutable once published)
+[[headers]]
+  for = "/audio/trailers/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache headers for static images
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# HTML: short cache, allow stale while revalidate
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
