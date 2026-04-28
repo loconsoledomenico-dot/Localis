@@ -21,10 +21,14 @@
   --color-ink-muted: oklch(45% 0.020 240);       /* secondary text */
   --color-ink-subtle: oklch(55% 0.012 240);      /* labels, eyebrows */
   --color-border: oklch(85% 0.012 75);           /* hairlines, dividers */
-  --color-accent: oklch(56% 0.14 45);            /* terracotta — sparingly */
+  /* terracotta accent — use sparingly (1-3 uses per screen max).
+   * a11y: 4.4:1 contrast on parchment surface. Safe for LARGE text only
+   * (≥18pt or ≥14pt bold), or as bg-accent block. Never use text-accent on
+   * small body text — fails WCAG AA. */
+  --color-accent: oklch(56% 0.14 45);
   --color-accent-soft: oklch(85% 0.06 45);
   --color-link: oklch(46% 0.085 240);            /* muted Adriatic */
-  --color-link-hover: oklch(38% 0.10 240);
+  --color-link-pressed: oklch(38% 0.10 240);
   --color-success: oklch(58% 0.12 145);
   --color-warning: oklch(68% 0.16 70);
   --color-error: oklch(54% 0.18 25);
@@ -71,6 +75,10 @@
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-full: 9999px;
+
+  /* === Shadows === */
+  --shadow-subtle: 0 1px 2px oklch(20% 0.025 240 / 0.05);
+  --shadow-elev: 0 4px 12px oklch(20% 0.025 240 / 0.06);
 
   /* === Animation easing === */
   --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
@@ -139,7 +147,7 @@
   }
 
   a:hover {
-    color: var(--color-link-hover);
+    color: var(--color-link-pressed);
   }
 
   :focus-visible {
@@ -157,5 +165,25 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+}
+
+/* === Dark mode (opt-in via prefers-color-scheme) ===
+ * Per spec §5: light mode is design default; dark mode is generated via OKLCH
+ * lightness inversion, not just naive color flip. Optional for night reading.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: oklch(18% 0.020 240);
+    --color-surface-elev: oklch(22% 0.022 240);
+    --color-surface-deep: oklch(15% 0.018 240);
+    --color-ink: oklch(94% 0.012 75);
+    --color-ink-muted: oklch(70% 0.012 75);
+    --color-ink-subtle: oklch(60% 0.010 75);
+    --color-border: oklch(28% 0.018 240);
+    --color-accent: oklch(68% 0.14 45);
+    --color-accent-soft: oklch(35% 0.08 45);
+    --color-link: oklch(70% 0.10 220);
+    --color-link-pressed: oklch(78% 0.10 220);
   }
 }
