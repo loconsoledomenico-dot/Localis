@@ -3,12 +3,16 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://localis.guide',
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   i18n: {
     defaultLocale: 'it',
     locales: ['it', 'en'],
@@ -16,4 +20,6 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+
+  integrations: [mdx()],
 });
