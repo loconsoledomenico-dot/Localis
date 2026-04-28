@@ -33,6 +33,11 @@ desktop.ini
 # Brainstorming artifacts (local-only)
 .superpowers/
 
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
 # Existing legacy static site (replaced in Milestone B)
 /index.html
 /bari-vecchia-audioguida-v2.html
