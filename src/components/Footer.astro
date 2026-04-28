@@ -1,0 +1,44 @@
+---
+import { t } from '../lib/i18n-strings';
+import { localizedHref, type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const year = new Date().getFullYear();
+---
+<footer class="border-t border-border mt-3xl">
+  <div class="max-w-wrap mx-auto px-md py-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-lg">
+    <div>
+      <p class="font-display text-xl text-ink mb-2xs">
+        Loc<em class="text-accent not-italic">alis</em>
+      </p>
+      <p class="text-sm text-ink-muted">
+        {t('footer.copyright', lang)} · {year}
+      </p>
+    </div>
+
+    <nav class="flex items-center gap-lg">
+      <a
+        href={localizedHref('/termini', lang)}
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
+      >
+        {t('footer.terms', lang)}
+      </a>
+      <a
+        href={localizedHref('/privacy', lang)}
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
+      >
+        {t('footer.privacy', lang)}
+      </a>
+      <a
+        href="mailto:hello@localis.guide"
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
+      >
+        hello@localis.guide
+      </a>
+    </nav>
+  </div>
+</footer>
