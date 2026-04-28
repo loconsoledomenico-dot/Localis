@@ -1,0 +1,16 @@
+---
+import { t } from '../lib/i18n-strings';
+import type { Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+<a
+  href="#main"
+  class="sr-only focus:not-sr-only focus:fixed focus:top-md focus:left-md focus:z-50 focus:bg-ink focus:text-surface focus:px-md focus:py-sm focus:rounded-md focus:shadow-elev focus:no-underline"
+>
+  {t('a11y.skip_to_content', lang)}
+</a>

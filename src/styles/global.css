@@ -82,6 +82,9 @@
 
   /* === Animation easing === */
   --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* === Animation duration === */
+  --duration-fast: 150ms;
 }
 
 /* === Custom utilities for layout containers ===
@@ -98,6 +101,15 @@
 
 @utility max-w-prose {
   max-width: 65ch;
+}
+
+/* Tailwind v4 has no --duration-* namespace, so duration-fast won't auto-generate
+ * from the --duration-fast token. Declare it explicitly here. Sets --tw-duration
+ * so it composes correctly with transition-colors / transition / transition-transform.
+ */
+@utility duration-fast {
+  --tw-duration: var(--duration-fast);
+  transition-duration: var(--duration-fast);
 }
 
 /* === Base layer: resets and intentional defaults === */

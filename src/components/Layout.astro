@@ -1,13 +1,17 @@
 ---
 import '../styles/global.css';
+import SkipLink from './SkipLink.astro';
+import Header from './Header.astro';
+import { type Lang } from '../lib/i18n';
 
 export interface Props {
   title: string;
   description?: string;
-  lang?: 'it' | 'en';
+  lang?: Lang;
 }
 
 const { title, description = '', lang = 'it' } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -20,7 +24,6 @@ const { title, description = '', lang = 'it' } = Astro.props;
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Fonts: Spectral display + Schibsted Grotesk body -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -28,7 +31,12 @@ const { title, description = '', lang = 'it' } = Astro.props;
     rel="stylesheet"
   />
 </head>
-<body class="bg-surface text-ink font-body antialiased">
-  <slot />
+<body class="bg-surface text-ink font-body antialiased min-h-screen flex flex-col">
+  <SkipLink lang={lang} />
+  <Header lang={lang} currentPath={currentPath} />
+
+  <main id="main" class="flex-1">
+    <slot />
+  </main>
 </body>
 </html>

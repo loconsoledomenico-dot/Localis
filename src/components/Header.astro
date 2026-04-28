@@ -1,0 +1,33 @@
+---
+import { t } from '../lib/i18n-strings';
+import { localizedHref, type Lang } from '../lib/i18n';
+import LangSwitcher from './LangSwitcher.astro';
+
+export interface Props {
+  lang: Lang;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+---
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border">
+  <div class="max-w-wrap mx-auto px-md flex items-center justify-between h-14">
+    <a
+      href={localizedHref('/', lang)}
+      class="font-display text-xl font-medium tracking-tight text-ink no-underline"
+      aria-label={t('site.name', lang)}
+    >
+      Loc<em class="text-accent not-italic">alis</em>
+    </a>
+
+    <nav class="flex items-center gap-lg">
+      <a
+        href={localizedHref('/diventa-partner', lang)}
+        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+      >
+        {t('nav.partner', lang)}
+      </a>
+      <LangSwitcher lang={lang} currentPath={currentPath} />
+    </nav>
+  </div>
+</header>

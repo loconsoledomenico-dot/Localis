@@ -1,0 +1,20 @@
+---
+import { alternateLangUrl, type Lang } from '../lib/i18n';
+import { t } from '../lib/i18n-strings';
+
+export interface Props {
+  lang: Lang;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const altUrl = alternateLangUrl(currentPath, lang);
+const altLang: Lang = lang === 'it' ? 'en' : 'it';
+---
+<a
+  href={altUrl}
+  class="font-body text-xs font-semibold tracking-widest uppercase text-ink-subtle hover:text-ink no-underline transition-colors duration-fast"
+  aria-label={`Switch language to ${t(`lang.current_${altLang}`, lang)}`}
+>
+  {t(`lang.switch_to_${altLang}`, lang)}
+</a>
