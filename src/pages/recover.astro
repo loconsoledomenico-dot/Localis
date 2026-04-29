@@ -1,0 +1,46 @@
+---
+import Layout from '../components/Layout.astro';
+---
+<Layout title="Recupera l'accesso · Localis" lang="it">
+  <main class="max-w-narrow mx-auto px-md py-3xl">
+    <h1 class="font-display text-4xl text-ink mb-md">Recupera la tua guida</h1>
+    <p class="text-base text-ink-muted mb-xl max-w-prose">
+      Hai smarrito il link via email? Inserisci la stessa email che hai usato all'acquisto. Ti rimandiamo il magic link in 30 secondi.
+    </p>
+
+    <form id="recover-form" class="flex flex-col gap-md max-w-md">
+      <label for="email" class="text-sm font-semibold text-ink">Email d'acquisto</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="tu@esempio.com"
+        class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none"
+      />
+      <button
+        type="submit"
+        class="px-md py-sm bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast"
+      >
+        Recupera accesso
+      </button>
+    </form>
+
+    <div id="recover-result" class="mt-lg max-w-md hidden">
+      <p class="text-base text-success">Email inviata. Controlla la tua casella (anche spam).</p>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const form = document.getElementById('recover-form') as HTMLFormElement | null;
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const email = data.get('email');
+
+    // Phase 0 stub — real recovery wired in Milestone C
+    alert(`Funzionalità in arrivo nella prossima fase. Email: ${email}`);
+  });
+</script>
