@@ -72,17 +72,45 @@ const productKey = isBundle ? 'bari-completa' : guideSlug;
 </article>
 
 <script>
-  // Stub: real checkout wired in Milestone C
   document.querySelectorAll<HTMLButtonElement>('.checkout-btn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', async (e) => {
       e.preventDefault();
       const product = btn.dataset.product;
-      const lang = btn.dataset.lang;
-      alert(
-        lang === 'it'
-          ? `Pagamento per "${product}" disponibile a breve. Stripe in arrivo nella prossima fase.`
-          : `Checkout for "${product}" available soon. Stripe arriving in next phase.`,
-      );
+      const lang = btn.dataset.lang || 'it';
+
+      if (!product) return;
+
+      btn.disabled = true;
+      const originalText = btn.textContent;
+      btn.textContent = lang === 'en' ? 'Opening checkout...' : 'Apertura pagamento...';
+
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ product, lang }),
+        });
+
+        if (!res.ok) {
+          throw new Error(`Checkout API returned ${res.status}`);
+        }
+
+        const data = await res.json();
+        if (!data.url) {
+          throw new Error('No checkout URL returned');
+        }
+
+        window.location.assign(data.url);
+      } catch (err) {
+        console.error('[checkout]', err);
+        btn.disabled = false;
+        btn.textContent = originalText;
+        alert(
+          lang === 'en'
+            ? 'Could not open checkout. Please try again in a moment.'
+            : 'Impossibile aprire il pagamento. Riprova tra un istante.',
+        );
+      }
     });
   });
 </script>

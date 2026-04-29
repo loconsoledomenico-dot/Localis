@@ -30,13 +30,32 @@ test.describe('Italian homepage', () => {
     await expect(page.getByRole('heading', { name: 'Bari completa' })).toBeAttached();
   });
 
-  test('checkout button shows phase-0 stub', async ({ page }) => {
+  test('checkout button calls /api/checkout', async ({ page }) => {
     await page.goto('/#prezzi');
+
+    // Intercept the API call (we don't want to actually hit Stripe in tests)
+    let apiCalled = false;
+    await page.route('**/api/checkout', async (route) => {
+      apiCalled = true;
+      await route.fulfill({
+        status: 400,
+        contentType: 'application/json',
+        body: JSON.stringify({ error: 'Stripe price ID not configured for product "bari-vecchia"' }),
+      });
+    });
+
+    // Capture the alert (shown when API errors out)
+    let alertMsg = '';
     page.on('dialog', async (dialog) => {
-      expect(dialog.message()).toContain('disponibile a breve');
+      alertMsg = dialog.message();
       await dialog.dismiss();
     });
+
     await page.getByRole('button', { name: /Ascolta tutto/i }).first().click({ force: true });
+
+    // Wait for the request and the resulting alert
+    await expect.poll(() => apiCalled).toBe(true);
+    await expect.poll(() => alertMsg).toContain('Impossibile');
   });
 
   test('language switcher navigates to English', async ({ page }) => {
