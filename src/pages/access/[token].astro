@@ -1,0 +1,62 @@
+---
+import Layout from '../../components/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+import { verifyAccessToken } from '../../lib/jwt';
+import { getCollection } from 'astro:content';
+
+const { token } = Astro.params;
+
+if (!token) {
+  return Astro.redirect('/access-invalid');
+}
+
+const decoded = verifyAccessToken(token);
+
+if (!decoded) {
+  return Astro.redirect('/access-invalid');
+}
+
+const allGuides = await getCollection('guides');
+const userGuides = decoded.guide_slugs
+  .map((slug) => allGuides.find((g) => g.data.slug === slug))
+  .filter((g): g is NonNullable<typeof g> => Boolean(g));
+
+const lang: 'it' | 'en' = 'it';
+---
+<Layout title="Le tue guide · Localis" description="" lang={lang}>
+  <main class="max-w-wrap mx-auto px-md py-2xl">
+    <header class="mb-2xl">
+      <Eyebrow class="mb-md">Accesso permanente · {decoded.email}</Eyebrow>
+      <h1 class="font-display text-4xl text-ink mb-md">Le tue guide</h1>
+      <p class="text-base text-ink-muted max-w-prose">
+        Salva questa pagina nei preferiti — è solo tua, vale per sempre.
+        Funziona offline dopo il primo play su ogni dispositivo.
+      </p>
+    </header>
+
+    <div class="flex flex-col gap-2xl">
+      {userGuides.map((guide) => (
+        <section class="border border-border rounded-lg p-lg bg-surface-elev">
+          <h2 class="font-display text-2xl text-ink mb-xs">{guide.data.title_it}</h2>
+          <p class="text-sm text-ink-muted mb-md">{guide.data.subtitle_it}</p>
+
+          <div class="bg-surface border border-border rounded-md p-md text-center">
+            <p class="text-sm text-ink-muted">
+              Player audio in arrivo nel prossimo deploy.
+            </p>
+            <p class="text-xs text-ink-subtle mt-xs">
+              (Phase 0 Milestone D)
+            </p>
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <footer class="mt-3xl pt-lg border-t border-border text-center">
+      <p class="text-sm text-ink-muted">
+        Cambiato telefono? Riapri questo link.
+        Smarrita email? <a href="/recover" class="text-link hover:text-link-pressed">Recupera l'accesso</a>.
+      </p>
+    </footer>
+  </main>
+</Layout>

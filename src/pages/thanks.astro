@@ -1,0 +1,69 @@
+---
+import Layout from '../components/Layout.astro';
+import { getStripe } from '../lib/stripe';
+import { generateAccessToken } from '../lib/jwt';
+
+const sessionId = Astro.url.searchParams.get('session_id');
+let directAccessUrl: string | null = null;
+let buyerEmail: string | null = null;
+
+if (sessionId) {
+  try {
+    const stripe = getStripe();
+    const session = await stripe.checkout.sessions.retrieve(sessionId);
+    const email = session.customer_email || session.customer_details?.email;
+    const meta = session.metadata || {};
+    const guide_slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
+
+    if (email && guide_slugs.length > 0 && session.payment_status === 'paid') {
+      const token = generateAccessToken({
+        email,
+        guide_slugs,
+        stripe_session_id: session.id,
+        partner_id: meta.partner_id || null,
+      });
+      directAccessUrl = `/access/${token}`;
+      buyerEmail = email;
+    }
+  } catch (err) {
+    console.error('[thanks] session lookup error', err);
+  }
+}
+---
+<Layout title="Grazie · Localis" lang="it">
+  <main class="max-w-narrow mx-auto px-md py-3xl text-center">
+    <p class="font-display italic text-2xl text-accent mb-md">Grazie.</p>
+    <h1 class="font-display text-4xl text-ink mb-lg">La tua guida ti aspetta.</h1>
+
+    {buyerEmail && (
+      <p class="text-base text-ink-muted mb-xl max-w-prose mx-auto">
+        Ti abbiamo inviato il link di accesso a <strong class="text-ink">{buyerEmail}</strong>.
+        Arriva entro 1 minuto, controlla anche lo spam.
+      </p>
+    )}
+
+    {!buyerEmail && (
+      <p class="text-base text-ink-muted mb-xl max-w-prose mx-auto">
+        Tra 30 secondi riceverai un'email con il link alla tua audioguida.
+        Non vedi nulla? Controlla lo spam, oppure contattaci a hello@localis.guide.
+      </p>
+    )}
+
+    {directAccessUrl && (
+      <a
+        href={directAccessUrl}
+        class="inline-flex items-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline"
+      >
+        Apri la mia guida ora →
+      </a>
+    )}
+    {!directAccessUrl && (
+      <a
+        href="/"
+        class="inline-flex items-center gap-xs px-md py-sm border border-border text-ink rounded-md font-semibold text-sm hover:border-ink transition-colors duration-fast no-underline"
+      >
+        Torna in homepage
+      </a>
+    )}
+  </main>
+</Layout>
