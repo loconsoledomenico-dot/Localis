@@ -8,7 +8,7 @@ import Layout from '../components/Layout.astro';
       Hai smarrito il link via email? Inserisci la stessa email che hai usato all'acquisto. Ti rimandiamo il magic link in 30 secondi.
     </p>
 
-    <form id="recover-form" class="flex flex-col gap-md max-w-md">
+    <form id="recover-form" class="flex flex-col gap-md max-w-[28rem]">
       <label for="email" class="text-sm font-semibold text-ink">Email d'acquisto</label>
       <input
         type="email"
@@ -26,7 +26,7 @@ import Layout from '../components/Layout.astro';
       </button>
     </form>
 
-    <div id="recover-result" class="mt-lg max-w-md hidden">
+    <div id="recover-result" class="mt-lg max-w-[28rem] hidden">
       <p class="text-base text-success">Email inviata. Controlla la tua casella (anche spam).</p>
     </div>
   </main>
