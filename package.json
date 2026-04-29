@@ -21,6 +21,7 @@
     "@astrojs/netlify": "^7.0.8",
     "astro": "^6.1.10",
     "jsonwebtoken": "^9.0.3",
+    "resend": "^6.12.2",
     "stripe": "^22.1.0"
   },
   "devDependencies": {
