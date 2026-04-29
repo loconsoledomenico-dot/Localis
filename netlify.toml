@@ -3,7 +3,7 @@
   command = "pnpm build"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   NPM_FLAGS = "--no-frozen-lockfile"
 
 # Cache headers for build assets (Astro outputs to /_astro/)
