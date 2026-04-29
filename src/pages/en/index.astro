@@ -1,9 +1,88 @@
 ---
 import Layout from '../../components/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import TrailerPlayer from '../../components/TrailerPlayer.astro';
+import PriceCard from '../../components/PriceCard.astro';
+import SectionDivider from '../../components/SectionDivider.astro';
+import { getCollection } from 'astro:content';
+
+const guides = (await getCollection('guides'))
+  .filter((g) => g.data.city === 'bari')
+  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
+
+const featuredTrailer = guides.find((g) => g.data.status === 'live');
 ---
-<Layout title="Localis — design tokens preview" lang="en">
-  <main class="max-w-wrap mx-auto px-md py-2xl">
-    <h1 class="font-display text-4xl mb-md">English homepage placeholder</h1>
-    <p class="text-base text-ink-muted">Replaced in Milestone B.</p>
-  </main>
+<Layout
+  title="Localis — narrative audio guides for Puglia"
+  description="Narrative audio guides of Bari and Puglia. Real stories, no app. Yours forever. €4.99 per guide."
+  lang="en"
+>
+  <Hero lang="en" />
+
+  <section class="max-w-narrow mx-auto px-md py-2xl">
+    <SectionDivider label="Before you decide, hear this" />
+    {featuredTrailer && (
+      <TrailerPlayer
+        src={featuredTrailer.data.audio_trailer_path}
+        label={`~60s · ${featuredTrailer.data.title_en.split('—')[0].trim()}`}
+        lang="en"
+      />
+    )}
+    <p class="text-center font-display italic text-2xl text-ink-muted mt-lg max-w-prose mx-auto">
+      "Stop. Look at the sea in front of you. This is not a backdrop. This is where everything really happened."
+    </p>
+  </section>
+
+  <section id="guide" class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Choose your experience" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+      {guides.map((g, i) => (
+        <GuideCard guide={g} lang="en" index={i} />
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-narrow mx-auto px-md py-2xl text-center">
+    <p class="font-display italic text-3xl text-ink mb-md">These are not tourist guides.</p>
+    <p class="text-base text-ink-muted leading-relaxed max-w-prose mx-auto">
+      You won't find advice on where to eat or what to avoid. Here you listen to real stories, built on the real places of the city. And while you listen, you are exactly where it all happened.
+    </p>
+  </section>
+
+  <section id="prezzi" class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Choose your plan" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-3xl mx-auto">
+      <PriceCard
+        product="single"
+        guideSlug="bari-vecchia"
+        lang="en"
+        features={[
+          '1 guide of your choice',
+          'Unlimited access',
+          'No app, opens in browser',
+          'Italian and English',
+        ]}
+      />
+      <PriceCard
+        product="bundle"
+        lang="en"
+        primary
+        features={[
+          'Old Bari — Inside the City',
+          'Port of Bari — Where It All Happened',
+          'San Nicola — The Stolen Saint',
+          'Unlimited access · No app',
+        ]}
+      />
+    </div>
+  </section>
+
+  <section class="max-w-wrap mx-auto px-md py-3xl text-center">
+    <p class="font-display italic text-2xl text-ink-muted mb-xs">If you want to visit Bari, you can.</p>
+    <p class="font-display text-3xl text-ink mb-lg">If you want to understand it, listen.</p>
+    <a href="#guide" class="inline-flex items-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline">
+      Start the journey →
+    </a>
+  </section>
 </Layout>
