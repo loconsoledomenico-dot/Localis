@@ -1,0 +1,74 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Eyebrow from '../../../components/Eyebrow.astro';
+import TrailerPlayer from '../../../components/TrailerPlayer.astro';
+import PriceCard from '../../../components/PriceCard.astro';
+import ChapterList from '../../../components/ChapterList.astro';
+import { getCollection, render } from 'astro:content';
+import { formatDuration } from '../../../lib/format';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides
+    .filter((g) => g.data.status === 'live')
+    .map((guide) => ({
+      params: { slug: guide.data.slug },
+      props: { guide },
+    }));
+}
+
+const { guide } = Astro.props;
+const data = guide.data;
+const { Content } = await render(guide);
+
+const durationLabel = formatDuration(data.duration_seconds);
+---
+<Layout title={`${data.title_en} · Localis`} description={data.seo.description_en} lang="en">
+  <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
+    <header class="lg:col-span-2 mb-2xl">
+      <Eyebrow class="mb-md">{`Bari · ${durationLabel} · IT/EN`}</Eyebrow>
+      <h1 class="font-display text-4xl text-ink leading-tight mb-sm">{data.title_en}</h1>
+      <p class="font-display italic text-2xl text-ink-muted">{data.subtitle_en}</p>
+    </header>
+
+    <div class="flex flex-col gap-lg">
+      <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
+
+      <TrailerPlayer src={data.audio_trailer_path} label="Preview · 60s" lang="en" />
+
+      <section class="prose prose-ink max-w-prose">
+        <Content />
+      </section>
+
+      <section>
+        <h2 class="font-display text-3xl text-ink mb-md">Chapters</h2>
+        <ChapterList chapters={data.chapters} lang="en" />
+      </section>
+    </div>
+
+    <aside class="lg:sticky lg:top-24 flex flex-col gap-md">
+      <PriceCard
+        product="single"
+        guideSlug={data.slug}
+        lang="en"
+        features={[
+          `${data.chapters.length} chapters`,
+          `${durationLabel} runtime`,
+          'Italian and English',
+          'Forever accessible',
+          'Works offline after first play',
+        ]}
+      />
+      <PriceCard
+        product="bundle"
+        lang="en"
+        primary
+        features={[
+          'All 3 live Bari guides',
+          'Save €4.98 vs single guides',
+          'Free updates when new Bari content drops',
+        ]}
+      />
+    </aside>
+  </article>
+</Layout>

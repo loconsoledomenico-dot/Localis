@@ -8,6 +8,7 @@
  */
 
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* === Colors (OKLCH, perceptually uniform) ===
@@ -210,4 +211,21 @@
     --color-link: oklch(70% 0.10 220);
     --color-link-pressed: oklch(78% 0.10 220);
   }
+}
+
+/* === Prose theming for MDX guide bodies ===
+ * Maps Tailwind typography's --tw-prose-* vars to our OKLCH tokens so
+ * `class="prose prose-ink"` renders body in --color-ink-muted with headings
+ * in --color-ink etc.
+ */
+.prose-ink {
+  --tw-prose-body: var(--color-ink-muted);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-links: var(--color-link);
+}
+
+.prose-ink p {
+  font-size: 1rem;
+  line-height: 1.7;
 }
