@@ -35,13 +35,39 @@ import Layout from '../components/Layout.astro';
 
 <script>
   const form = document.getElementById('recover-form') as HTMLFormElement | null;
+  const result = document.getElementById('recover-result');
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
     const email = data.get('email');
 
-    // Phase 0 stub — real recovery wired in Milestone C
-    alert(`Funzionalità in arrivo nella prossima fase. Email: ${email}`);
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    submit.disabled = true;
+    submit.textContent = 'Invio in corso...';
+
+    try {
+      const res = await fetch('/api/recover', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, lang: 'it' }),
+      });
+
+      if (res.status === 429) {
+        alert('Troppe richieste. Riprova tra un\'ora.');
+        submit.disabled = false;
+        submit.textContent = 'Recupera accesso';
+        return;
+      }
+
+      // We always show success regardless of whether email matched (privacy)
+      form.style.display = 'none';
+      result?.classList.remove('hidden');
+    } catch (err) {
+      console.error('[recover]', err);
+      alert('Errore di rete. Riprova.');
+      submit.disabled = false;
+      submit.textContent = 'Recupera accesso';
+    }
   });
 </script>
