@@ -1,0 +1,117 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const labels = lang === 'it' ? {
+  business_name: 'Nome attività',
+  type: 'Tipo',
+  type_options: { hotel: 'Hotel', bb: 'B&B', bar: 'Bar / Caffè', restaurant: 'Ristorante', shop: 'Negozio', other: 'Altro' },
+  city: 'Città',
+  email: 'Email di contatto',
+  phone: 'Telefono (opzionale)',
+  message: 'Messaggio (opzionale)',
+  submit: 'Diventa partner',
+  submitting: 'Invio in corso...',
+  success: 'Richiesta ricevuta. Ti contattiamo entro 48 ore.',
+} : {
+  business_name: 'Business name',
+  type: 'Type',
+  type_options: { hotel: 'Hotel', bb: 'B&B', bar: 'Bar / Café', restaurant: 'Restaurant', shop: 'Shop', other: 'Other' },
+  city: 'City',
+  email: 'Contact email',
+  phone: 'Phone (optional)',
+  message: 'Message (optional)',
+  submit: 'Become a partner',
+  submitting: 'Sending...',
+  success: 'Request received. We\'ll contact you within 48 hours.',
+};
+---
+<form id="partner-form" class="flex flex-col gap-md max-w-[28rem]">
+  <div class="flex flex-col gap-2xs">
+    <label for="business_name" class="text-sm font-semibold text-ink">{labels.business_name}</label>
+    <input type="text" id="business_name" name="business_name" required class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none" />
+  </div>
+
+  <div class="flex flex-col gap-2xs">
+    <label for="type" class="text-sm font-semibold text-ink">{labels.type}</label>
+    <select id="type" name="type" required class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none">
+      {Object.entries(labels.type_options).map(([k, v]) => (
+        <option value={k}>{v}</option>
+      ))}
+    </select>
+  </div>
+
+  <div class="flex flex-col gap-2xs">
+    <label for="city" class="text-sm font-semibold text-ink">{labels.city}</label>
+    <input type="text" id="city" name="city" required value="Bari" class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none" />
+  </div>
+
+  <div class="flex flex-col gap-2xs">
+    <label for="email" class="text-sm font-semibold text-ink">{labels.email}</label>
+    <input type="email" id="email" name="email" required class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none" />
+  </div>
+
+  <div class="flex flex-col gap-2xs">
+    <label for="phone" class="text-sm font-semibold text-ink">{labels.phone}</label>
+    <input type="tel" id="phone" name="phone" class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none" />
+  </div>
+
+  <div class="flex flex-col gap-2xs">
+    <label for="message" class="text-sm font-semibold text-ink">{labels.message}</label>
+    <textarea id="message" name="message" rows="3" class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none resize-none"></textarea>
+  </div>
+
+  <button type="submit" class="px-md py-sm bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast">
+    {labels.submit}
+  </button>
+</form>
+
+<div id="partner-form-success" class="mt-md max-w-[28rem] hidden">
+  <p class="text-base text-success">{labels.success}</p>
+</div>
+
+<script>
+  const form = document.getElementById('partner-form') as HTMLFormElement | null;
+  const success = document.getElementById('partner-form-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const payload = {
+      business_name: data.get('business_name'),
+      type: data.get('type'),
+      city: data.get('city'),
+      email: data.get('email'),
+      phone: data.get('phone'),
+      message: data.get('message'),
+    };
+
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const original = submit.textContent;
+    submit.disabled = true;
+    submit.textContent = 'Invio in corso...';
+
+    try {
+      const res = await fetch('/api/partner-signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+      form.style.display = 'none';
+      success?.classList.remove('hidden');
+    } catch (err) {
+      console.error('[partner-signup]', err);
+      submit.disabled = false;
+      submit.textContent = original;
+      alert('Errore di rete. Riprova.');
+    }
+  });
+</script>

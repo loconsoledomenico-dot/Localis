@@ -1,0 +1,67 @@
+---
+export const prerender = true;
+import Layout from '../components/Layout.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import PartnerForm from '../components/PartnerForm.astro';
+---
+<Layout
+  title="Diventa partner · Localis"
+  description="Diventa partner Localis: ospiti più felici, 25% di commissione su ogni acquisto, zero gestione."
+  lang="it"
+>
+  <section class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2xl items-start">
+    <div>
+      <Eyebrow class="mb-md">Programma partner</Eyebrow>
+      <h1 class="font-display text-4xl text-ink leading-tight mb-md">
+        Regala ai tuoi ospiti Bari come <em class="text-accent">loro la vorrebbero conoscere</em>.
+      </h1>
+      <p class="text-lg text-ink-muted leading-relaxed max-w-prose mb-2xl">
+        Guadagni tu ogni volta che la scelgono. Niente da gestire.
+      </p>
+
+      <ul class="flex flex-col gap-md mb-2xl">
+        <li class="flex items-start gap-md">
+          <span class="text-accent flex-shrink-0 mt-1">✦</span>
+          <div>
+            <p class="font-semibold text-ink">25% di commissione su ogni acquisto</p>
+            <p class="text-sm text-ink-muted">Pagamento automatico via Stripe Connect, bonifico mensile sul tuo conto.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-md">
+          <span class="text-accent flex-shrink-0 mt-1">✦</span>
+          <div>
+            <p class="font-semibold text-ink">Card QR plastificate gratis</p>
+            <p class="text-sm text-ink-muted">5 card welcome kit per piazzare in stanze, lobby, tavoli.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-md">
+          <span class="text-accent flex-shrink-0 mt-1">✦</span>
+          <div>
+            <p class="font-semibold text-ink">Setup in 10 minuti</p>
+            <p class="text-sm text-ink-muted">Compila Stripe Connect, ricevi le card, le piazzi. Stop.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-md">
+          <span class="text-accent flex-shrink-0 mt-1">✦</span>
+          <div>
+            <p class="font-semibold text-ink">Niente da gestire</p>
+            <p class="text-sm text-ink-muted">I tuoi ospiti scansionano, comprano, ascoltano. Tu incassi.</p>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="font-display text-2xl text-ink mb-md">Come funziona</h2>
+      <ol class="flex flex-col gap-sm text-base text-ink-muted leading-relaxed mb-2xl pl-lg list-decimal">
+        <li>Compila il modulo qui a fianco — ti contattiamo entro 48 ore</li>
+        <li>Riceviamo i tuoi dati e ti inviamo il link Stripe Connect (5-10 min per completarlo)</li>
+        <li>Una volta attivato, ti mandiamo le 5 card QR per posta</li>
+        <li>Ogni acquisto via QR del tuo locale = 25% va sul tuo conto Stripe automaticamente</li>
+      </ol>
+    </div>
+
+    <aside class="lg:sticky lg:top-24">
+      <h2 class="font-display text-2xl text-ink mb-md">Richiesta partner</h2>
+      <PartnerForm lang="it" />
+    </aside>
+  </section>
+</Layout>
