@@ -19,6 +19,8 @@
   "dependencies": {
     "@astrojs/mdx": "^5.0.4",
     "@astrojs/netlify": "^7.0.8",
+    "@aws-sdk/client-s3": "^3.1041.0",
+    "@aws-sdk/s3-request-presigner": "^3.1041.0",
     "astro": "^6.1.10",
     "jsonwebtoken": "^9.0.3",
     "resend": "^6.12.2",
