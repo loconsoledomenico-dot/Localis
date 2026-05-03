@@ -3,8 +3,11 @@ import { getStripe } from '../../lib/stripe';
 import {
   getStripePrice,
   getGuideSlugsForProduct,
+  getProductPriceCents,
   type ProductSlug,
 } from '../../lib/stripe-prices';
+import { getActivePartner } from '../../lib/partners';
+import type Stripe from 'stripe';
 
 export const POST: APIRoute = async ({ request, cookies, url }) => {
   let body: { product?: string; lang?: string };
@@ -29,35 +32,53 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   }
 
   const guide_slugs = getGuideSlugsForProduct(product);
-
-  // Read partner attribution from cookie (Milestone E uses it; null for now)
-  const partner_id = cookies.get('lg_partner')?.value || null;
+  const partner_id_raw = cookies.get('lg_partner')?.value || null;
 
   const siteUrl = (process.env.PUBLIC_SITE_URL || url.origin).replace(/\/$/, '');
 
+  // Resolve partner Stripe Connect account (only if cookie matches active partner)
+  let partnerStripeAccount: string | null = null;
+  let resolvedPartnerId: string | null = null;
+  if (partner_id_raw) {
+    const partner = await getActivePartner(partner_id_raw);
+    if (partner) {
+      partnerStripeAccount = partner.data.stripe_account_id;
+      resolvedPartnerId = partner.data.slug;
+    }
+  }
+
+  const sessionParams: Stripe.Checkout.SessionCreateParams = {
+    mode: 'payment',
+    payment_method_types: ['card'],
+    line_items: [{ price: priceId, quantity: 1 }],
+    customer_creation: 'if_required',
+    locale: lang === 'en' ? 'en' : 'it',
+    automatic_tax: { enabled: true },
+    consent_collection: { terms_of_service: 'required' },
+    allow_promotion_codes: true,
+    metadata: {
+      product,
+      guide_slugs: guide_slugs.join(','),
+      partner_id: resolvedPartnerId ?? '',
+      lang,
+    },
+    success_url: `${siteUrl}/thanks?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${siteUrl}${lang === 'en' ? '/en' : ''}/guide/${guide_slugs[0]}?cancelled=1`,
+  };
+
+  if (partnerStripeAccount) {
+    const totalCents = getProductPriceCents(product);
+    sessionParams.payment_intent_data = {
+      transfer_data: {
+        destination: partnerStripeAccount,
+        amount: Math.floor(totalCents * 0.25),
+      },
+    };
+  }
+
   try {
     const stripe = getStripe();
-    const session = await stripe.checkout.sessions.create({
-      mode: 'payment',
-      payment_method_types: ['card'],
-      line_items: [{ price: priceId, quantity: 1 }],
-      customer_creation: 'if_required',
-      locale: lang === 'en' ? 'en' : 'it',
-      automatic_tax: { enabled: true },
-      consent_collection: {
-        terms_of_service: 'required',
-      },
-      allow_promotion_codes: true,
-      metadata: {
-        product,
-        guide_slugs: guide_slugs.join(','),
-        partner_id: partner_id ?? '',
-        lang,
-      },
-      success_url: `${siteUrl}/thanks?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${siteUrl}${lang === 'en' ? '/en' : ''}/guide/${guide_slugs[0]}?cancelled=1`,
-    });
-
+    const session = await stripe.checkout.sessions.create(sessionParams);
     return new Response(JSON.stringify({ url: session.url }), {
       headers: { 'Content-Type': 'application/json' },
     });
