@@ -1,0 +1,11 @@
+---
+export interface Props {
+  data: object | object[];
+}
+
+const { data } = Astro.props;
+const arr = Array.isArray(data) ? data : [data];
+---
+{arr.map((d) => (
+  <script type="application/ld+json" set:html={JSON.stringify(d)} />
+))}

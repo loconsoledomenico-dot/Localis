@@ -6,8 +6,10 @@ import TrailerPlayer from '../../components/TrailerPlayer.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import ChapterList from '../../components/ChapterList.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
+import StructuredData from '../../components/StructuredData.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDuration } from '../../lib/format';
+import { audioObjectLD, touristAttractionLD } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -24,8 +26,32 @@ const data = guide.data;
 const { Content } = await render(guide);
 
 const durationLabel = formatDuration(data.duration_seconds);
+
+const ld: object[] = [
+  audioObjectLD({
+    slug: data.slug,
+    title: data.title_it,
+    description: data.seo.description_it,
+    durationSeconds: data.duration_seconds,
+    language: 'it',
+    priceCents: data.price_cents,
+    coords: data.coords_start,
+    cityName: data.city,
+  }),
+];
+
+if (data.coords_start) {
+  ld.push(
+    touristAttractionLD(
+      data.title_it,
+      data.coords_start,
+      data.city.charAt(0).toUpperCase() + data.city.slice(1),
+    ),
+  );
+}
 ---
 <Layout title={`${data.title_it} · Localis`} description={data.seo.description_it} lang="it">
+  <StructuredData data={ld} />
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
     <header class="lg:col-span-2 mb-2xl">
       <Eyebrow class="mb-md">{`Bari · ${durationLabel} · IT/EN`}</Eyebrow>
