@@ -38,3 +38,16 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# HTTPS + apex enforcement (Phase 0 production hardening)
+[[redirects]]
+  from = "http://localis.guide/*"
+  to = "https://localis.guide/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.localis.guide/*"
+  to = "https://localis.guide/:splat"
+  status = 301
+  force = true
