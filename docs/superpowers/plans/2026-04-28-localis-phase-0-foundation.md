@@ -23,7 +23,7 @@ Phase 0 is split into **6 milestones**. Each is delivered to a staging URL and i
 | **A — Foundation** ✅ | `2026-04-28-localis-phase-0-A-foundation.md` | Repo, Astro+Tailwind, design tokens, base layout components, deploy preview to Netlify | 12-16h |
 | **B — Public site** ✅ | `2026-04-28-localis-phase-0-B-public-site.md` | Homepage IT/EN, guide pages with trailer + paywall stub, legal pages, content collections | 16-20h |
 | **C — Payments** ✅ | `2026-04-28-localis-phase-0-C-payments.md` | Stripe Products, Checkout endpoint, webhook, Resend email delivery, JWT, magic link | 14-18h |
-| **D — Audio access** | `2026-04-28-localis-phase-0-D-audio-access.md` | R2 bucket, signed URLs, AudioPlayer, Service Worker offline cache, watermark generation | 16-20h |
+| **D — Audio access** ✅ | `2026-04-28-localis-phase-0-D-audio-access.md` | R2 bucket, signed URLs, AudioPlayer, Service Worker offline cache, watermark generation | 16-20h |
 | **E — Partner system** | `2026-04-28-localis-phase-0-E-partner-system.md` | Cookie attribution, Stripe Connect Standard onboarding, transfer_data split, /p/[slug] landings | 10-14h |
 | **F — SEO & polish** | `2026-04-28-localis-phase-0-F-seo-polish.md` | Sitemap, structured data, OG images, Plausible, Sentry, recovery flow, 404, Lighthouse 90+ | 12-16h |
 
