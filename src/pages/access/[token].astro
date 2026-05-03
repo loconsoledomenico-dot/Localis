@@ -1,6 +1,7 @@
 ---
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
+import AudioPlayer from '../../components/AudioPlayer.astro';
 import { verifyAccessToken } from '../../lib/jwt';
 import { getCollection } from 'astro:content';
 
@@ -36,27 +37,27 @@ const lang: 'it' | 'en' = 'it';
 
     <div class="flex flex-col gap-2xl">
       {userGuides.map((guide) => (
-        <section class="border border-border rounded-lg p-lg bg-surface-elev">
+        <section>
           <h2 class="font-display text-2xl text-ink mb-xs">{guide.data.title_it}</h2>
           <p class="text-sm text-ink-muted mb-md">{guide.data.subtitle_it}</p>
-
-          <div class="bg-surface border border-border rounded-md p-md text-center">
-            <p class="text-sm text-ink-muted">
-              Player audio in arrivo nel prossimo deploy.
-            </p>
-            <p class="text-xs text-ink-subtle mt-xs">
-              (Phase 0 Milestone D)
-            </p>
-          </div>
+          <AudioPlayer guide={guide.data} token={token} lang={lang} />
         </section>
       ))}
     </div>
 
     <footer class="mt-3xl pt-lg border-t border-border text-center">
-      <p class="text-sm text-ink-muted">
+      <p class="text-sm text-ink-muted mb-xs">
         Cambiato telefono? Riapri questo link.
+      </p>
+      <p class="text-sm text-ink-muted">
         Smarrita email? <a href="/recover" class="text-link hover:text-link-pressed">Recupera l'accesso</a>.
       </p>
     </footer>
   </main>
+
+  <script is:inline>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(console.error);
+    }
+  </script>
 </Layout>
