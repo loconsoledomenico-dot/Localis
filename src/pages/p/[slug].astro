@@ -1,0 +1,89 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import PriceCard from '../../components/PriceCard.astro';
+import SectionDivider from '../../components/SectionDivider.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const partners = await getCollection('partners');
+  return partners
+    .filter((p) => p.data.status === 'active')
+    .map((p) => ({
+      params: { slug: p.data.slug },
+      props: { partner: p },
+    }));
+}
+
+const { partner } = Astro.props;
+
+const guides = (await getCollection('guides'))
+  .filter((g) => g.data.city === 'bari' && g.data.status === 'live')
+  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
+
+const welcomeIt =
+  partner.data.custom_landing_copy_it ||
+  `Benvenuto. Goditi Bari come la racconterebbe chi ci vive — direttamente dalla tua stanza al ${partner.data.display_name}.`;
+---
+<Layout
+  title={`Localis · benvenuto da ${partner.data.display_name}`}
+  description={`Audioguide narrative di Bari. Goditi un'esperienza speciale grazie al ${partner.data.display_name}.`}
+  lang="it"
+>
+  <section class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-2xl text-center">
+      <Eyebrow class="justify-center mb-md">In collaborazione con {partner.data.display_name}</Eyebrow>
+      <h1 class="font-display text-4xl text-ink leading-tight mb-md max-w-prose mx-auto">
+        Ascolta Bari come una storia. <em class="text-accent">Mentre sei lì.</em>
+      </h1>
+      <p class="text-lg text-ink-muted max-w-prose mx-auto">{welcomeIt}</p>
+    </div>
+  </section>
+
+  <section class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Le guide disponibili" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+      {guides.map((g, i) => (
+        <GuideCard guide={g} lang="it" index={i} />
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Scegli il tuo piano" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[48rem] mx-auto">
+      <PriceCard
+        product="single"
+        guideSlug="bari-vecchia"
+        lang="it"
+        features={[
+          '1 guida a scelta',
+          'Accesso illimitato',
+          'Senza app, dal browser',
+          'Italiano e inglese',
+        ]}
+      />
+      <PriceCard
+        product="bundle"
+        lang="it"
+        primary
+        features={[
+          'Bari Vecchia — Dentro la Città',
+          'Porto di Bari — Dove è Successo Tutto',
+          'San Nicola — Il Santo Rubato',
+          'Accesso illimitato · Senza app',
+        ]}
+      />
+    </div>
+  </section>
+</Layout>
+
+<script define:vars={{ slug: partner.data.slug }}>
+  try {
+    document.cookie = `lg_partner=${slug}; path=/; max-age=${30*24*60*60}; SameSite=Lax`;
+    localStorage.setItem('lg_partner', slug);
+    localStorage.setItem('lg_partner_ts', String(Date.now()));
+  } catch (e) {}
+</script>
