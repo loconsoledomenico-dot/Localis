@@ -66,4 +66,10 @@ if (sessionId) {
       </a>
     )}
   </main>
+
+  <script is:inline define:vars={{ sessionId, success: !!directAccessUrl }}>
+    if (success && typeof window.plausible === 'function') {
+      window.plausible('Checkout Completed', { props: { session: sessionId || 'unknown' } });
+    }
+  </script>
 </Layout>

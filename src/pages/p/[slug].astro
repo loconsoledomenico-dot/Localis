@@ -86,4 +86,7 @@ const welcomeIt =
     localStorage.setItem('lg_partner', slug);
     localStorage.setItem('lg_partner_ts', String(Date.now()));
   } catch (e) {}
+  if (typeof window.plausible === 'function') {
+    window.plausible('Partner QR Visit', { props: { partner: slug } });
+  }
 </script>

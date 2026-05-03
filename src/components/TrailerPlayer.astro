@@ -91,6 +91,10 @@ const playLabel = lang === 'it' ? 'Riproduci anteprima' : 'Play preview';
           }
         });
         audio.play();
+        if (typeof window.plausible === 'function') {
+          const guideName = player.dataset.src?.split('/').pop()?.replace('.mp3', '') || 'unknown';
+          window.plausible('Trailer Played', { props: { guide: guideName } });
+        }
         iconPlay.classList.add('hidden');
         iconPause.classList.remove('hidden');
       } else {

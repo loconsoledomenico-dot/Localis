@@ -100,6 +100,9 @@ const productKey = isBundle ? 'bari-completa' : guideSlug;
           throw new Error('No checkout URL returned');
         }
 
+        if (typeof window.plausible === 'function') {
+          window.plausible('Checkout Started', { props: { product, lang } });
+        }
         window.location.assign(data.url);
       } catch (err) {
         console.error('[checkout]', err);

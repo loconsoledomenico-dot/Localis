@@ -4,6 +4,7 @@ import SkipLink from './SkipLink.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import StructuredData from './StructuredData.astro';
+import Analytics from './Analytics.astro';
 import { type Lang, stripLocalePrefix } from '../lib/i18n';
 import { organizationLD } from '../lib/seo';
 
@@ -55,6 +56,7 @@ const canonical = `${SITE}${currentPath}`;
     href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
+  <Analytics />
   <StructuredData data={organizationLD()} />
 </head>
 <body class="bg-surface text-ink font-body antialiased min-h-screen flex flex-col">

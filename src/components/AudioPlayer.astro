@@ -148,6 +148,7 @@ const labels = {
     token: string;
     lang: 'it' | 'en';
     audioUrl?: string;
+    fullPlayedTracked?: boolean;
   };
 
   const SPEEDS = [1, 1.25, 1.5, 2, 0.85];
@@ -263,6 +264,12 @@ const labels = {
       const pct = (p.audio.currentTime / p.audio.duration) * 100;
       p.fill.style.width = `${pct}%`;
       p.cur.textContent = fmtTime(p.audio.currentTime);
+      if (pct > 80 && !p.fullPlayedTracked) {
+        p.fullPlayedTracked = true;
+        if (typeof window.plausible === 'function') {
+          window.plausible('Audio Played Full', { props: { guide: p.slug } });
+        }
+      }
     });
 
     p.audio.addEventListener('ended', () => setPlayingState(p, false));
