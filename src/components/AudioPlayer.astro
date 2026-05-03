@@ -1,0 +1,342 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDuration } from '../lib/format';
+import type { Lang } from '../lib/i18n';
+
+export interface Props {
+  guide: CollectionEntry<'guides'>['data'];
+  token: string;
+  lang: Lang;
+}
+
+const { guide, token, lang } = Astro.props;
+
+const labels = {
+  it: {
+    play: 'Riproduci',
+    pause: 'Pausa',
+    rewind: 'Indietro 15 secondi',
+    forward: 'Avanti 15 secondi',
+    speed: 'Velocità',
+    chapters: 'Capitoli',
+    loading: 'Caricamento...',
+    offline_ready: 'Disponibile offline ✓',
+    offline_caching: 'Salvataggio per offline...',
+    error: 'Impossibile caricare l\'audio.',
+    retry: 'Riprova',
+  },
+  en: {
+    play: 'Play',
+    pause: 'Pause',
+    rewind: 'Back 15 seconds',
+    forward: 'Forward 15 seconds',
+    speed: 'Speed',
+    chapters: 'Chapters',
+    loading: 'Loading...',
+    offline_ready: 'Available offline ✓',
+    offline_caching: 'Saving for offline...',
+    error: 'Could not load audio.',
+    retry: 'Retry',
+  },
+}[lang];
+---
+<div
+  class="audio-player border border-border rounded-lg bg-surface-elev overflow-hidden"
+  data-guide-slug={guide.slug}
+  data-token={token}
+  data-lang={lang}
+  data-duration={guide.duration_seconds}
+>
+  <div class="p-md flex items-center gap-md">
+    <button
+      type="button"
+      class="ap-toggle flex-shrink-0 w-14 h-14 rounded-full bg-ink text-surface flex items-center justify-center transition-transform duration-fast hover:scale-105 disabled:opacity-50 disabled:cursor-wait"
+      aria-label={labels.play}
+    >
+      <svg class="ap-icon-play" width="16" height="18" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
+        <path d="M0 0l10 6-10 6z" />
+      </svg>
+      <svg class="ap-icon-pause hidden" width="16" height="18" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
+        <path d="M2 0h3v14H2zM7 0h3v14H7z" />
+      </svg>
+      <svg class="ap-icon-loading hidden animate-spin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke-opacity="0.3" />
+        <path d="M22 12a10 10 0 0 1-10 10" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <button type="button" class="ap-rewind text-ink-muted hover:text-ink transition-colors duration-fast" aria-label={labels.rewind}>
+      ⏪
+    </button>
+
+    <div class="flex-1 min-w-0">
+      <div class="ap-progress h-1 bg-ink/10 rounded-full overflow-hidden cursor-pointer" role="progressbar" aria-label="Audio progress" tabindex="0">
+        <div class="ap-fill h-full bg-accent rounded-full" style="width: 0%"></div>
+      </div>
+      <div class="flex justify-between mt-xs text-xs text-ink-subtle font-mono tabular-nums">
+        <span class="ap-current">0:00</span>
+        <span class="ap-duration">{formatDuration(guide.duration_seconds, 'long')}</span>
+      </div>
+    </div>
+
+    <button type="button" class="ap-forward text-ink-muted hover:text-ink transition-colors duration-fast" aria-label={labels.forward}>
+      ⏩
+    </button>
+
+    <button type="button" class="ap-speed text-xs font-semibold text-ink-muted hover:text-ink transition-colors duration-fast min-w-10" data-speed="1" aria-label={labels.speed}>
+      1×
+    </button>
+  </div>
+
+  <details class="border-t border-border">
+    <summary class="px-md py-sm cursor-pointer text-sm font-semibold text-ink-muted hover:text-ink select-none">
+      {labels.chapters} ({guide.chapters.length})
+    </summary>
+    <ol class="px-md pb-md flex flex-col gap-2xs">
+      {guide.chapters.map((ch, i) => {
+        const title = lang === 'it' ? ch.title_it : ch.title_en;
+        return (
+          <li>
+            <button
+              type="button"
+              class="ap-chapter w-full text-left flex items-baseline gap-sm py-xs hover:bg-surface rounded-sm transition-colors duration-fast"
+              data-time={ch.start_seconds}
+            >
+              <span class="font-mono text-xs text-ink-subtle tabular-nums w-6">{String(i + 1).padStart(2, '0')}</span>
+              <span class="flex-1 text-sm text-ink">{title}</span>
+              <span class="font-mono text-xs text-ink-subtle tabular-nums">{formatDuration(ch.start_seconds, 'long')}</span>
+            </button>
+          </li>
+        );
+      })}
+    </ol>
+  </details>
+
+  <div class="ap-status px-md py-xs border-t border-border text-xs text-ink-subtle hidden">
+    <span class="ap-status-text"></span>
+  </div>
+
+  <div class="ap-error px-md py-md border-t border-error/30 bg-error/5 text-sm text-error hidden">
+    <p class="ap-error-text">{labels.error}</p>
+    <button type="button" class="ap-retry mt-xs underline">{labels.retry}</button>
+  </div>
+
+  <audio class="ap-audio" preload="none" crossorigin="anonymous"></audio>
+</div>
+
+<script>
+  type Player = {
+    el: HTMLElement;
+    audio: HTMLAudioElement;
+    toggle: HTMLButtonElement;
+    iconPlay: SVGElement;
+    iconPause: SVGElement;
+    iconLoading: SVGElement;
+    rewind: HTMLButtonElement;
+    forward: HTMLButtonElement;
+    speed: HTMLButtonElement;
+    progress: HTMLElement;
+    fill: HTMLElement;
+    cur: HTMLElement;
+    dur: HTMLElement;
+    chapters: NodeListOf<HTMLButtonElement>;
+    status: HTMLElement;
+    statusText: HTMLElement;
+    error: HTMLElement;
+    retry: HTMLButtonElement;
+    slug: string;
+    token: string;
+    lang: 'it' | 'en';
+    audioUrl?: string;
+  };
+
+  const SPEEDS = [1, 1.25, 1.5, 2, 0.85];
+
+  function fmtTime(s: number): string {
+    const m = Math.floor(s / 60);
+    const sec = Math.floor(s % 60);
+    return `${m}:${sec.toString().padStart(2, '0')}`;
+  }
+
+  async function fetchAudioUrl(slug: string, token: string, lang: 'it' | 'en'): Promise<string> {
+    const res = await fetch(`/api/audio-url?guide=${encodeURIComponent(slug)}&token=${encodeURIComponent(token)}&lang=${lang}`);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
+      throw new Error(err.error || `HTTP ${res.status}`);
+    }
+    const data = await res.json();
+    return data.url;
+  }
+
+  function showStatus(p: Player, text: string): void {
+    p.status.classList.remove('hidden');
+    p.statusText.textContent = text;
+  }
+
+  function hideStatus(p: Player): void {
+    p.status.classList.add('hidden');
+  }
+
+  function showError(p: Player, text?: string): void {
+    p.error.classList.remove('hidden');
+    if (text) p.el.querySelector<HTMLElement>('.ap-error-text')!.textContent = text;
+    p.iconLoading.classList.add('hidden');
+    p.iconPlay.classList.remove('hidden');
+    p.toggle.disabled = false;
+  }
+
+  function hideError(p: Player): void {
+    p.error.classList.add('hidden');
+  }
+
+  function setPlayingState(p: Player, playing: boolean, loading = false): void {
+    p.iconPlay.classList.toggle('hidden', playing || loading);
+    p.iconPause.classList.toggle('hidden', !playing || loading);
+    p.iconLoading.classList.toggle('hidden', !loading);
+    p.toggle.disabled = loading;
+  }
+
+  async function play(p: Player): Promise<void> {
+    if (!p.audioUrl) {
+      setPlayingState(p, false, true);
+      try {
+        p.audioUrl = await fetchAudioUrl(p.slug, p.token, p.lang);
+        p.audio.src = p.audioUrl;
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : 'unknown';
+        showError(p, msg);
+        return;
+      }
+    }
+    try {
+      await p.audio.play();
+      setPlayingState(p, true);
+      if (navigator.serviceWorker?.controller) {
+        navigator.serviceWorker.controller.postMessage({
+          type: 'PRECACHE_AUDIO',
+          url: p.audioUrl,
+          guide: p.slug,
+        });
+        showStatus(p, p.el.dataset.lang === 'en' ? 'Saving for offline...' : 'Salvataggio per offline...');
+      }
+    } catch (err) {
+      showError(p);
+    }
+  }
+
+  function pause(p: Player): void {
+    p.audio.pause();
+    setPlayingState(p, false);
+  }
+
+  function initPlayer(el: HTMLElement): void {
+    const p: Player = {
+      el,
+      audio: el.querySelector<HTMLAudioElement>('.ap-audio')!,
+      toggle: el.querySelector<HTMLButtonElement>('.ap-toggle')!,
+      iconPlay: el.querySelector<SVGElement>('.ap-icon-play')!,
+      iconPause: el.querySelector<SVGElement>('.ap-icon-pause')!,
+      iconLoading: el.querySelector<SVGElement>('.ap-icon-loading')!,
+      rewind: el.querySelector<HTMLButtonElement>('.ap-rewind')!,
+      forward: el.querySelector<HTMLButtonElement>('.ap-forward')!,
+      speed: el.querySelector<HTMLButtonElement>('.ap-speed')!,
+      progress: el.querySelector<HTMLElement>('.ap-progress')!,
+      fill: el.querySelector<HTMLElement>('.ap-fill')!,
+      cur: el.querySelector<HTMLElement>('.ap-current')!,
+      dur: el.querySelector<HTMLElement>('.ap-duration')!,
+      chapters: el.querySelectorAll<HTMLButtonElement>('.ap-chapter'),
+      status: el.querySelector<HTMLElement>('.ap-status')!,
+      statusText: el.querySelector<HTMLElement>('.ap-status-text')!,
+      error: el.querySelector<HTMLElement>('.ap-error')!,
+      retry: el.querySelector<HTMLButtonElement>('.ap-retry')!,
+      slug: el.dataset.guideSlug!,
+      token: el.dataset.token!,
+      lang: (el.dataset.lang === 'en' ? 'en' : 'it') as 'it' | 'en',
+    };
+
+    p.audio.addEventListener('loadedmetadata', () => {
+      p.dur.textContent = fmtTime(p.audio.duration);
+    });
+
+    p.audio.addEventListener('timeupdate', () => {
+      if (!p.audio.duration) return;
+      const pct = (p.audio.currentTime / p.audio.duration) * 100;
+      p.fill.style.width = `${pct}%`;
+      p.cur.textContent = fmtTime(p.audio.currentTime);
+    });
+
+    p.audio.addEventListener('ended', () => setPlayingState(p, false));
+    p.audio.addEventListener('canplaythrough', () => {
+      hideStatus(p);
+      showStatus(p, p.lang === 'en' ? 'Available offline ✓' : 'Disponibile offline ✓');
+      setTimeout(() => hideStatus(p), 3000);
+    });
+    p.audio.addEventListener('error', () => showError(p));
+
+    p.toggle.addEventListener('click', () => {
+      hideError(p);
+      if (p.audio.paused) play(p);
+      else pause(p);
+    });
+
+    p.retry.addEventListener('click', () => {
+      hideError(p);
+      delete p.audioUrl;
+      p.audio.removeAttribute('src');
+      play(p);
+    });
+
+    p.rewind.addEventListener('click', () => {
+      p.audio.currentTime = Math.max(0, p.audio.currentTime - 15);
+    });
+
+    p.forward.addEventListener('click', () => {
+      p.audio.currentTime = Math.min(p.audio.duration || 0, p.audio.currentTime + 15);
+    });
+
+    p.speed.addEventListener('click', () => {
+      const cur = parseFloat(p.speed.dataset.speed || '1');
+      const idx = SPEEDS.indexOf(cur);
+      const next = SPEEDS[(idx + 1) % SPEEDS.length];
+      p.audio.playbackRate = next;
+      p.speed.dataset.speed = String(next);
+      p.speed.textContent = `${next}×`;
+    });
+
+    p.progress.addEventListener('click', (e) => {
+      if (!p.audio.duration) return;
+      const r = p.progress.getBoundingClientRect();
+      p.audio.currentTime = ((e.clientX - r.left) / r.width) * p.audio.duration;
+    });
+
+    p.progress.addEventListener('keydown', (e) => {
+      if (!p.audio.duration) return;
+      if (e.key === 'ArrowRight') {
+        p.audio.currentTime = Math.min(p.audio.duration, p.audio.currentTime + 15);
+        e.preventDefault();
+      } else if (e.key === 'ArrowLeft') {
+        p.audio.currentTime = Math.max(0, p.audio.currentTime - 15);
+        e.preventDefault();
+      }
+    });
+
+    p.chapters.forEach((ch) => {
+      ch.addEventListener('click', () => {
+        const time = parseFloat(ch.dataset.time || '0');
+        if (!p.audio.src) {
+          play(p).then(() => {
+            const onCanPlay = () => {
+              p.audio.currentTime = time;
+              p.audio.removeEventListener('canplay', onCanPlay);
+            };
+            p.audio.addEventListener('canplay', onCanPlay);
+          });
+        } else {
+          p.audio.currentTime = time;
+        }
+      });
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>('.audio-player').forEach(initPlayer);
+</script>
