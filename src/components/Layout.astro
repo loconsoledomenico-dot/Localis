@@ -4,7 +4,7 @@ import SkipLink from './SkipLink.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import StructuredData from './StructuredData.astro';
-import { type Lang } from '../lib/i18n';
+import { type Lang, stripLocalePrefix } from '../lib/i18n';
 import { organizationLD } from '../lib/seo';
 
 export interface Props {
@@ -15,6 +15,10 @@ export interface Props {
 
 const { title, description = '', lang = 'it' } = Astro.props;
 const currentPath = Astro.url.pathname;
+const itUrl = lang === 'it' ? currentPath : stripLocalePrefix(currentPath);
+const enUrl = lang === 'en' ? currentPath : `/en${stripLocalePrefix(currentPath)}`;
+const SITE = 'https://localis.guide';
+const canonical = `${SITE}${currentPath}`;
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -22,8 +26,26 @@ const currentPath = Astro.url.pathname;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FAF7F2" />
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="it" href={`${SITE}${itUrl}`} />
+  <link rel="alternate" hreflang="en" href={`${SITE}${enUrl}`} />
+  <link rel="alternate" hreflang="x-default" href={`${SITE}${itUrl}`} />
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  {description && <meta property="og:description" content={description} />}
+  <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'it_IT'} />
+  <meta property="og:locale:alternate" content={lang === 'en' ? 'it_IT' : 'en_US'} />
+  <meta property="og:site_name" content="Localis" />
+  <meta property="og:image" content={`${SITE}/og-default.jpg`} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  {description && <meta name="twitter:description" content={description} />}
+  <meta name="twitter:image" content={`${SITE}/og-default.jpg`} />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
