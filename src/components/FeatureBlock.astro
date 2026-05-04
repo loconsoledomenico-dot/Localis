@@ -12,6 +12,8 @@ export interface Props {
   ctaLabel: string;
   ctaHref: string;
   imageSide?: 'left' | 'right';
+  /** Optional CSS aspect-ratio for the image on mobile. Default '4 / 5'. */
+  mobileAspect?: string;
 }
 
 const {
@@ -27,90 +29,270 @@ const {
   ctaLabel,
   ctaHref,
   imageSide = 'right',
+  mobileAspect = '4 / 5',
 } = Astro.props;
 
-const textOrderClass = imageSide === 'right' ? 'lg:order-1' : 'lg:order-2';
-const figureOrderClass = imageSide === 'right' ? 'lg:order-2' : 'lg:order-1';
+const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block-left';
 ---
-<section class="feature-block bg-surface">
-  <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg lg:gap-2xl items-center">
-
-      <!-- Text column -->
-      <div class={`lg:col-span-6 flex flex-col ${textOrderClass}`}>
-        <div class="flex items-center gap-sm mb-md">
-          <span class="block w-7 h-px bg-accent"></span>
-          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-            {eyebrow}
-          </span>
-        </div>
-
-        <h2 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(1.9rem,4.4vw,3rem)]">
-          <span class="font-light">{heading}</span>
-          {italicEnding && (
-            <em class="block font-normal italic text-accent mt-2xs text-[clamp(1.7rem,3.8vw,2.6rem)]">
-              {italicEnding}
-            </em>
-          )}
-        </h2>
-
-        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted max-w-[52ch] mb-lg">
-          {body}
-        </p>
-
-        <ul class="bullets list-none p-0 m-0 mb-lg flex flex-col gap-sm">
-          {bullets.map((b) => (
-            <li class="flex items-baseline gap-sm font-body text-base text-ink-muted leading-snug">
-              <span class="font-display italic font-light text-accent text-base flex-shrink-0 select-none">✻</span>
-              <span>{b}</span>
-            </li>
-          ))}
-        </ul>
-
-        <a
-          href={ctaHref}
-          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px] self-start"
-        >
-          {ctaLabel}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Image column — Domus-style plate with caption -->
-      <figure class={`lg:col-span-6 m-0 ${figureOrderClass}`}>
-        <div class="relative bg-surface-elev p-[6px] border border-border">
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            class="block w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-[5/6] object-cover"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        {(plateNumber || caption) && (
-          <figcaption class="mt-sm flex items-baseline gap-sm text-ink-subtle">
-            {plateNumber && (
-              <span class="font-body font-semibold text-[10px] tracking-[0.22em] uppercase whitespace-nowrap pt-[2px]">
-                {plateNumber}
-              </span>
-            )}
-            {caption && (
-              <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[44ch]">
-                {caption}
-              </span>
-            )}
-          </figcaption>
-        )}
-      </figure>
+<section
+  class={`feature-block ${sideClass}`}
+  style={`--mobile-aspect: ${mobileAspect};`}
+>
+  <!-- Image column — bleeds to viewport edge on lg -->
+  <figure class="feature-image">
+    <div class="feature-image-frame">
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        class="feature-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <!-- Plate number overlays bottom-outer corner -->
+      {plateNumber && (
+        <span class="feature-plate" aria-hidden="true">
+          {plateNumber}
+        </span>
+      )}
     </div>
+    {caption && (
+      <figcaption class="feature-caption">
+        <span class="block w-7 h-px bg-border flex-shrink-0 mt-[10px]"></span>
+        <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[44ch]">
+          {caption}
+        </span>
+      </figcaption>
+    )}
+  </figure>
+
+  <!-- Text column — stays inside container -->
+  <div class="feature-text">
+    <div class="flex items-center gap-sm mb-md">
+      <span class="block w-7 h-px bg-accent"></span>
+      <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+        {eyebrow}
+      </span>
+    </div>
+
+    <h2 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(1.9rem,4.4vw,3rem)]">
+      <span class="font-light">{heading}</span>
+      {italicEnding && (
+        <em class="block font-normal italic text-accent mt-2xs text-[clamp(1.7rem,3.8vw,2.6rem)]">
+          {italicEnding}
+        </em>
+      )}
+    </h2>
+
+    <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted max-w-[52ch] mb-lg">
+      {body}
+    </p>
+
+    <ul class="bullets list-none p-0 m-0 mb-lg flex flex-col gap-sm max-w-[52ch]">
+      {bullets.map((b) => (
+        <li class="flex items-baseline gap-sm font-body text-base text-ink-muted leading-snug">
+          <span class="font-display italic font-light text-accent text-base flex-shrink-0 select-none">✻</span>
+          <span>{b}</span>
+        </li>
+      ))}
+    </ul>
+
+    <a
+      href={ctaHref}
+      class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px] self-start"
+    >
+      {ctaLabel}
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
   </div>
 </section>
 
 <style>
+  /* === Container math ===
+   * 1100px == --container max width used across Localis (max-w-wrap)
+   * Side gutter on desktop = max(--spacing-lg, half of (vw - 1100) + lg)
+   */
   .feature-block {
+    --max-w: 1100px;
+    --side-gutter: max(var(--spacing-lg), calc((100vw - var(--max-w)) / 2 + var(--spacing-lg)));
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    padding-block: var(--spacing-2xl);
     border-top: 1px solid var(--color-border);
+  }
+
+  /* === Mobile: image full-bleed top, text below in container ===  */
+  .feature-image {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  .feature-image-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--mobile-aspect);
+    background: var(--color-surface-elev);
+    overflow: hidden;
+  }
+  .feature-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.94) contrast(1.04);
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .feature-block:hover .feature-img,
+  .feature-block:focus-within .feature-img {
+    transform: scale(1.02);
+  }
+
+  /* Plate number — magazine convention, bottom corner with subtle scrim */
+  .feature-plate {
+    position: absolute;
+    bottom: var(--spacing-md);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-surface);
+    background: oklch(15% 0.012 240 / 0.78);
+    padding: 6px 12px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .feature-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding-inline: var(--spacing-md);
+    color: var(--color-ink-subtle);
+  }
+
+  .feature-text {
+    padding-inline: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* === Desktop (lg+): magazine spread === */
+  @media (min-width: 1024px) {
+    .feature-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: var(--spacing-3xl);
+      align-items: center;
+      padding-block: clamp(var(--spacing-3xl), 8vw, var(--spacing-4xl));
+    }
+
+    .feature-block-right .feature-image {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .feature-block-right .feature-text {
+      grid-column: 1;
+      grid-row: 1;
+      padding-left: var(--side-gutter);
+      padding-right: 0;
+    }
+
+    .feature-block-left .feature-image {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .feature-block-left .feature-text {
+      grid-column: 2;
+      grid-row: 1;
+      padding-right: var(--side-gutter);
+      padding-left: 0;
+    }
+
+    /* Image bleeds to viewport edge on its outer side */
+    .feature-image-frame {
+      aspect-ratio: auto;
+      height: clamp(420px, 62vh, 620px);
+    }
+    .feature-block-right .feature-image-frame {
+      margin-right: calc(-1 * var(--side-gutter));
+    }
+    .feature-block-left .feature-image-frame {
+      margin-left: calc(-1 * var(--side-gutter));
+    }
+
+    .feature-plate {
+      bottom: var(--spacing-lg);
+    }
+    .feature-block-right .feature-plate {
+      right: var(--spacing-lg);
+    }
+    .feature-block-left .feature-plate {
+      left: var(--spacing-lg);
+    }
+
+    .feature-caption {
+      padding-inline: 0;
+    }
+    .feature-block-right .feature-caption {
+      margin-right: calc(-1 * var(--side-gutter) + var(--spacing-md));
+      padding-left: 0;
+      padding-right: var(--spacing-md);
+    }
+    .feature-block-left .feature-caption {
+      margin-left: calc(-1 * var(--side-gutter) + var(--spacing-md));
+      padding-right: 0;
+      padding-left: var(--spacing-md);
+    }
+  }
+
+  /* On smaller screens, plate sits inside the bottom-outer corner of the image */
+  @media (max-width: 1023.98px) {
+    .feature-plate {
+      right: var(--spacing-md);
+    }
+  }
+
+  /* Reveal on first paint */
+  .feature-image,
+  .feature-text {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: featureIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .feature-image {
+    animation-delay: 0.05s;
+  }
+  .feature-text {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes featureIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .feature-image,
+    .feature-text {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+    .feature-img {
+      transition: none;
+    }
+    .feature-block:hover .feature-img {
+      transform: none;
+    }
   }
 </style>
