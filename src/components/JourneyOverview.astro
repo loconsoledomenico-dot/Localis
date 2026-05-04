@@ -142,6 +142,7 @@ const steps = lang === 'it'
   .journey-track-wrap {
     position: relative;
     width: 100%;
+    border-top: 1px solid var(--color-ink);
   }
 
   .journey-track {
@@ -190,17 +191,24 @@ const steps = lang === 'it'
     position: relative;
     height: 100%;
     min-height: 280px;
-    background: var(--color-surface-deep);
-    border-top: 1px solid var(--color-ink);
     padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
     display: flex;
     flex-direction: column;
-    transition: background 250ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .journey-card:hover .journey-card-inner,
-  .journey-card:focus-within .journey-card-inner {
-    background: var(--color-surface-elev);
+  /* Discreet hover: numeral lights up, asterisk turns accent */
+  .journey-card:hover .journey-numeral,
+  .journey-card:focus-within .journey-numeral {
+    opacity: 0.18;
+  }
+  .journey-card:hover .journey-card-foot span:nth-child(2),
+  .journey-card:focus-within .journey-card-foot span:nth-child(2) {
+    color: var(--color-accent);
+  }
+  .journey-numeral,
+  .journey-card-foot span:nth-child(2) {
+    transition: opacity 250ms cubic-bezier(0.22, 1, 0.36, 1),
+                color 250ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .journey-card-head {
