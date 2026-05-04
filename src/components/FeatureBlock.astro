@@ -190,7 +190,7 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: var(--spacing-3xl);
-      align-items: center;
+      align-items: stretch;
       padding-block: clamp(var(--spacing-3xl), 8vw, var(--spacing-4xl));
     }
 
@@ -216,10 +216,20 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
       padding-left: 0;
     }
 
+    /* Stretch: image and text both fill the row.
+     * Image frame grows to fill the figure (which fills the cell).
+     * Text content centers vertically within its cell.
+     * Result: no empty gaps when one column is taller than the other. */
+    .feature-text {
+      justify-content: center;
+    }
+
     /* Image bleeds to viewport edge on its outer side */
     .feature-image-frame {
       aspect-ratio: auto;
-      height: clamp(420px, 62vh, 620px);
+      flex: 1 1 auto;
+      min-height: 460px;
+      max-height: 78vh;
     }
     .feature-block-right .feature-image-frame {
       margin-right: calc(-1 * var(--side-gutter));
