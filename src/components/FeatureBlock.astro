@@ -224,12 +224,18 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
       justify-content: center;
     }
 
-    /* Image bleeds to viewport edge on its outer side */
+    /* Image bleeds to viewport edge on its outer side.
+     * No max-height: the frame must be free to grow to the row's full
+     * height (which equals the taller of image vs text column) — any cap
+     * here re-introduces the empty parchment band below tall-text rows. */
+    .feature-image,
+    .feature-text {
+      height: 100%;
+    }
     .feature-image-frame {
       aspect-ratio: auto;
       flex: 1 1 auto;
       min-height: 460px;
-      max-height: 78vh;
     }
     .feature-block-right .feature-image-frame {
       margin-right: calc(-1 * var(--side-gutter));
