@@ -2,7 +2,6 @@
 export const prerender = true;
 import Layout from '../components/Layout.astro';
 import Hero from '../components/Hero.astro';
-import GuideCard from '../components/GuideCard.astro';
 import TrailerPlayer from '../components/TrailerPlayer.astro';
 import PriceCard from '../components/PriceCard.astro';
 import SectionDivider from '../components/SectionDivider.astro';
@@ -14,11 +13,9 @@ import AuthorsBlock from '../components/AuthorsBlock.astro';
 import BariMap from '../components/BariMap.astro';
 import { getCollection } from 'astro:content';
 
-const guides = (await getCollection('guides'))
-  .filter((g) => g.data.city === 'bari')
+const liveGuides = (await getCollection('guides'))
+  .filter((g) => g.data.city === 'bari' && g.data.status === 'live')
   .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
-
-const liveGuides = guides.filter((g) => g.data.status === 'live');
 
 const featuredTrailer = liveGuides[0]; // Bari Vecchia
 ---
@@ -116,37 +113,8 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   {/* STATS — numeri onesti, niente vanity metrics */}
   <StatsBlock lang="it" />
 
-  {/* MAPPA — dove parte ogni guida, illustrazione SVG editoriale */}
+  {/* I sei luoghi — griglia foto, l'unica sezione "scegli la guida" della pagina */}
   <BariMap lang="it" />
-
-  {/* GUIDE — mobile snap carousel · desktop grid */}
-  <section id="guide" class="bg-surface">
-    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
-      <SectionDivider label="Le sei guide di Bari" />
-
-      <div class="
-        guides-row
-        flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-md
-        overflow-x-auto md:overflow-visible
-        snap-x snap-mandatory md:snap-none
-        -mx-md md:mx-0 px-md md:px-0 pb-md md:pb-0
-        scroll-pl-md
-      ">
-        {guides.map((g, i) => (
-          <div
-            class="guide-cell snap-start shrink-0 w-[82%] sm:w-[60%] md:w-auto"
-            style={`--idx:${i}`}
-          >
-            <GuideCard guide={g} lang="it" index={i} />
-          </div>
-        ))}
-      </div>
-
-      <p class="md:hidden text-center text-[11px] text-ink-subtle mt-md tracking-[0.18em] uppercase font-semibold">
-        scorri per vedere tutte
-      </p>
-    </div>
-  </section>
 
   {/* MANIFESTO — pull-quote editoriale, parchment, ornamento tipografico, foto backdrop sotto */}
   <section class="manifesto-section bg-surface-elev relative overflow-hidden">
@@ -243,24 +211,6 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
 </Layout>
 
 <style>
-  /* Stagger reveal per guide cards. Index passato via custom prop --idx. */
-  .guide-cell {
-    opacity: 0;
-    transform: translateY(16px);
-    animation: guideCellIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: calc(var(--idx, 0) * 80ms + 120ms);
-  }
-  @keyframes guideCellIn {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Nasconde scrollbar orizzontale mobile, mantiene momentum */
-  .guides-row {
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  .guides-row::-webkit-scrollbar { display: none; }
-
   /* Manifesto: leggera comparsa del blockquote alla prima paint */
   .manifesto-quote {
     opacity: 0;
@@ -298,7 +248,6 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .guide-cell,
     .manifesto-quote {
       animation: none;
       opacity: 1;
