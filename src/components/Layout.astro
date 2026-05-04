@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SkipLink from './SkipLink.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import StickyPlayer from './StickyPlayer.astro';
 import StructuredData from './StructuredData.astro';
 import Analytics from './Analytics.astro';
 import { type Lang, stripLocalePrefix } from '../lib/i18n';
@@ -68,6 +69,8 @@ const canonical = `${SITE}${currentPath}`;
   </main>
 
   <Footer lang={lang} />
+
+  <StickyPlayer lang={lang} />
 
   <script is:inline>
     (function() {

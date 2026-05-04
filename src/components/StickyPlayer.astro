@@ -1,0 +1,503 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const playLabel = lang === 'it' ? 'Riproduci' : 'Play';
+const pauseLabel = lang === 'it' ? 'Pausa' : 'Pause';
+const closeLabel = lang === 'it' ? 'Chiudi player' : 'Close player';
+const progressLabel = lang === 'it' ? 'Avanzamento' : 'Progress';
+const fallbackTitle = lang === 'it' ? 'In ascolto' : 'Now playing';
+const eyebrowLabel = lang === 'it' ? 'In ascolto · Localis' : 'Now playing · Localis';
+---
+<aside
+  id="sticky-player"
+  class="sticky-player"
+  data-active="false"
+  aria-label={lang === 'it' ? 'Player audio in basso' : 'Bottom audio player'}
+  hidden
+>
+  <div class="sticky-player-inner">
+    <!-- Play / pause -->
+    <button
+      type="button"
+      class="sp-toggle"
+      data-play-label={playLabel}
+      data-pause-label={pauseLabel}
+      aria-label={playLabel}
+    >
+      <svg class="sp-icon-play" width="14" height="16" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
+        <path d="M0 0l10 6-10 6z" />
+      </svg>
+      <svg class="sp-icon-pause hidden" width="14" height="16" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
+        <path d="M2 0h3v14H2zM7 0h3v14H7z" />
+      </svg>
+    </button>
+
+    <!-- Meta: eyebrow + title -->
+    <div class="sp-meta">
+      <span class="sp-eyebrow">{eyebrowLabel}</span>
+      <span class="sp-title" data-fallback={fallbackTitle}>{fallbackTitle}</span>
+    </div>
+
+    <!-- Progress + times -->
+    <div class="sp-progress-wrap">
+      <div
+        class="sp-progress"
+        role="progressbar"
+        aria-label={progressLabel}
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        tabindex="0"
+      >
+        <div class="sp-fill"></div>
+      </div>
+      <div class="sp-times">
+        <span class="sp-current">0:00</span>
+        <span class="sp-duration">--:--</span>
+      </div>
+    </div>
+
+    <!-- Close -->
+    <button type="button" class="sp-close" aria-label={closeLabel}>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="2" y1="2" x2="12" y2="12"/>
+        <line x1="12" y1="2" x2="2" y2="12"/>
+      </svg>
+    </button>
+  </div>
+</aside>
+
+<style>
+  .sticky-player {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    background: oklch(96% 0.012 75 / 0.94);
+    -webkit-backdrop-filter: blur(10px) saturate(1.05);
+    backdrop-filter: blur(10px) saturate(1.05);
+    border-top: 1px solid var(--color-ink);
+    padding: var(--spacing-sm) var(--spacing-md) calc(var(--spacing-sm) + env(safe-area-inset-bottom));
+
+    /* Hidden by default — slides up when activated */
+    transform: translateY(110%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 280ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .sticky-player[data-active="true"] {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sticky-player[hidden] {
+    display: none !important;
+  }
+
+  .sticky-player-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: var(--spacing-md);
+    row-gap: var(--spacing-xs);
+  }
+
+  /* Play button */
+  .sp-toggle {
+    grid-column: 1;
+    grid-row: 1;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 0;
+    background: var(--color-ink);
+    color: var(--color-surface);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 150ms ease;
+  }
+  .sp-toggle:hover { transform: scale(1.05); }
+  .sp-toggle:active { transform: scale(0.97); }
+  .sp-toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+  .sp-icon-play.hidden,
+  .sp-icon-pause.hidden { display: none; }
+
+  /* Meta */
+  .sp-meta {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .sp-eyebrow {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+  }
+  .sp-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    color: var(--color-ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Progress + times: row 2 on mobile, expands inline on lg */
+  .sp-progress-wrap {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .sp-progress {
+    height: 4px;
+    background: var(--color-border);
+    border-radius: 999px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+  .sp-progress:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 999px;
+  }
+  .sp-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--color-accent);
+    border-radius: 999px;
+    transition: width 100ms linear;
+  }
+  .sp-times {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-body);
+    font-variant-numeric: tabular-nums;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-ink-subtle);
+    letter-spacing: 0.04em;
+  }
+
+  /* Close button */
+  .sp-close {
+    grid-column: 3;
+    grid-row: 1;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 0;
+    background: transparent;
+    color: var(--color-ink-muted);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 150ms ease, color 150ms ease;
+  }
+  .sp-close:hover {
+    background: var(--color-border);
+    color: var(--color-ink);
+  }
+  .sp-close:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Desktop: one-row layout, progress in middle */
+  @media (min-width: 768px) {
+    .sticky-player {
+      padding: var(--spacing-md) var(--spacing-lg) calc(var(--spacing-md) + env(safe-area-inset-bottom));
+    }
+
+    .sticky-player-inner {
+      grid-template-columns: auto minmax(160px, 240px) 1fr auto;
+      grid-template-rows: auto;
+      column-gap: var(--spacing-lg);
+    }
+
+    .sp-toggle {
+      grid-row: 1;
+    }
+
+    .sp-meta {
+      grid-row: 1;
+    }
+
+    .sp-progress-wrap {
+      grid-column: 3;
+      grid-row: 1;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+
+    .sp-progress {
+      flex: 1;
+    }
+
+    .sp-times {
+      flex-shrink: 0;
+      gap: var(--spacing-sm);
+    }
+    .sp-times > span:first-child::after {
+      content: ' / ';
+      color: var(--color-border);
+    }
+
+    .sp-close {
+      grid-row: 1;
+    }
+  }
+
+  /* Avoid sitting under the OS keyboard on iOS — mid-screen open keyboards collide */
+  @media (max-height: 480px) and (orientation: landscape) {
+    .sticky-player {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sticky-player {
+      transition: opacity 0.01ms !important;
+      transform: none !important;
+    }
+    .sp-fill {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  /**
+   * Localis sticky audio bar.
+   * - Listens to all <audio class="trailer-audio"> elements on the page.
+   * - When any starts playing, the sticky bar slides up and mirrors that audio.
+   * - Sticky controls (play/pause, progress, close) drive the active audio.
+   */
+  (() => {
+    const barEl = document.getElementById('sticky-player');
+    if (!barEl) return;
+    const bar: HTMLElement = barEl;
+
+    const toggle = bar.querySelector<HTMLButtonElement>('.sp-toggle')!;
+    const iconPlay = bar.querySelector<SVGElement>('.sp-icon-play')!;
+    const iconPause = bar.querySelector<SVGElement>('.sp-icon-pause')!;
+    const titleEl = bar.querySelector<HTMLElement>('.sp-title')!;
+    const progressEl = bar.querySelector<HTMLElement>('.sp-progress')!;
+    const fillEl = bar.querySelector<HTMLElement>('.sp-fill')!;
+    const curEl = bar.querySelector<HTMLElement>('.sp-current')!;
+    const durEl = bar.querySelector<HTMLElement>('.sp-duration')!;
+    const closeBtn = bar.querySelector<HTMLButtonElement>('.sp-close')!;
+
+    const playLabel = toggle.dataset.playLabel ?? 'Play';
+    const pauseLabel = toggle.dataset.pauseLabel ?? 'Pause';
+    const fallbackTitle = titleEl.dataset.fallback ?? '';
+
+    let activeAudio: HTMLAudioElement | null = null;
+    let timeUpdateHandler: (() => void) | null = null;
+    let endedHandler: (() => void) | null = null;
+    let pauseHandler: (() => void) | null = null;
+    let playHandler: (() => void) | null = null;
+
+    function fmt(seconds: number): string {
+      if (!isFinite(seconds) || isNaN(seconds)) return '--:--';
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return `${m}:${s.toString().padStart(2, '0')}`;
+    }
+
+    function show() {
+      // Reveal the element first so the transform transition runs from hidden state
+      if (bar.hasAttribute('hidden')) bar.removeAttribute('hidden');
+      // Force reflow so the next attribute change triggers the transition
+      void bar.offsetWidth;
+      bar.dataset.active = 'true';
+    }
+
+    function hide() {
+      bar.dataset.active = 'false';
+    }
+
+    function detachActive() {
+      if (!activeAudio) return;
+      if (timeUpdateHandler) activeAudio.removeEventListener('timeupdate', timeUpdateHandler);
+      if (endedHandler) activeAudio.removeEventListener('ended', endedHandler);
+      if (pauseHandler) activeAudio.removeEventListener('pause', pauseHandler);
+      if (playHandler) activeAudio.removeEventListener('play', playHandler);
+      timeUpdateHandler = endedHandler = pauseHandler = playHandler = null;
+      activeAudio = null;
+    }
+
+    function setPlayingUI(playing: boolean) {
+      if (playing) {
+        iconPlay.classList.add('hidden');
+        iconPause.classList.remove('hidden');
+        toggle.setAttribute('aria-label', pauseLabel);
+      } else {
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+        toggle.setAttribute('aria-label', playLabel);
+      }
+    }
+
+    function deriveTitle(audio: HTMLAudioElement): string {
+      const player = audio.closest('.trailer-player') as HTMLElement | null;
+      if (player) {
+        // Look for an existing label inside the trailer player
+        const lbl = player.querySelector('p.text-xs');
+        if (lbl?.textContent) return lbl.textContent.trim();
+      }
+      // Fallback: derive from src filename
+      const src = audio.querySelector('source')?.getAttribute('src') ?? audio.src;
+      if (src) {
+        const tail = src.split('/').pop() ?? '';
+        return tail.replace(/\.(mp3|m4a|ogg|wav)$/i, '').replace(/[-_]/g, ' ');
+      }
+      return fallbackTitle;
+    }
+
+    function attach(audio: HTMLAudioElement) {
+      detachActive();
+      activeAudio = audio;
+
+      titleEl.textContent = deriveTitle(audio);
+      curEl.textContent = fmt(audio.currentTime);
+      durEl.textContent = fmt(audio.duration);
+
+      const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+      fillEl.style.width = `${pct}%`;
+      progressEl.setAttribute('aria-valuenow', String(Math.round(pct)));
+
+      timeUpdateHandler = () => {
+        if (!activeAudio || !activeAudio.duration) return;
+        const p = (activeAudio.currentTime / activeAudio.duration) * 100;
+        fillEl.style.width = `${p}%`;
+        curEl.textContent = fmt(activeAudio.currentTime);
+        durEl.textContent = fmt(activeAudio.duration);
+        progressEl.setAttribute('aria-valuenow', String(Math.round(p)));
+      };
+      endedHandler = () => {
+        setPlayingUI(false);
+        // Keep visible briefly so user can replay; auto-hide after 6s
+        window.setTimeout(() => {
+          if (activeAudio === audio && audio.paused) hide();
+        }, 6000);
+      };
+      pauseHandler = () => setPlayingUI(false);
+      playHandler = () => {
+        setPlayingUI(true);
+        show();
+      };
+
+      audio.addEventListener('timeupdate', timeUpdateHandler);
+      audio.addEventListener('ended', endedHandler);
+      audio.addEventListener('pause', pauseHandler);
+      audio.addEventListener('play', playHandler);
+
+      setPlayingUI(!audio.paused);
+      show();
+    }
+
+    // Wire toggle: drives the active audio
+    toggle.addEventListener('click', () => {
+      if (!activeAudio) return;
+      if (activeAudio.paused) {
+        activeAudio.play().catch(() => {});
+      } else {
+        activeAudio.pause();
+      }
+    });
+
+    // Scrub via click
+    progressEl.addEventListener('click', (e) => {
+      if (!activeAudio || !activeAudio.duration) return;
+      const rect = progressEl.getBoundingClientRect();
+      const pct = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+      activeAudio.currentTime = activeAudio.duration * pct;
+    });
+
+    // Scrub via keyboard
+    progressEl.addEventListener('keydown', (e) => {
+      if (!activeAudio || !activeAudio.duration) return;
+      const STEP = 5;
+      if (e.key === 'ArrowRight') {
+        activeAudio.currentTime = Math.min(activeAudio.duration, activeAudio.currentTime + STEP);
+        e.preventDefault();
+      } else if (e.key === 'ArrowLeft') {
+        activeAudio.currentTime = Math.max(0, activeAudio.currentTime - STEP);
+        e.preventDefault();
+      } else if (e.key === ' ' || e.key === 'Enter') {
+        toggle.click();
+        e.preventDefault();
+      }
+    });
+
+    // Close: pause + hide
+    closeBtn.addEventListener('click', () => {
+      if (activeAudio && !activeAudio.paused) {
+        activeAudio.pause();
+      }
+      hide();
+    });
+
+    // Discover all trailer audio elements on the page and bind their play events.
+    // When any starts playing, attach to that one (others are paused by TrailerPlayer
+    // already, but we re-pause others here as a safety net).
+    function bindAll() {
+      const audios = document.querySelectorAll<HTMLAudioElement>('.trailer-audio');
+      audios.forEach((audio) => {
+        if ((audio.dataset as DOMStringMap).spBound === 'true') return;
+        (audio.dataset as DOMStringMap).spBound = 'true';
+        audio.addEventListener('play', () => {
+          // Pause any other currently-active audio handled by sticky bar
+          if (activeAudio && activeAudio !== audio && !activeAudio.paused) {
+            activeAudio.pause();
+          }
+          attach(audio);
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bindAll);
+    } else {
+      bindAll();
+    }
+
+    // If trailers are added dynamically (e.g. content swapped), rebind on hash change
+    window.addEventListener('hashchange', bindAll);
+  })();
+</script>
