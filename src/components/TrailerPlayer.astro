@@ -10,33 +10,34 @@ export interface Props {
 const { src, label, lang } = Astro.props;
 const playLabel = lang === 'it' ? 'Riproduci anteprima' : 'Play preview';
 ---
-<div class="trailer-player border border-border rounded-lg p-md bg-surface-elev" data-src={src}>
-  <div class="flex items-center gap-md">
+<div class="trailer-player" data-src={src}>
+  <div class="trailer-row">
     <button
       type="button"
-      class="trailer-toggle flex-shrink-0 w-12 h-12 rounded-full bg-ink text-surface flex items-center justify-center transition-transform duration-fast hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+      class="trailer-toggle"
       aria-label={playLabel}
     >
-      <svg class="trailer-icon-play" width="14" height="16" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
+      <svg class="trailer-icon-play" width="11" height="13" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true">
         <path d="M0 0l10 6-10 6z" />
       </svg>
-      <svg class="trailer-icon-pause hidden" width="14" height="16" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
+      <svg class="trailer-icon-pause hidden" width="11" height="13" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
         <path d="M2 0h3v14H2zM7 0h3v14H7z" />
       </svg>
     </button>
 
-    <div class="flex-1 min-w-0">
-      {label && (
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-ink-subtle mb-xs">
-          {label}
-        </p>
-      )}
-      <div class="trailer-progress h-1 bg-ink/10 rounded-full overflow-hidden cursor-pointer" role="progressbar" aria-label="Trailer progress" tabindex="0">
-        <div class="trailer-fill h-full bg-accent rounded-full transition-[width] duration-fast" style="width: 0%;"></div>
+    <div class="trailer-body">
+      <div class="trailer-header">
+        {label && (
+          <span class="trailer-label">{label}</span>
+        )}
+        <span class="trailer-time">
+          <span class="trailer-current">0:00</span>
+          <span class="trailer-time-sep" aria-hidden="true"> · </span>
+          <span class="trailer-duration">--:--</span>
+        </span>
       </div>
-      <div class="flex justify-between mt-xs text-xs text-ink-subtle">
-        <span class="trailer-current">0:00</span>
-        <span class="trailer-duration">--:--</span>
+      <div class="trailer-progress" role="progressbar" aria-label="Trailer progress" tabindex="0">
+        <div class="trailer-fill"></div>
       </div>
     </div>
   </div>
@@ -45,6 +46,114 @@ const playLabel = lang === 'it' ? 'Riproduci anteprima' : 'Play preview';
     <source src={src} type="audio/mpeg" />
   </audio>
 </div>
+
+<style>
+  /* Editorial player — no card, no rounded corners, no podcast glyph.
+   * A hairline rule on top, a play caret, a labelled track. */
+  .trailer-player {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding-block: var(--spacing-md);
+  }
+
+  .trailer-row {
+    display: flex;
+    align-items: stretch;
+    gap: var(--spacing-md);
+  }
+
+  /* Play caret — small rectangular plate, ink border, accent on hover */
+  .trailer-toggle {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--color-ink);
+    border: 1px solid var(--color-ink);
+    cursor: pointer;
+    transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+                color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .trailer-toggle:hover,
+  .trailer-toggle:focus-visible {
+    background: var(--color-ink);
+    color: var(--color-surface);
+  }
+  .trailer-toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  .trailer-body {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .trailer-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+  }
+
+  .trailer-label {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    line-height: 1;
+  }
+
+  .trailer-time {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .trailer-time-sep {
+    margin-inline: 4px;
+  }
+
+  /* Progress — single hairline track + accent fill */
+  .trailer-progress {
+    position: relative;
+    height: 2px;
+    background: color-mix(in oklch, var(--color-ink) 18%, transparent);
+    cursor: pointer;
+    transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .trailer-progress:hover {
+    background: color-mix(in oklch, var(--color-ink) 32%, transparent);
+  }
+  .trailer-progress:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    background: color-mix(in oklch, var(--color-ink) 32%, transparent);
+  }
+  .trailer-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--color-accent);
+    transition: width 100ms linear;
+  }
+</style>
 
 <script>
   function fmtTime(seconds: number): string {
@@ -81,7 +190,6 @@ const playLabel = lang === 'it' ? 'Riproduci anteprima' : 'Play preview';
 
     toggle.addEventListener('click', () => {
       if (audio.paused) {
-        // Pause any other trailer playing
         document.querySelectorAll<HTMLAudioElement>('.trailer-audio').forEach((a) => {
           if (a !== audio) {
             a.pause();

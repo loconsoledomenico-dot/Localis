@@ -9,11 +9,14 @@ const { lang } = Astro.props;
 
 const masthead_l = lang === 'it' ? 'Edizione 01 — Bari' : 'Edition 01 — Bari';
 const masthead_r = lang === 'it' ? 'Sei guide narrative' : 'Six narrative guides';
-const heading1 = lang === 'it' ? 'Bari ti parla.' : 'Bari speaks to you.';
-const heading2 = lang === 'it' ? 'Se la sai ascoltare.' : 'If you know how to listen.';
+
+const heading1 = lang === 'it' ? 'L\'audioguida che cammina con te.' : 'The audio guide that walks with you.';
+const heading2 = lang === 'it' ? 'Sei voci di Bari, dal browser.' : 'Six voices of Bari, from your browser.';
+
 const lede = lang === 'it'
-  ? 'Sei storie vere registrate sui luoghi reali. Apri il browser, premi play, cammina nei vicoli mentre tutto è già accaduto.'
-  : 'Six real stories recorded on real places. Open your browser, press play, walk the alleys while everything has already happened.';
+  ? 'Sei narratori baresi raccontano sei quartieri. Storie vere, registrate sui luoghi reali — non da brochure, non da Wikipedia.'
+  : 'Six storytellers from Bari narrate six neighbourhoods. Real stories, recorded on real places — not brochure copy, not Wikipedia.';
+
 const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60s' : 'Listen a teaser · 60s';
 const ctaSecondary = lang === 'it' ? 'Sfoglia le sei guide' : 'Browse the six guides';
 const microline = lang === 'it' ? 'Senza app. Funziona offline. Italiano e inglese.' : 'No app. Works offline. Italian and English.';
@@ -26,94 +29,210 @@ const altText = lang === 'it'
   : 'A young woman with earphones listens to a Localis guide on her smartphone, in front of the Romanesque facade of Bari\'s Cattedrale di San Sabino';
 ---
 <section class="hero relative bg-surface">
-  <div class="max-w-wrap mx-auto px-md sm:px-lg pt-lg sm:pt-xl pb-2xl lg:pb-3xl">
 
-    <!-- MASTHEAD strip — hairline + small caps, like a 1960s travel magazine flag -->
-    <div class="hero-masthead flex items-baseline justify-between gap-md border-t border-border pt-sm mb-2xl lg:mb-3xl">
-      <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle">
-        {masthead_l}
-      </span>
-      <span class="hidden sm:inline text-[10px] font-semibold tracking-[0.28em] uppercase text-ink-subtle">
-        {masthead_r}
-      </span>
-    </div>
+  <!-- MASTHEAD strip — stays inside container -->
+  <div class="hero-masthead">
+    <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle">
+      {masthead_l}
+    </span>
+    <span class="hidden sm:inline text-[10px] font-semibold tracking-[0.28em] uppercase text-ink-subtle">
+      {masthead_r}
+    </span>
+  </div>
 
-    <!-- 12-col editorial grid: gutter (1) | headline (7) | photo plate (4) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-md lg:gap-xl items-start">
+  <!-- 2-col magazine spread on lg+ : text (container) | photo (bleed right) -->
+  <div class="hero-grid">
 
-      <!-- Gutter chapter number — bleeds outside on lg, magazine flourish -->
-      <aside class="hidden lg:block lg:col-span-1 relative" aria-hidden="true">
-        <span class="hero-chapter font-display italic font-light text-[11rem] leading-[0.8] text-accent/12 select-none block -ml-md">
-          01
-        </span>
-      </aside>
+    <!-- TEXT column -->
+    <div class="hero-text">
+      <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
+        <span class="block font-light text-[clamp(2.4rem,6.4vw,4.4rem)]">{heading1}</span>
+        <em class="block font-normal italic text-accent mt-2xs text-[clamp(2rem,5.4vw,3.6rem)]">{heading2}</em>
+      </h1>
 
-      <!-- HEADLINE column -->
-      <div class="lg:col-span-7 lg:pr-lg flex flex-col">
-        <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
-          <span class="block font-light text-[clamp(2.6rem,7vw,4.6rem)]">{heading1}</span>
-          <em class="block font-normal italic text-[clamp(2.2rem,6vw,3.8rem)] text-accent mt-2xs">{heading2}</em>
-        </h1>
+      <p class="hero-lede mt-lg text-base sm:text-lg leading-relaxed text-ink-muted max-w-[44ch]">
+        {lede}
+      </p>
 
-        <p class="hero-lede mt-lg text-base sm:text-lg leading-relaxed text-ink-muted max-w-[44ch]">
-          {lede}
-        </p>
-
-        <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm">
-          <a
-            href="#assaggio"
-            class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-            {ctaPrimary}
-          </a>
-          <a
-            href="#guide"
-            class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px]"
-          >
-            {ctaSecondary}
-          </a>
-        </div>
-
-        <p class="hero-microline font-display italic text-sm text-ink-subtle mt-md max-w-[44ch]">
-          {microline}
-        </p>
+      <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm">
+        <a
+          href="#assaggio"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          {ctaPrimary}
+        </a>
+        <a
+          href="#guide"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px]"
+        >
+          {ctaSecondary}
+        </a>
       </div>
 
-      <!-- PHOTO PLATE column — Domus-style tavola: real reader using Localis at Bari Cathedral -->
-      <figure class="hero-figure lg:col-span-4 m-0">
-        <div class="relative bg-surface-elev p-[6px] border border-border">
-          <img
-            src="/images/hero/cattedrale-san-sabino-ascolto.jpg"
-            alt={altText}
-            class="block w-full aspect-[4/5] object-cover"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            width="1024"
-            height="1280"
-          />
-        </div>
-        <figcaption class="hero-caption mt-sm flex items-baseline gap-sm text-ink-subtle">
-          <span class="font-body font-semibold text-[10px] tracking-[0.22em] uppercase whitespace-nowrap pt-[2px]">
-            Tav. I
-          </span>
-          <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[40ch]">
-            {plateCaption}
-          </span>
-        </figcaption>
-      </figure>
+      <p class="hero-microline font-display italic text-sm text-ink-subtle mt-md max-w-[44ch]">
+        {microline}
+      </p>
     </div>
+
+    <!-- PHOTO column — bleeds to right viewport edge on lg, full-width on mobile -->
+    <figure class="hero-figure m-0">
+      <div class="hero-image-frame">
+        <img
+          src="/images/hero/cattedrale-san-sabino-ascolto.jpg"
+          alt={altText}
+          class="hero-img"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          width="1024"
+          height="1280"
+        />
+      </div>
+      <figcaption class="hero-caption">
+        <span class="hero-caption-slug">Tav. I</span>
+        <span class="hero-caption-text">{plateCaption}</span>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
 
 <style>
-  /* Editorial reveal: hairline draws, masthead text fades, h1 stagger, plate slides in.
-   * All transform/opacity only. Soft exponential easing. No bounce. */
+  /* === Container math (mirrors FeatureBlock so the bleed lines up) ===
+   * 1100px is the standard container width across Localis (max-w-wrap).
+   * --side-gutter pushes content inward to align with the centred container,
+   * and is used to bleed the photo to the right viewport edge on lg+.
+   */
+  .hero {
+    --max-w: 1100px;
+    --side-gutter: max(var(--spacing-lg), calc((100vw - var(--max-w)) / 2 + var(--spacing-lg)));
+  }
 
+  /* === Masthead strip — sits inside container width === */
   .hero-masthead {
     position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding-inline: var(--side-gutter);
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-2xl);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--spacing-lg);
   }
+
+  /* === Mobile: stacked column. Photo full-bleed top, text under === */
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  .hero-figure {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .hero-image-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--color-surface-elev);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.96) contrast(1.03);
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .hero:hover .hero-img,
+  .hero:focus-within .hero-img {
+    transform: scale(1.015);
+  }
+
+  .hero-text {
+    padding-inline: var(--side-gutter);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding-inline: var(--side-gutter);
+    color: var(--color-ink-subtle);
+  }
+  .hero-caption-slug {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  .hero-caption-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--color-ink-muted);
+    max-width: 44ch;
+  }
+
+  /* === Desktop (lg+): magazine spread, photo bleeds right === */
+  @media (min-width: 1024px) {
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: var(--spacing-3xl);
+      align-items: stretch;
+      padding-bottom: clamp(var(--spacing-3xl), 7vw, var(--spacing-4xl));
+    }
+
+    .hero-text {
+      padding-left: var(--side-gutter);
+      padding-right: 0;
+      justify-content: center;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .hero-figure {
+      grid-column: 2;
+      grid-row: 1;
+      gap: var(--spacing-sm);
+      height: 100%;
+    }
+
+    /* Image stretches to row height, bleeds to right viewport edge.
+     * width: calc(100% + side-gutter) extends the box rightward. */
+    .hero-image-frame {
+      aspect-ratio: auto;
+      flex: 1 1 auto;
+      min-height: 520px;
+      margin-right: calc(-1 * var(--side-gutter));
+      width: calc(100% + var(--side-gutter));
+    }
+
+    .hero-caption {
+      padding-left: 0;
+      padding-right: var(--spacing-md);
+      margin-right: calc(-1 * var(--side-gutter) + var(--spacing-md));
+    }
+  }
+
+  /* === Editorial reveal — hairline draws, masthead text fades, h1 stagger === */
   .hero-masthead::before {
     content: '';
     position: absolute;
@@ -128,14 +247,14 @@ const altText = lang === 'it'
   }
   .hero-masthead > span {
     opacity: 0;
-    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+    animation: heroFade 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
   }
 
   .hero-h1 > span,
   .hero-h1 > em {
     opacity: 0;
     transform: translateY(14px);
-    animation: textIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: heroIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
   .hero-h1 > span { animation-delay: 0.35s; }
   .hero-h1 > em    { animation-delay: 0.55s; }
@@ -145,7 +264,7 @@ const altText = lang === 'it'
   .hero-microline {
     opacity: 0;
     transform: translateY(10px);
-    animation: textIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
   .hero-lede      { animation-delay: 0.75s; }
   .hero-actions   { animation-delay: 0.9s; }
@@ -154,21 +273,16 @@ const altText = lang === 'it'
   .hero-figure {
     opacity: 0;
     transform: translateY(20px);
-    animation: textIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
-  }
-
-  .hero-chapter {
-    opacity: 0;
-    animation: fadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.95s forwards;
+    animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
   }
 
   @keyframes ruleDraw {
     to { transform: scaleX(1); }
   }
-  @keyframes textIn {
+  @keyframes heroIn {
     to { opacity: 1; transform: translateY(0); }
   }
-  @keyframes fadeIn {
+  @keyframes heroFade {
     to { opacity: 1; }
   }
 
@@ -180,11 +294,16 @@ const altText = lang === 'it'
     .hero-lede,
     .hero-actions,
     .hero-microline,
-    .hero-figure,
-    .hero-chapter {
+    .hero-figure {
       animation: none;
       transform: none;
       opacity: 1;
+    }
+    .hero-img {
+      transition: none;
+    }
+    .hero:hover .hero-img {
+      transform: none;
     }
   }
 </style>
