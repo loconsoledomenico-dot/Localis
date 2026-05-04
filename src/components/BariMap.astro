@@ -22,6 +22,8 @@ interface Place {
   startsAt: string;
   cover: string;
   alt: string;
+  /** Prezzo singolo della guida (es. "€4,99") — vuoto sul placeholder */
+  price?: string;
   draft?: boolean;
 }
 
@@ -35,6 +37,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Strada delle Crociate',
         cover: '/images/covers/bari-vecchia.jpg',
         alt: 'Vicolo del Borgo Antico di Bari con colonne romane antiche e palazzi storici',
+        price: '€4,99',
       },
       {
         slug: 'san-nicola',
@@ -44,6 +47,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Basilica di San Nicola',
         cover: '/images/covers/san-nicola.jpg',
         alt: 'Vicolo di Bari Vecchia con luminaria di festa che incornicia la prospettiva',
+        price: '€4,99',
       },
       {
         slug: 'il-meglio-di-bari',
@@ -53,6 +57,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Strada Arco Basso',
         cover: '/images/covers/il-meglio-di-bari.jpg',
         alt: 'Strada delle Orecchiette a Bari Vecchia, donne che lavorano la pasta su tavoli di legno e cappelli appesi tra i vicoli',
+        price: '€4,99',
       },
       {
         slug: 'porto-bari',
@@ -62,6 +67,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Molo San Nicola',
         cover: '/images/covers/porto-bari.jpg',
         alt: 'Bari dall\'alto al tramonto, lungomare e marina del porto turistico',
+        price: '€4,99',
       },
       {
         slug: 'tre-teatri',
@@ -71,6 +77,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Teatro Petruzzelli',
         cover: '/images/covers/tre-teatri.jpg',
         alt: 'Teatro Petruzzelli di Bari, facciata neoclassica al tramonto',
+        price: '€4,99',
       },
       {
         slug: '__draft',
@@ -92,6 +99,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Strada delle Crociate',
         cover: '/images/covers/bari-vecchia.jpg',
         alt: 'Old Bari alley with ancient Roman columns and historic buildings',
+        price: '€4.99',
       },
       {
         slug: 'san-nicola',
@@ -101,6 +109,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Basilica di San Nicola',
         cover: '/images/covers/san-nicola.jpg',
         alt: 'Old Bari alley framed by a feast luminaria arch',
+        price: '€4.99',
       },
       {
         slug: 'il-meglio-di-bari',
@@ -110,6 +119,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Strada Arco Basso',
         cover: '/images/covers/il-meglio-di-bari.jpg',
         alt: 'The Orecchiette Street in Old Bari, women shaping pasta on wooden tables, hats hanging between alleys',
+        price: '€4.99',
       },
       {
         slug: 'porto-bari',
@@ -119,6 +129,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Molo San Nicola',
         cover: '/images/covers/porto-bari.jpg',
         alt: 'Aerial view of Bari at sunset, lungomare and tourist marina visible',
+        price: '€4.99',
       },
       {
         slug: 'tre-teatri',
@@ -128,6 +139,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Teatro Petruzzelli',
         cover: '/images/covers/tre-teatri.jpg',
         alt: 'Petruzzelli Theatre of Bari, neoclassical facade at dusk',
+        price: '€4.99',
       },
       {
         slug: '__draft',
@@ -198,6 +210,10 @@ const comingLabel = lang === 'it' ? 'In arrivo' : 'Coming';
                 )}
                 <!-- Number stamp -->
                 <span class="place-num" aria-hidden="true">{num}</span>
+                <!-- Price chip top-right (only on live tiles) -->
+                {!isDraft && p.price && (
+                  <span class="place-price" aria-hidden="true">{p.price}</span>
+                )}
                 <!-- Bottom scrim with eyebrow -->
                 {!isDraft && (
                   <span class="place-scrim" aria-hidden="true">
@@ -308,6 +324,28 @@ const comingLabel = lang === 'it' ? 'In arrivo' : 'Coming';
     letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--color-ink-subtle);
+  }
+
+  /* Price chip top-right of photo — opposite the number stamp */
+  .place-price {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-ink);
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    padding: 4px 10px 5px;
+    line-height: 1.2;
+    user-select: none;
+    pointer-events: none;
+    /* Sit above the photo but below scrim/labels if they overlap */
+    z-index: 1;
+    /* Subtle separation from busy photos */
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.18);
   }
 
   /* Number stamp top-left of photo */

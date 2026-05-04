@@ -116,6 +116,37 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   {/* I sei luoghi — griglia foto, l'unica sezione "scegli la guida" della pagina */}
   <BariMap lang="it" />
 
+  {/* PRICING — subito dopo le 6 schede, momento decisione single vs bundle */}
+  <section id="prezzi" class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+      <SectionDivider label="Prendi quella che ti serve" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[48rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="bari-vecchia"
+          lang="it"
+          features={[
+            'Una guida a tua scelta',
+            'Accesso illimitato, per sempre',
+            'Funziona offline · Senza app',
+            'Italiano e inglese',
+          ]}
+        />
+        <PriceCard
+          product="bundle"
+          lang="it"
+          primary
+          features={[
+            'Tutte e tre le guide live di Bari',
+            'Sequenza progettata: ~4h di cammino',
+            'Risparmi €4,98',
+            'Per sempre tue',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
   {/* MANIFESTO — pull-quote editoriale, parchment, ornamento tipografico, foto backdrop sotto */}
   <section class="manifesto-section bg-surface-elev relative overflow-hidden">
     <img
@@ -153,39 +184,8 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   {/* TAVOLE AUTORI — sei voci baresi, una per quartiere */}
   <AuthorsBlock lang="it" />
 
-  {/* 3-PASSI — onboarding chiaro prima del pricing */}
+  {/* 3-PASSI — onboarding chiaro prima della chiusura */}
   <StepsBlock lang="it" ctaHref="#assaggio" />
-
-  {/* PRICING */}
-  <section id="prezzi" class="bg-surface">
-    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
-      <SectionDivider label="Prendi quella che ti serve" />
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[48rem] mx-auto">
-        <PriceCard
-          product="single"
-          guideSlug="bari-vecchia"
-          lang="it"
-          features={[
-            'Una guida a tua scelta',
-            'Accesso illimitato, per sempre',
-            'Funziona offline · Senza app',
-            'Italiano e inglese',
-          ]}
-        />
-        <PriceCard
-          product="bundle"
-          lang="it"
-          primary
-          features={[
-            'Tutte e tre le guide live di Bari',
-            'Sequenza progettata: ~4h di cammino',
-            'Risparmi €4,98',
-            'Per sempre tue',
-          ]}
-        />
-      </div>
-    </div>
-  </section>
 
   {/* CLOSER */}
   <section class="bg-surface">
