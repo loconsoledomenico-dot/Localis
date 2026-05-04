@@ -1,0 +1,314 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Author {
+  /** Quartiere assegnato (es. "Bari Vecchia") — sempre richiesto */
+  quartiere: string;
+  /** Numero ordinale Tav. VI · 01-06 */
+  ordinal: string;
+  /** Nome reale del narratore. Se vuoto: render placeholder. */
+  name?: string;
+  /** Bio breve (2-3 righe). Se vuoto: render placeholder. */
+  bioIt?: string;
+  bioEn?: string;
+  /** Iniziali per il fallback (es. "F.M."). Auto-derivate se manca. */
+  initials?: string;
+  /** Path foto B/W 3:4. Se vuoto: render silhouette tipografica. */
+  photo?: string;
+  /** Se true, mostra badge "Profilo in arrivo" sopra la card */
+  draft?: boolean;
+}
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const eyebrow = lang === 'it' ? 'Tavola VI — Le voci' : 'Plate VI — The voices';
+const heading1 = lang === 'it' ? 'Sei narratori baresi.' : 'Six voices from Bari.';
+const heading2 = lang === 'it' ? 'Ognuno racconta il suo quartiere.' : 'Each tells their own neighbourhood.';
+const intro = lang === 'it'
+  ? 'Non attori, non guide certificate. Voci di chi è cresciuto sotto quegli archi, ha mangiato in quei panifici, ha visto cambiare quei mercati. Ogni guida è firmata.'
+  : 'Not actors, not licensed guides. Voices of people who grew up under those arches, ate in those bakeries, watched those markets change. Each guide is signed.';
+const draftBadge = lang === 'it' ? 'Profilo in arrivo' : 'Profile coming';
+const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : 'Portrait coming';
+
+// Placeholders editoriali — nessun nome inventato di persona reale.
+// Quando il narratore reale è confermato, sostituire `name`, `bioIt`, `bioEn`,
+// `photo` (path /images/authors/<slug>.jpg) e rimuovere `draft: true`.
+const authors: Author[] = [
+  {
+    quartiere: 'Bari Vecchia',
+    ordinal: '01',
+    initials: 'BV',
+    draft: true,
+  },
+  {
+    quartiere: 'Murat',
+    ordinal: '02',
+    initials: 'MU',
+    draft: true,
+  },
+  {
+    quartiere: 'San Nicola',
+    ordinal: '03',
+    initials: 'SN',
+    draft: true,
+  },
+  {
+    quartiere: 'Libertà',
+    ordinal: '04',
+    initials: 'LI',
+    draft: true,
+  },
+  {
+    quartiere: 'Porto',
+    ordinal: '05',
+    initials: 'PO',
+    draft: true,
+  },
+  {
+    quartiere: 'San Pasquale',
+    ordinal: '06',
+    initials: 'SP',
+    draft: true,
+  },
+];
+
+function deriveInitials(a: Author): string {
+  if (a.initials) return a.initials;
+  if (a.name) {
+    return a.name
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((s) => s[0]?.toUpperCase() ?? '')
+      .join('.') + '.';
+  }
+  return a.quartiere.split(/\s+/).slice(0, 2).map((s) => s[0]?.toUpperCase() ?? '').join('');
+}
+
+function bioFor(a: Author): string {
+  const draftIt = `Voce confermata per ${a.quartiere}. Nome, foto e bio breve a giorni — il narratore sta finendo le ultime registrazioni di quartiere.`;
+  const draftEn = `Voice confirmed for ${a.quartiere}. Name, photo and short bio coming soon — narrator is finishing local recordings.`;
+  if (lang === 'it') {
+    return a.bioIt ?? draftIt;
+  }
+  return a.bioEn ?? draftEn;
+}
+---
+<section class="authors bg-surface">
+  <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
+
+    <!-- Section header -->
+    <div class="authors-header max-w-[60ch] mb-2xl lg:mb-3xl">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          {eyebrow}
+        </span>
+      </div>
+      <h2 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(1.9rem,4.4vw,3rem)]">
+        <span class="font-light">{heading1}</span>
+        <em class="block font-normal italic text-accent mt-2xs text-[clamp(1.7rem,3.8vw,2.6rem)]">
+          {heading2}
+        </em>
+      </h2>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
+        {intro}
+      </p>
+    </div>
+
+    <!-- Plates grid: 1 col mobile, 2 cols sm, 3 cols lg -->
+    <ol class="authors-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-xl gap-y-2xl list-none p-0 m-0">
+      {authors.map((a, i) => {
+        const initials = deriveInitials(a);
+        const bio = bioFor(a);
+        const isPlaceholderName = !a.name;
+        const isPlaceholderPhoto = !a.photo;
+
+        return (
+          <li class="author-cell" style={`--idx:${i}`}>
+            <article class="author-plate">
+              <!-- Photo / silhouette -->
+              <figure class="author-photo m-0">
+                {a.photo ? (
+                  <img
+                    src={a.photo}
+                    alt={a.name ? `Ritratto di ${a.name}, narratore di ${a.quartiere}` : `Ritratto in arrivo per ${a.quartiere}`}
+                    class="author-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <div class="author-silhouette" role="img" aria-label={`${photoSoonLabel} — ${a.quartiere}`}>
+                    <span class="silhouette-initials">{initials}</span>
+                    <span class="silhouette-label">{photoSoonLabel}</span>
+                  </div>
+                )}
+                {a.draft && (
+                  <span class="author-draft" aria-hidden="true">{draftBadge}</span>
+                )}
+              </figure>
+
+              <!-- Meta -->
+              <div class="author-meta">
+                <span class="author-ordinal font-body font-semibold text-[10px] tracking-[0.32em] uppercase text-ink-subtle">
+                  Tav. VI · {a.ordinal} {' / '} 06
+                </span>
+                <h3 class="author-name font-display text-ink leading-[1.1] m-0">
+                  {isPlaceholderName ? (
+                    <span class="text-ink-subtle italic font-light">
+                      {lang === 'it' ? 'Voce di' : 'Voice of'} <span class="not-italic font-normal text-ink">{a.quartiere}</span>
+                    </span>
+                  ) : (
+                    <>
+                      <span class="font-light">{a.name}</span>
+                      <em class="block italic font-normal text-accent text-[0.78em] mt-2xs">
+                        {a.quartiere}
+                      </em>
+                    </>
+                  )}
+                </h3>
+                <p class="author-bio font-body text-sm text-ink-muted leading-snug max-w-[36ch] mb-0">
+                  {bio}
+                </p>
+              </div>
+            </article>
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .author-cell {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: authorIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 90ms + 100ms);
+  }
+
+  .author-plate {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    border-top: 1px solid var(--color-ink);
+    padding-top: var(--spacing-md);
+  }
+
+  /* Photo plate */
+  .author-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: var(--color-surface-elev);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .author-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Editorial B/W treatment */
+    filter: grayscale(100%) contrast(1.06) brightness(0.96);
+    transition: filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* On hover, soft warmth tint */
+  .author-plate:hover .author-img {
+    filter: grayscale(78%) contrast(1.04) brightness(0.98) sepia(0.06);
+  }
+
+  /* Silhouette placeholder — initials in Spectral italic on parchment */
+  .author-silhouette {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background:
+      radial-gradient(ellipse at 50% 32%, oklch(75% 0.012 75) 0%, oklch(75% 0.012 75) 22%, transparent 40%),
+      var(--color-surface-elev);
+  }
+
+  .silhouette-initials {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    line-height: 1;
+    color: var(--color-ink);
+    letter-spacing: -0.04em;
+    user-select: none;
+  }
+
+  .silhouette-label {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+  }
+
+  /* Draft badge */
+  .author-draft {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-surface);
+    background: var(--color-accent);
+    padding: 4px 10px;
+    line-height: 1.4;
+  }
+
+  /* Meta */
+  .author-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .author-ordinal {
+    color: var(--color-ink-subtle);
+  }
+
+  .author-name {
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    font-weight: 300;
+  }
+
+  .author-bio {
+    color: var(--color-ink-muted);
+  }
+
+  @keyframes authorIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .author-cell {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+    .author-img,
+    .author-plate:hover .author-img {
+      transition: none;
+      filter: grayscale(100%) contrast(1.06) brightness(0.96);
+    }
+  }
+</style>

@@ -10,6 +10,7 @@ import JourneyOverview from '../components/JourneyOverview.astro';
 import FeatureBlock from '../components/FeatureBlock.astro';
 import StatsBlock from '../components/StatsBlock.astro';
 import StepsBlock from '../components/StepsBlock.astro';
+import AuthorsBlock from '../components/AuthorsBlock.astro';
 import { getCollection } from 'astro:content';
 
 const guides = (await getCollection('guides'))
@@ -168,6 +169,9 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       </p>
     </div>
   </section>
+
+  {/* TAVOLE AUTORI — sei voci baresi, una per quartiere */}
+  <AuthorsBlock lang="it" />
 
   {/* 3-PASSI — onboarding chiaro prima del pricing */}
   <StepsBlock lang="it" ctaHref="#assaggio" />
