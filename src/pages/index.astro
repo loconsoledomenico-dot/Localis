@@ -18,7 +18,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
 ---
 <Layout
   title="Localis — audioguide narrative di Bari"
-  description="6 guide narrative di Bari. Storie vere registrate sui luoghi reali. Senza app, dal browser. Per sempre tue. Da €4,99."
+  description="Sei guide narrative di Bari. Storie vere registrate sui luoghi reali. Senza app, dal browser. Per sempre tue. Da €4,99."
   lang="it"
 >
   <Hero lang="it" />
@@ -26,7 +26,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   {/* TRAILER — primary action: prova prima di comprare */}
   <section id="assaggio" class="bg-surface">
     <div class="max-w-narrow mx-auto px-md py-2xl lg:py-3xl">
-      <SectionDivider label="60 secondi prima di decidere" />
+      <SectionDivider label="Sessanta secondi prima di decidere" />
       {featuredTrailer && (
         <TrailerPlayer
           src={featuredTrailer.data.audio_trailer_path}
@@ -35,8 +35,8 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
         />
       )}
       <p class="text-center font-display italic text-xl sm:text-2xl text-ink-muted mt-lg max-w-prose mx-auto leading-snug">
-        "Fermati. Guarda il mare davanti a te.<br />
-        Questo non è uno sfondo. È il posto dove tutto è successo."
+        Fermati. Guarda il mare davanti a te.<br />
+        Questo non è uno sfondo: è il posto dove tutto è successo.
       </p>
     </div>
   </section>
@@ -65,21 +65,31 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       </div>
 
       <p class="md:hidden text-center text-[11px] text-ink-subtle mt-md tracking-[0.18em] uppercase font-semibold">
-        ← scorri per vedere tutte
+        scorri per vedere tutte
       </p>
     </div>
   </section>
 
-  {/* MANIFESTO — invertito, ad alto contrasto outdoor */}
-  <section class="manifesto-dark">
-    <div class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl text-center">
-      <p class="text-[11px] font-semibold tracking-[0.24em] uppercase text-[oklch(82%_0.06_45)] mb-lg">
+  {/* MANIFESTO — pull-quote editoriale, parchment, ornamento tipografico */}
+  <section class="bg-surface-elev">
+    <div class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl">
+      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-2xl">
         — Manifesto —
       </p>
-      <p class="font-display italic text-[clamp(1.7rem,4.4vw,2.7rem)] leading-[1.18] mb-lg text-[oklch(96%_0.012_75)] mx-auto max-w-[24ch]">
+
+      <blockquote class="manifesto-quote relative font-display italic text-ink leading-[1.18] text-[clamp(1.8rem,4.6vw,2.8rem)] m-0 max-w-[26ch] mx-auto text-center">
+        <span aria-hidden="true" class="font-display not-italic font-light text-accent text-[3em] leading-none absolute -top-md sm:-top-lg left-1/2 -translate-x-[110%] select-none">«</span>
         Queste non sono guide turistiche.
-      </p>
-      <p class="text-base sm:text-lg leading-relaxed text-[oklch(86%_0.012_75)] max-w-[54ch] mx-auto">
+        <span aria-hidden="true" class="font-display not-italic font-light text-accent text-[3em] leading-none absolute -bottom-md sm:-bottom-lg left-1/2 translate-x-[10%] select-none">»</span>
+      </blockquote>
+
+      <div class="flex items-center justify-center gap-sm my-2xl" aria-hidden="true">
+        <span class="block w-8 h-px bg-border"></span>
+        <span class="font-display italic text-ink-subtle text-base">✻</span>
+        <span class="block w-8 h-px bg-border"></span>
+      </div>
+
+      <p class="text-center text-base sm:text-lg leading-relaxed text-ink-muted max-w-[52ch] mx-auto">
         Non ti diciamo dove mangiare. Non ti diciamo cosa evitare.<br class="hidden sm:inline" />
         Ti raccontiamo le storie vere dei luoghi — mentre ci stai dentro.
       </p>
@@ -96,7 +106,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
           guideSlug="bari-vecchia"
           lang="it"
           features={[
-            '1 guida a tua scelta',
+            'Una guida a tua scelta',
             'Accesso illimitato, per sempre',
             'Funziona offline · Senza app',
             'Italiano e inglese',
@@ -107,7 +117,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
           lang="it"
           primary
           features={[
-            'Tutte e 3 le guide live di Bari',
+            'Tutte e tre le guide live di Bari',
             'Sequenza progettata: ~4h di cammino',
             'Risparmi €4,98',
             'Per sempre tue',
@@ -128,7 +138,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       </p>
       <a
         href="#guide"
-        class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-all duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+        class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
       >
         Inizia ad ascoltare
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -141,13 +151,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
 </Layout>
 
 <style>
-  /* Manifesto inverted block — outdoor-friendly second dark anchor */
-  .manifesto-dark {
-    background-color: oklch(13% 0.025 240);
-    color: oklch(96% 0.012 75);
-  }
-
-  /* Stagger reveal for guide cells. Index passed via --idx custom prop. */
+  /* Stagger reveal per guide cards. Index passato via custom prop --idx. */
   .guide-cell {
     opacity: 0;
     transform: translateY(16px);
@@ -158,15 +162,26 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Hide horizontal scrollbar on mobile guides row, keep momentum */
+  /* Nasconde scrollbar orizzontale mobile, mantiene momentum */
   .guides-row {
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
   .guides-row::-webkit-scrollbar { display: none; }
 
+  /* Manifesto: leggera comparsa del blockquote alla prima paint */
+  .manifesto-quote {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: manifestoIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+  }
+  @keyframes manifestoIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .guide-cell {
+    .guide-cell,
+    .manifesto-quote {
       animation: none;
       opacity: 1;
       transform: none;

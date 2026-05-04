@@ -7,146 +7,158 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Bari · 6 guide narrative' : 'Bari · 6 narrative guides';
-const heading1 = lang === 'it' ? 'Bari ti parla.' : 'Bari speaks.';
+const masthead_l = lang === 'it' ? 'Edizione 01 — Bari' : 'Edition 01 — Bari';
+const masthead_r = lang === 'it' ? 'Sei guide narrative' : 'Six narrative guides';
+const heading1 = lang === 'it' ? 'Bari ti parla.' : 'Bari speaks to you.';
 const heading2 = lang === 'it' ? 'Se la sai ascoltare.' : 'If you know how to listen.';
-const sub = lang === 'it'
-  ? 'Storie vere registrate sui luoghi reali. Apri il browser del telefono, premi play, cammina.'
-  : 'Real stories recorded on real places. Open your phone browser, press play, walk.';
+const lede = lang === 'it'
+  ? 'Sei storie vere registrate sui luoghi reali. Apri il browser, premi play, cammina nei vicoli mentre tutto è già accaduto.'
+  : 'Six real stories recorded on real places. Open your browser, press play, walk the alleys while everything has already happened.';
 const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60s' : 'Listen a teaser · 60s';
-const ctaSecondary = lang === 'it' ? 'Vedi tutte le guide' : 'See all guides';
-const trustItems = lang === 'it'
-  ? ['Senza app', 'Offline-ready', 'Italiano · English', 'Per sempre tua']
-  : ['No app', 'Offline-ready', 'IT · EN', 'Yours forever'];
-const geoLabel = lang === 'it' ? 'Bari · 41.1°N 16.8°E' : 'Bari · 41.1°N 16.8°E';
+const ctaSecondary = lang === 'it' ? 'Sfoglia le sei guide' : 'Browse the six guides';
+const microline = lang === 'it' ? 'Senza app. Funziona offline. Italiano e inglese.' : 'No app. Works offline. Italian and English.';
+
+const plateNumber = 'Tav. I';
+const caption = lang === 'it'
+  ? 'Lungomare Imperatore Augusto, ora dorata. Sullo sfondo, il Teatro Margherita.'
+  : 'Lungomare Imperatore Augusto, golden hour. In the background, Teatro Margherita.';
 const altText = lang === 'it'
-  ? 'Porto di Bari al tramonto con Teatro Margherita sullo sfondo'
-  : 'Bari harbor at sunset with Teatro Margherita in the background';
+  ? 'Porto vecchio di Bari al tramonto, barche da pesca in primo piano e Teatro Margherita sullo sfondo'
+  : 'Bari old harbor at sunset, fishing boats in the foreground, Teatro Margherita in the background';
 ---
-<section class="hero-dark relative overflow-hidden">
-  <div class="grid grid-cols-1 lg:grid-cols-[7fr_5fr] lg:min-h-[78dvh]">
+<section class="hero relative bg-surface">
+  <div class="max-w-wrap mx-auto px-md sm:px-lg pt-lg sm:pt-xl pb-2xl lg:pb-3xl">
 
-    <!-- IMAGE PANEL — first on mobile so the place arrives before the words -->
-    <div class="hero-image-wrap relative order-first lg:order-last h-[58dvh] min-h-[420px] lg:h-auto">
-      <img
-        src={`/images/hero/home-${lang}.jpg`}
-        alt={altText}
-        class="absolute inset-0 w-full h-full object-cover"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-      />
-      <!-- legibility veil: bottom-up on mobile (text sits below), edge-fade left on desktop (blends into text panel) -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[oklch(13%_0.025_240/0.92)] via-[oklch(13%_0.025_240/0.25)] to-transparent lg:bg-gradient-to-l lg:from-transparent lg:via-transparent lg:to-[oklch(13%_0.025_240/0.55)]"></div>
-
-      <!-- floating geo badge — frosted glass with refraction edge -->
-      <div class="absolute top-md left-md lg:top-lg lg:left-lg inline-flex items-center gap-xs px-sm py-2xs rounded-full bg-[oklch(13%_0.025_240/0.55)] backdrop-blur-md border border-white/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] text-[oklch(96%_0.012_75)] text-[11px] font-semibold tracking-[0.18em] uppercase">
-        <span class="hero-pulse w-1.5 h-1.5 rounded-full bg-[oklch(62%_0.16_45)]"></span>
-        {geoLabel}
-      </div>
-
-      <!-- bottom credit / context line — small, deliberate, only on mobile to fill the gap -->
-      <p class="lg:hidden absolute bottom-sm left-md right-md text-[11px] text-[oklch(85%_0.012_75/0.85)] tracking-wider">
-        {lang === 'it' ? 'Porto vecchio · ora dorata' : 'Old harbor · golden hour'}
-      </p>
+    <!-- MASTHEAD strip — hairline + small caps, like a 1960s travel magazine flag -->
+    <div class="hero-masthead flex items-baseline justify-between gap-md border-t border-border pt-sm mb-2xl lg:mb-3xl">
+      <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle">
+        {masthead_l}
+      </span>
+      <span class="hidden sm:inline text-[10px] font-semibold tracking-[0.28em] uppercase text-ink-subtle">
+        {masthead_r}
+      </span>
     </div>
 
-    <!-- TEXT PANEL -->
-    <div class="hero-text-panel relative flex flex-col justify-center px-md sm:px-lg lg:px-2xl py-xl lg:py-2xl">
-      <!-- eyebrow with animated rule -->
-      <div class="flex items-center gap-sm mb-md hero-eyebrow-row">
-        <div class="hero-eyebrow-rule h-px w-12 bg-[oklch(62%_0.16_45)] origin-left"></div>
-        <span class="text-[11px] font-semibold tracking-[0.22em] uppercase text-[oklch(82%_0.06_45)]">
-          {eyebrow}
+    <!-- 12-col editorial grid: gutter (1) | headline (7) | photo plate (4) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-md lg:gap-xl items-start">
+
+      <!-- Gutter chapter number — bleeds outside on lg, magazine flourish -->
+      <aside class="hidden lg:block lg:col-span-1 relative" aria-hidden="true">
+        <span class="hero-chapter font-display italic font-light text-[11rem] leading-[0.8] text-accent/12 select-none block -ml-md">
+          01
         </span>
+      </aside>
+
+      <!-- HEADLINE column -->
+      <div class="lg:col-span-7 lg:pr-lg flex flex-col">
+        <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
+          <span class="block font-light text-[clamp(2.6rem,7vw,4.6rem)]">{heading1}</span>
+          <em class="block font-normal italic text-[clamp(2.2rem,6vw,3.8rem)] text-accent mt-2xs">{heading2}</em>
+        </h1>
+
+        <p class="hero-lede mt-lg text-base sm:text-lg leading-relaxed text-ink-muted max-w-[44ch]">
+          {lede}
+        </p>
+
+        <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm">
+          <a
+            href="#assaggio"
+            class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            {ctaPrimary}
+          </a>
+          <a
+            href="#guide"
+            class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px]"
+          >
+            {ctaSecondary}
+          </a>
+        </div>
+
+        <p class="hero-microline font-display italic text-sm text-ink-subtle mt-md max-w-[44ch]">
+          {microline}
+        </p>
       </div>
 
-      <h1 class="font-display leading-[0.92] tracking-tight text-[oklch(96%_0.012_75)] hero-h1 m-0">
-        <span class="block text-[clamp(2.5rem,7.5vw,4.6rem)] font-normal">{heading1}</span>
-        <em class="block text-[clamp(2rem,6vw,3.6rem)] italic font-light text-[oklch(82%_0.06_45)] mt-2xs">{heading2}</em>
-      </h1>
-
-      <p class="mt-md text-base sm:text-lg leading-relaxed text-[oklch(86%_0.012_75)] max-w-[36ch]">
-        {sub}
-      </p>
-
-      <div class="mt-lg flex flex-col sm:flex-row gap-sm">
-        <a
-          href="#assaggio"
-          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-[oklch(96%_0.012_75)] text-[oklch(15%_0.025_240)] hover:bg-[oklch(92%_0.018_75)] transition-all duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          {ctaPrimary}
-        </a>
-        <a
-          href="#guide"
-          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-[oklch(96%_0.012_75/0.3)] text-[oklch(96%_0.012_75)] hover:border-[oklch(96%_0.012_75)] hover:bg-[oklch(96%_0.012_75/0.04)] transition-colors duration-fast no-underline min-h-[48px]"
-        >
-          {ctaSecondary}
-        </a>
-      </div>
-
-      <!-- trust strip — outdoor reading at glance -->
-      <ul class="mt-xl flex flex-wrap gap-x-lg gap-y-xs text-[12px] tracking-wide text-[oklch(78%_0.012_75)] m-0 p-0 list-none">
-        {trustItems.map((item) => (
-          <li class="flex items-center gap-xs">
-            <span class="w-1 h-1 rounded-full bg-[oklch(82%_0.06_45)]"></span>
-            {item}
-          </li>
-        ))}
-      </ul>
+      <!-- PHOTO PLATE column — Domus-style tavola with caption -->
+      <figure class="hero-figure lg:col-span-4 m-0">
+        <div class="relative bg-surface-elev p-[6px] border border-border">
+          <img
+            src={`/images/hero/home-${lang}.jpg`}
+            alt={altText}
+            class="block w-full aspect-[4/5] object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <figcaption class="hero-caption mt-sm flex items-baseline gap-sm text-ink-subtle">
+          <span class="font-body font-semibold text-[10px] tracking-[0.22em] uppercase whitespace-nowrap pt-[2px]">
+            {plateNumber}
+          </span>
+          <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[40ch]">
+            {caption}
+          </span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <style>
-  .hero-dark {
-    background-color: oklch(13% 0.025 240);
-    color: oklch(96% 0.012 75);
-  }
+  /* Editorial reveal: hairline draws, masthead text fades, h1 stagger, plate slides in.
+   * All transform/opacity only. Soft exponential easing. No bounce. */
 
-  /* Pulsing geo dot — slower than default animate-pulse, smoother. */
-  .hero-pulse {
-    animation: heroPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  .hero-masthead {
+    position: relative;
   }
-  @keyframes heroPulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.45; transform: scale(0.7); }
-  }
-
-  /* First-paint orchestration: rule draws, eyebrow text rises, h1 lines stagger in. */
-  .hero-eyebrow-rule {
+  .hero-masthead::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-border);
     transform: scaleX(0);
-    animation: ruleDraw 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    transform-origin: left;
+    animation: ruleDraw 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
   }
-  .hero-eyebrow-row > span {
+  .hero-masthead > span {
     opacity: 0;
-    animation: textIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
   }
+
   .hero-h1 > span,
   .hero-h1 > em {
     opacity: 0;
     transform: translateY(14px);
-    animation: textIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: textIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
-  .hero-h1 > span { animation-delay: 0.25s; }
-  .hero-h1 > em    { animation-delay: 0.45s; }
+  .hero-h1 > span { animation-delay: 0.35s; }
+  .hero-h1 > em    { animation-delay: 0.55s; }
 
-  /* Text panel + image — gentle reveal */
-  .hero-text-panel > p,
-  .hero-text-panel > div:last-of-type,
-  .hero-text-panel > ul {
+  .hero-lede,
+  .hero-actions,
+  .hero-microline {
     opacity: 0;
     transform: translateY(10px);
     animation: textIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
-  .hero-text-panel > p           { animation-delay: 0.65s; }
-  .hero-text-panel > div:last-of-type { animation-delay: 0.85s; }
-  .hero-text-panel > ul          { animation-delay: 1.05s; }
+  .hero-lede      { animation-delay: 0.75s; }
+  .hero-actions   { animation-delay: 0.9s; }
+  .hero-microline { animation-delay: 1.05s; }
 
-  .hero-image-wrap img {
-    transform: scale(1.04);
-    animation: imageIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.05s forwards;
+  .hero-figure {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  }
+
+  .hero-chapter {
+    opacity: 0;
+    animation: fadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.95s forwards;
   }
 
   @keyframes ruleDraw {
@@ -155,20 +167,20 @@ const altText = lang === 'it'
   @keyframes textIn {
     to { opacity: 1; transform: translateY(0); }
   }
-  @keyframes imageIn {
-    to { transform: scale(1); }
+  @keyframes fadeIn {
+    to { opacity: 1; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-pulse,
-    .hero-eyebrow-rule,
-    .hero-eyebrow-row > span,
+    .hero-masthead::before,
+    .hero-masthead > span,
     .hero-h1 > span,
     .hero-h1 > em,
-    .hero-text-panel > p,
-    .hero-text-panel > div:last-of-type,
-    .hero-text-panel > ul,
-    .hero-image-wrap img {
+    .hero-lede,
+    .hero-actions,
+    .hero-microline,
+    .hero-figure,
+    .hero-chapter {
       animation: none;
       transform: none;
       opacity: 1;
