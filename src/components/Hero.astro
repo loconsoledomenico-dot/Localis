@@ -1,6 +1,5 @@
 ---
 import { type Lang } from '../lib/i18n';
-import PhoneMockup from './PhoneMockup.astro';
 
 export interface Props {
   lang: Lang;
@@ -19,9 +18,12 @@ const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60s' : 'Listen a teas
 const ctaSecondary = lang === 'it' ? 'Sfoglia le sei guide' : 'Browse the six guides';
 const microline = lang === 'it' ? 'Senza app. Funziona offline. Italiano e inglese.' : 'No app. Works offline. Italian and English.';
 
-const deviceCaption = lang === 'it'
-  ? 'Funziona dal browser. Niente app, niente account.'
-  : 'Works in your browser. No app, no signup.';
+const plateCaption = lang === 'it'
+  ? 'Cattedrale di San Sabino, Piazza dell\'Odegitria. La voce nelle cuffie racconta cosa sta guardando.'
+  : 'Cattedrale di San Sabino, Piazza dell\'Odegitria. The voice in her earphones tells her what she\'s looking at.';
+const altText = lang === 'it'
+  ? 'Una ragazza con auricolari ascolta una guida Localis sul suo smartphone, davanti alla facciata romanica della Cattedrale di San Sabino a Bari'
+  : 'A young woman with earphones listens to a Localis guide on her smartphone, in front of the Romanesque facade of Bari\'s Cattedrale di San Sabino';
 ---
 <section class="hero relative bg-surface">
   <div class="max-w-wrap mx-auto px-md sm:px-lg pt-lg sm:pt-xl pb-2xl lg:pb-3xl">
@@ -78,15 +80,26 @@ const deviceCaption = lang === 'it'
         </p>
       </div>
 
-      <!-- DEVICE column — sober phone mockup with Localis UI inside -->
-      <figure class="hero-figure lg:col-span-4 m-0 flex flex-col items-center">
-        <PhoneMockup lang={lang} tilt={true} />
-        <figcaption class="hero-caption mt-md flex items-baseline gap-sm text-ink-subtle self-stretch">
+      <!-- PHOTO PLATE column — Domus-style tavola: real reader using Localis at Bari Cathedral -->
+      <figure class="hero-figure lg:col-span-4 m-0">
+        <div class="relative bg-surface-elev p-[6px] border border-border">
+          <img
+            src="/images/hero/cattedrale-san-sabino-ascolto.jpg"
+            alt={altText}
+            class="block w-full aspect-[4/5] object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="1024"
+            height="1280"
+          />
+        </div>
+        <figcaption class="hero-caption mt-sm flex items-baseline gap-sm text-ink-subtle">
           <span class="font-body font-semibold text-[10px] tracking-[0.22em] uppercase whitespace-nowrap pt-[2px]">
             Tav. I
           </span>
           <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[40ch]">
-            {deviceCaption}
+            {plateCaption}
           </span>
         </figcaption>
       </figure>
