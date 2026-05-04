@@ -11,6 +11,7 @@ import FeatureBlock from '../components/FeatureBlock.astro';
 import StatsBlock from '../components/StatsBlock.astro';
 import StepsBlock from '../components/StepsBlock.astro';
 import AuthorsBlock from '../components/AuthorsBlock.astro';
+import BariMap from '../components/BariMap.astro';
 import { getCollection } from 'astro:content';
 
 const guides = (await getCollection('guides'))
@@ -114,6 +115,9 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
 
   {/* STATS — numeri onesti, niente vanity metrics */}
   <StatsBlock lang="it" />
+
+  {/* MAPPA — dove parte ogni guida, illustrazione SVG editoriale */}
+  <BariMap lang="it" />
 
   {/* GUIDE — mobile snap carousel · desktop grid */}
   <section id="guide" class="bg-surface">
