@@ -185,9 +185,34 @@ const steps = lang === 'it'
     animation-delay: calc(var(--idx, 0) * 80ms + 100ms);
   }
 
+  /* === Desktop (lg+): all 5 cards visible in a single row, no scroll === */
   @media (min-width: 1024px) {
+    .journey-track {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--spacing-md);
+      overflow: visible;
+      scroll-snap-type: none;
+    }
     .journey-card {
-      width: 300px;
+      width: auto;
+    }
+    .journey-card-inner {
+      padding-inline: var(--spacing-sm);
+      min-height: 260px;
+    }
+    .journey-verb {
+      font-size: clamp(1.5rem, 2.6vw, 2rem);
+    }
+    .journey-numeral {
+      font-size: clamp(3.5rem, 6vw, 4.6rem);
+    }
+    /* Edge fades + scroll hint serve no purpose when there is no scroll */
+    .journey-fade {
+      display: none;
+    }
+    .journey-hint {
+      display: none;
     }
   }
 
