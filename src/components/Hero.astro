@@ -1,59 +1,177 @@
 ---
 import { type Lang } from '../lib/i18n';
-import Eyebrow from './Eyebrow.astro';
 
 export interface Props {
   lang: Lang;
 }
 
 const { lang } = Astro.props;
-const eyebrow = lang === 'it' ? 'Audioguide narrative · Puglia' : 'Narrative audio guides · Puglia';
-const heading = lang === 'it' ? 'Ascolta Bari' : 'Listen to Bari';
-const heading2 = lang === 'it' ? 'come una storia.' : 'as a story.';
-const italic = lang === 'it' ? 'Mentre sei lì.' : "While you're there.";
-const sub = lang === 'it'
-  ? 'Storie vere sui luoghi reali della città. Senza app, dal browser del telefono. Per sempre tue.'
-  : 'Real stories of real places. No app, opens in your phone browser. Yours forever.';
-const ctaPrimary = lang === 'it' ? 'Ascolta le guide' : 'Listen to the guides';
-const ctaSecondary = lang === 'it' ? 'Vedi i prezzi' : 'See pricing';
----
-<section class="relative bg-surface overflow-hidden">
-  <div class="max-w-wrap mx-auto px-md pt-2xl pb-3xl grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-2xl items-start">
-    <div>
-      <Eyebrow class="mb-lg">{eyebrow}</Eyebrow>
 
-      <h1 class="font-display text-4xl text-ink leading-[0.95] tracking-tight mb-md">
-        {heading}<br />
-        {heading2}<br />
-        <em class="text-accent font-normal">{italic}</em>
+const eyebrow = lang === 'it' ? 'Bari · 6 guide narrative' : 'Bari · 6 narrative guides';
+const heading1 = lang === 'it' ? 'Bari ti parla.' : 'Bari speaks.';
+const heading2 = lang === 'it' ? 'Se la sai ascoltare.' : 'If you know how to listen.';
+const sub = lang === 'it'
+  ? 'Storie vere registrate sui luoghi reali. Apri il browser del telefono, premi play, cammina.'
+  : 'Real stories recorded on real places. Open your phone browser, press play, walk.';
+const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60s' : 'Listen a teaser · 60s';
+const ctaSecondary = lang === 'it' ? 'Vedi tutte le guide' : 'See all guides';
+const trustItems = lang === 'it'
+  ? ['Senza app', 'Offline-ready', 'Italiano · English', 'Per sempre tua']
+  : ['No app', 'Offline-ready', 'IT · EN', 'Yours forever'];
+const geoLabel = lang === 'it' ? 'Bari · 41.1°N 16.8°E' : 'Bari · 41.1°N 16.8°E';
+const altText = lang === 'it'
+  ? 'Porto di Bari al tramonto con Teatro Margherita sullo sfondo'
+  : 'Bari harbor at sunset with Teatro Margherita in the background';
+---
+<section class="hero-dark relative overflow-hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-[7fr_5fr] lg:min-h-[78dvh]">
+
+    <!-- IMAGE PANEL — first on mobile so the place arrives before the words -->
+    <div class="hero-image-wrap relative order-first lg:order-last h-[58dvh] min-h-[420px] lg:h-auto">
+      <img
+        src={`/images/hero/home-${lang}.jpg`}
+        alt={altText}
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <!-- legibility veil: bottom-up on mobile (text sits below), edge-fade left on desktop (blends into text panel) -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[oklch(13%_0.025_240/0.92)] via-[oklch(13%_0.025_240/0.25)] to-transparent lg:bg-gradient-to-l lg:from-transparent lg:via-transparent lg:to-[oklch(13%_0.025_240/0.55)]"></div>
+
+      <!-- floating geo badge — frosted glass with refraction edge -->
+      <div class="absolute top-md left-md lg:top-lg lg:left-lg inline-flex items-center gap-xs px-sm py-2xs rounded-full bg-[oklch(13%_0.025_240/0.55)] backdrop-blur-md border border-white/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] text-[oklch(96%_0.012_75)] text-[11px] font-semibold tracking-[0.18em] uppercase">
+        <span class="hero-pulse w-1.5 h-1.5 rounded-full bg-[oklch(62%_0.16_45)]"></span>
+        {geoLabel}
+      </div>
+
+      <!-- bottom credit / context line — small, deliberate, only on mobile to fill the gap -->
+      <p class="lg:hidden absolute bottom-sm left-md right-md text-[11px] text-[oklch(85%_0.012_75/0.85)] tracking-wider">
+        {lang === 'it' ? 'Porto vecchio · ora dorata' : 'Old harbor · golden hour'}
+      </p>
+    </div>
+
+    <!-- TEXT PANEL -->
+    <div class="hero-text-panel relative flex flex-col justify-center px-md sm:px-lg lg:px-2xl py-xl lg:py-2xl">
+      <!-- eyebrow with animated rule -->
+      <div class="flex items-center gap-sm mb-md hero-eyebrow-row">
+        <div class="hero-eyebrow-rule h-px w-12 bg-[oklch(62%_0.16_45)] origin-left"></div>
+        <span class="text-[11px] font-semibold tracking-[0.22em] uppercase text-[oklch(82%_0.06_45)]">
+          {eyebrow}
+        </span>
+      </div>
+
+      <h1 class="font-display leading-[0.92] tracking-tight text-[oklch(96%_0.012_75)] hero-h1 m-0">
+        <span class="block text-[clamp(2.5rem,7.5vw,4.6rem)] font-normal">{heading1}</span>
+        <em class="block text-[clamp(2rem,6vw,3.6rem)] italic font-light text-[oklch(82%_0.06_45)] mt-2xs">{heading2}</em>
       </h1>
 
-      <p class="text-lg text-ink-muted leading-relaxed max-w-prose mb-lg">{sub}</p>
+      <p class="mt-md text-base sm:text-lg leading-relaxed text-[oklch(86%_0.012_75)] max-w-[36ch]">
+        {sub}
+      </p>
 
-      <div class="flex flex-wrap gap-sm">
+      <div class="mt-lg flex flex-col sm:flex-row gap-sm">
         <a
-          href="#guide"
-          class="inline-flex items-center gap-xs px-md py-sm bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline"
+          href="#assaggio"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-[oklch(96%_0.012_75)] text-[oklch(15%_0.025_240)] hover:bg-[oklch(92%_0.018_75)] transition-all duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
         >
-          {ctaPrimary} →
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          {ctaPrimary}
         </a>
         <a
-          href="#prezzi"
-          class="inline-flex items-center gap-xs px-md py-sm border border-border text-ink rounded-md font-semibold text-sm hover:border-ink transition-colors duration-fast no-underline"
+          href="#guide"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-[oklch(96%_0.012_75/0.3)] text-[oklch(96%_0.012_75)] hover:border-[oklch(96%_0.012_75)] hover:bg-[oklch(96%_0.012_75/0.04)] transition-colors duration-fast no-underline min-h-[48px]"
         >
           {ctaSecondary}
         </a>
       </div>
-    </div>
 
-    <aside class="hidden lg:block">
-      <img
-        src="/images/hero/home-it.jpg"
-        alt=""
-        class="w-full aspect-[4/5] object-cover rounded-lg"
-        loading="eager"
-        fetchpriority="high"
-      />
-    </aside>
+      <!-- trust strip — outdoor reading at glance -->
+      <ul class="mt-xl flex flex-wrap gap-x-lg gap-y-xs text-[12px] tracking-wide text-[oklch(78%_0.012_75)] m-0 p-0 list-none">
+        {trustItems.map((item) => (
+          <li class="flex items-center gap-xs">
+            <span class="w-1 h-1 rounded-full bg-[oklch(82%_0.06_45)]"></span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
   </div>
 </section>
+
+<style>
+  .hero-dark {
+    background-color: oklch(13% 0.025 240);
+    color: oklch(96% 0.012 75);
+  }
+
+  /* Pulsing geo dot — slower than default animate-pulse, smoother. */
+  .hero-pulse {
+    animation: heroPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes heroPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.7); }
+  }
+
+  /* First-paint orchestration: rule draws, eyebrow text rises, h1 lines stagger in. */
+  .hero-eyebrow-rule {
+    transform: scaleX(0);
+    animation: ruleDraw 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+  }
+  .hero-eyebrow-row > span {
+    opacity: 0;
+    animation: textIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  }
+  .hero-h1 > span,
+  .hero-h1 > em {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: textIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-h1 > span { animation-delay: 0.25s; }
+  .hero-h1 > em    { animation-delay: 0.45s; }
+
+  /* Text panel + image — gentle reveal */
+  .hero-text-panel > p,
+  .hero-text-panel > div:last-of-type,
+  .hero-text-panel > ul {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: textIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-text-panel > p           { animation-delay: 0.65s; }
+  .hero-text-panel > div:last-of-type { animation-delay: 0.85s; }
+  .hero-text-panel > ul          { animation-delay: 1.05s; }
+
+  .hero-image-wrap img {
+    transform: scale(1.04);
+    animation: imageIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.05s forwards;
+  }
+
+  @keyframes ruleDraw {
+    to { transform: scaleX(1); }
+  }
+  @keyframes textIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes imageIn {
+    to { transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-pulse,
+    .hero-eyebrow-rule,
+    .hero-eyebrow-row > span,
+    .hero-h1 > span,
+    .hero-h1 > em,
+    .hero-text-panel > p,
+    .hero-text-panel > div:last-of-type,
+    .hero-text-panel > ul,
+    .hero-image-wrap img {
+      animation: none;
+      transform: none;
+      opacity: 1;
+    }
+  }
+</style>

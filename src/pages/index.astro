@@ -17,79 +17,159 @@ const liveGuides = guides.filter((g) => g.data.status === 'live');
 const featuredTrailer = liveGuides[0]; // Bari Vecchia
 ---
 <Layout
-  title="Localis — audioguide narrative della Puglia"
-  description="Audioguide narrative di Bari e Puglia. Storie vere, senza app. Per sempre tue. €4.99 a guida."
+  title="Localis — audioguide narrative di Bari"
+  description="6 guide narrative di Bari. Storie vere registrate sui luoghi reali. Senza app, dal browser. Per sempre tue. Da €4,99."
   lang="it"
 >
   <Hero lang="it" />
 
-  <section class="max-w-narrow mx-auto px-md py-2xl">
-    <SectionDivider label="Prima di decidere, ascolta questo" />
-    {featuredTrailer && (
-      <TrailerPlayer
-        src={featuredTrailer.data.audio_trailer_path}
-        label={`~${Math.round(60)}s · ${featuredTrailer.data.title_it.split('—')[0].trim()}`}
-        lang="it"
-      />
-    )}
-    <p class="text-center font-display italic text-2xl text-ink-muted mt-lg max-w-prose mx-auto">
-      "Fermati. Guarda il mare davanti a te. Questo non è uno sfondo. È il posto dove tutto è successo davvero."
-    </p>
-  </section>
-
-  <section id="guide" class="max-w-wrap mx-auto px-md py-2xl">
-    <SectionDivider label="Scegli la tua esperienza" />
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
-      {guides.map((g, i) => (
-        <GuideCard guide={g} lang="it" index={i} />
-      ))}
+  {/* TRAILER — primary action: prova prima di comprare */}
+  <section id="assaggio" class="bg-surface">
+    <div class="max-w-narrow mx-auto px-md py-2xl lg:py-3xl">
+      <SectionDivider label="60 secondi prima di decidere" />
+      {featuredTrailer && (
+        <TrailerPlayer
+          src={featuredTrailer.data.audio_trailer_path}
+          label={`Anteprima · ${featuredTrailer.data.title_it.split('—')[0].trim()}`}
+          lang="it"
+        />
+      )}
+      <p class="text-center font-display italic text-xl sm:text-2xl text-ink-muted mt-lg max-w-prose mx-auto leading-snug">
+        "Fermati. Guarda il mare davanti a te.<br />
+        Questo non è uno sfondo. È il posto dove tutto è successo."
+      </p>
     </div>
   </section>
 
-  <section class="max-w-narrow mx-auto px-md py-2xl text-center">
-    <p class="font-display italic text-3xl text-ink mb-md">
-      Queste non sono guide turistiche.
-    </p>
-    <p class="text-base text-ink-muted leading-relaxed max-w-prose mx-auto">
-      Non troverai indicazioni su dove mangiare o cosa evitare. Qui ascolti storie vere, costruite sui luoghi reali della città. E mentre ascolti, sei esattamente lì dove tutto è successo.
-    </p>
-  </section>
+  {/* GUIDE — mobile snap carousel · desktop grid */}
+  <section id="guide" class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+      <SectionDivider label="Le sei guide di Bari" />
 
-  <section id="prezzi" class="max-w-wrap mx-auto px-md py-2xl">
-    <SectionDivider label="Scegli il tuo piano" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[48rem] mx-auto">
-      <PriceCard
-        product="single"
-        guideSlug="bari-vecchia"
-        lang="it"
-        features={[
-          '1 guida a scelta',
-          'Accesso illimitato',
-          'Senza app, dal browser',
-          'Italiano e inglese',
-        ]}
-      />
-      <PriceCard
-        product="bundle"
-        lang="it"
-        primary
-        features={[
-          'Bari Vecchia — Dentro la Città',
-          'Porto di Bari — Dove è Successo Tutto',
-          'San Nicola — Il Santo Rubato',
-          'Accesso illimitato · Senza app',
-        ]}
-      />
+      <div class="
+        guides-row
+        flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-md
+        overflow-x-auto md:overflow-visible
+        snap-x snap-mandatory md:snap-none
+        -mx-md md:mx-0 px-md md:px-0 pb-md md:pb-0
+        scroll-pl-md
+      ">
+        {guides.map((g, i) => (
+          <div
+            class="guide-cell snap-start shrink-0 w-[82%] sm:w-[60%] md:w-auto"
+            style={`--idx:${i}`}
+          >
+            <GuideCard guide={g} lang="it" index={i} />
+          </div>
+        ))}
+      </div>
+
+      <p class="md:hidden text-center text-[11px] text-ink-subtle mt-md tracking-[0.18em] uppercase font-semibold">
+        ← scorri per vedere tutte
+      </p>
     </div>
   </section>
 
-  <section class="max-w-wrap mx-auto px-md py-3xl text-center">
-    <p class="font-display italic text-2xl text-ink-muted mb-xs">
-      Se vuoi visitare Bari, puoi farlo.
-    </p>
-    <p class="font-display text-3xl text-ink mb-lg">Se vuoi capirla, ascoltala.</p>
-    <a href="#guide" class="inline-flex items-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline">
-      Inizia il percorso →
-    </a>
+  {/* MANIFESTO — invertito, ad alto contrasto outdoor */}
+  <section class="manifesto-dark">
+    <div class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl text-center">
+      <p class="text-[11px] font-semibold tracking-[0.24em] uppercase text-[oklch(82%_0.06_45)] mb-lg">
+        — Manifesto —
+      </p>
+      <p class="font-display italic text-[clamp(1.7rem,4.4vw,2.7rem)] leading-[1.18] mb-lg text-[oklch(96%_0.012_75)] mx-auto max-w-[24ch]">
+        Queste non sono guide turistiche.
+      </p>
+      <p class="text-base sm:text-lg leading-relaxed text-[oklch(86%_0.012_75)] max-w-[54ch] mx-auto">
+        Non ti diciamo dove mangiare. Non ti diciamo cosa evitare.<br class="hidden sm:inline" />
+        Ti raccontiamo le storie vere dei luoghi — mentre ci stai dentro.
+      </p>
+    </div>
+  </section>
+
+  {/* PRICING */}
+  <section id="prezzi" class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+      <SectionDivider label="Prendi quella che ti serve" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[48rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="bari-vecchia"
+          lang="it"
+          features={[
+            '1 guida a tua scelta',
+            'Accesso illimitato, per sempre',
+            'Funziona offline · Senza app',
+            'Italiano e inglese',
+          ]}
+        />
+        <PriceCard
+          product="bundle"
+          lang="it"
+          primary
+          features={[
+            'Tutte e 3 le guide live di Bari',
+            'Sequenza progettata: ~4h di cammino',
+            'Risparmi €4,98',
+            'Per sempre tue',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* CLOSER */}
+  <section class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl text-center">
+      <p class="font-display italic text-xl sm:text-2xl text-ink-muted mb-2xs">
+        Bari si visita in un giorno.
+      </p>
+      <p class="font-display text-3xl sm:text-4xl text-ink mb-lg leading-tight">
+        Si capisce in tre voci.
+      </p>
+      <a
+        href="#guide"
+        class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-all duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+      >
+        Inizia ad ascoltare
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
   </section>
 </Layout>
+
+<style>
+  /* Manifesto inverted block — outdoor-friendly second dark anchor */
+  .manifesto-dark {
+    background-color: oklch(13% 0.025 240);
+    color: oklch(96% 0.012 75);
+  }
+
+  /* Stagger reveal for guide cells. Index passed via --idx custom prop. */
+  .guide-cell {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: guideCellIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 80ms + 120ms);
+  }
+  @keyframes guideCellIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hide horizontal scrollbar on mobile guides row, keep momentum */
+  .guides-row {
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .guides-row::-webkit-scrollbar { display: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .guide-cell {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
