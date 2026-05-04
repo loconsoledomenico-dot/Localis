@@ -1,0 +1,73 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const heading = lang === 'it'
+  ? 'Una sola città. Sei voci. Centoventi minuti che non si dimenticano.'
+  : 'One city. Six voices. One hundred and twenty minutes you don\'t forget.';
+
+const stats = lang === 'it'
+  ? [
+      { value: '6', label: 'guide narrative · sei quartieri di Bari' },
+      { value: '120', label: 'minuti complessivi · circa 9 min a capitolo' },
+      { value: '2', label: 'lingue · italiano e inglese, registrate da madrelingua' },
+      { value: '∞', label: 'riascolti · per sempre tue, anche offline' },
+    ]
+  : [
+      { value: '6', label: 'narrative guides · six neighbourhoods of Bari' },
+      { value: '120', label: 'minutes total · about 9 min per chapter' },
+      { value: '2', label: 'languages · Italian and English, native voices' },
+      { value: '∞', label: 'replays · yours forever, also offline' },
+    ];
+---
+<section class="stats bg-surface-elev">
+  <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
+
+    <h2 class="font-display text-ink text-[clamp(1.7rem,3.6vw,2.5rem)] leading-[1.15] tracking-[-0.012em] max-w-[28ch] mb-2xl">
+      {heading}
+    </h2>
+
+    <dl class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-lg lg:gap-xl m-0 p-0">
+      {stats.map((s, i) => (
+        <div class="stat-cell" style={`--idx:${i}`}>
+          <dt class="sr-only">{s.label}</dt>
+          <dd class="m-0 p-0">
+            <span class="block font-display font-light text-accent text-[clamp(3rem,6vw,4.8rem)] leading-none mb-sm">
+              {s.value}
+            </span>
+            <span aria-hidden="true" class="block w-8 h-px bg-border mb-sm"></span>
+            <span class="block font-body text-sm text-ink-muted leading-snug max-w-[24ch]">
+              {s.label}
+            </span>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<style>
+  .stat-cell {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: statIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 90ms + 120ms);
+  }
+
+  @keyframes statIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stat-cell {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

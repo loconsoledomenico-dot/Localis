@@ -1,0 +1,90 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+  ctaHref?: string;
+}
+
+const { lang, ctaHref = '#guide' } = Astro.props;
+
+const eyebrow = lang === 'it' ? 'In tre minuti, sei dentro' : 'Three minutes in, you\'re there';
+const heading = lang === 'it' ? 'Niente da scaricare. Niente da capire.' : 'Nothing to download. Nothing to figure out.';
+const headingItalic = lang === 'it' ? 'Solo una città che parla.' : 'Just a city that speaks.';
+
+const steps = lang === 'it'
+  ? [
+      { n: '1', title: 'Apri il link', body: 'Dal porto, dal treno, da casa. Funziona su qualsiasi telefono.' },
+      { n: '2', title: 'Scegli il quartiere', body: 'Bari Vecchia, Murat, San Nicola — o l\'intera edizione.' },
+      { n: '3', title: 'Premi play', body: 'I capitoli si avviano dove devono. Tu cammini, ascolti, ti perdi.' },
+    ]
+  : [
+      { n: '1', title: 'Open the link', body: 'From the harbour, the train, home. Works on any phone.' },
+      { n: '2', title: 'Pick a neighbourhood', body: 'Bari Vecchia, Murat, San Nicola — or the whole edition.' },
+      { n: '3', title: 'Press play', body: 'Chapters start where they should. You walk, you listen, you wander.' },
+    ];
+
+const ctaLabel = lang === 'it' ? 'Inizia ora · gratis i primi 60 secondi' : 'Start now · first 60 seconds free';
+---
+<section class="steps bg-surface">
+  <div class="max-w-narrow mx-auto px-md sm:px-lg py-3xl lg:py-4xl text-center">
+
+    <div class="inline-flex items-center gap-sm mb-md">
+      <span class="block w-7 h-px bg-accent"></span>
+      <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+        {eyebrow}
+      </span>
+      <span class="block w-7 h-px bg-accent"></span>
+    </div>
+
+    <h2 class="font-display text-ink leading-[1.1] tracking-[-0.014em] mb-2xl text-[clamp(1.9rem,4.4vw,2.8rem)]">
+      <span class="block font-light">{heading}</span>
+      <em class="block font-normal italic text-accent mt-2xs">{headingItalic}</em>
+    </h2>
+
+    <ol class="steps-list grid grid-cols-1 sm:grid-cols-3 gap-lg sm:gap-xl list-none p-0 m-0 mb-2xl">
+      {steps.map((s, i) => (
+        <li class="step-cell flex flex-col items-center" style={`--idx:${i}`}>
+          <span class="step-num font-display italic font-light text-accent text-[clamp(3.5rem,8vw,5rem)] leading-none mb-sm select-none">
+            {s.n}
+          </span>
+          <span class="font-display text-ink text-xl sm:text-2xl leading-tight mb-2xs">
+            {s.title}
+          </span>
+          <span class="font-body text-sm text-ink-muted leading-snug max-w-[24ch]">
+            {s.body}
+          </span>
+        </li>
+      ))}
+    </ol>
+
+    <a
+      href={ctaHref}
+      class="inline-flex items-center justify-center gap-xs px-xl py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+    >
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+      {ctaLabel}
+    </a>
+  </div>
+</section>
+
+<style>
+  .step-cell {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: stepIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 120ms + 100ms);
+  }
+
+  @keyframes stepIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .step-cell {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

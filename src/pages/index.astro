@@ -6,6 +6,10 @@ import GuideCard from '../components/GuideCard.astro';
 import TrailerPlayer from '../components/TrailerPlayer.astro';
 import PriceCard from '../components/PriceCard.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import JourneyOverview from '../components/JourneyOverview.astro';
+import FeatureBlock from '../components/FeatureBlock.astro';
+import StatsBlock from '../components/StatsBlock.astro';
+import StepsBlock from '../components/StepsBlock.astro';
 import { getCollection } from 'astro:content';
 
 const guides = (await getCollection('guides'))
@@ -40,6 +44,75 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       </p>
     </div>
   </section>
+
+  {/* JOURNEY — i cinque gesti dell'esperienza */}
+  <JourneyOverview lang="it" />
+
+  {/* FEATURE BLOCK 1 — Storie sui luoghi (image right) */}
+  <FeatureBlock
+    eyebrow="Storie — Tav. II"
+    heading="Non ti diciamo cosa vedere."
+    italicEnding="Ti diciamo cosa è successo."
+    body="Ogni capitolo è una storia vera, costruita su un punto preciso: un cortile, un altare laterale, l'angolo dove un mercante è morto in piedi. Niente itinerari da brochure. Niente «benvenuti a Bari». Solo nomi, date, dettagli che nessuno ti racconta a meno che non sia di qui."
+    bullets={[
+      'Capitoli da 6–12 minuti, scritti per la lunghezza di un vicolo',
+      'Geo-trigger automatico: parte quando arrivi nel punto giusto',
+      'Niente musica di sottofondo. Solo voce e silenzio fra una frase e l\'altra',
+      'Fonti citate · ricerca d\'archivio, non Wikipedia',
+    ]}
+    imageSrc="/images/covers/bari-vecchia.jpg"
+    imageAlt="Vicolo del Borgo Antico di Bari, pietre consumate e arco normanno"
+    plateNumber="Tav. II"
+    caption="Strada delle Crociate, Bari Vecchia. La pietra è la stessa del 1156."
+    ctaLabel="Ascolta il primo capitolo"
+    ctaHref="#assaggio"
+    imageSide="right"
+  />
+
+  {/* FEATURE BLOCK 2 — Niente app, niente account (image left) */}
+  <FeatureBlock
+    eyebrow="Strumento — Tav. III"
+    heading="Funziona dal browser."
+    italicEnding="Anche offline. Anche senza segnale."
+    body="Apri il link, premi play. Niente da scaricare, niente registrazione, niente cookie banner. La prima volta che ascolti un capitolo, l'audio resta sul telefono — e funziona anche dopo, nei vicoli stretti dove il GPS si confonde e il 4G sparisce. Pensato per passeggeri di crociera senza roaming, e per chi non vuole un'altra icona sul telefono."
+    bullets={[
+      'Su iPhone, Android, qualsiasi browser moderno',
+      'Audio cache automatica · senti tutto anche offline',
+      'Nessun account, nessuna email obbligatoria',
+      'Italiano e inglese · voci registrate da madrelingua',
+    ]}
+    imageSrc="/images/covers/porto-bari.jpg"
+    imageAlt="Porto vecchio di Bari, barche e Teatro Margherita"
+    plateNumber="Tav. III"
+    caption="Lungomare Imperatore Augusto. Il punto da cui partono tutte le edizioni."
+    ctaLabel="Vedi le sei guide"
+    ctaHref="#guide"
+    imageSide="left"
+  />
+
+  {/* FEATURE BLOCK 3 — Voci e firme (image right) */}
+  <FeatureBlock
+    eyebrow="Voci — Tav. IV"
+    heading="Sei narratori baresi."
+    italicEnding="Ognuno racconta il suo quartiere."
+    body="Non attori, non turisti, non guide certificate. Voci di chi è cresciuto sotto quegli archi, ha mangiato in quei panifici, ha visto cambiare quei mercati. Ogni guida è firmata: nome, foto, due righe su perché proprio lui o lei. Il timbro è quello di un amico che ti porta a casa sua — non di una segreteria turistica."
+    bullets={[
+      'Sei autori distinti, uno per quartiere',
+      'Bio breve · puoi sapere chi ti sta parlando',
+      'Tono editoriale · niente entusiasmo finto, niente «mamma mia»',
+      'Versione inglese non tradotta · scritta da zero per orecchie anglofone',
+    ]}
+    imageSrc="/images/covers/tre-teatri.jpg"
+    imageAlt="Teatro Petruzzelli di Bari, facciata neoclassica al tramonto"
+    plateNumber="Tav. IV"
+    caption="Teatro Petruzzelli, Murat. La voce della guida ci ha visto la prima opera a sei anni."
+    ctaLabel="Conosci gli autori"
+    ctaHref="/about"
+    imageSide="right"
+  />
+
+  {/* STATS — numeri onesti, niente vanity metrics */}
+  <StatsBlock lang="it" />
 
   {/* GUIDE — mobile snap carousel · desktop grid */}
   <section id="guide" class="bg-surface">
@@ -95,6 +168,9 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       </p>
     </div>
   </section>
+
+  {/* 3-PASSI — onboarding chiaro prima del pricing */}
+  <StepsBlock lang="it" ctaHref="#assaggio" />
 
   {/* PRICING */}
   <section id="prezzi" class="bg-surface">

@@ -1,0 +1,116 @@
+---
+export interface Props {
+  eyebrow: string;
+  heading: string;
+  italicEnding?: string;
+  body: string;
+  bullets: string[];
+  imageSrc: string;
+  imageAlt: string;
+  plateNumber?: string;
+  caption?: string;
+  ctaLabel: string;
+  ctaHref: string;
+  imageSide?: 'left' | 'right';
+}
+
+const {
+  eyebrow,
+  heading,
+  italicEnding,
+  body,
+  bullets,
+  imageSrc,
+  imageAlt,
+  plateNumber,
+  caption,
+  ctaLabel,
+  ctaHref,
+  imageSide = 'right',
+} = Astro.props;
+
+const textOrderClass = imageSide === 'right' ? 'lg:order-1' : 'lg:order-2';
+const figureOrderClass = imageSide === 'right' ? 'lg:order-2' : 'lg:order-1';
+---
+<section class="feature-block bg-surface">
+  <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg lg:gap-2xl items-center">
+
+      <!-- Text column -->
+      <div class={`lg:col-span-6 flex flex-col ${textOrderClass}`}>
+        <div class="flex items-center gap-sm mb-md">
+          <span class="block w-7 h-px bg-accent"></span>
+          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+            {eyebrow}
+          </span>
+        </div>
+
+        <h2 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(1.9rem,4.4vw,3rem)]">
+          <span class="font-light">{heading}</span>
+          {italicEnding && (
+            <em class="block font-normal italic text-accent mt-2xs text-[clamp(1.7rem,3.8vw,2.6rem)]">
+              {italicEnding}
+            </em>
+          )}
+        </h2>
+
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted max-w-[52ch] mb-lg">
+          {body}
+        </p>
+
+        <ul class="bullets list-none p-0 m-0 mb-lg flex flex-col gap-sm">
+          {bullets.map((b) => (
+            <li class="flex items-baseline gap-sm font-body text-base text-ink-muted leading-snug">
+              <span class="font-display italic font-light text-accent text-base flex-shrink-0 select-none">✻</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href={ctaHref}
+          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px] self-start"
+        >
+          {ctaLabel}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Image column — Domus-style plate with caption -->
+      <figure class={`lg:col-span-6 m-0 ${figureOrderClass}`}>
+        <div class="relative bg-surface-elev p-[6px] border border-border">
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            class="block w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-[5/6] object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        {(plateNumber || caption) && (
+          <figcaption class="mt-sm flex items-baseline gap-sm text-ink-subtle">
+            {plateNumber && (
+              <span class="font-body font-semibold text-[10px] tracking-[0.22em] uppercase whitespace-nowrap pt-[2px]">
+                {plateNumber}
+              </span>
+            )}
+            {caption && (
+              <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[44ch]">
+                {caption}
+              </span>
+            )}
+          </figcaption>
+        )}
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-block {
+    border-top: 1px solid var(--color-border);
+  }
+</style>

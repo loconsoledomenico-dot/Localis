@@ -1,0 +1,77 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const heading = lang === 'it' ? 'Dall\'inizio alla fine, in cinque gesti.' : 'From start to finish, in five gestures.';
+
+const steps = lang === 'it'
+  ? [
+      { n: '01', verb: 'Apri', body: 'Un link nel browser. Niente download, niente account.' },
+      { n: '02', verb: 'Scegli', body: 'Una guida fra le sei. Per quartiere o per umore.' },
+      { n: '03', verb: 'Cammina', body: 'I capitoli partono nei punti giusti, mentre sei lì.' },
+      { n: '04', verb: 'Ascolta', body: 'Voce a bassa voce. Storie vere, dettate dai luoghi.' },
+      { n: '05', verb: 'Riascolta', body: 'Per sempre tua. Anche fra dieci anni, anche da casa.' },
+    ]
+  : [
+      { n: '01', verb: 'Open', body: 'A link in your browser. No download, no signup.' },
+      { n: '02', verb: 'Choose', body: 'One of six guides. By neighbourhood or by mood.' },
+      { n: '03', verb: 'Walk', body: 'Chapters start in the right places, while you\'re there.' },
+      { n: '04', verb: 'Listen', body: 'A low voice. Real stories dictated by the places.' },
+      { n: '05', verb: 'Replay', body: 'Yours forever. In ten years, from home, anywhere.' },
+    ];
+---
+<section class="journey bg-surface">
+  <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
+
+    <h2 class="font-display text-ink text-[clamp(1.6rem,3.6vw,2.4rem)] leading-[1.1] tracking-[-0.012em] mb-2xl max-w-[24ch]">
+      {heading}
+    </h2>
+
+    <ol class="journey-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-md lg:gap-lg list-none p-0 m-0">
+      {steps.map((s, i) => (
+        <li class="journey-cell" style={`--idx:${i}`}>
+          <div class="flex flex-col h-full">
+            <span class="font-body font-semibold text-[10px] tracking-[0.32em] uppercase text-ink-subtle mb-sm">
+              {s.n}
+            </span>
+            <span class="font-display text-ink text-2xl sm:text-3xl leading-none mb-sm">
+              {s.verb}
+            </span>
+            <span class="font-body text-sm text-ink-muted leading-snug max-w-[22ch]">
+              {s.body}
+            </span>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .journey-cell {
+    position: relative;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: journeyIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 70ms + 100ms);
+  }
+
+  @keyframes journeyIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .journey-cell {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
