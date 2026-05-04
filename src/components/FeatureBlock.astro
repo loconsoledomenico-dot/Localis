@@ -123,6 +123,7 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
     flex-direction: column;
     gap: var(--spacing-xl);
     padding-block: var(--spacing-2xl);
+    padding-inline: var(--side-gutter);
     border-top: 1px solid var(--color-border);
   }
 
@@ -140,6 +141,9 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
     aspect-ratio: var(--mobile-aspect);
     background: var(--color-surface-elev);
     overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08),
+                0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
   }
   .feature-img {
     width: 100%;
@@ -174,100 +178,64 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-sm);
-    padding-inline: var(--spacing-md);
     color: var(--color-ink-subtle);
   }
 
   .feature-text {
-    padding-inline: var(--spacing-md);
     display: flex;
     flex-direction: column;
   }
 
-  /* === Desktop (lg+): magazine spread === */
+  /* === Desktop (lg+): asymmetric spread.
+   * Text takes more space (1.3fr), photo is contained and capped (1fr, max 460px).
+   * No bleed — figure stays inside the side-gutter on its outer edge.
+   */
   @media (min-width: 1024px) {
     .feature-block {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.3fr 1fr;
       column-gap: var(--spacing-3xl);
-      align-items: stretch;
+      align-items: center;
       padding-block: clamp(var(--spacing-3xl), 8vw, var(--spacing-4xl));
     }
 
+    /* Photo on the right -> column 2, text on the left -> column 1 */
     .feature-block-right .feature-image {
       grid-column: 2;
       grid-row: 1;
+      width: 100%;
+      max-width: 460px;
+      justify-self: end;
     }
     .feature-block-right .feature-text {
       grid-column: 1;
       grid-row: 1;
-      padding-left: var(--side-gutter);
-      padding-right: 0;
     }
 
+    /* Photo on the left -> column 1 (narrower), text on the right -> column 2 (wider) */
+    .feature-block-left {
+      grid-template-columns: 1fr 1.3fr;
+    }
     .feature-block-left .feature-image {
       grid-column: 1;
       grid-row: 1;
+      width: 100%;
+      max-width: 460px;
+      justify-self: start;
     }
     .feature-block-left .feature-text {
       grid-column: 2;
       grid-row: 1;
-      padding-right: var(--side-gutter);
-      padding-left: 0;
     }
 
-    /* Stretch: image and text both fill the row.
-     * Image frame grows to fill the figure (which fills the cell).
-     * Text content centers vertically within its cell.
-     * Result: no empty gaps when one column is taller than the other. */
-    .feature-text {
-      justify-content: center;
-    }
-
-    /* Image bleeds to viewport edge on its outer side.
-     * No max-height: the frame must be free to grow to the row's full
-     * height (which equals the taller of image vs text column) — any cap
-     * here re-introduces the empty parchment band below tall-text rows. */
-    .feature-image,
-    .feature-text {
-      height: 100%;
-    }
+    /* Keep editorial 4/5 portrait — no stretch */
     .feature-image-frame {
-      aspect-ratio: auto;
-      flex: 1 1 auto;
-      min-height: 460px;
-    }
-    .feature-block-right .feature-image-frame {
-      margin-right: calc(-1 * var(--side-gutter));
-      width: calc(100% + var(--side-gutter));
-    }
-    .feature-block-left .feature-image-frame {
-      margin-left: calc(-1 * var(--side-gutter));
-      width: calc(100% + var(--side-gutter));
+      aspect-ratio: 4 / 5;
     }
 
     .feature-plate {
-      bottom: var(--spacing-lg);
-    }
-    .feature-block-right .feature-plate {
-      right: var(--spacing-lg);
-    }
-    .feature-block-left .feature-plate {
-      left: var(--spacing-lg);
-    }
-
-    .feature-caption {
-      padding-inline: 0;
-    }
-    .feature-block-right .feature-caption {
-      margin-right: calc(-1 * var(--side-gutter) + var(--spacing-md));
-      padding-left: 0;
-      padding-right: var(--spacing-md);
-    }
-    .feature-block-left .feature-caption {
-      margin-left: calc(-1 * var(--side-gutter) + var(--spacing-md));
-      padding-right: 0;
-      padding-left: var(--spacing-md);
+      bottom: var(--spacing-md);
+      right: var(--spacing-md);
     }
   }
 

@@ -144,6 +144,9 @@ const altText = lang === 'it'
     aspect-ratio: 4 / 5;
     overflow: hidden;
     background: var(--color-surface-elev);
+    border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08),
+                0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
   }
 
   .hero-img {
@@ -190,20 +193,22 @@ const altText = lang === 'it'
     max-width: 44ch;
   }
 
-  /* === Desktop (lg+): magazine spread, photo bleeds right === */
+  /* === Desktop (lg+): asymmetric magazine spread.
+   * Text takes the lion's share. Photo is contained, smaller, soft-cornered.
+   * No bleed — figure stays inside the side-gutter on its outer edge.
+   */
   @media (min-width: 1024px) {
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: var(--spacing-3xl);
-      align-items: stretch;
+      grid-template-columns: 1.45fr 1fr;
+      column-gap: var(--spacing-2xl);
+      align-items: center;
+      padding-inline: var(--side-gutter);
       padding-bottom: clamp(var(--spacing-3xl), 7vw, var(--spacing-4xl));
     }
 
     .hero-text {
-      padding-left: var(--side-gutter);
-      padding-right: 0;
-      justify-content: center;
+      padding-inline: 0;
       grid-column: 1;
       grid-row: 1;
     }
@@ -211,24 +216,19 @@ const altText = lang === 'it'
     .hero-figure {
       grid-column: 2;
       grid-row: 1;
+      width: 100%;
+      max-width: 420px;
+      justify-self: end;
       gap: var(--spacing-sm);
-      height: 100%;
     }
 
-    /* Image stretches to row height, bleeds to right viewport edge.
-     * width: calc(100% + side-gutter) extends the box rightward. */
+    /* Keep the editorial 4/5 portrait — no stretch, no bleed */
     .hero-image-frame {
-      aspect-ratio: auto;
-      flex: 1 1 auto;
-      min-height: 520px;
-      margin-right: calc(-1 * var(--side-gutter));
-      width: calc(100% + var(--side-gutter));
+      aspect-ratio: 4 / 5;
     }
 
     .hero-caption {
-      padding-left: 0;
-      padding-right: var(--spacing-md);
-      margin-right: calc(-1 * var(--side-gutter) + var(--spacing-md));
+      padding-inline: 0;
     }
   }
 
