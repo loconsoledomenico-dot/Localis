@@ -186,49 +186,39 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
     flex-direction: column;
   }
 
-  /* === Desktop (lg+): asymmetric spread.
-   * Text takes more space (1.3fr), photo is contained and capped (1fr, max 460px).
-   * No bleed — figure stays inside the side-gutter on its outer edge.
+  /* === Desktop (lg+): symmetric spread.
+   * Equal columns (1fr / 1fr): text and photo carry the same visual weight.
+   * No bleed — both stay inside the container.
    */
   @media (min-width: 1024px) {
     .feature-block {
       display: grid;
-      grid-template-columns: 1.3fr 1fr;
+      grid-template-columns: 1fr 1fr;
       column-gap: var(--spacing-3xl);
       align-items: center;
       padding-block: clamp(var(--spacing-3xl), 8vw, var(--spacing-4xl));
     }
 
-    /* Photo on the right -> column 2, text on the left -> column 1 */
     .feature-block-right .feature-image {
       grid-column: 2;
       grid-row: 1;
       width: 100%;
-      max-width: 460px;
-      justify-self: end;
     }
     .feature-block-right .feature-text {
       grid-column: 1;
       grid-row: 1;
     }
 
-    /* Photo on the left -> column 1 (narrower), text on the right -> column 2 (wider) */
-    .feature-block-left {
-      grid-template-columns: 1fr 1.3fr;
-    }
     .feature-block-left .feature-image {
       grid-column: 1;
       grid-row: 1;
       width: 100%;
-      max-width: 460px;
-      justify-self: start;
     }
     .feature-block-left .feature-text {
       grid-column: 2;
       grid-row: 1;
     }
 
-    /* Keep editorial 4/5 portrait — no stretch */
     .feature-image-frame {
       aspect-ratio: 4 / 5;
     }

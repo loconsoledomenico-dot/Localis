@@ -80,10 +80,10 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       'Nessun account, nessuna email obbligatoria',
       'Italiano e inglese · voci registrate da madrelingua',
     ]}
-    imageSrc="/images/covers/bari-lungomare-palms.jpg"
-    imageAlt="Lungomare di Bari, palme e palazzi color crema con balconi sul mare, cielo limpido di tarda mattinata"
+    imageSrc="/images/covers/Smartphone-Localis.jpg"
+    imageAlt="Smartphone Android su tavolo nero con il browser aperto sulla home di localis.guide: titolo Bari ti parla, pulsanti di ascolto e copertina della Cattedrale di Bari visibili"
     plateNumber="Tav. III"
-    caption="Lungomare in tarda mattinata. Da qui ai vicoli del Borgo Antico sono sette minuti — l'app cammina con te."
+    caption="Aperto da un link. Niente app, niente icona sul telefono. Funziona dal browser, anche dopo, anche offline."
     ctaLabel="Vedi le sei guide"
     ctaHref="#guide"
     imageSide="left"
@@ -147,25 +147,15 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
     </div>
   </section>
 
-  {/* MANIFESTO — pull-quote editoriale, parchment, ornamento tipografico, foto backdrop sotto */}
-  <section class="manifesto-section bg-surface-elev relative overflow-hidden">
-    <img
-      src="/images/covers/puglia-arco-cortile.jpg"
-      alt=""
-      aria-hidden="true"
-      class="manifesto-bg"
-      loading="lazy"
-      decoding="async"
-    />
-    <div class="relative z-10 max-w-narrow mx-auto px-md py-3xl lg:py-4xl">
+  {/* MANIFESTO — pull-quote editoriale, niente sovrapposizioni */}
+  <section class="manifesto-section bg-surface-elev">
+    <div class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl">
       <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-2xl">
         — Manifesto —
       </p>
 
-      <blockquote class="manifesto-quote relative font-display italic text-ink leading-[1.18] text-[clamp(1.8rem,4.6vw,2.8rem)] m-0 max-w-[26ch] mx-auto text-center">
-        <span aria-hidden="true" class="font-display not-italic font-light text-accent text-[3em] leading-none absolute -top-md sm:-top-lg left-1/2 -translate-x-[110%] select-none">«</span>
+      <blockquote class="manifesto-quote font-display italic text-ink leading-[1.18] text-[clamp(1.8rem,4.6vw,2.8rem)] m-0 max-w-[26ch] mx-auto text-center">
         Queste non sono guide turistiche.
-        <span aria-hidden="true" class="font-display not-italic font-light text-accent text-[3em] leading-none absolute -bottom-md sm:-bottom-lg left-1/2 translate-x-[10%] select-none">»</span>
       </blockquote>
 
       <div class="flex items-center justify-center gap-sm my-2xl" aria-hidden="true">
@@ -221,31 +211,6 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Manifesto backdrop — foto puglia editorial, opacità bassa, tono parchment */
-  .manifesto-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-    opacity: 0.12;
-    filter: grayscale(45%) sepia(18%) contrast(0.95) brightness(1.04);
-    z-index: 0;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  /* Vignette parchment perché il testo resti leggibile sopra la foto */
-  .manifesto-section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at center, transparent 0%, var(--color-surface-elev) 78%);
-    z-index: 1;
-    pointer-events: none;
-  }
 
   @media (prefers-reduced-motion: reduce) {
     .manifesto-quote {
