@@ -7,285 +7,216 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola VII — La pianta' : 'Plate VII — The plan';
-const heading = lang === 'it' ? 'Cinque tavole. Una sesta in arrivo.' : 'Five plates. A sixth on its way.';
+const eyebrow = lang === 'it' ? 'Tavola VII — I sei luoghi' : 'Plate VII — The six places';
+const heading1 = lang === 'it' ? 'Cinque storie tracciate.' : 'Five stories traced.';
+const heading2 = lang === 'it' ? 'Una sesta in arrivo.' : 'A sixth on its way.';
 const intro = lang === 'it'
-  ? 'Cinque guide narrative tracciate su un fazzoletto di centro storico. La sesta — già confermata — esce a giorni. Tocca un puntino per scoprire la storia che parte da lì.'
-  : 'Five narrative guides drawn on a small swath of old town. The sixth — already confirmed — comes shortly. Tap a dot to discover the story that starts there.';
-const legendSeaLabel = lang === 'it' ? 'Adriatico' : 'Adriatic';
-const legendOldTown = lang === 'it' ? 'Borgo Antico' : 'Old town';
-const legendMurat = lang === 'it' ? 'Quartiere Murat' : 'Murat district';
-const comingSoon = lang === 'it' ? 'In arrivo' : 'Coming';
+  ? 'Cinque guide narrative legate a sei luoghi precisi del centro storico di Bari. La sesta — già confermata — esce a giorni. Tocca un riquadro per ascoltare.'
+  : 'Five narrative guides anchored to six precise places in central Bari. The sixth — already confirmed — comes shortly. Tap a tile to listen.';
 
-interface Marker {
+interface Place {
   slug: string;
   title: string;
-  subtitle: string;
-  cx: number;
-  cy: number;
-  /** Larger pin for primary regions; small for landmarks; cluster for multi-point */
-  size?: 'lg' | 'md' | 'sm';
+  duration: string;
+  quartiere: string;
+  startsAt: string;
+  cover: string;
+  alt: string;
   draft?: boolean;
 }
 
-const markers: Marker[] = lang === 'it'
+const places: Place[] = lang === 'it'
   ? [
-      { slug: 'bari-vecchia',     title: 'Bari Vecchia — Dentro la Città',                subtitle: 'Nove minuti dentro il labirinto.',           cx: 430, cy: 130, size: 'lg' },
-      { slug: 'san-nicola',       title: 'San Nicola — Il Santo Rubato',                  subtitle: 'Un rapimento che ha fatto la Chiesa.',       cx: 470, cy: 105, size: 'md' },
-      { slug: 'il-meglio-di-bari',title: 'Il Meglio di Bari — Mangia Prima di Capire',    subtitle: 'Cibo prima del racconto, poi la ricetta.',   cx: 408, cy: 165, size: 'md' },
-      { slug: 'porto-bari',       title: 'Porto di Bari — Dove è Successo Tutto',         subtitle: 'L\'Adriatico che ha cambiato l\'Italia.',    cx: 640, cy: 165, size: 'md' },
-      { slug: 'tre-teatri',       title: 'I Tre Teatri — Fuoco, Musica e Borghesia',      subtitle: 'La Bari moderna che bruciò e ricominciò.',   cx: 440, cy: 290, size: 'md' },
-      { slug: '__draft',          title: 'Capitolo 06 — In arrivo',                       subtitle: 'Voce confermata, registrazione in corso.',   cx: 470, cy: 380, size: 'sm', draft: true },
+      {
+        slug: 'bari-vecchia',
+        title: 'Bari Vecchia — Dentro la Città',
+        duration: '9 min',
+        quartiere: 'Borgo Antico',
+        startsAt: 'Strada delle Crociate',
+        cover: '/images/covers/bari-vecchia.jpg',
+        alt: 'Vicolo del Borgo Antico di Bari con colonne romane antiche e palazzi storici',
+      },
+      {
+        slug: 'san-nicola',
+        title: 'San Nicola — Il Santo Rubato',
+        duration: '7 min',
+        quartiere: 'Borgo Antico',
+        startsAt: 'Basilica di San Nicola',
+        cover: '/images/covers/san-nicola.jpg',
+        alt: 'Vicolo di Bari Vecchia con luminaria di festa che incornicia la prospettiva',
+      },
+      {
+        slug: 'il-meglio-di-bari',
+        title: 'Il Meglio di Bari — Mangia Prima di Capire',
+        duration: '8 min',
+        quartiere: 'Borgo Antico',
+        startsAt: 'Strada Arco Basso',
+        cover: '/images/covers/il-meglio-di-bari.jpg',
+        alt: 'Strada delle Orecchiette a Bari Vecchia, donne che lavorano la pasta su tavoli di legno e cappelli appesi tra i vicoli',
+      },
+      {
+        slug: 'porto-bari',
+        title: 'Porto di Bari — Dove è Successo Tutto',
+        duration: '8 min',
+        quartiere: 'Lungomare',
+        startsAt: 'Molo San Nicola',
+        cover: '/images/covers/porto-bari.jpg',
+        alt: 'Bari dall\'alto al tramonto, lungomare e marina del porto turistico',
+      },
+      {
+        slug: 'tre-teatri',
+        title: 'I Tre Teatri — Fuoco, Musica e Borghesia',
+        duration: '10 min',
+        quartiere: 'Murat',
+        startsAt: 'Teatro Petruzzelli',
+        cover: '/images/covers/tre-teatri.jpg',
+        alt: 'Teatro Petruzzelli di Bari, facciata neoclassica al tramonto',
+      },
+      {
+        slug: '__draft',
+        title: 'Capitolo 06 — In arrivo',
+        duration: '— —',
+        quartiere: 'In registrazione',
+        startsAt: 'Voce confermata, dettagli a giorni',
+        cover: '',
+        alt: '',
+        draft: true,
+      },
     ]
   : [
-      { slug: 'bari-vecchia',     title: 'Old Bari — Inside the City',                    subtitle: 'Nine minutes inside the labyrinth.',         cx: 430, cy: 130, size: 'lg' },
-      { slug: 'san-nicola',       title: 'San Nicola — The Stolen Saint',                 subtitle: 'A kidnapping that built a church.',          cx: 470, cy: 105, size: 'md' },
-      { slug: 'il-meglio-di-bari',title: 'The Best of Bari — Eat Before You Think',       subtitle: 'Food first as story, then recipe.',          cx: 408, cy: 165, size: 'md' },
-      { slug: 'porto-bari',       title: 'Port of Bari — Where It All Happened',          subtitle: 'The Adriatic that changed Italy.',           cx: 640, cy: 165, size: 'md' },
-      { slug: 'tre-teatri',       title: 'The Three Theatres — Fire, Music, Bourgeoisie', subtitle: 'Modern Bari burned and started over.',       cx: 440, cy: 290, size: 'md' },
-      { slug: '__draft',          title: 'Chapter 06 — Coming',                           subtitle: 'Voice confirmed, recording in progress.',    cx: 470, cy: 380, size: 'sm', draft: true },
+      {
+        slug: 'bari-vecchia',
+        title: 'Old Bari — Inside the City',
+        duration: '9 min',
+        quartiere: 'Old town',
+        startsAt: 'Strada delle Crociate',
+        cover: '/images/covers/bari-vecchia.jpg',
+        alt: 'Old Bari alley with ancient Roman columns and historic buildings',
+      },
+      {
+        slug: 'san-nicola',
+        title: 'San Nicola — The Stolen Saint',
+        duration: '7 min',
+        quartiere: 'Old town',
+        startsAt: 'Basilica di San Nicola',
+        cover: '/images/covers/san-nicola.jpg',
+        alt: 'Old Bari alley framed by a feast luminaria arch',
+      },
+      {
+        slug: 'il-meglio-di-bari',
+        title: 'The Best of Bari — Eat Before You Think',
+        duration: '8 min',
+        quartiere: 'Old town',
+        startsAt: 'Strada Arco Basso',
+        cover: '/images/covers/il-meglio-di-bari.jpg',
+        alt: 'The Orecchiette Street in Old Bari, women shaping pasta on wooden tables, hats hanging between alleys',
+      },
+      {
+        slug: 'porto-bari',
+        title: 'Port of Bari — Where It All Happened',
+        duration: '8 min',
+        quartiere: 'Lungomare',
+        startsAt: 'Molo San Nicola',
+        cover: '/images/covers/porto-bari.jpg',
+        alt: 'Aerial view of Bari at sunset, lungomare and tourist marina visible',
+      },
+      {
+        slug: 'tre-teatri',
+        title: 'The Three Theatres — Fire, Music, Bourgeoisie',
+        duration: '10 min',
+        quartiere: 'Murat',
+        startsAt: 'Teatro Petruzzelli',
+        cover: '/images/covers/tre-teatri.jpg',
+        alt: 'Petruzzelli Theatre of Bari, neoclassical facade at dusk',
+      },
+      {
+        slug: '__draft',
+        title: 'Chapter 06 — Coming',
+        duration: '— —',
+        quartiere: 'In recording',
+        startsAt: 'Voice confirmed, details soon',
+        cover: '',
+        alt: '',
+        draft: true,
+      },
     ];
 
 const guidePathPrefix = lang === 'it' ? '/guide/' : '/en/guide/';
+const startsLabel = lang === 'it' ? 'Parte da' : 'Starts at';
+const comingLabel = lang === 'it' ? 'In arrivo' : 'Coming';
 ---
-<section class="map-section bg-surface">
+<section class="places-section bg-surface">
   <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
 
     <!-- Section header -->
-    <div class="map-header max-w-[60ch] mb-2xl">
+    <div class="places-header max-w-[60ch] mb-2xl lg:mb-3xl">
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
           {eyebrow}
         </span>
       </div>
-      <h2 class="font-display text-ink leading-[1.1] tracking-[-0.014em] mb-md text-[clamp(1.7rem,3.6vw,2.5rem)] font-light">
-        {heading}
+      <h2 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(1.9rem,4.4vw,3rem)]">
+        <span class="font-light">{heading1}</span>
+        <em class="block font-normal italic text-accent mt-2xs text-[clamp(1.7rem,3.8vw,2.6rem)]">
+          {heading2}
+        </em>
       </h2>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
         {intro}
       </p>
     </div>
 
-    <!-- Map plate -->
-    <figure class="map-figure m-0">
-      <div class="map-frame relative bg-surface-elev p-[6px] border border-border">
-        <svg
-          class="bari-map"
-          viewBox="0 0 800 500"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-labelledby="bari-map-title bari-map-desc"
-        >
-          <title id="bari-map-title">{lang === 'it' ? 'Pianta stilizzata di Bari centro' : 'Stylized plan of central Bari'}</title>
-          <desc id="bari-map-desc">{lang === 'it' ? 'Mappa illustrata della Bari storica con sei marcatori che indicano le guide narrative Localis.' : 'Illustrated map of historic Bari with six markers indicating the Localis narrative guides.'}</desc>
-
-          <!-- Sea hatching pattern -->
-          <defs>
-            <pattern id="sea-hatch" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="14" x2="14" y2="0" stroke="oklch(46% 0.085 240)" stroke-width="0.5" opacity="0.18" />
-            </pattern>
-            <pattern id="grid-murat" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
-              <path d="M 22 0 L 0 0 0 22" fill="none" stroke="oklch(20% 0.025 240)" stroke-width="0.4" opacity="0.32" />
-            </pattern>
-          </defs>
-
-          <!-- Background sea (whole canvas) -->
-          <rect x="0" y="0" width="800" height="500" fill="url(#sea-hatch)" />
-
-          <!-- Land masses (parchment fill) -->
-          <!-- Bari Vecchia peninsula (top center) -->
-          <path
-            d="M 280 215 Q 282 110 360 65 Q 460 35 555 65 Q 600 90 600 130 Q 605 175 580 210 Q 560 220 540 215 L 280 215 Z"
-            fill="var(--color-surface)"
-            stroke="var(--color-ink)"
-            stroke-width="1.2"
-            stroke-linejoin="round"
-          />
-
-          <!-- Murat district (gridded rectangle) -->
-          <path
-            d="M 280 215 L 600 215 L 615 415 L 250 415 Z"
-            fill="var(--color-surface)"
-            stroke="var(--color-ink)"
-            stroke-width="1.2"
-          />
-          <path
-            d="M 280 215 L 600 215 L 615 415 L 250 415 Z"
-            fill="url(#grid-murat)"
-            stroke="none"
-          />
-
-          <!-- Land south of Murat (suggesting more city) -->
-          <path
-            d="M 250 415 L 615 415 L 640 470 L 230 470 Z"
-            fill="var(--color-surface-elev)"
-            stroke="var(--color-ink)"
-            stroke-width="0.8"
-            opacity="0.6"
-          />
-
-          <!-- Porto / mole — eastern jetty -->
-          <path
-            d="M 600 130 Q 660 130 700 160 Q 720 175 715 200 Q 700 215 670 218 L 600 215"
-            fill="var(--color-surface)"
-            stroke="var(--color-ink)"
-            stroke-width="1"
-            stroke-linejoin="round"
-          />
-          <!-- Inner harbor curve (decorative) -->
-          <path
-            d="M 605 145 Q 645 150 680 175 Q 695 188 690 198"
-            fill="none"
-            stroke="var(--color-ink)"
-            stroke-width="0.6"
-            stroke-dasharray="2 3"
-            opacity="0.5"
-          />
-
-          <!-- Lungomare line — coast hairline -->
-          <path
-            d="M 280 215 L 600 215"
-            fill="none"
-            stroke="var(--color-ink)"
-            stroke-width="1.5"
-          />
-
-          <!-- Compass rose -->
-          <g transform="translate(720, 60)" opacity="0.75">
-            <circle cx="0" cy="0" r="22" fill="none" stroke="var(--color-ink)" stroke-width="0.6" />
-            <path d="M 0 -18 L 4 0 L 0 18 L -4 0 Z" fill="var(--color-ink)" opacity="0.7" />
-            <path d="M -18 0 L 0 4 L 18 0 L 0 -4 Z" fill="none" stroke="var(--color-ink)" stroke-width="0.4" />
-            <text x="0" y="-26" text-anchor="middle" font-family="var(--font-display)" font-style="italic" font-weight="300" font-size="11" fill="var(--color-ink)">N</text>
-          </g>
-
-          <!-- Castello Svevo (icon, SW corner of Bari Vecchia) -->
-          <g transform="translate(290, 200)" aria-hidden="true">
-            <rect x="-7" y="-6" width="14" height="10" fill="none" stroke="var(--color-ink)" stroke-width="0.8"/>
-            <line x1="-7" y1="-6" x2="-7" y2="-9" stroke="var(--color-ink)" stroke-width="0.8"/>
-            <line x1="-3" y1="-6" x2="-3" y2="-9" stroke="var(--color-ink)" stroke-width="0.8"/>
-            <line x1="3" y1="-6" x2="3" y2="-9" stroke="var(--color-ink)" stroke-width="0.8"/>
-            <line x1="7" y1="-6" x2="7" y2="-9" stroke="var(--color-ink)" stroke-width="0.8"/>
-          </g>
-
-          <!-- Cattedrale di San Sabino (small cross icon, central peninsula) -->
-          <g transform="translate(420, 145)" aria-hidden="true" opacity="0.55">
-            <line x1="0" y1="-6" x2="0" y2="4" stroke="var(--color-ink)" stroke-width="0.8"/>
-            <line x1="-3" y1="-2" x2="3" y2="-2" stroke="var(--color-ink)" stroke-width="0.8"/>
-          </g>
-
-          <!-- Tre Teatri satellite marks (Petruzzelli main + Margherita + Piccinni) -->
-          <g aria-hidden="true" opacity="0.45">
-            <!-- Margherita on lungomare -->
-            <circle cx="490" cy="215" r="2" fill="none" stroke="var(--color-ink)" stroke-width="0.6"/>
-            <line x1="490" y1="217" x2="440" y2="288" stroke="var(--color-ink)" stroke-width="0.4" stroke-dasharray="2 3"/>
-            <!-- Piccinni north Murat -->
-            <circle cx="395" cy="245" r="2" fill="none" stroke="var(--color-ink)" stroke-width="0.6"/>
-            <line x1="397" y1="245" x2="438" y2="288" stroke="var(--color-ink)" stroke-width="0.4" stroke-dasharray="2 3"/>
-          </g>
-
-          <!-- District labels -->
-          <text x="430" y="155" font-family="var(--font-display)" font-style="italic" font-weight="300" font-size="13" fill="var(--color-ink-subtle)" text-anchor="middle" opacity="0.85" pointer-events="none">{legendOldTown}</text>
-          <text x="425" y="320" font-family="var(--font-display)" font-style="italic" font-weight="300" font-size="13" fill="var(--color-ink-subtle)" text-anchor="middle" opacity="0.7" pointer-events="none">{legendMurat}</text>
-          <text x="120" y="80" font-family="var(--font-display)" font-style="italic" font-weight="300" font-size="14" fill="var(--color-link)" text-anchor="middle" opacity="0.55" pointer-events="none">{legendSeaLabel}</text>
-
-          <!-- Markers — interactive group -->
-          <g class="markers">
-            {markers.map((m) => {
-              const radius = m.size === 'lg' ? 14 : m.size === 'md' ? 10 : 9;
-              const isDraft = m.draft === true;
-              const linkHref = isDraft ? '#guide' : `${guidePathPrefix}${m.slug}`;
-              const linkLabel = `${m.title} — ${m.subtitle}`;
-              return (
-                <a
-                  href={linkHref}
-                  class={`marker ${isDraft ? 'is-draft' : ''}`}
-                  data-slug={m.slug}
-                  data-cx={m.cx}
-                  data-cy={m.cy}
-                  data-radius={radius}
-                  aria-label={linkLabel}
-                >
-                  <!-- Outer ring (animates on hover) -->
-                  <circle
-                    cx={m.cx}
-                    cy={m.cy}
-                    r={radius + 6}
-                    class="marker-ring"
-                    fill="none"
-                    stroke="var(--color-accent)"
-                    stroke-width="1"
-                  />
-                  <!-- Inner pin -->
-                  <circle
-                    cx={m.cx}
-                    cy={m.cy}
-                    r={radius}
-                    class="marker-dot"
-                    fill="var(--color-surface)"
-                    stroke="var(--color-ink)"
-                    stroke-width="1.2"
-                  />
-                  <!-- Center accent dot -->
-                  <circle
-                    cx={m.cx}
-                    cy={m.cy}
-                    r={radius / 3}
-                    class="marker-core"
-                    fill={isDraft ? 'var(--color-ink-subtle)' : 'var(--color-accent)'}
-                  />
-                  <!-- Larger transparent hit area for touch -->
-                  <circle
-                    cx={m.cx}
-                    cy={m.cy}
-                    r={Math.max(radius + 16, 22)}
-                    fill="transparent"
-                    class="marker-hit"
-                  />
-                </a>
-              );
-            })}
-          </g>
-
-          <!-- Tooltip layer (one element, repositioned via JS) -->
-          <g class="map-tooltip" aria-hidden="true">
-            <rect class="tooltip-bg" rx="2" ry="2" fill="oklch(15% 0.012 240 / 0.94)"/>
-            <text class="tooltip-title" font-family="var(--font-display)" font-weight="400" font-size="13" fill="var(--color-surface)"></text>
-            <text class="tooltip-sub" font-family="var(--font-body)" font-size="10" font-weight="500" fill="oklch(85% 0.012 75)" letter-spacing="0.04em"></text>
-          </g>
-        </svg>
-
-        <!-- Plate caption -->
-      </div>
-      <figcaption class="mt-sm flex items-baseline gap-sm text-ink-subtle">
-        <span class="block w-7 h-px bg-border flex-shrink-0 mt-[10px]"></span>
-        <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[60ch]">
-          {lang === 'it'
-            ? 'Tav. VII — Centro storico di Bari, scala libera. I sei puntini segnano dove parte ogni guida.'
-            : 'Plate VII — Central Bari, free scale. The six dots mark where each guide begins.'}
-        </span>
-      </figcaption>
-    </figure>
-
-    <!-- Accessible legend / fallback navigation list (works without JS) -->
-    <ol class="map-legend list-none p-0 m-0 mt-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
-      {markers.map((m, i) => {
-        const isDraft = m.draft === true;
+    <!-- Photo grid -->
+    <ol class="places-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-lg gap-y-2xl list-none p-0 m-0">
+      {places.map((p, i) => {
         const num = String(i + 1).padStart(2, '0');
+        const isDraft = p.draft === true;
+        const linkHref = isDraft ? '#guide' : `${guidePathPrefix}${p.slug}`;
         return (
-          <li class="legend-cell">
+          <li class="place-cell" style={`--idx:${i}`}>
             <a
-              href={isDraft ? '#guide' : `${guidePathPrefix}${m.slug}`}
-              class="legend-link group"
-              data-slug={m.slug}
+              href={linkHref}
+              class={`place-card ${isDraft ? 'is-draft' : ''}`}
+              aria-label={isDraft ? `${comingLabel}: ${p.title}` : `${p.title} — ${startsLabel} ${p.startsAt}`}
             >
-              <span class="legend-num">
-                {num}
-              </span>
-              <span class="legend-text">
-                <span class="legend-title">{m.title}</span>
-                <span class="legend-sub">{isDraft ? comingSoon + ' · ' + m.subtitle : m.subtitle}</span>
-              </span>
+              <!-- Photo / placeholder -->
+              <figure class="place-photo m-0">
+                {!isDraft && p.cover ? (
+                  <img
+                    src={p.cover}
+                    alt={p.alt}
+                    class="place-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <div class="place-empty" aria-hidden="true">
+                    <span class="place-empty-mark">06</span>
+                    <span class="place-empty-label">{comingLabel}</span>
+                  </div>
+                )}
+                <!-- Number stamp -->
+                <span class="place-num" aria-hidden="true">{num}</span>
+                <!-- Bottom scrim with eyebrow -->
+                {!isDraft && (
+                  <span class="place-scrim" aria-hidden="true">
+                    <span class="place-quartiere">{p.quartiere}</span>
+                    <span class="place-duration">{p.duration}</span>
+                  </span>
+                )}
+              </figure>
+
+              <!-- Meta below photo -->
+              <div class="place-meta">
+                <h3 class="place-title font-display text-ink leading-[1.2] m-0">
+                  <span class="font-light">{p.title}</span>
+                </h3>
+                <p class="place-starts m-0">
+                  <span class="place-starts-label">{startsLabel}</span>
+                  <em class="place-starts-where">{p.startsAt}</em>
+                </p>
+              </div>
             </a>
           </li>
         );
@@ -295,175 +226,195 @@ const guidePathPrefix = lang === 'it' ? '/guide/' : '/en/guide/';
 </section>
 
 <style>
-  .map-figure {
+  .place-cell {
     opacity: 0;
     transform: translateY(14px);
-    animation: mapIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    animation: placeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 80ms + 100ms);
   }
 
-  .map-frame {
-    overflow: hidden;
-  }
-
-  .bari-map {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 8 / 5;
-    color: var(--color-ink);
-    background: var(--color-surface-deep);
-  }
-
-  /* Marker base state */
-  .marker {
-    cursor: pointer;
-    outline: none;
-  }
-  .marker:focus-visible .marker-dot,
-  .marker:focus-visible .marker-ring {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
-  }
-
-  .marker-ring {
-    transform-origin: var(--cx, 50%) var(--cy, 50%);
-    transform-box: fill-box;
-    opacity: 0;
-    transition: opacity 200ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .marker-dot {
-    transition:
-      fill 200ms cubic-bezier(0.22, 1, 0.36, 1),
-      stroke 200ms cubic-bezier(0.22, 1, 0.36, 1),
-      transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform-origin: center;
-    transform-box: fill-box;
-  }
-
-  .marker-core {
-    transition: r 220ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  /* Hover / focus active */
-  .marker:hover .marker-dot,
-  .marker:focus-visible .marker-dot {
-    fill: var(--color-ink);
-    stroke: var(--color-accent);
-    stroke-width: 1.6;
-  }
-  .marker:hover .marker-core,
-  .marker:focus-visible .marker-core {
-    fill: var(--color-surface);
-  }
-  .marker:hover .marker-ring,
-  .marker:focus-visible .marker-ring {
-    opacity: 1;
-    animation: ringPulse 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-  }
-
-  /* Draft (in arrivo) state */
-  .marker.is-draft .marker-dot {
-    stroke-dasharray: 3 3;
-    opacity: 0.7;
-  }
-  .marker.is-draft .marker-core {
-    opacity: 0.55;
-  }
-
-  @keyframes ringPulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.18); opacity: 0.45; }
-  }
-
-  /* Tooltip */
-  .map-tooltip {
-    opacity: 0;
-    transition: opacity 180ms cubic-bezier(0.22, 1, 0.36, 1);
-    pointer-events: none;
-  }
-  .map-tooltip.is-visible {
-    opacity: 1;
-  }
-
-  /* Legend (always visible — accessible fallback + complement) */
-  .legend-cell {
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--spacing-sm);
-  }
-
-  .legend-link {
+  .place-card {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     gap: var(--spacing-md);
     text-decoration: none;
     color: inherit;
-    transition: background 180ms ease;
-    padding: var(--spacing-sm) 0;
-  }
-  .legend-link:hover {
-    background: linear-gradient(to right, var(--color-surface-elev), transparent 60%);
+    border-top: 1px solid var(--color-ink);
+    padding-top: var(--spacing-md);
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .legend-num {
+  .place-card.is-draft {
+    border-top-style: dashed;
+    border-top-color: var(--color-border);
+  }
+
+  .place-card:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Photo */
+  .place-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: var(--color-surface-elev);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .place-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.94) contrast(1.04);
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .place-card:hover .place-img,
+  .place-card:focus-visible .place-img {
+    transform: scale(1.03);
+  }
+
+  /* Empty placeholder for the 6th tile */
+  .place-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background:
+      radial-gradient(ellipse at 50% 40%, oklch(78% 0.012 75) 0%, oklch(78% 0.012 75) 28%, transparent 48%),
+      var(--color-surface-elev);
+  }
+  .place-empty-mark {
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 300;
-    font-size: 1.6rem;
-    color: var(--color-accent);
+    font-size: clamp(4rem, 9vw, 6rem);
     line-height: 1;
-    flex-shrink: 0;
-    width: 2rem;
+    color: var(--color-accent);
+    letter-spacing: -0.04em;
+    user-select: none;
+    opacity: 0.55;
+  }
+  .place-empty-label {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
   }
 
-  .legend-text {
+  /* Number stamp top-left of photo */
+  .place-num {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.4vw, 3.2rem);
+    line-height: 0.85;
+    color: var(--color-surface);
+    letter-spacing: -0.04em;
+    text-shadow: 0 1px 8px oklch(15% 0.012 240 / 0.55);
+    pointer-events: none;
+    user-select: none;
+  }
+  .is-draft .place-num {
+    display: none;
+  }
+
+  /* Bottom scrim with quartiere + duration */
+  .place-scrim {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: linear-gradient(to top, oklch(15% 0.012 240 / 0.78), transparent 100%);
+    color: var(--color-surface);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+  .place-quartiere {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .place-duration {
+    flex-shrink: 0;
+    color: var(--color-accent-soft);
+  }
+
+  /* Meta */
+  .place-meta {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    min-width: 0;
+    gap: var(--spacing-xs);
   }
-
-  .legend-title {
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.25;
-    color: var(--color-ink);
+  .place-title {
+    font-size: clamp(1.1rem, 2.4vw, 1.35rem);
   }
-
-  .legend-sub {
+  .place-starts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--spacing-xs);
     font-family: var(--font-body);
     font-size: 0.8125rem;
-    line-height: 1.35;
     color: var(--color-ink-muted);
+    line-height: 1.4;
+  }
+  .place-starts-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+  }
+  .place-starts-where {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--color-accent);
   }
 
-  /* Cross-highlight: when a legend entry is hovered/focused, also light up
-     the corresponding marker on the map */
-  [data-slug-active="true"] .marker-dot,
-  .marker[data-active="true"] .marker-dot {
-    fill: var(--color-ink);
-    stroke: var(--color-accent);
-    stroke-width: 1.6;
-  }
-  [data-slug-active="true"] .marker-core,
-  .marker[data-active="true"] .marker-core {
-    fill: var(--color-surface);
-  }
-  [data-slug-active="true"] .marker-ring,
-  .marker[data-active="true"] .marker-ring {
-    opacity: 1;
+  /* Draft cell tones down meta */
+  .is-draft .place-title,
+  .is-draft .place-starts-where {
+    color: var(--color-ink-subtle);
   }
 
-  @keyframes mapIn {
+  .place-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  @keyframes placeIn {
     to { opacity: 1; transform: translateY(0); }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .map-figure,
-    .marker-ring,
-    .marker-dot,
-    .marker-core {
+    .place-cell,
+    .place-card,
+    .place-img {
       animation: none !important;
       transition: none !important;
       opacity: 1;
@@ -471,123 +422,3 @@ const guidePathPrefix = lang === 'it' ? '/guide/' : '/en/guide/';
     }
   }
 </style>
-
-<script>
-  /**
-   * Localis BariMap — interactivity:
-   * - Hover/focus on a marker → tooltip shows title + subtitle
-   * - Hover/focus on a legend entry → corresponding marker highlights
-   * Works without JS (markers are <a> with aria-label, legend is plain list).
-   */
-  (() => {
-    const svg = document.querySelector<SVGSVGElement>('svg.bari-map');
-    if (!svg) return;
-
-    const tooltip = svg.querySelector<SVGGElement>('.map-tooltip');
-    const tooltipBg = svg.querySelector<SVGRectElement>('.tooltip-bg');
-    const tooltipTitle = svg.querySelector<SVGTextElement>('.tooltip-title');
-    const tooltipSub = svg.querySelector<SVGTextElement>('.tooltip-sub');
-    const markers = svg.querySelectorAll<SVGAElement>('.marker');
-    const legendLinks = document.querySelectorAll<HTMLAnchorElement>('.legend-link');
-
-    if (!tooltip || !tooltipBg || !tooltipTitle || !tooltipSub) return;
-
-    function showTooltip(marker: SVGAElement) {
-      const cx = parseFloat(marker.dataset.cx ?? '0');
-      const cy = parseFloat(marker.dataset.cy ?? '0');
-      const ariaLabel = marker.getAttribute('aria-label') ?? '';
-      const [titleRaw, subRaw] = ariaLabel.split(' — ');
-      const title = (titleRaw ?? '').trim();
-      const sub = (subRaw ?? '').trim();
-
-      tooltipTitle!.textContent = title;
-      tooltipSub!.textContent = sub;
-
-      // Position tooltip above marker, clamp inside viewBox
-      const padX = 10;
-      const padY = 8;
-      const titleY = cy - 32;
-      const subY = cy - 18;
-
-      tooltipTitle!.setAttribute('x', String(cx));
-      tooltipTitle!.setAttribute('y', String(titleY));
-      tooltipTitle!.setAttribute('text-anchor', 'middle');
-
-      tooltipSub!.setAttribute('x', String(cx));
-      tooltipSub!.setAttribute('y', String(subY));
-      tooltipSub!.setAttribute('text-anchor', 'middle');
-
-      // Compute bbox for background after text is set (next frame)
-      requestAnimationFrame(() => {
-        try {
-          const bbT = tooltipTitle!.getBBox();
-          const bbS = tooltipSub!.getBBox();
-          const left = Math.min(bbT.x, bbS.x) - padX;
-          const right = Math.max(bbT.x + bbT.width, bbS.x + bbS.width) + padX;
-          const top = bbT.y - padY;
-          const bottom = bbS.y + bbS.height + padY;
-
-          tooltipBg!.setAttribute('x', String(left));
-          tooltipBg!.setAttribute('y', String(top));
-          tooltipBg!.setAttribute('width', String(right - left));
-          tooltipBg!.setAttribute('height', String(bottom - top));
-
-          tooltip!.classList.add('is-visible');
-        } catch (_e) {
-          // SVG getBBox can throw if element not rendered; skip silently
-        }
-      });
-    }
-
-    function hideTooltip() {
-      tooltip!.classList.remove('is-visible');
-    }
-
-    function highlightLegendForSlug(slug: string | undefined) {
-      legendLinks.forEach((el) => {
-        if (slug && el.dataset.slug === slug) {
-          el.setAttribute('data-slug-active', 'true');
-        } else {
-          el.removeAttribute('data-slug-active');
-        }
-      });
-    }
-
-    function highlightMarkerForSlug(slug: string | undefined) {
-      markers.forEach((el) => {
-        if (slug && el.dataset.slug === slug) {
-          el.setAttribute('data-active', 'true');
-        } else {
-          el.removeAttribute('data-active');
-        }
-      });
-    }
-
-    markers.forEach((marker) => {
-      marker.addEventListener('mouseenter', () => {
-        showTooltip(marker);
-        highlightLegendForSlug(marker.dataset.slug);
-      });
-      marker.addEventListener('mouseleave', () => {
-        hideTooltip();
-        highlightLegendForSlug(undefined);
-      });
-      marker.addEventListener('focus', () => {
-        showTooltip(marker);
-        highlightLegendForSlug(marker.dataset.slug);
-      });
-      marker.addEventListener('blur', () => {
-        hideTooltip();
-        highlightLegendForSlug(undefined);
-      });
-    });
-
-    legendLinks.forEach((link) => {
-      const slug = link.dataset.slug;
-      link.addEventListener('mouseenter', () => highlightMarkerForSlug(slug));
-      link.addEventListener('mouseleave', () => highlightMarkerForSlug(undefined));
-      link.addEventListener('focus', () => highlightMarkerForSlug(slug));
-      link.addEventListener('blur', () => highlightMarkerForSlug(undefined));
-    });
-  })();
-</script>

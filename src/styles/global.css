@@ -210,23 +210,18 @@
   }
 }
 
-/* === Dark mode (opt-in via prefers-color-scheme) ===
- * Per spec §5: light mode is design default; dark mode is generated via OKLCH
- * lightness inversion, not just naive color flip. Optional for night reading.
+/* === Theme: light only ===
+ * Per spec §5 + product decision 2026-05-04: Localis ships in a single
+ * light theme — magazine paper feel + outdoor leg-test (sun glare on dark
+ * mode hurts readability) + premium restraint. The auto dark inversion
+ * was removed because the editorial palette doesn't translate cleanly to
+ * dark mode and several backdrops (manifesto photo overlay, map
+ * illustrations) lose their meaning. Force the light palette regardless
+ * of the user agent's prefers-color-scheme.
  */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-surface: oklch(18% 0.020 240);
-    --color-surface-elev: oklch(22% 0.022 240);
-    --color-surface-deep: oklch(15% 0.018 240);
-    --color-ink: oklch(94% 0.012 75);
-    --color-ink-muted: oklch(70% 0.012 75);
-    --color-ink-subtle: oklch(60% 0.010 75);
-    --color-border: oklch(28% 0.018 240);
-    --color-accent: oklch(68% 0.14 45);
-    --color-accent-soft: oklch(35% 0.08 45);
-    --color-link: oklch(70% 0.10 220);
-    --color-link-pressed: oklch(78% 0.10 220);
+    color-scheme: light;
   }
 }
 
