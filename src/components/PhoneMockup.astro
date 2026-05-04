@@ -1,0 +1,472 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+  /**
+   * Optional cover image rendered inside the phone screen.
+   * Defaults to /images/covers/bari-vecchia.jpg.
+   */
+  coverSrc?: string;
+  coverAlt?: string;
+  /**
+   * If provided, overrides the default Bari Vecchia chapter card.
+   */
+  chapterEyebrow?: string;
+  chapterTitle?: string;
+  chapterItalic?: string;
+  /**
+   * Subtle 0.5deg rotation on lg viewports for editorial flourish.
+   * Default false (perfectly upright). Set true on hero only.
+   */
+  tilt?: boolean;
+  class?: string;
+}
+
+const {
+  lang,
+  coverSrc = '/images/covers/bari-vecchia.jpg',
+  coverAlt,
+  chapterEyebrow,
+  chapterTitle,
+  chapterItalic,
+  tilt = false,
+  class: className = '',
+} = Astro.props;
+
+const fallbackEyebrow = lang === 'it' ? 'Cap. 03 · Bari Vecchia' : 'Ch. 03 · Bari Vecchia';
+const fallbackTitle = lang === 'it' ? 'Strada' : 'A street';
+const fallbackItalic = lang === 'it' ? 'delle Crociate' : 'of the Crusades';
+const fallbackCoverAlt = lang === 'it'
+  ? 'Vicolo del Borgo Antico di Bari, pietra calcarea consumata'
+  : 'Alley in Bari old town, weathered limestone walls';
+
+const eyebrow = chapterEyebrow ?? fallbackEyebrow;
+const title = chapterTitle ?? fallbackTitle;
+const italic = chapterItalic ?? fallbackItalic;
+const altText = coverAlt ?? fallbackCoverAlt;
+
+const nowLabel = lang === 'it' ? 'In ascolto' : 'Now playing';
+const tracklistLabel = lang === 'it' ? 'Capitolo successivo' : 'Next chapter';
+const nextChapter = lang === 'it' ? '04 · Cattedrale di San Sabino' : '04 · San Sabino Cathedral';
+
+// Static example time — purely decorative inside the device
+const elapsedTime = '2:14';
+const totalTime = '8:52';
+const progressPct = 26;
+---
+<div class={`phone-mockup ${tilt ? 'phone-tilt' : ''} ${className}`} aria-label="Localis su smartphone — anteprima interfaccia" role="img">
+  <!-- Outer frame: matte black device silhouette, no glow, no shadow -->
+  <div class="phone-frame">
+    <!-- Side button hints (subtle) -->
+    <span class="phone-btn phone-btn-volume-up" aria-hidden="true"></span>
+    <span class="phone-btn phone-btn-volume-down" aria-hidden="true"></span>
+    <span class="phone-btn phone-btn-power" aria-hidden="true"></span>
+
+    <!-- Inner bezel -->
+    <div class="phone-bezel">
+      <!-- Dynamic island -->
+      <span class="phone-island" aria-hidden="true"></span>
+
+      <!-- Screen -->
+      <div class="phone-screen">
+        <!-- Status bar -->
+        <div class="status-bar">
+          <span class="status-time">9:41</span>
+          <span class="status-icons" aria-hidden="true">
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="currentColor"><circle cx="2" cy="8" r="1.5"/><circle cx="6" cy="6" r="1.5"/><circle cx="10" cy="4" r="1.5"/><circle cx="13" cy="2" r="1"/></svg>
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5C2.5 3 4.5 2 6.5 2s4 1 5.5 2.5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><path d="M3 6.5C4 5.5 5.2 5 6.5 5s2.5.5 3.5 1.5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="6.5" cy="8" r="0.8" fill="currentColor"/></svg>
+            <span class="status-battery"><span class="status-battery-fill"></span></span>
+          </span>
+        </div>
+
+        <!-- App header — minimal Localis brand -->
+        <div class="app-header">
+          <span class="app-logo">Localis</span>
+          <span class="app-edition">Edizione · Bari</span>
+        </div>
+
+        <!-- Cover photo -->
+        <figure class="cover-figure">
+          <img src={coverSrc} alt={altText} class="cover-img" loading="eager" decoding="async" />
+          <span class="cover-eyebrow">{eyebrow}</span>
+        </figure>
+
+        <!-- Chapter title — Spectral italic flourish -->
+        <div class="chapter-title">
+          <span class="now-label">{nowLabel}</span>
+          <h3 class="chapter-h3">
+            <span class="chapter-roman">{title}</span>
+            <em class="chapter-italic">{italic}</em>
+          </h3>
+        </div>
+
+        <!-- Player controls -->
+        <div class="player">
+          <div class="progress" role="progressbar" aria-valuenow={progressPct} aria-valuemin="0" aria-valuemax="100" aria-label="Avanzamento capitolo">
+            <span class="progress-fill" style={`width: ${progressPct}%`}></span>
+          </div>
+          <div class="time-row">
+            <span class="time-elapsed">{elapsedTime}</span>
+            <span class="time-total">{totalTime}</span>
+          </div>
+          <div class="controls">
+            <button type="button" class="ctrl ctrl-back" aria-label="Indietro 15s" tabindex="-1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5"/><path d="M18 18V8a4 4 0 0 0-4-4H6"/></svg>
+            </button>
+            <button type="button" class="ctrl ctrl-play" aria-label="Pausa" tabindex="-1">
+              <svg width="14" height="16" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
+                <path d="M2 0h3v14H2zM7 0h3v14H7z" />
+              </svg>
+            </button>
+            <button type="button" class="ctrl ctrl-fwd" aria-label="Avanti 30s" tabindex="-1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5"/><path d="M6 18V8a4 4 0 0 1 4-4h8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Up next peek -->
+        <div class="upnext">
+          <span class="upnext-label">{tracklistLabel}</span>
+          <span class="upnext-title">{nextChapter}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .phone-mockup {
+    --device-w: clamp(220px, 30vw, 300px);
+    --device-h: calc(var(--device-w) * 2.165);
+    --device-radius: calc(var(--device-w) * 0.13);
+    --bezel-radius: calc(var(--device-w) * 0.10);
+    --bezel-gap: calc(var(--device-w) * 0.022);
+
+    position: relative;
+    width: var(--device-w);
+    height: var(--device-h);
+    margin: 0 auto;
+    isolation: isolate;
+  }
+
+  .phone-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: oklch(15% 0.012 240);
+    border-radius: var(--device-radius);
+    border: 1px solid oklch(20% 0.025 240 / 0.18);
+    padding: var(--bezel-gap);
+  }
+
+  /* Side buttons — subtle hints of physicality */
+  .phone-btn {
+    position: absolute;
+    background: oklch(12% 0.010 240);
+    border-radius: 1px;
+  }
+  .phone-btn-volume-up,
+  .phone-btn-volume-down {
+    left: -1.5px;
+    width: 2px;
+  }
+  .phone-btn-volume-up {
+    top: 18%;
+    height: 7%;
+  }
+  .phone-btn-volume-down {
+    top: 28%;
+    height: 7%;
+  }
+  .phone-btn-power {
+    right: -1.5px;
+    top: 22%;
+    width: 2px;
+    height: 9%;
+  }
+
+  .phone-bezel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--color-surface);
+    border-radius: var(--bezel-radius);
+    overflow: hidden;
+  }
+
+  .phone-island {
+    position: absolute;
+    top: calc(var(--device-w) * 0.024);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(var(--device-w) * 0.30);
+    height: calc(var(--device-w) * 0.075);
+    background: oklch(15% 0.012 240);
+    border-radius: 999px;
+    z-index: 2;
+  }
+
+  .phone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: calc(var(--device-w) * 0.13) calc(var(--device-w) * 0.06)
+             calc(var(--device-w) * 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--device-w) * 0.025);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  /* Status bar */
+  .status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-ink);
+    font-size: calc(var(--device-w) * 0.038);
+    font-weight: 600;
+    padding: 0 calc(var(--device-w) * 0.005);
+    margin-bottom: calc(var(--device-w) * 0.01);
+  }
+  .status-time {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.01em;
+  }
+  .status-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--device-w) * 0.018);
+  }
+  .status-battery {
+    position: relative;
+    width: calc(var(--device-w) * 0.07);
+    height: calc(var(--device-w) * 0.034);
+    border: 1px solid var(--color-ink);
+    border-radius: 2px;
+    padding: 1px;
+  }
+  .status-battery::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 30%;
+    height: 40%;
+    width: 1.5px;
+    background: var(--color-ink);
+    border-radius: 0 1px 1px 0;
+  }
+  .status-battery-fill {
+    display: block;
+    height: 100%;
+    width: 78%;
+    background: var(--color-ink);
+    border-radius: 1px;
+  }
+
+  /* App header */
+  .app-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: calc(var(--device-w) * 0.018);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .app-logo {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: calc(var(--device-w) * 0.06);
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+  }
+  .app-edition {
+    font-family: var(--font-body);
+    font-size: calc(var(--device-w) * 0.026);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-ink-subtle);
+  }
+
+  /* Cover */
+  .cover-figure {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    background: var(--color-surface-elev);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+  .cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.92) contrast(1.02);
+  }
+  .cover-eyebrow {
+    position: absolute;
+    bottom: calc(var(--device-w) * 0.022);
+    left: calc(var(--device-w) * 0.022);
+    font-family: var(--font-body);
+    font-size: calc(var(--device-w) * 0.024);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-surface);
+    background: oklch(15% 0.012 240 / 0.82);
+    padding: calc(var(--device-w) * 0.014) calc(var(--device-w) * 0.022);
+  }
+
+  /* Chapter title */
+  .chapter-title {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--device-w) * 0.008);
+    margin-top: calc(var(--device-w) * 0.012);
+  }
+  .now-label {
+    font-family: var(--font-body);
+    font-size: calc(var(--device-w) * 0.022);
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+  .chapter-h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: calc(var(--device-w) * 0.072);
+    line-height: 0.95;
+    color: var(--color-ink);
+    margin: 0;
+  }
+  .chapter-roman {
+    display: block;
+    font-weight: 300;
+  }
+  .chapter-italic {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-accent);
+    margin-top: calc(var(--device-w) * 0.005);
+  }
+
+  /* Player */
+  .player {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--device-w) * 0.018);
+  }
+  .progress {
+    height: calc(var(--device-w) * 0.012);
+    background: var(--color-border);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    display: block;
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: 999px;
+  }
+  .time-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-body);
+    font-size: calc(var(--device-w) * 0.024);
+    color: var(--color-ink-subtle);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--device-w) * 0.06);
+  }
+  .ctrl {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: var(--color-ink);
+    cursor: default;
+    pointer-events: none;
+  }
+  .ctrl-play {
+    width: calc(var(--device-w) * 0.18);
+    height: calc(var(--device-w) * 0.18);
+    border-radius: 999px;
+    background: var(--color-ink);
+    color: var(--color-surface);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ctrl-back svg,
+  .ctrl-fwd svg {
+    color: var(--color-ink-muted);
+  }
+
+  /* Up next peek */
+  .upnext {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--device-w) * 0.004);
+    padding-top: calc(var(--device-w) * 0.018);
+    border-top: 1px solid var(--color-border);
+  }
+  .upnext-label {
+    font-family: var(--font-body);
+    font-size: calc(var(--device-w) * 0.022);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+  }
+  .upnext-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: calc(var(--device-w) * 0.034);
+    color: var(--color-ink);
+    line-height: 1.2;
+  }
+
+  /* Editorial 0.5deg tilt — opt-in via prop */
+  @media (min-width: 1024px) {
+    .phone-tilt .phone-frame {
+      transform: rotate(-0.6deg);
+      transform-origin: center bottom;
+    }
+  }
+
+  /* Soft entrance */
+  .phone-mockup {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: phoneIn 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+  }
+
+  @keyframes phoneIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .phone-mockup {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+    .phone-tilt .phone-frame {
+      transform: none;
+    }
+  }
+</style>
