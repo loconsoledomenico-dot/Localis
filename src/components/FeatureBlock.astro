@@ -16,6 +16,11 @@ export interface Props {
   mobileAspect?: string;
   /** Subtle tilt angle in degrees applied to the image plate. Default 0. */
   tiltDeg?: number;
+  /** Optional second phone for the dual-stack layout (Komoot-style). */
+  dualPhone?: {
+    src: string;
+    alt: string;
+  };
 }
 
 const {
@@ -33,6 +38,7 @@ const {
   imageSide = 'right',
   mobileAspect = '4 / 5',
   tiltDeg = 0,
+  dualPhone,
 } = Astro.props;
 
 const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block-left';
@@ -41,23 +47,46 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
   class={`feature-block ${sideClass}`}
   style={`--mobile-aspect: ${mobileAspect}; --tilt-deg: ${tiltDeg}deg;`}
 >
-  <!-- Image column — bleeds to viewport edge on lg -->
-  <figure class="feature-image">
-    <div class="feature-image-frame">
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        class="feature-img"
-        loading="lazy"
-        decoding="async"
-      />
-      <!-- Plate number overlays bottom-outer corner -->
-      {plateNumber && (
-        <span class="feature-plate" aria-hidden="true">
-          {plateNumber}
-        </span>
-      )}
-    </div>
+  <!-- Image column -->
+  <figure class={`feature-image ${dualPhone ? 'is-dual' : ''}`}>
+    {dualPhone ? (
+      <div class="phone-stack">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          class="phone phone-back"
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          src={dualPhone.src}
+          alt={dualPhone.alt}
+          class="phone phone-front"
+          loading="lazy"
+          decoding="async"
+        />
+        {plateNumber && (
+          <span class="feature-plate phone-plate" aria-hidden="true">
+            {plateNumber}
+          </span>
+        )}
+      </div>
+    ) : (
+      <div class="feature-image-frame">
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          class="feature-img"
+          loading="lazy"
+          decoding="async"
+        />
+        {plateNumber && (
+          <span class="feature-plate" aria-hidden="true">
+            {plateNumber}
+          </span>
+        )}
+      </div>
+    )}
     {caption && (
       <figcaption class="feature-caption">
         <span class="block w-7 h-px bg-border flex-shrink-0 mt-[10px]"></span>
@@ -157,6 +186,52 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
     transform: rotate(0deg) scale(1.01);
     box-shadow: 0 2px 4px oklch(15% 0.012 240 / 0.12),
                 0 24px 48px -16px oklch(15% 0.012 240 / 0.22);
+  }
+
+  /* === Dual-phone stack (Komoot-inspired). Two PNG cutouts of a single
+   * phone, photographed in mirrored 3D perspective, layered diagonally
+   * inside a square container. No frame, no rounded corners — the phones
+   * float on the page and carry their own bezels. */
+  .feature-image.is-dual {
+    width: 100%;
+  }
+  .phone-stack {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+  .phone {
+    position: absolute;
+    height: 88%;
+    width: auto;
+    filter: drop-shadow(0 12px 28px oklch(15% 0.012 240 / 0.22));
+    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+                filter 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .phone-back {
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .phone-front {
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  /* On hover the phones drift apart slightly — quiet "open" gesture */
+  .feature-block:hover .phone-back,
+  .feature-block:focus-within .phone-back {
+    transform: translateX(-8px) translateY(4px);
+  }
+  .feature-block:hover .phone-front,
+  .feature-block:focus-within .phone-front {
+    transform: translateX(8px) translateY(-4px);
+    filter: drop-shadow(0 18px 36px oklch(15% 0.012 240 / 0.28));
+  }
+  /* Plate sits in the bottom-right corner of the dual container */
+  .phone-plate {
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
   }
   .feature-img {
     width: 100%;
