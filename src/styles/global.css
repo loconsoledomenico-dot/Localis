@@ -37,8 +37,8 @@
   /* === Typography ===
    * --font-* tokens auto-generate utilities: font-display, font-body
    */
-  --font-display: 'Spectral', Georgia, serif;
-  --font-body: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', 'Tiempos Headline', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* === Type scale (modular 1.25 ratio) ===
    * --text-* tokens auto-generate utilities: text-xs, text-base, text-4xl, etc.
