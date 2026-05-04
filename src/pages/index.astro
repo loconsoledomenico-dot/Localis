@@ -61,10 +61,10 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       'Niente musica di sottofondo. Solo voce e silenzio fra una frase e l\'altra',
       'Fonti citate · ricerca d\'archivio, non Wikipedia',
     ]}
-    imageSrc="/images/covers/bari-vecchia.jpg"
-    imageAlt="Vicolo del Borgo Antico di Bari, pietre consumate e arco normanno"
+    imageSrc="/images/covers/bari-vecchia-passeggiata.jpg"
+    imageAlt="Una donna con cappello di paglia cammina lungo un vicolo del Borgo Antico di Bari, colonne romane antiche sulla sinistra"
     plateNumber="Tav. II"
-    caption="Strada delle Crociate, Bari Vecchia. La pietra è la stessa del 1156."
+    caption="Bari Vecchia, mezzogiorno. Le colonne sono tutto ciò che resta di un cortile romano."
     ctaLabel="Ascolta il primo capitolo"
     ctaHref="#assaggio"
     imageSide="right"
@@ -82,10 +82,10 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
       'Nessun account, nessuna email obbligatoria',
       'Italiano e inglese · voci registrate da madrelingua',
     ]}
-    imageSrc="/images/covers/porto-bari.jpg"
-    imageAlt="Porto vecchio di Bari, barche e Teatro Margherita"
+    imageSrc="/images/covers/bari-lungomare-palms.jpg"
+    imageAlt="Lungomare di Bari, palme e palazzi color crema con balconi sul mare, cielo limpido di tarda mattinata"
     plateNumber="Tav. III"
-    caption="Lungomare Imperatore Augusto. Il punto da cui partono tutte le edizioni."
+    caption="Lungomare in tarda mattinata. Da qui ai vicoli del Borgo Antico sono sette minuti — l'app cammina con te."
     ctaLabel="Vedi le sei guide"
     ctaHref="#guide"
     imageSide="left"
@@ -144,9 +144,17 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
     </div>
   </section>
 
-  {/* MANIFESTO — pull-quote editoriale, parchment, ornamento tipografico */}
-  <section class="bg-surface-elev">
-    <div class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl">
+  {/* MANIFESTO — pull-quote editoriale, parchment, ornamento tipografico, foto backdrop sotto */}
+  <section class="manifesto-section bg-surface-elev relative overflow-hidden">
+    <img
+      src="/images/covers/puglia-arco-cortile.jpg"
+      alt=""
+      aria-hidden="true"
+      class="manifesto-bg"
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="relative z-10 max-w-narrow mx-auto px-md py-3xl lg:py-4xl">
       <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-2xl">
         — Manifesto —
       </p>
@@ -257,6 +265,32 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   }
   @keyframes manifestoIn {
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Manifesto backdrop — foto puglia editorial, opacità bassa, tono parchment */
+  .manifesto-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0.12;
+    filter: grayscale(45%) sepia(18%) contrast(0.95) brightness(1.04);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* Vignette parchment perché il testo resti leggibile sopra la foto */
+  .manifesto-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at center, transparent 0%, var(--color-surface-elev) 78%);
+    z-index: 1;
+    pointer-events: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
