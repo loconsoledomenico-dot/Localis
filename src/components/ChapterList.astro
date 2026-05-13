@@ -7,6 +7,7 @@ export interface Props {
     title_it: string;
     title_en: string;
     start_seconds: number;
+    start_seconds_en?: number;
   }>;
   lang: Lang;
 }
@@ -16,7 +17,8 @@ const { chapters, lang } = Astro.props;
 <ol class="flex flex-col gap-sm">
   {chapters.map((ch, i) => {
     const title = lang === 'it' ? ch.title_it : ch.title_en;
-    const time = formatDuration(ch.start_seconds, 'long');
+    const seconds = lang === 'en' && ch.start_seconds_en !== undefined ? ch.start_seconds_en : ch.start_seconds;
+    const time = formatDuration(seconds, 'long');
     const num = String(i + 1).padStart(2, '0');
     return (
       <li class="flex items-baseline gap-md py-xs border-b border-border last:border-0">

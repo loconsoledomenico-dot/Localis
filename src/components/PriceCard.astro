@@ -17,19 +17,19 @@ const priceCents = isBundle ? 999 : 499;
 const priceLabel = formatPrice(priceCents);
 
 const title = isBundle
-  ? lang === 'it' ? 'Bari completa' : 'Complete Bari'
+  ? lang === 'it' ? 'Bari · Cuore antico' : 'Bari · Old Heart'
   : lang === 'it' ? 'Guida singola' : 'Single guide';
 
 const description = isBundle
   ? lang === 'it'
-    ? 'Tutte le 3 guide live di Bari. Risparmi €4.98.'
-    : 'All 3 live Bari guides. Save €4.98.'
+    ? 'Bari Vecchia, Porto, San Nicola — le tre guide live. Risparmi €4,98.'
+    : 'Old Bari, the Port, San Nicola — the three live guides. Save €4.98.'
   : lang === 'it'
     ? 'Una guida a scelta, tua per sempre.'
     : 'One guide of your choice, yours forever.';
 
 const ctaLabel = isBundle
-  ? lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari'
+  ? lang === 'it' ? 'Acquista Bari · Cuore antico' : 'Get Bari · Old Heart'
   : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
 
 const productKey = isBundle ? 'bari-completa' : guideSlug;

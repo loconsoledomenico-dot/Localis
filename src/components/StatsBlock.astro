@@ -9,21 +9,21 @@ const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola V — I numeri' : 'Plate V — The numbers';
 const heading = lang === 'it'
-  ? 'Una sola città. Sei voci. Centoventi minuti che non si dimenticano.'
-  : 'One city. Six voices. One hundred and twenty minutes you don\'t forget.';
+  ? 'Una sola città. Sei quartieri. Storie che non si trovano in guida.'
+  : 'One city. Six neighbourhoods. Stories you won\'t find in guidebooks.';
 
 const stats = lang === 'it'
   ? [
-      { value: '6', target: 6, suffix: '', label: 'guide narrative · sei quartieri di Bari' },
-      { value: '120', target: 120, suffix: '', label: 'minuti complessivi · circa 9 min a capitolo' },
-      { value: '2', target: 2, suffix: '', label: 'lingue · italiano e inglese, registrate da madrelingua' },
-      { value: '∞', target: null, suffix: '', label: 'riascolti · per sempre tue, anche offline' },
+      { value: '1', target: 1, suffix: '', label: 'guida live · cinque in arrivo nel 2026' },
+      { value: '21', target: 21, suffix: '', label: 'minuti · Bari Vecchia, la prima guida' },
+      { value: '2', target: 2, suffix: '', label: 'lingue · italiano live · inglese in arrivo' },
+      { value: '∞', target: null, suffix: '', label: 'riascolti · per sempre tue' },
     ]
   : [
-      { value: '6', target: 6, suffix: '', label: 'narrative guides · six neighbourhoods of Bari' },
-      { value: '120', target: 120, suffix: '', label: 'minutes total · about 9 min per chapter' },
-      { value: '2', target: 2, suffix: '', label: 'languages · Italian and English, native voices' },
-      { value: '∞', target: null, suffix: '', label: 'replays · yours forever, also offline' },
+      { value: '1', target: 1, suffix: '', label: 'live guide · five more in 2026' },
+      { value: '21', target: 21, suffix: '', label: 'minutes · Old Bari, the first guide' },
+      { value: '2', target: 2, suffix: '', label: 'languages · Italian live · English coming' },
+      { value: '∞', target: null, suffix: '', label: 'replays · yours forever' },
     ];
 ---
 <section class="stats bg-surface-elev" data-stats-block>

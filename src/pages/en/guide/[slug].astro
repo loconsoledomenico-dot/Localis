@@ -24,14 +24,15 @@ const { guide } = Astro.props;
 const data = guide.data;
 const { Content } = await render(guide);
 
-const durationLabel = formatDuration(data.duration_seconds);
+const durationLabel = formatDuration(data.duration_seconds_en ?? data.duration_seconds);
+const trailerSrc = data.audio_trailer_path_en ?? data.audio_trailer_path;
 
 const ld: object[] = [
   audioObjectLD({
     slug: data.slug,
     title: data.title_en,
     description: data.seo.description_en,
-    durationSeconds: data.duration_seconds,
+    durationSeconds: data.duration_seconds_en ?? data.duration_seconds,
     language: 'en',
     priceCents: data.price_cents,
     coords: data.coords_start,
@@ -61,7 +62,7 @@ if (data.coords_start) {
     <div class="flex flex-col gap-lg">
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
 
-      <TrailerPlayer src={data.audio_trailer_path} label="Preview · 60s" lang="en" />
+      <TrailerPlayer src={trailerSrc} label="Preview · 60s" lang="en" />
 
       <section class="prose prose-ink max-w-prose">
         <Content />

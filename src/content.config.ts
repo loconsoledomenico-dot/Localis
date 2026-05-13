@@ -22,16 +22,19 @@ const guides = defineCollection({
     subtitle_it: z.string(),
     subtitle_en: z.string(),
     duration_seconds: z.number().int().positive(),
+    duration_seconds_en: z.number().int().positive().optional(),
     cover: z.string(),
     audio_full_key_it: z.string(),
     audio_full_key_en: z.string(),
     audio_trailer_path: z.string(),
+    audio_trailer_path_en: z.string().optional(),
     chapters: z
       .array(
         z.object({
           title_it: z.string(),
           title_en: z.string(),
           start_seconds: z.number().int().nonnegative(),
+          start_seconds_en: z.number().int().nonnegative().optional(),
         }),
       )
       .min(1),

@@ -25,7 +25,7 @@ const featuredTrailer = guides.find((g) => g.data.status === 'live');
     <SectionDivider label="Before you decide, hear this" />
     {featuredTrailer && (
       <TrailerPlayer
-        src={featuredTrailer.data.audio_trailer_path}
+        src={featuredTrailer.data.audio_trailer_path_en ?? featuredTrailer.data.audio_trailer_path}
         label={`~60s · ${featuredTrailer.data.title_en.split('—')[0].trim()}`}
         lang="en"
       />
