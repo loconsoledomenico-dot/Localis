@@ -215,24 +215,6 @@ function bioFor(a: Author): string {
     border-radius: var(--radius-md);
     box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08),
                 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
-    transform: rotate(var(--photo-tilt, 0deg));
-    transform-origin: center;
-    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  /* Subtle alternating tilts so the grid doesn't sit dead-flat */
-  .author-cell:nth-child(6n+1) { --photo-tilt: -0.9deg; }
-  .author-cell:nth-child(6n+2) { --photo-tilt: 0.7deg; }
-  .author-cell:nth-child(6n+3) { --photo-tilt: -1.1deg; }
-  .author-cell:nth-child(6n+4) { --photo-tilt: 1deg; }
-  .author-cell:nth-child(6n+5) { --photo-tilt: -0.6deg; }
-  .author-cell:nth-child(6n+6) { --photo-tilt: 0.9deg; }
-
-  .author-plate:hover .author-photo {
-    transform: rotate(0deg) scale(1.01);
-    box-shadow: 0 2px 4px oklch(15% 0.012 240 / 0.12),
-                0 24px 48px -16px oklch(15% 0.012 240 / 0.22);
   }
 
   .author-img {
@@ -242,12 +224,6 @@ function bioFor(a: Author): string {
     display: block;
     /* Editorial B/W treatment */
     filter: grayscale(100%) contrast(1.06) brightness(0.96);
-    transition: filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  /* On hover, soft warmth tint */
-  .author-plate:hover .author-img {
-    filter: grayscale(78%) contrast(1.04) brightness(0.98) sepia(0.06);
   }
 
   /* Silhouette placeholder — initials in Spectral italic on parchment */
@@ -330,11 +306,6 @@ function bioFor(a: Author): string {
       animation: none;
       opacity: 1;
       transform: none;
-    }
-    .author-img,
-    .author-plate:hover .author-img {
-      transition: none;
-      filter: grayscale(100%) contrast(1.06) brightness(0.96);
     }
   }
 </style>

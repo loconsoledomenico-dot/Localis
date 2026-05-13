@@ -4,7 +4,6 @@ import Layout from '../components/Layout.astro';
 import Hero from '../components/Hero.astro';
 import PriceCard from '../components/PriceCard.astro';
 import SectionDivider from '../components/SectionDivider.astro';
-import JourneyOverview from '../components/JourneyOverview.astro';
 import FeatureBlock from '../components/FeatureBlock.astro';
 import StatsBlock from '../components/StatsBlock.astro';
 import StepsBlock from '../components/StepsBlock.astro';
@@ -17,9 +16,6 @@ import BariMap from '../components/BariMap.astro';
   lang="it"
 >
   <Hero lang="it" />
-
-  {/* JOURNEY — i cinque gesti dell'esperienza */}
-  <JourneyOverview lang="it" />
 
   {/* FEATURE BLOCK 1 — Storie sui luoghi (image right) */}
   <FeatureBlock
@@ -46,19 +42,19 @@ import BariMap from '../components/BariMap.astro';
   {/* FEATURE BLOCK 2 — Niente app, niente account (image left) */}
   <FeatureBlock
     eyebrow="Strumento — Tav. III"
-    heading="Funziona dal browser."
+    heading="Si apre con un link."
     italicEnding="Niente app. Niente account."
     body="Apri il link, premi play. Niente da scaricare, niente registrazione, niente cookie banner. Pensato per passeggeri di crociera senza roaming, e per chi non vuole un'altra icona sul telefono."
     bullets={[
-      'Su iPhone, Android, qualsiasi browser moderno',
+      'Funziona su iPhone, Android, qualsiasi telefono',
       'Nessun account, nessuna email obbligatoria',
       'Italiano e inglese · scritti separatamente, non tradotti',
     ]}
     imageSrc="/images/covers/smartphone-tilt-r.png"
-    imageAlt="Smartphone Android in prospettiva inclinata verso destra, con il browser aperto su localis.guide e la home di Bari visibile"
+    imageAlt="Smartphone Android in prospettiva inclinata verso destra, con localis.guide aperto e la home di Bari visibile"
     dualPhone={{
       src: "/images/covers/smartphone-tilt-l.png",
-      alt: "Stesso smartphone in prospettiva inclinata verso sinistra, browser aperto su localis.guide",
+      alt: "Stesso smartphone in prospettiva inclinata verso sinistra, localis.guide aperto",
     }}
     plateNumber="Tav. III"
     caption="Aperto da un link. Niente app, niente icona sul telefono."

@@ -16,8 +16,8 @@ const heading2 = lang === 'it'
   : 'Audio guides telling the real life of the places you visit.';
 
 const lede = lang === 'it'
-  ? 'Capitoli da uno a tre minuti, sui quartieri di Bari. Storie vere, scritte da chi ci vive, costruite sui punti dove sono successe — non da brochure, non da Wikipedia.'
-  : 'One- to three-minute chapters on Bari\'s neighbourhoods. Real stories, written by locals, built around the spots where they happened — not brochure, not Wikipedia.';
+  ? 'Capitoli brevi, scritti da chi ci vive davvero. Storie verificabili, non da brochure, non da Wikipedia.'
+  : 'Short chapters, written by people who actually live there. Verifiable stories, not from brochures, not from Wikipedia.';
 
 const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60s' : 'Listen a teaser · 60s';
 const ctaPrimaryHref = lang === 'it' ? '/guide/bari-vecchia' : '/en/guide/bari-vecchia';
@@ -150,16 +150,6 @@ const altText = lang === 'it'
     border-radius: var(--radius-md);
     box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08),
                 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
-    transform: rotate(-1.2deg);
-    transform-origin: center;
-    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .hero:hover .hero-image-frame,
-  .hero:focus-within .hero-image-frame {
-    transform: rotate(0deg) scale(1.01);
-    box-shadow: 0 2px 4px oklch(15% 0.012 240 / 0.12),
-                0 24px 48px -16px oklch(15% 0.012 240 / 0.22);
   }
 
   .hero-img {
@@ -168,11 +158,6 @@ const altText = lang === 'it'
     object-fit: cover;
     display: block;
     filter: saturate(0.96) contrast(1.03);
-    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .hero:hover .hero-img,
-  .hero:focus-within .hero-img {
-    transform: scale(1.015);
   }
 
   .hero-text {
