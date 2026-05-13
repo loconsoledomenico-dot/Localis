@@ -1,0 +1,17 @@
+EN VOICE SAMPLE — Cape du Turche (Saviano tone, EN)
+Snippet for A/B comparison of 3 English narrators.
+=====================================
+SAMPLE
+-------------
+
+For twenty-four years, while the rest of Italy was Christian, Bari had an emir. <break time="0.5s"/> Praying toward Mecca. <break time="0.4s"/> Taxing wine. <break time="0.4s"/> Forbidding pork. <break time="0.5s"/> Forcing merchants to speak Arabic. <break time="0.8s"/> It is the only Muslim emirate the northern Mediterranean has ever known. <break time="1.0s"/>
+
+The Baresi never forgave it. <break time="1.5s"/>
+
+Listen to what the grandmothers used to tell. <break time="1.0s"/>
+
+On Epiphany night, during the occupation, a monstrous figure walked the alleys. <break time="0.5s"/> An old woman. <break time="0.4s"/> A shadow. <break time="0.4s"/> A witch in a black cloak. <break time="0.5s"/> And she beheaded anyone she met. <break time="1.0s"/>
+
+The emir heard. <break time="0.4s"/> He bragged he could face her. <break time="0.4s"/> He went out at night, with his sword. <break time="0.8s"/>
+
+They found him at dawn, on the threshold of a house, without his head.

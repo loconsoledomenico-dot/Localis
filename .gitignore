@@ -47,3 +47,12 @@ playwright/.cache/
 /tre-teatri-bari-audioguida.html
 /*.mp3
 /*.jpg
+
+# Audio production output — source of truth lives in Cloudflare R2
+r2_audio/
+
+# Raw source texts at repo root (final versions live in src/content/scripts/)
+/bari-vecchia-guida-completa.txt
+
+# Archived placeholder audio (kept locally as reference only)
+public/audio/trailers/_archive_*.mp3

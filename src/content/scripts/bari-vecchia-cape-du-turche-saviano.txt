@@ -1,0 +1,32 @@
+CAPE DU TURCHE — versione tono Saviano
+Capitolo prova per scelta voce e validazione tono.
+Riscritto da: documentario sobrio → intenso, evocativo, sensoriale.
+=====================================
+CAPE DU TURCHE
+-------------
+
+Cape du Turche. <break time="1.5s"/>
+
+Un uomo. <break time="0.4s"/> Baffi neri. <break time="0.4s"/> Turbante. <break time="0.4s"/> Scolpito nella pietra di questa facciata, settecento anni fa. <break time="1.2s"/>
+
+A Bari lo chiamano così, in dialetto: la cape du turche. <break time="0.5s"/> La testa del turco. <break time="1.2s"/>
+
+Non è decorazione. <break time="0.6s"/> È vendetta. <break time="1.5s"/>
+
+Per ventiquattro anni, dall'847 all'871, mentre il resto d'Italia era cristiana, Bari aveva un emiro. <break time="0.5s"/> Pregava verso la Mecca, cinque volte al giorno. <break time="0.5s"/> Tassava il vino, vietava il maiale, costringeva i mercanti a parlare arabo. <break time="0.8s"/> È l'unico emirato musulmano che il nord del Mediterraneo abbia mai conosciuto. <break time="1.2s"/>
+
+I baresi non l'hanno mai perdonato. <break time="1.5s"/>
+
+Ascolta cosa raccontavano le nonne, prima che si dimenticasse. <break time="1.0s"/>
+
+La notte dell'Epifania, durante la dominazione, una figura mostruosa scendeva nei vicoli. <break time="0.6s"/> Una vecchia. <break time="0.5s"/> Un'ombra. <break time="0.5s"/> Una befana col mantello nero. <break time="0.6s"/> E decapitava chi incontrava. <break time="1.2s"/>
+
+L'emiro lo seppe. <break time="0.5s"/> Si vantò di poterla affrontare. <break time="0.5s"/> Uscì di notte, con la spada. <break time="1.0s"/>
+
+Lo trovarono all'alba, sulla soglia di una casa, senza testa. <break time="1.8s"/>
+
+La casa fu demolita. <break time="0.5s"/> Per scacciare lo spirito. <break time="0.8s"/> Ma quando ne costruirono un'altra al suo posto, sulla facciata riapparve il volto dell'emiro. <break time="0.6s"/> Scolpito. <break time="0.5s"/> Per non dimenticare. <break time="1.5s"/>
+
+Non è una storia vera. <break time="0.6s"/> È un popolo che si vendica come può: <break time="0.5s"/> con un mito. <break time="1.0s"/>
+
+La befana che decapita l'emiro è quello che la storia non ha potuto fare. <break time="0.6s"/> E che la pietra, per qualcuno, fa ancora.
