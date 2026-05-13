@@ -9,20 +9,20 @@ const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola V — I numeri' : 'Plate V — The numbers';
 const heading = lang === 'it'
-  ? 'Una sola città. Sei quartieri. Storie che non si trovano in guida.'
-  : 'One city. Six neighbourhoods. Stories you won\'t find in guidebooks.';
+  ? 'Una sola città. Storie che non si trovano in guida.'
+  : 'One city. Stories you won\'t find in guidebooks.';
 
 const stats = lang === 'it'
   ? [
-      { value: '1', target: 1, suffix: '', label: 'guida live · cinque in arrivo nel 2026' },
-      { value: '21', target: 21, suffix: '', label: 'minuti · Bari Vecchia, la prima guida' },
-      { value: '2', target: 2, suffix: '', label: 'lingue · italiano live · inglese in arrivo' },
+      { value: '2', target: 2, suffix: '', label: 'guide live · tre in arrivo nel 2026' },
+      { value: '44', target: 44, suffix: '', label: 'minuti · audio narrativo live (IT)' },
+      { value: '26', target: 26, suffix: '', label: 'capitoli · tredici per guida' },
       { value: '∞', target: null, suffix: '', label: 'riascolti · per sempre tue' },
     ]
   : [
-      { value: '1', target: 1, suffix: '', label: 'live guide · five more in 2026' },
-      { value: '21', target: 21, suffix: '', label: 'minutes · Old Bari, the first guide' },
-      { value: '2', target: 2, suffix: '', label: 'languages · Italian live · English coming' },
+      { value: '2', target: 2, suffix: '', label: 'live guides · three more in 2026' },
+      { value: '43', target: 43, suffix: '', label: 'minutes · live narrative audio (EN)' },
+      { value: '26', target: 26, suffix: '', label: 'chapters · thirteen per guide' },
       { value: '∞', target: null, suffix: '', label: 'replays · yours forever' },
     ];
 ---
