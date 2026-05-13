@@ -9,46 +9,46 @@ import StatsBlock from '../components/StatsBlock.astro';
 import StepsBlock from '../components/StepsBlock.astro';
 import AuthorsBlock from '../components/AuthorsBlock.astro';
 import BariMap from '../components/BariMap.astro';
+import MobileStickyCTA from '../components/MobileStickyCTA.astro';
 ---
 <Layout
   title="Localis — audioguide narrative di Bari"
-  description="Audioguide narrative di Bari che ti fanno capire, non elencare. Quattro guide live. Storie vere scritte da chi ci vive, non da Wikipedia. €4,99."
+  description="Audioguide narrative di Bari che ti fanno capire, non elencare. Quattro guide live scritte da chi ci vive. €4,99."
   lang="it"
 >
   <Hero lang="it" />
 
-  {/* FEATURE BLOCK 1 — Storie sui luoghi (image right) */}
+  {/* FEATURE BLOCK — Storie firmate (merge ex-FB1 storie + ex-FB3 autori) */}
   <FeatureBlock
-    eyebrow="Storie — Tav. II"
-    heading="Non ti diciamo cosa vedere."
-    italicEnding="Ti diciamo cosa è successo."
-    body="Ogni capitolo è una storia vera, costruita su un punto preciso: un cortile, un altare laterale, l'angolo dove un mercante è morto in piedi. Niente itinerari da brochure. Niente «benvenuti a Bari». Solo nomi, date, dettagli che nessuno ti racconta a meno che non sia di qui."
+    eyebrow="Storie · Autori — Tav. II"
+    heading="Storie firmate."
+    italicEnding="Da chi le ha vissute."
+    body="Ogni capitolo è ricerca d'archivio firmata da autori baresi. Un cortile, un altare laterale, l'angolo dove un mercante è morto in piedi — raccontati da chi quei vicoli li ha camminati da bambino."
     bullets={[
-      'Capitoli brevi · 1–3 minuti, per la durata di un vicolo',
-      'Tredici capitoli per guida · sequenza pensata per camminare',
-      'Niente musica di sottofondo. Solo voce e silenzio fra una frase e l\'altra',
-      'Fonti citate · ricerca d\'archivio, non Wikipedia',
+      'Tredici capitoli per guida · 1–3 minuti ciascuno',
+      'Un autore per quartiere · bio e fonti pubbliche',
+      'Italiano e inglese · scritti separatamente',
+      'Tono editoriale · zero «mamma mia»',
     ]}
     imageSrc="/images/covers/bari-vecchia-passeggiata.jpg"
     imageAlt="Una donna con cappello di paglia cammina lungo un vicolo del Borgo Antico di Bari, colonne romane antiche sulla sinistra"
     plateNumber="Tav. II"
     caption="Bari Vecchia, mezzogiorno. Le colonne sono tutto ciò che resta di un cortile romano."
-    ctaLabel="Ascolta il primo capitolo"
-    ctaHref="/guide/bari-vecchia"
+    ctaLabel="Conosci gli autori"
+    ctaHref="/about"
     imageSide="right"
     tiltDeg={1.5}
   />
 
-  {/* FEATURE BLOCK 2 — Niente app, niente account (image left) */}
+  {/* FEATURE BLOCK — Si apre con un link (image left) */}
   <FeatureBlock
     eyebrow="Strumento — Tav. III"
     heading="Si apre con un link."
     italicEnding="Niente app. Niente account."
-    body="Apri il link, premi play. Niente da scaricare, niente registrazione, niente cookie banner. Pensato per passeggeri di crociera senza roaming, e per chi non vuole un'altra icona sul telefono."
+    body="Apri il link. Premi play. Niente da scaricare, niente account, niente cookie banner. Pensato per passeggeri di crociera senza roaming."
     bullets={[
       'Funziona su iPhone, Android, qualsiasi telefono',
-      'Nessun account, nessuna email obbligatoria',
-      'Italiano e inglese · scritti separatamente, non tradotti',
+      'Nessuna registrazione, nessuna email obbligatoria',
     ]}
     imageSrc="/images/covers/smartphone-tilt-r.png"
     imageAlt="Smartphone Android in prospettiva inclinata verso destra, con localis.guide aperto e la home di Bari visibile"
@@ -57,33 +57,11 @@ import BariMap from '../components/BariMap.astro';
       alt: "Stesso smartphone in prospettiva inclinata verso sinistra, localis.guide aperto",
     }}
     plateNumber="Tav. III"
-    caption="Aperto da un link. Niente app, niente icona sul telefono."
+    caption="Aperto da un link. Senza app."
     ctaLabel="Vedi le guide"
     ctaHref="#guide"
     imageSide="left"
     tiltDeg={-1.5}
-  />
-
-  {/* FEATURE BLOCK 3 — Autori e firme (image right) */}
-  <FeatureBlock
-    eyebrow="Autori — Tav. IV"
-    heading="Autori baresi."
-    italicEnding="Ognuno scrive del suo quartiere."
-    body="Non guide certificate, non copia-incolla Wikipedia. Ricerca d'archivio firmata da chi quei vicoli li ha vissuti, ha mangiato in quei panifici, ha visto cambiare quei mercati. Ogni guida ha un nome dietro: archivio, fonti, e due righe su perché proprio lui o lei."
-    bullets={[
-      'Un autore per quartiere · ricerca firmata',
-      'Bio e fonti pubbliche',
-      'Tono editoriale · niente entusiasmo finto, niente «mamma mia»',
-      'Versione inglese scritta da zero, non tradotta',
-    ]}
-    imageSrc="/images/covers/tre-teatri.jpg"
-    imageAlt="Teatro Margherita di Bari, edificio liberty bianco costruito su palafitte sul mare"
-    plateNumber="Tav. IV"
-    caption="Teatro Margherita, Lungomare. Costruito sul mare per aggirare il monopolio del Petruzzelli."
-    ctaLabel="Conosci gli autori"
-    ctaHref="/about"
-    imageSide="right"
-    tiltDeg={1.2}
   />
 
   {/* STATS — numeri onesti, niente vanity metrics */}
@@ -104,7 +82,6 @@ import BariMap from '../components/BariMap.astro';
           features={[
             'Una guida a tua scelta',
             'Accesso illimitato, per sempre',
-            'Senza app · niente download',
             'Italiano e inglese',
           ]}
         />
@@ -175,6 +152,8 @@ import BariMap from '../components/BariMap.astro';
       </a>
     </div>
   </section>
+
+  <MobileStickyCTA lang="it" />
 </Layout>
 
 <style>

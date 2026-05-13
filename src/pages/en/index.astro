@@ -5,6 +5,7 @@ import Hero from '../../components/Hero.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
+import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
 import { getCollection } from 'astro:content';
 
 const guides = (await getCollection('guides'))
@@ -13,7 +14,7 @@ const guides = (await getCollection('guides'))
 ---
 <Layout
   title="Localis — narrative audio guides for Puglia"
-  description="Narrative audio guides of Bari that make you understand, not list. Real stories written by locals, not Wikipedia. No app — opens with a link. €4.99."
+  description="Narrative audio guides of Bari that make you understand, not list. Four live guides, written by locals. €4.99."
   lang="en"
 >
   <Hero lang="en" />
@@ -43,8 +44,7 @@ const guides = (await getCollection('guides'))
         lang="en"
         features={[
           '1 guide of your choice',
-          'Unlimited access',
-          'No app, opens with a link',
+          'Unlimited access, forever',
           'Italian and English',
         ]}
       />
@@ -56,7 +56,7 @@ const guides = (await getCollection('guides'))
           'Old Bari — Inside the City',
           'Port of Bari — Where It All Happened',
           'San Nicola — The Stolen Saint',
-          'Unlimited access · No app',
+          'Unlimited access, forever',
         ]}
       />
     </div>
@@ -69,4 +69,6 @@ const guides = (await getCollection('guides'))
       Start the journey →
     </a>
   </section>
+
+  <MobileStickyCTA lang="en" />
 </Layout>

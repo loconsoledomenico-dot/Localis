@@ -7,12 +7,12 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola VII — I sei luoghi' : 'Plate VII — The six places';
-const heading1 = lang === 'it' ? 'Cinque storie tracciate.' : 'Five stories traced.';
-const heading2 = lang === 'it' ? 'Una sesta in arrivo.' : 'A sixth on its way.';
+const eyebrow = lang === 'it' ? 'Tavola V — I luoghi' : 'Plate V — The places';
+const heading1 = lang === 'it' ? 'Le storie del centro.' : 'The stories of the centre.';
+const heading2 = lang === 'it' ? 'Un quartiere alla volta.' : 'One neighbourhood at a time.';
 const intro = lang === 'it'
-  ? 'Cinque guide narrative legate a sei luoghi precisi del centro storico di Bari. La sesta — già confermata — esce a giorni. Tocca un riquadro per ascoltare.'
-  : 'Five narrative guides anchored to six precise places in central Bari. The sixth — already confirmed — comes shortly. Tap a tile to listen.';
+  ? 'Quattro guide live e due in arrivo. Ogni capitolo si ferma in un punto preciso del Borgo Antico, del Porto o dei teatri. Tocca un riquadro per ascoltare.'
+  : 'Four live guides and two on the way. Each chapter stops at a precise spot in the Old Town, the Port or the theatres. Tap a tile to listen.';
 
 interface Place {
   slug: string;
@@ -170,9 +170,9 @@ const comingLabel = lang === 'it' ? 'In arrivo' : 'Coming';
       </div>
       <h2 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(1.9rem,4.4vw,3rem)]">
         <span class="font-light">{heading1}</span>
-        <em class="block font-normal italic text-accent mt-2xs text-[clamp(1.7rem,3.8vw,2.6rem)]">
+        <span class="block font-body font-normal text-ink-muted mt-sm text-[clamp(1.15rem,2.4vw,1.55rem)] leading-relaxed tracking-normal">
           {heading2}
-        </em>
+        </span>
       </h2>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
         {intro}

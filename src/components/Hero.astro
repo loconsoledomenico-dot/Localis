@@ -16,13 +16,13 @@ const heading2 = lang === 'it'
   : 'Audio guides telling the real life of the places you visit.';
 
 const lede = lang === 'it'
-  ? 'Capitoli brevi, scritti da chi ci vive davvero. Storie verificabili, non da brochure, non da Wikipedia.'
-  : 'Short chapters, written by people who actually live there. Verifiable stories, not from brochures, not from Wikipedia.';
+  ? 'Le storie che i baresi raccontano ai nipoti. Non quelle delle brochure.'
+  : 'The stories Bari tells its grandkids. Not the ones in brochures.';
 
 const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60s' : 'Listen a teaser · 60s';
 const ctaPrimaryHref = lang === 'it' ? '/guide/bari-vecchia' : '/en/guide/bari-vecchia';
 const ctaSecondary = lang === 'it' ? 'Vedi le guide' : 'See the guides';
-const microline = lang === 'it' ? 'Senza app. Italiano e inglese.' : 'No app. Italian and English.';
+const microline = lang === 'it' ? 'Italiano e inglese · €4,99' : 'Italian and English · €4.99';
 
 const plateCaption = lang === 'it'
   ? 'Cattedrale di San Sabino, Piazza dell\'Odegitria. La voce nelle cuffie racconta cosa sta guardando.'
@@ -279,6 +279,18 @@ const altText = lang === 'it'
   }
   @keyframes heroFade {
     to { opacity: 1; }
+  }
+
+  /* === Mobile: compress stagger so the page feels responsive on phones === */
+  @media (max-width: 768px) {
+    .hero-masthead::before { animation-duration: 0.5s; animation-delay: 0.05s; }
+    .hero-masthead > span { animation-delay: 0.3s; }
+    .hero-h1 > span:first-child { animation-delay: 0.1s; animation-duration: 0.5s; }
+    .hero-h1 > .hero-h2 { animation-delay: 0.25s; animation-duration: 0.5s; }
+    .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
+    .hero-actions { animation-delay: 0.45s; animation-duration: 0.4s; }
+    .hero-microline { animation-delay: 0.55s; animation-duration: 0.4s; }
+    .hero-figure { animation-delay: 0.2s; animation-duration: 0.5s; }
   }
 
   @media (prefers-reduced-motion: reduce) {
