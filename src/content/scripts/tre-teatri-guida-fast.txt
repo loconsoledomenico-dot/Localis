@@ -1,0 +1,256 @@
+LOCALIS — TRE TEATRI · versione FAST
+Guida narrativa pacing 2026, mix tonale per capitolo (Angela / Saviano / storyteller).
+Voce: Gian. Modello: eleven_multilingual_v2.
+=====================================
+INTRODUZIONE
+-------------
+
+Tre teatri. <break time="0.6s"/> In mezzo chilometro quadrato. <break time="1.0s"/>
+
+Il Piccinni, costruito nel milleottocentocinquantaquattro. <break time="0.4s"/> Il Petruzzelli, costruito nel millenovecentotré. <break time="0.4s"/> Il Margherita, costruito nel millenovecentoquattordici. <break time="0.8s"/> Sessant'anni di distanza tra il primo e l'ultimo. <break time="0.4s"/> Cinquecento metri a piedi tra l'uno e l'altro. <break time="1.0s"/>
+
+La domanda è: perché Bari, una città del Sud, in pieno ottocento, ha deciso di costruirsi tre teatri? <break time="1.2s"/>
+
+La risposta, in queste prossime tre quartine, vi sorprenderà. <break time="0.5s"/> Non è quello che pensate. <break time="0.4s"/> Non è la committenza del Re. <break time="0.4s"/> Non è l'imitazione di Napoli o di Milano. <break time="1.0s"/>
+
+È una borghesia commerciale, ricca, che a un certo punto ha deciso che cultura, qui, era difesa identitaria. <break time="0.5s"/> E ha pagato di tasca propria. <break time="1.2s"/>
+
+Vi racconto la storia di tre edifici. <break time="0.4s"/> E dietro a quei tre edifici, la storia di chi li ha voluti. <break time="0.5s"/> Di chi li ha costruiti. <break time="0.4s"/> Di chi ne ha bruciato uno nel millenovecentonovantuno. <break time="0.4s"/> E di chi lo ha rifatto, diciotto anni dopo. <break time="1.5s"/>
+
+Si parte dal quartiere Murat. <break time="0.4s"/> Pronti. <break time="0.4s"/> Si va.
+
+
+=====================================
+MURAT - IL QUARTIERE NUOVO
+-------------
+
+Milleottocentotredici. <break time="0.8s"/>
+
+A Napoli regna Gioacchino Murat. <break time="0.4s"/> Cognato di Napoleone, sposato con sua sorella Carolina. <break time="0.5s"/> È un re nominato da fuori, ma a differenza di altri sovrani spagnoli o francesi che si occupavano poco del Sud, lui se ne occupa parecchio. <break time="1.0s"/>
+
+Murat decide di rifondare Bari. <break time="0.5s"/> Quella vecchia, la penisola di Bari Vecchia, ormai è satura. <break time="0.4s"/> Vicoli stretti, sovraffollamento, nessuno spazio per una città moderna. <break time="0.6s"/> Decreto reale: Bari avrà un quartiere nuovo, costruito a sud della vecchia. <break time="1.0s"/>
+
+Architetto incaricato: Mariano Tafuri. <break time="0.4s"/> Stile: griglia regolare. <break time="0.4s"/> Strade ortogonali, decumani lunghi, cardi corti. <break time="0.5s"/> L'esatto contrario di Bari Vecchia. <break time="0.6s"/> Razionalità napoleonica al posto del labirinto bizantino. <break time="1.2s"/>
+
+I lavori partono nel milleottocentoquindici. <break time="0.4s"/> Procedono lenti. <break time="0.4s"/> Murat sarà morto già da due anni, ma il quartiere continua a costruirsi. <break time="0.5s"/> Lo chiamano "Borgo Murattiano". <break time="0.4s"/> Oggi, semplicemente: Murat. <break time="1.0s"/>
+
+E in questo quartiere nuovo, ortogonale, ottocentesco, si stabilisce qualcosa che a Bari ancora non c'era: una borghesia commerciale di città. <break time="0.5s"/> Armatori, mercanti di olio e grano, avvocati, notai. <break time="0.4s"/> Gente con i soldi. <break time="0.4s"/> Gente che vuole essere come a Milano. <break time="0.4s"/> O come a Parigi. <break time="1.5s"/>
+
+
+=====================================
+PICCINNI 1854 - IL PRIMO
+-------------
+
+Niccolò Piccinni. <break time="0.6s"/>
+
+Nato a Bari nel millesettecentoventotto. <break time="0.4s"/> Studi al conservatorio di Napoli. <break time="0.5s"/> Compositore. <break time="0.4s"/> Opere comiche, opere serie, ottanta titoli in carriera. <break time="1.0s"/>
+
+A Napoli è già famoso a vent'anni. <break time="0.4s"/> A Roma trionfa. <break time="0.4s"/> A trent'anni è il compositore d'opera più richiesto d'Italia. <break time="1.0s"/>
+
+Nel millesettecentosettantasei, Maria Antonietta lo invita a Parigi. <break time="0.5s"/> Lo vuole alla corte come compositore ufficiale. <break time="0.4s"/> Lì entra in rivalità storica con Christoph Willibald Gluck. <break time="0.5s"/> La corte si divide. <break time="0.4s"/> Piccinnisti contro gluckisti. <break time="0.4s"/> Una guerra musicale che dura dieci anni. <break time="0.5s"/> I nobili parigini scrivono pamphlet l'uno contro l'altro. <break time="1.2s"/>
+
+Muore a Parigi nel milleottocento. <break time="0.5s"/> Da Bari era andato via a quindici anni, e non era più tornato. <break time="0.4s"/> Eppure Bari lo rivendica come suo. <break time="1.0s"/>
+
+Cinquant'anni dopo la sua morte, la borghesia barese decide di costruire un teatro lirico nuovo. <break time="0.4s"/> Lo dedicano a lui. <break time="0.5s"/> Lavori dal milleottocentoquaranta al milleottocentocinquantaquattro. <break time="0.4s"/> Quattordici anni di cantiere. <break time="1.0s"/>
+
+Quattro ottobre milleottocentocinquantaquattro. <break time="0.4s"/> Inaugurazione del Teatro Piccinni. <break time="0.5s"/> In cartellone: "Poliuto" di Gaetano Donizetti. <break time="0.4s"/> Settecento posti. <break time="0.4s"/> La borghesia di Bari ha finalmente il suo teatro. <break time="1.5s"/>
+
+
+=====================================
+LA BORGHESIA CHE VOLEVA L'OPERA
+-------------
+
+Capiamoci una cosa. <break time="0.8s"/>
+
+Nel milleottocento, avere un teatro lirico in città non era un dettaglio culturale. <break time="0.4s"/> Era una dichiarazione politica. <break time="0.5s"/> Era dire: noi siamo una città, non un villaggio. <break time="0.4s"/> Noi siamo come Milano, come Napoli, come Parigi. <break time="0.6s"/> Noi contiamo. <break time="1.2s"/>
+
+A Bari, in quegli anni, succede una cosa: il porto cresce. <break time="0.4s"/> L'olio pugliese viene esportato in tutto il Mediterraneo. <break time="0.4s"/> Il grano arriva dal subappennino. <break time="0.4s"/> Le navi partono da qui per Trieste, Marsiglia, Costantinopoli. <break time="1.0s"/>
+
+E con il porto crescono le famiglie. <break time="0.5s"/> I Petruzzelli sono armatori. <break time="0.4s"/> I Marrocchi sono mercanti. <break time="0.4s"/> I De Tullio sono avvocati. <break time="0.4s"/> I Caggiano sono notai. <break time="0.5s"/> Decine di cognomi che ancora oggi compaiono sulle targhe dei palazzi di Via Sparano e Via Putignani. <break time="1.0s"/>
+
+Quella borghesia, dal milleottocentocinquanta al milleottocentonovanta, paga i palchi del Piccinni come a Milano paga i palchi della Scala. <break time="0.4s"/> Il palco è investimento sociale. <break time="0.4s"/> È biglietto da visita. <break time="0.4s"/> È dire al resto della città: io ci sono, io conto, io posso permettermelo. <break time="1.2s"/>
+
+In quegli anni qualcuno la chiama "la Milano del Sud". <break time="0.5s"/> Esagerazione, ovviamente. <break time="0.4s"/> Ma il senso era: c'è un'ambizione culturale che, in tutto il Mezzogiorno, solo a Bari era così esplicita. <break time="1.0s"/>
+
+E quella stessa borghesia, alla fine del secolo, voleva di più. <break time="0.4s"/> Voleva un teatro più grande. <break time="0.4s"/> Più moderno. <break time="0.4s"/> Più degno. <break time="1.5s"/>
+
+
+=====================================
+I FRATELLI PETRUZZELLI
+-------------
+
+Milleottocentonovantacinque. <break time="0.6s"/>
+
+Il Comune di Bari bandisce un concorso pubblico. <break time="0.4s"/> Obiettivo: costruire un nuovo politeama, più grande del Piccinni, più moderno, capace di ospitare grande opera lirica internazionale. <break time="1.0s"/>
+
+A vincere il concorso è una famiglia. <break time="0.5s"/> I Petruzzelli. <break time="0.4s"/> Quattro nipoti dell'armatore Onofrio Petruzzelli. <break time="0.4s"/> Antonio, Carlo, Onofrio Junior, e Gerolamo. <break time="1.0s"/>
+
+Sono armatori. <break time="0.4s"/> Possiedono una flotta che fa rotta nell'Adriatico, nel Tirreno, nel Mediterraneo orientale. <break time="0.5s"/> Trasporto di olio, grano, sale, prodotti agricoli. <break time="0.4s"/> Hanno fatto fortuna negli ultimi trent'anni. <break time="1.0s"/>
+
+Il loro progetto è ambizioso. <break time="0.5s"/> Duemiladuecento posti. <break time="0.4s"/> Cupola di legno per acustica perfetta. <break time="0.4s"/> Stile eclettico-liberty. <break time="0.4s"/> Il terzo politeama d'Italia per capienza, dopo il San Carlo di Napoli e la Scala di Milano. <break time="1.0s"/>
+
+Il patto col Comune è preciso. <break time="0.5s"/> I Petruzzelli costruiscono il teatro a loro spese. <break time="0.4s"/> Il Comune cede il terreno. <break time="0.4s"/> La gestione resta alla famiglia per cinquant'anni. <break time="0.5s"/> Il teatro porterà il loro cognome. <break time="0.5s"/> In più, clausola decisiva: per i prossimi quindici anni, nessun altro teatro potrà essere costruito su suolo comunale. <break time="1.2s"/>
+
+Quella clausola, vedrete, sarà importante. <break time="1.5s"/>
+
+
+=====================================
+IL PETRUZZELLI - COSTRUZIONE
+-------------
+
+I lavori iniziano nel milleottocentonovantotto. <break time="0.5s"/>
+
+Architetto: Angelo Cicciomessere, capomastro barese di formazione locale. <break time="0.4s"/> Niente nomi celebri da fuori. <break time="0.4s"/> Tutto fatto in città. <break time="1.0s"/>
+
+Stile eclettico, con tocchi liberty. <break time="0.4s"/> Facciata neoclassica con archi e colonne. <break time="0.4s"/> Interno a ferro di cavallo, secondo il modello di San Carlo. <break time="0.5s"/> Cinque ordini di palchi. <break time="0.4s"/> Cupola centrale in legno, decisione tecnica importante: il legno ha proprietà acustiche superiori al cemento. <break time="1.2s"/>
+
+Cinque anni di cantiere. <break time="0.5s"/>
+
+Quattordici febbraio millenovecentotré. <break time="0.5s"/> Inaugurazione. <break time="0.4s"/> In cartellone: "Gli Ugonotti" di Giacomo Meyerbeer, grande opera francese del milleottocentotrentasei. <break time="0.5s"/> Quattro ore di spettacolo. <break time="0.4s"/> Pubblico in tenuta da gala. <break time="0.4s"/> Una sera che la cronaca dell'epoca definisce "memorabile". <break time="1.2s"/>
+
+Da quel giorno, il Petruzzelli diventa il teatro di Bari. <break time="0.4s"/> Il Piccinni resta, ma per la grande lirica si va al Petruzzelli. <break time="0.5s"/> La borghesia barese si trasferisce di palco. <break time="0.4s"/> Dal Piccinni al nuovo gioiello. <break time="1.0s"/>
+
+I quattro fratelli Petruzzelli hanno trasformato il loro cognome in istituzione. <break time="0.5s"/> Da armatori a oligarchi della cultura cittadina. <break time="0.4s"/> Per cinquant'anni il Petruzzelli sarà loro. <break time="1.5s"/>
+
+
+=====================================
+IL MONOPOLIO
+-------------
+
+Ora torniamo a quella clausola. <break time="0.8s"/>
+
+Nel contratto col Comune del milleottocentonovantasette, era scritto chiaro: per quindici anni dal completamento del Petruzzelli, nessun altro teatro pubblico o privato potrà essere costruito su suolo comunale a Bari. <break time="1.0s"/>
+
+In pratica: monopolio. <break time="0.5s"/> Per quindici anni, la lirica a Bari = Petruzzelli. <break time="0.4s"/> I prezzi dei palchi li decidono loro. <break time="0.4s"/> Le compagnie ospitate le scelgono loro. <break time="0.4s"/> Il calendario lo gestiscono loro. <break time="1.0s"/>
+
+I borghesi baresi che non possono permettersi un palco al Petruzzelli sono frustrati. <break time="0.4s"/> Le famiglie minori, quelle che a milleottocentosettanta riuscivano al Piccinni, ora restano fuori. <break time="0.5s"/> Il Piccinni resta vivo, certo, ma per opere minori, balletti, varietà. <break time="0.4s"/> La grande lirica passa al Petruzzelli. <break time="1.2s"/>
+
+E qui entra in scena un personaggio. <break time="0.8s"/>
+
+Si chiama Gennaro Trizio. <break time="0.5s"/> Imprenditore, capitalista, concorrente dei Petruzzelli. <break time="0.4s"/> Anche lui borghese di Bari, anche lui ricco. <break time="0.4s"/> Anche lui vuole costruire un teatro suo. <break time="0.6s"/> Vuole rompere il monopolio. <break time="1.0s"/>
+
+Ma il vincolo c'è. <break time="0.4s"/> Suolo comunale: vietato. <break time="0.5s"/> E Trizio si pone una domanda barese, semplice. <break time="0.6s"/>
+
+E se non costruissi su suolo comunale? <break time="1.5s"/>
+
+
+=====================================
+MARGHERITA - L'ASTUZIA SUL MARE
+-------------
+
+Millenovecentodieci. <break time="0.5s"/> Trizio presenta il progetto al Comune. <break time="0.8s"/>
+
+Vuole costruire un teatro sul demanio marittimo. <break time="0.4s"/> Cioè sull'acqua, davanti al porto, su palafitte. <break time="0.5s"/> Demanio marittimo significa: di proprietà dello Stato, non del Comune. <break time="0.5s"/> Tecnicamente, fuori dalla clausola del Petruzzelli. <break time="1.2s"/>
+
+I Petruzzelli protestano. <break time="0.5s"/> Vanno in tribunale. <break time="0.5s"/> Sostengono che lo spirito del contratto vietava qualsiasi teatro a Bari, sul mare o sulla terra. <break time="1.0s"/>
+
+Trizio si difende con la lettera. <break time="0.5s"/> Il contratto dice "suolo comunale". <break time="0.4s"/> L'acqua del porto non lo è. <break time="0.4s"/> Punto. <break time="1.0s"/>
+
+I Petruzzelli perdono la causa. <break time="0.5s"/> Trizio costruisce. <break time="0.4s"/> Millenovecentoquattordici inaugura il Teatro Margherita. <break time="0.5s"/> Su palafitte, fuori dal vincolo, dentro le regole. <break time="1.0s"/>
+
+Quel teatro funziona inizialmente come politeama variétà: spettacoli leggeri, cinema, sala da ballo. <break time="0.4s"/> Non insidia direttamente la grande lirica del Petruzzelli. <break time="0.5s"/> Ma simbolicamente è una vittoria importantissima. <break time="0.4s"/> Significa che a Bari, se c'è una regola che ti blocca, cerchi il millimetro fuori dalla regola. <break time="0.4s"/> E lo costruisci lì. <break time="1.2s"/>
+
+Quella lezione, oggi, è ancora qualcosa che i baresi raccontano con orgoglio. <break time="1.5s"/>
+
+
+=====================================
+OTTANTOTTO ANNI DI GLORIA
+-------------
+
+Dal millenovecentotré al millenovecentonovantuno. <break time="0.5s"/> Ottantotto stagioni di Petruzzelli. <break time="1.0s"/>
+
+Provate a immaginare la lista dei nomi passati su quel palco. <break time="0.8s"/>
+
+Enrico Caruso. <break time="0.4s"/> Tito Schipa. <break time="0.4s"/> Beniamino Gigli. <break time="0.4s"/> Mario Del Monaco. <break time="0.5s"/> Poi più recenti: Luciano Pavarotti, Plácido Domingo, José Carreras. <break time="1.0s"/>
+
+Soprano: Maria Callas, due volte. <break time="0.4s"/> Renata Tebaldi. <break time="0.4s"/> Mirella Freni. <break time="1.0s"/>
+
+Direttori d'orchestra: Arturo Toscanini, Herbert von Karajan, Riccardo Muti. <break time="0.5s"/> Quello stesso Muti che, vedrete, tornerà nel duemilanove. <break time="1.2s"/>
+
+Per ottantotto anni, Bari è una tappa obbligata del giro lirico italiano. <break time="0.4s"/> Le compagnie liriche, quando partono da Milano, da Napoli, da Roma per il Sud, si fermano qui. <break time="0.5s"/> Il pubblico è competente, esigente, attento. <break time="0.4s"/> Non perdona. <break time="1.0s"/>
+
+E poi, accanto alla lirica, anche il varietà. <break time="0.4s"/> Totò portò qui i suoi spettacoli negli anni quaranta. <break time="0.4s"/> Mario Lanza cantò qui nel cinquantadue. <break time="0.5s"/> Nei sessanta, perfino i primi spettacoli pop di Modugno e di Mina. <break time="1.0s"/>
+
+Il Petruzzelli è il centro culturale della città. <break time="0.4s"/> Per ottantotto anni. <break time="0.4s"/> Finché una notte di ottobre del novantuno qualcuno decide di chiuderlo. <break time="0.4s"/> Con il fuoco. <break time="1.5s"/>
+
+
+=====================================
+VENTISETTE OTTOBRE 1991
+-------------
+
+Notte tra il ventisei e il ventisette ottobre millenovecentonovantuno. <break time="1.0s"/>
+
+Sono le tre e mezza del mattino. <break time="0.4s"/> Bari dorme. <break time="0.5s"/> Dentro il Petruzzelli, vuoto, chiuso da ore, qualcuno appicca il fuoco. <break time="1.0s"/>
+
+L'incendio parte dal palcoscenico. <break time="0.4s"/> Si propaga rapidamente alle quinte di legno, alle tende, ai costumi del magazzino. <break time="0.5s"/> Sale verso la cupola, sempre di legno, sempre acustica, sempre infiammabile. <break time="1.0s"/>
+
+I vigili del fuoco arrivano alle quattro. <break time="0.4s"/> Combattono per quattro ore. <break time="0.4s"/> Inutilmente. <break time="0.6s"/> Alle sette del mattino, la cupola crolla. <break time="0.5s"/> Tutto l'interno è perduto. <break time="0.4s"/> Palchi, poltrone, scenari, biblioteca, archivi musicali, costumi. <break time="0.4s"/> Brucia tutto. <break time="1.2s"/>
+
+Resta solo l'involucro esterno. <break time="0.5s"/> Le mura in pietra. <break time="0.4s"/> La facciata neoclassica. <break time="0.4s"/> Per il resto: un buco fumante in mezzo al Murat. <break time="1.0s"/>
+
+L'inchiesta giudiziaria parte subito. <break time="0.4s"/> Conclusione: incendio doloso, appiccato deliberatamente. <break time="0.5s"/> Sospetto: dietro al rogo, una guerra per il controllo della gestione del teatro. <break time="0.4s"/> Tangenti, appalti, clan locali. <break time="0.5s"/> Quattro arresti negli anni successivi. <break time="0.4s"/> Sentenza nel duemilauno: condanne per incendio doloso a fini lucrosi. <break time="1.2s"/>
+
+Quella notte è il punto più basso della storia culturale di Bari nel novecento. <break time="0.5s"/> Il teatro simbolo della città, distrutto. <break time="0.4s"/> Non da una guerra. <break time="0.4s"/> Non da un terremoto. <break time="0.4s"/> Da qualcuno che ha pagato qualcun altro per dargli fuoco. <break time="1.5s"/>
+
+
+=====================================
+I DICIOTTO ANNI DI VUOTO
+-------------
+
+Dal millenovecentonovantuno al duemilanove. <break time="0.5s"/> Diciotto anni. <break time="1.0s"/>
+
+Tutti gli anni qualcuno promette di ricostruire. <break time="0.4s"/> Sindaco. <break time="0.4s"/> Ministro. <break time="0.4s"/> Governatore. <break time="0.4s"/> Famiglia Petruzzelli. <break time="0.4s"/> Tutti promettono. <break time="0.5s"/> Nessuno fa. <break time="1.0s"/>
+
+Il motivo è una battaglia legale incredibile. <break time="0.6s"/>
+
+Il Petruzzelli era proprietà privata della famiglia. <break time="0.4s"/> Ma era teatro di interesse pubblico. <break time="0.4s"/> Costruito con un contratto particolare. <break time="0.5s"/> Dopo l'incendio, chi paga? <break time="0.4s"/> La famiglia che non aveva fatto manutenzione? <break time="0.4s"/> Lo Stato? <break time="0.4s"/> Il Comune? <break time="1.2s"/>
+
+Cause civili. <break time="0.4s"/> Cause amministrative. <break time="0.4s"/> Ricorsi al Consiglio di Stato. <break time="0.4s"/> Cassazione. <break time="0.5s"/> Tutto si blocca. <break time="0.4s"/> Per anni. <break time="1.0s"/>
+
+Intanto Bari resta senza teatro lirico. <break time="0.5s"/> Le grandi compagnie smettono di passare. <break time="0.4s"/> La stagione viene fatta in palasport, in chiese, in spazi improvvisati. <break time="0.4s"/> Una città di trecentoventimila abitanti senza un teatro vero. <break time="1.2s"/>
+
+Nel duemiladue, finalmente, sentenza della Cassazione: il Petruzzelli viene esproprio in favore del Comune di Bari. <break time="0.4s"/> Lo Stato finanzia la ricostruzione. <break time="0.5s"/> I lavori partono nel duemilatré. <break time="0.4s"/> Sei anni di cantiere. <break time="1.0s"/>
+
+Diciotto anni dopo l'incendio, il sei ottobre duemilanove, il Petruzzelli riapre. <break time="1.5s"/>
+
+
+=====================================
+SEI OTTOBRE 2009 - LA RINASCITA
+-------------
+
+Sei ottobre duemilanove. <break time="0.6s"/>
+
+Piazza Petruzzelli è piena. <break time="0.4s"/> Migliaia di persone in strada. <break time="0.4s"/> Schermi giganti. <break time="0.4s"/> Trasmissione in diretta TV. <break time="0.5s"/> Dentro il teatro, riaperto, restaurato in stile originale, pubblico in tenuta da gala. <break time="1.0s"/>
+
+Sul podio: Riccardo Muti. <break time="0.5s"/> Quello stesso direttore d'orchestra che, da giovane, aveva diretto qui negli anni settanta. <break time="0.4s"/> Adesso, sessantanove anni, dirige il concerto inaugurale del Petruzzelli ricostruito. <break time="1.2s"/>
+
+In cartellone: Verdi. <break time="0.4s"/> "Va pensiero" dal Nabucco, come finale simbolico. <break time="0.5s"/> Il coro degli ebrei prigionieri che sognano la libertà. <break time="0.4s"/> Bari che, dopo diciotto anni, ritrova il suo teatro. <break time="1.0s"/>
+
+L'interno è stato rifatto come l'originale. <break time="0.4s"/> Cupola di legno. <break time="0.4s"/> Cinque ordini di palchi. <break time="0.4s"/> Stesso ferro di cavallo. <break time="0.5s"/> Acustica ricostruita dagli ingegneri del suono. <break time="0.4s"/> Il pubblico, all'apertura, applaude per tre minuti prima della prima nota. <break time="1.2s"/>
+
+Dal duemilanove a oggi, il Petruzzelli ha ripreso. <break time="0.4s"/> Stagione lirica, concerti, balletto, opera contemporanea. <break time="0.5s"/> Caruso non c'è più, ovviamente. <break time="0.4s"/> Ma Bari ha di nuovo un teatro. <break time="0.4s"/> Un teatro vero. <break time="1.5s"/>
+
+
+=====================================
+CHIUSURA
+-------------
+
+Tre teatri. <break time="0.5s"/> In mezzo chilometro quadrato. <break time="1.0s"/>
+
+Il Piccinni, costruito nel milleottocentocinquantaquattro, è ancora qui. <break time="0.4s"/> Funziona. <break time="0.4s"/> Stagione di prosa, principalmente. <break time="0.5s"/> Più piccolo, più intimo. <break time="0.4s"/> Settecento posti. <break time="1.0s"/>
+
+Il Petruzzelli, costruito nel millenovecentotré, distrutto nel millenovecentonovantuno, rifatto nel duemilanove, è di nuovo qui. <break time="0.4s"/> Duemiladuecento posti. <break time="0.4s"/> Cupola di legno. <break time="0.4s"/> Stagione lirica internazionale. <break time="1.0s"/>
+
+Il Margherita, costruito nel millenovecentoquattordici su palafitte sul mare per aggirare un monopolio, ha chiuso negli anni settanta. <break time="0.4s"/> Restato abbandonato per quarant'anni. <break time="0.4s"/> Riaperto nel duemiladiciotto come museo di arte contemporanea. <break time="1.0s"/>
+
+Tutti e tre, ancora qui. <break time="0.5s"/> Tutti e tre, sopravvissuti. <break time="1.2s"/>
+
+E il motivo è uno solo. <break time="0.8s"/>
+
+La borghesia barese, una volta, ha creduto che cultura fosse difesa. <break time="0.4s"/> Difesa identitaria. <break time="0.5s"/> Difesa contro il provincialismo del Sud. <break time="0.4s"/> Difesa contro l'idea che, se sei a Bari, automaticamente non conti. <break time="1.0s"/>
+
+Ha messo soldi propri. <break time="0.4s"/> Ha rivendicato la dignità. <break time="0.4s"/> Ha costruito tre edifici per dire al mondo: noi, qui, contiamo. <break time="1.0s"/>
+
+E adesso che camminate tra i tre teatri, sappiate che state attraversando una promessa che una città si è fatta, centosessanta anni fa. <break time="0.5s"/> Una promessa che è stata mantenuta. <break time="0.4s"/> Tre volte. <break time="1.5s"/>
+
+Il resto è dentro.
