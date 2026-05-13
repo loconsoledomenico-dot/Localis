@@ -132,12 +132,33 @@ def generate_chunk_mp3(client, text: str, voice_id: str, model: str, out_path: P
 
 
 def concat_mp3_files(parts: list[Path], dest: Path) -> None:
-    """Binary concat of MP3 files with same encoding (44.1kHz/128kbps).
-    Works on modern players; for studio-grade output use ffmpeg instead.
+    """Concatenate MP3 chunks into a single playable file.
+
+    Naive binary concat produces an MP3 whose declared duration in the VBR/Xing
+    header is only the first chunk's length — browsers then misbehave on seek
+    (chapter clicks restart from 0, progress bar wraps, etc).
+
+    Use ffmpeg (`-c copy`) to re-multiplex the audio data into a single MP3
+    stream with a correct frame index, no re-encoding.
     """
-    with open(dest, "wb") as out:
-        for p in parts:
-            out.write(p.read_bytes())
+    try:
+        import imageio_ffmpeg
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        print("  [WARN] imageio-ffmpeg not installed — falling back to binary concat.")
+        print("         Result MP3 will have broken VBR header (player seek issues).")
+        print("         Install: pip install imageio-ffmpeg")
+        with open(dest, "wb") as out:
+            for p in parts:
+                out.write(p.read_bytes())
+        return
+
+    import subprocess
+    concat_input = "concat:" + "|".join(str(p).replace("\\", "/") for p in parts)
+    cmd = [ffmpeg, "-y", "-loglevel", "error", "-i", concat_input, "-c:a", "copy", str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit(f"[ERR] ffmpeg concat failed: {r.stderr.strip()}")
 
 
 def main() -> int:
