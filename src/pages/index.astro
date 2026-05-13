@@ -2,7 +2,6 @@
 export const prerender = true;
 import Layout from '../components/Layout.astro';
 import Hero from '../components/Hero.astro';
-import TrailerPlayer from '../components/TrailerPlayer.astro';
 import PriceCard from '../components/PriceCard.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 import JourneyOverview from '../components/JourneyOverview.astro';
@@ -11,13 +10,6 @@ import StatsBlock from '../components/StatsBlock.astro';
 import StepsBlock from '../components/StepsBlock.astro';
 import AuthorsBlock from '../components/AuthorsBlock.astro';
 import BariMap from '../components/BariMap.astro';
-import { getCollection } from 'astro:content';
-
-const liveGuides = (await getCollection('guides'))
-  .filter((g) => g.data.city === 'bari' && g.data.status === 'live')
-  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
-
-const featuredTrailer = liveGuides[0]; // Bari Vecchia
 ---
 <Layout
   title="Localis — audioguide narrative di Bari"
@@ -25,24 +17,6 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   lang="it"
 >
   <Hero lang="it" />
-
-  {/* TRAILER — primary action: prova prima di comprare */}
-  <section id="assaggio" class="bg-surface">
-    <div class="max-w-narrow mx-auto px-md py-2xl lg:py-3xl">
-      <SectionDivider label="Sessanta secondi prima di decidere" />
-      {featuredTrailer && (
-        <TrailerPlayer
-          src={featuredTrailer.data.audio_trailer_path}
-          label={`Anteprima · ${featuredTrailer.data.title_it.split('—')[0].trim()}`}
-          lang="it"
-        />
-      )}
-      <p class="text-center font-display italic text-xl sm:text-2xl text-ink-muted mt-lg max-w-prose mx-auto leading-snug">
-        Fermati. Guarda il mare davanti a te.<br />
-        Questo non è uno sfondo: è il posto dove tutto è successo.
-      </p>
-    </div>
-  </section>
 
   {/* JOURNEY — i cinque gesti dell'esperienza */}
   <JourneyOverview lang="it" />
@@ -64,7 +38,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
     plateNumber="Tav. II"
     caption="Bari Vecchia, mezzogiorno. Le colonne sono tutto ciò che resta di un cortile romano."
     ctaLabel="Ascolta il primo capitolo"
-    ctaHref="#assaggio"
+    ctaHref="/guide/bari-vecchia"
     imageSide="right"
     tiltDeg={1.5}
   />
@@ -182,7 +156,7 @@ const featuredTrailer = liveGuides[0]; // Bari Vecchia
   <AuthorsBlock lang="it" />
 
   {/* 3-PASSI — onboarding chiaro prima della chiusura */}
-  <StepsBlock lang="it" ctaHref="#assaggio" />
+  <StepsBlock lang="it" ctaHref="/guide/bari-vecchia" />
 
   {/* CLOSER */}
   <section class="bg-surface">

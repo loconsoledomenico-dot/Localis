@@ -3,7 +3,6 @@ export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Hero from '../../components/Hero.astro';
 import GuideCard from '../../components/GuideCard.astro';
-import TrailerPlayer from '../../components/TrailerPlayer.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
 import { getCollection } from 'astro:content';
@@ -11,8 +10,6 @@ import { getCollection } from 'astro:content';
 const guides = (await getCollection('guides'))
   .filter((g) => g.data.city === 'bari')
   .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
-
-const featuredTrailer = guides.find((g) => g.data.status === 'live');
 ---
 <Layout
   title="Localis — narrative audio guides for Puglia"
@@ -20,20 +17,6 @@ const featuredTrailer = guides.find((g) => g.data.status === 'live');
   lang="en"
 >
   <Hero lang="en" />
-
-  <section class="max-w-narrow mx-auto px-md py-2xl">
-    <SectionDivider label="Before you decide, hear this" />
-    {featuredTrailer && (
-      <TrailerPlayer
-        src={featuredTrailer.data.audio_trailer_path_en ?? featuredTrailer.data.audio_trailer_path}
-        label={`~60s · ${featuredTrailer.data.title_en.split('—')[0].trim()}`}
-        lang="en"
-      />
-    )}
-    <p class="text-center font-display italic text-2xl text-ink-muted mt-lg max-w-prose mx-auto">
-      "Stop. Look at the sea in front of you. This is not a backdrop. This is where everything really happened."
-    </p>
-  </section>
 
   <section id="guide" class="max-w-wrap mx-auto px-md py-2xl">
     <SectionDivider label="Choose your experience" />
