@@ -143,11 +143,12 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
 
 <style>
   /* === Container math ===
-   * 1100px == --container max width used across Localis (max-w-wrap)
-   * Side gutter on desktop = max(--spacing-lg, half of (vw - 1100) + lg)
+   * 1280px == --container max width used across Localis (max-w-wrap).
+   * Wider editorial spread for widescreen breathing room.
+   * Side gutter on desktop = max(--spacing-lg, half of (vw - 1280) + lg)
    */
   .feature-block {
-    --max-w: 1100px;
+    --max-w: 1280px;
     --side-gutter: max(var(--spacing-lg), calc((100vw - var(--max-w)) / 2 + var(--spacing-lg)));
 
     position: relative;
@@ -254,10 +255,19 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
   @media (min-width: 1024px) {
     .feature-block {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: var(--spacing-3xl);
+      /* Asymmetric editorial spread: text takes ≈58%, image ≈42%.
+       * Magazine convention — running text is the protagonist, the photo is the plate.
+       * Wider column-gap on widescreen lets the two columns breathe. */
+      column-gap: clamp(var(--spacing-3xl), 6vw, 6rem);
       align-items: center;
-      padding-block: clamp(var(--spacing-3xl), 8vw, var(--spacing-4xl));
+      padding-block: clamp(var(--spacing-4xl), 9vw, 9rem);
+    }
+
+    .feature-block-right {
+      grid-template-columns: 7fr 5fr;
+    }
+    .feature-block-left {
+      grid-template-columns: 5fr 7fr;
     }
 
     .feature-block-right .feature-image {

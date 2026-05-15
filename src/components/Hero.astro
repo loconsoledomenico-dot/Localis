@@ -22,7 +22,14 @@ const lede = lang === 'it'
 const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60s' : 'Listen a teaser · 60s';
 const ctaPrimaryHref = lang === 'it' ? '/guide/bari-vecchia' : '/en/guide/bari-vecchia';
 const ctaSecondary = lang === 'it' ? 'Vedi le guide' : 'See the guides';
-const microline = lang === 'it' ? 'Italiano e inglese · €4,99' : 'Italian and English · €4.99';
+
+const subClaim = lang === 'it'
+  ? 'Non ti diciamo dove mangiare. Non ti diciamo cosa evitare.'
+  : "We don't tell you where to eat. We don't tell you what to avoid.";
+
+const microline = lang === 'it'
+  ? 'Primi 60s gratis · rimborso 1-click entro 24h'
+  : 'First 60s free · 1-click refund within 24h';
 
 const plateCaption = lang === 'it'
   ? 'Cattedrale di San Sabino, Piazza dell\'Odegitria. La voce nelle cuffie racconta cosa sta guardando.'
@@ -48,9 +55,9 @@ const altText = lang === 'it'
 
     <!-- TEXT column -->
     <div class="hero-text">
-      <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
-        <span class="block font-light text-[clamp(2.4rem,6.4vw,4.4rem)]">{heading1}</span>
-        <span class="hero-h2 block font-body font-normal text-ink-muted mt-md text-[clamp(1.1rem,2.4vw,1.45rem)] leading-relaxed tracking-normal">{heading2}</span>
+      <h1 class="hero-h1 font-display text-ink leading-[0.94] tracking-[-0.02em] m-0">
+        <span class="block font-light text-[clamp(2.4rem,7.2vw,5.6rem)]">{heading1}</span>
+        <span class="hero-h2 block font-body font-normal text-ink-muted mt-md text-[clamp(1.1rem,1.8vw,1.4rem)] leading-relaxed tracking-normal max-w-[40ch]">{heading2}</span>
       </h1>
 
       <p class="hero-lede mt-lg text-base sm:text-lg leading-relaxed text-ink-muted max-w-[44ch]">
@@ -73,7 +80,11 @@ const altText = lang === 'it'
         </a>
       </div>
 
-      <p class="hero-microline font-display italic text-sm text-ink-subtle mt-md max-w-[44ch]">
+      <p class="hero-claim font-display italic text-ink mt-lg text-[clamp(1.05rem,2.2vw,1.35rem)] leading-snug max-w-[44ch]">
+        {subClaim}
+      </p>
+
+      <p class="hero-microline font-body text-sm text-ink-subtle mt-sm max-w-[44ch]">
         {microline}
       </p>
     </div>
@@ -103,12 +114,12 @@ const altText = lang === 'it'
 
 <style>
   /* === Container math (mirrors FeatureBlock so the bleed lines up) ===
-   * 1100px is the standard container width across Localis (max-w-wrap).
-   * --side-gutter pushes content inward to align with the centred container,
-   * and is used to bleed the photo to the right viewport edge on lg+.
+   * 1280px is the standard container width across Localis (max-w-wrap).
+   * Magazine-editorial wider container that breathes on widescreen and ultrawide.
+   * --side-gutter pushes content inward to align with the centred container.
    */
   .hero {
-    --max-w: 1100px;
+    --max-w: 1280px;
     --side-gutter: max(var(--spacing-lg), calc((100vw - var(--max-w)) / 2 + var(--spacing-lg)));
   }
 
@@ -198,11 +209,14 @@ const altText = lang === 'it'
   @media (min-width: 1024px) {
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: var(--spacing-2xl);
+      /* Asymmetric editorial spread: text dominates (≈58%), photo is the support (≈42%).
+       * Italian magazine convention — body of text is the headline, photo is the caption.
+       * Wider column-gap on widescreen lets the spread breathe. */
+      grid-template-columns: 7fr 5fr;
+      column-gap: clamp(var(--spacing-3xl), 6vw, 6rem);
       align-items: center;
       padding-inline: var(--side-gutter);
-      padding-bottom: clamp(var(--spacing-3xl), 7vw, var(--spacing-4xl));
+      padding-bottom: clamp(var(--spacing-4xl), 8vw, 8rem);
     }
 
     .hero-text {
@@ -216,6 +230,10 @@ const altText = lang === 'it'
       grid-row: 1;
       width: 100%;
       gap: var(--spacing-sm);
+      /* Photo nudged down slightly so the masthead's optical line of text and image
+       * doesn't read as perfectly centered — break the grid for editorial tension. */
+      align-self: end;
+      padding-bottom: var(--spacing-md);
     }
 
     /* Keep the editorial 4/5 portrait — no stretch, no bleed */
@@ -256,6 +274,7 @@ const altText = lang === 'it'
 
   .hero-lede,
   .hero-actions,
+  .hero-claim,
   .hero-microline {
     opacity: 0;
     transform: translateY(10px);
@@ -263,7 +282,8 @@ const altText = lang === 'it'
   }
   .hero-lede      { animation-delay: 0.75s; }
   .hero-actions   { animation-delay: 0.9s; }
-  .hero-microline { animation-delay: 1.05s; }
+  .hero-claim     { animation-delay: 1.05s; }
+  .hero-microline { animation-delay: 1.2s; }
 
   .hero-figure {
     opacity: 0;
@@ -289,7 +309,8 @@ const altText = lang === 'it'
     .hero-h1 > .hero-h2 { animation-delay: 0.25s; animation-duration: 0.5s; }
     .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
     .hero-actions { animation-delay: 0.45s; animation-duration: 0.4s; }
-    .hero-microline { animation-delay: 0.55s; animation-duration: 0.4s; }
+    .hero-claim { animation-delay: 0.55s; animation-duration: 0.4s; }
+    .hero-microline { animation-delay: 0.65s; animation-duration: 0.4s; }
     .hero-figure { animation-delay: 0.2s; animation-duration: 0.5s; }
   }
 
@@ -299,6 +320,7 @@ const altText = lang === 'it'
     .hero-h1 > span,
     .hero-lede,
     .hero-actions,
+    .hero-claim,
     .hero-microline,
     .hero-figure {
       animation: none;

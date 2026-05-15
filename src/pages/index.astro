@@ -18,7 +18,7 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
 >
   <Hero lang="it" />
 
-  {/* FEATURE BLOCK — Storie firmate (merge ex-FB1 storie + ex-FB3 autori) */}
+  {/* FEATURE BLOCK — Storie firmate (image left — alterna con Hero che ha foto a destra) */}
   <FeatureBlock
     eyebrow="Storie · Autori — Tav. II"
     heading="Storie firmate."
@@ -36,11 +36,11 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     caption="Bari Vecchia, mezzogiorno. Le colonne sono tutto ciò che resta di un cortile romano."
     ctaLabel="Conosci gli autori"
     ctaHref="/about"
-    imageSide="right"
-    tiltDeg={1.5}
+    imageSide="left"
+    tiltDeg={-1.5}
   />
 
-  {/* FEATURE BLOCK — Si apre con un link (image left) */}
+  {/* FEATURE BLOCK — Si apre con un link (image right — alterna con FB II) */}
   <FeatureBlock
     eyebrow="Strumento — Tav. III"
     heading="Si apre con un link."
@@ -60,8 +60,8 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     caption="Aperto da un link. Senza app."
     ctaLabel="Vedi le guide"
     ctaHref="#guide"
-    imageSide="left"
-    tiltDeg={-1.5}
+    imageSide="right"
+    tiltDeg={1.5}
   />
 
   {/* STATS — numeri onesti, niente vanity metrics */}
@@ -72,9 +72,9 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
 
   {/* PRICING — subito dopo le 6 schede, momento decisione single vs bundle */}
   <section id="prezzi" class="bg-surface">
-    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <SectionDivider label="Prendi quella che ti serve" />
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[48rem] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[56rem] mx-auto">
         <PriceCard
           product="single"
           guideSlug="bari-vecchia"
@@ -83,6 +83,7 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
             'Una guida a tua scelta',
             'Accesso illimitato, per sempre',
             'Italiano e inglese',
+            'Rimborso 1-click entro 24h',
           ]}
         />
         <PriceCard
@@ -93,7 +94,7 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
             'Bari Vecchia · Porto · San Nicola',
             'Sequenza progettata · ~4h di cammino',
             'Risparmi €4,98',
-            'Per sempre tue',
+            'Rimborso 1-click entro 24h',
           ]}
         />
       </div>
@@ -119,7 +120,6 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
       </div>
 
       <p class="text-center text-base sm:text-lg leading-relaxed text-ink-muted max-w-[52ch] mx-auto">
-        Non ti diciamo dove mangiare. Non ti diciamo cosa evitare.<br class="hidden sm:inline" />
         Ti raccontiamo le storie vere dei luoghi — mentre ci stai dentro.
       </p>
     </div>

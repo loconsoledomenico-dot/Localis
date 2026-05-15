@@ -19,25 +19,25 @@ const guides = (await getCollection('guides'))
 >
   <Hero lang="en" />
 
-  <section id="guide" class="max-w-wrap mx-auto px-md py-2xl">
+  <section id="guide" class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
     <SectionDivider label="Choose your experience" />
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
       {guides.map((g, i) => (
         <GuideCard guide={g} lang="en" index={i} />
       ))}
     </div>
   </section>
 
-  <section class="max-w-narrow mx-auto px-md py-2xl text-center">
+  <section class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl text-center">
     <p class="font-display italic text-3xl text-ink mb-md leading-tight">Regular audio guides tell you what.<br />Ours tell you why.</p>
     <p class="text-base text-ink-muted leading-relaxed max-w-prose mx-auto">
-      You won't find advice on where to eat or what to avoid. Here you listen to real stories, built on the real places of the city. And while you listen, you are exactly where it all happened.
+      Real stories, built on the real places of the city. While you listen, you are exactly where it all happened.
     </p>
   </section>
 
-  <section id="prezzi" class="max-w-wrap mx-auto px-md py-2xl">
+  <section id="prezzi" class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
     <SectionDivider label="Choose your plan" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[48rem] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[56rem] mx-auto">
       <PriceCard
         product="single"
         guideSlug="bari-vecchia"
@@ -46,6 +46,7 @@ const guides = (await getCollection('guides'))
           '1 guide of your choice',
           'Unlimited access, forever',
           'Italian and English',
+          '1-click refund within 24h',
         ]}
       />
       <PriceCard
@@ -56,7 +57,7 @@ const guides = (await getCollection('guides'))
           'Old Bari — Inside the City',
           'Port of Bari — Where It All Happened',
           'San Nicola — The Stolen Saint',
-          'Unlimited access, forever',
+          '1-click refund within 24h',
         ]}
       />
     </div>

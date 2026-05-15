@@ -35,10 +35,13 @@
   --color-error: oklch(54% 0.18 25);
 
   /* === Typography ===
-   * --font-* tokens auto-generate utilities: font-display, font-body
+   * --font-* tokens auto-generate utilities: font-display, font-body.
+   * Per .impeccable.md Design Context: Spectral (display) + Schibsted Grotesk (body).
+   * Editorial Italiana del '60 — Spectral italic for emphasis, Schibsted humanist sans
+   * for body. Both load via Google Fonts in Layout.astro. Fraunces + Inter banned.
    */
-  --font-display: 'Fraunces', 'Tiempos Headline', Georgia, serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Spectral', 'Tiempos Headline', Georgia, serif;
+  --font-body: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
 
   /* === Type scale (modular 1.25 ratio) ===
    * --text-* tokens auto-generate utilities: text-xs, text-base, text-4xl, etc.
@@ -112,11 +115,15 @@
  * so we declare them explicitly via @utility.
  */
 @utility max-w-wrap {
-  max-width: 1100px;
+  max-width: 1280px;
 }
 
 @utility max-w-narrow {
   max-width: 720px;
+}
+
+@utility max-w-steps {
+  max-width: 960px;
 }
 
 @utility max-w-prose {
