@@ -4,6 +4,7 @@ Voice: George. Model: eleven_multilingual_v2.
 =====================================
 INTRODUCTION
 -------------
+voice: roger
 
 Four thousand years of history. <break time="0.6s"/> In less than one square kilometre. <break time="1.2s"/>
 
@@ -31,6 +32,7 @@ We start at the Castello Svevo. <break time="0.4s"/> Around an hour and a half o
 =====================================
 CASTELLO SVEVO
 -------------
+voice: roger
 
 Castello Svevo. <break time="1.0s"/>
 
@@ -64,13 +66,11 @@ From Bari to Poland, through one woman. <break time="1.5s"/>
 
 Eighteen-hundreds. <break time="0.5s"/> The castle stops being the seat of power. <break time="0.4s"/> It becomes a prison. <break time="0.4s"/> Then a barracks. <break time="0.6s"/> Almost a century with prisoners and soldiers, where nobles used to be. <break time="1.5s"/>
 
-But the strangest thing happened in the nineteen-eighties. <break time="0.8s"/>
+And then the archaeological surprise. <break time="0.8s"/>
 
-Excavations inside the castle. <break time="0.4s"/> They found an entire early Christian church. <break time="0.4s"/> Apse, baptismal font, burials in the floor. <break time="0.8s"/>
+Excavations inside the castle have revealed late antique and early Christian structures. <break time="0.4s"/> Beneath the Norman-Swabian foundations. <break time="0.8s"/>
 
-Beneath Frederick the Second's thirteenth-century castle, a church two thousand years old. <break time="1.0s"/>
-
-It can be visited. <break time="0.5s"/> The internal route takes you down. <break time="1.5s"/>
+Below the thirteenth-century castle, there is yet another layer of city. <break time="0.5s"/> Visitable, following the internal route. <break time="1.5s"/>
 
 Ten dominations. <break time="0.4s"/> Three religions. <break time="0.4s"/> One city that, beneath all of this, has stayed itself. <break time="1.2s"/>
 
@@ -80,6 +80,7 @@ Bari Vecchia isn't read. <break time="0.4s"/> It's walked.
 =====================================
 ARCO BASSO
 -------------
+voice: roger
 
 Arco Basso. <break time="1.0s"/>
 
@@ -107,6 +108,7 @@ It isn't decoration. <break time="0.5s"/> It's a sign of belonging.
 =====================================
 ORECCHIETTE
 -------------
+voice: roger
 
 Orecchiette. <break time="1.0s"/>
 
@@ -136,6 +138,7 @@ No. <break time="0.5s"/> It isn't a trap. <break time="0.4s"/> It's a tradition 
 =====================================
 CAPE DU TURCHE
 -------------
+voice: alice
 
 Cape du Turche. <break time="1.0s"/>
 
@@ -167,6 +170,7 @@ The witch who beheads the emir is what history could not do. <break time="0.5s"/
 =====================================
 I BASSI
 -------------
+voice: roger
 
 I Bassi. <break time="1.0s"/>
 
@@ -194,6 +198,7 @@ And when you look into an open basso as you pass — <break time="0.5s"/> rememb
 =====================================
 SAN SABINO CATHEDRAL
 -------------
+voice: roger
 
 San Sabino Cathedral. <break time="1.0s"/>
 
@@ -219,12 +224,13 @@ Inside, there are columns and marbles taken from earlier buildings. <break time=
 
 And underneath, there's the Succorpo. <break time="0.5s"/> Open to visitors. <break time="0.6s"/> Remains of the Byzantine cathedral, mosaics from the original floor, traces of a Roman road. <break time="0.5s"/> Three churches in the same spot, one on top of the other. <break time="1.2s"/>
 
-And in front of the cathedral, on Piazza Odegitria — <break time="0.4s"/> there's a place called U Marinaridd. <break time="0.5s"/> A historic shop of sweets and liqueurs, opened in 1865. <break time="0.5s"/> In 1973 it was bought by Domenico Sifanno, who had started working there at the age of seven. <break time="0.5s"/> His family still runs it.
+And in front of the cathedral, on Piazza Odegitria — <break time="0.4s"/> there's a place called U Marinaridd. <break time="0.5s"/> A historic shop of sweets and liqueurs, opened in the nineteenth century. <break time="0.4s"/> Still run today, generation after generation, by the same Bari family.
 
 
 =====================================
 BASILICA OF SAN NICOLA
 -------------
+voice: roger
 
 The Basilica of San Nicola. <break time="1.0s"/>
 
@@ -242,6 +248,7 @@ From that theft, an empire of pilgrimages was born. <break time="0.4s"/> And, ev
 =====================================
 UNDERGROUND BARI
 -------------
+voice: alice
 
 Underground Bari. <break time="1.0s"/>
 
@@ -271,6 +278,7 @@ Every era has left something. <break time="0.4s"/> And nothing, truly nothing, h
 =====================================
 FORTINO DI SANT'ANTONIO
 -------------
+voice: roger
 
 Fortino di Sant'Antonio. <break time="1.0s"/>
 
@@ -296,6 +304,7 @@ On one side, the sea. <break time="0.4s"/> On the other, the rooftops of Bari Ve
 =====================================
 SANTA SCOLASTICA MUSEUM
 -------------
+voice: roger
 
 Santa Scolastica Museum. <break time="1.0s"/>
 
@@ -315,6 +324,7 @@ What is hidden out there, here is explained.
 =====================================
 PIAZZA MERCANTILE
 -------------
+voice: roger
 
 Piazza Mercantile. <break time="1.0s"/>
 
@@ -340,6 +350,7 @@ Before they had even set foot in the city, they already knew how justice worked.
 =====================================
 PIAZZA DEL FERRARESE
 -------------
+voice: roger
 
 Piazza del Ferrarese. <break time="1.0s"/>
 

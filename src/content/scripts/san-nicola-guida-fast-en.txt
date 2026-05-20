@@ -1,23 +1,25 @@
-LOCALIS — SAN NICOLA · FAST version
-Narrative audio guide, 2026 pacing, mixed tone per chapter (Angela / Saviano / storyteller).
-Voice: George. Model: eleven_multilingual_v2.
+LOCALIS — SAN NICOLA · revised "more intense" version
+Multi-voice: warm narrator + dramatic voice for tense chapters.
 =====================================
 INTRODUCTION
 -------------
+voice: brian
 
 Bari did not find a saint. <break time="0.8s"/> It went and took one. <break time="1.2s"/>
 
-In ten eighty-seven, sixty-two sailors from Bari left this port. <break time="0.5s"/> Destination: Myra, in Turkey. <break time="0.5s"/> Mission: to take the bones of Saint Nicholas from his tomb. <break time="0.4s"/> By force, if necessary. <break time="1.2s"/>
+May ninth, ten eighty-seven. <break time="0.5s"/> From this port arrive three ships. <break time="0.4s"/> On board, sixty-two sailors from Bari and — inside a wooden crate — the bones of a bishop who has been dead for seven hundred years. <break time="0.6s"/> Bones stolen, at night, from a church in Myra, in Turkey. <break time="0.5s"/> They bring them here. <break time="0.4s"/> They set them down. <break time="0.4s"/> And they never leave again. <break time="1.5s"/>
 
-They took them. <break time="0.6s"/> They placed them down here. <break time="0.4s"/> And nine hundred and forty years later, they are still here. <break time="1.2s"/>
+The building in front of you, the Basilica of San Nicola, was built for those bones. <break time="0.4s"/> One hundred and eight years of construction. <break time="0.4s"/> Norman sovereigns finance it. <break time="0.5s"/> One Pope, Urban the Second, comes here in person to convene a council that tries — for the first time in decades — to speak to the Eastern Church as equal. <break time="1.0s"/>
 
-What you see in front of you, the Basilica of San Nicola, was built for them. <break time="0.5s"/> For those bones. <break time="0.4s"/> One hundred and eight years of construction. <break time="0.5s"/> Four Norman kings paid for the stone. <break time="0.4s"/> One Pope, Urban the Second, preached the First Crusade from here. <break time="1.0s"/>
+And inside that sarcophagus, even today, every year, a transparent liquid seeps out. <break time="0.4s"/> They call it "manna". <break time="0.4s"/> No one has ever fully explained it. <break time="0.5s"/> And it is documented in the very first chronicles of the translation, written in ten eighty-seven. <break time="1.2s"/>
 
-And inside that sarcophagus, still today, every year, a transparent liquid seeps out. <break time="0.5s"/> They call it "manna". <break time="0.5s"/> Nobody knows exactly where it comes from. <break time="1.2s"/>
+In the next twenty minutes, I'll tell you three things. <break time="0.6s"/>
 
-In the next twenty-two minutes, I will tell you three things. <break time="0.6s"/>
+Who Nicholas of Myra actually was. <break time="0.4s"/> A real historical bishop, who lived in the fourth century, survivor of one of the last great persecutions of Christians. <break time="0.5s"/>
 
-Who Nicholas of Myra was — a real historical man, who lived in the fourth century. <break time="0.4s"/> How he ended up here, inside an operation that today we would call religious terrorism. <break time="0.5s"/> And why his name, through Holland and America, became Santa Claus. <break time="1.5s"/>
+How he got here. <break time="0.4s"/> Inside a mission that we'd call, today, religious terrorism. <break time="0.5s"/>
+
+And why his name, through Holland and through America, became Santa Claus. <break time="0.4s"/> Yes, that one. <break time="0.4s"/> The Turkish bishop. <break time="0.4s"/> Under our feet. <break time="1.5s"/>
 
 Ready. <break time="0.4s"/> Let's go in.
 
@@ -25,250 +27,344 @@ Ready. <break time="0.4s"/> Let's go in.
 =====================================
 WHO NICHOLAS OF MYRA WAS
 -------------
+voice: brian
 
-Year two seventy after Christ. <break time="0.6s"/>
+Year two hundred and seventy, after Christ. <break time="0.6s"/>
 
-In Patara, today in Turkey, a boy is born. <break time="0.4s"/> His parents are well-off Christians. <break time="0.4s"/> They name him Nicholas. <break time="0.8s"/>
+On the Lycian coast — today in Turkey — there is a small port. <break time="0.4s"/> It's called Patara. <break time="0.5s"/> A boy is born there. <break time="0.4s"/> Well-off Christian parents. <break time="0.4s"/> They name him Nicholas. <break time="1.0s"/>
 
-When he is twenty, a plague hits the region. <break time="0.5s"/> His parents die. <break time="0.4s"/> Nicholas inherits a fortune. <break time="0.6s"/> He gives it all to the poor. <break time="1.0s"/>
+Everything we know about the historical Nicholas comes from hagiographies. <break time="0.5s"/> Documents written decades after his death. <break time="0.4s"/> So let's treat them for what they are — crystallised tradition, not contemporary report. <break time="0.8s"/>
 
-In his early thirties, he is elected bishop of Myra. <break time="0.4s"/> A city about seventy kilometres away, on the Lycian coast. <break time="0.5s"/> Around the same time, the emperor Diocletian launches one of the last great persecutions of Christians. <break time="0.6s"/> Nicholas is arrested. <break time="0.4s"/> Imprisoned for years. <break time="0.4s"/> Tortured. <break time="0.6s"/> He does not recant. <break time="1.0s"/>
+But even so, some facts hold up. <break time="1.0s"/>
 
-In three thirteen, Constantine issues the Edict of Milan. <break time="0.4s"/> The persecution ends. <break time="0.4s"/> Nicholas leaves prison. <break time="0.4s"/> Goes back to being bishop. <break time="1.0s"/>
+At twenty, a plague hits the region. <break time="0.5s"/> His parents die. <break time="0.4s"/> He inherits the family fortune. <break time="0.4s"/> He gives it away. <break time="0.4s"/> All of it. <break time="1.0s"/>
 
-In three twenty-five, he may have attended the First Council of Nicaea. <break time="0.5s"/> The council that defined, precisely, what Christianity was. <break time="0.6s"/> There is a legend that says Nicholas, in front of Constantine, slapped his theological opponent, the heretic Arius. <break time="0.5s"/> Probably a legend. <break time="0.4s"/> But even if it did not happen, it is part of how Bari remembers him today. <break time="1.2s"/>
+He becomes bishop of Myra. <break time="0.4s"/> Seventy kilometres further along the coast. <break time="0.6s"/>
 
-He dies on December sixth, three forty-three. <break time="0.5s"/> In Myra. <break time="0.4s"/> Seventy-three years old. <break time="0.6s"/> Buried in the city's cathedral. <break time="1.0s"/>
+And in those years — we are between the third and fourth centuries — Emperor Diocletian unleashes one of the last and most brutal persecutions against the Christians. <break time="0.8s"/>
 
-Remember that date. <break time="0.5s"/> December sixth. <break time="0.4s"/> In eight hundred years, that will be the night when, across half of Europe, children will receive gifts. <break time="1.5s"/>
+Nicholas is arrested. <break time="0.4s"/> Thrown into prison. <break time="0.4s"/> Years there. <break time="0.4s"/> Tortured. <break time="0.5s"/> He does not recant. <break time="1.2s"/>
+
+Three thirteen, AD. <break time="0.5s"/> Constantine issues the Edict of Milan. <break time="0.4s"/> The persecution ends. <break time="0.4s"/> The prisons open. <break time="0.4s"/> Nicholas walks out. <break time="0.5s"/> Returns to Myra. <break time="0.4s"/> Resumes his bishopric. <break time="1.0s"/>
+
+Perhaps — not certain, but perhaps — he participates in the First Council of Nicaea in three twenty-five. <break time="0.5s"/> The council that decides what Christianity actually is. <break time="0.4s"/> A legend has him — probably a legend — slapping his theological opponent, the heretic Arius, in front of the emperor. <break time="0.6s"/> A scene that may never have happened. <break time="0.4s"/> But that in Bari, today, gets repeated as if it were history. <break time="1.0s"/>
+
+He dies on December sixth, three forty-three. <break time="0.5s"/> Seventy-three years old. <break time="0.4s"/> They bury him in the cathedral of Myra. <break time="1.0s"/>
+
+And here — remember that date. <break time="0.4s"/> December sixth. <break time="0.6s"/>
+
+Because eight hundred years later, in three northern European countries, children will receive gifts on exactly that night. <break time="0.4s"/> Then, via an Atlantic crossing and an American advertising campaign, that date will move to the twenty-fifth. <break time="0.5s"/> Same figure. <break time="0.4s"/> Different name. <break time="0.4s"/> We'll get there. <break time="1.5s"/>
 
 
 =====================================
 THREE MIRACLES THAT MADE A SAINT
 -------------
+voice: brian
 
-Three miracles. <break time="0.5s"/> All told during his life or shortly after. <break time="0.4s"/> All turned into symbols. <break time="1.0s"/>
+Three miracles. <break time="0.5s"/> All recounted in the hagiographies. <break time="0.4s"/> All turned into symbols that would last for millennia. <break time="1.0s"/>
 
 First. <break time="0.8s"/>
 
-In Myra, there is a widowed father. <break time="0.4s"/> Three daughters. <break time="0.4s"/> Without a dowry, none of them can marry. <break time="0.5s"/> Without a husband, they will end up on the streets. <break time="0.6s"/> Nicholas, at night, tosses three bags of gold through the window. <break time="0.5s"/> The three daughters marry. <break time="1.0s"/>
+In Myra, there is a widowed father. <break time="0.4s"/> Three daughters. <break time="0.5s"/> And a practical problem — at the time, a daughter without a dowry doesn't get married. <break time="0.4s"/> A daughter who doesn't marry, in many cases, ends up on the street. <break time="0.4s"/> Literally. <break time="0.8s"/>
 
-Those three bags, falling into the stockings hung out to dry, would become, a thousand years later, the tradition of the Christmas stocking. <break time="0.4s"/> And the gifts inside them. <break time="0.5s"/> Everything starts here. <break time="1.2s"/>
+Nicholas hears about it. <break time="0.4s"/> At night, in silence, he passes under the window of that house. <break time="0.5s"/> Throws in a bag of gold. <break time="0.4s"/> A dowry for the first daughter. <break time="0.5s"/> He repeats the scene on three different nights. <break time="0.4s"/> Three bags. <break time="0.4s"/> Three dowries. <break time="0.5s"/> Three daughters saved. <break time="1.0s"/>
+
+And now, listen. <break time="0.6s"/>
+
+In medieval northern hagiographies, those three bags become an image. <break time="0.4s"/> Three golden balls falling into something hanging from the windowsill to dry. <break time="0.5s"/> A stocking. <break time="0.6s"/> Yes — a stocking. <break time="0.5s"/> A thousand years later, that becomes the tradition of stockings hung by the chimney for Christmas gifts. <break time="0.5s"/> All from a bag of coins thrown at Myra. <break time="1.5s"/>
 
 Second miracle. <break time="0.8s"/>
 
-A butcher in Myra kills three children, cuts them to pieces, and hides them in a barrel of salt, to sell the meat. <break time="0.5s"/> Nicholas, passing by, finds out. <break time="0.4s"/> Opens the barrel. <break time="0.4s"/> Resurrects the three children. <break time="0.8s"/>
+In Myra there is a butcher. <break time="0.4s"/> He kidnaps three children. <break time="0.4s"/> Kills them. <break time="0.4s"/> Dismembers them. <break time="0.4s"/> Hides them in a brine barrel to sell their flesh as meat. <break time="0.6s"/>
 
-From this story, a fact: across Europe, Saint Nicholas becomes the patron of children. <break time="0.4s"/> The saint who protects childhood. <break time="0.5s"/> The saint who, indeed, will bring the gifts. <break time="1.0s"/>
+Nicholas, passing through, discovers the barrel. <break time="0.4s"/> Opens it. <break time="0.5s"/> Resurrects the three children. <break time="1.0s"/>
+
+From that day on, in all of medieval Christianity, San Nicola becomes the patron saint of children. <break time="0.4s"/> The saint who defends them. <break time="0.4s"/> The saint who, in many European traditions, will bring them gifts. <break time="1.2s"/>
 
 Third. <break time="0.8s"/>
 
-A ship in the Lycian sea, in a storm. <break time="0.4s"/> The sailors pray to Nicholas. <break time="0.4s"/> He appears on the ship, calms the wind, saves the crew. <break time="0.6s"/> From that day, he becomes patron of sailors. <break time="1.0s"/>
+A ship in the Lycian sea. <break time="0.4s"/> Storm. <break time="0.4s"/> The sailors are about to drown. <break time="0.5s"/> They pray to Nicholas. <break time="0.4s"/> He appears on deck. <break time="0.4s"/> Calms the wind. <break time="0.4s"/> The ship is saved. <break time="0.8s"/>
 
-And four hundred years later, it will be sixty-two sailors who come to get him. <break time="1.5s"/>
+From that day on, he becomes patron of sailors. <break time="0.5s"/>
+
+Keep this in mind. <break time="0.6s"/>
+
+Seven hundred years later, it will be exactly sixty-two sailors who come to fetch him. <break time="0.5s"/> To take him with them. <break time="0.4s"/> Home. <break time="1.5s"/>
 
 
 =====================================
 THE TOMB OF MYRA
 -------------
+voice: brian
 
-Between three forty-three, the year of his death, and ten eighty-seven, the year of the theft. <break time="0.5s"/> Seven hundred and forty-four years of pilgrimage. <break time="1.0s"/>
+Between three forty-three — the year Nicholas dies — and ten eighty-seven, the year of the theft. <break time="0.4s"/> Seven hundred and forty-four years. <break time="0.5s"/> In between, a tomb that never stops attracting people. <break time="1.2s"/>
 
-The tomb of Nicholas, in Myra, becomes one of the most important destinations of Eastern Christianity. <break time="0.4s"/> Pilgrims arrive from Constantinople, Greece, Syria, Egypt. <break time="0.5s"/> An Orthodox monastery is built around the cathedral to host them. <break time="1.2s"/>
+In Myra, the basilica built above the sepulchre becomes one of the most important destinations of Eastern Christianity. <break time="0.4s"/> Pilgrims arrive from Constantinople. <break time="0.4s"/> From Greece. <break time="0.4s"/> From Syria. <break time="0.4s"/> From Egypt. <break time="0.5s"/> They walk for months. <break time="0.4s"/> They come to touch the marble. <break time="0.4s"/> They come to take a small flask of sacred oil home. <break time="0.4s"/> They come because down there, in that tomb, is a man who — after death — keeps doing things. <break time="1.2s"/>
 
-Then, in ten seventy-one, something happens. <break time="0.8s"/>
+An Orthodox monastery, next to the basilica, hosts the pilgrims. <break time="0.4s"/> For seven centuries. <break time="0.5s"/> It works. <break time="0.4s"/> It thrives. <break time="1.0s"/>
 
-Battle of Manzikert. <break time="0.5s"/> The Byzantine army is destroyed by the Seljuk Turks. <break time="0.4s"/> From that day, Asia Minor begins falling into Turkish hands. <break time="0.5s"/> Slowly. <break time="0.4s"/> Province by province. <break time="1.0s"/>
+Then, in ten seventy-one, something breaks. <break time="0.8s"/>
 
-Myra enters the Turkish sphere of influence. <break time="0.5s"/> Christian pilgrimage becomes difficult. <break time="0.4s"/> The Christian cities of Italy start thinking the same thing: sooner or later, that tomb will be at risk. <break time="1.2s"/>
+Battle of Manzikert. <break time="0.5s"/> The Byzantine army, the one defending Christian Asia Minor, is destroyed in a single day by the Seljuk Turks. <break time="0.6s"/> From that moment on, the entire region begins to slip into Turkish-Muslim hands. <break time="0.4s"/> Slowly. <break time="0.4s"/> Province by province. <break time="0.4s"/> But irreversibly. <break time="1.2s"/>
 
-Venice is already thinking about it. <break time="0.5s"/> They want to take the bones of Saint Nicholas and bring them to the lagoon. <break time="0.4s"/> Their fleet is the best in the Mediterranean. <break time="0.4s"/> It is only a matter of time. <break time="1.0s"/>
+Myra falls inside the Turkish sphere of influence. <break time="0.4s"/> Christian pilgrimages become difficult. <break time="0.4s"/> Dangerous, even. <break time="0.5s"/> And in the port cities of Italy, a specific concern starts to spread. <break time="0.6s"/>
 
-Bari decides to move first. <break time="0.5s"/> April ten eighty-seven. <break time="1.5s"/>
+Sooner or later, that tomb will be lost. <break time="1.0s"/>
+
+The one thinking about this most is Venice. <break time="0.4s"/> Venice has the best fleet in the Mediterranean. <break time="0.4s"/> And, according to contemporary chronicles, was preparing an expedition to take Nicholas's bones to the lagoon before the Turks could touch them. <break time="0.6s"/>
+
+Bari finds out. <break time="0.6s"/>
+
+And decides to move first. <break time="0.5s"/> Immediately. <break time="0.4s"/> April, ten eighty-seven. <break time="1.5s"/>
 
 
 =====================================
 APRIL 1087 - THE PLAN
 -------------
+voice: charlie
 
-April ten eighty-seven. <break time="0.5s"/> Bari is governed by the Norman duke Roger Borsa, but in practice the seafaring class is in charge. <break time="0.6s"/> Secret meeting. <break time="0.5s"/> Sixty-two sailors. <break time="1.0s"/>
+April, ten eighty-seven. <break time="0.6s"/>
 
-Sixty-two. <break time="0.4s"/> We do not know all the names, but we know some. <break time="0.5s"/> The captain is called Matteo. <break time="0.4s"/> On board there is also a priest, named Lupo. <break time="0.6s"/> Another sailor, a certain Disigio, will write the chronicle of the expedition a few months later. <break time="0.4s"/> That chronicle is still readable. <break time="1.2s"/>
+On paper, Bari is ruled by the Norman duke Roger Borsa, son of Robert Guiscard. <break time="0.4s"/> In practice, in the city, the seafarers are in charge. <break time="0.5s"/> The ones who know the port at night. <break time="0.4s"/> The ones who know how many miles separate Bari from Constantinople, from Antioch, from Myra. <break time="1.2s"/>
 
-The plan is simple in its points, complicated in execution. <break time="0.8s"/>
+In a warehouse, one evening, sixty-two of them gather. <break time="0.6s"/>
 
-Three ships. <break time="0.4s"/> They will pretend to be pilgrims heading for the Holy Land. <break time="0.4s"/> They will arrive in Myra. <break time="0.4s"/> They will go to the saint's basilica. <break time="0.5s"/> They will convince or force the monks to hand over the bones. <break time="0.4s"/> They will bring them to Bari. <break time="1.0s"/>
+Almost all of the names are lost. <break time="0.4s"/> What survives are the chronicles. <break time="0.5s"/> Three of them. <break time="0.4s"/> All first-hand. <break time="0.6s"/>
 
-The motivations are three. <break time="0.8s"/>
+Nicephorus. <break time="0.4s"/> Bari cleric. <break time="0.4s"/> Lives the events in real time. <break time="0.5s"/> John the Archdeacon. <break time="0.4s"/> Account written shortly afterwards. <break time="0.5s"/> Lupus Protospatharius. <break time="0.4s"/> Synthesis from a few years later. <break time="0.6s"/>
 
-Religious: to protect the bones of a Christian saint from the advancing Muslims. <break time="0.4s"/> Political: to beat Venice to it. <break time="0.4s"/> Economic: a city with the bones of Saint Nicholas becomes a place of pilgrimage. <break time="0.5s"/> Money. <break time="0.4s"/> Prestige. <break time="0.4s"/> Commercial independence. <break time="1.2s"/>
+Those pages — in Latin — are still readable today. <break time="0.4s"/> Critical editions exist. <break time="0.4s"/> You can find them in libraries. <break time="1.2s"/>
 
-The three ships set sail from the port of Bari. <break time="0.5s"/> Ten days of navigation to reach the Lycian coast. <break time="1.5s"/>
+The plan is simple to describe. <break time="0.4s"/> Suicidal to execute. <break time="0.8s"/>
+
+Three ships. <break time="0.5s"/> They will present themselves at Myra as merchants bound for the Holy Land. <break time="0.4s"/> They will go ashore. <break time="0.4s"/> They will visit the basilica. <break time="0.4s"/> They will ask to see the sarcophagus. <break time="0.5s"/> Once inside, they will convince the monks to hand over the bones. <break time="0.6s"/>
+
+Convince. <break time="0.4s"/> Let's call it that. <break time="0.4s"/> With the soft way, if the soft way works. <break time="0.4s"/> With the hard way, otherwise. <break time="1.0s"/>
+
+The motivations are three. <break time="0.6s"/> All real. <break time="0.4s"/> All entangled. <break time="0.8s"/>
+
+Religious — protect the relics of a Christian saint from the advancing Turks. <break time="0.4s"/> Political — beat Venice to it, since Venice is planning the same move. <break time="0.4s"/> Economic — a city with the bones of San Nicola becomes a pilgrimage hub. <break time="0.4s"/> Pilgrimages mean money. <break time="0.4s"/> They mean prestige. <break time="0.4s"/> They mean a kind of commercial independence that Bari, in the middle of Norman interests, badly needs. <break time="1.2s"/>
+
+That evening, in the warehouse, they vote. <break time="0.5s"/> They sail. <break time="0.4s"/> Ten days of navigation along the eastern coast. <break time="0.4s"/> Wind permitting. <break time="1.5s"/>
 
 
 =====================================
 THE CONFRONTATION AT MYRA
 -------------
+voice: charlie
 
-They arrive. <break time="0.5s"/> They disembark discreetly. <break time="0.4s"/> They approach the basilica of the saint. <break time="0.6s"/>
+The ships arrive. <break time="0.5s"/> They land discreetly. <break time="0.4s"/> They approach the basilica. <break time="0.6s"/>
 
-They find four Orthodox monks on watch. <break time="1.0s"/>
+Inside, they find some Orthodox monks guarding the sarcophagus. <break time="0.4s"/> A few of them. <break time="0.4s"/> Unarmed. <break time="0.4s"/> Mostly elderly. <break time="0.8s"/>
 
-The men from Bari, at first, play the part: we are pilgrims, we want to pray. <break time="0.5s"/> The monks let them in. <break time="0.4s"/> They show them the tomb: a white marble sarcophagus, sealed. <break time="1.0s"/>
+The men from Bari play the part. <break time="0.5s"/> Pilgrims on a journey. <break time="0.4s"/> We want to pray to the saint. <break time="0.4s"/> The monks let them in. <break time="0.5s"/> Show them the sarcophagus — white marble, sealed, at the altar. <break time="1.0s"/>
 
-Then the men from Bari drop the act. <break time="0.8s"/>
+And here the mask falls. <break time="0.8s"/>
 
-They demand the sarcophagus be opened. <break time="0.4s"/> The monks refuse. <break time="0.5s"/> The men from Bari draw their swords. <break time="0.4s"/> They threaten. <break time="0.4s"/> The monks understand. <break time="0.6s"/> They can do nothing: four against sixty-two armed men. <break time="1.2s"/>
+The Bari men ask to open the sarcophagus. <break time="0.4s"/> The monks refuse. <break time="0.5s"/> The Bari men draw their weapons. <break time="0.4s"/> Short swords. <break time="0.4s"/> Ship knives. <break time="0.6s"/>
 
-They open the sarcophagus. <break time="0.8s"/>
+The monks understand. <break time="0.4s"/> They are few, against sixty-two armed men. <break time="0.4s"/> They give in. <break time="0.5s"/> They open. <break time="1.0s"/>
 
-What they see inside surprises them. <break time="0.5s"/> The bones are floating in a transparent, oily liquid. <break time="0.4s"/> They recognize it: it is "manna". <break time="0.4s"/> The liquid which, according to the faithful, seeps from the saint's body. <break time="0.5s"/> Never seen before. <break time="0.4s"/> From that moment, the manna becomes part of the story. <break time="1.0s"/>
+What they see inside, they recognise. <break time="0.5s"/> They have known about it for centuries. <break time="0.6s"/>
 
-The men from Bari take the bones. <break time="0.4s"/> Not all of them. <break time="0.4s"/> Some say a few small bones stayed in the sarcophagus at Myra. <break time="0.5s"/> Other relics would later end up in Venice, during the Fourth Crusade. <break time="0.4s"/> But most of them go on board. <break time="1.0s"/>
+The bones are floating in a transparent, oily, faintly fragrant liquid. <break time="0.5s"/> They call it manna — a phenomenon documented at the tomb of Myra in Greek chronicles since the sixth century. <break time="0.6s"/>
 
-They put to sea. <break time="0.4s"/> Immediately. <break time="0.4s"/> Course: Bari. <break time="1.5s"/>
+The Bari men take the bones. <break time="0.4s"/> Not all of them. <break time="0.4s"/> The sources say that a few small fragments remain in the sarcophagus. <break time="0.5s"/> Other pieces will be taken from Myra by the Venetians during the Fourth Crusade and brought to Venice, where they are still kept today. <break time="0.6s"/> But the bulk of the body, in that spring of ten eighty-seven, goes aboard the Bari ships. <break time="1.2s"/>
+
+They put to sea immediately. <break time="0.4s"/> No time to sleep at Myra. <break time="0.4s"/> If the local Turks find out about the theft, war starts. <break time="0.5s"/> They have to be far away before sunset. <break time="1.0s"/>
+
+Direction — Bari. <break time="0.4s"/> West. <break time="0.4s"/> Home. <break time="1.5s"/>
 
 
 =====================================
 MAY NINTH, 1087 - THE LANDING
 -------------
+voice: charlie
 
 May ninth, ten eighty-seven. <break time="0.6s"/>
 
-The three ships re-enter the port of Bari. <break time="0.4s"/> What they see is a huge crowd. <break time="0.5s"/> News has reached the city before them. <break time="0.4s"/> A horseman, sent from the fastest ship ten days earlier. <break time="0.5s"/> The whole city already knows. <break time="1.2s"/>
+The three ships enter the port of Bari. <break time="0.5s"/> Into this very water in front of you. <break time="1.0s"/>
 
-The bones are carried, in a hurry, into the church of San Benedetto. <break time="0.4s"/> That is where the trouble begins. <break time="0.8s"/>
+Waiting on the quay, a crowd. <break time="0.4s"/> The chronicles describe "a great gathering of the people". <break time="0.4s"/> Translated — the entire city. <break time="0.4s"/> Women, children, merchants, monks, soldiers, peasants who had come in from the countryside. <break time="0.5s"/> They had been waiting for weeks. <break time="0.4s"/> Word of the expedition had spread before the ships returned. <break time="1.0s"/>
 
-The archbishop of Bari, Ursone, wants the bones in his cathedral. <break time="0.4s"/> The abbot of the Benedictine monastery of San Benedetto, Elia, wants to keep them. <break time="0.5s"/> Two hours of argument. <break time="0.4s"/> Threats. <break time="0.4s"/> Almost weapons drawn. <break time="1.0s"/>
+The bones are taken off in haste. <break time="0.4s"/> Brought to the church of San Benedetto. <break time="0.4s"/> Provisionally. <break time="0.5s"/> And there the problems begin. <break time="0.8s"/>
 
-Final decision: neither one nor the other. <break time="0.4s"/> A new basilica will be built, neutral, dedicated exclusively to the saint. <break time="0.6s"/> Site chosen: the palace of the Byzantine Catapan, the old governor. <break time="0.4s"/> Already partly in ruin. <break time="0.4s"/> It will be torn down to make room. <break time="1.2s"/>
+The archbishop of Bari, Ursone, wants the bones in his cathedral. <break time="0.4s"/> As archbishop, it's his right. <break time="0.5s"/> The abbot of the Benedictine monastery of San Benedetto, Elia, wants them to stay in his church. <break time="0.4s"/> As abbot of the place they arrived in, it's his right. <break time="1.0s"/>
 
-Abbot Elia becomes the first rector of the future basilica. <break time="0.4s"/> The bones, meanwhile, are kept in temporary custody. <break time="0.5s"/> The foundation stone is set for two years later. <break time="0.4s"/> Year ten eighty-nine. <break time="1.0s"/>
+Dispute. <break time="0.4s"/> Heated, the chronicles tell us. <break time="0.4s"/> Discussion which, according to Nicephorus, risks degenerating. <break time="0.6s"/>
 
-And when the sailors return to their ships, their city is no longer the same. <break time="0.4s"/> Bari has just become the city of San Nicola. <break time="0.5s"/> Forever. <break time="1.5s"/>
+In the end, a compromise. <break time="0.5s"/> A new basilica will be built. <break time="0.4s"/> Dedicated exclusively to the saint. <break time="0.4s"/> On neutral ground — not the archbishopric, not the monastery. <break time="0.5s"/> The site chosen is the palace of the Catepan, the old Byzantine governor. <break time="0.4s"/> Already partly in ruins, after the Norman conquest. <break time="0.4s"/> It will be razed to make room for the building site. <break time="1.0s"/>
+
+Abbot Elia becomes the first rector of the future basilica. <break time="0.5s"/> The bones, meanwhile, are kept in temporary custody. <break time="0.4s"/> Laying of the first stone is fixed for two years later. <break time="0.4s"/> Ten eighty-nine. <break time="1.2s"/>
+
+And when the sixty-two sailors return to their ships, Bari is no longer the same city. <break time="0.5s"/> In three weeks, it has become the capital of a cult. <break time="0.4s"/> Forever. <break time="1.5s"/>
 
 
 =====================================
 THE BASILICA OF THE COMPROMISE
 -------------
+voice: brian
 
 Ten eighty-nine. <break time="0.5s"/> Foundation stone laid. <break time="1.0s"/>
 
-The architect is unknown. <break time="0.4s"/> The style is what we today call Apulian Romanesque: three naves, austere facade, two towers on the sides. <break time="0.5s"/> Imposing but not baroque. <break time="0.4s"/> Built to last a thousand years. <break time="1.0s"/>
+The architect is unknown. <break time="0.4s"/> The chronicles never name him. <break time="0.4s"/> What remains is the style. <break time="0.5s"/> What we now call Apulian Romanesque. <break time="0.4s"/> Three naves. <break time="0.4s"/> Austere façade. <break time="0.4s"/> Two towers on the sides. <break time="0.4s"/> Imposing, but stripped of ornament. <break time="0.6s"/> Built to last for millennia. <break time="0.5s"/> And that's how it has been. <break time="1.0s"/>
 
-Main funder: Roger Borsa, Norman duke, son of Robert Guiscard. <break time="0.5s"/> He puts his name on it with money and military protection. <break time="0.4s"/> When he dies, his son Roger the Second continues. <break time="0.5s"/> Then his successors. <break time="0.4s"/> Four generations of Normans. <break time="1.2s"/>
+The main early financier is Roger Borsa. <break time="0.4s"/> Duke of Apulia. <break time="0.4s"/> Son of Robert Guiscard. <break time="0.5s"/> He puts in land, money, and military protection. <break time="0.4s"/> When he dies, his son William continues. <break time="0.4s"/> Then his successor Roger the Second. <break time="0.4s"/> The Norman sovereigns — who run southern Italy for a century — pass the patronage along like a banner. <break time="1.2s"/>
 
-One hundred and eight years of construction. <break time="0.5s"/> Consecration: eleven ninety-seven. <break time="1.0s"/>
+One hundred and eight years of construction. <break time="0.6s"/>
 
-In ten ninety-eight, the basilica is still being built. <break time="0.4s"/> But it is already in use. <break time="0.5s"/> That November, Pope Urban the Second arrives in Bari. <break time="0.4s"/> Convenes a council. <break time="0.5s"/> And here inside, in front of the bishops of Italy and France, he preaches the continuation of the First Crusade. <break time="1.2s"/>
+And while construction goes on, in ten eighty-nine the crypt — the one under our feet — is consecrated. <break time="0.5s"/> Pope Urban the Second comes in person to open it to worship. <break time="0.4s"/> The bones go in. <break time="0.5s"/> They will never be moved again. <break time="1.2s"/>
 
-The Pope speaks from the Basilica of San Nicola. <break time="0.4s"/> His words breathe fire back into a crusade that was running out of steam. <break time="0.5s"/> Among those listening, nobles who, from Bari, will sail for Jerusalem the following year. <break time="1.0s"/>
+In ten ninety-eight, the basilica is still being built. <break time="0.4s"/> But Pope Urban the Second comes back to Bari. <break time="0.5s"/> Inside this basilica, still partly under scaffolding, he convenes a decisive council. <break time="0.4s"/> One hundred and eighty-five bishops attend. <break time="0.4s"/> Latin and Greek. <break time="0.5s"/> The relationship between Roman Catholic Church and Eastern Orthodox Church is on the table — for the first time in decades, an attempt to speak as equals. <break time="0.4s"/> The crusade, which has just left for Jerusalem, is on the table too. <break time="0.5s"/> Among the bishops present, one important name — Anselm of Canterbury. <break time="0.5s"/> Sent from England. <break time="0.4s"/> Yes — here, in Bari, in ten ninety-eight. <break time="1.2s"/>
 
-Even when the Normans leave, even when the Swabians, Angevins, Aragonese arrive — the Basilica of San Nicola stays untouchable. <break time="0.6s"/> In eleven fifty-six, when William the Bad razes Bari to the ground, he leaves only this church standing. <break time="0.4s"/> The saint is already stronger than kings. <break time="1.5s"/>
+And then, almost a century later, something terrible. <break time="0.8s"/>
+
+Eleven fifty-six. <break time="0.5s"/> Norman king William the First, nicknamed "the Bad". <break time="0.4s"/> The people of Bari had revolted against him. <break time="0.4s"/> He answered with an edict. <break time="0.5s"/> He razed Bari to the ground. <break time="0.4s"/> All of it. <break time="0.4s"/> Except for one thing. <break time="0.6s"/>
+
+He left the Basilica of San Nicola standing. <break time="0.5s"/> Touching it — not even a Norman king dared. <break time="0.4s"/> In just sixty-nine years, the saint had already become more powerful than the men with swords. <break time="1.5s"/>
 
 
 =====================================
 THE MANNA OF SAN NICOLA
 -------------
+voice: brian
 
-Go down into the crypt. <break time="0.5s"/> Under the main altar. <break time="0.4s"/> Down there, inside a marble sarcophagus, there are still the bones taken from Myra nine hundred and forty years ago. <break time="1.2s"/>
+Go down. <break time="0.5s"/> Into the crypt. <break time="0.4s"/> Under the main altar. <break time="0.6s"/>
+
+Down there, inside a marble sarcophagus, there are still the bones taken away from Myra nine hundred and thirty-nine years ago. <break time="0.5s"/> Same bones. <break time="0.4s"/> Same sarcophagus. <break time="0.4s"/> Same city. <break time="1.2s"/>
 
 And every year, from that sarcophagus, a liquid seeps out. <break time="1.0s"/>
 
-It is called "manna of San Nicola". <break time="0.4s"/> Transparent, slightly oily, odourless. <break time="0.5s"/> It appears on the inner walls of the sarcophagus, slowly, throughout the year. <break time="0.4s"/> The quantity varies. <break time="0.4s"/> Sometimes very little. <break time="0.4s"/> Sometimes more. <break time="1.0s"/>
+It's called the manna of San Nicola. <break time="0.4s"/> Transparent. <break time="0.4s"/> Slightly oily. <break time="0.4s"/> Odourless. <break time="0.5s"/> It appears slowly, over the course of the year, on the inner walls of the sarcophagus. <break time="0.4s"/> The quantity varies. <break time="0.4s"/> Very little sometimes. <break time="0.4s"/> More at other times. <break time="1.0s"/>
 
-Every May ninth, anniversary of the translation, the rector of the basilica descends into the crypt. <break time="0.5s"/> Opens a small spout in the marble. <break time="0.4s"/> Draws the liquid with a small syringe. <break time="0.5s"/> Mixes it with holy water. <break time="0.4s"/> Distributes it to the faithful in small glass vials. <break time="1.0s"/>
+The phenomenon is described in the chronicles of the translation of ten eighty-seven. <break time="0.4s"/> Nicephorus mentions it. <break time="0.4s"/> Already then it was a known phenomenon. <break time="0.4s"/> At Myra, before that, it was documented. <break time="0.6s"/> So we are talking about almost one thousand seven hundred years of continuous observation. <break time="1.2s"/>
 
-Tradition documented since the twelve hundreds. <break time="0.4s"/> Never interrupted in eight hundred and fifty years. <break time="1.2s"/>
+Every ninth of May, the anniversary of the translation, the rector of the Basilica descends into the crypt. <break time="0.5s"/> Opens a small tap on the marble. <break time="0.4s"/> Draws the liquid with a syringe. <break time="0.4s"/> Mixes it with blessed water. <break time="0.4s"/> Distributes it to the faithful in glass vials. <break time="0.6s"/> Thousands of vials, every year, leave from here for the world. <break time="1.5s"/>
 
-And here is the interesting part. <break time="0.8s"/>
+Scientific analyses, conducted over various decades of the twentieth and twenty-first centuries, all say the same thing. <break time="0.4s"/> Almost pure water. <break time="0.4s"/> Traces of mineral salts, probably filtered from the marble. <break time="0.5s"/> No anomalous biological substances. <break time="0.4s"/> No miraculous chemistry, from a strictly analytical point of view. <break time="1.0s"/>
 
-This is not brochure legend. <break time="0.4s"/> The phenomenon is observable. <break time="0.4s"/> Anyone can witness it. <break time="0.5s"/> Scientific studies have been done in the twenties, the fifties, and again in twenty ten. <break time="0.6s"/> Chemical analysis: nearly pure water, traces of minerals that could come from the marble. <break time="1.0s"/>
+The naturalistic explanation most accepted is one. <break time="0.5s"/>
 
-A possible natural explanation: the sarcophagus sits in a humid crypt, below sea level. <break time="0.4s"/> The porous marble walls could collect moisture by capillary action. <break time="0.4s"/> They work like a sponge. <break time="0.5s"/> Plausible, but not proven. <break time="1.0s"/>
+The crypt is humid. <break time="0.4s"/> Below sea level. <break time="0.4s"/> The marble of the sarcophagus is porous. <break time="0.5s"/> Humidity rises by capillary action, condenses on the walls, gathers at the bottom. <break time="0.4s"/> Like a calcareous sponge, in practice. <break time="0.4s"/> Plausible. <break time="0.5s"/> Not definitively proven. <break time="1.0s"/>
 
-A miraculous explanation: a saint who keeps living through his bones. <break time="0.4s"/> For the faithful, that is the true one. <break time="0.8s"/>
+For believers, the explanation is different. <break time="0.4s"/> The saint continues to live, through his bones. <break time="0.4s"/> And every year, he says so — coming out of the marble, one drop at a time. <break time="1.2s"/>
 
-For nearly a thousand years, the faithful from all over the world come here to take home a vial. <break time="0.4s"/> Water, say the sceptics. <break time="0.4s"/> Life, say the believers. <break time="0.5s"/> What is certain is that it seeps. <break time="0.4s"/> Really. <break time="0.5s"/> Still. <break time="1.5s"/>
+What's certain — and what anyone can verify by being in the crypt on the ninth of May — is that it really does come out. <break time="0.4s"/> Still. <break time="0.4s"/> After almost a thousand years. <break time="1.5s"/>
 
 
 =====================================
 THE SAINT OF TWO WORLDS
 -------------
+voice: brian
 
-There are very few saints officially venerated by both the Catholic and the Orthodox Church. <break time="0.5s"/> Nicholas is one of them. <break time="1.0s"/>
+A unique trait of San Nicola — very few saints in history share it. <break time="0.5s"/>
 
-For Catholics, he is "San Nicola of Bari". <break time="0.4s"/> For the Orthodox, he is "Nikolaj Chudotvorec", Nicholas the Wonderworker. <break time="0.5s"/> Same saint, same bones, same basilica. <break time="0.4s"/> Two different liturgies, the same place. <break time="1.2s"/>
+He is officially venerated by both the Catholic Church and the Orthodox Church. <break time="0.4s"/> Same saint. <break time="0.4s"/> Same bones. <break time="0.4s"/> Same basilica. <break time="0.4s"/> Two liturgies, the same place. <break time="1.2s"/>
 
-In the basilica, in the crypt, there is a small permanent chapel for the Orthodox rite. <break time="0.4s"/> There, every week, a liturgy is celebrated in ancient Greek. <break time="0.5s"/> Above the Orthodox altar, original Byzantine mosaics. <break time="0.4s"/> Pilgrims from Greece, Russia, Serbia, Ukraine, Bulgaria. <break time="1.0s"/>
+For Catholics, he is "San Nicola di Bari". <break time="0.4s"/> For the Orthodox, "Nikolaj Chudotvorec" — Nicholas the Wonderworker. <break time="0.5s"/> The same man, two names, two parallel prayers. <break time="1.0s"/>
 
-In nineteen thirteen, Tsar Nicholas the Second Romanov finances the construction of a Russian Orthodox church in Bari. <break time="0.5s"/> It is still there. <break time="0.4s"/> A few kilometres from here, in the Carrassi district. <break time="0.4s"/> Byzantine-Russian style, onion domes. <break time="0.5s"/> Built so that Russian pilgrims would have a place to sleep and pray in Russian. <break time="1.2s"/>
+In the crypt, beneath the main Catholic altar, there is a permanent Orthodox chapel. <break time="0.4s"/> Every week a liturgy is celebrated there. <break time="0.5s"/> In Eastern liturgical languages — Greek, Old Church Slavonic. <break time="0.6s"/>
 
-The Tsar never managed to come himself. <break time="0.5s"/> Four years later, the revolution swept him away. <break time="0.4s"/> The Russian church in Bari sat abandoned for decades. <break time="0.4s"/> Restored in the two thousands. <break time="0.5s"/> Today, it is active again. <break time="1.0s"/>
+Above the Orthodox altar, mosaics and icons donated by the Eastern patriarchates. <break time="0.4s"/> Pilgrims from Greece, Russia, Serbia, Ukraine, Bulgaria, Romania arrive here every year. <break time="0.4s"/> In thousands. <break time="0.6s"/> They mix in the crowd with the Bari residents going to mass. <break time="0.4s"/> They mix with the Italian tourists going down for the crypt. <break time="0.5s"/> Different languages are spoken, in front of the same bones. <break time="1.2s"/>
 
-San Nicola, here, is the one history has never divided. <break time="0.4s"/> Catholicism and Orthodoxy have been speaking to each other in Bari for a thousand years. <break time="0.5s"/> No other Catholic city plays this role. <break time="0.4s"/> Only Bari. <break time="1.5s"/>
+And there's more. <break time="0.6s"/>
+
+In nineteen thirteen, the last Tsar of Russia, Nicholas the Second Romanov, decides to build a Russian Orthodox church in Bari. <break time="0.5s"/> Byzantine-Russian style. <break time="0.4s"/> Onion domes. <break time="0.4s"/> Red brick. <break time="0.4s"/> The architect is Alexei Shchusev — one of the most important of his era. <break time="0.4s"/> The same man who, twenty years later, will design Lenin's mausoleum in Moscow. <break time="0.6s"/>
+
+The Russian church is built to host Russian pilgrims. <break time="0.4s"/> To give them a bed, a meal, a liturgy in their own language. <break time="0.4s"/> It still exists today. <break time="0.4s"/> A few kilometres from here, in the Carrassi district. <break time="1.0s"/>
+
+The Tsar will never come to see it in person. <break time="0.5s"/> Four years after construction begins, the revolution overwhelms him. <break time="0.4s"/> He, his wife and his children will be shot in nineteen eighteen. <break time="0.5s"/> The church in Bari, dedicated to the saint he loved, will remain a monument to a world that was already over. <break time="1.2s"/>
+
+San Nicola, here in Bari, is what history could never divide. <break time="0.4s"/> Catholicism and Orthodoxy, around these bones, have been speaking to each other for nearly a thousand years. <break time="0.5s"/> In no other Catholic city of Europe does this happen this way. <break time="0.4s"/> Only Bari. <break time="1.5s"/>
 
 
 =====================================
 FROM NICHOLAS TO SANTA CLAUS
 -------------
+voice: brian
 
-And here we come to the point that most people do not know. <break time="0.8s"/>
+And now we get to the point that most people don't know. <break time="0.8s"/>
 
-Santa Claus is not American. <break time="0.4s"/> He was not invented by Coca-Cola. <break time="0.4s"/> He was not born in Lapland. <break time="1.0s"/>
+Santa Claus is not American. <break time="0.4s"/> He wasn't invented by Coca-Cola. <break time="0.4s"/> He wasn't born in Lapland. <break time="0.4s"/> He's not from the North Pole. <break time="0.6s"/>
 
-Santa Claus is the Turkish bishop whose bones lie down here. <break time="1.2s"/>
+Santa Claus is the Turkish bishop whose bones are beneath us. <break time="0.4s"/> A few metres from where you are standing, right now. <break time="1.2s"/>
 
-Let's see how. <break time="0.8s"/>
+Let's see how we get there. <break time="0.8s"/>
 
-Middle Ages: the cult of Saint Nicholas spreads across all of Europe. <break time="0.4s"/> Patron of children, sailors, merchants, pilgrims. <break time="0.5s"/> In Holland, children start receiving gifts on December sixth, the saint's feast day. <break time="0.4s"/> They call him "Sint Nikolaas". <break time="0.5s"/> Shortened to "Sinterklaas". <break time="1.0s"/>
+Full Middle Ages. <break time="0.4s"/> The cult of San Nicola spreads all over Europe. <break time="0.4s"/> Patron of children, sailors, merchants, pilgrims. <break time="0.5s"/> In Holland, in Belgium, in the north of Germany, a tradition arises — children receive sweets and coins on the night of the fifth of December. <break time="0.4s"/> The eve of the saint's feast day. <break time="0.6s"/>
 
-Sixteen hundreds. <break time="0.5s"/> Dutch settlers found Nieuw Amsterdam. <break time="0.4s"/> What today is New York. <break time="0.4s"/> They bring Sinterklaas with them. <break time="0.5s"/> The English conquer the city fifty years later, but the old Dutch saint of children stays. <break time="0.4s"/> The name changes. <break time="0.4s"/> Sinterklaas becomes "Santa Claus". <break time="1.2s"/>
+In Dutch, the saint's name is "Sint Nikolaas". <break time="0.4s"/> Abbreviated in popular speech to "Sinterklaas". <break time="0.5s"/> Old man, white beard, dressed as a bishop, red cope. <break time="0.4s"/> That red was Nicholas's episcopal cope — a bishop's colour for a thousand years. <break time="1.0s"/>
 
-Eighteen twenty-three. <break time="0.5s"/> A man named Clement Clarke Moore publishes a poem: "A Visit from St. Nicholas". <break time="0.5s"/> That poem fixes a lot of details we take for granted today. <break time="0.4s"/> Santa Claus becomes round, jolly, riding a sleigh pulled by eight reindeer. <break time="0.4s"/> Arrives at night, down the chimney. <break time="0.5s"/> Leaves gifts under the tree. <break time="1.0s"/>
+Sixteen hundreds. <break time="0.4s"/> Dutch colonists cross the Atlantic. <break time="0.4s"/> They found a city on the east coast of North America. <break time="0.4s"/> They call it Nieuw Amsterdam. <break time="0.5s"/> They bring Sinterklaas with them. <break time="0.4s"/> Dutch children in New Amsterdam keep receiving gifts on the fifth of December. <break time="1.0s"/>
 
-Eighteen sixty. <break time="0.4s"/> A German-American cartoonist, Thomas Nast, begins drawing him for magazines. <break time="0.5s"/> Red and white suit. <break time="0.4s"/> Hood with fur trim. <break time="0.5s"/> Those colours? <break time="0.4s"/> They are the colours of the episcopal cloak of bishop Nicholas. <break time="0.5s"/> Red, obviously, already for a thousand years. <break time="1.2s"/>
+Fifty years later, the English conquer the city. <break time="0.4s"/> They rename it New York. <break time="0.4s"/> But the old Dutch children's saint doesn't disappear. <break time="0.4s"/> The name changes. <break time="0.4s"/> Sinterklaas becomes "Santa Claus". <break time="0.5s"/> Same bishop, Anglo-Saxon pronunciation. <break time="1.2s"/>
 
-Nineteen thirty-one. <break time="0.5s"/> Coca-Cola launches a Christmas advertising campaign with red and white Santa Claus. <break time="0.5s"/> That campaign has a huge impact. <break time="0.4s"/> The whole world starts believing Coca-Cola invented the red. <break time="0.6s"/> False. <break time="0.5s"/> The red was already the bishop's. <break time="0.4s"/> Coca-Cola only standardized the shade. <break time="1.0s"/>
+Eighteen twenty-three. <break time="0.5s"/> In Troy, New York State, a newspaper publishes anonymously a Christmas poem. <break time="0.4s"/> It's called "A Visit from St. Nicholas". <break time="0.5s"/> It will later be attributed to Clement Clarke Moore. <break time="0.6s"/>
 
-So, the next time you see Santa Claus, remember this. <break time="0.5s"/> His real name is Nikolaos. <break time="0.4s"/> He was a Christian bishop from Roman Turkey. <break time="0.5s"/> He became a global icon through a Dutch translation, an American transplant, a poem and a piece of advertising. <break time="0.4s"/> And his bones lie down here. <break time="1.5s"/>
+That poem, in fifty verses, defines a lot of things we now take for granted. <break time="0.4s"/> Santa Claus, plump, cheerful. <break time="0.4s"/> Sleigh. <break time="0.4s"/> Eight reindeer. <break time="0.4s"/> Arrival down the chimney. <break time="0.4s"/> Gifts under the tree. <break time="0.6s"/>
+
+Eighteen sixty. <break time="0.4s"/> A German-American illustrator, Thomas Nast, begins drawing Santa Claus for the magazine "Harper's Weekly". <break time="0.4s"/> Dresses him in red and white. <break time="0.4s"/> Hood with fur trim. <break time="0.5s"/> Those colours? <break time="0.4s"/> They were already the bishop's, a thousand years earlier. <break time="0.6s"/> Nast only made them American. <break time="1.0s"/>
+
+Nineteen thirty-one. <break time="0.4s"/> Coca-Cola launches a Christmas advertising campaign with Santa Claus. <break time="0.4s"/> Illustrator — Haddon Sundblom. <break time="0.4s"/> Red and white. <break time="0.4s"/> Exactly the same shades we all carry in our heads today. <break time="0.6s"/>
+
+And here the myth is born — that Coca-Cola invented the red of Santa Claus. <break time="0.4s"/> False. <break time="0.5s"/> The red was already the bishop's, was already Nast's, was already medieval. <break time="0.4s"/> Coca-Cola only standardised it for advertising. <break time="1.0s"/>
+
+So next time you see Santa Claus, remember this. <break time="0.5s"/>
+
+Technically, his name is Nikolaos. <break time="0.4s"/> He was a Christian bishop of Roman Turkey. <break time="0.4s"/> Fourth century, AD. <break time="0.4s"/> He became a global icon through a Dutch colonial migration, a New York poem and an Atlanta advertisement. <break time="0.5s"/> And his bones — real, original, fourteen centuries old — are in this basilica. <break time="0.4s"/> Underneath us. <break time="1.5s"/>
 
 
 =====================================
 THE FESTIVAL THAT NEVER STOPPED
 -------------
+voice: brian
 
-May seventh, eighth, ninth. <break time="0.6s"/> Every year, for nine hundred and forty years. <break time="0.4s"/> Bari celebrates. <break time="1.0s"/>
+May seventh, eighth, ninth. <break time="0.5s"/> Every year, for nine hundred and forty years. <break time="0.4s"/> Bari celebrates. <break time="1.0s"/>
 
-May seventh: historical procession. <break time="0.4s"/> Two hundred figures in Norman-Byzantine costume. <break time="0.4s"/> Horses, banners, clothes remade from medieval miniatures. <break time="0.5s"/> They start from the Swabian Castle, cross Old Bari, arrive at the basilica. <break time="0.4s"/> They reenact the sailors of ten eighty-seven bringing back the bones. <break time="1.2s"/>
+May seventh. <break time="0.4s"/> Historical procession. <break time="0.5s"/> Hundreds of figures in costume — armour, episcopal vestments, civilian medieval dress, reconstructed from original iconography. <break time="0.4s"/> Horses. <break time="0.4s"/> Banners. <break time="0.4s"/> Drums and trumpets. <break time="0.6s"/>
 
-May eighth: procession at sea. <break time="0.6s"/> The statue of the saint is carried out of the basilica. <break time="0.4s"/> Carried by four men. <break time="0.4s"/> Loaded onto a decorated fishing boat. <break time="0.4s"/> The boat leaves the port, escorted by other boats, into open sea. <break time="0.5s"/> Thousands of people of Bari follow from the quay. <break time="0.4s"/> Thousands of pilgrims, mostly Orthodox, mixed in with the crowd. <break time="1.0s"/>
+They start from the Swabian Castle. <break time="0.4s"/> They cross Old Bari. <break time="0.4s"/> They enter the basilica. <break time="0.5s"/> They reenact the sixty-two sailors of ten eighty-seven bringing the bones home. <break time="1.2s"/>
 
-May ninth: the liturgical translation. <break time="0.5s"/> Ceremony inside the basilica. <break time="0.4s"/> The rector descends to the crypt, draws the manna. <break time="0.4s"/> Distributes it. <break time="1.0s"/>
+May eighth. <break time="0.5s"/> Procession at sea. <break time="0.6s"/>
 
-This festival has never been interrupted. <break time="0.8s"/>
+The statue of the saint is brought out of the basilica. <break time="0.4s"/> Carried by four men. <break time="0.4s"/> Nearly three metres of statue. <break time="0.4s"/> Several hundred kilos. <break time="0.5s"/> Loaded onto a decorated fishing boat. <break time="0.4s"/> The boat leaves the port. <break time="0.4s"/> Escort of other boats. <break time="0.4s"/> Up to a mile out at sea. <break time="0.6s"/>
 
-Not even during the world war. <break time="0.4s"/> May nineteen forty-four, Bari liberated for eight months, the port still full of Allied ships, the rubble of the nineteen forty-three bombing still fresh. <break time="0.6s"/> The festival was held anyway. <break time="0.5s"/> The statue went out, climbed onto the fishing boat, went to sea. <break time="1.0s"/>
+From shore, thousands of Bari residents follow from the quay. <break time="0.4s"/> Thousands of pilgrims — mostly Orthodox, mostly from Russia and Ukraine — mixed in the crowd. <break time="0.4s"/> The bells ring. <break time="0.4s"/> Flowers thrown from the pier. <break time="1.0s"/>
 
-Almost a thousand years. <break time="0.4s"/> Hundreds of wars, plagues, dominations, collapses. <break time="0.5s"/> San Nicola has kept coming out of his basilica every single year. <break time="1.5s"/>
+May ninth. <break time="0.4s"/> Final act. <break time="0.5s"/> Liturgical ceremony in the basilica. <break time="0.4s"/> The rector descends into the crypt. <break time="0.4s"/> Draws the manna. <break time="0.4s"/> Distributes it. <break time="1.0s"/>
+
+And listen to this. <break time="0.6s"/>
+
+This festival has never stopped. <break time="0.5s"/> Never. <break time="0.4s"/> Never. <break time="0.5s"/>
+
+Not during the plague of the fourteenth century. <break time="0.4s"/> Not during the Aragonese siege. <break time="0.4s"/> Not during the Napoleonic occupation. <break time="0.5s"/> And not during the Second World War. <break time="0.8s"/>
+
+May of nineteen forty-four. <break time="0.4s"/> Bari had been liberated eight months earlier. <break time="0.4s"/> The port was still packed with Allied ships. <break time="0.4s"/> The rubble of the December nineteen forty-three bombing was still fresh on the ground. <break time="0.5s"/> And yet the festival happened anyway. <break time="0.4s"/> The statue came out of the basilica. <break time="0.4s"/> Got on the fishing boat. <break time="0.4s"/> Went out to sea. <break time="0.4s"/> Came back. <break time="1.2s"/>
+
+Nine hundred and forty years. <break time="0.4s"/> Hundreds of wars, plagues, foreign rules, earthquakes, crises. <break time="0.5s"/> San Nicola has kept coming out, every year, from his basilica. <break time="0.4s"/> To face the sea. <break time="1.5s"/>
 
 
 =====================================
 CLOSING
 -------------
+voice: brian
 
-Now, before you leave here, stop for a second. <break time="0.8s"/>
+Now, before you leave, stop for a moment. <break time="0.8s"/>
 
-Look at the altar. <break time="0.4s"/> Below, in the crypt, there are still the bones of a bishop born in two seventy after Christ. <break time="0.5s"/> Who lived in Turkey. <break time="0.4s"/> Who, while alive, was never in Italy. <break time="0.4s"/> Never in Bari. <break time="1.0s"/>
+Look at the altar. <break time="0.4s"/> Beneath it, in the crypt, there are still the bones of a bishop born in two hundred and seventy AD. <break time="0.5s"/> Who lived in Turkey. <break time="0.4s"/> Who was never in Italy in his lifetime. <break time="0.4s"/> Who was never in Bari. <break time="1.0s"/>
 
-But we went and got him. <break time="1.2s"/>
+But we went and took him. <break time="1.2s"/>
 
 Bari did not find a saint. <break time="0.5s"/> It stole one. <break time="0.4s"/> And it kept him. <break time="1.0s"/>
 
-And then this city changed forever. <break time="0.4s"/> It became a destination of pilgrimage, a seat of papal councils, a bridge between Catholicism and Orthodoxy, and — through a translation and a commercial trick — also the starting point of a global story of Christmas gifts. <break time="1.2s"/>
+And from that day, this city changed forever. <break time="0.5s"/>
+
+It became a destination for pilgrims from across Europe and the entire Christian East. <break time="0.4s"/> It hosted a Pope who, from here, tried to speak to the Byzantine Church. <break time="0.4s"/> It kept a basilica standing that not even a ruthless Norman king dared touch. <break time="0.4s"/> It attracted a Russian Tsar to build a church here, twenty years before being shot in Siberia. <break time="0.4s"/> And through a Dutch translation and an American advertisement, it became the starting point of a global story about Christmas gifts. <break time="1.2s"/>
 
 All from sixty-two sailors. <break time="0.4s"/> Three ships. <break time="0.4s"/> One April night in ten eighty-seven. <break time="1.0s"/>
 
-When you leave this basilica, know one thing. <break time="0.5s"/> What you see outside is not just any city. <break time="0.4s"/> It is a city that, once, decided to steal a saint. <break time="0.4s"/> And succeeded. <break time="1.5s"/>
+When you leave this basilica, know this. <break time="0.5s"/>
+
+What you have in front of you, outside, isn't just any city. <break time="0.4s"/> It's a city that, once, decided to steal a saint. <break time="0.4s"/> And succeeded. <break time="1.0s"/>
 
 The rest is inside.

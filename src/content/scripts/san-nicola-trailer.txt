@@ -1,12 +1,12 @@
-SAN NICOLA — TRAILER 60s
-Highlight reel narrativo, voce Gian. Hook iniziale + 3 ganci drammatici + chiusura.
+SAN NICOLA — TRAILER 60s · voce Valerio (warm storyteller)
 =====================================
 TRAILER
 -------------
+voice: paolo
 
 Bari non ha trovato un santo. <break time="0.6s"/> Lo ha rubato. <break time="1.0s"/>
 
-Sessantadue marinai. <break time="0.4s"/> Tre navi. <break time="0.4s"/> Una notte di aprile del millenovantasette. <break time="0.5s"/> Sono partiti da questo porto, sono arrivati in Turchia, hanno preso le ossa di un vescovo morto da settecento anni. <break time="0.4s"/> Le hanno portate qui. <break time="1.0s"/>
+Sessantadue marinai. <break time="0.4s"/> Tre navi. <break time="0.4s"/> Una notte di aprile del milleottantasette. <break time="0.5s"/> Sono partiti da questo porto, sono arrivati in Turchia, hanno preso le ossa di un vescovo morto da settecento anni. <break time="0.4s"/> Le hanno portate qui. <break time="1.0s"/>
 
 Dentro quel sarcofago, ancora oggi, esce un liquore trasparente. <break time="0.4s"/> Lo chiamano "manna". <break time="0.4s"/> Nessuno sa spiegarlo. <break time="1.0s"/>
 

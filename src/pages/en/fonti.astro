@@ -1,0 +1,122 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const sources = (await getCollection('sources')).sort((a, b) =>
+  a.data.guide_title_en.localeCompare(b.data.guide_title_en),
+);
+
+const sourceIcon: Record<string, string> = {
+  book: '📚',
+  academic: '🎓',
+  archive: '🗄',
+  newspaper: '🗞',
+  documentary: '🎬',
+  website: '🌐',
+};
+
+function formatDate(d: Date): string {
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function formatSource(s: {
+  type: string;
+  author?: string;
+  title: string;
+  publisher?: string;
+  year?: number;
+  url?: string;
+}): string {
+  const parts: string[] = [];
+  if (s.author) parts.push(s.author);
+  parts.push(s.title);
+  const tail: string[] = [];
+  if (s.publisher) tail.push(s.publisher);
+  if (s.year) tail.push(String(s.year));
+  if (tail.length) parts.push(tail.join(', '));
+  return parts.join(' · ');
+}
+---
+<Layout
+  title="The sources behind our guides · Localis"
+  description="All the historical, academic and archival sources the Localis narrative audio guides are built on. Verify every story."
+  lang="en"
+>
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <header class="mb-3xl">
+      <p class="text-[11px] font-semibold tracking-[0.32em] uppercase text-accent mb-sm">
+        Verify the stories
+      </p>
+      <h1 class="font-display text-4xl sm:text-5xl text-ink leading-tight mb-md">
+        The sources.
+      </h1>
+      <p class="font-display italic text-xl text-ink-muted leading-snug max-w-prose">
+        Our audio guides tell true stories. <br />
+        Below, chapter by chapter, the sources behind them.
+      </p>
+    </header>
+
+    <section class="mb-3xl">
+      <p class="text-base text-ink-muted leading-relaxed max-w-prose mb-md">
+        Nothing is invented. Nothing is "Wikipedia-style". Every historical claim, every number, every name comes from books, peer-reviewed articles, public archives, or verifiable documentaries.
+      </p>
+      <p class="text-base text-ink-muted leading-relaxed max-w-prose mb-md">
+        Where a sensory detail or a dialogue isn't documented, our audio guides either avoid it or frame it explicitly as reconstruction. Never as a statement of fact.
+      </p>
+      <p class="text-base text-ink-muted leading-relaxed max-w-prose">
+        If you spot an inaccuracy, write to <a href="mailto:hello@localis.guide" class="text-accent underline underline-offset-4">hello@localis.guide</a>. This page is kept updated.
+      </p>
+    </section>
+
+    {sources.map((entry) => (
+      <section class="mb-3xl pt-xl border-t border-border">
+        <header class="mb-xl">
+          <h2 class="font-display text-3xl text-ink leading-tight mb-xs">
+            {entry.data.guide_title_en}
+          </h2>
+          <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink-subtle">
+            Last review: {formatDate(entry.data.last_review)}
+          </p>
+        </header>
+
+        {entry.data.chapters.map((chapter) => (
+          <div class="mb-2xl">
+            <h3 class="font-display text-xl text-ink leading-tight mb-md">
+              {chapter.title_it}
+            </h3>
+
+            {chapter.facts.map((fact) => (
+              <div class="mb-lg">
+                <p class="text-base text-ink leading-relaxed mb-sm italic">
+                  {fact.claim_it}
+                </p>
+                <ul class="list-none m-0 p-0 space-y-2xs">
+                  {fact.sources.map((s) => (
+                    <li class="text-sm text-ink-muted leading-snug flex items-start gap-xs">
+                      <span aria-hidden="true" class="flex-shrink-0">
+                        {sourceIcon[s.type] ?? '📄'}
+                      </span>
+                      <span>
+                        {s.url
+                          ? <a href={s.url} target="_blank" rel="noopener noreferrer" class="hover:text-accent">{formatSource(s)}</a>
+                          : formatSource(s)
+                        }
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        ))}
+      </section>
+    ))}
+
+    <footer class="pt-xl border-t border-border">
+      <p class="text-sm text-ink-subtle italic max-w-prose">
+        Localis audio guides are produced by Domenico Loconsole and Luigi Loconsole. The archival research for the Port of Bari guide was carried out between April and May 2026. Claims are displayed in Italian since that is the original research language; English summaries are paraphrased in the audio script.
+      </p>
+    </footer>
+  </article>
+</Layout>

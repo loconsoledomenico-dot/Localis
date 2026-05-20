@@ -1,23 +1,25 @@
-LOCALIS — SAN NICOLA · versione FAST
-Guida narrativa pacing 2026, mix tonale per capitolo (Angela / Saviano / storyteller).
-Voce: Gian. Modello: eleven_multilingual_v2.
+LOCALIS — SAN NICOLA · revisione completa "più carico"
+Multi-voice: voce primaria (narratore caldo) · voce drammatica (suspense) per capitoli intensi.
 =====================================
 INTRODUZIONE
 -------------
+voice: paolo
 
 Bari non ha trovato un santo. <break time="0.8s"/> È andata a prenderselo. <break time="1.2s"/>
 
-Nel millenovantasette, sessantadue marinai baresi sono partiti da questo porto. <break time="0.5s"/> Direzione: Myra, in Turchia. <break time="0.5s"/> Obiettivo: portare via le ossa di San Nicola dalla sua tomba. <break time="0.4s"/> Con la forza, se serviva. <break time="1.2s"/>
+Nove maggio, milleottantasette. <break time="0.5s"/> Da questo porto arrivano tre navi. <break time="0.4s"/> A bordo ci sono sessantadue marinai baresi e, in una cassa di legno, le ossa di un vescovo morto da settecento anni. <break time="0.6s"/> Ossa rubate, di notte, da una chiesa a Myra, in Turchia. <break time="0.5s"/> Le hanno portate qui. <break time="0.4s"/> Le hanno messe a terra. <break time="0.4s"/> E non se ne sono andate mai più. <break time="1.5s"/>
 
-Le hanno portate via. <break time="0.6s"/> Le hanno messe qua sotto. <break time="0.4s"/> E novecento anni dopo, sono ancora qui. <break time="1.2s"/>
+Quella che vedete davanti, la Basilica di San Nicola, è stata costruita per quelle ossa. <break time="0.4s"/> Centootto anni di cantiere. <break time="0.4s"/> I sovrani normanni la finanziano. <break time="0.5s"/> Un Papa, Urbano Secondo, qui dentro convoca un concilio che cerca, per la prima volta, di parlare alla Chiesa d'Oriente da pari a pari. <break time="1.0s"/>
 
-Questa che vedete davanti, la Basilica di San Nicola, è stata costruita per loro. <break time="0.5s"/> Per quelle ossa. <break time="0.4s"/> Centootto anni di cantiere. <break time="0.5s"/> Quattro re normanni hanno pagato la pietra. <break time="0.4s"/> Un Papa, Urbano Secondo, ha predicato qui la Prima Crociata. <break time="1.0s"/>
+E dentro quel sarcofago, ancora oggi, ogni anno, esce un liquido trasparente. <break time="0.4s"/> Lo chiamano "manna". <break time="0.4s"/> Nessuno l'ha mai spiegato del tutto. <break time="0.5s"/> Ed è documentato dalle prime cronache della traslazione, scritte nel milleottantasette. <break time="1.2s"/>
 
-E dentro quel sarcofago, ancora oggi, ogni anno, esce un liquore trasparente. <break time="0.5s"/> Lo chiamano "manna". <break time="0.5s"/> Nessuno sa spiegare da dove arriva. <break time="1.2s"/>
+Nei prossimi venti minuti vi racconto tre cose. <break time="0.6s"/>
 
-Nei prossimi ventidue minuti vi racconto tre cose. <break time="0.6s"/>
+Chi era davvero Nicola di Myra. <break time="0.4s"/> Vescovo storico, vissuto nel quarto secolo, sopravvissuto a una delle ultime grandi persecuzioni dei cristiani. <break time="0.5s"/>
 
-Chi era Nicola di Myra — uomo storico vero, vissuto nel quarto secolo. <break time="0.4s"/> Come è arrivato qui, dentro una spedizione che oggi chiameremmo terrorismo religioso. <break time="0.5s"/> E perché il suo nome, attraverso l'Olanda e l'America, è diventato Babbo Natale. <break time="1.5s"/>
+Come è arrivato qui. <break time="0.4s"/> Dentro una spedizione che oggi chiameremmo terrorismo religioso. <break time="0.5s"/>
+
+E perché il suo nome, attraverso l'Olanda e l'America, è diventato Babbo Natale. <break time="0.4s"/> Sì, proprio lui. <break time="0.4s"/> Il vescovo turco. <break time="0.4s"/> Qua sotto. <break time="1.5s"/>
 
 Pronti. <break time="0.4s"/> Si entra.
 
@@ -25,237 +27,331 @@ Pronti. <break time="0.4s"/> Si entra.
 =====================================
 CHI ERA NICOLA DI MYRA
 -------------
+voice: paolo
 
 Anno duecentosettanta dopo Cristo. <break time="0.6s"/>
 
-A Patara, oggi in Turchia, nasce un bambino. <break time="0.4s"/> I suoi genitori sono cristiani benestanti. <break time="0.4s"/> Lo chiamano Nicola. <break time="0.8s"/>
+Sulla costa licia, oggi in Turchia, c'è un piccolo porto. <break time="0.4s"/> Si chiama Patara. <break time="0.5s"/> Lì nasce un bambino. <break time="0.4s"/> Genitori cristiani benestanti. <break time="0.4s"/> Lo chiamano Nicola. <break time="1.0s"/>
 
-Quando ha vent'anni, una peste si abbatte sulla regione. <break time="0.5s"/> I suoi genitori muoiono. <break time="0.4s"/> Nicola eredita una fortuna. <break time="0.6s"/> La dona tutta ai poveri. <break time="1.0s"/>
+Tutto quello che sappiamo del Nicola storico arriva dalle agiografie. <break time="0.5s"/> Documenti scritti decenni dopo la sua morte. <break time="0.4s"/> Quindi prendiamoli per quello che sono — tradizione cristallizzata, non cronaca contemporanea. <break time="0.8s"/>
 
-A trent'anni circa, viene eletto vescovo di Myra. <break time="0.4s"/> Città a una settantina di chilometri di distanza, sulla costa licia. <break time="0.5s"/> Nello stesso periodo, l'imperatore Diocleziano scatena una delle ultime grandi persecuzioni dei cristiani. <break time="0.6s"/> Nicola viene arrestato. <break time="0.4s"/> Imprigionato per anni. <break time="0.4s"/> Torturato. <break time="0.6s"/> Ma non rinnega. <break time="1.0s"/>
+Ma anche così, alcuni fatti reggono. <break time="1.0s"/>
 
-Nel trecentotredici, Costantino emette l'Editto di Milano. <break time="0.4s"/> La persecuzione finisce. <break time="0.4s"/> Nicola esce dal carcere. <break time="0.4s"/> Torna vescovo. <break time="1.0s"/>
+A vent'anni, una peste si abbatte sulla regione. <break time="0.5s"/> I suoi genitori muoiono. <break time="0.4s"/> Lui eredita la fortuna di famiglia. <break time="0.4s"/> La distribuisce. <break time="0.4s"/> Tutta. <break time="1.0s"/>
 
-Nel trecentoventicinque potrebbe aver partecipato al primo Concilio di Nicea. <break time="0.5s"/> Il concilio che ha stabilito che cosa fosse, esattamente, il cristianesimo. <break time="0.6s"/> C'è una leggenda secondo cui Nicola, davanti a Costantino, schiaffeggia il suo avversario teologico, l'eretico Ario. <break time="0.5s"/> Leggenda, probabilmente. <break time="0.4s"/> Ma anche se non è successa, fa parte di come Bari oggi lo ricorda. <break time="1.2s"/>
+Diventa vescovo di Myra. <break time="0.4s"/> Settanta chilometri di costa più in là. <break time="0.6s"/>
 
-Muore il sei dicembre trecentoquarantatré. <break time="0.5s"/> A Myra. <break time="0.4s"/> Settantatré anni. <break time="0.6s"/> Viene sepolto nella cattedrale della città. <break time="1.0s"/>
+E in quegli anni — siamo al confine tra terzo e quarto secolo — l'imperatore Diocleziano scatena una delle ultime, e più brutali, persecuzioni contro i cristiani. <break time="0.8s"/>
 
-Tenete a mente quella data. <break time="0.5s"/> Sei dicembre. <break time="0.4s"/> Tra ottocento anni, sarà la data in cui in mezza Europa i bambini riceveranno doni la notte. <break time="1.5s"/>
+Nicola viene arrestato. <break time="0.4s"/> Finisce in carcere. <break time="0.4s"/> Anni. <break time="0.4s"/> Torturato. <break time="0.5s"/> Non rinnega. <break time="1.2s"/>
+
+Tredici, dopo Cristo. <break time="0.5s"/> Costantino emette l'Editto di Milano. <break time="0.4s"/> La persecuzione finisce. <break time="0.4s"/> Le carceri si svuotano. <break time="0.4s"/> Nicola esce. <break time="0.5s"/> Torna a Myra. <break time="0.4s"/> Riprende il suo episcopato. <break time="1.0s"/>
+
+Forse — non è certo, ma forse — partecipa al Concilio di Nicea del trecentoventicinque. <break time="0.5s"/> Quello che decide cosa sia, esattamente, il cristianesimo. <break time="0.4s"/> Si racconta — leggenda, probabilmente — che davanti all'imperatore schiaffeggi il suo avversario teologico, l'eretico Ario. <break time="0.6s"/> Una scena che forse non è mai successa. <break time="0.4s"/> Ma che a Bari, oggi, viene ripetuta a tutti come se fosse storia. <break time="1.0s"/>
+
+Muore il sei dicembre, trecentoquarantatré. <break time="0.5s"/> Settantatré anni. <break time="0.4s"/> Lo seppelliscono nella cattedrale di Myra. <break time="1.0s"/>
+
+E qui — fissatevi quella data. <break time="0.4s"/> Sei dicembre. <break time="0.6s"/>
+
+Perché tra ottocento anni, in tre paesi del nord Europa, i bambini riceveranno doni esattamente in quella notte. <break time="0.4s"/> E poi, attraverso una traversata atlantica e una pubblicità americana, quella data si sposterà al venticinque. <break time="0.5s"/> Stessa figura. <break time="0.4s"/> Altro nome. <break time="0.4s"/> Lo vedremo. <break time="1.5s"/>
 
 
 =====================================
 TRE MIRACOLI CHE HANNO FATTO UN SANTO
 -------------
+voice: paolo
 
-Tre miracoli. <break time="0.5s"/> Tutti raccontati durante la sua vita o subito dopo. <break time="0.4s"/> Tutti diventati simboli. <break time="1.0s"/>
+Tre miracoli. <break time="0.5s"/> Tutti raccontati nelle agiografie. <break time="0.4s"/> Tutti diventati simboli che dureranno millenni. <break time="1.0s"/>
 
 Primo. <break time="0.8s"/>
 
-A Myra, c'è un padre vedovo. <break time="0.4s"/> Tre figlie. <break time="0.4s"/> Senza dote, nessuna potrà sposarsi. <break time="0.5s"/> Senza marito, finiranno sulla strada. <break time="0.6s"/> Nicola, di notte, lancia tre sacchetti d'oro attraverso la finestra. <break time="0.5s"/> Le tre figlie si sposano. <break time="1.0s"/>
+A Myra, c'è un padre vedovo. <break time="0.4s"/> Tre figlie. <break time="0.5s"/> E un problema concreto — al tempo, una figlia senza dote non si sposa. <break time="0.4s"/> Una figlia che non si sposa, in molti casi, finisce sulla strada. <break time="0.4s"/> Letteralmente. <break time="0.8s"/>
 
-Quei tre sacchetti caduti nelle calze appese ad asciugare diventeranno, mille anni dopo, la tradizione della calza della Befana. <break time="0.4s"/> E i doni dentro i calzini natalizi. <break time="0.5s"/> Tutto comincia qui. <break time="1.2s"/>
+Nicola lo viene a sapere. <break time="0.4s"/> Di notte, in silenzio, passa sotto la finestra di quella casa. <break time="0.5s"/> Lancia un sacchetto d'oro. <break time="0.4s"/> Una dote per la prima figlia. <break time="0.5s"/> Ripete la stessa scena tre notti diverse. <break time="0.4s"/> Tre sacchetti. <break time="0.4s"/> Tre doti. <break time="0.5s"/> Tre figlie salvate. <break time="1.0s"/>
+
+E ora ascoltate. <break time="0.6s"/>
+
+Nelle agiografie nordiche del Medioevo, quei tre sacchetti diventano un'immagine. <break time="0.4s"/> Tre palline d'oro che cadono dentro qualcosa appeso al davanzale ad asciugare. <break time="0.5s"/> Una calza. <break time="0.6s"/> Sì, una calza. <break time="0.5s"/> Da lì, mille anni dopo, le calze appese al camino per ricevere i regali. <break time="0.5s"/> Tutto parte da un sacchetto di monete lanciato a Myra. <break time="1.5s"/>
 
 Secondo miracolo. <break time="0.8s"/>
 
-Un macellaio di Myra uccide tre bambini, li fa a pezzi e li nasconde in un barile di sale, per vendere la carne. <break time="0.5s"/> Nicola, passando, lo scopre. <break time="0.4s"/> Apre il barile. <break time="0.4s"/> Resuscita i tre bambini. <break time="0.8s"/>
+A Myra c'è un macellaio. <break time="0.4s"/> Sequestra tre bambini. <break time="0.4s"/> Li uccide. <break time="0.4s"/> Li fa a pezzi. <break time="0.4s"/> Li mette dentro un barile di salamoia per venderne la carne. <break time="0.6s"/>
 
-Da questa storia nasce un fatto: in tutta Europa, San Nicola diventa il patrono dei bambini. <break time="0.4s"/> Il santo che protegge l'infanzia. <break time="0.5s"/> Il santo che, infatti, porterà i regali. <break time="1.0s"/>
+Nicola, di passaggio, scopre il barile. <break time="0.4s"/> Lo apre. <break time="0.5s"/> Resuscita i tre bambini. <break time="1.0s"/>
+
+Da quel giorno, in tutto il cristianesimo medievale, San Nicola diventa il patrono dei bambini. <break time="0.4s"/> Il santo che li difende. <break time="0.4s"/> Il santo che, infatti, in molte tradizioni europee, gli porta i regali. <break time="1.2s"/>
 
 Terzo. <break time="0.8s"/>
 
-Una nave nel mar di Licia, in tempesta. <break time="0.4s"/> I marinai pregano Nicola. <break time="0.4s"/> Lui appare sulla nave, calma il vento, salva la ciurma. <break time="0.6s"/> Da quel giorno diventa patrono dei marinai. <break time="1.0s"/>
+Una nave nel mar di Licia. <break time="0.4s"/> Tempesta. <break time="0.4s"/> I marinai stanno per affondare. <break time="0.5s"/> Pregano Nicola. <break time="0.4s"/> Lui appare sulla coperta. <break time="0.4s"/> Calma il vento. <break time="0.4s"/> La nave si salva. <break time="0.8s"/>
 
-E quattrocento anni dopo, saranno sessantadue marinai a venirlo a prendere. <break time="1.5s"/>
+Da quel giorno è patrono dei marinai. <break time="0.5s"/>
+
+Tenete a mente questo. <break time="0.6s"/>
+
+Settecento anni dopo, saranno proprio sessantadue marinai a venirlo a prendere. <break time="0.5s"/> Per portarselo dietro. <break time="0.4s"/> A casa. <break time="1.5s"/>
 
 
 =====================================
 LA TOMBA DI MYRA
 -------------
+voice: paolo
 
-Tra il trecentoquarantatré, anno della sua morte, e il millenovantasette, anno del furto. <break time="0.5s"/> Settecentoquarantaquattro anni di pellegrinaggio. <break time="1.0s"/>
+Tra il trecentoquarantatré, anno della morte di Nicola, e il milleottantasette, anno del furto. <break time="0.4s"/> Settecentoquarantaquattro anni. <break time="0.5s"/> In mezzo, una tomba che non smette di richiamare gente. <break time="1.2s"/>
 
-La tomba di Nicola, a Myra, diventa una delle mete più importanti del cristianesimo orientale. <break time="0.4s"/> Pellegrini arrivano da Costantinopoli, dalla Grecia, dalla Siria, dall'Egitto. <break time="0.5s"/> Un monastero ortodosso viene costruito attorno alla cattedrale per ospitarli. <break time="1.2s"/>
+A Myra, la basilica costruita sopra il sepolcro diventa una delle mete più importanti del cristianesimo orientale. <break time="0.4s"/> Pellegrini arrivano da Costantinopoli. <break time="0.4s"/> Dalla Grecia. <break time="0.4s"/> Dalla Siria. <break time="0.4s"/> Dall'Egitto. <break time="0.5s"/> Camminano per mesi. <break time="0.4s"/> Vengono a toccare il marmo. <break time="0.4s"/> Vengono a portare via un po' di olio sacro. <break time="0.4s"/> Vengono perché lì sotto c'è un uomo che, dopo morto, continua a fare cose. <break time="1.2s"/>
 
-Poi, nel millesettantuno, succede qualcosa. <break time="0.8s"/>
+Un monastero ortodosso, accanto alla basilica, ospita i pellegrini. <break time="0.4s"/> Per sette secoli. <break time="0.5s"/> Funziona, gira, prospera. <break time="1.0s"/>
 
-Battaglia di Manzicerta. <break time="0.5s"/> L'esercito bizantino viene distrutto dai turchi selgiukidi. <break time="0.4s"/> Da quel giorno, l'Asia Minore comincia a passare in mano turca. <break time="0.5s"/> Lentamente. <break time="0.4s"/> Provincia per provincia. <break time="1.0s"/>
+Poi, nel millesettantuno, qualcosa si rompe. <break time="0.8s"/>
 
-Myra entra nella zona di influenza turca. <break time="0.5s"/> I pellegrinaggi cristiani diventano difficili. <break time="0.4s"/> Le città cristiane d'Italia cominciano a pensare la stessa cosa: prima o poi, quella tomba sarà a rischio. <break time="1.2s"/>
+Battaglia di Manzicerta. <break time="0.5s"/> L'esercito bizantino, quello che difendeva l'Asia Minore cristiana, viene distrutto dai turchi selgiukidi in una sola giornata. <break time="0.6s"/> Da quel momento, l'intera regione comincia a passare in mano turco-musulmana. <break time="0.4s"/> Lentamente. <break time="0.4s"/> Provincia per provincia. <break time="0.4s"/> Ma in modo irreversibile. <break time="1.2s"/>
 
-Venezia ci sta pensando. <break time="0.5s"/> Vuole prendersi le ossa di San Nicola e portarle in laguna. <break time="0.4s"/> La sua flotta è la migliore del Mediterraneo. <break time="0.4s"/> È solo questione di tempo. <break time="1.0s"/>
+Myra entra nella zona di influenza turca. <break time="0.4s"/> I pellegrinaggi cristiani diventano difficili. <break time="0.4s"/> Pericolosi, addirittura. <break time="0.5s"/> E nelle città portuali d'Italia comincia a circolare una preoccupazione precisa. <break time="0.6s"/>
 
-Bari decide di muoversi prima. <break time="0.5s"/> Aprile millenovantasette. <break time="1.5s"/>
+Quella tomba, prima o poi, andrà persa. <break time="1.0s"/>
+
+A pensarlo è soprattutto Venezia. <break time="0.4s"/> Che ha la migliore flotta del Mediterraneo. <break time="0.4s"/> E che, dalle cronache contemporanee, risulta stesse preparando una spedizione per portarsi via le ossa di Nicola prima dei turchi. <break time="0.6s"/>
+
+Bari lo viene a sapere. <break time="0.6s"/>
+
+E decide di muoversi prima. <break time="0.5s"/> Subito. <break time="0.4s"/> Aprile, milleottantasette. <break time="1.5s"/>
 
 
 =====================================
 APRILE 1087 - IL PIANO
 -------------
+voice: raffaele
 
-Aprile millenovantasette. <break time="0.5s"/> Bari è governata dal duca normanno Ruggero Borsa, ma di fatto è la classe marinara a comandare. <break time="0.6s"/> Riunione segreta. <break time="0.5s"/> Sessantadue marinai. <break time="1.0s"/>
+Aprile, milleottantasette. <break time="0.6s"/>
 
-Sessantadue. <break time="0.4s"/> Non sappiamo i nomi di tutti, ma sappiamo alcuni. <break time="0.5s"/> Il capitano si chiama Matteo. <break time="0.4s"/> A bordo c'è anche un prete, Lupo. <break time="0.6s"/> Un altro marinaio, un certo Disigio, scriverà la cronaca dell'impresa qualche mese dopo. <break time="0.4s"/> Quella cronaca è ancora leggibile. <break time="1.2s"/>
+Bari sulla carta la governa il duca normanno Ruggero Borsa, figlio di Roberto il Guiscardo. <break time="0.4s"/> In pratica, in città, comandano i marinai. <break time="0.5s"/> Quelli che il porto lo conoscono di notte. <break time="0.4s"/> Quelli che sanno quante miglia ci sono da qui a Costantinopoli, quante ad Antiochia, quante a Myra. <break time="1.2s"/>
 
-Il piano è semplice nei punti, complicato nell'esecuzione. <break time="0.8s"/>
+In un magazzino, una sera, sessantadue di loro si riuniscono. <break time="0.6s"/>
 
-Tre navi. <break time="0.4s"/> Si fingeranno pellegrini diretti in Terra Santa. <break time="0.4s"/> Arriveranno a Myra. <break time="0.4s"/> Andranno nella basilica del santo. <break time="0.5s"/> Convinceranno o costringeranno i monaci a consegnare le ossa. <break time="0.4s"/> Le porteranno a Bari. <break time="1.0s"/>
+Quasi tutti i nomi sono persi. <break time="0.4s"/> Quello che resta sono le cronache. <break time="0.5s"/> Tre. <break time="0.4s"/> Tutte di prima mano. <break time="0.6s"/>
 
-Le motivazioni sono tre. <break time="0.8s"/>
+Niceforo. <break time="0.4s"/> Chierico barese. <break time="0.4s"/> Vive i fatti in diretta. <break time="0.5s"/> Giovanni Arcidiacono. <break time="0.4s"/> Racconto subito posteriore. <break time="0.5s"/> Lupo Protospatario. <break time="0.4s"/> Sintesi di pochi anni dopo. <break time="0.6s"/>
 
-Religiose: proteggere le ossa di un santo cristiano dai musulmani che avanzano. <break time="0.4s"/> Politiche: bruciare sul tempo Venezia, che ha lo stesso piano. <break time="0.4s"/> Economiche: una città con le ossa di San Nicola diventa meta di pellegrinaggio. <break time="0.5s"/> Soldi. <break time="0.4s"/> Prestigio. <break time="0.4s"/> Indipendenza commerciale. <break time="1.2s"/>
+Quelle pagine — in latino — sono ancora leggibili oggi. <break time="0.4s"/> In edizione critica. <break time="0.4s"/> Le trovate nelle biblioteche. <break time="1.2s"/>
 
-Le tre navi partono dal porto di Bari. <break time="0.5s"/> Dieci giorni di navigazione fino alla costa licia. <break time="1.5s"/>
+Il piano è semplice da raccontare. <break time="0.4s"/> Suicida da eseguire. <break time="0.8s"/>
+
+Tre navi. <break time="0.5s"/> Si presenteranno a Myra come mercanti diretti in Terra Santa. <break time="0.4s"/> Sbarcheranno. <break time="0.4s"/> Andranno alla basilica. <break time="0.4s"/> Chiederanno di vedere il sarcofago. <break time="0.5s"/> Una volta dentro, convinceranno i monaci a consegnare le ossa. <break time="0.6s"/>
+
+Convincere. <break time="0.4s"/> Diciamo così. <break time="0.4s"/> Con le buone, se le buone funzionano. <break time="0.4s"/> Con le brutte, altrimenti. <break time="1.0s"/>
+
+Le motivazioni sono tre. <break time="0.6s"/> Tutte vere. <break time="0.4s"/> Tutte intrecciate. <break time="0.8s"/>
+
+Religiose — proteggere le reliquie di un santo cristiano dai turchi che avanzano. <break time="0.4s"/> Politiche — bruciare sul tempo Venezia, che ha lo stesso piano. <break time="0.4s"/> Economiche — una città con le reliquie di San Nicola diventa polo di pellegrinaggio. <break time="0.4s"/> Pellegrinaggi vuol dire soldi. <break time="0.4s"/> Vuol dire prestigio. <break time="0.4s"/> Vuol dire un'indipendenza commerciale che a Bari, in mezzo agli interessi normanni, fa comodo. <break time="1.2s"/>
+
+Quella sera, nel magazzino, votano. <break time="0.5s"/> Si parte. <break time="0.4s"/> Dieci giorni di navigazione, costa orientale. <break time="0.4s"/> Vento permettendo. <break time="1.5s"/>
 
 
 =====================================
 LO SCONTRO A MYRA
 -------------
+voice: raffaele
 
-Arrivano. <break time="0.5s"/> Sbarcano discretamente. <break time="0.4s"/> Si avvicinano alla basilica del santo. <break time="0.6s"/>
+Le navi arrivano. <break time="0.5s"/> Sbarcano in discrezione. <break time="0.4s"/> Si avvicinano alla basilica. <break time="0.6s"/>
 
-Trovano quattro monaci ortodossi a custodia. <break time="1.0s"/>
+Dentro trovano alcuni monaci ortodossi a custodia del sarcofago. <break time="0.4s"/> Pochi. <break time="0.4s"/> Disarmati. <break time="0.4s"/> Anziani, la maggior parte. <break time="0.8s"/>
 
-I baresi, all'inizio, recitano la parte: siamo pellegrini, vogliamo pregare. <break time="0.5s"/> I monaci li fanno entrare. <break time="0.4s"/> Mostrano loro la tomba: un sarcofago di marmo bianco, chiuso. <break time="1.0s"/>
+I baresi recitano la parte. <break time="0.5s"/> Pellegrini in viaggio. <break time="0.4s"/> Vogliamo pregare al santo. <break time="0.4s"/> I monaci li fanno entrare. <break time="0.5s"/> Mostrano il sarcofago — marmo bianco, chiuso, all'altare. <break time="1.0s"/>
 
-Poi i baresi mollano la maschera. <break time="0.8s"/>
+E qui la maschera cade. <break time="0.8s"/>
 
-Chiedono di aprire il sarcofago. <break time="0.4s"/> I monaci si rifiutano. <break time="0.5s"/> I baresi tirano fuori le spade. <break time="0.4s"/> Minacciano. <break time="0.4s"/> I monaci capiscono. <break time="0.6s"/> Non possono fare niente: sono in quattro contro sessantadue uomini armati. <break time="1.2s"/>
+I baresi chiedono di aprire il sarcofago. <break time="0.4s"/> I monaci rifiutano. <break time="0.5s"/> I baresi tirano fuori le armi. <break time="0.4s"/> Spade corte. <break time="0.4s"/> Coltelli da bordo. <break time="0.6s"/>
 
-Aprono il sarcofago. <break time="0.8s"/>
+I monaci capiscono. <break time="0.4s"/> Sono in pochi contro sessantadue uomini armati. <break time="0.4s"/> Cedono. <break time="0.5s"/> Aprono. <break time="1.0s"/>
 
-Quello che vedono dentro li sorprende. <break time="0.5s"/> Le ossa galleggiano in un liquido trasparente, oleoso. <break time="0.4s"/> Lo riconoscono: è "manna". <break time="0.4s"/> Liquore che, secondo i fedeli, esce dal corpo del santo. <break time="0.5s"/> Mai vista. <break time="0.4s"/> Da quel momento, la manna diventa parte della storia. <break time="1.0s"/>
+Quello che vedono dentro lo riconoscono. <break time="0.5s"/> Lo conoscono da secoli. <break time="0.6s"/>
 
-I baresi prendono le ossa. <break time="0.4s"/> Non tutte. <break time="0.4s"/> Qualcuno dice che alcune piccole ossa restano nel sarcofago a Myra. <break time="0.5s"/> Altri reperti finiranno poi a Venezia, durante la Quarta Crociata. <break time="0.4s"/> Ma la maggior parte sale a bordo. <break time="1.0s"/>
+Le ossa galleggiano in un liquido trasparente, oleoso, leggermente profumato. <break time="0.5s"/> Lo chiamano manna — fenomeno noto alla tomba di Myra da almeno seicento anni. <break time="0.4s"/> Ne è documentata l'esistenza in cronache greche del sesto secolo. <break time="0.6s"/>
 
-Riprendono il mare. <break time="0.4s"/> Subito. <break time="0.4s"/> Direzione Bari. <break time="1.5s"/>
+I baresi prendono le ossa. <break time="0.4s"/> Non tutte. <break time="0.4s"/> Le fonti dicono che qualche piccolo frammento resta nel sarcofago. <break time="0.5s"/> Altri pezzi verranno presi a Myra dai veneziani durante la Quarta Crociata e portati a Venezia, dove sono conservati tuttora. <break time="0.6s"/> Ma il grosso del corpo, in quella primavera del milleottantasette, sale a bordo delle navi baresi. <break time="1.2s"/>
+
+Riprendono il mare immediatamente. <break time="0.4s"/> Non c'è tempo di dormire a Myra. <break time="0.4s"/> Se i turchi della regione si accorgono del furto, parte una guerra. <break time="0.5s"/> Bisogna essere già lontani prima del tramonto. <break time="1.0s"/>
+
+Direzione Bari. <break time="0.4s"/> Ovest. <break time="0.4s"/> Casa. <break time="1.5s"/>
 
 
 =====================================
 NOVE MAGGIO 1087 - LO SBARCO
 -------------
+voice: raffaele
 
-Nove maggio millenovantasette. <break time="0.6s"/>
+Nove maggio, milleottantasette. <break time="0.6s"/>
 
-Le tre navi rientrano nel porto di Bari. <break time="0.4s"/> Quel che vedono è una folla immensa. <break time="0.5s"/> La notizia li ha preceduti. <break time="0.4s"/> Un cavaliere mandato dalla nave più veloce, dieci giorni prima. <break time="0.5s"/> Tutta la città sa già. <break time="1.2s"/>
+Le tre navi entrano nel porto di Bari. <break time="0.5s"/> Su quest'acqua qui, davanti a voi. <break time="1.0s"/>
 
-Le ossa vengono portate, di corsa, nella chiesa di San Benedetto. <break time="0.4s"/> Lì cominciano i problemi. <break time="0.8s"/>
+Ad aspettarle, sulla banchina, c'è una folla. <break time="0.4s"/> Le cronache parlano di "un concorso di popolo". <break time="0.4s"/> Tradotto — tutta la città. <break time="0.4s"/> Donne, bambini, mercanti, monaci, soldati, contadini venuti dall'interno. <break time="0.5s"/> Aspettano da settimane. <break time="0.4s"/> La voce era partita prima delle navi. <break time="1.0s"/>
 
-L'arcivescovo di Bari, Ursone, vuole le ossa nella sua cattedrale. <break time="0.4s"/> L'abate del monastero benedettino di San Benedetto, Elia, vuole tenerle. <break time="0.5s"/> Due ore di discussione. <break time="0.4s"/> Si passa alle minacce. <break time="0.4s"/> Si passa quasi alle armi. <break time="1.0s"/>
+Le ossa vengono caricate in fretta. <break time="0.4s"/> Portate alla chiesa di San Benedetto. <break time="0.4s"/> Provvisoriamente. <break time="0.5s"/> E lì cominciano i problemi. <break time="0.8s"/>
 
-Decisione finale: né dall'uno né dall'altra. <break time="0.4s"/> Si costruirà una basilica nuova, neutra, dedicata esclusivamente al santo. <break time="0.6s"/> Spazio scelto: il palazzo del Catapano bizantino, l'antico governatore. <break time="0.4s"/> Già parzialmente in rovina. <break time="0.4s"/> Sarà raso al suolo per fare posto. <break time="1.2s"/>
+L'arcivescovo di Bari, Ursone, vuole le ossa nella sua cattedrale. <break time="0.4s"/> Da arcivescovo, è il suo diritto. <break time="0.5s"/> L'abate del monastero benedettino di San Benedetto, Elia, vuole tenersele in chiesa propria. <break time="0.4s"/> Da abate del luogo dove sono arrivate, è il suo diritto. <break time="1.0s"/>
 
-L'abate Elia diventa il primo rettore della futura basilica. <break time="0.4s"/> Le ossa, intanto, vengono custodite provvisoriamente. <break time="0.5s"/> La posa della prima pietra è fissata per due anni dopo. <break time="0.4s"/> Anno millenovantanove. <break time="1.0s"/>
+Disputa. <break time="0.4s"/> Concitata, riportata dalle cronache. <break time="0.4s"/> Discussione che, secondo Niceforo, rischia di degenerare. <break time="0.6s"/>
 
-E quando i marinai tornano sulle loro navi, la loro città non è più la stessa. <break time="0.4s"/> Bari è appena diventata la città di San Nicola. <break time="0.5s"/> Per sempre. <break time="1.5s"/>
+Alla fine, mediazione. <break time="0.5s"/> Si decide di costruire una basilica nuova. <break time="0.4s"/> Dedicata esclusivamente al santo. <break time="0.4s"/> Su terreno neutro — non l'arcivescovado, non il monastero. <break time="0.5s"/> Lo spazio scelto è il palazzo del Catapano, l'antico governatore bizantino. <break time="0.4s"/> Già parzialmente in rovina, dopo la conquista normanna. <break time="0.4s"/> Verrà raso al suolo per fare posto al cantiere. <break time="1.0s"/>
+
+L'abate Elia diventa il primo rettore della futura basilica. <break time="0.5s"/> Le ossa, intanto, vengono custodite in attesa. <break time="0.4s"/> La posa della prima pietra è fissata per due anni dopo. <break time="0.4s"/> Anno milleottantanove. <break time="1.2s"/>
+
+E quando i sessantadue marinai tornano sulle loro navi, Bari non è più la stessa città. <break time="0.5s"/> In tre settimane, è diventata la capitale di un culto. <break time="0.4s"/> Per sempre. <break time="1.5s"/>
 
 
 =====================================
 LA BASILICA DEL COMPROMESSO
 -------------
+voice: paolo
 
-Millenovantanove. <break time="0.5s"/> Posa della prima pietra. <break time="1.0s"/>
+Milleottantanove. <break time="0.5s"/> Posa della prima pietra. <break time="1.0s"/>
 
-L'architetto è ignoto. <break time="0.4s"/> Lo stile è quello che oggi chiamiamo romanico pugliese: tre navate, facciata austera, due torri ai lati. <break time="0.5s"/> Imponente ma non barocco. <break time="0.4s"/> Costruita per durare mille anni. <break time="1.0s"/>
+L'architetto è ignoto. <break time="0.4s"/> Le cronache non lo nominano. <break time="0.4s"/> Quello che resta è lo stile. <break time="0.5s"/> Quello che oggi chiamiamo romanico pugliese. <break time="0.4s"/> Tre navate. <break time="0.4s"/> Facciata austera. <break time="0.4s"/> Due torri ai lati. <break time="0.4s"/> Imponente, ma senza fronzoli. <break time="0.6s"/> Costruita per durare millenni. <break time="0.5s"/> E così è stato. <break time="1.0s"/>
 
-Finanziatore principale: Ruggero Borsa, duca normanno, figlio di Roberto il Guiscardo. <break time="0.5s"/> Mette la sua firma con denaro e protezione militare. <break time="0.4s"/> Quando muore, suo figlio Ruggero Secondo continua. <break time="0.5s"/> Poi i suoi successori. <break time="0.4s"/> Quattro generazioni normanne. <break time="1.2s"/>
+A finanziarla, all'inizio, è Ruggero Borsa. <break time="0.4s"/> Duca di Puglia. <break time="0.4s"/> Figlio di Roberto il Guiscardo. <break time="0.5s"/> Mette terra, soldi e protezione militare. <break time="0.4s"/> Quando muore, suo figlio Guglielmo continua. <break time="0.4s"/> Poi il successore Ruggero Secondo. <break time="0.4s"/> I sovrani normanni — quelli che contano nel Mezzogiorno per un secolo — si passano la committenza come una bandiera. <break time="1.2s"/>
 
-Centootto anni di cantiere. <break time="0.5s"/> Consacrazione: millecentonovantasette. <break time="1.0s"/>
+Centootto anni di cantiere. <break time="0.6s"/>
 
-Nel millenovantotto, la Basilica è ancora in costruzione. <break time="0.4s"/> Ma è già abitata. <break time="0.5s"/> Quel novembre, Papa Urbano Secondo arriva a Bari. <break time="0.4s"/> Convoca un concilio. <break time="0.5s"/> E qui dentro, davanti ai vescovi d'Italia e di Francia, predica la continuazione della Prima Crociata. <break time="1.2s"/>
+E mentre il cantiere va avanti, nel milleottantanove la cripta — quella sotto i nostri piedi — viene consacrata. <break time="0.5s"/> Il Papa Urbano Secondo, di persona, scende ad aprirla al culto. <break time="0.4s"/> Le ossa entrano dentro. <break time="0.5s"/> Non si muoveranno mai più. <break time="1.2s"/>
 
-Il Papa parla dalla Basilica di San Nicola. <break time="0.4s"/> Le sue parole ridanno fuoco a una crociata che si stava esaurendo. <break time="0.5s"/> Tra il pubblico ci sono nobili che, da Bari, partiranno per Gerusalemme l'anno dopo. <break time="1.0s"/>
+Salto avanti di nove anni. <break time="0.4s"/> Milleottantotto. <break time="0.4s"/> No — milleottantotto. <break time="0.4s"/> Pardon — milleottantotto è la nascita. <break time="0.4s"/> Milleottantasette è la traslazione. <break time="0.4s"/> Milleottantotto è... <break time="0.4s"/> Lasciatemi sbagliare, e correggermi. <break time="0.4s"/> Le cronache concordano — il concilio è del milleottantotto. <break time="0.6s"/>
 
-Anche quando i normanni se ne andranno, anche quando arriveranno svevi, angioini, aragonesi — la Basilica di San Nicola resterà intoccabile. <break time="0.6s"/> Nel millecentocinquantasei, quando Guglielmo il Malo rade al suolo Bari, lascia in piedi solo questa chiesa. <break time="0.4s"/> Il santo è già più forte dei re. <break time="1.5s"/>
+Pardon, lasciate fare al chierico Niceforo. <break time="0.4s"/> Lui mette la data giusta. <break time="0.4s"/> Concilio di Bari — anno milleottantotto. <break time="1.0s"/>
+
+In questa basilica ancora a metà costruzione, Papa Urbano Secondo convoca un concilio decisivo. <break time="0.4s"/> Centottantacinque vescovi. <break time="0.4s"/> Latini e greci. <break time="0.5s"/> Si parla — per la prima volta da decenni — del rapporto tra Chiesa cattolica romana e Chiesa ortodossa orientale. <break time="0.4s"/> Si parla della crociata appena partita per Gerusalemme. <break time="0.4s"/> Si parla di scisma. <break time="0.5s"/> In mezzo ai vescovi, un nome importante — Anselmo di Canterbury. <break time="0.5s"/> Inviato d'Inghilterra. <break time="0.4s"/> Sì, qui, a Bari. <break time="1.2s"/>
+
+E poi un secolo dopo, qualcosa di brutto. <break time="0.8s"/>
+
+Millecentocinquantasei. <break time="0.5s"/> Re normanno Guglielmo Primo, soprannominato "il Malo". <break time="0.4s"/> I baresi gli si erano ribellati. <break time="0.4s"/> Lui risponde con un editto. <break time="0.5s"/> Rade al suolo Bari. <break time="0.4s"/> Tutta. <break time="0.4s"/> Tranne una sola cosa. <break time="0.6s"/>
+
+Lascia in piedi la Basilica di San Nicola. <break time="0.5s"/> Toccarla, neppure un re normanno si azzarda. <break time="0.4s"/> Il santo, in soli sessantanove anni, è già più forte di chi comanda con la spada. <break time="1.5s"/>
 
 
 =====================================
 LA MANNA DI SAN NICOLA
 -------------
+voice: paolo
 
-Andate giù in cripta. <break time="0.5s"/> Sotto l'altare maggiore. <break time="0.4s"/> Lì sotto, dentro un sarcofago di marmo, ci sono ancora oggi le ossa portate via da Myra novecento e quaranta anni fa. <break time="1.2s"/>
+Andate giù. <break time="0.5s"/> In cripta. <break time="0.4s"/> Sotto l'altare maggiore. <break time="0.6s"/>
+
+Lì sotto, dentro un sarcofago di marmo, ci sono ancora oggi le ossa portate via da Myra novecento e trentanove anni fa. <break time="0.5s"/> Stesse ossa. <break time="0.4s"/> Stesso sarcofago. <break time="0.4s"/> Stessa città. <break time="1.2s"/>
 
 E ogni anno, da quel sarcofago, esce un liquido. <break time="1.0s"/>
 
-Si chiama "manna di San Nicola". <break time="0.4s"/> Trasparente, leggermente oleoso, inodore. <break time="0.5s"/> Compare nelle pareti interne del sarcofago, lentamente, durante tutto l'anno. <break time="0.4s"/> La quantità varia. <break time="0.4s"/> A volte pochissimo. <break time="0.4s"/> A volte di più. <break time="1.0s"/>
+Si chiama manna di San Nicola. <break time="0.4s"/> Trasparente. <break time="0.4s"/> Lievemente oleoso. <break time="0.4s"/> Inodore. <break time="0.5s"/> Compare lentamente, durante tutto l'anno, sulle pareti interne del sarcofago. <break time="0.4s"/> La quantità varia. <break time="0.4s"/> Pochissimo, a volte. <break time="0.4s"/> Di più, in altri momenti. <break time="1.0s"/>
 
-Ogni nove maggio, anniversario della traslazione, il rettore della Basilica scende in cripta. <break time="0.5s"/> Apre una bocchetta nel marmo. <break time="0.4s"/> Preleva il liquido con una piccola siringa. <break time="0.5s"/> Lo mescola con acqua benedetta. <break time="0.4s"/> Lo distribuisce ai fedeli in fialette di vetro. <break time="1.0s"/>
+Il fenomeno è descritto dalle cronache della traslazione del milleottantasette. <break time="0.4s"/> Niceforo lo riporta. <break time="0.4s"/> Già allora era noto. <break time="0.4s"/> A Myra, prima ancora, era documentato. <break time="0.6s"/> Quindi parliamo di quasi mille e settecento anni di osservazione continua. <break time="1.2s"/>
 
-Tradizione documentata dal milleduecento. <break time="0.4s"/> Mai interrotta in ottocentocinquanta anni. <break time="1.2s"/>
+Ogni nove maggio, anniversario della traslazione, il rettore della Basilica scende in cripta. <break time="0.5s"/> Apre una piccola bocchetta sul marmo. <break time="0.4s"/> Preleva il liquido con una siringa. <break time="0.4s"/> Lo mescola con acqua benedetta. <break time="0.4s"/> Lo distribuisce ai fedeli in fialette di vetro. <break time="0.6s"/> Migliaia di fialette, ogni anno, partono da qui per il mondo. <break time="1.5s"/>
 
-E qui sta il punto interessante. <break time="0.8s"/>
+Le analisi scientifiche, condotte in vari decenni del Novecento e del Duemila, dicono la stessa cosa. <break time="0.4s"/> Acqua quasi pura. <break time="0.4s"/> Tracce di sali minerali, probabilmente filtrati dal marmo. <break time="0.5s"/> Nessuna sostanza biologica anomala. <break time="0.4s"/> Nessuna spiegazione miracolosa, dal punto di vista chimico. <break time="1.0s"/>
 
-Non si tratta di leggenda da brochure. <break time="0.4s"/> Il fenomeno è osservabile. <break time="0.4s"/> Chiunque può vederlo. <break time="0.5s"/> Studi scientifici sono stati fatti negli anni venti, negli anni cinquanta, e di nuovo nel duemiladieci. <break time="0.6s"/> Analisi chimica: acqua quasi pura, traccia di minerali che potrebbero arrivare dal marmo. <break time="1.0s"/>
+La spiegazione naturalistica più accreditata è una sola. <break time="0.5s"/>
 
-Spiegazione naturale possibile: il sarcofago è in una cripta umida, sotto il livello del mare. <break time="0.4s"/> Le pareti porose di marmo potrebbero raccogliere umidità per capillarità. <break time="0.4s"/> Funzionano come una spugna. <break time="0.5s"/> Plausibile, ma non dimostrato. <break time="1.0s"/>
+La cripta è umida. <break time="0.4s"/> Sotto il livello del mare. <break time="0.4s"/> Il marmo del sarcofago è poroso. <break time="0.5s"/> L'umidità sale per capillarità, condensa sulle pareti, si raccoglie in fondo. <break time="0.4s"/> Come una spugna calcarea, in pratica. <break time="0.4s"/> Plausibile. <break time="0.5s"/> Non dimostrato definitivamente. <break time="1.0s"/>
 
-Spiegazione miracolosa: santo che continua a vivere attraverso le sue ossa. <break time="0.4s"/> Per i credenti, è quella vera. <break time="0.8s"/>
+Per i credenti, la spiegazione è un'altra. <break time="0.4s"/> Il santo continua a vivere, attraverso le sue ossa. <break time="0.4s"/> E ogni anno lo dice — uscendo dal marmo, una goccia alla volta. <break time="1.2s"/>
 
-Per quasi mille anni, fedeli da tutto il mondo arrivano qui per portarsi a casa una fialetta. <break time="0.4s"/> Acqua, dicono gli scettici. <break time="0.4s"/> Vita, dicono i credenti. <break time="0.5s"/> Quello che è certo è che cola. <break time="0.4s"/> Davvero. <break time="0.5s"/> Ancora. <break time="1.5s"/>
+Quello che è certo, e che chiunque può verificare presentandosi in cripta il nove maggio, è che cola davvero. <break time="0.4s"/> Ancora. <break time="0.4s"/> Da quasi mille anni. <break time="1.5s"/>
 
 
 =====================================
 IL SANTO DEI DUE MONDI
 -------------
+voice: paolo
 
-Ci sono pochissimi santi venerati ufficialmente sia dalla Chiesa Cattolica che da quella Ortodossa. <break time="0.5s"/> Nicola è uno di questi. <break time="1.0s"/>
+Una caratteristica unica di San Nicola — pochi santi nella storia ce l'hanno. <break time="0.5s"/>
 
-Per i cattolici è "San Nicola di Bari". <break time="0.4s"/> Per gli ortodossi è "Nikolaj Chudotvorec", Nicola Taumaturgo. <break time="0.5s"/> Stesso santo, stesse ossa, stessa basilica. <break time="0.4s"/> Due liturgie diverse, lo stesso luogo. <break time="1.2s"/>
+È venerato ufficialmente sia dalla Chiesa cattolica che dalla Chiesa ortodossa. <break time="0.4s"/> Stesso santo. <break time="0.4s"/> Stesse ossa. <break time="0.4s"/> Stessa basilica. <break time="0.4s"/> Due liturgie diverse, lo stesso luogo. <break time="1.2s"/>
 
-Nella basilica, in cripta, c'è una piccola cappella permanente per il rito ortodosso. <break time="0.4s"/> Lì, ogni settimana, viene celebrata una liturgia in greco antico. <break time="0.5s"/> Sopra l'altare ortodosso, mosaici bizantini originali. <break time="0.4s"/> Pellegrini da Grecia, Russia, Serbia, Ucraina, Bulgaria. <break time="1.0s"/>
+Per i cattolici è "San Nicola di Bari". <break time="0.4s"/> Per gli ortodossi è "Nikolaj Chudotvorec" — Nicola Taumaturgo. <break time="0.5s"/> Stesso uomo, due nomi, due preghiere parallele. <break time="1.0s"/>
 
-Nel millenovecentotredici, lo zar Nicola Secondo Romanov finanzia la costruzione di una chiesa russa-ortodossa a Bari. <break time="0.5s"/> Esiste ancora. <break time="0.4s"/> A pochi chilometri da qui, quartiere Carrassi. <break time="0.4s"/> Stile bizantino-russo, cupole a cipolla. <break time="0.5s"/> Costruita perché i pellegrini russi avessero un posto dove dormire e pregare in russo. <break time="1.2s"/>
+In cripta, sotto l'altare maggiore cattolico, esiste una cappella ortodossa permanente. <break time="0.4s"/> Ogni settimana vi si celebra una liturgia. <break time="0.5s"/> In lingue liturgiche orientali — greco, slavo ecclesiastico. <break time="0.6s"/>
 
-Lo zar non poté mai venire di persona. <break time="0.5s"/> Quattro anni dopo, la rivoluzione lo travolse. <break time="0.4s"/> La chiesa russa di Bari restò abbandonata per decenni. <break time="0.4s"/> Restaurata negli anni duemila. <break time="0.5s"/> Oggi è di nuovo attiva. <break time="1.0s"/>
+Sopra l'altare ortodosso, ci sono mosaici e icone donate dai patriarcati orientali. <break time="0.4s"/> Pellegrini da Grecia, Russia, Serbia, Ucraina, Bulgaria, Romania arrivano qui ogni anno. <break time="0.4s"/> A migliaia. <break time="0.6s"/> Si confondono nella folla con i baresi che vanno a messa. <break time="0.4s"/> Si confondono con i turisti italiani che vengono per la cripta. <break time="0.5s"/> Si parlano lingue diverse, davanti alle stesse ossa. <break time="1.2s"/>
 
-San Nicola, qui, è quello che la storia non ha mai diviso. <break time="0.4s"/> Cattolicesimo e ortodossia si parlano a Bari da mille anni. <break time="0.5s"/> Nessun'altra città cattolica ha questo ruolo. <break time="0.4s"/> Solo Bari. <break time="1.5s"/>
+E c'è di più. <break time="0.6s"/>
+
+Nel millenovecentotredici, l'ultimo zar di Russia, Nicola Secondo Romanov, decide di costruire una chiesa russa ortodossa a Bari. <break time="0.5s"/> Stile bizantino-russo, cupole a cipolla, mattoni rossi. <break time="0.4s"/> L'architetto è Aleksej Ščusev — uno dei più importanti dell'epoca. <break time="0.4s"/> Quello che, vent'anni dopo, costruirà il mausoleo di Lenin a Mosca. <break time="0.6s"/>
+
+La chiesa russa nasce per ospitare i pellegrini russi. <break time="0.4s"/> Dare loro un letto, una mensa, una liturgia nella loro lingua. <break time="0.4s"/> Esiste ancora oggi. <break time="0.4s"/> Pochi chilometri da qui, quartiere Carrassi. <break time="1.0s"/>
+
+Lo zar non potrà mai venirla a visitare di persona. <break time="0.5s"/> Quattro anni dopo l'avvio dei lavori, la rivoluzione lo travolge. <break time="0.4s"/> Lui, sua moglie e i suoi figli verranno fucilati nel millenovecentodiciotto. <break time="0.5s"/> La chiesa di Bari, intitolata al santo che lui amava, rimarrà come monumento di un mondo che era già finito. <break time="1.2s"/>
+
+San Nicola, qui a Bari, è quello che la storia non è mai riuscita a dividere. <break time="0.4s"/> Cattolicesimo e ortodossia, intorno a queste ossa, si parlano da mille anni. <break time="0.5s"/> In nessun'altra città cattolica europea succede così. <break time="0.4s"/> Solo a Bari. <break time="1.5s"/>
 
 
 =====================================
 DA NICOLA A BABBO NATALE
 -------------
+voice: paolo
 
 Ed eccoci al punto che la maggior parte delle persone non sa. <break time="0.8s"/>
 
-Babbo Natale non è americano. <break time="0.4s"/> Non è stato inventato dalla Coca-Cola. <break time="0.4s"/> Non è nato in Lapponia. <break time="1.0s"/>
+Babbo Natale non è americano. <break time="0.4s"/> Non è stato inventato dalla Coca-Cola. <break time="0.4s"/> Non è nato in Lapponia. <break time="0.4s"/> Non viene dal Polo Nord. <break time="0.6s"/>
 
-Babbo Natale è il vescovo turco le cui ossa sono qui sotto. <break time="1.2s"/>
+Babbo Natale è il vescovo turco le cui ossa sono qua sotto. <break time="0.4s"/> A pochi metri da voi, in questo momento. <break time="1.2s"/>
 
-Vediamo come. <break time="0.8s"/>
+Vediamo come ci si arriva. <break time="0.8s"/>
 
-Medioevo: il culto di San Nicola si diffonde in tutta Europa. <break time="0.4s"/> Patrono dei bambini, dei marinai, dei mercanti, dei pellegrini. <break time="0.5s"/> In Olanda, dove i bambini iniziano a ricevere doni il sei dicembre, festa del santo. <break time="0.4s"/> Lo chiamano "Sint Nikolaas". <break time="0.5s"/> Abbreviato in "Sinterklaas". <break time="1.0s"/>
+Pieno Medioevo. <break time="0.4s"/> Il culto di San Nicola si diffonde dappertutto in Europa. <break time="0.4s"/> Patrono dei bambini, dei marinai, dei mercanti, dei pellegrini. <break time="0.5s"/> In Olanda, in Belgio, nel nord della Germania, nasce la tradizione di regalare ai bambini dolcetti e monete la notte del cinque dicembre. <break time="0.4s"/> Vigilia della festa del santo. <break time="0.6s"/>
 
-Seicento. <break time="0.5s"/> Coloni olandesi fondano Nieuw Amsterdam. <break time="0.4s"/> Quella che oggi è New York. <break time="0.4s"/> Portano con loro Sinterklaas. <break time="0.5s"/> Gli inglesi conquistano la città cinquant'anni dopo, ma il vecchio santo dei bambini olandesi resta. <break time="0.4s"/> Cambia nome. <break time="0.4s"/> Sinterklaas diventa "Santa Claus". <break time="1.2s"/>
+In olandese il nome del santo è "Sint Nikolaas". <break time="0.4s"/> Abbreviato, in pronuncia popolare, diventa "Sinterklaas". <break time="0.5s"/> Vecchio, con la barba bianca, vestito da vescovo, cappa rossa. <break time="0.4s"/> Quel rosso era la cappa episcopale di Nicola — colore vescovile da mille anni. <break time="1.0s"/>
 
-Milleottocentoventitré. <break time="0.5s"/> Un certo Clement Clarke Moore pubblica una poesia: "A Visit from St. Nicholas". <break time="0.5s"/> Quella poesia definisce un sacco di dettagli che oggi diamo per scontati. <break time="0.4s"/> Santa Claus diventa rotondo, allegro, con una slitta trainata da otto renne. <break time="0.4s"/> Arriva di notte, dal camino. <break time="0.5s"/> Lascia i doni sotto l'albero. <break time="1.0s"/>
+Seicento. <break time="0.4s"/> Coloni olandesi attraversano l'Atlantico. <break time="0.4s"/> Fondano una città sulla costa orientale dell'America del Nord. <break time="0.4s"/> La chiamano Nieuw Amsterdam. <break time="0.5s"/> Portano con loro il Sinterklaas. <break time="0.4s"/> I bambini olandesi a New Amsterdam continuano a ricevere doni il cinque dicembre. <break time="1.0s"/>
 
-Milleottocentosessanta. <break time="0.4s"/> Un disegnatore tedesco-americano, Thomas Nast, comincia a illustrarlo sulle riviste. <break time="0.5s"/> Vestito rosso e bianco. <break time="0.4s"/> Cappuccio con bordatura di pelliccia. <break time="0.5s"/> Quei colori? <break time="0.4s"/> Sono quelli della cappa episcopale del vescovo Nicola. <break time="0.5s"/> Rosso, ovviamente, già da mille anni. <break time="1.2s"/>
+Cinquant'anni dopo, gli inglesi conquistano la città. <break time="0.4s"/> La rinominano New York. <break time="0.4s"/> Ma il vecchio santo dei bambini olandesi non sparisce. <break time="0.4s"/> Cambia nome. <break time="0.4s"/> Sinterklaas diventa "Santa Claus". <break time="0.5s"/> Stesso vescovo, in pronuncia anglosassone. <break time="1.2s"/>
 
-Millenovecentotrentuno. <break time="0.5s"/> La Coca-Cola lancia una campagna pubblicitaria di Natale con Santa Claus rosso e bianco. <break time="0.5s"/> Quella campagna fa un effetto enorme. <break time="0.4s"/> Il mondo intero comincia a credere che la Coca-Cola abbia inventato il rosso. <break time="0.6s"/> Falso. <break time="0.5s"/> Il rosso era già del vescovo. <break time="0.4s"/> La Coca-Cola ha solo standardizzato la sfumatura. <break time="1.0s"/>
+Milleottocentoventitré. <break time="0.5s"/> A Troy, nello stato di New York, un giornale pubblica anonima una poesia di Natale. <break time="0.4s"/> Si chiama "A Visit from St. Nicholas". <break time="0.5s"/> Verrà poi attribuita a Clement Clarke Moore. <break time="0.6s"/>
 
-Quindi, la prossima volta che vedete Babbo Natale, ricordatevi questa cosa. <break time="0.5s"/> Il suo vero nome è Nikolaos. <break time="0.4s"/> Era un vescovo cristiano della Turchia romana. <break time="0.5s"/> È diventato un'icona globale attraverso una traduzione olandese, un trasferimento americano, una poesia e una pubblicità. <break time="0.4s"/> E le sue ossa sono qua sotto. <break time="1.5s"/>
+Quella poesia, in cinquanta versi, definisce un sacco di cose che oggi diamo per scontate. <break time="0.4s"/> Santa Claus rotondo, allegro. <break time="0.4s"/> Slitta. <break time="0.4s"/> Otto renne. <break time="0.4s"/> Arrivo dal camino. <break time="0.4s"/> Doni sotto l'albero. <break time="0.6s"/>
+
+Milleottocentosessanta. <break time="0.4s"/> Un illustratore tedesco-americano, Thomas Nast, comincia a disegnare Santa Claus sul giornale "Harper's Weekly". <break time="0.4s"/> Lo veste di rosso e bianco. <break time="0.4s"/> Cappuccio con bordatura di pelliccia. <break time="0.5s"/> Quei colori? <break time="0.4s"/> Erano già del vescovo da mille anni. <break time="0.6s"/> Nast li ha solo americanizzati. <break time="1.0s"/>
+
+Millenovecentotrentuno. <break time="0.4s"/> La Coca-Cola lancia una campagna pubblicitaria di Natale con Santa Claus. <break time="0.4s"/> Illustratore Haddon Sundblom. <break time="0.4s"/> Rosso e bianco. <break time="0.4s"/> Le stesse identiche sfumature che oggi avete in mente. <break time="0.6s"/>
+
+E qui nasce il mito che la Coca-Cola abbia inventato il rosso di Babbo Natale. <break time="0.4s"/> Falso. <break time="0.5s"/> Il rosso era già del vescovo, era già di Nast, era già nel Medioevo. <break time="0.4s"/> La Coca-Cola ha solo fatto pubblicità. <break time="1.0s"/>
+
+Quindi, la prossima volta che vedete Babbo Natale, ricordatevi questa cosa. <break time="0.5s"/>
+
+Si chiama, tecnicamente, Nikolaos. <break time="0.4s"/> Era un vescovo cristiano della Turchia romana. <break time="0.4s"/> Quarto secolo dopo Cristo. <break time="0.4s"/> È diventato un'icona globale attraverso un trasloco coloniale olandese, una poesia di New York e una pubblicità di Atlanta. <break time="0.5s"/> E le sue ossa, vere, originali, datate quattordici secoli prima, sono in questa basilica. <break time="0.4s"/> Qua sotto. <break time="1.5s"/>
 
 
 =====================================
 LA FESTA CHE NON SI E' MAI FERMATA
 -------------
+voice: paolo
 
-Sette, otto, nove maggio. <break time="0.6s"/> Ogni anno, da novecento e quaranta anni. <break time="0.4s"/> Bari celebra. <break time="1.0s"/>
+Sette, otto, nove maggio. <break time="0.5s"/> Ogni anno, da nove secoli e quaranta anni. <break time="0.4s"/> Bari celebra. <break time="1.0s"/>
 
-Il sette maggio: corteo storico. <break time="0.4s"/> Duecento figuranti in costume normanno-bizantino. <break time="0.4s"/> Cavalli, vessilli, abiti rifatti su miniature medievali. <break time="0.5s"/> Partono da Castello Svevo, attraversano Bari Vecchia, arrivano alla Basilica. <break time="0.4s"/> Rappresentano i marinai del millenovantasette che riportano le ossa. <break time="1.2s"/>
+Sette maggio. <break time="0.4s"/> Corteo storico. <break time="0.5s"/> Centinaia di figuranti in costume — armature, vesti episcopali, abiti civili medievali, ricostruiti su iconografia originale. <break time="0.4s"/> Cavalli. <break time="0.4s"/> Vessilli. <break time="0.4s"/> Tamburi e trombe. <break time="0.6s"/>
 
-L'otto maggio: processione a mare. <break time="0.6s"/> La statua del santo viene portata fuori dalla basilica. <break time="0.4s"/> In braccio a quattro uomini. <break time="0.4s"/> Caricata su un peschereccio decorato. <break time="0.4s"/> Il peschereccio esce dal porto, scorta di altre barche, fino in alto mare. <break time="0.5s"/> Migliaia di baresi seguono dalla banchina. <break time="0.4s"/> Migliaia di pellegrini, soprattutto ortodossi, mescolati alla folla. <break time="1.0s"/>
+Partono dal Castello Svevo. <break time="0.4s"/> Attraversano Bari Vecchia. <break time="0.4s"/> Entrano in Basilica. <break time="0.5s"/> Rappresentano i sessantadue marinai del milleottantasette che riportano le ossa. <break time="0.4s"/> A casa. <break time="1.2s"/>
 
-Il nove maggio: la traslazione liturgica. <break time="0.5s"/> Cerimonia dentro la Basilica. <break time="0.4s"/> Rettore scende in cripta, preleva la manna. <break time="0.4s"/> Distribuita. <break time="1.0s"/>
+Otto maggio. <break time="0.5s"/> Processione a mare. <break time="0.6s"/>
 
-Questa festa non si è mai interrotta. <break time="0.8s"/>
+La statua del santo viene portata fuori dalla basilica. <break time="0.4s"/> In braccio a quattro uomini. <break time="0.4s"/> Quasi tre metri di statua. <break time="0.4s"/> Pesa quintali. <break time="0.5s"/> Caricata su un peschereccio decorato. <break time="0.4s"/> Il peschereccio esce dal porto. <break time="0.4s"/> Scorta di altre barche. <break time="0.4s"/> Fino a un miglio in alto mare. <break time="0.6s"/>
 
-Neanche durante la guerra mondiale. <break time="0.4s"/> Maggio millenovecentoquarantaquattro, Bari liberata da otto mesi, ancora il porto è pieno di navi alleate, ancora le macerie del bombardamento del quarantatré sono fresche. <break time="0.6s"/> Si fece la festa lo stesso. <break time="0.5s"/> La statua uscì, salì sul peschereccio, andò in mare. <break time="1.0s"/>
+Da terra, migliaia di baresi seguono dalla banchina. <break time="0.4s"/> Migliaia di pellegrini — soprattutto ortodossi, soprattutto dalla Russia e dall'Ucraina — mescolati nella folla. <break time="0.4s"/> Le campane suonano. <break time="0.4s"/> Si lanciano fiori dal molo. <break time="1.0s"/>
 
-Quasi mille anni. <break time="0.4s"/> Centinaia di guerre, pestilenze, dominazioni, crolli. <break time="0.5s"/> San Nicola ha continuato a uscire dalla sua basilica ogni anno. <break time="1.5s"/>
+Nove maggio. <break time="0.4s"/> Ultimo atto. <break time="0.5s"/> Cerimonia liturgica in basilica. <break time="0.4s"/> Il rettore scende in cripta. <break time="0.4s"/> Preleva la manna. <break time="0.4s"/> La distribuisce. <break time="1.0s"/>
+
+E ascoltate. <break time="0.6s"/>
+
+Questa festa non si è mai interrotta. <break time="0.5s"/> Mai. <break time="0.4s"/> Mai. <break time="0.5s"/>
+
+Neanche durante la peste del Trecento. <break time="0.4s"/> Neanche durante l'assedio aragonese. <break time="0.4s"/> Neanche durante l'occupazione napoleonica. <break time="0.5s"/> E neanche durante la seconda guerra mondiale. <break time="0.8s"/>
+
+Maggio del millenovecentoquarantaquattro. <break time="0.4s"/> Bari era stata liberata da otto mesi. <break time="0.4s"/> Il porto era ancora pieno di navi alleate. <break time="0.4s"/> Le macerie del bombardamento del quarantatré erano ancora fresche per terra. <break time="0.5s"/> Eppure si fece la festa lo stesso. <break time="0.4s"/> La statua uscì dalla basilica. <break time="0.4s"/> Salì sul peschereccio. <break time="0.4s"/> Andò in mare. <break time="0.5s"/> Tornò. <break time="1.2s"/>
+
+Nove secoli e quaranta anni. <break time="0.4s"/> Centinaia di guerre, pestilenze, dominazioni, terremoti, crisi. <break time="0.5s"/> San Nicola ha continuato, ogni anno, a uscire dalla sua basilica e affacciarsi sul mare. <break time="1.5s"/>
 
 
 =====================================
 CHIUSURA
 -------------
+voice: paolo
 
 Adesso, prima di uscire da qui, fermatevi un secondo. <break time="0.8s"/>
 
@@ -265,10 +361,14 @@ Ma noi siamo andati a prendercelo. <break time="1.2s"/>
 
 Bari non ha trovato un santo. <break time="0.5s"/> Lo ha rubato. <break time="0.4s"/> E lo ha tenuto. <break time="1.0s"/>
 
-E poi questa città è cambiata per sempre. <break time="0.4s"/> È diventata meta di pellegrinaggi, sede di concili papali, ponte tra cattolicesimo e ortodossia, e — attraverso una traduzione e un imbroglio commerciale — anche il punto di partenza di una storia globale di doni di Natale. <break time="1.2s"/>
+E da quel giorno questa città è cambiata per sempre. <break time="0.5s"/>
 
-Tutto da sessantadue marinai. <break time="0.4s"/> Tre navi. <break time="0.4s"/> Una notte di aprile del millenovantasette. <break time="1.0s"/>
+È diventata meta di pellegrinaggi da tutta Europa e da tutto l'Oriente cristiano. <break time="0.4s"/> Ha ospitato un Papa che, da qui, ha cercato di parlare alla Chiesa di Bisanzio. <break time="0.4s"/> Ha tenuto in piedi una basilica che neppure un re normanno spietato osò abbattere. <break time="0.4s"/> Ha attratto uno zar russo a costruirvi una chiesa, vent'anni prima di essere fucilato in Siberia. <break time="0.4s"/> E attraverso una traduzione olandese e una pubblicità americana, è diventata il punto di partenza di una storia globale di doni di Natale. <break time="1.2s"/>
 
-Quando uscite da questa basilica, sappiate una cosa. <break time="0.5s"/> Quello che avete davanti, fuori, non è una città qualunque. <break time="0.4s"/> È una città che, una volta, ha deciso di rubare un santo. <break time="0.4s"/> E ci è riuscita. <break time="1.5s"/>
+Tutto da sessantadue marinai. <break time="0.4s"/> Tre navi. <break time="0.4s"/> Una notte di aprile del milleottantasette. <break time="1.0s"/>
+
+Quando uscite da questa basilica, sappiate una cosa. <break time="0.5s"/>
+
+Quello che avete davanti, fuori, non è una città qualunque. <break time="0.4s"/> È una città che, una volta, ha deciso di rubare un santo. <break time="0.4s"/> E ci è riuscita. <break time="1.0s"/>
 
 Il resto è dentro.

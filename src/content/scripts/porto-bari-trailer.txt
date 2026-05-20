@@ -1,8 +1,8 @@
-PORTO DI BARI — TRAILER 60s
-Highlight reel narrativo, voce Gian. Hook iniziale + 3 ganci drammatici + chiusura.
+PORTO DI BARI — TRAILER 60s · voce Valerio (warm storyteller)
 =====================================
 TRAILER
 -------------
+voice: valerio
 
 Un porto non è solo un porto. <break time="0.6s"/> A volte è una soglia. <break time="1.0s"/>
 
@@ -16,6 +16,6 @@ Saraceni, normanni, imperatori, profughi. <break time="0.4s"/> L'Adriatico non �
 
 Porto di Bari. <break time="0.6s"/>
 
-Tredici capitoli. <break time="0.4s"/> Ventidue minuti. <break time="0.4s"/> Quattromila anni di andate e ritorni. <break time="1.0s"/>
+Tredici capitoli. <break time="0.4s"/> Trentatré minuti. <break time="0.4s"/> Quattromila anni di andate e ritorni. <break time="1.0s"/>
 
 Il resto è dentro.

@@ -4,6 +4,7 @@ Voce: Gian. Modello: eleven_multilingual_v2.
 =====================================
 INTRODUZIONE
 -------------
+voice: gian
 
 Quattromila anni di storia. <break time="0.6s"/> In meno di un chilometro quadrato. <break time="1.2s"/>
 
@@ -31,6 +32,7 @@ Si parte dal Castello Svevo. <break time="0.4s"/> Circa un'ora e mezza di cammin
 =====================================
 CASTELLO SVEVO
 -------------
+voice: gian
 
 Castello Svevo. <break time="1.0s"/>
 
@@ -64,13 +66,11 @@ Da Bari alla Polonia, attraverso una donna. <break time="1.5s"/>
 
 Ottocento. <break time="0.5s"/> Il castello smette di essere il potere. <break time="0.4s"/> Diventa prigione. <break time="0.4s"/> Poi caserma. <break time="0.6s"/> Quasi un secolo con detenuti e soldati al posto dei nobili. <break time="1.5s"/>
 
-Ma la cosa più assurda è degli anni Ottanta. <break time="0.8s"/>
+E poi c'è la sorpresa archeologica. <break time="0.8s"/>
 
-Scavi all'interno. <break time="0.4s"/> Viene fuori una chiesa protocristiana intera. <break time="0.4s"/> Abside, fonte battesimale, sepolture nel pavimento. <break time="0.8s"/>
+Scavi all'interno del castello hanno rivelato strutture di età tardo-antica e paleocristiana. <break time="0.4s"/> Sotto le fondamenta normanno-sveve. <break time="0.8s"/>
 
-Sotto Federico II del Duecento, una chiesa di duemila anni fa. <break time="1.0s"/>
-
-Visitabile. <break time="0.5s"/> Seguendo il percorso interno. <break time="1.5s"/>
+Sotto il castello del Duecento, c'è ancora altra città. <break time="0.5s"/> Visitabile seguendo il percorso interno. <break time="1.5s"/>
 
 Dieci dominazioni. <break time="0.4s"/> Tre religioni. <break time="0.4s"/> Una città che, sotto tutto questo, è rimasta sé stessa. <break time="1.2s"/>
 
@@ -80,6 +80,7 @@ Bari Vecchia non si legge. <break time="0.4s"/> Si cammina.
 =====================================
 ARCO BASSO
 -------------
+voice: gian
 
 Arco Basso. <break time="1.0s"/>
 
@@ -107,6 +108,7 @@ Non è decorazione. <break time="0.5s"/> È un segno di appartenenza.
 =====================================
 ORECCHIETTE
 -------------
+voice: gian
 
 Orecchiette. <break time="1.0s"/>
 
@@ -136,6 +138,7 @@ No. <break time="0.5s"/> Non è una trappola. <break time="0.4s"/> È una tradiz
 =====================================
 CAPE DU TURCHE
 -------------
+voice: sami
 
 Cape du Turche. <break time="1.0s"/>
 
@@ -167,6 +170,7 @@ La befana che decapita l'emiro è quello che la storia non ha potuto fare. <brea
 =====================================
 I BASSI
 -------------
+voice: gian
 
 I Bassi. <break time="1.0s"/>
 
@@ -194,6 +198,7 @@ E quando guardate dentro un basso aperto, mentre passate — <break time="0.5s"/
 =====================================
 CATTEDRALE DI SAN SABINO
 -------------
+voice: gian
 
 Cattedrale di San Sabino. <break time="1.0s"/>
 
@@ -219,12 +224,13 @@ Dentro, ci sono colonne e marmi presi da edifici precedenti. <break time="0.5s"/
 
 E sotto, c'è il Succorpo. <break time="0.5s"/> Visitabile. <break time="0.6s"/> Resti del duomo bizantino, mosaici del pavimento originale, tracce di una strada romana. <break time="0.5s"/> Tre chiese nello stesso posto, una sopra l'altra. <break time="1.2s"/>
 
-E davanti alla cattedrale, in piazza Odegitria — <break time="0.4s"/> c'è U Marinaridd. <break time="0.5s"/> Negozio di dolciumi e liquori, aperto nel 1865. <break time="0.5s"/> Nel 1973 lo comprò Domenico Sifanno, che lì dentro aveva iniziato a lavorare a sette anni. <break time="0.5s"/> Lo gestisce ancora la sua famiglia.
+E davanti alla cattedrale, in piazza Odegitria — <break time="0.4s"/> c'è U Marinaridd. <break time="0.5s"/> Negozio storico di dolciumi e liquori, aperto nell'Ottocento. <break time="0.4s"/> Gestito da generazioni dalla stessa famiglia barese.
 
 
 =====================================
 BASILICA DI SAN NICOLA
 -------------
+voice: gian
 
 Basilica di San Nicola. <break time="1.0s"/>
 
@@ -242,6 +248,7 @@ Da quel furto nasce un impero di pellegrinaggi. <break time="0.4s"/> E un Babbo 
 =====================================
 BARI SOTTERRANEA
 -------------
+voice: sami
 
 Bari Sotterranea. <break time="1.0s"/>
 
@@ -271,6 +278,7 @@ Ogni epoca ha lasciato qualcosa. <break time="0.4s"/> E niente, davvero niente, 
 =====================================
 FORTINO DI SANT'ANTONIO
 -------------
+voice: gian
 
 Fortino di Sant'Antonio. <break time="1.0s"/>
 
@@ -296,6 +304,7 @@ Da una parte il mare. <break time="0.4s"/> Dall'altra i tetti di Bari Vecchia. <
 =====================================
 MUSEO SANTA SCOLASTICA
 -------------
+voice: gian
 
 Museo Santa Scolastica. <break time="1.0s"/>
 
@@ -315,6 +324,7 @@ Quello che fuori è nascosto, qui viene spiegato.
 =====================================
 PIAZZA MERCANTILE
 -------------
+voice: gian
 
 Piazza Mercantile. <break time="1.0s"/>
 
@@ -340,6 +350,7 @@ Prima ancora di mettere piede nella città, sapevi già come funzionava la giust
 =====================================
 PIAZZA DEL FERRARESE
 -------------
+voice: gian
 
 Piazza del Ferrarese. <break time="1.0s"/>
 

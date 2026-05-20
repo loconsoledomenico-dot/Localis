@@ -1,21 +1,27 @@
-LOCALIS — THREE THEATRES · FAST version
-Narrative audio guide, 2026 pacing, mixed tone per chapter (Angela / Saviano / storyteller).
-Voice: George. Model: eleven_multilingual_v2.
+LOCALIS — THREE THEATRES · revised "more intense" version
+Multi-voice: warm narrator + dramatic voice for tense chapters.
 =====================================
 INTRODUCTION
 -------------
+voice: matilda
 
-Three theatres. <break time="0.6s"/> In half a square kilometre. <break time="1.0s"/>
+Three theatres. <break time="0.5s"/> In half a square kilometre. <break time="1.0s"/>
 
-The Piccinni, built in eighteen fifty-four. <break time="0.4s"/> The Petruzzelli, built in nineteen oh three. <break time="0.4s"/> The Margherita, built in nineteen fourteen. <break time="0.8s"/> Sixty years between the first and the last. <break time="0.4s"/> Five hundred metres on foot between one and the next. <break time="1.0s"/>
+The Piccinni — built in eighteen fifty-four. <break time="0.4s"/> The Petruzzelli — built in nineteen oh three. <break time="0.4s"/> The Margherita — built in nineteen fourteen. <break time="0.6s"/>
 
-The question is: why did Bari, a city in the South of Italy, in the heart of the nineteenth century, decide to build itself three theatres? <break time="1.2s"/>
+Sixty years between the first and the last. <break time="0.4s"/> Five hundred metres on foot between one and the next. <break time="1.0s"/>
 
-The answer, in these next twenty minutes, will surprise you. <break time="0.5s"/> It is not what you think. <break time="0.4s"/> It is not a royal commission. <break time="0.4s"/> It is not imitation of Naples or Milan. <break time="1.0s"/>
+And here, a question. <break time="0.6s"/>
 
-It is a commercial bourgeoisie, wealthy, that at a certain point decided that culture, here, was a defence of identity. <break time="0.5s"/> And paid for it out of its own pocket. <break time="1.2s"/>
+Why did Bari, a southern Italian city, in the middle of the nineteenth century, decide to build itself three opera houses, all together? <break time="0.5s"/> When many European capitals had one? <break time="1.0s"/>
 
-I am going to tell you the story of three buildings. <break time="0.4s"/> And behind those three buildings, the story of the people who wanted them. <break time="0.5s"/> Who built them. <break time="0.4s"/> Who burned one down in nineteen ninety-one. <break time="0.4s"/> And who rebuilt it, eighteen years later. <break time="1.5s"/>
+Not because the King ordered it. <break time="0.4s"/> Not to imitate Milan. <break time="0.4s"/> Not to imitate Paris. <break time="0.6s"/>
+
+It was decided by a commercial bourgeoisie of the city. <break time="0.4s"/> Ship-owners, olive oil merchants, wheat exporters, lawyers. <break time="0.4s"/> People with port money. <break time="0.4s"/> People who, at a certain point, made up their minds about one specific thing. <break time="0.6s"/>
+
+Culture, here, was defence. <break time="0.4s"/> Defence against the idea that, if you're from the South, automatically you don't count. <break time="0.4s"/> Defence against provincialism. <break time="0.5s"/> And they paid for it themselves. <break time="1.2s"/>
+
+In the next twenty minutes, I'll tell you the story of three buildings. <break time="0.5s"/> And behind those three buildings, the story of who wanted them. <break time="0.4s"/> Of who built them. <break time="0.4s"/> Of who set fire to one of them, on a night in October nineteen ninety-one. <break time="0.5s"/> And of who rebuilt it, eighteen years later, with Riccardo Muti on the podium. <break time="1.5s"/>
 
 We start from the Murat district. <break time="0.4s"/> Ready. <break time="0.4s"/> Let's go.
 
@@ -23,234 +29,336 @@ We start from the Murat district. <break time="0.4s"/> Ready. <break time="0.4s"
 =====================================
 MURAT - THE NEW DISTRICT
 -------------
+voice: matilda
 
 Eighteen thirteen. <break time="0.8s"/>
 
-In Naples, Joachim Murat reigns. <break time="0.4s"/> Napoleon's brother-in-law, married to his sister Caroline. <break time="0.5s"/> He is a king imposed from outside, but unlike other Spanish or French sovereigns who paid little attention to the South, he takes a strong interest in it. <break time="1.0s"/>
+In Naples reigns Joachim Murat. <break time="0.4s"/> Napoleon's brother-in-law. <break time="0.4s"/> Married to Napoleon's sister, Caroline. <break time="0.5s"/> He's a king nominated from outside. <break time="0.4s"/> But unlike other French or Spanish sovereigns, he actually pays attention to Southern Italy. <break time="1.0s"/>
 
-Murat decides to refound Bari. <break time="0.5s"/> The old town, the peninsula of Old Bari, is by now saturated. <break time="0.4s"/> Narrow alleys, overcrowding, no space for a modern city. <break time="0.6s"/> Royal decree: Bari will have a new district, built to the south of the old one. <break time="1.0s"/>
+May, eighteen thirteen. <break time="0.4s"/> Murat signs a royal decree. <break time="0.5s"/> Bari will have a new district. <break time="0.4s"/> South of the Old Bari peninsula. <break time="0.4s"/> Built from scratch, on what at the time were marshy lands. <break time="1.0s"/>
 
-Architect assigned: Mariano Tafuri. <break time="0.4s"/> Style: regular grid. <break time="0.4s"/> Orthogonal streets, long decumans, short cardos. <break time="0.5s"/> The exact opposite of Old Bari. <break time="0.6s"/> Napoleonic rationality in place of the Byzantine labyrinth. <break time="1.2s"/>
+Old Bari, by then, is saturated. <break time="0.4s"/> Narrow alleys. <break time="0.4s"/> Overcrowding. <break time="0.4s"/> No room for a modern city. <break time="0.5s"/> A city of merchants exporting to the Mediterranean needs different streets. <break time="0.4s"/> Straight streets. <break time="0.4s"/> Wide streets. <break time="0.4s"/> Streets for carts and carriages. <break time="1.0s"/>
 
-Works begin in eighteen fifteen. <break time="0.4s"/> They proceed slowly. <break time="0.4s"/> Murat is already dead by two years, but the district keeps growing. <break time="0.5s"/> They call it "Borgo Murattiano". <break time="0.4s"/> Today, simply: Murat. <break time="1.0s"/>
+Architect commissioned — Mariano Tafuri. <break time="0.5s"/> Style: a regular, perfectly orthogonal grid. <break time="0.4s"/> Long east-west axes, short north-south crossings. <break time="0.4s"/> Napoleonic rationality. <break time="0.5s"/> The exact opposite of Old Bari, which was Byzantine and labyrinthine. <break time="1.0s"/>
 
-And in this new district, orthogonal, nineteenth-century, something settles in that Bari did not yet have: a commercial urban bourgeoisie. <break time="0.5s"/> Ship-owners, merchants of oil and grain, lawyers, notaries. <break time="0.4s"/> People with money. <break time="0.4s"/> People who want to be like Milan. <break time="0.4s"/> Or like Paris. <break time="1.5s"/>
+Construction starts already in eighteen fourteen. <break time="0.4s"/> Slowly, but it starts. <break time="0.5s"/>
+
+And in October eighteen fifteen, Joachim Murat — the same man who had signed the decree — is shot by firing squad in Calabria. <break time="0.4s"/> Bourbon Restoration. <break time="0.4s"/> An era closes. <break time="0.6s"/>
+
+But the district keeps being built. <break time="0.4s"/> Under the Bourbons. <break time="0.4s"/> Under the unification of Italy. <break time="0.4s"/> Under the Belle Époque. <break time="0.5s"/> For almost a century. <break time="1.0s"/>
+
+They call it "Borgo Murattiano". <break time="0.4s"/> Then, simply, "Murat". <break time="1.2s"/>
+
+And inside it, in its nineteenth-century palaces, something settles that Bari didn't have before. <break time="0.5s"/>
+
+A commercial city bourgeoisie. <break time="0.4s"/> Ship-owners, merchants, lawyers, notaries, bankers. <break time="0.5s"/> Families whose surnames still appear today on the marble nameplates of Via Sparano and Via Putignani. <break time="0.4s"/> Families who made money at the port and who, now, want to spend it. <break time="1.0s"/>
+
+People with money. <break time="0.4s"/> People who want to feel like Milan. <break time="0.4s"/> Or Paris. <break time="1.5s"/>
 
 
 =====================================
 PICCINNI 1854 - THE FIRST
 -------------
+voice: matilda
 
 Niccolò Piccinni. <break time="0.6s"/>
 
-Born in Bari in seventeen twenty-eight. <break time="0.4s"/> Studies at the Naples Conservatory. <break time="0.5s"/> Composer. <break time="0.4s"/> Comic operas, serious operas, eighty titles in his career. <break time="1.0s"/>
+Born in Bari in seventeen twenty-eight. <break time="0.4s"/> Musical family. <break time="0.4s"/> At fourteen, sent to the Sant'Onofrio conservatory in Naples. <break time="0.4s"/> From Bari he never leaves again. <break time="0.6s"/>
 
-In Naples he is famous by twenty. <break time="0.4s"/> In Rome he triumphs. <break time="0.4s"/> By thirty, he is the most sought-after opera composer in Italy. <break time="1.0s"/>
+In Naples he stands out immediately. <break time="0.4s"/> In Rome he triumphs. <break time="0.4s"/> By thirty, he's one of the most sought-after opera composers in Italy. <break time="0.5s"/> Around one hundred operas across his career — comic, serious, intermezzi, tragic. <break time="0.4s"/> Exact number debated by scholars. <break time="0.4s"/> Many anyway. <break time="1.0s"/>
 
-In seventeen seventy-six, Marie Antoinette invites him to Paris. <break time="0.5s"/> She wants him at court as official composer. <break time="0.4s"/> There he enters a historic rivalry with Christoph Willibald Gluck. <break time="0.5s"/> The court is split. <break time="0.4s"/> Piccinnists against Gluckists. <break time="0.4s"/> A musical war that lasts ten years. <break time="0.5s"/> Parisian nobles write pamphlets against each other. <break time="1.2s"/>
+In seventeen seventy-six, Marie Antoinette invites him to Paris. <break time="0.4s"/> She has been queen of France for two years. <break time="0.4s"/> She names him official court composer. <break time="0.5s"/>
 
-He dies in Paris in eighteen hundred. <break time="0.5s"/> He had left Bari at fifteen, and had never returned. <break time="0.4s"/> Yet Bari claims him as its own. <break time="1.0s"/>
+And then something happens that today seems absurd, and at the time shook the Paris nobility. <break time="0.8s"/>
 
-Fifty years after his death, the bourgeoisie of Bari decides to build a new opera house. <break time="0.4s"/> They dedicate it to him. <break time="0.5s"/> Works from eighteen forty to eighteen fifty-four. <break time="0.4s"/> Fourteen years of construction. <break time="1.0s"/>
+Piccinni enters a historic rivalry with another composer — Christoph Willibald Gluck. <break time="0.4s"/> German. <break time="0.4s"/> Sober, classical, austere style. <break time="0.5s"/> Piccinni instead — Italian, melodic, ornament-rich. <break time="0.5s"/> Two opposed schools. <break time="0.6s"/>
 
-October fourth, eighteen fifty-four. <break time="0.4s"/> Inauguration of the Teatro Piccinni. <break time="0.5s"/> On the bill: "Poliuto" by Gaetano Donizetti. <break time="0.4s"/> Seven hundred seats. <break time="0.4s"/> The bourgeoisie of Bari finally has its theatre. <break time="1.5s"/>
+The court splits into factions. <break time="0.4s"/> Piccinnists against Gluckists. <break time="0.4s"/> Marquises and dukes write pamphlets against each other. <break time="0.4s"/> For ten years they fight over which opera is worth more. <break time="0.4s"/> Think about that. <break time="0.4s"/> A culture war inside the court of Versailles, over a composer born in Bari. <break time="1.2s"/>
+
+Piccinni dies in Paris in eighteen hundred. <break time="0.4s"/> He leaves a family, students, a deep mark on European music. <break time="0.5s"/> Bari, which he had left at fourteen and never returned to, claims him as its own. <break time="0.4s"/> The way only Bari can. <break time="0.4s"/> We took him. <break time="0.4s"/> We're keeping him. <break time="1.0s"/>
+
+Fifty years after his death, the new Bari bourgeoisie of the Murat decides to build a real opera house. <break time="0.4s"/> Not a small theatre. <break time="0.4s"/> A theatre worthy of a capital city. <break time="0.5s"/> They dedicate it to him. <break time="1.0s"/>
+
+Construction from eighteen forty to eighteen fifty-four. <break time="0.4s"/> Fourteen years of building. <break time="0.6s"/>
+
+October fourth, eighteen fifty-four. <break time="0.4s"/> Inauguration of the Piccinni Theatre. <break time="0.4s"/> On the bill — "Poliuto" by Gaetano Donizetti. <break time="0.4s"/> Lyric tragedy in three acts. <break time="0.5s"/> Seven hundred seats, all sold. <break time="0.4s"/> Black tie. <break time="0.4s"/> Women in long gloves. <break time="0.4s"/> Men in tailcoat. <break time="0.5s"/>
+
+Bari finally has its theatre. <break time="0.4s"/> The Murat bourgeoisie — which twenty years earlier didn't exist — now exists, visibly. <break time="1.5s"/>
 
 
 =====================================
 THE BOURGEOISIE THAT WANTED OPERA
 -------------
+voice: matilda
 
 Let's understand one thing. <break time="0.8s"/>
 
-In the nineteenth century, having an opera house in your city was not a cultural detail. <break time="0.4s"/> It was a political declaration. <break time="0.5s"/> It was saying: we are a city, not a village. <break time="0.4s"/> We are like Milan, like Naples, like Paris. <break time="0.6s"/> We matter. <break time="1.2s"/>
+In the nineteenth century, having an opera house was not a cultural detail. <break time="0.4s"/> It was a political declaration. <break time="0.5s"/>
 
-In Bari, in those years, something happens: the port grows. <break time="0.4s"/> Apulian olive oil is exported across the Mediterranean. <break time="0.4s"/> Wheat arrives from the sub-Apennine inland. <break time="0.4s"/> Ships sail from here to Trieste, Marseille, Constantinople. <break time="1.0s"/>
+It was saying — to the government in Naples, to the merchants of Genoa, to the embassies of Paris and Vienna — look at us. <break time="0.4s"/> We are a city. <break time="0.4s"/> Not a village. <break time="0.4s"/> Not just any port. <break time="0.4s"/> We are like Milan. <break time="0.4s"/> Like Naples. <break time="0.4s"/> Like Paris. <break time="0.5s"/> We matter. <break time="1.2s"/>
 
-And with the port, the families grow. <break time="0.5s"/> The Petruzzelli are ship-owners. <break time="0.4s"/> The Marrocchi are merchants. <break time="0.4s"/> The De Tullio are lawyers. <break time="0.4s"/> The Caggiano are notaries. <break time="0.5s"/> Dozens of surnames that still today appear on the plaques of palaces along Via Sparano and Via Putignani. <break time="1.0s"/>
+And in Bari, in those years, there was material to say it. <break time="0.6s"/>
 
-That bourgeoisie, from eighteen fifty to eighteen ninety, pays for boxes at the Piccinni the way Milan pays for boxes at La Scala. <break time="0.4s"/> The box is a social investment. <break time="0.4s"/> It is a calling card. <break time="0.4s"/> It is telling the rest of the city: I am here, I count, I can afford it. <break time="1.2s"/>
+The port was growing. <break time="0.4s"/> Apulian olive oil was being exported all over the eastern Mediterranean. <break time="0.4s"/> Wheat arrived from the inland Apennines and sailed back out from here for Trieste, Marseille, Constantinople, Odessa. <break time="0.5s"/> The ships flew the ship-owner's colours. <break time="0.4s"/> And the ship-owners were families whose names you read on portal nameplates. <break time="1.0s"/>
 
-In those years, some people call Bari "the Milan of the South". <break time="0.5s"/> An exaggeration, obviously. <break time="0.4s"/> But the meaning was: there is a cultural ambition that, in the whole Italian South, was explicit only in Bari. <break time="1.0s"/>
+The Petruzzelli. <break time="0.4s"/> Ship-owners. <break time="0.4s"/> They will have a role. <break time="0.5s"/> You'll see. <break time="0.6s"/>
 
-And that same bourgeoisie, at the end of the century, wanted more. <break time="0.4s"/> It wanted a bigger theatre. <break time="0.4s"/> More modern. <break time="0.4s"/> More worthy. <break time="1.5s"/>
+But also many other commercial, mercantile, and professional families. <break time="0.4s"/> Surnames that today, if you walk along Via Sparano or Via Putignani, you can still read on the marble plaques of the doorways. <break time="0.4s"/> Banks, notaries, residential palaces. <break time="1.0s"/>
+
+That bourgeoisie, from eighteen fifty to eighteen ninety, paid for boxes at the Piccinni as in Milan they paid for boxes at La Scala. <break time="0.4s"/> A box was not just a seat. <break time="0.4s"/> It was a social investment. <break time="0.4s"/> A business card. <break time="0.4s"/> It was saying to the rest of the city — I am here. <break time="0.4s"/> I matter. <break time="0.4s"/> I can afford this. <break time="1.2s"/>
+
+In those years, someone starts calling it "the Milan of the South". <break time="0.5s"/> An exaggeration, obviously. <break time="0.4s"/> Milan was something else. <break time="0.4s"/> But the meaning was real — there was a cultural ambition that, in all of the Mezzogiorno, only in Bari was so explicit. <break time="1.0s"/>
+
+And that same bourgeoisie, by the end of the century, wanted more. <break time="0.6s"/>
+
+The Piccinni, with its seven hundred seats, was starting to feel small. <break time="0.4s"/> Old. <break time="0.4s"/> No longer up to the standard. <break time="0.5s"/> They wanted a bigger theatre. <break time="0.4s"/> More modern. <break time="0.4s"/> More fitting for a city that now considered itself something. <break time="1.5s"/>
 
 
 =====================================
 THE PETRUZZELLI BROTHERS
 -------------
+voice: matilda
 
 Eighteen ninety-five. <break time="0.6s"/>
 
-The Municipality of Bari opens a public competition. <break time="0.4s"/> Objective: to build a new theatre, larger than the Piccinni, more modern, able to host great international opera. <break time="1.0s"/>
+The Municipality of Bari starts an administrative procedure. <break time="0.4s"/> Objective — build a new theatre. <break time="0.4s"/> Bigger than the Piccinni. <break time="0.4s"/> More modern. <break time="0.4s"/> Capable of hosting major international opera. <break time="0.6s"/>
 
-The competition is won by a family. <break time="0.5s"/> The Petruzzelli. <break time="0.4s"/> Four nephews of the ship-owner Onofrio Petruzzelli. <break time="0.4s"/> Antonio, Carlo, Onofrio junior, and Gerolamo. <break time="1.0s"/>
+Concession. <break time="0.4s"/> Not a public competition in the classical sense — a concession to a private subject who will build it at their own expense. <break time="0.5s"/> The Municipality provides the land. <break time="0.4s"/> The private party puts up the money and gets management rights for fifty years. <break time="1.0s"/>
 
-They are ship-owners. <break time="0.4s"/> They have a fleet that sails the Adriatic, the Tyrrhenian, the eastern Mediterranean. <break time="0.5s"/> Transport of oil, wheat, salt, agricultural goods. <break time="0.4s"/> They have made a fortune in the last thirty years. <break time="1.0s"/>
+The Petruzzelli family wins. <break time="0.5s"/> Bari ship-owners. <break time="0.4s"/> One of the wealthiest families in the city. <break time="0.4s"/> Leading figures — the brothers Onofrio and Antonio. <break time="0.4s"/> Plus additional family capital. <break time="1.0s"/>
 
-Their project is ambitious. <break time="0.5s"/> Two thousand two hundred seats. <break time="0.4s"/> Wooden dome for perfect acoustics. <break time="0.4s"/> Eclectic-Liberty style. <break time="0.4s"/> The third largest theatre in Italy by capacity, after the San Carlo of Naples and La Scala of Milan. <break time="1.0s"/>
+The Petruzzelli own a fleet. <break time="0.4s"/> Merchant ships that sail the Adriatic, the Tyrrhenian, the eastern Mediterranean. <break time="0.4s"/> They transport olive oil. <break time="0.4s"/> Wheat. <break time="0.4s"/> Salt. <break time="0.4s"/> Apulian agricultural products. <break time="0.5s"/> In the last thirty years, they have made a fortune. <break time="0.4s"/> Now they want to leave their mark on the city. <break time="1.2s"/>
 
-The pact with the Municipality is precise. <break time="0.5s"/> The Petruzzelli build the theatre at their own expense. <break time="0.4s"/> The Municipality donates the land. <break time="0.4s"/> Management stays with the family for fifty years. <break time="0.5s"/> The theatre will bear their surname. <break time="0.5s"/> Plus, a decisive clause: for the next fifteen years, no other theatre may be built on municipal land. <break time="1.2s"/>
+Their project is ambitious to the edge of reckless. <break time="0.8s"/>
 
-That clause, as you will see, will matter. <break time="1.5s"/>
+Two thousand two hundred seats. <break time="0.4s"/> For comparison — the San Carlo of Naples, at the time, holds about one thousand eight hundred. <break time="0.4s"/> La Scala of Milan, two thousand even. <break time="0.5s"/> The Petruzzelli will have more than both. <break time="0.4s"/> It will be the third largest opera house in Italy by capacity. <break time="1.0s"/>
+
+Wooden dome for perfect acoustics — a major technical choice, we'll come back to it. <break time="0.4s"/> Eclectic-Liberty style. <break time="0.4s"/> Five tiers of boxes. <break time="0.4s"/> Elaborate decorations. <break time="0.5s"/> The theatre must be as imposing as the self-image of the bourgeoisie paying for it. <break time="1.0s"/>
+
+The contract with the Municipality contains a clause that, you'll see, will be decisive. <break time="0.5s"/> For fifteen years after the Petruzzelli is completed, no other theatre, public or private, may be built on municipal land in Bari. <break time="0.4s"/> For fifteen years, opera in Bari will belong to them. <break time="0.5s"/> Them. <break time="0.4s"/> Them. <break time="0.4s"/> Them. <break time="1.5s"/>
 
 
 =====================================
 THE PETRUZZELLI - CONSTRUCTION
 -------------
+voice: matilda
 
-Works begin in eighteen ninety-eight. <break time="0.5s"/>
+Construction begins in eighteen ninety-eight. <break time="0.5s"/>
 
-Architect: Angelo Cicciomessere, master-builder from Bari trained locally. <break time="0.4s"/> No famous names from outside. <break time="0.4s"/> Everything done in the city. <break time="1.0s"/>
+Architect — Angelo Messeni Cicciomessere. <break time="0.4s"/> From Bari, locally trained. <break time="0.4s"/> No celebrated names from outside. <break time="0.4s"/> The people of Bari want their theatre built by people from Bari. <break time="0.4s"/> A political choice, before a professional one. <break time="1.0s"/>
 
-Eclectic style, with Liberty touches. <break time="0.4s"/> Neoclassical facade with arches and columns. <break time="0.4s"/> Horseshoe interior, based on the San Carlo model. <break time="0.5s"/> Five tiers of boxes. <break time="0.4s"/> Central wooden dome, an important technical decision: wood has acoustic properties superior to concrete. <break time="1.2s"/>
+Eclectic style, with Liberty touches. <break time="0.4s"/> Neoclassical façade with arches, columns, allegorical statues. <break time="0.4s"/> Horseshoe interior, on the San Carlo model. <break time="0.5s"/> Five tiers of boxes stacked. <break time="0.4s"/> Stucco and plaster decorations. <break time="0.4s"/> Gilding. <break time="0.4s"/> Red velvet on the parapets. <break time="0.6s"/>
 
-Five years of construction. <break time="0.5s"/>
+And at the centre, the dome. <break time="0.6s"/>
 
-February fourteenth, nineteen oh three. <break time="0.5s"/> Inauguration. <break time="0.4s"/> On the bill: "Les Huguenots" by Giacomo Meyerbeer, a grand French opera from eighteen thirty-six. <break time="0.5s"/> Four hours of show. <break time="0.4s"/> Audience in formal evening dress. <break time="0.4s"/> A night that contemporary chronicles call "memorable". <break time="1.2s"/>
+Wooden dome. <break time="0.4s"/> Not concrete, not stone. <break time="0.4s"/> Wood. <break time="0.5s"/> Precise technical decision — wood has acoustic properties superior to any other material. <break time="0.4s"/> All the great Italian theatres with legendary acoustics have wooden domes or wooden inner ceilings. <break time="0.4s"/> The Petruzzelli wants to belong to that league. <break time="0.8s"/>
 
-From that day, the Petruzzelli becomes the theatre of Bari. <break time="0.4s"/> The Piccinni remains, but for great opera people go to the Petruzzelli. <break time="0.5s"/> The Bari bourgeoisie moves its box. <break time="0.4s"/> From the Piccinni to the new jewel. <break time="1.0s"/>
+Five years of construction. <break time="0.6s"/>
 
-The four Petruzzelli brothers have turned their surname into an institution. <break time="0.5s"/> From ship-owners to oligarchs of the city's culture. <break time="0.4s"/> For fifty years, the Petruzzelli will be theirs. <break time="1.5s"/>
+February fourteenth, nineteen oh three. <break time="0.5s"/> Inauguration. <break time="0.6s"/>
+
+On the bill — "Les Huguenots" by Giacomo Meyerbeer. <break time="0.4s"/> Grand French opera of eighteen thirty-six. <break time="0.4s"/> Four hours of performance. <break time="0.4s"/> St. Bartholomew's Day massacre, set in the sixteenth century. <break time="0.5s"/>
+
+Audience in gala dress. <break time="0.4s"/> Carriages lined up along Corso Cavour. <break time="0.4s"/> The entire Bari bourgeoisie in full attendance. <break time="0.4s"/> Plus guests from Naples, Rome, Milan. <break time="0.5s"/> The contemporary press, in every local paper, calls the evening "memorable". <break time="1.2s"/>
+
+From that day on, the Petruzzelli becomes the theatre of Bari. <break time="0.4s"/> The Piccinni stays. <break time="0.4s"/> Keeps programming. <break time="0.4s"/> But for grand international opera — the kind that gets covered by national press — you go to the Petruzzelli. <break time="0.5s"/> The Bari bourgeoisie moves boxes. <break time="0.4s"/> From the Piccinni to the new jewel. <break time="1.0s"/>
+
+The Petruzzelli — ship-owners until twenty years earlier — are now oligarchs of urban culture. <break time="0.4s"/> For the next fifty years, the theatre will be theirs. <break time="0.4s"/> On contract. <break time="0.4s"/> By law. <break time="1.5s"/>
 
 
 =====================================
 THE MONOPOLY
 -------------
+voice: matilda
 
 Now back to that clause. <break time="0.8s"/>
 
-In the contract with the Municipality of eighteen ninety-seven, it was clearly written: for fifteen years from completion of the Petruzzelli, no other theatre, public or private, may be built on municipal land in Bari. <break time="1.0s"/>
+In the eighteen ninety-seven contract with the Municipality, it was written in black and white. <break time="0.4s"/> For fifteen years after the completion of the Petruzzelli — no other public or private theatre may be built on municipal land in Bari. <break time="1.0s"/>
 
-In practice: monopoly. <break time="0.5s"/> For fifteen years, opera in Bari equals Petruzzelli. <break time="0.4s"/> They set box prices. <break time="0.4s"/> They choose the visiting companies. <break time="0.4s"/> They manage the calendar. <break time="1.0s"/>
+In practice — monopoly. <break time="0.5s"/>
 
-The smaller Bari bourgeoisie who cannot afford a box at the Petruzzelli are frustrated. <break time="0.4s"/> The minor families, those who in eighteen seventy could afford the Piccinni, are now shut out. <break time="0.5s"/> The Piccinni stays alive, of course, but for minor works, ballet, variety shows. <break time="0.4s"/> Great opera passes to the Petruzzelli. <break time="1.2s"/>
+Translated into Bari dialect — everyone else, sit down. <break time="0.4s"/> Opera, from now on, we do. <break time="1.0s"/>
+
+For fifteen years. <break time="0.5s"/>
+
+Box prices at the Petruzzelli are decided by the Petruzzelli. <break time="0.4s"/> Touring companies are chosen by the Petruzzelli. <break time="0.4s"/> The season calendar is managed by the Petruzzelli. <break time="0.5s"/> The Piccinni stays alive, sure, but for minor works. <break time="0.4s"/> Ballet. <break time="0.4s"/> Variety. <break time="0.4s"/> Touring companies. <break time="0.5s"/> The great voices, the encores, the gala nights — those are in their hands. <break time="1.2s"/>
+
+The minor bourgeois families — those who at the Piccinni could afford a box — at the Petruzzelli stay out. <break time="0.4s"/> Prices are higher. <break time="0.4s"/> Seats are fewer. <break time="0.4s"/> The best ones are sold for the full season to the big names. <break time="1.0s"/>
+
+And in a city of ship-owners and merchants, who has been under the spotlight for fifty years, who wants to feel pushed to the side? <break time="0.6s"/> No one. <break time="1.0s"/>
 
 And here a character enters the scene. <break time="0.8s"/>
 
-His name is Gennaro Trizio. <break time="0.5s"/> Entrepreneur, capitalist, rival of the Petruzzelli. <break time="0.4s"/> Also a bourgeois from Bari, also wealthy. <break time="0.4s"/> He too wants to build his own theatre. <break time="0.6s"/> He wants to break the monopoly. <break time="1.0s"/>
+His name is Antonio Trizio. <break time="0.5s"/> Entrepreneur. <break time="0.4s"/> Capitalist. <break time="0.4s"/> Declared competitor of the Petruzzelli. <break time="0.4s"/> Also Bari bourgeois. <break time="0.4s"/> Also with port money. <break time="0.5s"/> And he too — I want a theatre of mine. <break time="0.4s"/> I want to break the monopoly. <break time="1.0s"/>
 
-But the restriction is in place. <break time="0.4s"/> Municipal land: forbidden. <break time="0.5s"/> And Trizio asks himself a simple, very Bari-style question. <break time="0.6s"/>
+But the clause is there. <break time="0.4s"/> Municipal land — forbidden. <break time="0.5s"/>
 
-What if I did not build on municipal land? <break time="1.5s"/>
+And Trizio asks himself one question. <break time="0.4s"/> A Bari kind of question. <break time="0.5s"/>
+
+What if I don't build on municipal land? <break time="1.5s"/>
 
 
 =====================================
 MARGHERITA - THE TRICK ON THE SEA
 -------------
+voice: matilda
 
-Nineteen ten. <break time="0.5s"/> Trizio submits the project to the Municipality. <break time="0.8s"/>
+Nineteen ten. <break time="0.5s"/> Trizio presents his project to the Municipality of Bari. <break time="0.8s"/>
 
-He wants to build a theatre on maritime public domain. <break time="0.4s"/> That is, on the water, in front of the port, on stilts. <break time="0.5s"/> Maritime domain means: owned by the State, not by the Municipality. <break time="0.5s"/> Technically, outside the Petruzzelli clause. <break time="1.2s"/>
+He wants to build a new theatre. <break time="0.4s"/> Liberty style. <break time="0.4s"/> Public, accessible, modern. <break time="0.6s"/>
 
-The Petruzzelli protest. <break time="0.5s"/> They go to court. <break time="0.5s"/> They argue that the spirit of the contract forbade any theatre in Bari, on sea or on land. <break time="1.0s"/>
+Location? <break time="0.4s"/> On the sea. <break time="0.4s"/> Literally. <break time="0.5s"/> On stilts driven into the water of the port. <break time="0.4s"/> Maritime public domain. <break time="0.4s"/> That is — state land, not municipal land. <break time="0.6s"/>
 
-Trizio defends himself by the letter. <break time="0.5s"/> The contract says "municipal land". <break time="0.4s"/> The water of the port is not. <break time="0.4s"/> Period. <break time="1.0s"/>
+The technicality is precise. <break time="0.4s"/> The Petruzzelli contract forbids new theatres on "municipal land". <break time="0.4s"/> Port water isn't land. <break time="0.4s"/> Full stop. <break time="1.0s"/>
 
-The Petruzzelli lose the case. <break time="0.5s"/> Trizio builds. <break time="0.4s"/> Nineteen fourteen, the Teatro Margherita opens. <break time="0.5s"/> On stilts, outside the restriction, inside the rules. <break time="1.0s"/>
+The Petruzzelli notice. <break time="0.4s"/> They object. <break time="0.4s"/> They go to court. <break time="0.5s"/> They argue that the spirit of the contract forbade any new theatre in Bari, on sea or on land. <break time="0.4s"/> Spirit, they argue. <break time="0.4s"/> Not letter. <break time="0.8s"/>
 
-That theatre initially functions as variety hall: light shows, cinema, dance hall. <break time="0.4s"/> It does not directly threaten the great opera of the Petruzzelli. <break time="0.5s"/> But symbolically it is a major victory. <break time="0.4s"/> It means that in Bari, if there is a rule blocking you, you look for the millimetre outside the rule. <break time="0.4s"/> And you build there. <break time="1.2s"/>
+Trizio defends himself on the letter. <break time="0.4s"/> The contract says "municipal land". <break time="0.4s"/> Water isn't. <break time="0.4s"/> Full stop. <break time="0.5s"/>
 
-That lesson, even today, is something the people of Bari tell with pride. <break time="1.5s"/>
+The Petruzzelli lose. <break time="0.4s"/> The ruling is unequivocal. <break time="0.4s"/> Words matter. <break time="0.4s"/> Trizio can build. <break time="1.0s"/>
+
+And he does. <break time="0.6s"/>
+
+On stilts. <break time="0.4s"/> Literally over the port water. <break time="0.4s"/> Pure Liberty style. <break time="0.4s"/> White façade with arches and elegant windows. <break time="0.5s"/> Three storeys. <break time="0.4s"/> It looks like a lace cathedral, set down on the sea. <break time="1.0s"/>
+
+Nineteen fourteen. <break time="0.4s"/> The Teatro Margherita opens. <break time="0.5s"/> Initially as a cinema. <break time="0.4s"/> Then variety theatre, ballroom, multi-purpose hall. <break time="0.4s"/> It doesn't directly threaten the grand opera of the Petruzzelli — it's not that kind of theatre. <break time="1.0s"/>
+
+But symbolically it's a major victory. <break time="0.6s"/>
+
+It means that in Bari, if there's a rule blocking you, you find the millimetre outside the rule. <break time="0.4s"/> And you build there. <break time="0.5s"/>
+
+On the sea, if they tell you "not on land". <break time="0.4s"/> On stilts, if they tell you "not on soil". <break time="0.6s"/>
+
+It's an art Bari has been practising for four thousand years. <break time="0.4s"/> That lesson, today, the people of Bari still tell with a certain pride. <break time="1.5s"/>
 
 
 =====================================
 EIGHTY-EIGHT YEARS OF GLORY
 -------------
+voice: matilda
 
 From nineteen oh three to nineteen ninety-one. <break time="0.5s"/> Eighty-eight seasons of the Petruzzelli. <break time="1.0s"/>
 
-Try to imagine the list of names that passed across that stage. <break time="0.8s"/>
+Try to imagine the list. <break time="0.6s"/>
 
-Enrico Caruso. <break time="0.4s"/> Tito Schipa. <break time="0.4s"/> Beniamino Gigli. <break time="0.4s"/> Mario Del Monaco. <break time="0.5s"/> Then later: Luciano Pavarotti, Plácido Domingo, José Carreras. <break time="1.0s"/>
+Enrico Caruso. <break time="0.4s"/> Tito Schipa. <break time="0.4s"/> Beniamino Gigli. <break time="0.4s"/> Mario Del Monaco. <break time="0.5s"/> Then more recent — Luciano Pavarotti. <break time="0.4s"/> Plácido Domingo. <break time="0.4s"/> José Carreras. <break time="0.5s"/> The three tenors. <break time="0.4s"/> All of them, on that stage. <break time="1.0s"/>
 
-Sopranos: Maria Callas, twice. <break time="0.4s"/> Renata Tebaldi. <break time="0.4s"/> Mirella Freni. <break time="1.0s"/>
+Sopranos. <break time="0.4s"/> Maria Callas — twice. <break time="0.4s"/> Renata Tebaldi. <break time="0.4s"/> Mirella Freni. <break time="1.0s"/>
 
-Conductors: Arturo Toscanini, Herbert von Karajan, Riccardo Muti. <break time="0.5s"/> That same Muti who, as you will see, comes back in two thousand and nine. <break time="1.2s"/>
+Conductors. <break time="0.4s"/> Arturo Toscanini. <break time="0.4s"/> Herbert von Karajan. <break time="0.4s"/> Riccardo Muti. <break time="0.5s"/> That same Muti who, you'll see, has an important role at the end of this story. <break time="0.4s"/> He'll return. <break time="1.2s"/>
 
-For eighty-eight years, Bari is an obligatory stop on the Italian opera circuit. <break time="0.4s"/> Opera companies, when they travel from Milan, from Naples, from Rome to the South, stop here. <break time="0.5s"/> The audience is competent, demanding, attentive. <break time="0.4s"/> It does not forgive. <break time="1.0s"/>
+For eighty-eight years, Bari is a fixed stop on the Italian opera circuit. <break time="0.4s"/> The companies that leave Milan, Naples, Rome for the South — they stop here. <break time="0.5s"/> The Bari audience is competent. <break time="0.4s"/> Demanding. <break time="0.4s"/> Capable of booing a soprano in difficulty, or applauding a second-tier tenor if he deserves it. <break time="0.4s"/> Doesn't forgive. <break time="0.4s"/> And the great singers knew it. <break time="1.0s"/>
 
-And then, alongside opera, also variety. <break time="0.4s"/> Totò brought his shows here in the forties. <break time="0.4s"/> Mario Lanza sang here in fifty-two. <break time="0.5s"/> In the sixties, even the first pop shows of Modugno and Mina. <break time="1.0s"/>
+And alongside opera, also variety. <break time="0.4s"/> Totò brings his shows here in the nineteen forties. <break time="0.4s"/> Mario Lanza sings here in the early nineteen fifties. <break time="0.4s"/> In the sixties, on the Petruzzelli stage, Domenico Modugno, Mina, Tony Renis, the great voices of Italian popular music. <break time="0.8s"/>
 
-The Petruzzelli is the cultural centre of the city. <break time="0.4s"/> For eighty-eight years. <break time="0.4s"/> Until one October night in ninety-one, someone decides to close it. <break time="0.4s"/> With fire. <break time="1.5s"/>
+The Petruzzelli is the cultural centre of the city. <break time="0.4s"/> For eighty-eight years. <break time="0.5s"/>
+
+Then one night in October nineteen ninety-one, someone decides to close it. <break time="0.5s"/> With fire. <break time="1.5s"/>
 
 
 =====================================
 OCTOBER 27, 1991
 -------------
+voice: callum
 
 The night between October twenty-sixth and twenty-seventh, nineteen ninety-one. <break time="1.0s"/>
 
-It is three-thirty in the morning. <break time="0.4s"/> Bari is asleep. <break time="0.5s"/> Inside the Petruzzelli, empty, closed for hours, someone starts a fire. <break time="1.0s"/>
+The small hours. <break time="0.4s"/> Bari is asleep. <break time="0.5s"/>
 
-The fire begins on the stage. <break time="0.4s"/> It spreads rapidly to the wooden wings, the curtains, the costumes in storage. <break time="0.5s"/> It climbs towards the dome, also wooden, also acoustic, also flammable. <break time="1.0s"/>
+Inside the Petruzzelli — empty for hours, closed, only the safety lights on — someone sets fire to it. <break time="1.0s"/>
 
-Firefighters arrive at four. <break time="0.4s"/> They fight for four hours. <break time="0.4s"/> Uselessly. <break time="0.6s"/> At seven in the morning, the dome collapses. <break time="0.5s"/> The entire interior is lost. <break time="0.4s"/> Boxes, seats, sets, library, music archives, costumes. <break time="0.4s"/> Everything burns. <break time="1.2s"/>
+The fire starts on the stage. <break time="0.5s"/>
 
-Only the outer shell remains. <break time="0.5s"/> The stone walls. <break time="0.4s"/> The neoclassical facade. <break time="0.4s"/> The rest: a smoking hole in the middle of the Murat. <break time="1.0s"/>
+It spreads rapidly. <break time="0.4s"/> First to the wooden wings. <break time="0.4s"/> Then to the curtains. <break time="0.4s"/> To the drapes. <break time="0.4s"/> To the costumes stored in the warehouse behind the stage. <break time="0.6s"/>
 
-The judicial investigation begins immediately. <break time="0.4s"/> Conclusion: arson, deliberately set. <break time="0.5s"/> Suspicion: behind the fire, a war for control of the theatre management. <break time="0.4s"/> Kickbacks, contracts, local clans. <break time="0.5s"/> Four arrests in the following years. <break time="0.4s"/> Verdict in two thousand and one: convictions for arson for profit. <break time="1.2s"/>
+And then it climbs. <break time="0.4s"/> Toward the ceiling. <break time="0.4s"/> Toward that wooden dome that, eighty-seven years earlier, had been chosen because it gave perfect acoustics. <break time="0.5s"/> Perfect acoustics. <break time="0.4s"/> Perfect combustion. <break time="1.2s"/>
 
-That night is the lowest point in Bari's cultural history of the twentieth century. <break time="0.5s"/> The symbol theatre of the city, destroyed. <break time="0.4s"/> Not by war. <break time="0.4s"/> Not by earthquake. <break time="0.4s"/> By someone who paid someone else to set it on fire. <break time="1.5s"/>
+Fire brigades arrive in the night hours. <break time="0.4s"/> They fight. <break time="0.4s"/> For hours. <break time="0.4s"/> Uselessly. <break time="1.0s"/>
+
+By morning, the dome collapses. <break time="0.6s"/>
+
+The entire interior is lost. <break time="0.4s"/> The five tiers of boxes. <break time="0.4s"/> The red velvet seats. <break time="0.4s"/> The stucco decorations. <break time="0.4s"/> Three generations of scenery. <break time="0.4s"/> The costume archive. <break time="0.4s"/> The historic music library. <break time="0.4s"/> The records. <break time="0.4s"/> Everything. <break time="0.5s"/> Everything burns. <break time="1.2s"/>
+
+When daylight comes, all that remains of the Petruzzelli is the outer shell. <break time="0.4s"/> The stone walls. <break time="0.4s"/> The neoclassical façade with the columns and statues. <break time="0.5s"/> The rest — a smoking hole in the middle of the Murat. <break time="0.4s"/> A dead theatre. <break time="1.0s"/>
+
+The judicial investigation begins immediately. <break time="0.5s"/>
+
+Conclusion, after years — arson. <break time="0.4s"/> Set deliberately. <break time="0.4s"/> Behind the fire, according to investigators, a war of interests over the management of the theatre. <break time="0.4s"/> Contracts. <break time="0.4s"/> Bribes. <break time="0.4s"/> Local clans positioning themselves. <break time="0.5s"/> In the years that follow, there will be arrests, convictions, sentences. <break time="1.2s"/>
+
+But that October night of nineteen ninety-one, in that smoking hole, there is no judge yet. <break time="0.4s"/> Only rubble. <break time="0.5s"/> And an entire city that, at dawn, leaves home and goes to look. <break time="0.4s"/> Without a word. <break time="1.0s"/>
+
+The symbolic theatre of Bari, eighty-eight years of glory, destroyed. <break time="0.4s"/> Not by a war. <break time="0.4s"/> Not by an earthquake. <break time="0.4s"/> By someone who paid someone else to set fire to it. <break time="1.5s"/>
 
 
 =====================================
 THE EIGHTEEN YEARS OF EMPTINESS
 -------------
+voice: callum
 
-From nineteen ninety-one to two thousand and nine. <break time="0.5s"/> Eighteen years. <break time="1.0s"/>
+From nineteen ninety-one to two thousand and nine. <break time="0.4s"/> Eighteen years. <break time="1.0s"/>
 
-Every year, someone promises to rebuild. <break time="0.4s"/> Mayor. <break time="0.4s"/> Minister. <break time="0.4s"/> Regional governor. <break time="0.4s"/> Petruzzelli family. <break time="0.4s"/> Everyone promises. <break time="0.5s"/> Nobody acts. <break time="1.0s"/>
+In those eighteen years, every year, someone promises to rebuild. <break time="0.5s"/>
+
+Mayors who come and go. <break time="0.4s"/> Ministers of Culture arriving on official visits. <break time="0.4s"/> Regional governors signing statements of intent. <break time="0.4s"/> The Petruzzelli family — owner of the theatre — announcing reconstruction plans. <break time="0.5s"/> Everyone promises. <break time="0.4s"/> No one delivers. <break time="1.0s"/>
 
 The reason is an incredible legal battle. <break time="0.6s"/>
 
-The Petruzzelli was private property of the family. <break time="0.4s"/> But it was a theatre of public interest. <break time="0.4s"/> Built under a peculiar contract. <break time="0.5s"/> After the fire, who pays? <break time="0.4s"/> The family that had not maintained it? <break time="0.4s"/> The State? <break time="0.4s"/> The Municipality? <break time="1.2s"/>
+The Petruzzelli was private property of the family. <break time="0.4s"/> But it was a theatre of public interest — built under a special contract with the Municipality, with cultural service obligations toward the city. <break time="0.5s"/> After the fire, who pays for the reconstruction? <break time="0.4s"/> The family, which had failed to maintain it properly? <break time="0.4s"/> The State? <break time="0.4s"/> The Municipality? <break time="0.4s"/> The Region? <break time="0.4s"/> The insurance, which had controversial clauses? <break time="1.2s"/>
 
-Civil cases. <break time="0.4s"/> Administrative cases. <break time="0.4s"/> Appeals to the Council of State. <break time="0.4s"/> Supreme Court. <break time="0.5s"/> Everything stalls. <break time="0.4s"/> For years. <break time="1.0s"/>
+Civil cases. <break time="0.4s"/> Administrative cases. <break time="0.4s"/> Appeals to the Council of State. <break time="0.4s"/> Supreme Court rulings. <break time="0.5s"/> Expert assessments. <break time="0.4s"/> Counter-assessments. <break time="0.4s"/> Everything stalls for years. <break time="0.4s"/> Lawyers get rich. <break time="0.4s"/> Bari stays without a theatre. <break time="1.0s"/>
 
-Meanwhile, Bari is without an opera house. <break time="0.5s"/> The great companies stop coming. <break time="0.4s"/> The season is held in sports halls, in churches, in improvised spaces. <break time="0.4s"/> A city of three hundred and twenty thousand inhabitants without a real theatre. <break time="1.2s"/>
+Meanwhile, the city loses its opera season. <break time="0.5s"/> The great companies stop coming. <break time="0.4s"/> Those three tenors who dreamed of singing at the Petruzzelli — Pavarotti, Domingo, Carreras — they go elsewhere. <break time="0.5s"/> The opera season is held in sports halls. <break time="0.4s"/> In churches. <break time="0.4s"/> In improvised spaces. <break time="0.4s"/> Reduced audience. <break time="0.4s"/> Poor acoustics. <break time="0.4s"/> Second-tier companies. <break time="1.2s"/>
 
-In two thousand and two, finally, ruling from the Supreme Court: the Petruzzelli is expropriated in favour of the Municipality of Bari. <break time="0.4s"/> The State funds the rebuilding. <break time="0.5s"/> Works begin in two thousand and three. <break time="0.4s"/> Six years of construction. <break time="1.0s"/>
+A city of three hundred and twenty thousand inhabitants without a real theatre. <break time="0.4s"/> For eighteen years. <break time="0.5s"/> Think about it. <break time="0.6s"/>
 
-Eighteen years after the fire, on October sixth, two thousand and nine, the Petruzzelli reopens. <break time="1.5s"/>
+In the early two thousands, the definitive rulings finally come. <break time="0.4s"/> The Petruzzelli passes under public control. <break time="0.4s"/> The State finances the reconstruction. <break time="0.5s"/> Works begin in two thousand and three. <break time="0.4s"/> Six years of construction. <break time="0.4s"/> Restorers. <break time="0.4s"/> Sound engineers. <break time="0.4s"/> Heritage architects. <break time="0.4s"/> All at work to bring back to life a building that had been declared dead. <break time="1.2s"/>
+
+And then, on December fourth, two thousand and nine, the Petruzzelli reopens. <break time="1.5s"/>
 
 
 =====================================
-OCTOBER 6, 2009 - THE REBIRTH
+DECEMBER 4, 2009 - THE REBIRTH
 -------------
+voice: matilda
 
-October sixth, two thousand and nine. <break time="0.6s"/>
+December fourth, two thousand and nine. <break time="0.6s"/>
 
-Piazza Petruzzelli is packed. <break time="0.4s"/> Thousands of people in the streets. <break time="0.4s"/> Giant screens. <break time="0.4s"/> Live TV broadcast. <break time="0.5s"/> Inside the theatre, reopened, restored to its original style, audience in formal evening dress. <break time="1.0s"/>
+Piazza Petruzzelli is packed. <break time="0.4s"/> Thousands of people in the street. <break time="0.4s"/> Giant screens set up for those who didn't get in. <break time="0.4s"/> Live national television broadcast. <break time="0.5s"/> TV vans. <break time="0.4s"/> Journalists from all over Italy. <break time="1.0s"/>
 
-On the podium: Riccardo Muti. <break time="0.5s"/> That same conductor who, as a young man, had conducted here in the seventies. <break time="0.4s"/> Now, sixty-nine years old, he conducts the inaugural concert of the rebuilt Petruzzelli. <break time="1.2s"/>
+Inside the theatre — finally reopened, restored in original style, with the wooden dome rebuilt identical to before — audience in gala dress. <break time="0.4s"/> The same kind of dress as the Bari bourgeoisie of nineteen oh three. <break time="0.4s"/> One hundred and six years later. <break time="1.2s"/>
 
-On the bill: Verdi. <break time="0.4s"/> "Va pensiero" from Nabucco, as symbolic finale. <break time="0.5s"/> The chorus of the Hebrew slaves who dream of freedom. <break time="0.4s"/> Bari, after eighteen years, finding its theatre again. <break time="1.0s"/>
+On the podium, Riccardo Muti. <break time="0.6s"/>
 
-The interior has been rebuilt like the original. <break time="0.4s"/> Wooden dome. <break time="0.4s"/> Five tiers of boxes. <break time="0.4s"/> The same horseshoe shape. <break time="0.5s"/> Acoustics rebuilt by sound engineers. <break time="0.4s"/> The audience, at opening, applauds for three minutes before the first note. <break time="1.2s"/>
+He is in his late sixties. <break time="0.4s"/> Decades earlier, as a young man, he had conducted in this same hall in the nineteen seventies. <break time="0.4s"/> Now he returns to reopen it. <break time="1.0s"/>
 
-From two thousand and nine to today, the Petruzzelli has resumed. <break time="0.4s"/> Opera season, concerts, ballet, contemporary opera. <break time="0.5s"/> Caruso is no longer here, obviously. <break time="0.4s"/> But Bari has a theatre again. <break time="0.4s"/> A real theatre. <break time="1.5s"/>
+On the programme — a tribute to Verdi. <break time="0.4s"/> Choir and orchestra. <break time="0.4s"/> Symbolic passages chosen one by one. <break time="0.5s"/> At a certain point, the choir launches into "Va, pensiero", the chorus of the Hebrew slaves from Nabucco. <break time="0.4s"/> The one that begins "Va, pensiero, sull'ali dorate, va, ti posa sui clivi, sui colli, ove olezzano tepide e molli l'aure dolci del suolo natal". <break time="0.6s"/> Chorus of exiles dreaming of returning home. <break time="0.5s"/> Sung inside a theatre that has come back home after eighteen years away. <break time="0.5s"/> Bari inside Bari. <break time="1.2s"/>
+
+The interior has been rebuilt exactly to the original. <break time="0.4s"/> Wooden dome, because the acoustics are that. <break time="0.4s"/> Five tiers of boxes. <break time="0.4s"/> Horseshoe shape. <break time="0.4s"/> Red velvets, gilding, stucco. <break time="0.5s"/> When the audience entered for the first time — listen to this — they applauded for three full minutes. <break time="0.4s"/> Before a single note. <break time="0.4s"/> Three minutes of applause just for being inside, again. <break time="1.5s"/>
+
+From two thousand and nine on, the Petruzzelli has been functioning. <break time="0.4s"/> Regular opera season. <break time="0.4s"/> Symphonic concerts. <break time="0.4s"/> Ballet. <break time="0.4s"/> Contemporary opera. <break time="0.5s"/> Caruso is gone, obviously. <break time="0.4s"/> So is Maria Callas. <break time="0.4s"/> But Bari has its theatre again. <break time="0.4s"/> A real one. <break time="1.5s"/>
 
 
 =====================================
 CLOSING
 -------------
+voice: matilda
 
 Three theatres. <break time="0.5s"/> In half a square kilometre. <break time="1.0s"/>
 
-The Piccinni, built in eighteen fifty-four, is still here. <break time="0.4s"/> It works. <break time="0.4s"/> Mainly a prose season now. <break time="0.5s"/> Smaller, more intimate. <break time="0.4s"/> Seven hundred seats. <break time="1.0s"/>
+The Piccinni, built in eighteen fifty-four, is still here. <break time="0.4s"/> Functioning. <break time="0.4s"/> Drama season, primarily. <break time="0.4s"/> Smaller, more intimate. <break time="0.4s"/> Seven hundred seats, as in eighteen fifty-four. <break time="1.0s"/>
 
-The Petruzzelli, built in nineteen oh three, destroyed in nineteen ninety-one, rebuilt in two thousand and nine, is here again. <break time="0.4s"/> Two thousand two hundred seats. <break time="0.4s"/> Wooden dome. <break time="0.4s"/> International opera season. <break time="1.0s"/>
+The Petruzzelli, built in nineteen oh three, destroyed by arson in nineteen ninety-one, rebuilt in two thousand and nine, is here again. <break time="0.4s"/> Two thousand two hundred seats. <break time="0.4s"/> Wooden dome. <break time="0.4s"/> International opera season. <break time="1.0s"/>
 
-The Margherita, built in nineteen fourteen on stilts over the sea to bypass a monopoly, closed in the seventies. <break time="0.4s"/> Stayed abandoned for forty years. <break time="0.4s"/> Reopened in twenty eighteen as a contemporary art museum. <break time="1.0s"/>
+The Margherita, built in nineteen fourteen on stilts over the sea to outflank a monopoly, closed in the nineteen seventies. <break time="0.4s"/> Stood abandoned for almost fifty years. <break time="0.4s"/> Restored and reopened in the early twenty twenties as a contemporary art museum. <break time="1.0s"/>
 
-All three, still here. <break time="0.5s"/> All three, survived. <break time="1.2s"/>
+All three, still here. <break time="0.5s"/> All three, survivors. <break time="1.2s"/>
 
 And the reason is one. <break time="0.8s"/>
 
-The Bari bourgeoisie, once, believed that culture was defence. <break time="0.4s"/> Identity defence. <break time="0.5s"/> Defence against southern provincialism. <break time="0.4s"/> Defence against the idea that, if you are in Bari, you automatically do not count. <break time="1.0s"/>
+The Bari bourgeoisie, once, believed that culture was defence. <break time="0.4s"/> Identity defence. <break time="0.5s"/> Defence against provincialism. <break time="0.4s"/> Defence against the idea that, if you're in Bari, you automatically don't count. <break time="1.0s"/>
 
-It put its own money down. <break time="0.4s"/> It claimed its dignity. <break time="0.4s"/> It built three buildings to tell the world: we, here, count. <break time="1.0s"/>
+They put their own money in. <break time="0.4s"/> They demanded their dignity. <break time="0.4s"/> They built three buildings to say to the world — we, here, count. <break time="1.0s"/>
 
-And now, as you walk between the three theatres, know that you are crossing a promise that a city made to itself, one hundred and sixty years ago. <break time="0.5s"/> A promise that has been kept. <break time="0.4s"/> Three times. <break time="1.5s"/>
+And now that you are walking among the three theatres, know that you are crossing a promise that a city made to itself, one hundred and seventy years ago. <break time="0.5s"/> A promise that — through an arson fire, eighteen years of legal battle, and a reopening with Riccardo Muti — was kept. <break time="0.4s"/> Three times. <break time="1.5s"/>
 
 The rest is inside.

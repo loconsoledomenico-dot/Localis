@@ -71,4 +71,34 @@ const partners = defineCollection({
   }),
 });
 
-export const collections = { guides, partners };
+const sourceEntry = z.object({
+  type: z.enum(['book', 'academic', 'archive', 'newspaper', 'documentary', 'website']),
+  author: z.string().optional(),
+  title: z.string(),
+  publisher: z.string().optional(),
+  year: z.number().int().optional(),
+  url: z.string().url().optional(),
+});
+
+const sources = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/sources' }),
+  schema: z.object({
+    slug: z.string(),
+    guide_title_it: z.string(),
+    guide_title_en: z.string(),
+    last_review: z.date(),
+    chapters: z.array(
+      z.object({
+        title_it: z.string(),
+        facts: z.array(
+          z.object({
+            claim_it: z.string(),
+            sources: z.array(sourceEntry).min(1),
+          }),
+        ).min(1),
+      }),
+    ).min(1),
+  }),
+});
+
+export const collections = { guides, partners, sources };

@@ -1,8 +1,8 @@
-THREE THEATRES — TRAILER 60s
-Narrative highlight reel, voice George. Opening hook + 3 dramatic hooks + closing.
+THREE THEATRES — TRAILER 60s · voice George
 =====================================
 TRAILER
 -------------
+voice: matilda
 
 Three theatres. <break time="0.5s"/> In half a square kilometre. <break time="1.0s"/>
 
@@ -12,7 +12,7 @@ On the Petruzzelli stage passed Caruso, Pavarotti, Maria Callas, Toscanini, Kara
 
 Then one October night in nineteen ninety-one, someone set fire to it. <break time="0.4s"/> In four hours, the theatre burned. <break time="0.4s"/> Only the shell remained. <break time="1.0s"/>
 
-Eighteen years of emptiness. <break time="0.4s"/> Then, in two thousand and nine, Riccardo Muti reopens the hall conducting Nabucco. <break time="1.2s"/>
+Eighteen years of emptiness. <break time="0.4s"/> Then, on December fourth two thousand and nine, Riccardo Muti reopens the hall conducting Nabucco. <break time="1.2s"/>
 
 Three Theatres. <break time="0.6s"/>
 

@@ -1,306 +1,341 @@
-LOCALIS — PORTO DI BARI · versione FAST
-Guida narrativa pacing 2026, mix tonale per capitolo (Angela / Saviano / storyteller).
-Voce: Gian. Modello: eleven_multilingual_v2.
+LOCALIS — PORTO DI BARI · revisione completa
+Multi-voice: Valerio (narratore caldo) · Brando (voce drammatica) per capitoli intensi.
 =====================================
 INTRODUZIONE
 -------------
+voice: valerio
 
 Questo non è un porto. <break time="1.0s"/> È una soglia. <break time="1.2s"/>
 
-L'Adriatico, qui, è largo centoventi miglia nautiche. <break time="0.5s"/> Più stretto di qualsiasi altro tratto di Mediterraneo. <break time="0.8s"/> Da Bari a Durazzo, in Albania, ci vogliono nove ore di traghetto. <break time="0.6s"/> Quattromila anni fa ce ne volevano due giorni a vela. <break time="0.4s"/> La distanza è la stessa. <break time="1.2s"/>
+Guardate dritto davanti a voi. <break time="0.5s"/> L'acqua che vedete arriva dall'Albania. <break time="0.4s"/> Da qui a Durazzo, in linea retta, circa cento miglia nautiche. <break time="0.4s"/> Più stretto di così, l'Adriatico, non lo trovate da nessun'altra parte. <break time="0.8s"/>
 
-Per questo Bari ha sempre guardato a est. <break time="0.5s"/> Non a Roma. <break time="0.4s"/> A Costantinopoli, Gerusalemme, Durazzo, Antiochia. <break time="1.0s"/>
+In traghetto oggi sono nove ore. <break time="0.5s"/> Lo stesso mare. <break time="0.4s"/> Solo, navi più grandi. <break time="1.2s"/>
 
-Quello su cui state camminando è il punto di contatto. <break time="0.8s"/>
+Per questo Bari, da sempre, ha guardato a est. <break time="0.5s"/> Non a Roma. <break time="0.4s"/> A Costantinopoli, a Gerusalemme, a Durazzo, ad Antiochia. <break time="0.6s"/> Tutto quello che ha contato per questa città, è arrivato o partito da qui. <break time="1.2s"/>
 
-Da qui sono partiti crociati che non sono mai tornati. <break time="0.4s"/> Sono arrivati saraceni che hanno governato la città per ventiquattro anni. <break time="0.4s"/> Federico II è rientrato qui dopo aver preso Gerusalemme senza combattere. <break time="0.5s"/> Una notte del millenovecentoquarantatré, qui è esplosa una bomba che ha cambiato la medicina mondiale. <break time="0.5s"/> E una mattina di marzo del millenovecentonovantuno, ventimila persone sono sbarcate in otto ore da una sola nave. <break time="1.5s"/>
+E qui — proprio sulla banchina dove state in piedi — è successo tutto. <break time="0.8s"/>
 
-Tutto questo, in poche centinaia di metri di banchina. <break time="1.2s"/>
+Da queste pietre sono partiti crociati che non sono mai tornati a casa. <break time="0.4s"/> Sono sbarcati saraceni con la spada in mano, e in pochi giorni Bari era loro. <break time="0.4s"/> Federico II è rientrato qui dopo aver preso Gerusalemme senza tirare una spada. <break time="0.5s"/> Una sera di pioggia, nel quarantatré, un bombardamento ha fatto esplodere qualcosa di così segreto che ha cambiato la medicina mondiale. <break time="0.5s"/> E un pomeriggio di marzo del novantuno, ventimila persone — ventimila — sono scese da una nave sola in otto ore. <break time="1.5s"/>
 
-Nei prossimi venti minuti camminerete dentro la storia che non sta nelle guide. <break time="0.5s"/> Solo cose verificabili. <break time="0.4s"/> Solo cose accadute. <break time="0.6s"/> Pronti. <break time="0.4s"/> Si va.
+Tutto qui. <break time="0.4s"/> In poche centinaia di metri di banchina. <break time="1.0s"/>
+
+Nei prossimi venti minuti vi porto dentro la storia che le guide non vi raccontano. <break time="0.5s"/> Solo cose successe davvero. <break time="0.4s"/> Solo cose che potete verificare. <break time="0.6s"/> Pronti. <break time="0.5s"/> Si parte.
 
 
 =====================================
 SARACENI - L'EMIRATO DI BARI
 -------------
+voice: valerio
 
-Anno ottocentoquarantasette. <break time="1.0s"/>
+Anno ottocentoquarantasette. <break time="0.6s"/>
 
-Un gruppo di arabi sbarca su questa banchina. <break time="0.5s"/> Comandante: Khalfun. <break time="0.4s"/> Prendono la città in poche settimane. <break time="0.8s"/>
+Qui, dove voi state in piedi, sbarca un gruppo di arabi. <break time="0.4s"/> A capo c'è un comandante che si chiama Khalfun. <break time="0.4s"/> In poche settimane prendono la città. <break time="0.5s"/> Senza grandi battaglie. <break time="0.4s"/> Quasi senza che nessuno se ne accorga. <break time="1.0s"/>
 
-Per ventiquattro anni, Bari è un emirato musulmano. <break time="1.0s"/>
+E per ventiquattro anni — ventiquattro — Bari è un emirato. <break time="0.5s"/> Musulmano. <break time="0.4s"/> L'unico in tutta l'Italia continentale insieme a Taranto. <break time="0.6s"/> Un'isoletta d'islam, schiacciata tra Bisanzio a sud e i longobardi a nord. <break time="1.0s"/>
 
-L'unico in tutta l'Italia continentale, insieme a Taranto. <break time="0.6s"/> Una piccola isola di islam, tra impero bizantino a sud e regni longobardi a nord. <break time="1.2s"/>
+Tre emiri si passano la consegna. <break time="0.5s"/> L'ultimo è quello che dovete ricordare. <break time="0.5s"/> Si chiama Sawdan. <break time="1.0s"/>
 
-Tre emiri si succedono. <break time="0.5s"/> L'ultimo è il più famoso. <break time="0.4s"/> Si chiama Sawdan. <break time="0.8s"/>
+E qui Sawdan non è quello che pensate. <break time="0.6s"/>
 
-Non è quello che immaginate. <break time="0.6s"/> Parlava arabo, greco e latino. <break time="0.4s"/> Riceveva diplomatici cristiani, scriveva poesie, costruì una moschea grande. <break time="0.5s"/> Aveva una biblioteca. <break time="1.0s"/>
+Le fonti arabe e bizantine lo descrivono come un governatore colto. <break time="0.4s"/> Riceve diplomatici cristiani, intrattiene relazioni epistolari con le corti di Bisanzio e dei Franchi. <break time="0.4s"/> Fa costruire una moschea grande, in mezzo alla città. <break time="0.5s"/> Mantiene una corte attiva con scribi e letterati. <break time="0.4s"/> A Bari. <break time="0.4s"/> Nell'ottocentocinquanta. <break time="1.0s"/>
 
-Bari sotto Sawdan diventa una piazza commerciale ricca. <break time="0.4s"/> Schiavi, grano, olio, spezie. <break time="0.5s"/> Le navi partono per Damasco, l'Egitto, l'Andalusia. <break time="1.2s"/>
+E sotto di lui, questo porto qui — non era una banchina morta. <break time="0.4s"/> Era un crocevia. <break time="0.5s"/> Le navi partivano per Damasco. <break time="0.4s"/> Per l'Egitto. <break time="0.4s"/> Per l'Andalusia. <break time="0.4s"/> Caricavano grano, olio, spezie. <break time="0.5s"/> E sì — anche schiavi. <break time="0.4s"/> Non vi sto raccontando una favola. <break time="1.2s"/>
 
-Poi, anno ottocentosettantuno. <break time="0.8s"/>
+Poi arriva l'ottocentosettantuno. <break time="0.8s"/>
 
-Tre eserciti si alleano contro Bari. <break time="0.5s"/> Ludovico II, imperatore dei Franchi. <break time="0.4s"/> Basilio I, imperatore di Bisanzio. <break time="0.4s"/> Adelchi, principe di Benevento. <break time="0.8s"/> Quando mai un imperatore d'occidente, uno d'oriente e un principo longobardo si sono messi d'accordo? <break time="1.0s"/>
+E qui succede una cosa che, nella storia, succede tipo una volta ogni cinquecento anni. <break time="0.5s"/> Tre eserciti diversi si mettono d'accordo. <break time="0.5s"/> Ludovico II, imperatore dei Franchi. <break time="0.4s"/> Basilio I, imperatore di Bisanzio. <break time="0.4s"/> Adelchi, principe di Benevento. <break time="0.8s"/>
 
-Mai. <break time="0.5s"/> Tranne per Bari. <break time="1.2s"/>
+Pensateci un attimo. <break time="0.5s"/> Quando mai un imperatore d'occidente, uno d'oriente e un principe longobardo si sono messi d'accordo su qualcosa? <break time="0.6s"/> Mai. <break time="0.5s"/> Tranne per Bari. <break time="1.2s"/>
 
-Quattro anni di assedio. <break time="0.5s"/> La città cade in febbraio. <break time="0.4s"/> Sawdan finisce prigioniero in Francia. <break time="0.4s"/> Muore lì. <break time="1.0s"/>
+Quattro anni di assedio. <break time="0.5s"/> La città cade in febbraio. <break time="0.4s"/> Sawdan finisce in catene, lo portano in Francia, e lì muore. <break time="0.5s"/> Senza più rivedere il suo porto. <break time="1.0s"/>
 
-L'emirato è finito. <break time="0.5s"/> Ma ventiquattro anni di dominazione islamica hanno lasciato qualcosa. <break time="0.4s"/> Parole arabe nel dialetto. <break time="0.4s"/> Tecniche di pesca. <break time="0.4s"/> Rotte commerciali. <break time="0.5s"/> E un'idea di Bari come porta sull'Oriente che non è più cambiata. <break time="1.5s"/>
+L'emirato finisce. <break time="0.5s"/> Ma quei ventiquattro anni hanno lasciato il segno per sempre. <break time="0.4s"/> Parole arabe dentro il dialetto barese — provate a sentirle al mercato, ci sono ancora. <break time="0.4s"/> Tecniche di pesca. <break time="0.4s"/> Rotte commerciali. <break time="0.5s"/> E quell'idea — Bari porta sull'oriente — non è mai più cambiata. <break time="1.5s"/>
 
 
 =====================================
 I CROCIATI CHE NON TORNARONO
 -------------
+voice: brando
 
-Novembre millenovantasei. <break time="1.0s"/>
+Novembre, millenovantasei. <break time="1.0s"/>
 
-Da questa banchina parte una flotta. <break time="0.5s"/> Trenta navi. <break time="0.4s"/> Cinquecento cavalieri normanni. <break time="0.4s"/> Cinquemila fanti. <break time="0.8s"/>
+Da questa banchina sta partendo una flotta. <break time="0.5s"/> Trenta navi. <break time="0.4s"/> Cinquecento cavalieri normanni, in armatura completa. <break time="0.4s"/> Cinquemila fanti. <break time="0.6s"/>
 
-Al comando: Boemondo d'Altavilla. <break time="0.5s"/> Figlio di Roberto il Guiscardo, normanno, brutale, ambizioso. <break time="1.0s"/>
+Provate a immaginarli. <break time="0.5s"/> Ragazzi di vent'anni, contadini in massima parte, che fino a poche settimane prima non avevano mai visto il mare. <break time="0.5s"/> Hanno camminato per giorni per arrivare fino a Bari. <break time="0.4s"/> Adesso stanno qui. <break time="0.4s"/> E imbarcano. <break time="1.0s"/>
 
-Direzione: Costantinopoli, poi Antiochia, poi Gerusalemme. <break time="0.4s"/> È la Prima Crociata. <break time="1.2s"/>
+A comandarli c'è Boemondo d'Altavilla. <break time="0.5s"/> Figlio di Roberto il Guiscardo. <break time="0.4s"/> Normanno. <break time="0.4s"/> Brutale. <break time="0.4s"/> Ambizioso fino al midollo. <break time="0.8s"/>
 
-Boemondo non tornerà mai più a Bari. <break time="0.6s"/> Conquisterà Antiochia, ne diventerà principe, morirà in Puglia ma sarà sepolto a Canosa. <break time="1.0s"/>
+Direzione: Costantinopoli. <break time="0.4s"/> Poi Antiochia. <break time="0.4s"/> Poi Gerusalemme. <break time="0.5s"/> È la prima crociata. <break time="1.2s"/>
 
-Quei cinquemila fanti, in massima parte, non torneranno neanche loro. <break time="0.5s"/> Malattie, battaglie, fame, sete nel deserto siriano. <break time="0.4s"/> La maggior parte di chi parte da qui, da Bari, finisce in una fossa comune in Anatolia. <break time="1.5s"/>
+Boemondo, qui, a Bari, non ci torna più. <break time="0.5s"/> Conquista Antiochia, ne diventa principe, muore in Puglia ma lo seppelliscono a Canosa. <break time="1.0s"/>
 
-Nei trent'anni successivi, il porto di Bari diventa l'hub crociato del Sud. <break time="0.5s"/> Più importante di Genova, di Pisa, per il Mezzogiorno. <break time="0.4s"/> Pellegrini, soldati, mercanti, predicatori. <break time="0.4s"/> Tutti passano da qui. <break time="1.0s"/>
+E quei cinquemila fanti? <break time="0.8s"/>
 
-Nel milleduecentoventotto, è il turno di Federico II. <break time="0.5s"/> Parte per la Sesta Crociata da Brindisi. <break time="0.4s"/> Ma quando rientra, l'anno dopo, attracca qui. <break time="1.2s"/>
+La maggior parte non torna neanche lei. <break time="0.6s"/> Malattie. <break time="0.4s"/> Battaglie. <break time="0.4s"/> Fame. <break time="0.4s"/> Sete, in mezzo al deserto siriano, sotto un sole che a Bari non avevano mai immaginato. <break time="0.6s"/> Finiscono in una fossa comune in Anatolia, senza una croce sopra. <break time="0.4s"/> Senza un nome. <break time="0.5s"/> Senza che qualcuno qui, in Puglia, sapesse mai dove erano finiti. <break time="1.5s"/>
 
-A questa banchina. <break time="0.8s"/>
+Madri, mogli, fidanzate. <break time="0.4s"/> Per anni hanno aspettato un ritorno che non sarebbe mai arrivato. <break time="0.6s"/> Lo facevano qui, sulla banchina. <break time="0.5s"/> Guardando l'orizzonte. <break time="0.4s"/> Come si fa nei porti. <break time="1.2s"/>
 
-Era partito scomunicato. <break time="0.4s"/> Rientra con un trattato in tasca: Gerusalemme cristiana, senza una battaglia. <break time="1.0s"/>
+Nei trent'anni che seguono, questo porto diventa l'hub crociato del Mezzogiorno. <break time="0.5s"/> Più importante di Genova. <break time="0.4s"/> Più importante di Pisa. <break time="0.5s"/> Pellegrini, soldati, mercanti, predicatori, fanatici. <break time="0.4s"/> Tutti passano di qui. <break time="0.5s"/> Tutti guardano questa stessa acqua, prima di salpare. <break time="1.0s"/>
 
-Come c'è riuscito, lo vediamo nel prossimo capitolo. <break time="1.0s"/>
+E poi, nel milleduecentoventotto, arriva il turno di Federico II. <break time="0.5s"/> Parte per la Sesta Crociata da Brindisi. <break time="0.4s"/> Sbarcherà a Brindisi anche al ritorno, l'anno dopo. <break time="0.5s"/> Ma da Bari, da questo porto, passerà ripetutamente per tutto il suo regno. <break time="0.4s"/> Il Castello che vedete alle vostre spalle lo farà ampliare lui — nel milleduecentotrentatré. <break time="1.0s"/>
+
+Era partito scomunicato dal Papa. <break time="0.5s"/> Rientra con un trattato in tasca. <break time="0.4s"/> Gerusalemme — cristiana. <break time="0.4s"/> Senza una spada sguainata. <break time="0.4s"/> Senza un morto. <break time="1.0s"/>
+
+Come c'è riuscito, ve lo racconto adesso. <break time="1.0s"/>
 
 
 =====================================
 FEDERICO II - STUPOR MUNDI
 -------------
+voice: valerio
 
 Federico Secondo di Svevia. <break time="0.6s"/>
 
-Nato nel millecentonovantaquattro a Jesi, da madre normanna e padre tedesco. <break time="0.4s"/> Re di Sicilia a tre anni. <break time="0.4s"/> Imperatore del Sacro Romano Impero a venticinque. <break time="0.8s"/>
+Nato nel millecentonovantaquattro a Jesi, in una tenda, sulla piazza del paese, perché sua madre — Costanza d'Altavilla, normanna — voleva che tutti vedessero che lei stava davvero partorendo lei. <break time="0.5s"/> Per evitare che dicessero che il bambino era stato scambiato. <break time="0.4s"/> Era una donna di quarant'anni, in un'epoca in cui partorire a quarant'anni voleva dire fare scandalo. <break time="1.0s"/>
 
-Lo chiamano Stupor Mundi. <break time="0.4s"/> Lo stupore del mondo. <break time="1.0s"/>
+Quel bambino lì, alla nascita, è già re di Sicilia. <break time="0.5s"/> A tre anni perde il padre. <break time="0.5s"/> A quattro è già al centro di tutte le congiure d'Europa. <break time="0.6s"/> A venticinque, imperatore del Sacro Romano Impero. <break time="1.0s"/>
 
-Parla sei lingue: tedesco, latino, italiano, francese, greco, arabo. <break time="0.5s"/> Scrive un trattato di falconeria che è ancora oggi il manuale di riferimento. <break time="0.4s"/> Allevava cammelli, leoni, ghepardi, struzzi. <break time="0.4s"/> Aveva un astrologo arabo, un astronomo ebreo, un medico copto. <break time="1.0s"/>
+Lo chiamano Stupor Mundi. <break time="0.4s"/> "Quello che fa stupire il mondo". <break time="0.4s"/> E ci credevano davvero. <break time="1.0s"/>
 
-Il Papa lo odia. <break time="0.5s"/> Lo scomunica due volte. <break time="0.4s"/> Una volta proprio perché non vuole partire per la Crociata. <break time="0.5s"/> Poi, quando parte, lo scomunica perché è andato da scomunicato. <break time="1.2s"/>
+Ascoltate questa lista — è verificata. <break time="0.5s"/> Parla sei lingue. <break time="0.4s"/> Tedesco, latino, italiano, francese, greco, arabo. <break time="0.4s"/> Scrive un trattato di falconeria che — sentite — è ancora oggi il manuale di riferimento, ottocento anni dopo. <break time="0.5s"/> Alleva cammelli, leoni, ghepardi, struzzi. <break time="0.4s"/> Alla sua corte — qui in Puglia — ha l'astrologo scozzese Michele Scoto e il traduttore ebreo Jacob Anatoli. <break time="0.4s"/> Filosofi musulmani gli mandano trattati in arabo. <break time="0.5s"/> Nel Duecento. <break time="0.4s"/> Mentre nel resto d'Europa per molto meno qualcuno finisce sul rogo. <break time="1.2s"/>
 
-Milleduecentoventotto. <break time="0.5s"/> Federico s'imbarca per la Terra Santa. <break time="0.4s"/> Non porta un esercito imponente. <break time="0.4s"/> Porta diplomatici, traduttori, oggetti preziosi. <break time="0.8s"/>
+Il Papa lo odia. <break time="0.5s"/> Lo scomunica due volte. <break time="0.4s"/> La prima — sentite questa — perché non vuole partire per la crociata. <break time="0.5s"/> La seconda, quando finalmente parte, perché è andato da scomunicato. <break time="0.5s"/> In pratica: scomunicato se non parte, scomunicato se parte. <break time="0.4s"/> Una vita, insomma. <break time="1.2s"/>
 
-Tratta con il sultano d'Egitto. <break time="0.5s"/> Al-Kamil, nipote del Saladino. <break time="0.5s"/> Si parlano in arabo. <break time="0.4s"/> Si capiscono. <break time="1.0s"/>
+Milleduecentoventotto. <break time="0.5s"/> Federico s'imbarca per la Terra Santa. <break time="0.4s"/> E qui sta il colpo di genio. <break time="0.6s"/>
 
-Risultato: trattato di Giaffa, dieci anni di pace, Gerusalemme ai cristiani, Betlemme ai cristiani, Nazareth ai cristiani. <break time="0.5s"/> Senza una battaglia. <break time="0.4s"/> Federico si autoincorona re di Gerusalemme nel Santo Sepolcro. <break time="1.2s"/>
+Non porta un esercito da combattimento. <break time="0.5s"/> Porta diplomatici. <break time="0.4s"/> Traduttori. <break time="0.4s"/> Doni — tra cui un pavone d'oro e cavalli arabi documentati nelle cronache. <break time="0.5s"/> E tratta in arabo, lui in persona, con il sultano d'Egitto. <break time="0.4s"/> Si chiama Al-Kamil. <break time="0.4s"/> È nipote del Saladino. <break time="0.6s"/> Le fonti raccontano scambi di doni, lettere, e quesiti scientifici tra le due corti. <break time="1.0s"/>
+
+Il risultato? <break time="0.5s"/> Trattato di Giaffa. <break time="0.4s"/> Dieci anni di pace. <break time="0.4s"/> Gerusalemme ai cristiani. <break time="0.4s"/> Betlemme ai cristiani. <break time="0.4s"/> Nazareth ai cristiani. <break time="0.5s"/> Senza una battaglia. <break time="0.4s"/> Senza un morto. <break time="0.6s"/> Federico se ne va al Santo Sepolcro e — siccome il Papa l'aveva scomunicato e nessun vescovo poteva incoronarlo — la corona se la mette in testa da solo. <break time="0.5s"/> Re di Gerusalemme. <break time="0.4s"/> Auto-investitura. <break time="0.4s"/> Mai successo prima, mai più successo dopo. <break time="1.2s"/>
 
 Il Papa è furioso. <break time="0.4s"/> Dichiara nullo il trattato. <break time="0.5s"/> Federico se ne va. <break time="1.0s"/>
 
-Giugno milleduecentoventinove. <break time="0.5s"/> Attracca qui. <break time="0.4s"/> Sceglie Bari come base operativa per il Sud. <break time="0.5s"/> Fa allargare il Castello Svevo che vedete dietro alle vostre spalle. <break time="0.4s"/> Da qui governa metà del Mediterraneo. <break time="1.5s"/>
+Giugno milleduecentoventinove. <break time="0.4s"/> Sbarca a Brindisi. <break time="0.5s"/> Bari diventa una delle sue residenze pugliesi più amate. <break time="0.4s"/> Nel milleduecentotrentatré fa rifondare e ampliare il Castello Svevo — quello che vedete dietro alle vostre spalle, sì, proprio quello. <break time="0.4s"/> Da qui e dagli altri castelli pugliesi governa metà del Mediterraneo per altri vent'anni. <break time="1.2s"/>
 
-Federico muore nel milleduecentocinquanta. <break time="0.4s"/> Senza di lui, gli Svevi crollano in vent'anni. <break time="0.5s"/> Ma quel porto, quel castello, e l'idea di Bari come crocevia tra Occidente e Islam — quella idea ce l'aveva costruita lui. <break time="1.5s"/>
+Muore nel milleduecentocinquanta. <break time="0.4s"/> Senza di lui, gli Svevi crollano in vent'anni netti. <break time="0.6s"/> Ma il castello, il porto, e l'idea di Bari come ponte fra Occidente e Islam — quella ce l'ha messa lì lui. <break time="0.5s"/> Ed è rimasta. <break time="1.5s"/>
 
 
 =====================================
 DUE DICEMBRE 1943
 -------------
+voice: brando
 
-Bari, due dicembre millenovecentoquarantatré. <break time="1.2s"/>
+Due dicembre, millenovecentoquarantatré. <break time="1.2s"/>
 
-Sono le diciannove e venticinque. <break time="0.5s"/> Una sera di pioggia leggera. <break time="0.4s"/> In porto ci sono ventotto navi alleate. <break time="0.4s"/> Bari è stata liberata da due mesi. <break time="0.5s"/> È diventata il principale hub logistico per la campagna d'Italia. <break time="0.8s"/>
+Sono circa le diciannove e mezza. <break time="0.5s"/> Le navi alleate in rada, una trentina in totale, sono illuminate. <break time="0.4s"/> Riflettori accesi sui ponti. <break time="0.4s"/> Bari è stata liberata da due mesi. <break time="0.4s"/> La contraerea ha l'allerta abbassata. <break time="0.8s"/>
 
-Cibo, munizioni, carburante, medicinali. <break time="0.4s"/> Tutto arriva qui. <break time="1.0s"/>
+Sulle navi si scaricano casse di cibo, munizioni, carburante, medicinali. <break time="0.4s"/> Tutto quello che serve a far andare avanti la campagna d'Italia, passa di qui. <break time="0.5s"/> In banchina militari, scaricatori baresi, ufficiali britannici, marinai americani. <break time="1.0s"/>
 
-Centocinque bombardieri tedeschi appaiono dal cielo. <break time="0.5s"/> Junkers Ju ottantotto. <break time="0.4s"/> In venti minuti, è finita. <break time="1.2s"/>
+Verso le venti, dal cielo, una luce. <break time="0.5s"/>
 
-Ventotto navi affondate o gravemente danneggiate. <break time="0.4s"/> Mille morti militari. <break time="0.4s"/> Almeno altri mille civili baresi nelle ore successive. <break time="0.5s"/> La chiamano "la piccola Pearl Harbor". <break time="1.2s"/>
+Centocinque bombardieri. <break time="0.4s"/> Tedeschi. <break time="0.4s"/> Junkers Ju ottantotto. <break time="0.5s"/> Volano bassi. <break time="0.4s"/> Sganciano. <break time="1.0s"/>
 
-Ma il vero disastro non è il bombardamento. <break time="0.8s"/>
+In venti minuti è finita. <break time="0.8s"/>
 
-C'è una nave americana in porto. <break time="0.4s"/> Si chiama SS John Harvey. <break time="0.4s"/> Una liberty ship come tante. <break time="0.5s"/> Tranne che nelle sue stive ci sono duemila bombe M quarantasette A uno. <break time="0.6s"/> Settanta libbre ciascuna di iprite. <break time="1.0s"/>
+Ventotto navi affondate o gravemente danneggiate. <break time="0.4s"/> Mille morti militari. <break time="0.4s"/> Almeno altri mille civili baresi, nelle ore e nei giorni successivi. <break time="0.5s"/> I giornali alleati, quando finalmente ne parlano, la chiameranno "la piccola Pearl Harbor". <break time="1.2s"/>
 
-Gas mostarda. <break time="0.5s"/> Carico segreto. <break time="0.4s"/> Trasportato dagli Stati Uniti per ritorsione, nel caso Hitler avesse usato armi chimiche. <break time="0.6s"/> Roosevelt l'aveva ordinato. <break time="0.4s"/> Nessuno a Bari ne sapeva niente. <break time="1.2s"/>
+Ma il vero disastro — quello che cambia tutto — non è il bombardamento. <break time="0.8s"/>
 
-La nave esplode. <break time="0.5s"/> Il gas si mescola al carburante che galleggia sull'acqua del porto. <break time="0.4s"/> Una nube tossica si alza sulla città. <break time="0.6s"/> Marinai feriti vengono ripescati dal mare, ricoperti di petrolio e iprite. <break time="0.8s"/>
+C'è una nave americana, in mezzo al porto. <break time="0.5s"/> Si chiama SS John Harvey. <break time="0.4s"/> Una liberty ship come tante. <break time="0.4s"/> Tranne che nelle sue stive — chiuse, sigillate, anonime — ci sono duemila bombe. <break time="0.5s"/> Tipo M quarantasette A uno. <break time="0.4s"/> Settanta libbre ciascuna. <break time="0.5s"/> Carico segreto. <break time="1.0s"/>
 
-I medici curano i sopravvissuti senza sapere. <break time="0.4s"/> Li lavano, li mettono in coperta, li riscaldano. <break time="0.4s"/> Tutte cose esattamente sbagliate. <break time="0.5s"/> Dopo dodici ore, alcuni iniziano a morire. <break time="0.5s"/> Pelle bruciata, polmoni distrutti, occhi accecati. <break time="1.2s"/>
+Sapete cosa c'è dentro? <break time="0.6s"/>
 
-Seicentoventotto vittime ufficiali da iprite. <break time="0.4s"/> Ottantatré morti diretti. <break time="0.5s"/> Più una cifra di civili baresi, esposti alla nube, mai contata con precisione. <break time="1.0s"/>
+Iprite. <break time="0.5s"/> Gas mostarda. <break time="0.4s"/> Quello che a Ypres, nella prima guerra mondiale, aveva accecato e ucciso decine di migliaia di soldati. <break time="0.5s"/> Vietato dalla Convenzione di Ginevra. <break time="0.4s"/> Mai più usato, ufficialmente. <break time="0.6s"/> Roosevelt l'ha mandato a Bari in segreto, per ritorsione — se Hitler avesse usato armi chimiche. <break time="0.4s"/> A Bari nessuno lo sa. <break time="0.5s"/> Né i medici. <break time="0.4s"/> Né gli ufficiali italiani. <break time="0.4s"/> Né, ovviamente, i civili. <break time="1.2s"/>
 
-Eisenhower viene informato giorni dopo. <break time="0.5s"/> Churchill ordina il silenzio. <break time="0.4s"/> Documenti classificati. <break time="0.4s"/> Niente conferenze stampa. <break time="0.6s"/> La verità ufficiale sarà che la nube tossica era "fumo del carburante". <break time="1.2s"/>
+La John Harvey esplode. <break time="0.5s"/>
 
-I documenti americani vengono desecretati solo nel millenovecentocinquantanove. <break time="0.4s"/> Quelli inglesi nel millenovecentoottantasei. <break time="1.0s"/>
+Il gas si mescola al carburante in fiamme che galleggia sull'acqua del porto. <break time="0.4s"/> Una nube tossica si alza sulla città. <break time="0.5s"/> I marinai feriti vengono ripescati dal mare. <break time="0.5s"/> Ricoperti di petrolio e di iprite. <break time="0.4s"/> Portati negli ospedali da campo. <break time="1.0s"/>
 
-Ma c'è una cosa che il bombardamento di Bari ha lasciato al mondo. <break time="0.8s"/>
+I medici fanno quello che sanno fare. <break time="0.5s"/> Li lavano. <break time="0.4s"/> Li mettono in coperta. <break time="0.4s"/> Li riscaldano. <break time="0.6s"/> Tutte cose esattamente sbagliate per un'ustione da iprite. <break time="0.5s"/> Dopo dodici ore, i primi cominciano a morire. <break time="0.4s"/> Pelle che si stacca. <break time="0.4s"/> Polmoni distrutti. <break time="0.4s"/> Occhi accecati per sempre. <break time="0.8s"/>
 
-Un medico americano, Stewart Alexander, era stato mandato qui per capire cosa fosse successo. <break time="0.4s"/> Ha studiato i corpi. <break time="0.4s"/> Ha notato che l'iprite distruggeva in particolare le cellule del midollo osseo e i globuli bianchi. <break time="0.6s"/> Ha scritto un rapporto. <break time="1.0s"/>
+Seicentoventotto ufficiali. <break time="0.4s"/> Ottantatré morti diretti. <break time="0.4s"/> E una cifra di civili baresi, mai contata con precisione. <break time="0.5s"/> Famiglie intere, in quartieri vicini al porto, esposte alla nube nella notte. <break time="1.0s"/>
 
-Quel rapporto, sei anni dopo, diventa la base della prima chemioterapia. <break time="0.5s"/> Mecloretamina. <break time="0.4s"/> Mostarda azotata. <break time="0.4s"/> Il primo farmaco antitumorale della storia. <break time="1.2s"/>
+Eisenhower lo viene a sapere giorni dopo. <break time="0.5s"/> Churchill ordina il silenzio. <break time="0.4s"/> Documenti — classificati. <break time="0.4s"/> Niente conferenze stampa. <break time="0.5s"/> La versione ufficiale è che la nube era "fumo del carburante". <break time="0.4s"/> Per quasi quarant'anni, ufficialmente, l'iprite a Bari non è mai esistita. <break time="1.2s"/>
 
-Dal disastro di Bari nasce un modo di curare il cancro. <break time="1.0s"/>
+I documenti americani vengono desecretati nel cinquantanove. <break time="0.4s"/> Quelli inglesi, nell'ottantasei. <break time="0.6s"/> Vent'anni fa. <break time="1.0s"/>
 
-Nessuno qui in città lo sa. <break time="0.5s"/> Pochi lo sanno nel mondo. <break time="1.2s"/>
+Ma ascoltate. <break time="0.6s"/> C'è una cosa che il bombardamento di Bari ha lasciato al mondo. <break time="0.8s"/>
+
+Un medico americano. <break time="0.4s"/> Si chiama Stewart Alexander. <break time="0.4s"/> Lo mandano qui per capire cosa diavolo sia successo. <break time="0.5s"/> Studia i corpi. <break time="0.4s"/> Confronta autopsie. <break time="0.4s"/> Nota una cosa strana — l'iprite distrugge in modo specifico le cellule del midollo osseo e i globuli bianchi. <break time="0.6s"/> Le cellule che si dividono in fretta. <break time="0.4s"/> Scrive un rapporto. <break time="1.0s"/>
+
+Quel rapporto, sei anni dopo, finisce in mano a due ricercatori a Yale. <break time="0.4s"/> Diventa la base della prima chemioterapia. <break time="0.5s"/> Si chiama mecloretamina. <break time="0.4s"/> Mostarda azotata. <break time="0.4s"/> Il primo farmaco antitumorale della storia. <break time="1.2s"/>
+
+Dal disastro di Bari nasce un modo di curare il cancro. <break time="0.6s"/> Da ottantatré morti per gas — milioni di vite salvate nei decenni successivi. <break time="1.0s"/>
+
+Pochi, in città, lo sanno. <break time="0.5s"/> Pochissimi, nel mondo. <break time="0.6s"/> Adesso, anche voi. <break time="1.5s"/>
 
 
 =====================================
 N'DERRE A LA LANZE
 -------------
+voice: valerio
 
 Spostatevi di qualche passo. <break time="0.5s"/> Verso il porto vecchio. <break time="0.8s"/>
 
-Quello che state per vedere si chiama N'derre a la lanze. <break time="0.5s"/> In dialetto barese: "a terra delle lance". <break time="0.4s"/> Le lance sono le imbarcazioni piccole. <break time="1.0s"/>
+Quello che state per vedere si chiama N'derre a la lanze. <break time="0.5s"/> In barese: "a terra delle lance". <break time="0.4s"/> Le lance non sono armi — sono le imbarcazioni piccole, quelle di legno, con un motore solo. <break time="1.0s"/>
 
-Pescatori che vendono pesce direttamente dal proprio gozzo. <break time="0.5s"/> Senza intermediari, senza mercato coperto, senza scontrino. <break time="0.5s"/> Come succedeva quattrocento anni fa. <break time="1.2s"/>
+Qui i pescatori vendono il pesce direttamente dal loro gozzo. <break time="0.5s"/> Senza intermediari. <break time="0.4s"/> Senza mercato coperto. <break time="0.4s"/> Senza scontrino. <break time="0.5s"/> Come succedeva quattrocento anni fa. <break time="0.4s"/> Stessa identica scena. <break time="0.6s"/> Anche, sì, senza ricevute. <break time="1.2s"/>
 
-Tutti i giorni, dalle sei del mattino. <break time="0.4s"/> Domenica compresa. <break time="0.5s"/> Niente smartphone, niente bancarella, niente dehor. <break time="0.4s"/> Solo cassette di legno, ghiaccio e mare. <break time="1.0s"/>
+Tutti i giorni, dalle sei del mattino. <break time="0.4s"/> Domenica compresa. <break time="0.5s"/> Niente smartphone, niente bancarella, niente vetrine. <break time="0.4s"/> Solo cassette di legno, ghiaccio, e mare. <break time="1.0s"/>
 
-Qui dovete vedere una cosa. <break time="0.8s"/>
+E qui dovete vedere una cosa che vale il viaggio. <break time="0.8s"/>
 
-Si chiama "arricciatura del polpo". <break time="0.5s"/> Quattro mosse. <break time="0.4s"/> Sbatti il polpo sullo scoglio una decina di volte per ammorbidirlo. <break time="0.4s"/> Lo giri tra le mani. <break time="0.4s"/> Lo schiaffeggi sul muretto. <break time="0.4s"/> E gli arricci i tentacoli con un movimento rotatorio. <break time="0.6s"/> Servono quaranta secondi. <break time="0.4s"/> A occhio. <break time="1.0s"/>
+Si chiama "arricciatura del polpo". <break time="0.5s"/> Quattro mosse. <break time="0.6s"/>
 
-Nessuno l'ha mai scritto. <break time="0.5s"/> Si impara guardando il padre, il nonno. <break time="0.4s"/> Una tecnica che si tramanda solo dal vivo. <break time="1.0s"/>
+Uno — sbatti il polpo sullo scoglio. <break time="0.5s"/> Dieci, dodici volte. <break time="0.4s"/> Serve a ammorbidire le carni. <break time="0.4s"/> Senza questo, masticheresti pneumatico. <break time="0.5s"/> Due — lo giri tra le mani. <break time="0.4s"/> Tre — lo schiaffeggi sul muretto. <break time="0.4s"/> E quattro — gli arricci i tentacoli con un movimento rotatorio. <break time="0.5s"/> Una specie di tornado in miniatura. <break time="1.0s"/>
 
-E qui si mangia il polpo crudo. <break time="0.5s"/> Tagliato, condito con limone. <break time="0.5s"/> Bari è l'unica città italiana dove questa cosa avviene in piazza, a cielo aperto, davanti a tutti. <break time="0.4s"/> Senza ristorante, senza menù. <break time="1.2s"/>
+Tempo totale: quaranta secondi. <break time="0.4s"/> A occhio. <break time="0.5s"/> Senza guardare l'orologio. <break time="1.0s"/>
 
-Stesso discorso per ricci di mare, allievi, seppioline, frutti di mare crudi. <break time="0.5s"/> Si compra, ci si siede sul muretto, si mangia. <break time="0.4s"/> Cinque euro. <break time="0.5s"/> Il sushi che il Giappone non sa di avere. <break time="1.5s"/>
+E nessuno l'ha mai scritto su un manuale. <break time="0.5s"/> Si impara guardando il padre. <break time="0.4s"/> O il nonno. <break time="0.4s"/> Una tecnica che si tramanda solo dal vivo. <break time="0.6s"/> Provate a googlarla — non c'è. <break time="1.2s"/>
+
+E qui — preparatevi — il polpo si mangia crudo. <break time="0.5s"/> Tagliato in tre, condito con un goccio di limone. <break time="0.4s"/> Punto. <break time="0.4s"/> Si paga il prezzo del pesce, ci si siede sul muretto, si mangia col mare davanti. <break time="0.6s"/> Una delle pochissime città italiane dove questa cosa succede ancora in piazza, a cielo aperto, davanti a tutti. <break time="0.4s"/> Senza ristorante. <break time="0.4s"/> Senza menù. <break time="0.4s"/> Senza prenotazione. <break time="1.0s"/>
+
+Stesso discorso vale per ricci di mare, "allievi" (avanotti di acciuga), seppioline, frutti di mare crudi. <break time="0.5s"/> Si compra, ci si siede, si mangia. <break time="0.4s"/> Cinque, sei euro a porzione. <break time="0.6s"/> Il sushi che il Giappone non sa di avere. <break time="1.5s"/>
 
 
 =====================================
 IL PESCE CHE SALVO' LA CITTA'
 -------------
+voice: valerio
 
-Dopoguerra. <break time="0.5s"/> Bari distrutta. <break time="0.4s"/> Anche dal bombardamento del quarantatré. <break time="0.5s"/> Anche dalla fame. <break time="1.0s"/>
+Dopoguerra. <break time="0.5s"/> Bari è messa male. <break time="0.4s"/> Le bombe del quarantatré, certo. <break time="0.4s"/> Ma soprattutto la fame. <break time="0.5s"/> Quella vera, quella che a una certa età non si dimentica. <break time="1.0s"/>
 
-In quegli anni, in città, la carne è un lusso che pochi possono permettersi. <break time="0.4s"/> Il pollo arriva sulla tavola la domenica, se va bene. <break time="0.4s"/> Per il resto: pesce. <break time="0.5s"/> Sempre pesce. <break time="0.8s"/>
+In città, in quegli anni, la carne è un lusso. <break time="0.5s"/> Il pollo arriva la domenica, se va bene. <break time="0.4s"/> Per il resto — pesce. <break time="0.4s"/> Sempre pesce. <break time="0.8s"/>
 
-Pesce povero. <break time="0.5s"/> Alici, sarde, sgombri, palamita. <break time="0.4s"/> Quello che le barche tiravano su senza dover andare lontano. <break time="0.4s"/> Quello che costava niente perché c'era tanto. <break time="1.0s"/>
+Ma non pesce nobile, attenzione. <break time="0.5s"/> Niente spigole, niente orate. <break time="0.4s"/> Quello costa. <break time="0.5s"/> Pesce povero. <break time="0.4s"/> Alici, sarde, sgombri, palamita. <break time="0.4s"/> Quello che le lance tiravano su senza dover andare lontano. <break time="0.4s"/> Quello che costava niente perché c'era tanto. <break time="1.0s"/>
 
-Da quella necessità nascono i piatti che oggi sono identità. <break time="1.0s"/>
+E da quella necessità — da quella fame — nascono i piatti che oggi sono identità. <break time="0.6s"/> Quelli che vi mettono nel piatto quando andate al ristorante e dite "voglio mangiare tipico". <break time="1.2s"/>
 
-La tiella di riso, patate e cozze. <break time="0.5s"/> Una zuppiera di terracotta, strati alternati, in forno. <break time="0.4s"/> Costava poco, riempiva tanto, durava tre giorni. <break time="0.6s"/> Oggi è in tutti i ristoranti. <break time="0.4s"/> Settant'anni fa era la cena dei poveri. <break time="1.0s"/>
+La tiella di riso, patate e cozze. <break time="0.5s"/> Una zuppiera di terracotta. <break time="0.4s"/> Strati alternati. <break time="0.4s"/> In forno una, due ore. <break time="0.6s"/> Costava poco. <break time="0.4s"/> Riempiva tanto. <break time="0.4s"/> Durava tre giorni. <break time="0.5s"/> Oggi è in tutti i menù dei ristoranti del centro a quindici euro. <break time="0.4s"/> Settant'anni fa era la cena dei poveri. <break time="1.0s"/>
 
-Le cozze fritte vendute per strada nei coppi di carta. <break time="0.4s"/> Le polpettine di alici. <break time="0.4s"/> Il pancotto con i ricci. <break time="0.5s"/> Le orecchiette con le cime di rapa più cinque alici sciolte nell'olio. <break time="1.2s"/>
+Le cozze fritte, vendute per strada nei coppi di carta gialla. <break time="0.4s"/> Le polpettine di alici. <break time="0.4s"/> Il pancotto coi ricci. <break time="0.5s"/> Le orecchiette con le cime di rapa e cinque alici sciolte nell'olio. <break time="1.2s"/>
 
-C'è un detto barese, vecchio. <break time="0.5s"/> "Chi ha il mare davanti, non muore di fame". <break time="0.4s"/> In dialetto suona diverso. <break time="0.4s"/> Il senso è quello. <break time="1.0s"/>
+C'è un detto barese, vecchio come la città. <break time="0.5s"/> "Cì téne u mare nan po murì de fame". <break time="0.4s"/> "Chi ha il mare davanti, non muore di fame". <break time="0.6s"/>
 
-Bari ha avuto il mare davanti. <break time="0.5s"/> Sempre. <break time="0.5s"/> E per questo, anche nei peggiori vent'anni del Novecento, qui non si è morti di fame come in altre parti del Sud. <break time="1.5s"/>
+Bari il mare davanti ce l'ha sempre avuto. <break time="0.5s"/> E per questo — anche nei peggiori vent'anni del Novecento, anche durante la fame nera — qui non si è morti come in altre parti del Sud. <break time="0.6s"/> Si mangiava male. <break time="0.4s"/> Si mangiava poco. <break time="0.4s"/> Ma si mangiava. <break time="1.5s"/>
 
 
 =====================================
 VLORA - OTTO MARZO 1991
 -------------
+voice: brando
 
-Sette marzo millenovecentonovantuno. <break time="1.0s"/>
+Sette marzo, millenovecentonovantuno. <break time="1.0s"/>
 
-In Albania è caos totale. <break time="0.4s"/> Il regime di Enver Hoxha è caduto da poche settimane. <break time="0.5s"/> Quarantacinque anni di dittatura comunista finiscono in qualche giorno. <break time="0.5s"/> Vuoto di potere, fame, panico. <break time="1.2s"/>
+In Albania è caos totale. <break time="0.5s"/> Il regime comunista, dopo quarantacinque anni, sta crollando. <break time="0.4s"/> Hoxha è morto da sei anni. <break time="0.4s"/> Il suo successore Ramiz Alia, nei mesi precedenti, ha smantellato il monopartitismo. <break time="0.5s"/> A marzo del novantuno la dittatura è formalmente finita. <break time="0.4s"/> Vuoto di potere. <break time="0.4s"/> Fame vera. <break time="0.4s"/> Panico nelle strade. <break time="1.0s"/>
 
-Nel porto di Durazzo c'è una nave cargo. <break time="0.5s"/> Si chiama Vlora. <break time="0.4s"/> È appena rientrata da Cuba con un carico di zucchero. <break time="0.5s"/> Capitano: Halim Milaqi. <break time="1.0s"/>
+Nel porto di Durazzo c'è una nave cargo. <break time="0.5s"/> Si chiama Vlora. <break time="0.4s"/> È rientrata da Cuba con un carico di zucchero. <break time="0.5s"/> Capitano: Halim Milaqi. <break time="0.4s"/> Marinaio di mestiere. <break time="1.0s"/>
 
-Quel pomeriggio, ventimila persone prendono d'assalto la banchina. <break time="0.6s"/> Salgono sulla Vlora con la forza. <break time="0.4s"/> Stipano la coperta, le stive, la sala macchine, i ponti, le scialuppe. <break time="0.5s"/> La nave è progettata per tremila tonnellate di carico. <break time="0.4s"/> Ora ha ventimila esseri umani sopra. <break time="1.2s"/>
+Quel pomeriggio, in pochi minuti, ventimila persone prendono d'assalto la banchina. <break time="0.6s"/> Salgono sulla Vlora con la forza. <break time="0.4s"/> Stipano la coperta. <break time="0.4s"/> Le stive. <break time="0.4s"/> La sala macchine. <break time="0.4s"/> I ponti. <break time="0.4s"/> Le scialuppe di salvataggio. <break time="0.5s"/> Si attaccano alle cime, alle bitte di ormeggio, alle gru. <break time="0.5s"/> La nave è progettata per portare tremila tonnellate di zucchero. <break time="0.4s"/> Adesso ha ventimila esseri umani sopra. <break time="1.2s"/>
 
-Milaqi si rifiuta. <break time="0.4s"/> Gli puntano un coltello alla gola. <break time="0.4s"/> Dice: dove andiamo? <break time="0.5s"/> Gli dicono: Italia. <break time="0.8s"/>
+Milaqi prova a rifiutare la partenza — la nave sovraccarica è pericolosa. <break time="0.5s"/> Viene minacciato con un'arma e costretto a salpare. <break time="0.4s"/> Lo racconterà lui stesso in interviste pubblicate nei mesi successivi. <break time="0.4s"/> La destinazione gridata dai passeggeri è semplice. <break time="0.4s"/> Italia. <break time="0.8s"/>
 
-Punta su Brindisi. <break time="0.5s"/> Brindisi non lo accoglie. <break time="0.4s"/> Lo dirottano su Bari. <break time="1.0s"/>
+Punta su Brindisi. <break time="0.5s"/> Brindisi non lo fa entrare. <break time="0.4s"/> Lo dirottano su Bari. <break time="1.0s"/>
 
-Otto marzo millenovecentonovantuno. <break time="0.4s"/> Quattordici del pomeriggio. <break time="0.4s"/> La Vlora entra nel porto di Bari. <break time="0.5s"/> Su questa stessa acqua. <break time="1.0s"/>
+Otto marzo. <break time="0.4s"/> Quattordici del pomeriggio. <break time="0.4s"/> La Vlora entra in questo porto. <break time="0.4s"/> Su quest'acqua qui, davanti a voi. <break time="1.0s"/>
 
-Il pontile è ricoperto da una massa scura, in movimento. <break time="0.4s"/> Da lontano sembra petrolio. <break time="0.4s"/> Da vicino, sono persone. <break time="0.4s"/> Aggrappate a tutto. <break time="0.4s"/> Sulle gru, sulle bitte di ormeggio, ai cavi, sui tetti dei container. <break time="1.0s"/>
+Quelli che stanno sulla banchina — pescatori, militari di guardia, baresi affacciati ai balconi — vedono prima la sagoma di una nave grossa. <break time="0.4s"/> Poi notano una cosa strana — la nave sembra ricoperta da una pelle scura, che si muove. <break time="0.5s"/> Da lontano sembra petrolio. <break time="0.4s"/> Da vicino, sono persone. <break time="0.5s"/> Migliaia, aggrappate a ogni superficie. <break time="0.5s"/> Sui tetti dei container. <break time="0.4s"/> Sulle gru. <break time="0.4s"/> A grappoli, sulle scalette. <break time="1.0s"/>
 
-Bambini. <break time="0.4s"/> Donne. <break time="0.4s"/> Vecchi. <break time="0.4s"/> Ragazzi con un sacchetto di plastica al posto della valigia. <break time="1.2s"/>
+Bambini. <break time="0.4s"/> Donne. <break time="0.4s"/> Anziani. <break time="0.4s"/> Ragazzi giovanissimi, soli, con un sacchetto di plastica al posto della valigia. <break time="0.6s"/> Quasi nessuno parla italiano. <break time="1.2s"/>
 
-Ci vogliono otto ore per scaricare tutti. <break time="0.4s"/> Calano dalle scalette di corda. <break time="0.4s"/> Alcuni si buttano in acqua. <break time="0.4s"/> Diciotto annegano. <break time="1.0s"/>
+Ci vogliono ore per scaricare tutti. <break time="0.5s"/> Calano dalle scalette di corda. <break time="0.4s"/> Altri si buttano direttamente in acqua. <break time="0.5s"/> Si conteranno diversi annegamenti, mai cifrati con precisione assoluta. <break time="1.0s"/>
 
-In otto ore, una città di trecentoventimila abitanti accoglie ventimila persone in più. <break time="0.5s"/> Il sei per cento della popolazione locale. <break time="0.4s"/> In otto ore. <break time="1.2s"/>
+In otto ore, una città di trecentoventimila abitanti accoglie ventimila persone in più. <break time="0.5s"/> Il sei per cento della popolazione locale. <break time="0.4s"/> In una sola giornata. <break time="0.4s"/> Per darvi un termine di paragone — è come se a Bari domani sbarcassero, in una pomeriggio, ventimila persone non programmate. <break time="0.4s"/> Senza preavviso. <break time="0.4s"/> Senza documenti. <break time="0.4s"/> Senza che nessuno sappia gestirle. <break time="1.2s"/>
 
-Il sindaco di Bari, Enrico Dalfino, decide di accoglierli. <break time="0.4s"/> Apre le scuole, le palestre, il porto stesso. <break time="0.5s"/> Distribuisce viveri. <break time="0.4s"/> Coordina centinaia di volontari baresi che escono di casa con coperte e pane. <break time="1.0s"/>
+Il sindaco di Bari, in quel momento, è Enrico Dalfino. <break time="0.4s"/> Democristiano. <break time="0.4s"/> Cinquantotto anni. <break time="0.5s"/> Decide subito. <break time="0.4s"/> Accogliamo. <break time="0.5s"/> Apre le scuole. <break time="0.4s"/> Le palestre. <break time="0.4s"/> Il porto stesso. <break time="0.4s"/> Coordina la distribuzione di viveri e coperte. <break time="0.5s"/> Centinaia di baresi si presentano di loro iniziativa, portando quello che hanno. <break time="0.5s"/> Una città intera si organizza in poche ore. <break time="0.4s"/> Le testimonianze raccolte negli anni successivi sono unanimi sul punto. <break time="1.2s"/>
 
-Ma Roma decide diversamente. <break time="1.5s"/>
+Ma a Roma, quel pomeriggio, decidono diversamente. <break time="1.5s"/>
 
 
 =====================================
 LO STADIO DELLA VITTORIA
 -------------
+voice: brando
 
 Roma decide: ammassare. <break time="0.8s"/>
 
-Tutti i ventimila vengono trasferiti, sotto scorta, nello Stadio della Vittoria. <break time="0.4s"/> A pochi chilometri da qui. <break time="0.5s"/> Trenta gradi. <break time="0.4s"/> Nessun bagno. <break time="0.4s"/> Nessuna acqua corrente. <break time="0.4s"/> Nessun cibo organizzato. <break time="1.0s"/>
+Tutti i ventimila vengono trasferiti — sotto scorta — nello Stadio della Vittoria. <break time="0.4s"/> A pochi chilometri da qui. <break time="0.4s"/> Niente bagni adeguati. <break time="0.4s"/> Niente acqua corrente. <break time="0.4s"/> Niente cibo organizzato. <break time="0.4s"/> Niente interpreti. <break time="1.0s"/>
 
-I baresi, che dall'esterno vedono cosa sta succedendo, iniziano a lanciare panini dentro lo stadio. <break time="0.4s"/> Bottiglie d'acqua. <break time="0.4s"/> Coperte. <break time="0.5s"/> Dall'alto degli spalti, dalle scale, dai cancelli. <break time="0.6s"/> Le foto di quei giorni sono pubbliche. <break time="0.4s"/> Cercatele. <break time="1.2s"/>
+Le porte vengono chiuse dall'esterno. <break time="0.5s"/> Dentro — ventimila persone in uno stadio. <break time="0.4s"/> All'aperto. <break time="0.4s"/> Per giorni. <break time="1.2s"/>
 
-Tre giorni. <break time="0.5s"/> Senza spiegazioni. <break time="0.4s"/> Senza interpreti. <break time="0.4s"/> Senza piano. <break time="1.0s"/>
+I baresi, da fuori, vedono. <break time="0.5s"/> Vedono i bambini affacciati ai cancelli. <break time="0.4s"/> Le donne che chiedono acqua a gesti. <break time="0.5s"/> E iniziano. <break time="0.6s"/>
 
-Poi arriva l'ordine. <break time="0.5s"/> Andreotti, presidente del consiglio, decide. <break time="0.4s"/> Rimpatrio forzato. <break time="0.5s"/> Gli aerei C centotrenta della Quarantaseiesima Aerobrigata partono da Pisa. <break time="0.4s"/> Caricano i profughi. <break time="0.4s"/> Li riportano a Tirana. <break time="1.0s"/>
+Iniziano a lanciare cibo e acqua dall'alto degli spalti. <break time="0.4s"/> Coperte. <break time="0.4s"/> Pane. <break time="0.5s"/> Per giorni di seguito, fino al rimpatrio. <break time="0.8s"/>
 
-Quasi tutti. <break time="0.5s"/> Una piccola parte resta in Italia clandestinamente. <break time="0.4s"/> Quelli che riescono a scappare prima dell'imbarco di ritorno. <break time="1.2s"/>
+Le foto di quei giorni sono pubbliche, archiviate in agenzia. <break time="0.4s"/> Cercatele. <break time="0.4s"/> Bari, stadio della Vittoria, marzo novantuno. <break time="0.4s"/> Sono lì. <break time="1.2s"/>
 
-L'Italia, in quei tre giorni, scopre di non avere una politica migratoria. <break time="0.4s"/> Bari scopre di essere il primo porto d'Europa di fronte a un'emergenza umanitaria di massa. <break time="0.5s"/> Trent'anni prima di Lampedusa. <break time="1.0s"/>
+Pochi giorni di stallo. <break time="0.5s"/> Senza piano. <break time="0.5s"/> Poi arriva l'ordine. <break time="0.4s"/> Andreotti, presidente del consiglio. <break time="0.4s"/> Decide: rimpatrio. <break time="0.4s"/> Forzato. <break time="1.0s"/>
 
-Enrico Dalfino, il sindaco, viene criticato per "aver creato il problema accogliendo". <break time="0.4s"/> Muore tre anni dopo. <break time="0.4s"/> Nel duemiladodici, vent'anni dopo i fatti, gli intitolano una targa qui, al porto. <break time="0.5s"/> Si chiama "Spazio Memoria Vlora". <break time="1.2s"/>
+Gli aerei C centotrenta della Quarantaseiesima Aerobrigata partono da Pisa. <break time="0.4s"/> Atterrano a Bari Palese. <break time="0.4s"/> Caricano i profughi. <break time="0.4s"/> Li riportano a Tirana. <break time="0.5s"/> Quasi tutti. <break time="0.4s"/> Una piccola parte — quelli che riescono a scappare prima dell'imbarco — resta in Italia clandestinamente. <break time="0.5s"/> Si nascondono nelle case dei baresi che li avevano accolti. <break time="0.5s"/> Diventano la prima generazione della comunità albanese di Bari. <break time="1.2s"/>
 
-Il capitano Milaqi è morto nel duemiladodici. <break time="0.4s"/> A Durazzo. <break time="0.4s"/> Senza mai più rivedere Bari. <break time="1.5s"/>
+L'Italia, in quei tre giorni, scopre di non avere una politica migratoria. <break time="0.5s"/> Bari, in quei tre giorni, scopre di essere il primo porto d'Europa di fronte a un'emergenza umanitaria di massa. <break time="0.5s"/> Trent'anni prima di Lampedusa. <break time="1.0s"/>
+
+Dalfino, il sindaco, viene criticato da una parte della stampa nazionale per la scelta dell'accoglienza. <break time="0.5s"/> Muore tre anni dopo. <break time="0.5s"/> A trent'anni dai fatti, nel duemilaventuno, gli viene intitolata una targa qui, al porto. <break time="0.4s"/> Lo "Spazio Memoria Vlora". <break time="0.4s"/> Passateci, prima di andare via. <break time="1.0s"/>
+
+Il capitano Milaqi è morto nel duemiladodici, a Durazzo. <break time="1.5s"/>
 
 
 =====================================
 IL MURO CHE NON C'ERA
 -------------
+voice: valerio
 
 Subito dopo lo Stadio della Vittoria, l'Italia chiude. <break time="1.0s"/>
 
-Decreto, marina militare, motovedette nell'Adriatico. <break time="0.4s"/> Il messaggio è chiaro: non si entra più. <break time="0.5s"/> Per la prima volta dal dopoguerra, il braccio di mare tra Bari e l'Albania diventa una frontiera militarizzata. <break time="1.2s"/>
+Decreto. <break time="0.4s"/> Marina militare. <break time="0.4s"/> Motovedette nell'Adriatico. <break time="0.4s"/> Il messaggio è chiaro: non si entra più. <break time="0.5s"/> Per la prima volta dal dopoguerra, il braccio di mare tra Bari e l'Albania diventa una frontiera militarizzata. <break time="1.2s"/>
 
-Ma c'è una cosa che a Roma non capivano. <break time="0.8s"/>
+Ma a Roma non avevano capito una cosa. <break time="0.8s"/>
 
-Bari non aveva mai considerato l'Albania una frontiera. <break time="0.4s"/> Per Bari l'Albania era il dirimpetto. <break time="0.4s"/> La sponda di fronte. <break time="0.5s"/> Quattromila anni di commercio, pesca, viaggi, parentele. <break time="1.0s"/>
+Bari, l'Albania, non l'ha mai considerata una frontiera. <break time="0.4s"/> Per Bari l'Albania è la sponda di fronte. <break time="0.5s"/> Millenni di commercio, pesca, viaggi, parentele. <break time="0.4s"/> Prima della seconda guerra mondiale, i pescatori baresi commerciavano regolarmente sulle coste albanesi e dalmate. <break time="0.5s"/> Non era una frontiera. <break time="0.4s"/> Era il vicinato. <break time="1.0s"/>
 
-Mentre il governo chiudeva, i traghetti commerciali continuavano. <break time="0.5s"/> Le università di Bari accoglievano studenti albanesi a centinaia. <break time="0.4s"/> Negli anni Duemila, la comunità albanese a Bari diventa una delle più grandi d'Italia. <break time="0.5s"/> Seconda generazione che parla barese meglio dell'italiano. <break time="1.2s"/>
+E mentre il governo chiudeva — i traghetti commerciali continuavano. <break time="0.5s"/> Le università di Bari iscrivevano studenti albanesi a centinaia. <break time="0.4s"/> Nei primi anni Duemila, la comunità albanese a Bari diventa una delle più grandi d'Italia. <break time="0.5s"/> La seconda generazione parla barese meglio dell'italiano. <break time="0.4s"/> Non lo dico per fare bello — è vero. <break time="0.4s"/> Andate al mercato del Libertà, ascoltate, e capirete. <break time="1.2s"/>
 
-Quel muro non c'è mai stato davvero. <break time="0.6s"/> Era un muro burocratico, montato in fretta, che il mare ha continuato ad attraversare. <break time="1.0s"/>
+Quel muro non c'è mai stato davvero. <break time="0.5s"/> Era un muro di carta. <break time="0.4s"/> Burocratico. <break time="0.4s"/> Montato in fretta. <break time="0.5s"/> Il mare l'ha attraversato comunque. <break time="0.4s"/> Come ha sempre fatto. <break time="1.0s"/>
 
-Oggi, se sentite parlare albanese al mercato, nei negozi, nei bar — è normale. <break time="0.4s"/> Fa parte del rumore della città. <break time="0.5s"/> Come il dialetto barese. <break time="0.4s"/> Come l'italiano. <break time="1.5s"/>
+Oggi, se sentite parlare albanese al mercato, al bar, nei negozi del centro — è normale. <break time="0.4s"/> Fa parte del rumore della città. <break time="0.4s"/> Come il dialetto barese. <break time="0.4s"/> Come l'italiano. <break time="0.4s"/> Come l'inglese dei turisti, e il tedesco dei pensionati. <break time="0.5s"/> Bari fa così. <break time="0.4s"/> Da sempre. <break time="1.5s"/>
 
 
 =====================================
 TEATRO MARGHERITA
 -------------
+voice: valerio
 
-Davanti a voi, sul mare, c'è un edificio bianco. <break time="0.5s"/> Stile liberty. <break time="0.4s"/> Costruito sull'acqua, su palafitte. <break time="0.8s"/>
+Davanti a voi, sul mare, c'è un edificio bianco. <break time="0.5s"/> Stile liberty. <break time="0.4s"/> Costruito sull'acqua. <break time="0.4s"/> Su palafitte. <break time="0.6s"/>
 
 Si chiama Teatro Margherita. <break time="0.6s"/>
 
-Anno di costruzione: millenovecentoquattordici. <break time="0.5s"/> E c'è una ragione molto barese per cui è stato costruito sul mare. <break time="1.0s"/>
+Anno di costruzione: millenovecentoquattordici. <break time="0.5s"/> E c'è una ragione molto barese, molto bella, per cui è stato costruito sul mare invece che in terraferma come tutti i teatri normali. <break time="1.0s"/>
 
-A fine ottocento, il teatro principale di Bari era il Politeama Petruzzelli. <break time="0.4s"/> Di proprietà di una potente famiglia, la famiglia Petruzzelli. <break time="0.5s"/> Avevano ottenuto dal Comune un'esclusiva: nessun altro teatro poteva essere costruito sul suolo cittadino. <break time="1.2s"/>
+A fine ottocento, il teatro principale di Bari era il Petruzzelli. <break time="0.4s"/> Lo gestiva una famiglia potente — i Petruzzelli, appunto — che era riuscita a strappare al Comune un'esclusiva. <break time="0.4s"/> Esclusiva tipo: nessun altro teatro può essere costruito sul suolo cittadino di Bari. <break time="0.4s"/> Per legge. <break time="0.5s"/> Per cinquant'anni. <break time="1.2s"/>
 
-Un imprenditore concorrente, Gennaro Trizio, vuole costruire un nuovo teatro. <break time="0.4s"/> Ma sul suolo cittadino non può. <break time="0.5s"/> Allora cosa fa? <break time="0.8s"/>
+Un imprenditore concorrente — si chiama Gennaro Trizio — vuole costruire un nuovo teatro. <break time="0.5s"/> Va in Comune, presenta i piani. <break time="0.4s"/> Gli dicono: non si può, c'è il vincolo. <break time="0.5s"/> Lui ci pensa una settimana. <break time="0.4s"/> Torna in Comune. <break time="0.5s"/> Chiede: posso costruire sul mare? <break time="0.6s"/>
 
-Costruisce sul mare. <break time="0.5s"/> Su palafitte, fuori dal demanio comunale, sul demanio marittimo. <break time="0.4s"/> Tecnicamente non sta sul "suolo" di Bari. <break time="0.5s"/> Il vincolo è aggirato. <break time="1.2s"/>
+Gli impiegati si guardano. <break time="0.5s"/> Il vincolo dice "suolo cittadino". <break time="0.4s"/> Il mare non è suolo. <break time="0.4s"/> Il mare è demanio marittimo. <break time="0.4s"/> Diversa giurisdizione. <break time="0.5s"/> Mandano la pratica al ministero. <break time="0.4s"/> Risposta: tecnicamente, sì. <break time="1.0s"/>
 
-Il Petruzzelli protesta. <break time="0.4s"/> Va in tribunale. <break time="0.4s"/> Perde. <break time="0.5s"/> Il Margherita apre nel millenovecentoquattordici come cinema, poi diventa teatro di varietà, poi sala da ballo. <break time="1.0s"/>
+E quindi Trizio costruisce il Margherita su palafitte. <break time="0.5s"/> Letteralmente. <break time="0.4s"/> Sull'acqua del porto, fuori dal demanio comunale. <break time="0.5s"/> I Petruzzelli protestano. <break time="0.4s"/> Vanno in tribunale. <break time="0.4s"/> Perdono. <break time="0.4s"/> Trizio inaugura nel quattordici come cinema. <break time="0.4s"/> Negli anni successivi diventa teatro di varietà, poi sala polifunzionale. <break time="0.5s"/> Negli anni settanta chiude. <break time="0.4s"/> Resta abbandonato per decenni — gabbiani, ruggine, vetri rotti. <break time="0.4s"/> Una cattedrale liberty in mezzo al porto. <break time="1.0s"/>
 
-Negli anni settanta chiude. <break time="0.4s"/> Resta abbandonato per trent'anni. <break time="0.4s"/> Gabbiani, ruggine, vetri rotti. <break time="0.5s"/> Una cattedrale liberty in mezzo al porto. <break time="1.0s"/>
+Riapre nel duemilaventuno. <break time="0.4s"/> Restaurato. <break time="0.4s"/> Oggi dentro c'è uno spazio espositivo per l'arte contemporanea. <break time="0.4s"/> Vale i dieci minuti del vostro tempo, anche solo per vedere la struttura interna. <break time="1.2s"/>
 
-Riapre nel duemiladiciotto. <break time="0.4s"/> Restaurato. <break time="0.4s"/> Oggi è un museo di arte contemporanea. <break time="0.5s"/> Si entra. <break time="0.4s"/> Vale dieci minuti del vostro tempo. <break time="1.2s"/>
+Ma quello che dovete portarvi via di qui, da questo edificio, è la lezione barese. <break time="0.5s"/> Quella che a Roma — di nuovo — non capivano. <break time="0.6s"/>
 
-Ma quello che dovete portarvi via, da qui, è la lezione barese. <break time="0.5s"/> Se c'è una regola che ti blocca, cerca il millimetro fuori dalla regola. <break time="0.4s"/> E costruisci lì. <break time="1.5s"/>
+Se c'è una regola che ti blocca — cerca il millimetro fuori dalla regola. <break time="0.5s"/> E costruisci lì. <break time="0.4s"/> Sul mare, se ti dicono "non in terra". <break time="0.4s"/> Su palafitte, se ti dicono "non sul suolo". <break time="0.6s"/> Bari è stata costruita così, per quattromila anni. <break time="0.4s"/> Sempre. <break time="1.5s"/>
 
 
 =====================================
 BARI - DURAZZO OGGI
 -------------
+voice: valerio
 
-Centoventi miglia nautiche. <break time="0.5s"/> Nove ore di traghetto. <break time="0.4s"/> Due partenze al giorno. <break time="1.0s"/>
+Circa cento miglia nautiche. <break time="0.4s"/> Nove ore di traghetto. <break time="0.4s"/> Più partenze al giorno, tutto l'anno. <break time="0.6s"/>
 
-Tutti i giorni dell'anno, dalla banchina davanti a voi, parte una nave per Durazzo. <break time="0.5s"/> Camion che portano elettrodomestici. <break time="0.4s"/> Pullman di studenti universitari. <break time="0.4s"/> Famiglie italo-albanesi in vacanza dai nonni. <break time="0.4s"/> Turisti italiani che scoprono l'Albania a basso costo. <break time="1.2s"/>
+Tutti i giorni, dalla banchina davanti a voi, una nave parte per Durazzo. <break time="0.5s"/> Caricano camion pieni di elettrodomestici — gli albanesi residenti in Italia li mandano ai parenti. <break time="0.4s"/> Pullman di studenti universitari — l'Università di Bari è una delle destinazioni storicamente più scelte dagli studenti albanesi. <break time="0.4s"/> Famiglie italo-albanesi di seconda generazione, che vanno dai nonni per Pasqua. <break time="0.4s"/> Turisti italiani che oggi scoprono l'Albania a costi sensibilmente più bassi della Puglia. <break time="1.2s"/>
 
-E nello stesso braccio di mare, quattromila anni fa, navigavano fenici, greci, romani. <break time="0.5s"/> Tremila anni fa, gli illiri scambiavano olio e ambra con la Puglia. <break time="0.5s"/> Mille anni fa, da qui sono partiti i crociati. <break time="0.5s"/> Cento anni fa, ebrei in fuga dalla Germania nazista arrivavano qui e proseguivano per Palestina. <break time="0.6s"/> Sessant'anni fa, alcuni emigranti italiani andavano in Albania a lavorare, sì, anche al contrario. <break time="1.0s"/>
+E nello stesso braccio di mare — chiudete gli occhi un attimo — tremila anni fa navigavano già greci e illiri, scambiando merci tra le due sponde. <break time="0.5s"/> Mille anni fa, da qui sono partiti i crociati. <break time="0.5s"/> Tra il millenovecentoquarantasei e il millenovecentoquarantotto, Bari fu il principale porto italiano per l'esodo ebraico verso la Palestina. <break time="0.4s"/> Migliaia di profughi sopravvissuti alla Shoah passarono di qui. <break time="0.5s"/> Negli anni dell'occupazione italiana dell'Albania, tra il millenovecentotrentanove e il millenovecentoquarantatré, operai e tecnici italiani vi lavoravano regolarmente. <break time="0.4s"/> Al contrario, sì. <break time="1.0s"/>
 
 Trentacinque anni fa, la Vlora. <break time="1.0s"/>
 
-Lo stesso mare. <break time="0.4s"/> La stessa distanza. <break time="0.4s"/> Direzioni diverse, a seconda del decennio. <break time="1.2s"/>
+Lo stesso mare. <break time="0.4s"/> Stessa distanza. <break time="0.4s"/> Direzioni che cambiano a seconda del decennio. <break time="0.6s"/> Chi parte è chi arriva, chi arriva è chi parte. <break time="0.5s"/> Dipende dal vento. <break time="1.2s"/>
 
-Il porto non ha mai smesso. <break time="0.5s"/> Funziona ancora oggi come funzionava ai tempi di Federico II. <break time="0.4s"/> Solo che le navi sono più grandi, le rotte le calcola un computer, e i passeggeri portano lo smartphone in mano. <break time="1.0s"/>
+Il porto non ha mai smesso di funzionare. <break time="0.5s"/> Funziona oggi come funzionava ai tempi di Federico II. <break time="0.4s"/> Solo che le navi sono più grandi, le rotte le calcola un computer, e i passeggeri salgono a bordo con lo smartphone in mano e gli auricolari nelle orecchie. <break time="0.4s"/> Come voi adesso. <break time="0.5s"/> Probabilmente. <break time="1.0s"/>
 
 Ma il braccio di mare è quello. <break time="0.5s"/> La direzione, ancora una volta, è verso est. <break time="1.5s"/>
 
@@ -308,19 +343,20 @@ Ma il braccio di mare è quello. <break time="0.5s"/> La direzione, ancora una v
 =====================================
 CHIUSURA
 -------------
+voice: valerio
 
-Adesso, prima di andare via, fermatevi un secondo. <break time="0.8s"/>
+Adesso, prima di togliervi gli auricolari e proseguire, fermatevi un secondo. <break time="0.8s"/>
 
-Guardate l'acqua. <break time="0.5s"/> Quella che vedete davanti, oltre la banchina. <break time="1.0s"/>
+Guardate l'acqua. <break time="0.5s"/> Quella che vedete davanti, oltre la banchina. <break time="0.4s"/> Sembra ferma. <break time="0.4s"/> Non lo è. <break time="1.0s"/>
 
-L'Adriatico non è un mare. <break time="0.6s"/> È una strada. <break time="1.2s"/>
+L'Adriatico non è un mare. <break time="0.5s"/> È una strada. <break time="1.2s"/>
 
-Percorsa in entrambi i sensi. <break time="0.4s"/> Da chi cercava qualcosa. <break time="0.4s"/> Da chi scappava. <break time="0.4s"/> Da chi commerciava. <break time="0.4s"/> Da chi pregava. <break time="0.4s"/> Da chi conquistava. <break time="0.4s"/> Da chi tornava sconfitto. <break time="1.0s"/>
+Percorsa in entrambi i sensi. <break time="0.5s"/> Da chi cercava qualcosa. <break time="0.4s"/> Da chi scappava. <break time="0.4s"/> Da chi commerciava. <break time="0.4s"/> Da chi pregava. <break time="0.4s"/> Da chi conquistava. <break time="0.4s"/> Da chi tornava sconfitto. <break time="0.4s"/> Da chi non tornava più. <break time="1.0s"/>
 
-Saraceni, normanni, crociati, imperatori, mercanti, soldati, profughi. <break time="0.4s"/> Tutti sono passati di qui. <break time="0.5s"/> Tutti hanno visto questa stessa banchina, da una di queste due direzioni. <break time="1.2s"/>
+Saraceni. <break time="0.4s"/> Crociati. <break time="0.4s"/> Imperatori. <break time="0.4s"/> Mercanti. <break time="0.4s"/> Soldati. <break time="0.4s"/> Pescatori. <break time="0.4s"/> Profughi. <break time="0.4s"/> Turisti. <break time="0.5s"/> Tutti — tutti — sono passati di qui. <break time="0.4s"/> Tutti hanno visto questa stessa banchina, da una di queste due direzioni. <break time="1.2s"/>
 
-Il porto di Bari non è un luogo. <break time="0.5s"/> È un punto di transito. <break time="0.4s"/> Una soglia che resta aperta. <break time="0.6s"/> Anche quando l'Europa chiude. <break time="0.4s"/> Anche quando le carte dicono confine. <break time="1.0s"/>
+Il porto di Bari non è un luogo. <break time="0.5s"/> È un punto di transito. <break time="0.4s"/> Una soglia che resta aperta. <break time="0.5s"/> Anche quando l'Europa chiude. <break time="0.4s"/> Anche quando le carte dicono "confine". <break time="0.4s"/> Anche quando, a Roma, decidono diversamente. <break time="1.0s"/>
 
-Continuerà a esserlo. <break time="0.5s"/> Domani. <break time="0.4s"/> E i prossimi cinquecento anni. <break time="1.5s"/>
+Continuerà a esserlo. <break time="0.5s"/> Domani. <break time="0.4s"/> Tra cento anni. <break time="0.4s"/> Tra cinquecento. <break time="1.2s"/>
 
-Il resto è dentro.
+Il resto — è dentro.

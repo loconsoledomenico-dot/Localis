@@ -1,8 +1,8 @@
-BARI VECCHIA — TRAILER 60s
-Highlight reel narrativo, voce Gian. Hook iniziale + 3 ganci drammatici + chiusura.
+BARI VECCHIA — TRAILER 60s · voce Valerio
 =====================================
 TRAILER
 -------------
+voice: gian
 
 Quattromila anni di storia. <break time="0.6s"/> In meno di un chilometro quadrato. <break time="1.0s"/>
 
@@ -10,9 +10,9 @@ Romani, bizantini, saraceni, normanni, svevi. <break time="0.4s"/> Otto dominazi
 
 Una città dove le orecchiette si fanno ancora oggi sulla porta di casa. <break time="0.8s"/>
 
-Dove la befana ha decapitato un emiro saraceno, e qualcuno gli ha scolpito il volto in pietra per non dimenticare. <break time="0.8s"/>
+Dove la leggenda popolare racconta di una befana che decapita un emiro saraceno, e qualcuno gli scolpisce il volto in pietra per non dimenticare. <break time="0.8s"/>
 
-Dove sotto un castello del Duecento, gli scavi hanno trovato una chiesa di duemila anni fa. <break time="0.8s"/>
+Dove sotto un castello del Duecento, gli scavi hanno portato alla luce strutture di età tardo-antica e paleocristiana. <break time="0.8s"/>
 
 E dove al centro di una piazza, sopra le pietre, sono ancora visibili i solchi delle ruote dei carri romani. <break time="1.2s"/>
 
