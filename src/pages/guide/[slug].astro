@@ -6,6 +6,7 @@ import TrailerPlayer from '../../components/TrailerPlayer.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import ChapterList from '../../components/ChapterList.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
+import StartMap from '../../components/StartMap.astro';
 import StructuredData from '../../components/StructuredData.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDuration } from '../../lib/format';
@@ -81,6 +82,10 @@ if (data.coords_start) {
         <h2 class="font-display text-3xl text-ink mb-md">Capitoli</h2>
         <ChapterList chapters={data.chapters} lang="it" />
       </section>
+
+      {data.coords_start && (
+        <StartMap lat={data.coords_start.lat} lng={data.coords_start.lng} lang="it" />
+      )}
     </div>
 
     <aside class="lg:sticky lg:top-24 flex flex-col gap-md">
