@@ -12,11 +12,11 @@ const masthead_r = lang === 'it' ? 'Quattro guide live · una in arrivo' : 'Four
 
 /* H1 chiodo verbale — 2 righe distinte, domanda + risposta colloquiale */
 const heading1a = lang === 'it'
-  ? 'Sai cosa è successo proprio lì?'
-  : 'Want to know what happened right there?';
+  ? 'Audioguide raccontate'
+  : 'Audio guides told';
 const heading1b = lang === 'it'
-  ? 'Te lo racconta uno di Bari.'
-  : 'Someone from Bari is about to tell you.';
+  ? 'da chi ci è nato.'
+  : 'by people born there.';
 
 /* Lede — italic Spectral, registro confidenziale */
 const lede1 = lang === 'it'
@@ -48,11 +48,11 @@ const microline = lang === 'it'
   : '20 min per guide · no app · 1-click refund · €4.99';
 
 const plateCaption = lang === 'it'
-  ? 'Cattedrale di San Sabino, Piazza dell\'Odegitria. La voce nelle cuffie racconta cosa sta guardando.'
-  : 'Cattedrale di San Sabino, Piazza dell\'Odegitria. The voice in her earphones tells her what she\'s looking at.';
+  ? 'Tre schermate dalle guide Localis: il porto al tramonto, la home in italiano, il Teatro Margherita. Apri il link, premi play, cammini.'
+  : 'Three screens from Localis guides: the port at sunset, the Italian home, Teatro Margherita. Open the link, press play, walk.';
 const altText = lang === 'it'
-  ? 'Una ragazza con auricolari ascolta una guida Localis sul suo smartphone, davanti alla facciata romanica della Cattedrale di San Sabino a Bari'
-  : 'A young woman with earphones listens to a Localis guide on her smartphone, in front of the Romanesque facade of Bari\'s Cattedrale di San Sabino';
+  ? 'Tre smartphone affiancati mostrano l\'interfaccia delle guide Localis di Bari: una vista del porto al tramonto, la home page in italiano e il prospetto del Teatro Margherita'
+  : 'Three smartphones side by side show the Localis Bari guide interface: a sunset view of the port, the Italian home page, and the facade of Teatro Margherita';
 ---
 <section class="hero relative bg-surface">
 
@@ -116,14 +116,14 @@ const altText = lang === 'it'
     <figure class="hero-figure m-0">
       <div class="hero-image-frame">
         <img
-          src="/images/hero/cattedrale-san-sabino-ascolto.jpg"
+          src="/images/hero/Smartphones_hero.jpg"
           alt={altText}
           class="hero-img"
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          width="1024"
-          height="1280"
+          width="1280"
+          height="1024"
         />
       </div>
       <figcaption class="hero-caption">
@@ -178,7 +178,7 @@ const altText = lang === 'it'
   .hero-image-frame {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 5 / 4;
     overflow: hidden;
     background: var(--color-surface-elev);
     border-radius: var(--radius-md);
