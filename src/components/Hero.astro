@@ -26,14 +26,6 @@ const lede2 = lang === 'it'
   ? 'Quella vera, mica le brochure.'
   : 'The real one — not the brochure version.';
 
-/* Body — definisce il target con promessa negativa colloquiale */
-const body1 = lang === 'it'
-  ? 'Audioguide per chi è stufo di sentirsi dire dove mangiare.'
-  : 'Audio guides for those tired of being told where to eat.';
-const body2 = lang === 'it'
-  ? 'Vuole perdersi nei vicoli — e capire dove sta passando.'
-  : 'They want to wander the alleys — and understand where they are walking.';
-
 const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60 secondi gratis' : 'Listen a teaser · 60s free';
 const ctaPrimaryHref = lang === 'it' ? '/guide/bari-vecchia' : '/en/guide/bari-vecchia';
 const ctaSecondary = lang === 'it' ? 'Vedi le guide' : 'See the guides';
@@ -79,11 +71,6 @@ const altText = lang === 'it'
       <p class="hero-lede mt-lg font-display italic text-ink text-[clamp(1.15rem,2vw,1.5rem)] leading-snug max-w-[42ch]">
         <span class="block">{lede1}</span>
         <span class="block">{lede2}</span>
-      </p>
-
-      <p class="hero-body mt-md text-base sm:text-lg leading-relaxed text-ink-muted max-w-[48ch]">
-        <span class="block">{body1}</span>
-        <span class="block">{body2}</span>
       </p>
 
       <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm">
