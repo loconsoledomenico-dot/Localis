@@ -116,14 +116,14 @@ const altText = lang === 'it'
     <figure class="hero-figure m-0">
       <div class="hero-image-frame">
         <img
-          src="/images/hero/hero_smartphone_back.png"
+          src="/images/hero/hero_smartphone_back2.png"
           alt={altText}
           class="hero-img"
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          width="1536"
-          height="1024"
+          width="1920"
+          height="1153"
         />
       </div>
       <figcaption class="hero-caption">
@@ -229,7 +229,7 @@ const altText = lang === 'it'
       /* Asymmetric editorial spread: text dominates (≈58%), photo is the support (≈42%).
        * Italian magazine convention — body of text is the headline, photo is the caption.
        * Wider column-gap on widescreen lets the spread breathe. */
-      grid-template-columns: 7fr 5fr;
+      grid-template-columns: 1fr 1.15fr;
       column-gap: clamp(var(--spacing-3xl), 6vw, 6rem);
       align-items: center;
       padding-inline: var(--side-gutter);
@@ -253,9 +253,9 @@ const altText = lang === 'it'
       padding-bottom: var(--spacing-md);
     }
 
-    /* Keep the editorial 4/5 portrait — no stretch, no bleed */
+    /* PNG ships with its own backdrop and native ratio — no frame constraint */
     .hero-image-frame {
-      aspect-ratio: 4 / 5;
+      aspect-ratio: auto;
     }
 
     .hero-caption {
