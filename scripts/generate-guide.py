@@ -67,6 +67,9 @@ VOICE_MAP: dict[str, str] = {
     "sami":     "b8jhBTcGAq4kQGWmKprT",  # Sami — news anchorwoman, documentaries
     # Italian — male silky narrator (added 2026-05-19)
     "dante":    "q2LDrL29FLqRR3XanHLq",  # Dante — premium deep, smooth, silky tone
+    # Italian — female, added 2026-05-21 for guide-06 + guide-04
+    "angelina": "MLpDWJvrjFIdb63xbJp8",  # Angelina — mature warm storyteller (Rosa la Perpetua, Bari Sotterranea)
+    "maruzzeja":"zzBa3JLSQKDusYxegeHf",  # Maruzzeja — calabrese, natural warm, expressive fun (Rachele, Il Meglio di Bari)
     # English — narrative
     "george":   "JBFqnCBsd6RMkjVDRZzb",  # George — british warm captivating storyteller
     "jeff":     "rqeqvyUEJUTgWU0eqxXO",  # Jeff — american deep storytelling, cinematic energy

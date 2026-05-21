@@ -4,7 +4,7 @@ Narratore: Rachele Grande · tono leggero, scherzoso, allegro · target ~30 min 
 
 INTRODUZIONE
 -------------
-voice: rachele
+voice: maruzzeja
 
 Ciao tesoro, sono Rachele. <break time="0.6s"/> Adesso ti porto in giro per Bari, <break time="0.3s"/> ma non per i monumenti — quelli te li racconta un'altra. <break time="0.4s"/> Io ti porto a mangiare. <break time="1.0s"/>
 
@@ -17,7 +17,7 @@ Una raccomandazione prima di partire: quello che ti dico non è una guida Michel
 =====================================
 CAPITOLO 1 — LA FOCACCIA CHE DIVIDE LA CITTÀ
 -------------
-voice: rachele
+voice: maruzzeja
 
 Allora, <break time="0.3s"/> la focaccia. <break time="0.4s"/> Prima cosa. <break time="1.0s"/>
 
@@ -60,7 +60,7 @@ Allora — <break time="0.4s"/> adesso ti faccio cinque minuti di pausa. <break 
 =====================================
 CAPITOLO 2 — IL POLPO, L'ANIMA E IL MARE
 -------------
-voice: rachele
+voice: maruzzeja
 
 Bene, <break time="0.3s"/> hai mangiato la focaccia. <break time="0.4s"/> Ti sei pulita le dita. <break time="0.4s"/> Hai capito che a Bari il cibo si prende sul serio. <break time="0.6s"/> Adesso ti porto al porto, <break time="0.3s"/> perché lì succede una cosa che devi vedere — <break time="0.4s"/> o se non riesci a vederla almeno te la racconto io. <break time="1.0s"/>
 
@@ -111,7 +111,7 @@ Bene, <break time="0.3s"/> abbiamo finito col polpo. <break time="0.5s"/> Adesso
 =====================================
 CAPITOLO 3 — LE ORECCHIETTE DI STRADA ARCO BASSO
 -------------
-voice: rachele
+voice: maruzzeja
 
 Allora. <break time="0.4s"/> Strada Arco Basso. <break time="0.5s"/> Ci siamo. <break time="1.0s"/>
 
@@ -166,7 +166,7 @@ Bene, <break time="0.3s"/> abbiamo finito con le orecchiette. <break time="0.5s"
 =====================================
 CAPITOLO 4 — IL CAFFÈ E IL DIALOGO
 -------------
-voice: rachele
+voice: maruzzeja
 
 Eccoci all'ultima tappa. <break time="0.5s"/> Il caffè. <break time="1.0s"/>
 
@@ -201,7 +201,7 @@ Bene. <break time="0.5s"/> Abbiamo chiuso il cerchio. <break time="2.0s"/>
 =====================================
 OUTRO
 -------------
-voice: rachele
+voice: maruzzeja
 
 Allora — <break time="0.3s"/> facciamo un punto. <break time="1.0s"/>
 
@@ -219,12 +219,3 @@ Ci sentiamo nella prossima guida — <break time="0.4s"/> la prossima volta che 
 
 Buon viaggio. <break time="0.6s"/> Rachele. <break time="2.0s"/>
 
-=====================================
-NOTE PRODUZIONE
--------------
-- Voce: clone Rachele Grande
-- Stile vocale: leggero, scherzoso, allegro, intimo (registro "amica al bar che ti racconta")
-- Ritmo: medio, con pause respiro naturali (gestite dai break SSML)
-- Pronunce attese: "Uascezz" → uascètts (dialetto barese), "Locorotondo" → lo-co-ro-tón-do
-- Durata stimata totale: ~30 min @ 150 wpm
-- Nessuna musica di sottofondo (coerente con altre 4 guide live)

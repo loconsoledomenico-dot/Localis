@@ -5,7 +5,7 @@ Target ~25 min @ 150 wpm (espandibile a 30 min su richiesta)
 
 INTRODUZIONE
 -------------
-voice: rosa
+voice: angelina
 
 Mi chiamo Rosa. <break time="0.5s"/> Per tutti, a Bari, sono la Perpetua. <break time="0.6s"/> Cinquant'anni in Basilica di San Nicola — <break time="0.4s"/> a pulire, <break time="0.3s"/> a riordinare, <break time="0.3s"/> a tenere in ordine la sacrestia, <break time="0.3s"/> a portare il caffè ai preti quando arrivavano le delegazioni russe. <break time="0.5s"/> Cinquant'anni. <break time="1.2s"/>
 
@@ -22,7 +22,7 @@ Vieni. <break time="0.5s"/> Sciamaninn. <break time="2.0s"/>
 =====================================
 CAPITOLO 1 — SOTTO LA BASILICA DI SAN NICOLA
 -------------
-voice: rosa
+voice: angelina
 
 Cominciamo da casa mia. <break time="0.5s"/> La Basilica di San Nicola. <break time="0.5s"/> Ma non quella che vedi salendo la scalinata — <break time="0.4s"/> quella la conoscono tutti, <break time="0.3s"/> ci sono le guide ufficiali, <break time="0.3s"/> hai il dépliant. <break time="0.8s"/>
 
@@ -55,7 +55,7 @@ Bene. <break time="0.4s"/> Adesso usciamo. <break time="0.5s"/> Ti porto a veder
 =====================================
 CAPITOLO 2 — SOTTO LA CATTEDRALE DI SAN SABINO
 -------------
-voice: rosa
+voice: angelina
 
 Adesso siamo davanti alla Cattedrale di San Sabino. <break time="0.5s"/> Quella grande, <break time="0.3s"/> romanica, <break time="0.3s"/> bianca. <break time="0.5s"/> La vedi da fuori — <break time="0.3s"/> facciata pulita, <break time="0.3s"/> rosone, <break time="0.3s"/> tre portali. <break time="0.5s"/> Bellissima, eh, <break time="0.3s"/> su questo non si discute. <break time="0.5s"/> Ma noi non veniamo per la facciata. <break time="0.5s"/> Noi entriamo, <break time="0.3s"/> attraversiamo la navata <break time="0.3s"/> e scendiamo. <break time="0.5s"/> Perché qua sotto succede una cosa che non c'è in nessun'altra chiesa di Bari: <break time="0.4s"/> leggi la storia come un libro aperto. <break time="1.2s"/>
 
@@ -90,7 +90,7 @@ Adesso usciamo. <break time="0.5s"/> Ti porto in Piazza Mercantile, <break time=
 =====================================
 CAPITOLO 3 — LE CISTERNE ROMANE DI PIAZZA MERCANTILE
 -------------
-voice: rosa
+voice: angelina
 
 Eccoci. <break time="0.4s"/> Piazza Mercantile. <break time="0.5s"/> Una delle più belle di Bari, <break time="0.3s"/> te lo dico onesta — <break time="0.3s"/> io ci passo da sessant'anni <break time="0.3s"/> e ancora mi piace fermarmi a guardarla. <break time="0.5s"/> La colonna della Giustizia in mezzo, <break time="0.3s"/> il leone romano in fondo, <break time="0.3s"/> i palazzi attorno con gli archi. <break time="0.5s"/> Di sera s'accendono le luci dei bar, <break time="0.3s"/> la gente prende l'aperitivo, <break time="0.3s"/> ci sono i musicisti. <break time="1.2s"/>
 
@@ -117,7 +117,7 @@ Bene. <break time="0.4s"/> Ultimo posto. <break time="0.5s"/> Adesso ti porto al
 =====================================
 CAPITOLO 4 — I SOTTERRANEI DEL CASTELLO SVEVO
 -------------
-voice: rosa
+voice: angelina
 
 Castello Svevo. <break time="0.5s"/> Eccoci. <break time="1.0s"/>
 
@@ -154,7 +154,7 @@ Ottocento anni dopo, <break time="0.3s"/> tu cammini sopra dove camminava lui. <
 =====================================
 OUTRO — ADESSO CAMMINI DIVERSO
 -------------
-voice: rosa
+voice: angelina
 
 Allora. <break time="0.5s"/> Abbiamo finito. <break time="1.0s"/>
 
@@ -172,20 +172,3 @@ Ti saluto. <break time="0.5s"/> E un consiglio — <break time="0.3s"/> quando t
 
 Buon viaggio. <break time="0.5s"/> Rosa. <break time="2.0s"/>
 
-=====================================
-NOTE PRODUZIONE
--------------
-- Voce: clone "Rosa la Perpetua" (donna anziana barese, registro confidenziale-popolare)
-- Stile vocale: caldo, intimo, ritmo medio-lento, pause respiro lunghe (gestite da SSML)
-- Pronunce attese:
-  · "Sciamaninn" → scia-ma-NINN (dialetto barese, accento finale)
-  · "Camìn sciamanìnn" → ca-MIN scia-ma-NINN
-  · "Puer Apuliae" → PU-er a-PU-li-ae (latino)
-  · "Catepanato" → ca-te-pa-NA-to
-  · "Barium" → BA-rium (latino)
-- Riferimenti dialetto: barese (NON napoletano)
-- Durata stimata totale: ~25 min @ 150 wpm (espandibile a 30 min)
-- Correzioni applicate dal feedback:
-  · Rimosso "Rosa" come vocativo (lei è la narratrice)
-  · "il fallimento" (genere maschile)
-  · Outro finale modificato per pensionamento Rosa
