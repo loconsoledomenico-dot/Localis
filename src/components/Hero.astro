@@ -218,14 +218,20 @@ const altText = lang === 'it'
   .hero-content {
     position: relative;
     z-index: 2;
-    padding-inline: var(--side-gutter);
+    padding-inline-start: var(--side-gutter);
+    padding-inline-end: var(--spacing-lg);
     padding-block: clamp(var(--spacing-2xl), 6vw, var(--spacing-4xl));
-    max-width: min(620px, 56vw);
+    /* Total column width = left gutter + 620 content + small right breathing — content stays anchored left.
+     * Caps at 100% on narrow viewports so it never overflows. */
+    width: min(100%, calc(var(--side-gutter) + 620px + var(--spacing-lg)));
     display: flex;
     flex-direction: column;
   }
   @media (max-width: 900px) {
-    .hero-content { max-width: 100%; }
+    .hero-content {
+      padding-inline-end: var(--side-gutter);
+      width: 100%;
+    }
   }
 
   /* Pills */
