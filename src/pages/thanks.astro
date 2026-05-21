@@ -68,8 +68,13 @@ if (sessionId) {
   </main>
 
   <script is:inline define:vars={{ sessionId, success: !!directAccessUrl }}>
-    if (success && typeof window.plausible === 'function') {
-      window.plausible('Checkout Completed', { props: { session: sessionId || 'unknown' } });
+    if (success) {
+      const params = { session: sessionId || 'unknown' };
+      if (typeof window.localisTrack === 'function') {
+        window.localisTrack('purchase_completed', params);
+      } else if (typeof window.plausible === 'function') {
+        window.plausible('Checkout Completed', { props: params });
+      }
     }
   </script>
 </Layout>
