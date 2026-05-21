@@ -7,21 +7,21 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola IV — Il registro' : 'Plate IV — The ledger';
+const eyebrow = lang === 'it' ? 'Tavola IV — I numeri' : 'Plate IV — The numbers';
 const heading = lang === 'it'
   ? 'Una sola città. Storie che non si trovano in guida.'
   : 'One city. Stories you won\'t find in guidebooks.';
 
 const stats = lang === 'it'
   ? [
-      { value: '6', label: 'baresi che scrivono', tail: 'zero ghostwriter, zero Wikipedia' },
-      { value: '0', label: 'invenzioni', tail: 'ogni claim ha la sua fonte pubblica' },
+      { value: '6', label: 'baresi che scrivono', tail: 'zero ghostwriter' },
+      { value: '0', label: 'invenzioni', tail: 'ogni claim ha la sua fonte' },
       { value: '0', label: 'cookie banner', tail: 'zero account, zero password' },
       { value: '∞', label: 'riascolti', tail: 'link permanente, tua per sempre' },
     ]
   : [
-      { value: '6', label: 'locals writing', tail: 'zero ghostwriters, zero Wikipedia' },
-      { value: '0', label: 'invented facts', tail: 'every claim has a public source' },
+      { value: '6', label: 'locals writing', tail: 'zero ghostwriters' },
+      { value: '0', label: 'invented facts', tail: 'every claim has a source' },
       { value: '0', label: 'cookie banners', tail: 'zero accounts, zero passwords' },
       { value: '∞', label: 'replays', tail: 'permanent link, yours forever' },
     ];
@@ -29,35 +29,32 @@ const stats = lang === 'it'
 <section class="stats bg-surface-elev">
   <div class="max-w-wrap mx-auto px-md sm:px-lg py-3xl lg:py-4xl">
 
-    <!-- Section header -->
-    <div class="stats-header max-w-[60ch] mb-2xl lg:mb-3xl">
-      <div class="flex items-center gap-sm mb-md">
-        <span class="block w-7 h-px bg-accent"></span>
-        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          {eyebrow}
-        </span>
-      </div>
-      <h2 class="font-display text-ink text-[clamp(1.7rem,3.6vw,2.5rem)] leading-[1.15] tracking-[-0.012em] max-w-[28ch]">
-        {heading}
-      </h2>
+    <div class="flex items-center gap-sm mb-md">
+      <span class="block w-7 h-px bg-accent"></span>
+      <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+        {eyebrow}
+      </span>
     </div>
 
-    <!-- Manifesto ledger: stacked rows, hairline between -->
-    <dl class="stats-ledger m-0 p-0">
+    <h2 class="font-display text-ink text-[clamp(1.7rem,3.6vw,2.5rem)] leading-[1.15] tracking-[-0.012em] max-w-[28ch] mb-2xl">
+      {heading}
+    </h2>
+
+    <dl class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-lg lg:gap-xl m-0 p-0">
       {stats.map((s, i) => (
-        <div class="stat-row" style={`--idx:${i}`}>
-          <dd class="stat-row-inner m-0 p-0">
+        <div class="stat-cell" style={`--idx:${i}`}>
+          <dt class="sr-only">{s.label} — {s.tail}</dt>
+          <dd class="m-0 p-0">
             <span
-              class="stat-value font-display font-light text-accent leading-none"
+              class="stat-value block font-display font-light text-accent text-[clamp(3rem,6vw,4.8rem)] leading-none mb-sm"
               style="font-variant-numeric: tabular-nums;"
             >{s.value}</span>
-            <span class="stat-text">
-              <span class="stat-label font-display text-ink leading-tight">
-                {s.label}
-              </span>
-              <span class="stat-tail font-body italic text-ink-muted leading-snug">
-                {s.tail}
-              </span>
+            <span aria-hidden="true" class="block w-8 h-px bg-border mb-sm"></span>
+            <span class="block font-display text-ink text-[clamp(1.05rem,1.6vw,1.25rem)] leading-tight mb-2xs">
+              {s.label}
+            </span>
+            <span class="block font-body italic text-ink-muted text-sm leading-snug max-w-[26ch]">
+              {s.tail}
             </span>
           </dd>
         </div>
@@ -67,65 +64,22 @@ const stats = lang === 'it'
 </section>
 
 <style>
-  .stats-ledger {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .stat-row {
-    border-bottom: 1px solid var(--color-border);
+  .stat-cell {
     opacity: 0;
-    transform: translateY(10px);
-    animation: statRowIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: calc(var(--idx, 0) * 110ms + 100ms);
+    transform: translateY(12px);
+    animation: statIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 90ms + 120ms);
   }
 
-  .stat-row-inner {
-    display: grid;
-    grid-template-columns: minmax(7rem, 14ch) 1fr;
-    align-items: baseline;
-    gap: clamp(var(--spacing-lg), 4vw, var(--spacing-3xl));
-    padding-block: clamp(var(--spacing-lg), 3.2vw, var(--spacing-2xl));
-  }
-
-  .stat-value {
-    font-size: clamp(3.6rem, 9vw, 7.5rem);
-    letter-spacing: -0.02em;
-  }
-
-  .stat-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-2xs, 0.25rem);
-  }
-
-  .stat-label {
-    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
-  }
-
-  .stat-tail {
-    font-size: clamp(0.92rem, 1.4vw, 1.05rem);
-  }
-
-  @keyframes statRowIn {
+  @keyframes statIn {
     to { opacity: 1; transform: translateY(0); }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .stat-row {
+    .stat-cell {
       animation: none;
       opacity: 1;
       transform: none;
-    }
-  }
-
-  /* Tighten on small screens — number above text, not side-by-side */
-  @media (max-width: 540px) {
-    .stat-row-inner {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-sm);
-    }
-    .stat-value {
-      font-size: clamp(3rem, 14vw, 5rem);
     }
   }
 </style>
