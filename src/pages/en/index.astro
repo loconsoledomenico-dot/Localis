@@ -2,15 +2,14 @@
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Hero from '../../components/Hero.astro';
-import GuideCard from '../../components/GuideCard.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
+import FeatureBlock from '../../components/FeatureBlock.astro';
+import StatsBlock from '../../components/StatsBlock.astro';
+import StepsBlock from '../../components/StepsBlock.astro';
+import AuthorsBlock from '../../components/AuthorsBlock.astro';
+import BariMap from '../../components/BariMap.astro';
 import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
-import { getCollection } from 'astro:content';
-
-const guides = (await getCollection('guides'))
-  .filter((g) => g.data.city === 'bari')
-  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
 ---
 <Layout
   title="Localis — narrative audio guides for Puglia"
@@ -19,57 +18,146 @@ const guides = (await getCollection('guides'))
 >
   <Hero lang="en" />
 
-  <section id="guide" class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-    <SectionDivider label="Choose your experience" />
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
-      {guides.map((g, i) => (
-        <GuideCard guide={g} lang="en" index={i} />
-      ))}
+  {/* STATS — thin band, separates hero from rest: 6/0/0/∞ */}
+  <StatsBlock lang="en" />
+
+  {/* FEATURE BLOCK — Signed stories (image left) */}
+  <FeatureBlock
+    eyebrow="Stories · Authors — Plate III"
+    heading="Signed stories."
+    italicEnding="By those who lived them."
+    body="Every chapter is archival research signed by Bari authors. A courtyard, a side altar, the underground Bari nobody knows — told by people who grew up in those alleys."
+    bullets={[
+      'Six Bari authors · one per route',
+      'Six live guides · Edition 01 Bari complete',
+      'Italian and English · written separately, never translated',
+      'Public sources · every claim verifiable on /en/fonti',
+    ]}
+    imageSrc="/images/covers/bari-vecchia-passeggiata.jpg"
+    imageAlt="A woman in a straw hat walking through an Old Bari alley, ancient Roman columns on the left"
+    caption="Old Bari, midday. The columns are all that remains of a Roman courtyard."
+    ctaLabel="Meet the authors"
+    ctaHref="/en/about"
+    imageSide="left"
+    tiltDeg={-1.5}
+  />
+
+  {/* MANIFESTO — slim, pull-quote between Plate III and Plate IV */}
+  <section class="manifesto-section bg-surface-elev border-y border-border">
+    <div class="max-w-narrow mx-auto px-md py-xl lg:py-2xl">
+      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-md">
+        — Manifesto —
+      </p>
+
+      <blockquote class="manifesto-quote font-display italic text-ink leading-[1.2] text-[clamp(1.3rem,3vw,1.9rem)] m-0 max-w-[28ch] mx-auto text-center">
+        Regular audio guides tell you what.<br />
+        Ours tell you why.
+      </blockquote>
     </div>
   </section>
 
-  <section class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl text-center">
-    <p class="font-display italic text-3xl text-ink mb-md leading-tight">Regular audio guides tell you what.<br />Ours tell you why.</p>
-    <p class="text-base text-ink-muted leading-relaxed max-w-prose mx-auto">
-      Real stories, built on the real places of the city. While you listen, you are exactly where it all happened.
-    </p>
-  </section>
+  {/* The six places — photo grid, the page's only 'pick a guide' moment */}
+  <BariMap lang="en" />
 
-  <section id="prezzi" class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-    <SectionDivider label="Choose your plan" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[56rem] mx-auto">
-      <PriceCard
-        product="single"
-        guideSlug="bari-vecchia"
-        lang="en"
-        features={[
-          '1 guide of your choice',
-          'Unlimited access, forever',
-          'Italian and English',
-          '1-click refund within 24h',
-        ]}
-      />
-      <PriceCard
-        product="bundle"
-        lang="en"
-        primary
-        features={[
-          'All 6 Bari guides',
-          '~2h 20min · 6 different voices',
-          'Save €10.04 vs single guides',
-          '1-click refund within 24h',
-        ]}
-      />
+  {/* PRICING — right after the 6 tiles, decision moment single vs bundle */}
+  <section id="prezzi" class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <SectionDivider label="Pick what you need" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[56rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="bari-vecchia"
+          lang="en"
+          features={[
+            '1 guide of your choice',
+            'Unlimited access, forever',
+            'Italian and English',
+            '1-click refund within 24h',
+          ]}
+        />
+        <PriceCard
+          product="bundle"
+          lang="en"
+          primary
+          features={[
+            'All 6 Bari guides',
+            '~2h 20min · 6 different voices',
+            'Save €10.04 vs single guides',
+            '1-click refund within 24h',
+          ]}
+        />
+      </div>
     </div>
   </section>
 
-  <section class="max-w-wrap mx-auto px-md py-3xl text-center">
-    <p class="font-display italic text-2xl text-ink-muted mb-xs">If you want to visit Bari, you can.</p>
-    <p class="font-display text-3xl text-ink mb-lg">If you want to understand it, listen.</p>
-    <a href="#guide" class="inline-flex items-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline">
-      Start the journey →
-    </a>
+  {/* FEATURE BLOCK — Opens with a link (post-pricing reassurance) */}
+  <FeatureBlock
+    eyebrow="Tool — Plate V"
+    heading="Opens with a link."
+    italicEnding="Listen anywhere. No app."
+    body="You pay with email and card. You receive a permanent link: open it whenever you want, press play, listen. On the street while you walk, on the couch before you leave, on the train coming back. These are stories, not museum audio describing what's in front of you — they take you inside Bari, even if you're not there yet."
+    bullets={[
+      'Free listening · on-site, before, after, anywhere',
+      'Magic link via email · zero passwords, zero accounts',
+      'Permanent link · the guide is yours, replay forever',
+    ]}
+    imageSrc="/images/covers/nave-crociera.jpg"
+    imageAlt="Group of cruise passengers disembarking in Bari in front of the MSC Splendida; port lungomare in the background, full sunlight"
+    caption="Bari, cruise port. For them the audio guide starts as soon as they hit the dock."
+    ctaLabel="See the guides"
+    ctaHref="#guide"
+    imageSide="right"
+    tiltDeg={1.5}
+    mobileAspect="3 / 2"
+    framedImage
+  />
+
+  {/* AUTHORS — Bari voices, one per route */}
+  <AuthorsBlock lang="en" />
+
+  {/* 3-STEPS — clear onboarding before the closer */}
+  <StepsBlock lang="en" ctaHref="/en/guide/bari-vecchia" />
+
+  {/* CLOSER */}
+  <section class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl text-center">
+      <p class="font-display italic text-xl sm:text-2xl text-ink-muted mb-2xs">
+        Bari can be visited in a day.
+      </p>
+      <p class="font-display text-3xl sm:text-4xl text-ink mb-lg leading-tight">
+        It is understood in chapters.
+      </p>
+      <a
+        href="#guide"
+        class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+      >
+        Start listening
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
   </section>
 
   <MobileStickyCTA lang="en" />
 </Layout>
+
+<style>
+  .manifesto-quote {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: manifestoIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+  }
+  @keyframes manifestoIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .manifesto-quote {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
