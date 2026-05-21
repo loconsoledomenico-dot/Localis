@@ -7,54 +7,57 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola IV — I numeri' : 'Plate IV — The numbers';
+const eyebrow = lang === 'it' ? 'Tavola IV — Il registro' : 'Plate IV — The ledger';
 const heading = lang === 'it'
   ? 'Una sola città. Storie che non si trovano in guida.'
   : 'One city. Stories you won\'t find in guidebooks.';
 
 const stats = lang === 'it'
   ? [
-      { value: '4', target: 4, suffix: '', label: 'guide live · una in arrivo nel 2026' },
-      { value: '20', target: 20, suffix: '', label: 'minuti per itinerario · le museali 60' },
-      { value: '52', target: 52, suffix: '', label: 'capitoli · tredici per guida' },
-      { value: '∞', target: null, suffix: '', label: 'riascolti · per sempre tue' },
+      { value: '6', label: 'baresi che scrivono', tail: 'zero ghostwriter, zero Wikipedia' },
+      { value: '0', label: 'invenzioni', tail: 'ogni claim ha la sua fonte pubblica' },
+      { value: '0', label: 'cookie banner', tail: 'zero account, zero password' },
+      { value: '∞', label: 'riascolti', tail: 'link permanente, tua per sempre' },
     ]
   : [
-      { value: '4', target: 4, suffix: '', label: 'live guides · one more in 2026' },
-      { value: '20', target: 20, suffix: '', label: 'min per route · museum 60' },
-      { value: '52', target: 52, suffix: '', label: 'chapters · thirteen per guide' },
-      { value: '∞', target: null, suffix: '', label: 'replays · yours forever' },
+      { value: '6', label: 'locals writing', tail: 'zero ghostwriters, zero Wikipedia' },
+      { value: '0', label: 'invented facts', tail: 'every claim has a public source' },
+      { value: '0', label: 'cookie banners', tail: 'zero accounts, zero passwords' },
+      { value: '∞', label: 'replays', tail: 'permanent link, yours forever' },
     ];
 ---
-<section class="stats bg-surface-elev" data-stats-block>
+<section class="stats bg-surface-elev">
   <div class="max-w-wrap mx-auto px-md sm:px-lg py-3xl lg:py-4xl">
 
-    <div class="flex items-center gap-sm mb-md">
-      <span class="block w-7 h-px bg-accent"></span>
-      <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-        {eyebrow}
-      </span>
+    <!-- Section header -->
+    <div class="stats-header max-w-[60ch] mb-2xl lg:mb-3xl">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          {eyebrow}
+        </span>
+      </div>
+      <h2 class="font-display text-ink text-[clamp(1.7rem,3.6vw,2.5rem)] leading-[1.15] tracking-[-0.012em] max-w-[28ch]">
+        {heading}
+      </h2>
     </div>
 
-    <h2 class="font-display text-ink text-[clamp(1.7rem,3.6vw,2.5rem)] leading-[1.15] tracking-[-0.012em] max-w-[28ch] mb-2xl">
-      {heading}
-    </h2>
-
-    <dl class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-lg lg:gap-xl m-0 p-0">
+    <!-- Manifesto ledger: stacked rows, hairline between -->
+    <dl class="stats-ledger m-0 p-0">
       {stats.map((s, i) => (
-        <div class="stat-cell" style={`--idx:${i}`}>
-          <dt class="sr-only">{s.label}</dt>
-          <dd class="m-0 p-0">
+        <div class="stat-row" style={`--idx:${i}`}>
+          <dd class="stat-row-inner m-0 p-0">
             <span
-              class="stat-value block font-display font-light text-accent text-[clamp(3rem,6vw,4.8rem)] leading-none mb-sm"
-              data-target={s.target ?? ''}
-              data-final={s.value}
-              data-suffix={s.suffix}
+              class="stat-value font-display font-light text-accent leading-none"
               style="font-variant-numeric: tabular-nums;"
-            >{s.target !== null ? '0' : s.value}</span>
-            <span aria-hidden="true" class="block w-8 h-px bg-border mb-sm"></span>
-            <span class="block font-body text-sm text-ink-muted leading-snug max-w-[24ch]">
-              {s.label}
+            >{s.value}</span>
+            <span class="stat-text">
+              <span class="stat-label font-display text-ink leading-tight">
+                {s.label}
+              </span>
+              <span class="stat-tail font-body italic text-ink-muted leading-snug">
+                {s.tail}
+              </span>
             </span>
           </dd>
         </div>
@@ -64,103 +67,65 @@ const stats = lang === 'it'
 </section>
 
 <style>
-  .stat-cell {
+  .stats-ledger {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .stat-row {
+    border-bottom: 1px solid var(--color-border);
     opacity: 0;
-    transform: translateY(12px);
-    animation: statIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: calc(var(--idx, 0) * 90ms + 120ms);
+    transform: translateY(10px);
+    animation: statRowIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 110ms + 100ms);
   }
 
-  /* When count-up runs, give the value a subtle accent emphasis */
-  .stat-value[data-running="true"] {
-    transform: translateY(0);
-    opacity: 1;
+  .stat-row-inner {
+    display: grid;
+    grid-template-columns: minmax(7rem, 14ch) 1fr;
+    align-items: baseline;
+    gap: clamp(var(--spacing-lg), 4vw, var(--spacing-3xl));
+    padding-block: clamp(var(--spacing-lg), 3.2vw, var(--spacing-2xl));
   }
 
-  @keyframes statIn {
+  .stat-value {
+    font-size: clamp(3.6rem, 9vw, 7.5rem);
+    letter-spacing: -0.02em;
+  }
+
+  .stat-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xs, 0.25rem);
+  }
+
+  .stat-label {
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  }
+
+  .stat-tail {
+    font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+  }
+
+  @keyframes statRowIn {
     to { opacity: 1; transform: translateY(0); }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .stat-cell {
+    .stat-row {
       animation: none;
       opacity: 1;
       transform: none;
     }
   }
-</style>
 
-<script>
-  (() => {
-    const block = document.querySelector<HTMLElement>('[data-stats-block]');
-    if (!block) return;
-
-    const values = block.querySelectorAll<HTMLElement>('.stat-value');
-    if (!values.length) return;
-
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // If reduced motion: snap straight to final values, no animation
-    if (reduced) {
-      values.forEach((el) => {
-        const final = el.dataset.final ?? '';
-        el.textContent = final;
-      });
-      return;
+  /* Tighten on small screens — number above text, not side-by-side */
+  @media (max-width: 540px) {
+    .stat-row-inner {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
     }
-
-    // Ease-out quart — same curve as the rest of the page (--ease-out-quart)
-    const easeOutQuart = (t: number): number => 1 - Math.pow(1 - t, 4);
-
-    const animate = (el: HTMLElement) => {
-      const targetStr = el.dataset.target ?? '';
-      const final = el.dataset.final ?? '';
-      const suffix = el.dataset.suffix ?? '';
-      const target = parseFloat(targetStr);
-
-      // Non-numeric (e.g. ∞) — just fade in the final glyph
-      if (!targetStr || isNaN(target)) {
-        el.textContent = final;
-        el.dataset.running = 'true';
-        return;
-      }
-
-      const duration = 1400; // ms
-      const start = performance.now();
-
-      const tick = (now: number) => {
-        const elapsed = now - start;
-        const t = Math.min(1, elapsed / duration);
-        const eased = easeOutQuart(t);
-        const current = Math.round(target * eased);
-        el.textContent = current.toString() + suffix;
-
-        if (t < 1) {
-          requestAnimationFrame(tick);
-        } else {
-          el.textContent = final;
-        }
-      };
-
-      el.dataset.running = 'true';
-      requestAnimationFrame(tick);
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          const el = entry.target as HTMLElement;
-          if (el.dataset.running === 'true') continue;
-          // Stagger between values for editorial rhythm
-          const idx = Array.from(values).indexOf(el);
-          window.setTimeout(() => animate(el), idx * 90);
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.4, rootMargin: '0px 0px -10% 0px' }
-    );
-
-    values.forEach((el) => observer.observe(el));
-  })();
-</script>
+    .stat-value {
+      font-size: clamp(3rem, 14vw, 5rem);
+    }
+  }
+</style>
