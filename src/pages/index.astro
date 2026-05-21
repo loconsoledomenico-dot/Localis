@@ -43,30 +43,19 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     tiltDeg={-1.5}
   />
 
-  {/* FEATURE BLOCK — Si apre con un link (image right — alterna con FB III) */}
-  <FeatureBlock
-    eyebrow="Strumento — Tav. IV"
-    heading="Si apre con un link."
-    italicEnding="Ascolti dove vuoi. Niente app."
-    body="Acquisti con email e carta. Ti arriva un link permanente: lo apri quando vuoi, premi play, ascolti. In strada mentre cammini, sul divano prima di partire, in treno al ritorno. Sono racconti, non audio museali che descrivono ciò che hai davanti — ti portano dentro Bari, anche se non ci sei ancora."
-    bullets={[
-      'Ascolto libero · sul posto, prima, dopo, ovunque',
-      'Magic link via email · zero password, zero account',
-      'Link permanente · la guida è tua, riascolti per sempre',
-    ]}
-    imageSrc="/images/covers/smartphone-tilt-r.png"
-    imageAlt="Smartphone Android in prospettiva inclinata verso destra, con localis.guide aperto e la home di Bari visibile"
-    dualPhone={{
-      src: "/images/covers/smartphone-tilt-l.png",
-      alt: "Stesso smartphone in prospettiva inclinata verso sinistra, localis.guide aperto",
-    }}
-    plateNumber="Tav. IV"
-    caption="Aperto da un link. Senza app."
-    ctaLabel="Vedi le guide"
-    ctaHref="#guide"
-    imageSide="right"
-    tiltDeg={1.5}
-  />
+  {/* MANIFESTO — slim, pull-quote tra Tav III e Tav IV */}
+  <section class="manifesto-section bg-surface-elev border-y border-border">
+    <div class="max-w-narrow mx-auto px-md py-xl lg:py-2xl">
+      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-md">
+        — Manifesto —
+      </p>
+
+      <blockquote class="manifesto-quote font-display italic text-ink leading-[1.2] text-[clamp(1.3rem,3vw,1.9rem)] m-0 max-w-[28ch] mx-auto text-center">
+        Le audioguide normali ti dicono cosa.<br />
+        Le nostre ti dicono perché.
+      </blockquote>
+    </div>
+  </section>
 
   {/* I sei luoghi — griglia foto, l'unica sezione "scegli la guida" della pagina */}
   <BariMap lang="it" />
@@ -102,29 +91,30 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     </div>
   </section>
 
-  {/* MANIFESTO — pull-quote editoriale, niente sovrapposizioni */}
-  <section class="manifesto-section bg-surface-elev">
-    <div class="max-w-narrow mx-auto px-md py-3xl lg:py-4xl">
-      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-2xl">
-        — Manifesto —
-      </p>
-
-      <blockquote class="manifesto-quote font-display italic text-ink leading-[1.18] text-[clamp(1.8rem,4.6vw,2.8rem)] m-0 max-w-[28ch] mx-auto text-center">
-        Le audioguide normali ti dicono cosa.<br />
-        Le nostre ti dicono perché.
-      </blockquote>
-
-      <div class="flex items-center justify-center gap-sm my-2xl" aria-hidden="true">
-        <span class="block w-8 h-px bg-border"></span>
-        <span class="font-display italic text-ink-subtle text-base">✻</span>
-        <span class="block w-8 h-px bg-border"></span>
-      </div>
-
-      <p class="text-center text-base sm:text-lg leading-relaxed text-ink-muted max-w-[52ch] mx-auto">
-        Ti raccontiamo le storie vere dei luoghi — mentre ci stai dentro.
-      </p>
-    </div>
-  </section>
+  {/* FEATURE BLOCK — Si apre con un link (post-pricing reassurance) */}
+  <FeatureBlock
+    eyebrow="Strumento — Tav. V"
+    heading="Si apre con un link."
+    italicEnding="Ascolti dove vuoi. Niente app."
+    body="Acquisti con email e carta. Ti arriva un link permanente: lo apri quando vuoi, premi play, ascolti. In strada mentre cammini, sul divano prima di partire, in treno al ritorno. Sono racconti, non audio museali che descrivono ciò che hai davanti — ti portano dentro Bari, anche se non ci sei ancora."
+    bullets={[
+      'Ascolto libero · sul posto, prima, dopo, ovunque',
+      'Magic link via email · zero password, zero account',
+      'Link permanente · la guida è tua, riascolti per sempre',
+    ]}
+    imageSrc="/images/covers/smartphone-tilt-r.png"
+    imageAlt="Smartphone Android in prospettiva inclinata verso destra, con localis.guide aperto e la home di Bari visibile"
+    dualPhone={{
+      src: "/images/covers/smartphone-tilt-l.png",
+      alt: "Stesso smartphone in prospettiva inclinata verso sinistra, localis.guide aperto",
+    }}
+    plateNumber="Tav. V"
+    caption="Aperto da un link. Senza app."
+    ctaLabel="Vedi le guide"
+    ctaHref="#guide"
+    imageSide="right"
+    tiltDeg={1.5}
+  />
 
   {/* TAVOLE AUTORI — voci baresi, una per quartiere */}
   <AuthorsBlock lang="it" />
