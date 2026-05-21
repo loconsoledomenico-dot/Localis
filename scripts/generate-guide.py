@@ -79,6 +79,7 @@ VOICE_MAP: dict[str, str] = {
     "charlie":  "IKne3meq5aSn9XLyUdCD",  # Charlie — deep confident energetic, australian
     "matilda":  "XrExE9yKIg1WjnnlVkGX",  # Matilda — american female knowledgeable
     "callum":   "N2lVS1w4EtoT3dr4eOWO",  # Callum — husky trickster, gravelly american
+    "jessica":  "cgSgspJ2msm6clMCkdW9",  # Jessica — american female young playful, bright, warm (Rachele EN)
 }
 
 # Cost: ElevenLabs Creator plan = $22/mo for 100k chars. ~$0.00022 per char.
