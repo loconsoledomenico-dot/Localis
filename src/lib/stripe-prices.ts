@@ -1,18 +1,22 @@
 import prices from '../data/stripe-prices.json';
 
-export type ProductSlug = 'single' | 'bundle';
+export type ProductSlug = 'single' | 'essenziale' | 'bundle';
 
 /**
  * Stripe Price IDs. Production reads from env (`Stripe_id_singola`,
- * `Stripe_id_bundle`) so real IDs never end up in git. JSON file holds
- * placeholders used as a last-resort fallback (e.g. in unit tests).
+ * `Stripe_id_essenziale`, `Stripe_id_bundle`) so real IDs never end up in git.
+ * JSON file holds placeholders used as a last-resort fallback (e.g. unit tests).
  */
 const envSingle = process.env.Stripe_id_singola;
+const envEssenziale = process.env.Stripe_id_essenziale;
 const envBundle = process.env.Stripe_id_bundle;
 
+const priceMap = prices as Record<string, string>;
+
 export const STRIPE_PRICE_IDS: Record<ProductSlug, string> = {
-  single: envSingle || (prices as Record<string, string>).single,
-  bundle: envBundle || (prices as Record<string, string>).bundle,
+  single: envSingle || priceMap.single,
+  essenziale: envEssenziale || priceMap.essenziale,
+  bundle: envBundle || priceMap.bundle,
 };
 
 export const BARI_GUIDES: readonly string[] = [
@@ -22,6 +26,13 @@ export const BARI_GUIDES: readonly string[] = [
   'il-meglio-di-bari',
   'porto-bari',
   'bari-sotterranea',
+] as const;
+
+/** Curated 3-guide pack — "il primo giorno a Bari, queste tre" */
+export const BARI_ESSENZIALE_GUIDES: readonly string[] = [
+  'bari-vecchia',
+  'san-nicola',
+  'il-meglio-di-bari',
 ] as const;
 
 export function getStripePrice(slug: ProductSlug): string {
@@ -34,7 +45,8 @@ export function getStripePrice(slug: ProductSlug): string {
 
 /**
  * Resolve which guide slugs a product unlocks.
- * - bundle: all live Bari guides
+ * - bundle: all live Bari guides (6)
+ * - essenziale: curated 3-guide pack (Bari Vecchia + San Nicola + Il Meglio)
  * - single: requires guideSlug (the specific guide being bought)
  */
 export function getGuideSlugsForProduct(
@@ -44,6 +56,9 @@ export function getGuideSlugsForProduct(
   if (product === 'bundle') {
     return [...BARI_GUIDES];
   }
+  if (product === 'essenziale') {
+    return [...BARI_ESSENZIALE_GUIDES];
+  }
   if (!guideSlug || !BARI_GUIDES.includes(guideSlug)) {
     throw new Error(`Invalid or missing guideSlug for single purchase: ${guideSlug}`);
   }
@@ -51,5 +66,7 @@ export function getGuideSlugsForProduct(
 }
 
 export function getProductPriceCents(product: ProductSlug): number {
-  return product === 'bundle' ? 1990 : 499;
+  if (product === 'bundle') return 1499;
+  if (product === 'essenziale') return 999;
+  return 499;
 }

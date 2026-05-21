@@ -3,7 +3,7 @@ import { formatPrice } from '../lib/format';
 import { type Lang } from '../lib/i18n';
 
 export interface Props {
-  product: 'single' | 'bundle';
+  product: 'single' | 'essenziale' | 'bundle';
   guideSlug?: string;
   lang: Lang;
   features: string[];
@@ -12,25 +12,42 @@ export interface Props {
 
 const { product, guideSlug, lang, features, primary = false } = Astro.props;
 
-const isBundle = product === 'bundle';
-const priceCents = isBundle ? 1990 : 499;
+const priceCents = product === 'bundle' ? 1499 : product === 'essenziale' ? 999 : 499;
 const priceLabel = formatPrice(priceCents);
 
-const title = isBundle
-  ? lang === 'it' ? 'Bari Completa' : 'Bari Complete'
-  : lang === 'it' ? 'Guida singola' : 'Single guide';
+const title =
+  product === 'bundle'
+    ? lang === 'it' ? 'Bari Completa' : 'Complete Bari'
+    : product === 'essenziale'
+      ? lang === 'it' ? 'Bari Essenziale' : 'Essential Bari'
+      : lang === 'it' ? 'Guida singola' : 'Single guide';
 
-const description = isBundle
-  ? lang === 'it'
-    ? 'Tutte le sei guide di Bari. Risparmi €10,04 vs guide singole.'
-    : 'All six Bari guides. Save €10.04 vs single guides.'
-  : lang === 'it'
-    ? 'Una guida a scelta, tua per sempre.'
-    : 'One guide of your choice, yours forever.';
+const description =
+  product === 'bundle'
+    ? lang === 'it'
+      ? 'Bari come la viviamo noi. Sei voci, sei itinerari.'
+      : 'Bari the way we live it. Six voices, six routes.'
+    : product === 'essenziale'
+      ? lang === 'it'
+        ? 'Il primo giorno a Bari, queste tre.'
+        : 'Your first day in Bari, these three.'
+      : lang === 'it'
+        ? 'Una guida a scelta, tua per sempre.'
+        : 'One guide of your choice, yours forever.';
 
-const ctaLabel = isBundle
-  ? lang === 'it' ? 'Acquista Bari Completa' : 'Get Bari Complete'
-  : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
+const unitLabel =
+  product === 'bundle'
+    ? lang === 'it' ? '/ 6 guide' : '/ 6 guides'
+    : product === 'essenziale'
+      ? lang === 'it' ? '/ 3 guide' : '/ 3 guides'
+      : lang === 'it' ? '/ guida' : '/ guide';
+
+const ctaLabel =
+  product === 'bundle'
+    ? lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari'
+    : product === 'essenziale'
+      ? lang === 'it' ? 'Acquista Bari Essenziale' : 'Get Essential Bari'
+      : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
@@ -45,9 +62,7 @@ const ctaLabel = isBundle
 
   <div class="flex items-baseline gap-xs">
     <span class="font-display text-4xl text-ink">{priceLabel}</span>
-    <span class="text-sm text-ink-muted">
-      {isBundle ? (lang === 'it' ? '/ 6 guide' : '/ 6 guides') : (lang === 'it' ? '/ guida' : '/ guide')}
-    </span>
+    <span class="text-sm text-ink-muted">{unitLabel}</span>
   </div>
 
   <ul class="flex flex-col gap-xs">
@@ -104,8 +119,10 @@ const ctaLabel = isBundle
           throw new Error('No checkout URL returned');
         }
 
-        if (typeof window.plausible === 'function') {
-          window.plausible('Checkout Started', { props: { product, guideSlug: guideSlug ?? 'bundle', lang } });
+        if (typeof window.localisTrack === 'function') {
+          window.localisTrack('checkout_started', { product, guide: guideSlug ?? product, lang });
+        } else if (typeof window.plausible === 'function') {
+          window.plausible('Checkout Started', { props: { product, guideSlug: guideSlug ?? product, lang } });
         }
         window.location.assign(data.url);
       } catch (err) {
