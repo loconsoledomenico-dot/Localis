@@ -29,8 +29,8 @@ const eyebrow = lang === 'it' ? 'Tavola VI — Gli autori' : 'Plate VI — The a
 const heading1 = lang === 'it' ? 'Sei autori baresi.' : 'Six authors from Bari.';
 const heading2 = lang === 'it' ? 'Sei voci, sei guide, una sola Bari.' : 'Six voices, six guides, one Bari.';
 const intro = lang === 'it'
-  ? 'Non guide certificate, non copia-incolla Wikipedia. Autori che quei vicoli li hanno vissuti, hanno mangiato in quei panifici, hanno visto cambiare quei mercati. Ogni guida è firmata: nome, voce, storia.'
-  : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, voice, story.';
+  ? 'Non guide certificate, non copia-incolla Wikipedia. Autori che quei vicoli li hanno vissuti, hanno mangiato in quei panifici, hanno visto cambiare quei mercati. Ogni guida è firmata: nome, volto, storia.'
+  : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, face, story.';
 const draftBadge = lang === 'it' ? 'Profilo in arrivo' : 'Profile coming';
 const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : 'Portrait coming';
 
@@ -176,7 +176,7 @@ function bioFor(a: Author): string {
                 <h3 class="author-name font-display text-ink leading-[1.1] m-0">
                   {isPlaceholderName ? (
                     <span class="text-ink-subtle italic font-light">
-                      {lang === 'it' ? 'Voce di' : 'Voice of'} <span class="not-italic font-normal text-ink">{a.guideTitle}</span>
+                      {lang === 'it' ? 'Autore di' : 'Author of'} <span class="not-italic font-normal text-ink">{a.guideTitle}</span>
                     </span>
                   ) : (
                     <>
