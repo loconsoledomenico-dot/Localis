@@ -1,0 +1,317 @@
+---
+export const prerender = true;
+/**
+ * Localis · Partner Vetrina Poster (A2 portrait, English-first)
+ *
+ * Locandina formato vetrina per negozi / fioristi / boutique in centro Bari.
+ * Più grande dell'A5 partner (poster.astro), pensata per stampa 50x70 / A2 / A1
+ * e affissione in vetrina. Inglese-first perché tourist-facing.
+ *
+ * Esempi URL:
+ *   /poster-vetrina?p=paesaggi&name=Paesaggi
+ *   /poster-vetrina?p=hotel-oriente&name=Hotel+Oriente
+ *
+ * Query params:
+ *   p     — partner slug (per tracking nel link QR)
+ *   name  — display name partner (mostrato in footer)
+ *
+ * Stampa: Ctrl/Cmd+P → "Salva come PDF" → A2 portrait → tipografo.
+ * Tipografo può ingrandire a 50x70 / 70x100 cm proporzionalmente.
+ */
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Localis · Vetrina Poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    @page {
+      size: A2 portrait;
+      margin: 0;
+    }
+    @media print {
+      body { margin: 0; background: white; }
+      .controls { display: none !important; }
+      .poster { box-shadow: none; }
+    }
+
+    :root {
+      --surface: #F0E4CE;
+      --ink: #2A2418;
+      --ink-muted: #5C5240;
+      --accent: #B86A1F;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+      background: #C5B79A;
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      gap: 24px;
+    }
+
+    .controls {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      padding: 16px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .controls h2 {
+      margin: 0 0 8px 0;
+      font-family: 'Spectral', serif;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .controls code {
+      background: #f0ede5;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    .controls button {
+      background: var(--ink);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    /* === Poster A2 portrait (420 × 594 mm) === */
+    .poster {
+      width: 420mm;
+      height: 594mm;
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50mm 40mm 40mm 40mm;
+      box-sizing: border-box;
+    }
+
+    /* Cathedral line illustration */
+    .skyline {
+      width: 180mm;
+      height: 60mm;
+      margin-bottom: 14mm;
+      opacity: 0.85;
+    }
+
+    /* Headline "Discover BARI" */
+    .poster-eyebrow {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 36pt;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      margin: 0 0 4mm 0;
+      text-transform: uppercase;
+    }
+    .poster-headline {
+      font-family: 'Spectral', serif;
+      font-weight: 400;
+      font-size: 130pt;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0 0 12mm 0;
+    }
+
+    .poster-tagline {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 18pt;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      margin: 0 0 22mm 0;
+      text-transform: uppercase;
+    }
+
+    .poster-qr-frame {
+      width: 200mm;
+      height: 200mm;
+      padding: 6mm;
+      background: white;
+      border: 1mm solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16mm;
+    }
+    .poster-qr-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .poster-cta {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 18pt;
+      letter-spacing: 0.10em;
+      color: var(--ink);
+      text-align: center;
+      margin: 0 0 4mm 0;
+      text-transform: uppercase;
+    }
+    .poster-cta-it {
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16pt;
+      color: var(--ink-muted);
+      text-align: center;
+      margin: 0 0 14mm 0;
+    }
+
+    .poster-divider {
+      width: 30mm;
+      height: 0.5mm;
+      background: var(--ink);
+      margin-bottom: 6mm;
+    }
+
+    .poster-footer {
+      text-align: center;
+    }
+    .poster-footer-url {
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 22pt;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 4mm;
+    }
+    .poster-footer-partner {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 11pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <h2>Localis · Locandina vetrina A2</h2>
+    <p>
+      URL: <code>?p=slug-partner&amp;name=Nome+Partner</code><br/>
+      Esempio: <code>/poster-vetrina?p=paesaggi&amp;name=Paesaggi</code>
+    </p>
+    <p>
+      Stampa: <strong>Ctrl/Cmd+P</strong> → "Salva come PDF" → A2 portrait, no margini.
+      Il tipografo può ingrandire proporzionalmente a 50x70, 70x100, A1, A0.
+    </p>
+    <button onclick="window.print()">Stampa / Salva PDF</button>
+  </div>
+
+  <div class="poster">
+    <!-- Cathedral skyline (San Sabino + Castello Svevo silhouette) -->
+    <svg class="skyline" viewBox="0 0 360 120" fill="none" stroke="currentColor" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg">
+      <!-- Ground line -->
+      <line x1="20" y1="115" x2="340" y2="115" stroke-width="0.8"/>
+      <!-- Castello Svevo (left) -->
+      <rect x="40" y="80" width="60" height="35"/>
+      <rect x="38" y="74" width="10" height="6"/>
+      <rect x="56" y="74" width="10" height="6"/>
+      <rect x="74" y="74" width="10" height="6"/>
+      <rect x="92" y="74" width="10" height="6"/>
+      <!-- Cathedral San Sabino (center) -->
+      <path d="M150,115 L150,50 L168,32 L186,50 L186,115 Z"/>
+      <rect x="156" y="60" width="6" height="14"/>
+      <rect x="174" y="60" width="6" height="14"/>
+      <circle cx="168" cy="48" r="3"/>
+      <!-- Rose window -->
+      <circle cx="168" cy="78" r="6"/>
+      <!-- Bell tower right -->
+      <rect x="200" y="40" width="14" height="75"/>
+      <polygon points="200,40 214,40 207,30"/>
+      <!-- Basilica San Nicola (right) -->
+      <rect x="240" y="65" width="60" height="50"/>
+      <rect x="248" y="55" width="14" height="10"/>
+      <rect x="278" y="55" width="14" height="10"/>
+      <rect x="263" y="78" width="14" height="14"/>
+    </svg>
+
+    <p class="poster-eyebrow">Discover</p>
+    <h1 class="poster-headline">BARI</h1>
+    <p class="poster-tagline">Walk · Listen · Experience</p>
+
+    <div class="poster-qr-frame">
+      <img data-qr-img src="" alt="QR code Localis" />
+    </div>
+
+    <p class="poster-cta">Scan the QR code · walk through Bari</p>
+    <p class="poster-cta-it">Scansiona, indossa le cuffie, cammina. Bari ti parla.</p>
+
+    <div class="poster-divider"></div>
+
+    <div class="poster-footer">
+      <span class="poster-footer-url">localis.guide</span>
+      <span class="poster-footer-partner" data-partner-credit></span>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const p = params.get('p') || '';
+      const name = params.get('name') || '';
+
+      const qrUrl = p
+        ? `https://localis.guide/?p=${encodeURIComponent(p)}`
+        : 'https://localis.guide/';
+
+      const qrImg = document.querySelector('[data-qr-img]');
+      const qrParams = new URLSearchParams({
+        data: qrUrl,
+        size: '1200x1200',
+        margin: '0',
+        ecc: 'H',
+        format: 'svg',
+        color: '2A2418',
+        bgcolor: 'FFFFFF',
+      });
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?${qrParams.toString()}`;
+      qrImg.alt = `Scan to open ${qrUrl}`;
+
+      if (name) {
+        const safe = (function (s) {
+          const div = document.createElement('div');
+          div.textContent = s;
+          return div.innerHTML;
+        })(name);
+        document.querySelector('[data-partner-credit]').innerHTML =
+          `Presented by · ${safe}`;
+      }
+    })();
+  </script>
+</body>
+</html>

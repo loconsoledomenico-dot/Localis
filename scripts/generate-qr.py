@@ -56,7 +56,7 @@ def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out = OUT_DIR / f"{slug}.png"
     img.save(out)
-    print(f"Saved: {out} ({img.size[0]}x{img.size[1]} px) → {url}")
+    print(f"Saved: {out} ({img.size[0]}x{img.size[1]} px) -> {url}")
     return 0
 
 

@@ -11,9 +11,10 @@ Master ledger dei partner referral. Aggiornare manualmente. Numeri da GA4 (custo
 
 ## Live partners
 
-| # | Slug | Nome | Indirizzo | Tipo | Contatto | Consegnato | QR file | Note |
-|---|---|---|---|---|---|---|---|---|
-| 001 | `london-bar` | London Bar | Via Principe Amedeo, 148, Bari | Bar | — | 2026-05-21 | [london-bar.png](qr-codes/london-bar.png) | Primo partner. QR consegnato a mano. |
+| # | Slug | Nome | Indirizzo | Tipo | Copie QR | Contatto | Consegnato | File | Note |
+|---|---|---|---|---|---|---|---|---|---|
+| 001 | `london-bar` | London Bar | Via Principe Amedeo, 148, Bari | Bar | 7 (1 bancone + 6 tavolini) | — | 2026-05-21 | [PNG](qr-codes/london-bar.png) | Stessa grafica QR replicata 7 volte. Stampa 8×8 cm consigliata. |
+| 002 | `paesaggi` | Paesaggi | Centro Bari (fiorista) | Negozio · vetrina | 1 gigante (vetrina) | — | 2026-05-21 | [PNG](qr-codes/paesaggi.png) · [SVG](qr-codes/paesaggi.svg) | Vetrina format. SVG vettoriale → stampa 50×70 / 70×100 / A1. Poster generabile via [/poster-vetrina?p=paesaggi&name=Paesaggi](https://localis.guide/poster-vetrina?p=paesaggi&name=Paesaggi). |
 
 ---
 
@@ -31,6 +32,7 @@ Compilare dopo aver verificato GA4 → Esplorazioni → custom report con dimens
 | Partner | Periodo | Visitatori | Preview ascoltate | Checkout iniziati | Acquisti | Revenue lorda | Quota partner (25%) | CR visit→buy | Note |
 |---|---|---|---|---|---|---|---|---|---|
 | `london-bar` | 2026-05-21 → ... | — | — | — | — | — | — | — | Baseline da rilevare |
+| `paesaggi` | 2026-05-21 → ... | — | — | — | — | — | — | — | Vetrina centro · alto passaggio pedoni |
 
 ---
 
