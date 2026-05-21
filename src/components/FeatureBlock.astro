@@ -21,6 +21,8 @@ export interface Props {
     src: string;
     alt: string;
   };
+  /** When true, apply heavier outline + larger border-radius to the image plate. */
+  framedImage?: boolean;
 }
 
 const {
@@ -39,6 +41,7 @@ const {
   mobileAspect = '4 / 5',
   tiltDeg = 0,
   dualPhone,
+  framedImage = false,
 } = Astro.props;
 
 const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block-left';
@@ -72,7 +75,7 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
         )}
       </div>
     ) : (
-      <div class="feature-image-frame">
+      <div class={`feature-image-frame ${framedImage ? 'is-framed' : ''}`}>
         <img
           src={imageSrc}
           alt={imageAlt}
@@ -177,6 +180,19 @@ const sideClass = imageSide === 'right' ? 'feature-block-right' : 'feature-block
     border-radius: var(--radius-md);
     box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08),
                 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
+  }
+
+  /* Framed variant — accentuated rounded corners + visible border for storytelling shots */
+  .feature-image-frame.is-framed {
+    border-radius: clamp(1.5rem, 3vw, 2.25rem);
+    border: 1px solid var(--color-border);
+    padding: clamp(0.5rem, 1vw, 0.75rem);
+    background: var(--color-surface);
+    box-shadow: 0 2px 4px oklch(15% 0.012 240 / 0.06),
+                0 18px 40px -16px oklch(15% 0.012 240 / 0.18);
+  }
+  .feature-image-frame.is-framed > .feature-img {
+    border-radius: clamp(1rem, 2.4vw, 1.6rem);
   }
 
   /* === Dual-phone stack (Komoot-inspired). Two PNG cutouts of a single
