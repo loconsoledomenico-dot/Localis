@@ -10,7 +10,7 @@ import { getActivePartner } from '../../lib/partners';
 import type Stripe from 'stripe';
 
 export const POST: APIRoute = async ({ request, cookies, url }) => {
-  let body: { product?: string; lang?: string };
+  let body: { product?: string; guideSlug?: string; lang?: string };
   try {
     body = await request.json();
   } catch {
@@ -18,10 +18,11 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   }
 
   const product = body.product as ProductSlug | undefined;
+  const guideSlug = body.guideSlug;
   const lang = (body.lang === 'en' ? 'en' : 'it') as 'it' | 'en';
 
-  if (!product) {
-    return jsonError(400, 'Missing product');
+  if (!product || (product !== 'single' && product !== 'bundle')) {
+    return jsonError(400, 'Missing or invalid product');
   }
 
   let priceId: string;
@@ -31,7 +32,12 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     return jsonError(400, `Unknown product: ${product}`);
   }
 
-  const guide_slugs = getGuideSlugsForProduct(product);
+  let guide_slugs: string[];
+  try {
+    guide_slugs = getGuideSlugsForProduct(product, guideSlug);
+  } catch (err) {
+    return jsonError(400, err instanceof Error ? err.message : 'Invalid product/guide combination');
+  }
   const partner_id_raw = cookies.get('lg_partner')?.value || null;
 
   const siteUrl = (process.env.PUBLIC_SITE_URL || url.origin).replace(/\/$/, '');

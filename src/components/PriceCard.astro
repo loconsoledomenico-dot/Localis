@@ -13,26 +13,24 @@ export interface Props {
 const { product, guideSlug, lang, features, primary = false } = Astro.props;
 
 const isBundle = product === 'bundle';
-const priceCents = isBundle ? 999 : 499;
+const priceCents = isBundle ? 1990 : 499;
 const priceLabel = formatPrice(priceCents);
 
 const title = isBundle
-  ? lang === 'it' ? 'Bari · Cuore antico' : 'Bari · Old Heart'
+  ? lang === 'it' ? 'Bari Completa' : 'Bari Complete'
   : lang === 'it' ? 'Guida singola' : 'Single guide';
 
 const description = isBundle
   ? lang === 'it'
-    ? 'Bari Vecchia, Porto e San Nicola — le tre guide live. Risparmi €4,98.'
-    : 'Old Bari, the Port and San Nicola — the three live guides. Save €4.98.'
+    ? 'Tutte le sei guide di Bari. Risparmi €10,04 vs guide singole.'
+    : 'All six Bari guides. Save €10.04 vs single guides.'
   : lang === 'it'
     ? 'Una guida a scelta, tua per sempre.'
     : 'One guide of your choice, yours forever.';
 
 const ctaLabel = isBundle
-  ? lang === 'it' ? 'Acquista Bari · Cuore antico' : 'Get Bari · Old Heart'
+  ? lang === 'it' ? 'Acquista Bari Completa' : 'Get Bari Complete'
   : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
-
-const productKey = isBundle ? 'bari-completa' : guideSlug;
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
@@ -48,7 +46,7 @@ const productKey = isBundle ? 'bari-completa' : guideSlug;
   <div class="flex items-baseline gap-xs">
     <span class="font-display text-4xl text-ink">{priceLabel}</span>
     <span class="text-sm text-ink-muted">
-      {isBundle ? (lang === 'it' ? '/ 3 guide' : '/ 3 guides') : (lang === 'it' ? '/ guida' : '/ guide')}
+      {isBundle ? (lang === 'it' ? '/ 6 guide' : '/ 6 guides') : (lang === 'it' ? '/ guida' : '/ guide')}
     </span>
   </div>
 
@@ -64,7 +62,8 @@ const productKey = isBundle ? 'bari-completa' : guideSlug;
   <button
     type="button"
     class={`checkout-btn mt-auto px-md py-sm rounded-md font-semibold text-sm transition-colors duration-fast ${primary ? 'bg-ink text-surface hover:bg-ink/90' : 'border border-ink text-ink hover:bg-ink hover:text-surface'}`}
-    data-product={productKey}
+    data-product={product}
+    data-guide-slug={guideSlug ?? ''}
     data-lang={lang}
   >
     {ctaLabel} · {priceLabel}
@@ -76,9 +75,14 @@ const productKey = isBundle ? 'bari-completa' : guideSlug;
     btn.addEventListener('click', async (e) => {
       e.preventDefault();
       const product = btn.dataset.product;
+      const guideSlug = btn.dataset.guideSlug || undefined;
       const lang = btn.dataset.lang || 'it';
 
       if (!product) return;
+      if (product === 'single' && !guideSlug) {
+        console.error('[checkout] single product requires guideSlug');
+        return;
+      }
 
       btn.disabled = true;
       const originalText = btn.textContent;
@@ -88,7 +92,7 @@ const productKey = isBundle ? 'bari-completa' : guideSlug;
         const res = await fetch('/api/checkout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product, lang }),
+          body: JSON.stringify({ product, guideSlug, lang }),
         });
 
         if (!res.ok) {
@@ -101,7 +105,7 @@ const productKey = isBundle ? 'bari-completa' : guideSlug;
         }
 
         if (typeof window.plausible === 'function') {
-          window.plausible('Checkout Started', { props: { product, lang } });
+          window.plausible('Checkout Started', { props: { product, guideSlug: guideSlug ?? 'bundle', lang } });
         }
         window.location.assign(data.url);
       } catch (err) {

@@ -1,18 +1,18 @@
 import prices from '../data/stripe-prices.json';
 
-export type ProductSlug =
-  | 'bari-vecchia'
-  | 'porto-bari'
-  | 'san-nicola'
-  | 'il-meglio-di-bari'
-  | 'tre-teatri'
-  | 'bari-completa';
+export type ProductSlug = 'single' | 'bundle';
 
 export const STRIPE_PRICE_IDS: Record<ProductSlug, string> = prices as Record<ProductSlug, string>;
 
-/**
- * Get Stripe price ID for a product slug. Throws if unknown or placeholder.
- */
+export const BARI_GUIDES: readonly string[] = [
+  'bari-vecchia',
+  'san-nicola',
+  'tre-teatri',
+  'il-meglio-di-bari',
+  'porto-bari',
+  'bari-sotterranea',
+] as const;
+
 export function getStripePrice(slug: ProductSlug): string {
   const id = STRIPE_PRICE_IDS[slug];
   if (!id || id.startsWith('price_REPLACE')) {
@@ -23,18 +23,22 @@ export function getStripePrice(slug: ProductSlug): string {
 
 /**
  * Resolve which guide slugs a product unlocks.
- * Bundle resolves to multiple; single guide resolves to itself.
+ * - bundle: all live Bari guides
+ * - single: requires guideSlug (the specific guide being bought)
  */
-export function getGuideSlugsForProduct(product: ProductSlug): string[] {
-  if (product === 'bari-completa') {
-    return ['bari-vecchia', 'porto-bari', 'san-nicola'];
+export function getGuideSlugsForProduct(
+  product: ProductSlug,
+  guideSlug?: string,
+): string[] {
+  if (product === 'bundle') {
+    return [...BARI_GUIDES];
   }
-  return [product];
+  if (!guideSlug || !BARI_GUIDES.includes(guideSlug)) {
+    throw new Error(`Invalid or missing guideSlug for single purchase: ${guideSlug}`);
+  }
+  return [guideSlug];
 }
 
-/**
- * Get gross price in cents for a product (used for Stripe Connect commission split).
- */
 export function getProductPriceCents(product: ProductSlug): number {
-  return product === 'bari-completa' ? 999 : 499;
+  return product === 'bundle' ? 1990 : 499;
 }
