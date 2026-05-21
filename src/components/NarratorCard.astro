@@ -1,0 +1,91 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  name: string;
+  photo: string;
+  bio: string;
+  lang: Lang;
+}
+
+const { name, photo, bio, lang } = Astro.props;
+const eyebrow = lang === 'it' ? 'Voce di questa guida' : 'Voice of this guide';
+---
+<aside class="narrator-card">
+  <span class="narrator-eyebrow">{eyebrow}</span>
+  <div class="narrator-row">
+    <figure class="narrator-photo">
+      <img src={photo} alt={`Ritratto di ${name}`} loading="lazy" decoding="async" />
+    </figure>
+    <div class="narrator-text">
+      <h3 class="narrator-name font-display">{name}</h3>
+      <p class="narrator-bio">{bio}</p>
+    </div>
+  </div>
+</aside>
+
+<style>
+  .narrator-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-elev);
+  }
+  .narrator-eyebrow {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+  .narrator-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  .narrator-photo {
+    flex-shrink: 0;
+    width: 96px;
+    aspect-ratio: 3 / 4;
+    margin: 0;
+    border-radius: var(--radius-sm, 6px);
+    overflow: hidden;
+    background: var(--color-surface);
+  }
+  .narrator-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) contrast(1.06) brightness(0.96);
+  }
+  .narrator-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  .narrator-name {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-ink);
+    margin: 0;
+    line-height: 1.1;
+  }
+  .narrator-bio {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-ink-muted);
+    margin: 0;
+  }
+  @media (max-width: 480px) {
+    .narrator-row { flex-direction: column; align-items: stretch; }
+    .narrator-photo { width: 100%; max-width: 200px; }
+  }
+</style>

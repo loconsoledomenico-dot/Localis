@@ -44,6 +44,14 @@ const guides = defineCollection({
         lng: z.number(),
       })
       .optional(),
+    narrator: z
+      .object({
+        name: z.string(),
+        photo: z.string(),
+        bio_it: z.string(),
+        bio_en: z.string(),
+      })
+      .optional(),
     price_cents: z.number().int().default(499),
     status: z.enum(['live', 'soon', 'archived']).default('live'),
     published_at: z.date(),

@@ -7,6 +7,7 @@ import PriceCard from '../../components/PriceCard.astro';
 import ChapterList from '../../components/ChapterList.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
 import StartMap from '../../components/StartMap.astro';
+import NarratorCard from '../../components/NarratorCard.astro';
 import StructuredData from '../../components/StructuredData.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDuration } from '../../lib/format';
@@ -73,6 +74,15 @@ if (data.coords_start) {
         label="Anteprima · 60s"
         lang="it"
       />
+
+      {data.narrator && (
+        <NarratorCard
+          name={data.narrator.name}
+          photo={data.narrator.photo}
+          bio={data.narrator.bio_it}
+          lang="it"
+        />
+      )}
 
       <section class="prose prose-ink max-w-prose">
         <Content />

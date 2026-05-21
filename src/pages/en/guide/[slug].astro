@@ -6,6 +6,7 @@ import TrailerPlayer from '../../../components/TrailerPlayer.astro';
 import PriceCard from '../../../components/PriceCard.astro';
 import ChapterList from '../../../components/ChapterList.astro';
 import StartMap from '../../../components/StartMap.astro';
+import NarratorCard from '../../../components/NarratorCard.astro';
 import StructuredData from '../../../components/StructuredData.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
@@ -64,6 +65,15 @@ if (data.coords_start) {
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
 
       <TrailerPlayer src={trailerSrc} label="Preview · 60s" lang="en" />
+
+      {data.narrator && (
+        <NarratorCard
+          name={data.narrator.name}
+          photo={data.narrator.photo}
+          bio={data.narrator.bio_en}
+          lang="en"
+        />
+      )}
 
       <section class="prose prose-ink max-w-prose">
         <Content />
