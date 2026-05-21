@@ -56,3 +56,12 @@
   to = "https://localis.guide/:splat"
   status = 301
   force = true
+
+# Force the Netlify default subdomain to redirect to the custom domain
+# so all traffic, cookies, Stripe success_url and email magic links
+# resolve under localis.guide.
+[[redirects]]
+  from = "https://localis-guide.netlify.app/*"
+  to = "https://localis.guide/:splat"
+  status = 301
+  force = true
