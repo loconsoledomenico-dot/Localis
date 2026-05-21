@@ -2,7 +2,18 @@ import prices from '../data/stripe-prices.json';
 
 export type ProductSlug = 'single' | 'bundle';
 
-export const STRIPE_PRICE_IDS: Record<ProductSlug, string> = prices as Record<ProductSlug, string>;
+/**
+ * Stripe Price IDs. Production reads from env (`Stripe_id_singola`,
+ * `Stripe_id_bundle`) so real IDs never end up in git. JSON file holds
+ * placeholders used as a last-resort fallback (e.g. in unit tests).
+ */
+const envSingle = process.env.Stripe_id_singola;
+const envBundle = process.env.Stripe_id_bundle;
+
+export const STRIPE_PRICE_IDS: Record<ProductSlug, string> = {
+  single: envSingle || (prices as Record<string, string>).single,
+  bundle: envBundle || (prices as Record<string, string>).bundle,
+};
 
 export const BARI_GUIDES: readonly string[] = [
   'bari-vecchia',
