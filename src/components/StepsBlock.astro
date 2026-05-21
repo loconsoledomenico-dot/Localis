@@ -10,24 +10,24 @@ const { lang, ctaHref = '#guide' } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'In tre minuti, sei dentro' : 'Three minutes in, you\'re there';
 const heading = lang === 'it' ? 'Tre passi.' : 'Three steps.';
-const headingItalic = lang === 'it' ? 'Una città che parla, mentre cammini.' : 'A city that speaks, while you walk.';
+const headingItalic = lang === 'it' ? 'Una città che parla, quando vuoi tu.' : 'A city that speaks, whenever you want.';
 
 const steps = lang === 'it'
   ? [
-      { n: '1', title: 'Apri il link', body: 'Dal porto, dal treno, da casa. Funziona su qualsiasi telefono.' },
-      { n: '2', title: 'Scegli l\'itinerario', body: 'Bari Vecchia, il Porto, San Nicola, i Teatri — o l\'intera edizione.' },
-      { n: '3', title: 'Premi play', body: 'I capitoli si avviano dove devono. Tu cammini, ascolti, ti perdi.' },
+      { n: '1', title: 'Apri il link', body: 'Dal porto, dal treno, dal divano di casa.' },
+      { n: '2', title: 'Scegli l\'itinerario', body: 'Bari Vecchia, Porto, San Nicola, Teatri, Sotterranea — o tutto insieme.' },
+      { n: '3', title: 'Premi play', body: 'Le storie partono. Tu ascolti, ti perdi nei vicoli — anche da fermo.' },
     ]
   : [
-      { n: '1', title: 'Open the link', body: 'From the harbour, the train, home. Works on any phone.' },
-      { n: '2', title: 'Pick a route', body: 'Bari Vecchia, the Port, San Nicola, the Theatres — or the whole edition.' },
-      { n: '3', title: 'Press play', body: 'Chapters start where they should. You walk, you listen, you wander.' },
+      { n: '1', title: 'Open the link', body: 'From the harbour, the train, your own couch.' },
+      { n: '2', title: 'Pick a route', body: 'Old Bari, Port, San Nicola, Theatres, Underground — or all of them.' },
+      { n: '3', title: 'Press play', body: 'The stories begin. You listen, you wander — even sitting still.' },
     ];
 
 const ctaLabel = lang === 'it' ? 'Inizia ora · gratis i primi 60 secondi' : 'Start now · first 60 seconds free';
 ---
 <section class="steps bg-surface">
-  <div class="max-w-steps mx-auto px-md sm:px-lg py-3xl lg:py-4xl text-center">
+  <div class="max-w-steps mx-auto px-md sm:px-lg py-2xl lg:py-3xl text-center">
 
     <div class="inline-flex items-center gap-sm mb-md">
       <span class="block w-7 h-px bg-accent"></span>
@@ -37,18 +37,18 @@ const ctaLabel = lang === 'it' ? 'Inizia ora · gratis i primi 60 secondi' : 'St
       <span class="block w-7 h-px bg-accent"></span>
     </div>
 
-    <h2 class="font-display text-ink leading-[1.1] tracking-[-0.014em] mb-2xl text-[clamp(1.9rem,4.4vw,2.8rem)]">
+    <h2 class="font-display text-ink leading-[1.1] tracking-[-0.014em] mb-xl text-[clamp(1.6rem,3.2vw,2.2rem)]">
       <span class="block font-light">{heading}</span>
-      <span class="block font-body font-normal text-ink-muted mt-sm text-[clamp(1.15rem,2.4vw,1.55rem)] leading-relaxed tracking-normal">{headingItalic}</span>
+      <span class="block font-body font-normal text-ink-muted mt-2xs text-[clamp(1rem,1.8vw,1.25rem)] leading-relaxed tracking-normal">{headingItalic}</span>
     </h2>
 
-    <ol class="steps-list grid grid-cols-1 sm:grid-cols-3 gap-lg sm:gap-xl list-none p-0 m-0 mb-2xl">
+    <ol class="steps-list grid grid-cols-1 sm:grid-cols-3 gap-lg sm:gap-xl list-none p-0 m-0 mb-xl">
       {steps.map((s, i) => (
         <li class="step-cell flex flex-col items-center" style={`--idx:${i}`}>
-          <span class="step-num font-display italic font-light text-accent text-[clamp(3.5rem,8vw,5rem)] leading-none mb-sm select-none">
+          <span class="step-num font-display italic font-light text-accent text-[clamp(2.4rem,5vw,3.4rem)] leading-none mb-2xs select-none">
             {s.n}
           </span>
-          <span class="font-display text-ink text-xl sm:text-2xl leading-tight mb-2xs">
+          <span class="font-display text-ink text-lg sm:text-xl leading-tight mb-2xs">
             {s.title}
           </span>
           <span class="font-body text-sm text-ink-muted leading-snug max-w-[24ch]">
