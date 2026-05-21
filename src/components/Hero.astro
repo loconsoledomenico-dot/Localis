@@ -10,15 +10,9 @@ const { lang } = Astro.props;
 const masthead_l = lang === 'it' ? 'Edizione 01 — Bari' : 'Edition 01 — Bari';
 const masthead_r = lang === 'it' ? 'Sei guide live · edizione completa' : 'Six guides live · full edition';
 
-/* H1 chiodo verbale — 2 righe distinte, domanda + risposta colloquiale */
-const heading1a = lang === 'it'
-  ? 'Audioguide raccontate'
-  : 'Audio guides told';
-const heading1b = lang === 'it'
-  ? 'da chi ci è nato.'
-  : 'by people born there.';
+const heading1a = lang === 'it' ? 'Audioguide raccontate' : 'Audio guides told';
+const heading1b = lang === 'it' ? 'da chi ci è nato.' : 'by people born there.';
 
-/* Lede — italic Spectral, registro confidenziale */
 const lede1 = lang === 'it'
   ? 'I baresi ti raccontano la loro città.'
   : 'Locals telling their own city.';
@@ -30,25 +24,50 @@ const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60 secondi gratis' : 
 const ctaPrimaryHref = lang === 'it' ? '/guide/bari-vecchia' : '/en/guide/bari-vecchia';
 const ctaSecondary = lang === 'it' ? 'Vedi le guide' : 'See the guides';
 
-/* Pull-quote magazine — il colpo memorabile post-CTA */
-const pullQuote = lang === 'it'
-  ? 'Niente lezioni. Niente top 10. Niente «10 cose da fare prima di morire». Solo le storie che si raccontano qui, mentre cammini.'
-  : 'No lectures. No top 10s. No "10 things to do before you die". Just the stories you hear here, while you walk.';
+interface Pill {
+  icon: string;
+  label: string;
+  tail: string;
+}
+
+const pills: Pill[] = lang === 'it'
+  ? [
+      { icon: 'headphones', label: 'Ascolta dove vuoi', tail: 'in strada, sul divano, in treno' },
+      { icon: 'pin',        label: 'Storie vere',       tail: 'sui luoghi reali della città' },
+      { icon: 'heart',      label: 'Da chi ci è nato',   tail: 'sei autori baresi firmati' },
+    ]
+  : [
+      { icon: 'headphones', label: 'Listen anywhere',    tail: 'on the street, couch, train' },
+      { icon: 'pin',        label: 'True stories',       tail: 'tied to real places' },
+      { icon: 'heart',      label: 'Locals only',         tail: 'six signed Bari authors' },
+    ];
 
 const microline = lang === 'it'
   ? '~30 min per guida · senza app · rimborso 1-click · €4,99'
   : '~30 min per guide · no app · 1-click refund · €4.99';
 
-const plateCaption = lang === 'it'
-  ? 'Tre schermate dalle guide Localis: il porto al tramonto, la home in italiano, il Teatro Margherita. Apri il link, premi play, cammini.'
-  : 'Three screens from Localis guides: the port at sunset, the Italian home, Teatro Margherita. Open the link, press play, walk.';
 const altText = lang === 'it'
-  ? 'Tre smartphone affiancati mostrano l\'interfaccia delle guide Localis di Bari: una vista del porto al tramonto, la home page in italiano e il prospetto del Teatro Margherita'
-  : 'Three smartphones side by side show the Localis Bari guide interface: a sunset view of the port, the Italian home page, and the facade of Teatro Margherita';
+  ? 'Una ragazza con cuffie sul lungomare di Bari al tramonto: cattedrale e palazzi storici a destra, sole che cala sul mare a sinistra'
+  : 'A young woman with headphones on Bari\'s lungomare at sunset: cathedral and historic buildings to the right, sun setting over the sea to the left';
 ---
-<section class="hero relative bg-surface">
+<section class="hero relative" aria-label="Localis — audioguide narrative di Bari">
 
-  <!-- MASTHEAD strip — stays inside container -->
+  <!-- Full-bleed background image -->
+  <img
+    src="/images/hero/hero-bari-tramonto.jpg"
+    alt={altText}
+    class="hero-bg"
+    width="1980"
+    height="1056"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  />
+
+  <!-- Gradient scrim for text legibility on the left half -->
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <!-- Masthead strip — sits over the photo at the top -->
   <div class="hero-masthead">
     <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle">
       {masthead_l}
@@ -58,216 +77,225 @@ const altText = lang === 'it'
     </span>
   </div>
 
-  <!-- 2-col magazine spread on lg+ : text (container) | photo (bleed right) -->
-  <div class="hero-grid">
+  <!-- Content overlay — anchored left -->
+  <div class="hero-content">
+    <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
+      <span class="hero-h1-a block font-light text-[clamp(2rem,5.6vw,4.4rem)]">{heading1a}</span>
+      <span class="hero-h1-b block font-light text-[clamp(2rem,5.6vw,4.4rem)]">{heading1b}</span>
+    </h1>
 
-    <!-- TEXT column -->
-    <div class="hero-text">
-      <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
-        <span class="hero-h1-a block font-light text-[clamp(1.9rem,5.4vw,4.2rem)]">{heading1a}</span>
-        <span class="hero-h1-b block font-light text-[clamp(1.9rem,5.4vw,4.2rem)]">{heading1b}</span>
-      </h1>
+    <p class="hero-lede mt-md font-display italic text-ink text-[clamp(1.05rem,1.8vw,1.35rem)] leading-snug max-w-[42ch]">
+      <span class="block">{lede1}</span>
+      <span class="block">{lede2}</span>
+    </p>
 
-      <p class="hero-lede mt-lg font-display italic text-ink text-[clamp(1.15rem,2vw,1.5rem)] leading-snug max-w-[42ch]">
-        <span class="block">{lede1}</span>
-        <span class="block">{lede2}</span>
-      </p>
-
-      <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm">
-        <a
-          href={ctaPrimaryHref}
-          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
-        >
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-          {ctaPrimary}
-        </a>
-        <a
-          href="#guide"
-          class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px]"
-        >
-          {ctaSecondary}
-        </a>
-      </div>
-
-      <blockquote class="hero-pullquote">
-        <span class="hero-pullquote-mark" aria-hidden="true">✻</span>
-        <p>{pullQuote}</p>
-      </blockquote>
-
-      <p class="hero-microline font-body text-sm text-ink-subtle mt-sm max-w-[48ch]">
-        {microline}
-      </p>
+    <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm">
+      <a
+        href={ctaPrimaryHref}
+        class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+      >
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+        {ctaPrimary}
+      </a>
+      <a
+        href="#guide"
+        class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px]"
+      >
+        {ctaSecondary}
+      </a>
     </div>
 
-    <!-- PHOTO column — bleeds to right viewport edge on lg, full-width on mobile -->
-    <figure class="hero-figure m-0">
-      <div class="hero-image-frame">
-        <img
-          src="/images/hero/hero_smartphone_back2.png"
-          alt={altText}
-          class="hero-img"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          width="1920"
-          height="1153"
-        />
-      </div>
-      <figcaption class="hero-caption">
-        <span class="hero-caption-slug">Tav. I</span>
-        <span class="hero-caption-text">{plateCaption}</span>
-      </figcaption>
-    </figure>
-
+    <ul class="hero-pills mt-xl">
+      {pills.map((p) => (
+        <li class="hero-pill">
+          <span class="hero-pill-icon" aria-hidden="true">
+            {p.icon === 'headphones' && (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            )}
+            {p.icon === 'pin' && (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            )}
+            {p.icon === 'heart' && (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            )}
+          </span>
+          <span class="hero-pill-text">
+            <span class="hero-pill-label">{p.label}</span>
+            <span class="hero-pill-tail">{p.tail}</span>
+          </span>
+        </li>
+      ))}
+    </ul>
   </div>
+
+  <!-- Microline strip at very bottom of hero -->
+  <div class="hero-microline">
+    {microline}
+  </div>
+
 </section>
 
 <style>
-  /* === Container math (mirrors FeatureBlock so the bleed lines up) ===
-   * 1280px is the standard container width across Localis (max-w-wrap).
-   * Magazine-editorial wider container that breathes on widescreen and ultrawide.
-   * --side-gutter pushes content inward to align with the centred container.
-   */
   .hero {
     --max-w: 1280px;
     --side-gutter: max(var(--spacing-lg), calc((100vw - var(--max-w)) / 2 + var(--spacing-lg)));
+
+    position: relative;
+    width: 100%;
+    min-height: clamp(560px, 78vh, 820px);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    isolation: isolate;
   }
 
-  /* === Masthead strip — sits inside container width === */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    z-index: 0;
+    filter: saturate(0.96) contrast(1.02);
+  }
+
+  /* Scrim — fades cream surface from left to transparent at ~65% */
+  .hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(
+        to right,
+        var(--color-surface) 0%,
+        oklch(from var(--color-surface) l c h / 0.92) 28%,
+        oklch(from var(--color-surface) l c h / 0.55) 52%,
+        oklch(from var(--color-surface) l c h / 0) 72%
+      );
+    pointer-events: none;
+  }
+
+  /* Vertical scrim on mobile so text reads over the photo */
+  @media (max-width: 900px) {
+    .hero-scrim {
+      background:
+        linear-gradient(
+          to bottom,
+          oklch(from var(--color-surface) l c h / 0.94) 0%,
+          oklch(from var(--color-surface) l c h / 0.78) 45%,
+          oklch(from var(--color-surface) l c h / 0.55) 75%,
+          oklch(from var(--color-surface) l c h / 0.4) 100%
+        );
+    }
+    .hero-bg { object-position: 70% center; }
+  }
+
   .hero-masthead {
     position: relative;
+    z-index: 2;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: var(--spacing-md);
     padding-inline: var(--side-gutter);
-    padding-top: var(--spacing-sm);
-    padding-bottom: var(--spacing-2xl);
-    border-top: 1px solid var(--color-border);
-    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
   }
-
-  /* === Mobile: stacked column. Photo full-bleed top, text under === */
-  .hero-grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
-    padding-bottom: var(--spacing-2xl);
-  }
-
-  .hero-figure {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-
-  .hero-image-frame {
-    position: relative;
-    width: 100%;
-    background: transparent;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: saturate(0.96) contrast(1.03);
-  }
-
-  .hero-text {
-    padding-inline: var(--side-gutter);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-caption {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-    padding-inline: var(--side-gutter);
-    color: var(--color-ink-subtle);
-  }
-  .hero-caption-slug {
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding-top: 2px;
-  }
-  .hero-caption-text {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 13px;
-    line-height: 1.4;
-    color: var(--color-ink-muted);
-    max-width: 44ch;
-  }
-
-  /* === Desktop (lg+): asymmetric magazine spread.
-   * Text takes the lion's share. Photo is contained, smaller, soft-cornered.
-   * No bleed — figure stays inside the side-gutter on its outer edge.
-   */
-  @media (min-width: 1024px) {
-    .hero-grid {
-      display: grid;
-      /* Asymmetric editorial spread: text dominates (≈58%), photo is the support (≈42%).
-       * Italian magazine convention — body of text is the headline, photo is the caption.
-       * Wider column-gap on widescreen lets the spread breathe. */
-      grid-template-columns: 1fr 1.15fr;
-      column-gap: clamp(var(--spacing-3xl), 6vw, 6rem);
-      align-items: center;
-      padding-inline: var(--side-gutter);
-      padding-bottom: clamp(var(--spacing-4xl), 8vw, 8rem);
-    }
-
-    .hero-text {
-      padding-inline: 0;
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .hero-figure {
-      grid-column: 2;
-      grid-row: 1;
-      width: 100%;
-      gap: var(--spacing-sm);
-      /* Photo nudged down slightly so the masthead's optical line of text and image
-       * doesn't read as perfectly centered — break the grid for editorial tension. */
-      align-self: end;
-      padding-bottom: var(--spacing-md);
-    }
-
-    /* PNG ships with its own backdrop and native ratio — no frame constraint */
-    .hero-image-frame {
-      aspect-ratio: auto;
-    }
-
-    .hero-caption {
-      padding-inline: 0;
-    }
-  }
-
-  /* === Editorial reveal — hairline draws, masthead text fades, h1 stagger === */
   .hero-masthead::before {
     content: '';
     position: absolute;
-    top: -1px;
-    left: 0;
-    right: 0;
+    top: 0;
+    left: var(--side-gutter);
+    right: var(--side-gutter);
     height: 1px;
-    background: var(--color-border);
+    background: oklch(from var(--color-border) l c h / 0.6);
     transform: scaleX(0);
     transform-origin: left;
     animation: ruleDraw 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
   }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding-inline: var(--side-gutter);
+    padding-block: clamp(var(--spacing-2xl), 6vw, var(--spacing-4xl));
+    max-width: min(620px, 56vw);
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 900px) {
+    .hero-content { max-width: 100%; }
+  }
+
+  /* Pills */
+  .hero-pills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    border-top: 1px solid oklch(from var(--color-border) l c h / 0.6);
+    padding-top: var(--spacing-lg);
+    max-width: 560px;
+  }
+  @media (max-width: 600px) {
+    .hero-pills {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+  }
+
+  .hero-pill {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    color: var(--color-ink);
+  }
+  .hero-pill-icon {
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .hero-pill-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+  .hero-pill-label {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.92rem;
+    color: var(--color-ink);
+  }
+  .hero-pill-tail {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--color-ink-muted);
+    margin-top: 1px;
+  }
+
+  /* Microline at bottom */
+  .hero-microline {
+    position: relative;
+    z-index: 2;
+    padding-inline: var(--side-gutter);
+    padding-block: var(--spacing-md);
+    border-top: 1px solid oklch(from var(--color-border) l c h / 0.6);
+    background: oklch(from var(--color-surface) l c h / 0.88);
+    backdrop-filter: blur(8px);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: var(--color-ink-muted);
+    letter-spacing: 0.02em;
+  }
+
+  /* === Reveal animations === */
   .hero-masthead > span {
     opacity: 0;
     animation: heroFade 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
   }
-
   .hero-h1 > span {
     opacity: 0;
     transform: translateY(14px);
@@ -275,82 +303,31 @@ const altText = lang === 'it'
   }
   .hero-h1-a { animation-delay: 0.35s; }
   .hero-h1-b { animation-delay: 0.55s; }
-
   .hero-lede,
-  .hero-body,
   .hero-actions,
-  .hero-pullquote,
+  .hero-pills,
   .hero-microline {
     opacity: 0;
     transform: translateY(10px);
     animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
-  .hero-lede      { animation-delay: 0.75s; }
-  .hero-body      { animation-delay: 0.9s; }
-  .hero-actions   { animation-delay: 1.05s; }
-  .hero-pullquote { animation-delay: 1.2s; }
-  .hero-microline { animation-delay: 1.35s; }
+  .hero-lede     { animation-delay: 0.75s; }
+  .hero-actions  { animation-delay: 0.9s; }
+  .hero-pills    { animation-delay: 1.05s; }
+  .hero-microline{ animation-delay: 1.2s; }
 
-  /* === Pull-quote magazine style (no left-border stripe — banned anti-pattern).
-   * Editorial Italian register: italic Spectral, dingbat ✻ as ornament, gentle
-   * indent, hairline rule above for separation from the CTA row. */
-  .hero-pullquote {
-    margin: var(--spacing-xl) 0 0 0;
-    padding: var(--spacing-md) 0 0 var(--spacing-lg);
-    position: relative;
-    max-width: 48ch;
-    border-top: 1px solid var(--color-border);
-  }
-  .hero-pullquote > p {
-    margin: 0;
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--color-ink);
-    font-size: clamp(1.1rem, 1.7vw, 1.35rem);
-    line-height: 1.45;
-  }
-  .hero-pullquote-mark {
-    position: absolute;
-    left: 0;
-    top: calc(var(--spacing-md) + 2px);
-    color: var(--color-accent);
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1.4em;
-    line-height: 1;
-    user-select: none;
-  }
+  @keyframes ruleDraw { to { transform: scaleX(1); } }
+  @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+  @keyframes heroFade { to { opacity: 1; } }
 
-  .hero-figure {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
-  }
-
-  @keyframes ruleDraw {
-    to { transform: scaleX(1); }
-  }
-  @keyframes heroIn {
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes heroFade {
-    to { opacity: 1; }
-  }
-
-  /* === Mobile: compress stagger so the page feels responsive on phones === */
   @media (max-width: 768px) {
-    .hero-masthead::before { animation-duration: 0.5s; animation-delay: 0.05s; }
-    .hero-masthead > span { animation-delay: 0.3s; }
     .hero-h1-a { animation-delay: 0.1s; animation-duration: 0.5s; }
     .hero-h1-b { animation-delay: 0.25s; animation-duration: 0.5s; }
     .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
-    .hero-body { animation-delay: 0.45s; animation-duration: 0.4s; }
-    .hero-actions { animation-delay: 0.55s; animation-duration: 0.4s; }
-    .hero-pullquote { animation-delay: 0.65s; animation-duration: 0.4s; }
-    .hero-microline { animation-delay: 0.75s; animation-duration: 0.4s; }
-    .hero-figure { animation-delay: 0.2s; animation-duration: 0.5s; }
+    .hero-actions { animation-delay: 0.45s; animation-duration: 0.4s; }
+    .hero-pills { animation-delay: 0.55s; animation-duration: 0.4s; }
+    .hero-microline { animation-delay: 0.65s; animation-duration: 0.4s; }
+    .hero-masthead > span { animation-delay: 0.3s; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -358,20 +335,12 @@ const altText = lang === 'it'
     .hero-masthead > span,
     .hero-h1 > span,
     .hero-lede,
-    .hero-body,
     .hero-actions,
-    .hero-pullquote,
-    .hero-microline,
-    .hero-figure {
+    .hero-pills,
+    .hero-microline {
       animation: none;
       transform: none;
       opacity: 1;
-    }
-    .hero-img {
-      transition: none;
-    }
-    .hero:hover .hero-img {
-      transform: none;
     }
   }
 </style>
