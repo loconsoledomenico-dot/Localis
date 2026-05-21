@@ -1,0 +1,191 @@
+LOCALIS — BARI SOTTERRANEA · script completo monovoce
+Narratrice: Rosa "la Perpetua" · tono confidenziale, popolare, saggio · 50 anni servizio Basilica San Nicola
+Target ~25 min @ 150 wpm (espandibile a 30 min su richiesta)
+=====================================
+
+INTRODUZIONE
+-------------
+voice: rosa
+
+Mi chiamo Rosa. <break time="0.5s"/> Per tutti, a Bari, sono la Perpetua. <break time="0.6s"/> Cinquant'anni in Basilica di San Nicola — <break time="0.4s"/> a pulire, <break time="0.3s"/> a riordinare, <break time="0.3s"/> a tenere in ordine la sacrestia, <break time="0.3s"/> a portare il caffè ai preti quando arrivavano le delegazioni russe. <break time="0.5s"/> Cinquant'anni. <break time="1.2s"/>
+
+E in cinquant'anni, ragazzo mio, <break time="0.4s"/> ho visto e ho sentito. <break time="0.6s"/> Non solo dei preti — <break time="0.3s"/> eh, di quelli si potrebbe scrivere un libro. <break time="0.5s"/> Ma soprattutto delle pietre. <break time="0.6s"/> Perché in basilica passa tutto: <break time="0.4s"/> gli archeologi quando trovano qualcosa di nuovo, <break time="0.3s"/> i restauratori quando aprono un pavimento, <break time="0.3s"/> gli storici dell'università che vengono a fare ricerca, <break time="0.3s"/> gli operai del Comune quando scavano una buca in piazza. <break time="0.5s"/> Tutti passano da qui. <break time="0.4s"/> Tutti raccontano. <break time="1.0s"/>
+
+E io stavo lì. <break time="0.4s"/> Pulivo, <break time="0.3s"/> ascoltavo, <break time="0.3s"/> ricordavo. <break time="1.2s"/>
+
+Adesso ti dico una cosa che a Bari pochi sanno davvero: <break time="0.5s"/> sotto la Bari che vedi <break time="0.3s"/> ce n'è un'altra. <break time="0.6s"/> Stratificata. <break time="0.4s"/> Romana, <break time="0.3s"/> paleocristiana, <break time="0.3s"/> bizantina, <break time="0.3s"/> normanna, <break time="0.3s"/> sveva. <break time="0.5s"/> Ogni epoca ha lasciato pietre, <break time="0.3s"/> ossa, <break time="0.3s"/> mosaici, <break time="0.3s"/> cisterne, <break time="0.3s"/> prigioni. <break time="0.5s"/> E sta tutto lì, <break time="0.3s"/> sotto i tuoi piedi, <break time="0.3s"/> mentre cammini sopra le panchine di Piazza Mercantile. <break time="1.2s"/>
+
+In mezz'ora ti faccio vedere quattro posti. <break time="0.5s"/> Cripta di San Nicola — <break time="0.3s"/> perché parto da casa mia. <break time="0.5s"/> Succorpo del San Sabino. <break time="0.4s"/> Cisterne romane di Piazza Mercantile. <break time="0.4s"/> Sotterranei del Castello Svevo. <break time="0.5s"/> Quattro tappe, <break time="0.3s"/> quattro epoche. <break time="1.0s"/>
+
+Vieni. <break time="0.5s"/> Sciamaninn. <break time="2.0s"/>
+
+=====================================
+CAPITOLO 1 — SOTTO LA BASILICA DI SAN NICOLA
+-------------
+voice: rosa
+
+Cominciamo da casa mia. <break time="0.5s"/> La Basilica di San Nicola. <break time="0.5s"/> Ma non quella che vedi salendo la scalinata — <break time="0.4s"/> quella la conoscono tutti, <break time="0.3s"/> ci sono le guide ufficiali, <break time="0.3s"/> hai il dépliant. <break time="0.8s"/>
+
+Io ti porto sotto. <break time="0.5s"/> La cripta. <break time="1.0s"/>
+
+Entri nella basilica, <break time="0.3s"/> prendi a destra prima dell'altare grande, <break time="0.3s"/> e scendi una scalinata di pietra consumata. <break time="0.5s"/> Tre, quattro gradini, <break time="0.3s"/> e già senti che cambia l'aria. <break time="0.5s"/> Diventa più fresca, <break time="0.3s"/> sa di pietra umida, <break time="0.3s"/> di candela vecchia, <break time="0.3s"/> di secoli. <break time="0.6s"/> Questa è la sensazione che gli archeologi mi hanno spiegato una volta: <break time="0.4s"/> la chiamano "respiro della pietra". <break time="0.5s"/> Le pietre antiche respirano umidità, <break time="0.3s"/> e quella umidità è odore di tempo. <break time="1.2s"/>
+
+Scendi. <break time="0.5s"/> E ti trovi davanti alla tomba di San Nicola. <break time="1.2s"/>
+
+Sotto l'altare basso, <break time="0.3s"/> dietro una grata di marmo, <break time="0.3s"/> c'è il sarcofago. <break time="0.5s"/> Lì dentro ci sono le ossa <break time="0.3s"/> che nel 1087 — <break time="0.4s"/> segnati questa data — <break time="0.4s"/> sessantadue marinai baresi andarono a rubare a Myra, in Turchia. <break time="0.6s"/> Lo so, <break time="0.3s"/> rubare è la parola brutta. <break time="0.4s"/> I preti preferiscono "traslazione". <break time="0.5s"/> Ma diciamoci la verità tra noi: <break time="0.4s"/> andarono lì, <break time="0.3s"/> scassinarono la tomba, <break time="0.3s"/> presero le ossa, <break time="0.3s"/> le caricarono sulla nave e tornarono. <break time="0.5s"/> Traslazione, certo. <break time="1.2s"/>
+
+Ho passato cinquant'anni a pulire intorno a quella tomba. <break time="0.6s"/> E ti dico una cosa che pochi sanno: <break time="0.4s"/> dentro il sarcofago c'è dell'acqua. <break time="0.5s"/> Si chiama la manna di San Nicola. <break time="0.5s"/> Una sostanza liquida che si forma naturalmente nelle ossa del santo. <break time="0.6s"/> Gli scienziati l'hanno analizzata — <break time="0.3s"/> è acqua pura, <break time="0.3s"/> con tracce minerali. <break time="0.5s"/> I preti la raccolgono una volta l'anno, <break time="0.3s"/> il 9 maggio, <break time="0.3s"/> e la mettono in piccole fiale che vengono distribuite ai pellegrini. <break time="0.5s"/> Da mille anni succede così. <break time="0.5s"/> Mille anni di acqua che sgorga da ossa secche. <break time="0.4s"/> Tu chiamala come vuoi. <break time="1.2s"/>
+
+Adesso guarda a terra. <break time="0.5s"/> Vedi quel pavimento di mosaico, <break time="0.3s"/> sotto la grata di vetro? <break time="0.5s"/> Quelle pietruzze piccole, <break time="0.3s"/> bianche, <break time="0.3s"/> verdi, <break time="0.3s"/> rosse, <break time="0.3s"/> disposte in fila? <break time="0.5s"/> Quello è mosaico bizantino, <break time="0.3s"/> di quando questa cripta non era ancora la cripta della basilica — <break time="0.4s"/> era una chiesa più antica, <break time="0.3s"/> più piccola, <break time="0.3s"/> di prima del 1087. <break time="0.5s"/> Sopra ci hanno costruito la basilica nuova, <break time="0.3s"/> ma il pavimento vecchio l'hanno lasciato. <break time="0.5s"/> Tu cammini sopra un vetro, <break time="0.3s"/> ma sotto il vetro c'è la Bari del decimo secolo. <break time="1.2s"/>
+
+E adesso alza gli occhi. <break time="0.5s"/> Le colonne. <break time="0.5s"/> Ventisei colonne reggono la cripta. <break time="0.5s"/> Guardatele bene — <break time="0.3s"/> sono tutte diverse. <break time="0.5s"/> Una è di marmo bianco, <break time="0.3s"/> una è di granito rosa, <break time="0.3s"/> una è di marmo verde con le venature, <break time="0.3s"/> una è scura quasi nera. <break time="0.5s"/> Sai perché? <break time="1.0s"/>
+
+Perché non sono nate per stare qui. <break time="0.5s"/> Sono colonne romane, <break time="0.3s"/> prese da edifici romani che stavano in giro per la città — <break time="0.3s"/> un tempio, <break time="0.3s"/> un foro, <break time="0.3s"/> terme — <break time="0.3s"/> e riusate. <break time="0.5s"/> I baresi del Mille non sprecavano. <break time="0.5s"/> Trovavano colonne belle dei romani, <break time="0.3s"/> ancora in piedi nei ruderi, <break time="0.3s"/> e se le portavano in basilica. <break time="0.5s"/> Per loro era materiale buono e gratis. <break time="0.5s"/> Per noi è una stratigrafia. <break time="1.2s"/>
+
+Te lo dico con un dettaglio che mi ha raccontato un professore dell'università anni fa, <break time="0.3s"/> mentre lui studiava i capitelli: <break time="0.4s"/> alcune di queste colonne sono di duemila anni fa. <break time="0.6s"/> Romane imperiali. <break time="0.5s"/> Tu le tocchi — <break time="0.3s"/> io le ho lucidate per cinquant'anni con uno straccio — <break time="0.3s"/> e sotto le dita c'è duemila anni di storia. <break time="1.2s"/>
+
+Una storia di basilica che ti racconto e poi andiamo via. <break time="0.5s"/> Sai chi è venuto qua sotto, <break time="0.3s"/> davanti a questa tomba? <break time="0.5s"/> Tutti. <break time="0.5s"/> Lo zar Nicola II — <break time="0.3s"/> sì, quello russo, <break time="0.3s"/> l'ultimo — <break time="0.3s"/> venne in pellegrinaggio prima della rivoluzione. <break time="0.5s"/> Papa Giovanni Paolo II è venuto due volte. <break time="0.5s"/> Papa Francesco nel 2018, <break time="0.3s"/> e quel giorno io stavo lì, <break time="0.3s"/> in fondo, <break time="0.3s"/> a guardare. <break time="0.5s"/> La basilica era piena di delegazioni russe, <break time="0.3s"/> ortodosse, <break time="0.3s"/> cattoliche — <break time="0.3s"/> e tutti in silenzio davanti a questa tomba. <break time="1.2s"/>
+
+Perché vedi — <break time="0.3s"/> e questa è una cosa che mi ha colpito sempre — <break time="0.4s"/> San Nicola è uno dei pochi santi che piace a tutti. <break time="0.5s"/> Cattolici, <break time="0.3s"/> ortodossi, <break time="0.3s"/> perfino musulmani che riconoscono la sua figura. <break time="0.5s"/> È un santo che unisce, <break time="0.3s"/> non divide. <break time="0.5s"/> E sotto questa cripta, <break time="0.3s"/> qui in mezzo alle colonne romane riusate e ai mosaici bizantini, <break time="0.4s"/> succede ogni giorno una cosa piccola ma vera: <break time="0.4s"/> persone di religioni diverse stanno in piedi una accanto all'altra <break time="0.3s"/> e pregano lo stesso santo. <break time="0.5s"/> Senza darsi fastidio. <break time="0.4s"/> Senza neanche guardarsi. <break time="1.2s"/>
+
+Quello, <break time="0.3s"/> secondo me, <break time="0.3s"/> è il vero miracolo di San Nicola. <break time="0.5s"/> Non l'acqua. <break time="0.4s"/> Non le ossa. <break time="0.4s"/> È la pace che si fa qua sotto, <break time="0.3s"/> ogni giorno, <break time="0.3s"/> tra gente che fuori si farebbe la guerra. <break time="1.5s"/>
+
+Bene. <break time="0.4s"/> Adesso usciamo. <break time="0.5s"/> Ti porto a vedere un altro posto sotto — <break time="0.3s"/> la cattedrale del San Sabino. <break time="0.5s"/> E lì ti faccio vedere come si legge la pietra. <break time="0.5s"/> Camìn sciamanìnn. <break time="2.0s"/>
+
+=====================================
+CAPITOLO 2 — SOTTO LA CATTEDRALE DI SAN SABINO
+-------------
+voice: rosa
+
+Adesso siamo davanti alla Cattedrale di San Sabino. <break time="0.5s"/> Quella grande, <break time="0.3s"/> romanica, <break time="0.3s"/> bianca. <break time="0.5s"/> La vedi da fuori — <break time="0.3s"/> facciata pulita, <break time="0.3s"/> rosone, <break time="0.3s"/> tre portali. <break time="0.5s"/> Bellissima, eh, <break time="0.3s"/> su questo non si discute. <break time="0.5s"/> Ma noi non veniamo per la facciata. <break time="0.5s"/> Noi entriamo, <break time="0.3s"/> attraversiamo la navata <break time="0.3s"/> e scendiamo. <break time="0.5s"/> Perché qua sotto succede una cosa che non c'è in nessun'altra chiesa di Bari: <break time="0.4s"/> leggi la storia come un libro aperto. <break time="1.2s"/>
+
+Si chiama succorpo. <break time="0.5s"/> Vuol dire "sotto il corpo della chiesa". <break time="0.5s"/> Una specie di chiesa sotto la chiesa. <break time="0.5s"/> Ti faccio scendere io, vieni. <break time="1.2s"/>
+
+Allora — <break time="0.3s"/> quando arrivi sotto, <break time="0.3s"/> ti trovi davanti a una stanza grande, <break time="0.3s"/> con pavimenti a vetro. <break time="0.5s"/> Sembra strano, vero? <break time="0.5s"/> Cammini sopra un vetro spesso <break time="0.3s"/> e sotto vedi pietre, <break time="0.3s"/> mosaici, <break time="0.3s"/> frammenti. <break time="0.5s"/> Quello che vedi sotto il tuo piede non è messo lì per fare scenografia. <break time="0.5s"/> Sono le fondamenta vere di una chiesa precedente. <break time="0.6s"/> Tu stai camminando sopra una chiesa che esisteva mille anni prima del Romanico che vedi sopra. <break time="1.2s"/>
+
+Te lo spiego — <break time="0.3s"/> perché la prima volta che me lo spiegò un archeologo, <break time="0.3s"/> mentre puliva i vetri con uno straccio bagnato, <break time="0.3s"/> ci misi mezz'ora a capirlo. <break time="0.5s"/> Poi quando capii, <break time="0.3s"/> non l'ho più dimenticato. <break time="1.2s"/>
+
+A Bari, <break time="0.3s"/> in questo punto preciso, <break time="0.3s"/> si sono costruite chiese una sopra l'altra, <break time="0.3s"/> per quasi duemila anni. <break time="0.5s"/> Quattro strati, ragazzo mio. <break time="0.4s"/> Quattro. <break time="1.2s"/>
+
+Il primo strato — <break time="0.3s"/> quello più profondo, <break time="0.3s"/> più antico — <break time="0.3s"/> è romano. <break time="0.5s"/> Roba di Bari quando ancora si chiamava Barium <break time="0.3s"/> ed era una colonia romana sull'Adriatico. <break time="0.5s"/> Resti di pavimentazione, <break time="0.3s"/> di edifici civili. <break time="0.5s"/> Non sappiamo bene cosa fosse, <break time="0.3s"/> ma era qualcosa di pubblico, <break time="0.3s"/> importante. <break time="1.0s"/>
+
+Sopra il romano, <break time="0.3s"/> secondo strato: <break time="0.4s"/> una basilica paleocristiana del quinto secolo. <break time="0.6s"/> Cinquecento anni dopo Cristo. <break time="0.5s"/> Quando il cristianesimo arrivò ufficialmente, <break time="0.3s"/> i baresi presero il posto dove c'era già qualcosa di pubblico <break time="0.3s"/> e ci costruirono sopra la prima grande chiesa cristiana. <break time="0.6s"/> E lì succede una cosa pazzesca — <break time="0.3s"/> che è quello che il succorpo ti fa vedere meglio di qualunque altro posto in Italia. <break time="1.2s"/>
+
+Guarda a terra, <break time="0.3s"/> sotto il vetro. <break time="0.5s"/> Vedi quel mosaico? <break time="0.5s"/> Bianco, nero, rosso, <break time="0.3s"/> con motivi geometrici, <break time="0.3s"/> e in mezzo figure di pesci, <break time="0.3s"/> uccelli, <break time="0.3s"/> fiori? <break time="0.5s"/> Quello è il pavimento originale della basilica del quinto secolo. <break time="0.6s"/> Mille e cinquecento anni fa, <break time="0.3s"/> qua sotto, <break time="0.3s"/> i primi cristiani baresi pregavano camminando su questo mosaico. <break time="0.5s"/> Lo guardavano coi loro occhi. <break time="0.5s"/> Adesso lo guardi tu coi tuoi. <break time="1.2s"/>
+
+Te lo dico in un modo che forse ti aiuta: <break time="0.4s"/> prova a pensare a una persona del quinto secolo, <break time="0.3s"/> una donna come me, <break time="0.3s"/> una perpetua dell'epoca, <break time="0.3s"/> che lavava il pavimento di questa stessa chiesa con uno straccio. <break time="0.5s"/> Stessa pietra. <break time="0.4s"/> Stesso posto. <break time="0.4s"/> Solo, <break time="0.3s"/> mille e seicento anni fa. <break time="0.5s"/> Quando lo pensi così — <break time="0.3s"/> viene un po' di vertigine, vero? <break time="1.2s"/>
+
+Terzo strato: <break time="0.4s"/> arrivano i bizantini, <break time="0.3s"/> gli arabi, <break time="0.3s"/> di nuovo i cristiani — <break time="0.3s"/> la cattedrale viene distrutta una volta, <break time="0.3s"/> ricostruita, <break time="0.3s"/> distrutta di nuovo. <break time="0.5s"/> Bari nel medioevo è stata un casino. <break time="0.5s"/> Cambiava mano ogni due secoli — <break time="0.3s"/> bizantini, <break time="0.3s"/> arabi, <break time="0.3s"/> normanni, <break time="0.3s"/> svevi, <break time="0.3s"/> angioini. <break time="0.5s"/> Ogni volta che cambiava il padrone, <break time="0.3s"/> qualcosa si rompeva <break time="0.3s"/> e qualcosa si rifaceva. <break time="1.2s"/>
+
+Quarto strato — <break time="0.3s"/> quello che vedi sopra di te quando esci dal succorpo — <break time="0.3s"/> è la cattedrale romanica <break time="0.3s"/> che fu costruita nell'undicesimo-dodicesimo secolo, <break time="0.3s"/> quando arrivarono i Normanni <break time="0.3s"/> e poi gli Svevi <break time="0.3s"/> e dissero "basta cambiare, <break time="0.3s"/> facciamo una cosa bella e che resta". <break time="0.5s"/> E resta, infatti. <break time="0.5s"/> È quella sopra. <break time="0.4s"/> Quella che ha la facciata bianca con il rosone. <break time="1.2s"/>
+
+Sai cosa ti dico io, <break time="0.3s"/> dopo cinquant'anni in basilica? <break time="0.5s"/> Che a Bari, <break time="0.3s"/> la fede non è mai cambiata, <break time="0.3s"/> sono cambiate le pietre intorno. <break time="0.6s"/> La gente veniva a pregare qui prima dei Romani — <break time="0.3s"/> su sponde un po' più vicine al mare, <break time="0.3s"/> prima che la costa cambiasse. <break time="0.5s"/> Veniva a pregare qui sotto i Romani, <break time="0.3s"/> quando "pregare" voleva dire ringraziare gli dei prima di partire con una nave. <break time="0.5s"/> Veniva a pregare qui nel quinto secolo. <break time="0.4s"/> Nell'undicesimo. <break time="0.4s"/> Oggi. <break time="0.6s"/> Le pietre cambiano, <break time="0.3s"/> la gente che cerca qualcosa di più grande no. <break time="1.5s"/>
+
+Una cosa che ti dico prima di farti uscire. <break time="0.5s"/> Vedi quella colonnina spezzata <break time="0.3s"/> in un angolo del succorpo? <break time="0.5s"/> Quella che sembra un pezzo abbandonato di qualcosa? <break time="0.5s"/> Non è abbandonata. <break time="0.5s"/> È il resto di un altare del quinto secolo. <break time="0.6s"/> Letteralmente: <break time="0.4s"/> un pezzo dell'altare dove i primi cristiani baresi facevano la messa, <break time="0.3s"/> sopravvissuto a millecinquecento anni di terremoti, <break time="0.3s"/> invasioni, <break time="0.3s"/> ricostruzioni. <break time="0.5s"/> Vedi com'è messa lì, <break time="0.3s"/> come se non fosse niente? <break time="1.2s"/>
+
+A volte mi fermo a guardarla <break time="0.3s"/> e penso che qualunque cosa io abbia fatto in cinquant'anni di basilica — <break time="0.3s"/> pulire, <break time="0.3s"/> ordinare, <break time="0.3s"/> servire, <break time="0.3s"/> perfino ascoltare i preti — <break time="0.3s"/> non è niente in confronto al fatto che quella colonnina è ancora in piedi. <break time="0.6s"/> Lei sì che ha fatto il suo dovere. <break time="1.5s"/>
+
+Adesso usciamo. <break time="0.5s"/> Ti porto in Piazza Mercantile, <break time="0.3s"/> dove sopra ci sono i tavolini dei bar <break time="0.3s"/> e sotto c'è l'acqua dei Romani. <break time="0.5s"/> Camìn sciamanìnn. <break time="2.0s"/>
+
+=====================================
+CAPITOLO 3 — LE CISTERNE ROMANE DI PIAZZA MERCANTILE
+-------------
+voice: rosa
+
+Eccoci. <break time="0.4s"/> Piazza Mercantile. <break time="0.5s"/> Una delle più belle di Bari, <break time="0.3s"/> te lo dico onesta — <break time="0.3s"/> io ci passo da sessant'anni <break time="0.3s"/> e ancora mi piace fermarmi a guardarla. <break time="0.5s"/> La colonna della Giustizia in mezzo, <break time="0.3s"/> il leone romano in fondo, <break time="0.3s"/> i palazzi attorno con gli archi. <break time="0.5s"/> Di sera s'accendono le luci dei bar, <break time="0.3s"/> la gente prende l'aperitivo, <break time="0.3s"/> ci sono i musicisti. <break time="1.2s"/>
+
+Bene. <break time="0.4s"/> Adesso tu fai una cosa: <break time="0.4s"/> invece di guardare i palazzi, <break time="0.3s"/> guarda a terra. <break time="1.0s"/>
+
+Vedi quelle griglie di metallo, <break time="0.3s"/> lì in mezzo al selciato? <break time="0.5s"/> Quelle inferriate che sembrano coperchi di tombini, <break time="0.3s"/> ma sono più grandi, <break time="0.3s"/> sono fatte di ferro vecchio battuto, <break time="0.3s"/> e se ci passi sopra senti un'aria un po' fresca venire da sotto? <break time="0.6s"/> Bene. <break time="0.5s"/> Sotto quelle griglie, <break time="0.3s"/> sotto i tuoi piedi, <break time="0.3s"/> mentre tu adesso sei in Piazza Mercantile a guardare la colonna, <break time="0.4s"/> c'è l'acquedotto romano di Bari. <break time="1.5s"/>
+
+Te lo spiego. <break time="0.5s"/> Duemila anni fa, <break time="0.3s"/> qui dove tu stai, <break time="0.3s"/> c'erano i Romani che avevano costruito un sistema idrico. <break time="0.5s"/> Non un acquedotto enorme come quello di Roma, eh — <break time="0.3s"/> Bari era una città piccola, <break time="0.3s"/> una colonia di provincia. <break time="0.5s"/> Ma anche qui i Romani fecero la loro cosa: <break time="0.4s"/> scavarono cisterne sotterranee per raccogliere l'acqua piovana, <break time="0.3s"/> e canali per portarla in giro per la città. <break time="0.5s"/> Acqua per bere, <break time="0.3s"/> per gli edifici pubblici, <break time="0.3s"/> per le terme. <break time="1.2s"/>
+
+Quelle cisterne ci sono ancora. <break time="0.5s"/> Hanno duemila anni <break time="0.3s"/> e stanno lì sotto. <break time="0.5s"/> Quando sopra ci hanno costruito il medioevo, <break time="0.3s"/> e poi il rinascimento, <break time="0.3s"/> e poi l'epoca moderna — <break time="0.3s"/> sotto le cisterne sono rimaste. <break time="0.5s"/> A volte si riempivano d'acqua piovana, <break time="0.3s"/> a volte si svuotavano, <break time="0.3s"/> ma erano sempre lì, <break time="0.3s"/> intatte, <break time="0.3s"/> scavate dentro la roccia. <break time="1.2s"/>
+
+Una volta — <break time="0.3s"/> me lo raccontò un funzionario del Comune che veniva spesso in basilica per certe questioni — <break time="0.4s"/> fecero degli scavi in piazza per mettere dei cavi. <break time="0.5s"/> Aprirono un buco, <break time="0.3s"/> e calandosi dentro <break time="0.3s"/> trovarono ancora le pareti delle cisterne romane in piedi, <break time="0.3s"/> perfette, <break time="0.3s"/> come duemila anni fa. <break time="0.6s"/> Solo che ovviamente in vita non l'avevano vista neanche loro. <break time="0.5s"/> Avevano sentito che c'erano, <break time="0.3s"/> sui libri c'era scritto, <break time="0.3s"/> ma vederla di persona è un'altra cosa. <break time="0.5s"/> Quel funzionario tornò pallido. <break time="0.5s"/> Continuava a dirmi: <break time="0.3s"/> "Rosa, è incredibile." <break time="1.5s"/>
+
+Adesso non puoi scendere giù — <break time="0.3s"/> non si può, <break time="0.3s"/> la Soprintendenza non lo permette. <break time="0.5s"/> Ma puoi farti due cose. <break time="0.5s"/> Una: <break time="0.4s"/> guardi le griglie, <break time="0.3s"/> e provi a immaginare. <break time="0.5s"/> Sotto, <break time="0.3s"/> nel buio, <break time="0.3s"/> c'è la pietra che ha portato l'acqua a Bari per secoli. <break time="0.5s"/> Due: <break time="0.4s"/> c'è un piccolo punto, <break time="0.3s"/> qua di fronte, <break time="0.3s"/> dove se ti pieghi a guardare in basso vedi una piccola apertura archeologica, <break time="0.3s"/> illuminata, <break time="0.3s"/> con un pezzo di muratura antica esposta. <break time="0.5s"/> Pochi turisti la notano. <break time="0.5s"/> Tu adesso sai dove guardare. <break time="1.2s"/>
+
+Te lo dico una cosa che mi fa sempre sorridere. <break time="0.5s"/> La gente passa qui sopra, <break time="0.3s"/> prende l'aperitivo, <break time="0.3s"/> ride, <break time="0.3s"/> fa il selfie con la colonna in mezzo. <break time="0.5s"/> Nessuno guarda a terra. <break time="0.5s"/> Eppure sotto i loro piedi, <break time="0.3s"/> mentre brindano col Negroni, <break time="0.3s"/> c'è la cosa più antica di Bari ancora in piedi. <break time="0.5s"/> L'acqua dei Romani. <break time="0.5s"/> Che non l'hanno fatta scendere, <break time="0.3s"/> non l'hanno coperta, <break time="0.3s"/> non l'hanno distrutta. <break time="0.5s"/> È stata più forte di tutti i padroni che sono passati. <break time="1.5s"/>
+
+E un'altra cosa, <break time="0.3s"/> prima di andare via. <break time="0.5s"/> Qui in Piazza Mercantile, <break time="0.3s"/> a un certo punto, <break time="0.3s"/> c'è il leone di marmo in fondo. <break time="0.5s"/> Quello dove anticamente legavano i debitori, <break time="0.3s"/> perché si dichiarassero pubblicamente falliti <break time="0.3s"/> e prendessero pubblicamente vergogna. <break time="0.5s"/> Si chiamava "la pietra della giustizia". <break time="0.5s"/> Era un sistema umiliante <break time="0.3s"/> ma forse onesto — <break time="0.3s"/> il fallimento era pubblico, <break time="0.3s"/> mica nascosto come oggi. <break time="1.2s"/>
+
+Quel leone è in marmo romano riusato. <break time="0.5s"/> Stessa storia delle colonne della cripta di San Nicola. <break time="0.5s"/> I baresi del medioevo trovavano roba dei Romani <break time="0.3s"/> e la rimettevano in funzione. <break time="0.5s"/> A Bari niente si butta. <break time="0.4s"/> Tutto si trasforma. <break time="1.5s"/>
+
+Bene. <break time="0.4s"/> Ultimo posto. <break time="0.5s"/> Adesso ti porto al Castello Svevo. <break time="0.5s"/> E lì ti racconto i sotterranei, <break time="0.3s"/> le prigioni, <break time="0.3s"/> Federico II <break time="0.3s"/> e una storia che ho saputo da un restauratore — <break time="0.4s"/> una storia che non te la raccontano nei tour ufficiali. <break time="0.5s"/> Camìn sciamanìnn. <break time="2.0s"/>
+
+=====================================
+CAPITOLO 4 — I SOTTERRANEI DEL CASTELLO SVEVO
+-------------
+voice: rosa
+
+Castello Svevo. <break time="0.5s"/> Eccoci. <break time="1.0s"/>
+
+Vedi che grosso che è? <break time="0.5s"/> Sembra una fortezza messa lì all'inizio del centro storico, <break time="0.3s"/> di fronte al mare, <break time="0.3s"/> con le mura spesse. <break time="0.5s"/> Tre lati grandi, <break time="0.3s"/> un fossato attorno, <break time="0.3s"/> le torri. <break time="0.5s"/> Una roba seria. <break time="1.2s"/>
+
+Adesso ti dico una cosa che ti spiazza: <break time="0.5s"/> questo castello — <break time="0.3s"/> quello che vedi tu adesso — <break time="0.3s"/> non è il castello vero. <break time="0.6s"/> Cioè, <break time="0.3s"/> è un castello, <break time="0.3s"/> è vero che c'è, <break time="0.3s"/> ma è il risultato di quattro castelli sovrapposti. <break time="0.6s"/> Stessa storia della cattedrale del San Sabino. <break time="0.5s"/> A Bari niente è "uno" — <break time="0.3s"/> tutto è "tanti". <break time="1.2s"/>
+
+Allora, <break time="0.3s"/> partiamo dal fondo. <break time="0.5s"/> Sotto il castello che vedi oggi <break time="0.3s"/> c'è una stratigrafia che è la storia stessa di Bari. <break time="1.2s"/>
+
+Strato uno, <break time="0.3s"/> il più profondo, <break time="0.3s"/> è bizantino. <break time="0.5s"/> Bari per duecent'anni fu capitale del Catepanato — <break time="0.3s"/> la provincia bizantina del sud Italia. <break time="0.5s"/> C'era una cittadella militare bizantina <break time="0.3s"/> nel posto dove adesso sta il castello, <break time="0.3s"/> con torri, <break time="0.3s"/> mura, <break time="0.3s"/> magazzini. <break time="1.2s"/>
+
+Strato due: <break time="0.4s"/> arrivano i Normanni. <break time="0.5s"/> Roberto il Guiscardo prende Bari nel 1071 <break time="0.3s"/> e poi suo figlio Ruggero II di Sicilia fa costruire il castello — <break time="0.4s"/> diciamo, <break time="0.3s"/> il primo "castello vero" che si chiama castello. <break time="0.5s"/> Mura normanne, <break time="0.3s"/> torri normanne, <break time="0.3s"/> prigioni normanne. <break time="0.5s"/> Sotto i pavimenti di oggi, <break time="0.3s"/> sotto le sale, <break time="0.3s"/> c'è ancora questa roba. <break time="1.2s"/>
+
+Strato tre, <break time="0.3s"/> e qui arriviamo a quello per cui il castello si chiama "Svevo": <break time="0.5s"/> Federico II di Svevia, <break time="0.3s"/> il Puer Apuliae, <break time="0.3s"/> il "fanciullo di Puglia" — <break time="0.3s"/> perché era cresciuto qui giù, <break time="0.3s"/> in Puglia, <break time="0.3s"/> e Bari per lui era come casa. <break time="0.5s"/> Federico II amplia il castello, <break time="0.3s"/> lo trasforma in residenza imperiale. <break time="0.5s"/> Veniva a Bari, <break time="0.3s"/> ci stava per settimane. <break time="0.5s"/> Mangiava qui, <break time="0.3s"/> cacciava qui, <break time="0.3s"/> riceveva ambasciate qui. <break time="0.5s"/> Le sale principali che vedi sopra sono in gran parte sue. <break time="0.4s"/> Tredicesimo secolo. <break time="1.2s"/>
+
+Strato quattro: <break time="0.4s"/> arrivano gli Aragonesi, <break time="0.3s"/> i Borboni, <break time="0.3s"/> l'epoca moderna. <break time="0.5s"/> Il castello viene prigione, <break time="0.3s"/> caserma, <break time="0.3s"/> deposito. <break time="0.5s"/> Cambia funzione ogni epoca. <break time="0.5s"/> Negli ultimi cinquant'anni è diventato museo. <break time="1.2s"/>
+
+Quattro strati. <break time="0.5s"/> Tutti ancora leggibili nei sotterranei. <break time="1.5s"/>
+
+Adesso — <break time="0.3s"/> quello che pochi sanno. <break time="0.5s"/> Mi è stato raccontato da un restauratore che lavorò qui negli anni Novanta, <break time="0.3s"/> mentre veniva a pregare in basilica la domenica. <break time="1.0s"/>
+
+Quando aprirono certi vani sotterranei che erano stati murati per secoli, <break time="0.3s"/> trovarono dentro graffiti dei prigionieri. <break time="0.6s"/> Scritte sulle pareti di pietra, <break time="0.3s"/> lasciate da gente chiusa qui sotto per anni e anni. <break time="0.5s"/> Date — <break time="0.3s"/> alcune del Cinquecento, <break time="0.3s"/> alcune del Seicento. <break time="0.5s"/> Nomi. <break time="0.4s"/> Frasi in italiano antico, <break time="0.3s"/> in latino, <break time="0.3s"/> in dialetto. <break time="0.5s"/> Croci, <break time="0.3s"/> mani aperte come ex-voto. <break time="0.5s"/> Un prigioniero aveva inciso, <break time="0.3s"/> con un chiodo o un pezzo di metallo, <break time="0.3s"/> una galera. <break time="0.5s"/> Una nave. <break time="0.5s"/> Forse il mestiere che faceva, <break time="0.3s"/> forse il sogno di scappare via per mare. <break time="0.4s"/> Forse tutti e due. <break time="1.5s"/>
+
+Quei graffiti sono ancora lì. <break time="0.5s"/> Pochi turisti li vedono, <break time="0.3s"/> perché stanno in stanze del castello che non sono nel percorso normale. <break time="0.5s"/> Ma se chiedi a una guida buona, <break time="0.3s"/> ti porta a vederli. <break time="0.4s"/> Vale la fatica. <break time="1.2s"/>
+
+Te lo dico così — <break time="0.3s"/> perché secondo me quello è il vero potere dei sotterranei di Bari. <break time="0.6s"/> Sopra ci sono i monumenti — <break time="0.3s"/> belli, <break time="0.3s"/> intatti, <break time="0.3s"/> lucidi per i turisti. <break time="0.5s"/> Sotto ci sono le tracce delle persone vere. <break time="0.6s"/> Pellegrini di mille anni fa che pregavano davanti a un mosaico. <break time="0.5s"/> Servi dei Romani che riempivano le cisterne. <break time="0.5s"/> Prigionieri svevi e aragonesi che incidevano una galera sulla parete <break time="0.3s"/> sperando di rivedere il mare. <break time="1.5s"/>
+
+Sotto Bari, ragazzo mio, <break time="0.3s"/> non ci sono solo pietre vecchie. <break time="0.5s"/> Ci sono persone vecchie. <break time="0.5s"/> Persone che hanno fatto la vita loro qui sopra, <break time="0.3s"/> e che sono passate da qua sotto. <break time="0.5s"/> In tomba, <break time="0.3s"/> in cella, <break time="0.3s"/> in cantina, <break time="0.3s"/> in cripta. <break time="0.5s"/> Bari sotterranea è la Bari degli sconosciuti. <break time="1.5s"/>
+
+Una cosa, <break time="0.3s"/> prima di chiudere. <break time="0.5s"/> Federico II, <break time="0.3s"/> quello svevo. <break time="0.5s"/> Il restauratore mi disse una volta una cosa che mi è rimasta. <break time="0.5s"/> Disse: <break time="0.4s"/> "Sai Rosa, <break time="0.3s"/> Federico veniva a Bari soprattutto d'inverno. <break time="0.5s"/> Perché in Sicilia faceva troppo caldo per lui, <break time="0.3s"/> e in Germania troppo freddo. <break time="0.5s"/> A Bari il clima era giusto." <break time="0.6s"/> Federico II, <break time="0.3s"/> l'imperatore di mezzo mondo, <break time="0.3s"/> sceglieva Bari per stare bene. <break time="0.5s"/> Stava in queste sale, <break time="0.3s"/> mangiava in queste cucine, <break time="0.3s"/> dormiva in queste stanze sotterranee. <break time="1.2s"/>
+
+Ottocento anni dopo, <break time="0.3s"/> tu cammini sopra dove camminava lui. <break time="0.5s"/> Sciamaninn, <break time="0.3s"/> vai a fare la foto al castello — <break time="0.3s"/> io intanto chiudo il discorso. <break time="2.0s"/>
+
+=====================================
+OUTRO — ADESSO CAMMINI DIVERSO
+-------------
+voice: rosa
+
+Allora. <break time="0.5s"/> Abbiamo finito. <break time="1.0s"/>
+
+Hai visto la cripta di San Nicola — <break time="0.3s"/> colonne romane riusate, <break time="0.3s"/> mosaici bizantini, <break time="0.3s"/> ossa di un santo che fa pace tra religioni. <break time="0.6s"/>
+
+Hai visto il succorpo del San Sabino — <break time="0.3s"/> quattro strati di chiese, <break time="0.3s"/> una sopra l'altra, <break time="0.3s"/> e una colonnina rotta del quinto secolo che è più importante di me. <break time="0.6s"/>
+
+Hai visto le griglie di Piazza Mercantile — <break time="0.3s"/> sotto i tuoi piedi l'acqua dei Romani che nessuno guarda mentre prende l'aperitivo. <break time="0.6s"/>
+
+Hai visto i sotterranei del Castello Svevo — <break time="0.3s"/> dove un prigioniero, <break time="0.3s"/> secoli fa, <break time="0.3s"/> incise una galera sognando di scappare per mare. <break time="1.2s"/>
+
+Adesso quando cammini sopra Bari, <break time="0.3s"/> sai cosa c'è sotto. <break time="0.5s"/> Non vedi più la stessa città. <break time="0.5s"/> Vedi una stratigrafia. <break time="0.4s"/> Vedi le persone che sono passate. <break time="0.4s"/> Vedi il tempo. <break time="1.5s"/>
+
+Ti saluto. <break time="0.5s"/> E un consiglio — <break time="0.3s"/> quando torni a Bari, <break time="0.3s"/> fai un salto in basilica. <break time="0.6s"/> A me non mi troverai, <break time="0.3s"/> sono andata in pensione, <break time="0.5s"/> ma quando entri e scendi nella cripta, <break time="0.3s"/> e tocchi una di quelle colonne — <break time="0.3s"/> pensa a me, <break time="0.3s"/> che le ho lucidate per cinquant'anni. <break time="0.6s"/> È come se ti tenessi un po' la mano io. <break time="1.5s"/>
+
+Buon viaggio. <break time="0.5s"/> Rosa. <break time="2.0s"/>
+
+=====================================
+NOTE PRODUZIONE
+-------------
+- Voce: clone "Rosa la Perpetua" (donna anziana barese, registro confidenziale-popolare)
+- Stile vocale: caldo, intimo, ritmo medio-lento, pause respiro lunghe (gestite da SSML)
+- Pronunce attese:
+  · "Sciamaninn" → scia-ma-NINN (dialetto barese, accento finale)
+  · "Camìn sciamanìnn" → ca-MIN scia-ma-NINN
+  · "Puer Apuliae" → PU-er a-PU-li-ae (latino)
+  · "Catepanato" → ca-te-pa-NA-to
+  · "Barium" → BA-rium (latino)
+- Riferimenti dialetto: barese (NON napoletano)
+- Durata stimata totale: ~25 min @ 150 wpm (espandibile a 30 min)
+- Correzioni applicate dal feedback:
+  · Rimosso "Rosa" come vocativo (lei è la narratrice)
+  · "il fallimento" (genere maschile)
+  · Outro finale modificato per pensionamento Rosa

@@ -2,8 +2,8 @@
 import { type Lang } from '../lib/i18n';
 
 export interface Author {
-  /** Quartiere assegnato (es. "Bari Vecchia") — sempre richiesto */
-  quartiere: string;
+  /** Titolo della guida che racconta (es. "Bari Vecchia", "Il Meglio di Bari") */
+  guideTitle: string;
   /** Numero ordinale Tav. VI · 01-06 */
   ordinal: string;
   /** Nome reale del narratore. Se vuoto: render placeholder. */
@@ -27,10 +27,10 @@ const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola VI — Gli autori' : 'Plate VI — The authors';
 const heading1 = lang === 'it' ? 'Sei autori baresi.' : 'Six authors from Bari.';
-const heading2 = lang === 'it' ? 'Ognuno racconta il suo angolo di Bari.' : 'Each tells their own corner of Bari.';
+const heading2 = lang === 'it' ? 'Sei voci, sei guide, una sola Bari.' : 'Six voices, six guides, one Bari.';
 const intro = lang === 'it'
-  ? 'Non guide certificate, non copia-incolla Wikipedia. Autori che quei vicoli li hanno vissuti, hanno mangiato in quei panifici, hanno visto cambiare quei mercati. Ogni guida è firmata: nome, archivio, fonti.'
-  : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, archive, sources.';
+  ? 'Non guide certificate, non copia-incolla Wikipedia. Autori che quei vicoli li hanno vissuti, hanno mangiato in quei panifici, hanno visto cambiare quei mercati. Ogni guida è firmata: nome, voce, storia.'
+  : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, voice, story.';
 const draftBadge = lang === 'it' ? 'Profilo in arrivo' : 'Profile coming';
 const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : 'Portrait coming';
 
@@ -39,7 +39,7 @@ const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : 'Portrait coming';
 // `photo` (path /images/authors/<slug>.jpg) e rimuovere `draft: true`.
 const authors: Author[] = [
   {
-    quartiere: 'Bari Vecchia',
+    guideTitle: 'Bari Vecchia',
     ordinal: '01',
     name: 'Domenico Loconsole',
     initials: 'D.L.',
@@ -48,7 +48,7 @@ const authors: Author[] = [
     bioEn: 'Fifty-eight. Old Bari is his second home: at nine, in those alleys, he played iù mont della lun and sguincio — flicking copper beer-bottle caps off the limestone. The stones still know his step.',
   },
   {
-    quartiere: 'Murat',
+    guideTitle: 'Tre Teatri',
     ordinal: '02',
     name: 'Filippo Bellomo',
     initials: 'F.B.',
@@ -57,19 +57,23 @@ const authors: Author[] = [
     bioEn: 'Forty years at the Bari Chamber of Commerce, where everyone knew his name. Father of two, grandfather of four. Murat isn\'t just a neighbourhood for him — it\'s forty years of colleagues, counter-bar coffees, meetings that ended in pizzerias.',
   },
   {
-    quartiere: 'San Nicola',
+    guideTitle: 'San Nicola',
     ordinal: '03',
-    initials: 'SN',
+    name: 'Nicola',
+    initials: 'N.',
+    bioIt: 'Ottantatré anni, cresciuto a Libertà nel dopoguerra — quartiere operaio, mercato, biciclette appoggiate ai muri. San Nicola è il santo che vedeva passare in processione da bambino, prima ancora di sapere cosa volesse dire "protettore".',
+    bioEn: 'Eighty-three years old, raised in Libertà in the post-war years — working-class quarter, market, bicycles leaning on walls. San Nicola is the saint he saw in procession as a child, before he even knew what "protector" meant.',
     draft: true,
   },
   {
-    quartiere: 'Libertà',
+    guideTitle: 'Il Meglio di Bari',
     ordinal: '04',
-    initials: 'LI',
+    name: 'Rachele',
+    initials: 'R.',
     draft: true,
   },
   {
-    quartiere: 'Porto',
+    guideTitle: 'Porto di Bari',
     ordinal: '05',
     name: 'Luigi Loconsole',
     initials: 'L.L.',
@@ -78,9 +82,12 @@ const authors: Author[] = [
     bioEn: 'Fifty-four. Too many years on the water to count. He knows the Port inside, outside, above and below — and the festivals the lungomare remembers worse than he does.',
   },
   {
-    quartiere: 'San Pasquale',
+    guideTitle: 'Bari Sotterranea',
     ordinal: '06',
-    initials: 'SP',
+    name: 'Rosa "la Perpetua"',
+    initials: 'R.P.',
+    bioIt: 'Cinquant\'anni di servizio nella Basilica di San Nicola — a pulire, riordinare, ascoltare. Adesso in pensione, ma le pietre della cripta sa ancora ricordarle a memoria. Una pulita per volta.',
+    bioEn: 'Fifty years of service in the Basilica of San Nicola — cleaning, tidying, listening. Now retired, but she can still recall every stone of the crypt by heart. One wipe at a time.',
     draft: true,
   },
 ];
@@ -95,12 +102,12 @@ function deriveInitials(a: Author): string {
       .map((s) => s[0]?.toUpperCase() ?? '')
       .join('.') + '.';
   }
-  return a.quartiere.split(/\s+/).slice(0, 2).map((s) => s[0]?.toUpperCase() ?? '').join('');
+  return a.guideTitle.split(/\s+/).slice(0, 2).map((s) => s[0]?.toUpperCase() ?? '').join('');
 }
 
 function bioFor(a: Author): string {
-  const draftIt = `Voce confermata per ${a.quartiere}. Nome, foto e bio breve a giorni — il narratore sta finendo le ultime registrazioni di quartiere.`;
-  const draftEn = `Voice confirmed for ${a.quartiere}. Name, photo and short bio coming soon — narrator is finishing local recordings.`;
+  const draftIt = `Voce confermata per "${a.guideTitle}". Foto e bio breve a giorni — il narratore sta finendo le ultime registrazioni.`;
+  const draftEn = `Voice confirmed for "${a.guideTitle}". Photo and short bio coming soon — narrator is finishing recordings.`;
   if (lang === 'it') {
     return a.bioIt ?? draftIt;
   }
@@ -145,13 +152,13 @@ function bioFor(a: Author): string {
                 {a.photo ? (
                   <img
                     src={a.photo}
-                    alt={a.name ? `Ritratto di ${a.name}, narratore di ${a.quartiere}` : `Ritratto in arrivo per ${a.quartiere}`}
+                    alt={a.name ? `Ritratto di ${a.name}, narratore di "${a.guideTitle}"` : `Ritratto in arrivo per "${a.guideTitle}"`}
                     class="author-img"
                     loading="lazy"
                     decoding="async"
                   />
                 ) : (
-                  <div class="author-silhouette" role="img" aria-label={`${photoSoonLabel} — ${a.quartiere}`}>
+                  <div class="author-silhouette" role="img" aria-label={`${photoSoonLabel} — ${a.guideTitle}`}>
                     <span class="silhouette-initials">{initials}</span>
                     <span class="silhouette-label">{photoSoonLabel}</span>
                   </div>
@@ -169,13 +176,13 @@ function bioFor(a: Author): string {
                 <h3 class="author-name font-display text-ink leading-[1.1] m-0">
                   {isPlaceholderName ? (
                     <span class="text-ink-subtle italic font-light">
-                      {lang === 'it' ? 'Voce di' : 'Voice of'} <span class="not-italic font-normal text-ink">{a.quartiere}</span>
+                      {lang === 'it' ? 'Voce di' : 'Voice of'} <span class="not-italic font-normal text-ink">{a.guideTitle}</span>
                     </span>
                   ) : (
                     <>
                       <span class="font-light">{a.name}</span>
                       <span class="block font-body font-normal text-ink-muted text-[0.62em] mt-2xs tracking-normal">
-                        {a.quartiere}
+                        {a.guideTitle}
                       </span>
                     </>
                   )}
