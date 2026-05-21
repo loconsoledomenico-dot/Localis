@@ -7,7 +7,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola IV — I numeri' : 'Plate IV — The numbers';
+const eyebrow = lang === 'it' ? 'Tavola II — Il registro' : 'Plate II — The ledger';
 const heading = lang === 'it'
   ? 'Una sola città. Storie che non si trovano in guida.'
   : 'One city. Stories you won\'t find in guidebooks.';
@@ -26,34 +26,30 @@ const stats = lang === 'it'
       { value: '∞', label: 'replays', tail: 'permanent link, yours forever' },
     ];
 ---
-<section class="stats bg-surface-elev">
-  <div class="max-w-wrap mx-auto px-md sm:px-lg py-3xl lg:py-4xl">
+<section class="stats bg-surface-elev border-y border-border">
+  <div class="max-w-wrap mx-auto px-md sm:px-lg py-xl lg:py-2xl">
 
-    <div class="flex items-center gap-sm mb-md">
+    <div class="flex items-center justify-center gap-sm mb-lg">
       <span class="block w-7 h-px bg-accent"></span>
-      <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+      <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">
         {eyebrow}
       </span>
+      <span class="block w-7 h-px bg-accent"></span>
     </div>
 
-    <h2 class="font-display text-ink text-[clamp(1.7rem,3.6vw,2.5rem)] leading-[1.15] tracking-[-0.012em] max-w-[28ch] mb-2xl">
-      {heading}
-    </h2>
-
-    <dl class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-lg lg:gap-xl m-0 p-0">
+    <dl class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-md lg:gap-lg m-0 p-0">
       {stats.map((s, i) => (
-        <div class="stat-cell" style={`--idx:${i}`}>
+        <div class="stat-cell text-center" style={`--idx:${i}`}>
           <dt class="sr-only">{s.label} — {s.tail}</dt>
           <dd class="m-0 p-0">
             <span
-              class="stat-value block font-display font-light text-accent text-[clamp(3rem,6vw,4.8rem)] leading-none mb-sm"
+              class="stat-value block font-display font-light text-accent text-[clamp(2rem,4vw,3rem)] leading-none mb-2xs"
               style="font-variant-numeric: tabular-nums;"
             >{s.value}</span>
-            <span aria-hidden="true" class="block w-8 h-px bg-border mb-sm"></span>
-            <span class="block font-display text-ink text-[clamp(1.05rem,1.6vw,1.25rem)] leading-tight mb-2xs">
+            <span class="block font-display text-ink text-[clamp(0.92rem,1.2vw,1.05rem)] leading-tight">
               {s.label}
             </span>
-            <span class="block font-body italic text-ink-muted text-sm leading-snug max-w-[26ch]">
+            <span class="block font-body italic text-ink-subtle text-[clamp(0.78rem,1vw,0.88rem)] leading-snug mt-2xs">
               {s.tail}
             </span>
           </dd>

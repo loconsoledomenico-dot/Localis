@@ -18,9 +18,12 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
 >
   <Hero lang="it" />
 
+  {/* STATS — banda sottile, separa l'hero dal resto: 6/0/0/∞ */}
+  <StatsBlock lang="it" />
+
   {/* FEATURE BLOCK — Storie firmate (image left — alterna con Hero che ha foto a destra) */}
   <FeatureBlock
-    eyebrow="Storie · Autori — Tav. II"
+    eyebrow="Storie · Autori — Tav. III"
     heading="Storie firmate."
     italicEnding="Da chi le ha vissute."
     body="Ogni capitolo è ricerca d'archivio firmata da autori baresi. Un cortile, un altare laterale, la Bari sotterranea che nessuno conosce — raccontati da chi in quei vicoli ci è cresciuto."
@@ -32,7 +35,7 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     ]}
     imageSrc="/images/covers/bari-vecchia-passeggiata.jpg"
     imageAlt="Una donna con cappello di paglia cammina lungo un vicolo del Borgo Antico di Bari, colonne romane antiche sulla sinistra"
-    plateNumber="Tav. II"
+    plateNumber="Tav. III"
     caption="Bari Vecchia, mezzogiorno. Le colonne sono tutto ciò che resta di un cortile romano."
     ctaLabel="Conosci gli autori"
     ctaHref="/about"
@@ -40,9 +43,9 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     tiltDeg={-1.5}
   />
 
-  {/* FEATURE BLOCK — Si apre con un link (image right — alterna con FB II) */}
+  {/* FEATURE BLOCK — Si apre con un link (image right — alterna con FB III) */}
   <FeatureBlock
-    eyebrow="Strumento — Tav. III"
+    eyebrow="Strumento — Tav. IV"
     heading="Si apre con un link."
     italicEnding="Ascolti dove vuoi. Niente app."
     body="Acquisti con email e carta. Ti arriva un link permanente: lo apri quando vuoi, premi play, ascolti. In strada mentre cammini, sul divano prima di partire, in treno al ritorno. Sono racconti, non audio museali che descrivono ciò che hai davanti — ti portano dentro Bari, anche se non ci sei ancora."
@@ -57,16 +60,13 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
       src: "/images/covers/smartphone-tilt-l.png",
       alt: "Stesso smartphone in prospettiva inclinata verso sinistra, localis.guide aperto",
     }}
-    plateNumber="Tav. III"
+    plateNumber="Tav. IV"
     caption="Aperto da un link. Senza app."
     ctaLabel="Vedi le guide"
     ctaHref="#guide"
     imageSide="right"
     tiltDeg={1.5}
   />
-
-  {/* STATS — numeri onesti, niente vanity metrics */}
-  <StatsBlock lang="it" />
 
   {/* I sei luoghi — griglia foto, l'unica sezione "scegli la guida" della pagina */}
   <BariMap lang="it" />
