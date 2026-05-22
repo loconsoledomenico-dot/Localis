@@ -7,23 +7,20 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola II — Il registro' : 'Plate II — The ledger';
-const heading = lang === 'it'
-  ? 'Una sola città. Storie che non si trovano in guida.'
-  : 'One city. Stories you won\'t find in guidebooks.';
+const eyebrow = lang === 'it' ? 'Tavola II — Come funziona' : 'Plate II — How it works';
 
-const stats = lang === 'it'
+const items = lang === 'it'
   ? [
-      { value: '6', label: 'autori baresi', tail: 'firmati con nome, foto, bio' },
-      { value: '72+', label: 'fonti pubbliche', tail: 'ogni claim verificabile su /fonti' },
-      { value: '2h 20′', label: 'di racconto', tail: 'sei voci diverse, mai tradotte' },
-      { value: '∞', label: 'riascolti', tail: 'link permanente, tua per sempre' },
+      { value: '~30 min',          label: 'per guida',            tail: 'ascolto comodo, senza fretta' },
+      { value: 'Senza app',        label: 'niente da installare', tail: 'un link, premi play, ascolti' },
+      { value: 'Rimborso 1-click', label: 'entro 24h',            tail: 'scrivi una riga, soldi indietro senza domande' },
+      { value: '€4,99',            label: 'una guida',            tail: 'o bundle da €9,99 / €14,99' },
     ]
   : [
-      { value: '6', label: 'Bari authors', tail: 'signed name, photo, bio' },
-      { value: '72+', label: 'public sources', tail: 'every claim verifiable on /fonti' },
-      { value: '2h 20′', label: 'of storytelling', tail: 'six distinct voices, never translated' },
-      { value: '∞', label: 'replays', tail: 'permanent link, yours forever' },
+      { value: '~30 min',          label: 'per guide',            tail: 'comfortable listen, no rush' },
+      { value: 'No app',           label: 'nothing to install',   tail: 'a link, press play, listen' },
+      { value: '1-click refund',   label: 'within 24h',           tail: 'one line to us, money back, no questions' },
+      { value: '€4.99',            label: 'one guide',            tail: 'or bundle €9.99 / €14.99' },
     ];
 ---
 <section class="stats bg-surface-elev border-y border-border">
@@ -38,13 +35,12 @@ const stats = lang === 'it'
     </div>
 
     <dl class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-md lg:gap-lg m-0 p-0">
-      {stats.map((s, i) => (
+      {items.map((s, i) => (
         <div class="stat-cell text-center" style={`--idx:${i}`}>
           <dt class="sr-only">{s.label} — {s.tail}</dt>
           <dd class="m-0 p-0">
             <span
-              class="stat-value block font-display font-light text-accent text-[clamp(2rem,4vw,3rem)] leading-none mb-2xs"
-              style="font-variant-numeric: tabular-nums;"
+              class="stat-value block font-display font-light text-accent text-[clamp(1.5rem,3vw,2.25rem)] leading-none mb-2xs"
             >{s.value}</span>
             <span class="block font-display text-ink text-[clamp(0.92rem,1.2vw,1.05rem)] leading-tight">
               {s.label}
@@ -56,13 +52,6 @@ const stats = lang === 'it'
         </div>
       ))}
     </dl>
-
-    <p class="stats-guarantee text-center font-body text-[0.82rem] text-ink-subtle mt-lg leading-snug">
-      {lang === 'it'
-        ? <>🛡 <strong class="font-semibold text-ink">Rimborso garantito entro 24h.</strong> Se la guida non ti convince, scrivi una riga — ti ridamo i soldi, senza domande.</>
-        : <>🛡 <strong class="font-semibold text-ink">Full refund within 24h.</strong> If the guide doesn't deliver, one line to us — money back, no questions asked.</>
-      }
-    </p>
   </div>
 </section>
 

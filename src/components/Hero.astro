@@ -42,9 +42,7 @@ const pills: Pill[] = lang === 'it'
       { icon: 'heart',      label: 'Locals only',         tail: 'six signed Bari authors' },
     ];
 
-const microline = lang === 'it'
-  ? '~30 min per guida · senza app · €4,99'
-  : '~30 min per guide · no app · €4.99';
+const microline = null; // rimosso — contenuto spostato in StatsBlock (Tav. II)
 
 const altText = lang === 'it'
   ? 'Una ragazza con cuffie sul lungomare di Bari al tramonto: cattedrale e palazzi storici a destra, sole che cala sul mare a sinistra'
@@ -128,10 +126,6 @@ const altText = lang === 'it'
     </ul>
   </div>
 
-  <!-- Microline strip at very bottom of hero -->
-  <div class="hero-microline">
-    {microline}
-  </div>
 
 </section>
 
@@ -280,18 +274,6 @@ const altText = lang === 'it'
     margin-top: 1px;
   }
 
-  /* Microline at bottom */
-  .hero-microline {
-    position: relative;
-    z-index: 2;
-    padding-inline: var(--side-gutter);
-    padding-block: var(--spacing-md);
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    color: var(--color-ink);
-    letter-spacing: 0.02em;
-  }
-
   /* === Reveal animations === */
   .hero-masthead > span {
     opacity: 0;
@@ -306,8 +288,7 @@ const altText = lang === 'it'
   .hero-h1-b { animation-delay: 0.55s; }
   .hero-lede,
   .hero-actions,
-  .hero-pills,
-  .hero-microline {
+  .hero-pills {
     opacity: 0;
     transform: translateY(10px);
     animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -315,7 +296,6 @@ const altText = lang === 'it'
   .hero-lede     { animation-delay: 0.75s; }
   .hero-actions  { animation-delay: 0.9s; }
   .hero-pills    { animation-delay: 1.05s; }
-  .hero-microline{ animation-delay: 1.2s; }
 
   @keyframes ruleDraw { to { transform: scaleX(1); } }
   @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
@@ -327,7 +307,6 @@ const altText = lang === 'it'
     .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
     .hero-actions { animation-delay: 0.45s; animation-duration: 0.4s; }
     .hero-pills { animation-delay: 0.55s; animation-duration: 0.4s; }
-    .hero-microline { animation-delay: 0.65s; animation-duration: 0.4s; }
     .hero-masthead > span { animation-delay: 0.3s; }
   }
 
@@ -337,8 +316,7 @@ const altText = lang === 'it'
     .hero-h1 > span,
     .hero-lede,
     .hero-actions,
-    .hero-pills,
-    .hero-microline {
+    .hero-pills {
       animation: none;
       transform: none;
       opacity: 1;
