@@ -1,0 +1,374 @@
+---
+import { getCollection } from 'astro:content';
+import { fetchPartnerSales, formatEur } from '../../../lib/referral';
+
+const { slug } = Astro.params;
+
+// Load all partners to find by slug
+const allPartners = await getCollection('partners');
+const partner = allPartners.find((p) => p.data.slug === slug);
+
+// 404 if partner not found
+if (!partner) {
+  return new Response(null, { status: 404 });
+}
+
+// Token check
+const reqToken = new URL(Astro.request.url).searchParams.get('token');
+if (!partner.data.statement_token || reqToken !== partner.data.statement_token) {
+  return new Response(
+    `<html><body style="font-family:monospace;padding:2rem">
+      <h2>401 — Link non valido</h2>
+      <p>Contatta Localis per ricevere il tuo link personale.</p>
+    </body></html>`,
+    { status: 401, headers: { 'Content-Type': 'text/html' } },
+  );
+}
+
+// Fetch only this partner's sales
+const allSales = await fetchPartnerSales();
+const sales = allSales
+  .filter((s) => s.partner_id === slug)
+  .sort((a, b) => b.created.getTime() - a.created.getTime());
+
+const grossTotal = sales.reduce((s, x) => s + x.amount_total, 0);
+const payoutTotal = sales.reduce((s, x) => s + x.payout_due, 0);
+const commissionPct = Math.round((partner.data.commission_rate ?? 0.25) * 100);
+
+const generatedAt = new Date().toLocaleDateString('it-IT', {
+  day: '2-digit', month: 'long', year: 'numeric', timeZone: 'Europe/Rome',
+});
+
+const productLabels: Record<string, string> = {
+  single: 'Singola (€4,99)',
+  essenziale: 'Essenziale (€9,99)',
+  bundle: 'Completa (€14,99)',
+};
+---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estratto conto · {partner.data.display_name} · Localis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: A4 portrait; margin: 20mm 20mm 20mm 20mm; }
+    @media print {
+      body { background: white; padding: 0; }
+      .no-print { display: none !important; }
+      .card { box-shadow: none; border: 1px solid #ddd; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1e1a14;
+      --muted: #5c5240;
+      --accent: #b86a1f;
+      --surface: #faf7f2;
+      --border: #e0d9ce;
+      --green: #1a6e40;
+      --green-bg: #e6f4ec;
+    }
+
+    body {
+      font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+      background: #f0e8dc;
+      color: var(--ink);
+      padding: 2rem;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .sheet {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--surface);
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.12);
+      padding: 48px 56px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1.5px solid var(--border);
+    }
+    .brand {
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    .brand span { color: var(--accent); }
+    .doc-title {
+      text-align: right;
+    }
+    .doc-title h1 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+    }
+    .doc-title .date {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Partner info */
+    .partner-block {
+      margin-bottom: 32px;
+    }
+    .partner-name {
+      font-family: 'Spectral', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .partner-meta {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* KPI row */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .kpi {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .kpi-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .kpi-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .kpi-value.green { color: var(--green); }
+
+    /* Payout box */
+    .payout-box {
+      background: var(--green-bg);
+      border: 1px solid #a8d8be;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .payout-box .label {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--green);
+    }
+    .payout-box .sub {
+      font-size: 12px;
+      color: #2a7a50;
+      margin-top: 3px;
+    }
+    .payout-box .amount {
+      font-family: 'Spectral', serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--green);
+    }
+
+    /* Table */
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th {
+      text-align: left;
+      padding: 8px 12px;
+      background: #ede5d8;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    th:first-child { border-radius: 6px 0 0 6px; }
+    th:last-child { border-radius: 0 6px 6px 0; }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+    }
+    tr:last-child td { border-bottom: none; }
+    .payout-cell { font-weight: 700; color: var(--green); }
+    .tag {
+      font-family: monospace;
+      background: #ede5d8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Print button */
+    .no-print {
+      max-width: 760px;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 18px;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--ink);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <button class="btn" onclick="window.print()">Stampa / Salva PDF</button>
+  </div>
+
+  <div class="sheet">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="brand">Localis<span>.</span></div>
+      <div class="doc-title">
+        <h1>Estratto conto partner</h1>
+        <div class="date">Generato il {generatedAt}</div>
+      </div>
+    </div>
+
+    <!-- Partner info -->
+    <div class="partner-block">
+      <div class="partner-name">{partner.data.display_name}</div>
+      <div class="partner-meta">
+        Programma referral Localis · Commissione {commissionPct}% · Partner dal {partner.data.created_at.toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
+      </div>
+    </div>
+
+    <!-- KPI -->
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Acquisti generati</div>
+        <div class="kpi-value">{sales.length}</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Revenue totale</div>
+        <div class="kpi-value">{formatEur(grossTotal)}</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Tua quota ({commissionPct}%)</div>
+        <div class="kpi-value green">{formatEur(payoutTotal)}</div>
+      </div>
+    </div>
+
+    <!-- Payout highlight -->
+    {payoutTotal > 0 && (
+      <div class="payout-box">
+        <div>
+          <div class="label">Importo da ricevere</div>
+          <div class="sub">Calcolato su {sales.length} {sales.length === 1 ? 'acquisto' : 'acquisti'} attribuiti al tuo QR code</div>
+        </div>
+        <div class="amount">{formatEur(payoutTotal)}</div>
+      </div>
+    )}
+
+    <!-- Tabella vendite -->
+    <h2>Dettaglio vendite</h2>
+
+    {sales.length === 0
+      ? (
+        <div class="empty">
+          Nessuna vendita ancora registrata.<br/>
+          Il contatore parte dalla data di attivazione del tuo QR code.
+        </div>
+      )
+      : (
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Prodotto acquistato</th>
+              <th>Prezzo</th>
+              <th>Tua quota</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sales.map((s) => (
+              <tr>
+                <td>{s.created.toLocaleDateString('it-IT', { day: '2-digit', month: 'short', year: 'numeric' })}</td>
+                <td>{productLabels[s.product] ?? s.product}</td>
+                <td>{formatEur(s.amount_total)}</td>
+                <td class="payout-cell">{formatEur(s.payout_due)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )
+    }
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>localis.guide · info@localis.guide</span>
+      <span>Documento generato automaticamente da Stripe — non è una fattura</span>
+    </div>
+
+  </div>
+
+</body>
+</html>

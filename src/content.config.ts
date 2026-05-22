@@ -74,6 +74,7 @@ const partners = defineCollection({
     commission_rate: z.number().min(0).max(0.5).default(0.25),
     created_at: z.date(),
     status: z.enum(['active', 'paused', 'terminated']),
+    statement_token: z.string().min(8).optional(),
     custom_landing_copy_it: z.string().optional(),
     custom_landing_copy_en: z.string().optional(),
   }),
