@@ -1,0 +1,279 @@
+---
+import { fetchPartnerSales, groupByPartner, formatEur } from '../../lib/referral';
+
+// Simple token-based protection
+const ADMIN_TOKEN = import.meta.env.ADMIN_TOKEN;
+const reqToken = Astro.request.headers.get('x-admin-token')
+  ?? new URL(Astro.request.url).searchParams.get('token');
+
+if (!ADMIN_TOKEN || reqToken !== ADMIN_TOKEN) {
+  return new Response(
+    `<html><body style="font-family:monospace;padding:2rem">
+      <h2>401 — Token mancante o non valido</h2>
+      <p>Aggiungi <code>?token=TUO_ADMIN_TOKEN</code> all'URL.</p>
+    </body></html>`,
+    { status: 401, headers: { 'Content-Type': 'text/html' } },
+  );
+}
+
+// Optional: filter from date via ?from=YYYY-MM-DD
+const fromParam = new URL(Astro.request.url).searchParams.get('from');
+const createdAfter = fromParam ? new Date(fromParam) : undefined;
+
+let sales: Awaited<ReturnType<typeof fetchPartnerSales>> = [];
+let summaries: ReturnType<typeof groupByPartner> = [];
+let error: string | null = null;
+
+try {
+  sales = await fetchPartnerSales(createdAfter);
+  summaries = groupByPartner(sales);
+} catch (err) {
+  error = err instanceof Error ? err.message : String(err);
+}
+
+const totalGross = summaries.reduce((s, p) => s + p.gross_total, 0);
+const totalPayout = summaries.reduce((s, p) => s + p.payout_total, 0);
+const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });
+---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Localis · Admin Referral</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1e1a14;
+      --muted: #5c5240;
+      --accent: #b86a1f;
+      --surface: #faf7f2;
+      --border: #e0d9ce;
+      --green: #1a7a4a;
+      --red: #b02020;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f0e8dc;
+      color: var(--ink);
+      padding: 2rem;
+      font-size: 14px;
+    }
+    h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .meta { color: var(--muted); font-size: 12px; margin-bottom: 2rem; }
+    .meta a { color: var(--accent); }
+
+    .kpi-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      min-width: 150px;
+    }
+    .kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+    .kpi-value { font-size: 1.6rem; font-weight: 700; margin-top: 4px; }
+
+    section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+
+    table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+    th { background: #ede5d8; text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
+    td { padding: 10px 12px; border-top: 1px solid var(--border); vertical-align: top; }
+    tr:hover td { background: #f5ede0; }
+
+    .badge {
+      display: inline-block; padding: 2px 8px; border-radius: 20px;
+      font-size: 11px; font-weight: 600;
+    }
+    .badge-green { background: #d4f0e2; color: var(--green); }
+    .badge-orange { background: #fde8cc; color: var(--accent); }
+
+    .payout { font-weight: 700; color: var(--green); }
+    .tag { font-family: monospace; background: #ede5d8; padding: 1px 6px; border-radius: 4px; font-size: 12px; }
+    .dimmed { color: var(--muted); }
+
+    .detail-toggle { cursor: pointer; color: var(--accent); font-size: 12px; text-decoration: underline; }
+    .detail-rows { display: none; }
+    .detail-rows.open { display: table-row-group; }
+    .detail-row td { background: #faf5ee; font-size: 12px; padding: 7px 12px; }
+
+    .error { background: #fde; border: 1px solid #f99; padding: 1rem; border-radius: 6px; color: var(--red); }
+    .empty { color: var(--muted); font-style: italic; padding: 1rem 0; }
+    .filter-bar { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .filter-bar label { font-size: 12px; color: var(--muted); }
+    .filter-bar input { padding: 5px 8px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px; background: var(--surface); }
+    .filter-bar button { padding: 6px 14px; background: var(--ink); color: white; border: none; border-radius: 4px; font-size: 13px; cursor: pointer; }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .kpi-row { gap: .5rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Localis · Referral Dashboard</h1>
+  <p class="meta">
+    Generata il {generatedAt} · Fonte: Stripe live
+    {fromParam && <span> · Filtro da: <strong>{fromParam}</strong></span>}
+    · <a href="?token={reqToken}">Aggiorna</a>
+  </p>
+
+  {error && <div class="error"><strong>Errore Stripe:</strong> {error}</div>}
+
+  <!-- KPI -->
+  <div class="kpi-row">
+    <div class="kpi">
+      <div class="kpi-label">Partner attivi</div>
+      <div class="kpi-value">{summaries.length}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Vendite referral</div>
+      <div class="kpi-value">{sales.length}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Revenue totale</div>
+      <div class="kpi-value">{formatEur(totalGross)}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Da pagare (25%)</div>
+      <div class="kpi-value" style="color:var(--green)">{formatEur(totalPayout)}</div>
+    </div>
+  </div>
+
+  <!-- Filtro data -->
+  <div class="filter-bar">
+    <label for="from-date">Da data:</label>
+    <input type="date" id="from-date" value={fromParam ?? ''} />
+    <button id="filter-btn">Filtra</button>
+    {fromParam && <a href={`?token=${reqToken}`} style="font-size:12px;color:var(--muted)">Rimuovi filtro</a>}
+  </div>
+
+  <!-- Tabella riepilogo partner -->
+  <section>
+    <h2>Riepilogo per partner</h2>
+    {summaries.length === 0
+      ? <p class="empty">Nessuna vendita con referral trovata{fromParam ? ` dopo il ${fromParam}` : ''}.</p>
+      : (
+        <table>
+          <thead>
+            <tr>
+              <th>Partner</th>
+              <th>Vendite</th>
+              <th>Revenue lordo</th>
+              <th>Da pagare (25%)</th>
+              <th>Dettaglio</th>
+            </tr>
+          </thead>
+          {summaries.map((p) => (
+            <>
+              <tbody>
+                <tr>
+                  <td><span class="tag">{p.partner_id}</span></td>
+                  <td>{p.sales_count}</td>
+                  <td>{formatEur(p.gross_total)}</td>
+                  <td class="payout">{formatEur(p.payout_total)}</td>
+                  <td>
+                    <span
+                      class="detail-toggle"
+                      data-target={`detail-${p.partner_id}`}
+                    >
+                      Mostra vendite ▼
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="detail-rows" id={`detail-${p.partner_id}`}>
+                <tr class="detail-row">
+                  <td colspan="5" style="padding:0">
+                    <table style="width:100%;border-radius:0;border:none">
+                      <thead>
+                        <tr style="background:#e8dfcf">
+                          <th>Data</th>
+                          <th>Session ID</th>
+                          <th>Prodotto</th>
+                          <th>Lordo</th>
+                          <th>Quota partner</th>
+                          <th>Email cliente</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {p.sales.map((s) => (
+                          <tr class="detail-row">
+                            <td>{s.created.toLocaleDateString('it-IT')}</td>
+                            <td><span class="tag" style="font-size:10px">{s.session_id.slice(0, 20)}…</span></td>
+                            <td><span class={`badge ${s.product === 'bundle' ? 'badge-green' : 'badge-orange'}`}>{s.product}</span></td>
+                            <td>{formatEur(s.amount_total)}</td>
+                            <td class="payout">{formatEur(s.payout_due)}</td>
+                            <td class="dimmed">{s.customer_email ?? '—'}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </>
+          ))}
+        </table>
+      )
+    }
+  </section>
+
+  <!-- Tutte le vendite referral (cronologico) -->
+  <section>
+    <h2>Tutte le vendite con referral ({sales.length})</h2>
+    {sales.length === 0
+      ? <p class="empty">Nessuna vendita.</p>
+      : (
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Partner</th>
+              <th>Prodotto</th>
+              <th>Lordo</th>
+              <th>Quota (25%)</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[...sales].sort((a, b) => b.created.getTime() - a.created.getTime()).map((s) => (
+              <tr>
+                <td>{s.created.toLocaleDateString('it-IT')} {s.created.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' })}</td>
+                <td><span class="tag">{s.partner_id}</span></td>
+                <td><span class={`badge ${s.product === 'bundle' ? 'badge-green' : 'badge-orange'}`}>{s.product}</span></td>
+                <td>{formatEur(s.amount_total)}</td>
+                <td class="payout">{formatEur(s.payout_due)}</td>
+                <td class="dimmed">{s.customer_email ?? '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )
+    }
+  </section>
+
+  <script is:inline>
+    // Filter by date
+    document.getElementById('filter-btn')?.addEventListener('click', () => {
+      const d = document.getElementById('from-date').value;
+      const url = new URL(window.location.href);
+      if (d) url.searchParams.set('from', d);
+      else url.searchParams.delete('from');
+      window.location.href = url.toString();
+    });
+
+    // Expand/collapse detail rows
+    document.querySelectorAll('.detail-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const id = toggle.getAttribute('data-target');
+        const tbody = document.getElementById(id);
+        if (!tbody) return;
+        const open = tbody.classList.toggle('open');
+        toggle.textContent = open ? 'Nascondi ▲' : 'Mostra vendite ▼';
+      });
+    });
+  </script>
+</body>
+</html>
