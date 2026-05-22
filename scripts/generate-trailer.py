@@ -74,10 +74,14 @@ def parse_first_chapter(raw: str) -> tuple[str, str]:
         lines = [l.rstrip() for l in block.splitlines()]
         voice_override: str | None = None
         kept: list[str] = []
+        title_skipped = False
         for line in lines:
             m = VOICE_TAG_RE.match(line)
             if m and voice_override is None:
                 voice_override = m.group(1).lower()
+            elif not title_skipped and line.strip() and not m:
+                # skip the chapter title (first non-empty, non-voice line)
+                title_skipped = True
             else:
                 kept.append(line)
         text = "\n".join(kept).strip()
