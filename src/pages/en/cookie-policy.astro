@@ -1,0 +1,88 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+---
+<Layout title="Cookie policy · Localis" lang="en">
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <h1 class="font-display text-3xl text-ink mb-lg">Cookie policy</h1>
+    <p class="text-sm text-ink-subtle mb-2xl">Updated 22 May 2026</p>
+
+    <div class="prose prose-ink max-w-prose">
+      <h2>What are cookies</h2>
+      <p>
+        Cookies are small text files saved in your browser when you visit a website.
+        This page describes which cookies Localis uses, their purpose, and how long they last.
+      </p>
+
+      <h2>Technical cookies (always active)</h2>
+      <p>These cookies are necessary for the site to function. They do not require consent.</p>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Purpose</th><th>Duration</th><th>Provider</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>lg_partner</code></td>
+            <td>Attributes the visit to a partner/affiliate when you arrive via QR code or tracked link. Used only to calculate partner commissions.</td>
+            <td>30 days</td>
+            <td>Localis (first-party)</td>
+          </tr>
+          <tr>
+            <td><code>lg_consent</code></td>
+            <td>Stores your cookie preference (accept/reject). Saved in localStorage, not as an HTTP cookie.</td>
+            <td>Unlimited (localStorage)</td>
+            <td>Localis (first-party)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Analytics cookies (consent required)</h2>
+      <p>
+        Activated only if you clicked <strong>"Accept all"</strong>. You can withdraw consent at any
+        time by clicking <strong>"Manage cookies"</strong> in the footer.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Purpose</th><th>Duration</th><th>Provider</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>_ga</code>, <code>_ga_*</code></td>
+            <td>Google Analytics 4 — measures visits, traffic sources, and user behaviour in aggregate form. IP anonymised.</td>
+            <td>2 years</td>
+            <td>Google LLC (USA — DPF)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Always-active third-party services</h2>
+      <table>
+        <thead>
+          <tr><th>Service</th><th>Purpose</th><th>Cookies</th><th>Provider</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Plausible Analytics</td>
+            <td>Aggregate statistics with no cookies and no personal data. GDPR-compliant without consent.</td>
+            <td>None</td>
+            <td>Plausible Insights OÜ (EU)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Managing cookies</h2>
+      <p>
+        You can change your preferences at any time by clicking <strong>"Manage cookies"</strong>
+        in the footer. You can also disable cookies in your browser:
+      </p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome</a></li>
+        <li><a href="https://support.mozilla.org/kb/enhanced-tracking-protection-firefox-desktop" target="_blank" rel="noopener">Firefox</a></li>
+        <li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Any questions: <a href="mailto:hello@localis.guide">hello@localis.guide</a></p>
+    </div>
+  </article>
+</Layout>

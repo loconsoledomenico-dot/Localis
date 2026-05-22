@@ -43,6 +43,18 @@ const year = new Date().getFullYear();
         {t('footer.privacy', lang)}
       </a>
       <a
+        href={localizedHref('/cookie-policy', lang)}
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
+      >
+        Cookie
+      </a>
+      <button
+        id="cookie-reopen"
+        class="text-sm text-ink-muted hover:text-ink transition-colors duration-fast bg-transparent border-0 p-0 cursor-pointer"
+      >
+        {lang === 'it' ? 'Gestisci cookie' : 'Manage cookies'}
+      </button>
+      <a
         href="mailto:hello@localis.guide"
         class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
       >

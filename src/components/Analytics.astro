@@ -19,56 +19,58 @@ const isProd = import.meta.env.PROD;
 
     {ga4Id && (
       <>
-        {/* Google Analytics 4 — referral-attributed events for QR-code partners */}
-        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
-        <script is:inline define:vars={{ ga4Id }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ window.dataLayer.push(arguments); }
-          window.gtag = gtag;
-          gtag('js', new Date());
-
-          // Resolve partner_id BEFORE config so the first page_view is attributed.
-          // Priority: ?p=<slug> in URL > lg_partner cookie > localStorage.
-          let partnerId = null;
+        {/* GA4 — deferred until cookie consent is given (GDPR Art. 6) */}
+        <script define:vars={{ ga4Id }} is:inline>
+          // Resolve partner_id from URL / cookie / localStorage (no network call yet).
+          let _partnerId = null;
           try {
             const params = new URLSearchParams(window.location.search);
             const p = params.get('p');
             if (p && /^[a-z0-9][a-z0-9-]{2,40}$/i.test(p)) {
-              partnerId = p;
+              _partnerId = p;
             } else {
               const ck = document.cookie.split('; ').find((c) => c.startsWith('lg_partner='));
-              if (ck) partnerId = decodeURIComponent(ck.split('=')[1] || '');
+              if (ck) _partnerId = decodeURIComponent(ck.split('=')[1] || '');
               else {
                 const ls = localStorage.getItem('lg_partner');
-                if (ls) partnerId = ls;
+                if (ls) _partnerId = ls;
               }
             }
           } catch (e) {}
 
-          gtag('config', ga4Id, {
-            anonymize_ip: true,
-            send_page_view: true,
-          });
+          // Called by CookieBanner after consent, or on page load if consent already given.
+          window.localisGA4Init = function () {
+            if (window._ga4Loaded) return;
+            window._ga4Loaded = true;
 
-          // partner_id as user property (sticks across session) AND default event param
-          if (partnerId) {
-            gtag('set', 'user_properties', { partner_id: partnerId });
-            gtag('set', { partner_id: partnerId });
-          } else {
-            gtag('set', 'user_properties', { partner_id: '(direct)' });
-            gtag('set', { partner_id: '(direct)' });
-          }
+            const s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga4Id;
+            document.head.appendChild(s);
 
-          // Unified tracker — fires GA4 + Plausible in one call.
-          window.localisTrack = function (name, params) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ window.dataLayer.push(arguments); }
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', ga4Id, { anonymize_ip: true, send_page_view: true });
+
+            const pid = _partnerId || '(direct)';
+            gtag('set', 'user_properties', { partner_id: pid });
+            gtag('set', { partner_id: pid });
+
+            window.localisTrack = function (name, params) {
+              params = params || {};
+              if (!params.partner_id) params.partner_id = pid;
+              try { if (typeof window.gtag === 'function') window.gtag('event', name, params); } catch (e) {}
+              try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
+            };
+          };
+
+          // Fallback localisTrack (Plausible only) before consent.
+          window.localisTrack = window.localisTrack || function (name, params) {
             params = params || {};
-            if (!params.partner_id) params.partner_id = partnerId || '(direct)';
-            try {
-              if (typeof window.gtag === 'function') window.gtag('event', name, params);
-            } catch (e) {}
-            try {
-              if (typeof window.plausible === 'function') window.plausible(name, { props: params });
-            } catch (e) {}
+            if (!params.partner_id) params.partner_id = _partnerId || '(direct)';
+            try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
           };
         </script>
       </>

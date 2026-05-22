@@ -6,6 +6,7 @@ import Footer from './Footer.astro';
 import StickyPlayer from './StickyPlayer.astro';
 import StructuredData from './StructuredData.astro';
 import Analytics from './Analytics.astro';
+import CookieBanner from './CookieBanner.astro';
 import { type Lang, stripLocalePrefix } from '../lib/i18n';
 import { organizationLD } from '../lib/seo';
 
@@ -51,10 +52,9 @@ const canonical = `${SITE}${currentPath}`;
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.bunny.net/css?family=spectral:300,300i,400,400i,500,500i,600,600i|schibsted-grotesk:400,500,600,700&display=swap"
     rel="stylesheet"
   />
   <Analytics />
@@ -71,6 +71,7 @@ const canonical = `${SITE}${currentPath}`;
   <Footer lang={lang} />
 
   <StickyPlayer lang={lang} />
+  <CookieBanner lang={lang} />
 
   <script is:inline>
     (function() {

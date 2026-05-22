@@ -1,0 +1,113 @@
+---
+import { localizedHref, type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'it' } = Astro.props;
+
+const copy = {
+  it: {
+    text: 'Usiamo cookie analitici (Google Analytics) per capire come viene usato il sito. Puoi accettare o limitarsi ai soli cookie essenziali.',
+    accept: 'Accetta tutto',
+    reject: 'Solo essenziali',
+    policy: 'Cookie policy',
+  },
+  en: {
+    text: 'We use analytics cookies (Google Analytics) to understand how the site is used. You can accept or limit to essential cookies only.',
+    accept: 'Accept all',
+    reject: 'Essential only',
+    policy: 'Cookie policy',
+  },
+};
+
+const c = copy[lang];
+const policyHref = localizedHref('/cookie-policy', lang);
+---
+
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-label={lang === 'it' ? 'Preferenze cookie' : 'Cookie preferences'}
+  aria-live="polite"
+  class="fixed bottom-0 left-0 right-0 z-50 bg-surface border-t border-border shadow-lg px-md py-md hidden"
+>
+  <div class="max-w-wrap mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-md justify-between">
+    <p class="text-sm text-ink-muted flex-1">
+      {c.text}
+      <a href={policyHref} class="underline hover:text-ink ml-xs">{c.policy}</a>.
+    </p>
+    <div class="flex gap-sm shrink-0">
+      <button
+        id="cookie-reject"
+        class="text-sm px-md py-xs border border-border rounded hover:border-ink transition-colors duration-fast text-ink-muted hover:text-ink"
+      >
+        {c.reject}
+      </button>
+      <button
+        id="cookie-accept"
+        class="text-sm px-md py-xs bg-ink text-surface rounded hover:opacity-90 transition-opacity duration-fast"
+      >
+        {c.accept}
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const CONSENT_KEY = 'lg_consent';
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const rejectBtn = document.getElementById('cookie-reject');
+
+    function getConsent() {
+      try {
+        const raw = localStorage.getItem(CONSENT_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch { return null; }
+    }
+
+    function saveConsent(analytics: boolean) {
+      try {
+        localStorage.setItem(CONSENT_KEY, JSON.stringify({ analytics, ts: Date.now() }));
+      } catch {}
+    }
+
+    function hideBanner() {
+      banner?.classList.add('hidden');
+    }
+
+    function loadGA4() {
+      // GA4 is already injected conditionally in Analytics.astro;
+      // fire the deferred init if window.localisGA4Init was set.
+      if (typeof (window as any).localisGA4Init === 'function') {
+        (window as any).localisGA4Init();
+      }
+    }
+
+    // Show banner only if no consent stored yet.
+    if (!getConsent()) {
+      banner?.classList.remove('hidden');
+    } else if (getConsent()?.analytics) {
+      loadGA4();
+    }
+
+    acceptBtn?.addEventListener('click', () => {
+      saveConsent(true);
+      hideBanner();
+      loadGA4();
+    });
+
+    rejectBtn?.addEventListener('click', () => {
+      saveConsent(false);
+      hideBanner();
+    });
+
+    // "Gestisci cookie" / "Manage cookies" button in footer re-opens the banner.
+    document.getElementById('cookie-reopen')?.addEventListener('click', () => {
+      banner?.classList.remove('hidden');
+    });
+  })();
+</script>

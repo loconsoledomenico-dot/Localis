@@ -18,6 +18,10 @@ const labels = lang === 'it' ? {
   submit: 'Diventa partner',
   submitting: 'Invio in corso...',
   success: 'Richiesta ricevuta. Ti contattiamo entro 48 ore.',
+  privacy_label: 'Ho letto l\'',
+  privacy_link: 'informativa privacy',
+  privacy_label2: ' e acconsento al trattamento dei miei dati per essere contattato.',
+  privacy_required: 'Devi accettare l\'informativa privacy per procedere.',
 } : {
   business_name: 'Business name',
   type: 'Type',
@@ -29,6 +33,10 @@ const labels = lang === 'it' ? {
   submit: 'Become a partner',
   submitting: 'Sending...',
   success: 'Request received. We\'ll contact you within 48 hours.',
+  privacy_label: 'I have read the ',
+  privacy_link: 'privacy policy',
+  privacy_label2: ' and consent to my data being processed to receive a reply.',
+  privacy_required: 'You must accept the privacy policy to proceed.',
 };
 ---
 <form id="partner-form" class="flex flex-col gap-md max-w-[28rem]">
@@ -64,6 +72,21 @@ const labels = lang === 'it' ? {
   <div class="flex flex-col gap-2xs">
     <label for="message" class="text-sm font-semibold text-ink">{labels.message}</label>
     <textarea id="message" name="message" rows="3" class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none resize-none"></textarea>
+  </div>
+
+  <div class="flex flex-col gap-2xs">
+    <label class="flex items-start gap-sm text-sm text-ink-muted cursor-pointer">
+      <input
+        type="checkbox"
+        id="privacy_consent"
+        name="privacy_consent"
+        required
+        class="mt-[3px] shrink-0 accent-ink"
+      />
+      <span>
+        {labels.privacy_label}<a href={lang === 'it' ? '/privacy' : '/en/privacy'} target="_blank" class="underline hover:text-ink">{labels.privacy_link}</a>{labels.privacy_label2}
+      </span>
+    </label>
   </div>
 
   <button type="submit" class="px-md py-sm bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast">

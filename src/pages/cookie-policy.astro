@@ -1,0 +1,90 @@
+---
+export const prerender = true;
+import Layout from '../components/Layout.astro';
+---
+<Layout title="Cookie policy · Localis" lang="it">
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <h1 class="font-display text-3xl text-ink mb-lg">Cookie policy</h1>
+    <p class="text-sm text-ink-subtle mb-2xl">Aggiornata il 22 maggio 2026</p>
+
+    <div class="prose prose-ink max-w-prose">
+      <h2>Cosa sono i cookie</h2>
+      <p>
+        I cookie sono piccoli file di testo salvati nel tuo browser quando visiti un sito web.
+        Questa pagina descrive quali cookie usa Localis, per quale scopo e per quanto tempo.
+      </p>
+
+      <h2>Cookie tecnici (sempre attivi)</h2>
+      <p>
+        Questi cookie sono necessari al funzionamento del sito. Non richiedono consenso.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Scopo</th><th>Durata</th><th>Provider</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>lg_partner</code></td>
+            <td>Attribuisce la visita a un partner/affiliato quando arrivi tramite QR code o link tracciato. Usato solo per rendicontare le commissioni dei partner.</td>
+            <td>30 giorni</td>
+            <td>Localis (first-party)</td>
+          </tr>
+          <tr>
+            <td><code>lg_consent</code></td>
+            <td>Salva la tua scelta sulle preferenze cookie (accetta/rifiuta). Salvato in localStorage, non come cookie HTTP.</td>
+            <td>Illimitata (localStorage)</td>
+            <td>Localis (first-party)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Cookie analitici (solo con consenso)</h2>
+      <p>
+        Attivati solo se hai cliccato <strong>"Accetta tutto"</strong>. Puoi revocare il consenso
+        in qualsiasi momento cliccando <strong>"Gestisci cookie"</strong> nel footer.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Scopo</th><th>Durata</th><th>Provider</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>_ga</code>, <code>_ga_*</code></td>
+            <td>Google Analytics 4 — misura visite, sorgenti di traffico e comportamento degli utenti in forma aggregata. IP anonimizzato.</td>
+            <td>2 anni</td>
+            <td>Google LLC (USA — DPF)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Cookie di terze parti sempre attivi</h2>
+      <table>
+        <thead>
+          <tr><th>Servizio</th><th>Scopo</th><th>Cookie</th><th>Provider</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Plausible Analytics</td>
+            <td>Statistiche aggregate senza cookie e senza dati personali. Conforme GDPR senza consenso.</td>
+            <td>Nessun cookie</td>
+            <td>Plausible Insights OÜ (EU)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Come gestire i cookie</h2>
+      <p>
+        Puoi modificare le tue preferenze in qualsiasi momento cliccando <strong>"Gestisci cookie"</strong>
+        nel footer di questa pagina. In alternativa, puoi disabilitare i cookie dal tuo browser:
+      </p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome</a></li>
+        <li><a href="https://support.mozilla.org/kb/enhanced-tracking-protection-firefox-desktop" target="_blank" rel="noopener">Firefox</a></li>
+        <li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+      </ul>
+
+      <h2>Contatti</h2>
+      <p>Per qualsiasi domanda: <a href="mailto:hello@localis.guide">hello@localis.guide</a></p>
+    </div>
+  </article>
+</Layout>
