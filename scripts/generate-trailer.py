@@ -57,6 +57,7 @@ VOICE_MAP: dict[str, str] = {
     "jessica":   "cgSgspJ2msm6clMCkdW9",
     "jane":      "RILOU7YmBhvwJGDGjNmP",
     "custom-alberobello": "G0q9AYE8QsarSbMtaIEu",
+    "custom-locorotondo": "dQgfccebCEXfELidhNvw",
 }
 
 VOICE_SETTINGS = {
