@@ -59,6 +59,11 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
       padding: 2rem;
       font-size: 14px;
     }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
     h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
     .meta { color: var(--muted); font-size: 12px; margin-bottom: 2rem; }
     .meta a { color: var(--accent); }
@@ -112,6 +117,7 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
   </style>
 </head>
 <body>
+<div class="page">
   <h1>Localis · Referral Dashboard</h1>
   <p class="meta">
     Generata il {generatedAt} · Fonte: Stripe live
@@ -275,5 +281,6 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
       });
     });
   </script>
+</div>
 </body>
 </html>
