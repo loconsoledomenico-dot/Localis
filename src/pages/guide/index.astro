@@ -86,31 +86,31 @@ const valleItria: GuideEntry[] = [
     slug: 'alberobello',
     title: 'Alberobello — Dentro i Trulli',
     subtitle: 'La storia fiscale che nessuno ti ha mai raccontato.',
-    duration: '~25 min',
+    duration: '35 min',
     area: 'Valle d\'Itria',
     cover: '/images/covers/alberobello.jpg',
     alt: 'Trulli di Alberobello, Rione Monti',
-    soon: true,
+    price: '€4,99',
   },
   {
     slug: 'locorotondo',
     title: 'Locorotondo — Il Borgo Rotondo',
     subtitle: 'Un vino DOC, le cummerse e l\'olio essenziale di lavanda.',
-    duration: '~25 min',
+    duration: '31 min',
     area: 'Valle d\'Itria',
     cover: '/images/covers/locorotondo.jpg',
     alt: 'Locorotondo, case bianche con tetti a doppio spiovente',
-    soon: true,
+    price: '€4,99',
   },
   {
     slug: 'martina-franca',
     title: 'Martina Franca — La Città Franca',
     subtitle: 'Trecento anni di ducato, raccontati da chi li ha nel sangue.',
-    duration: '~25 min',
+    duration: '30 min',
     area: 'Valle d\'Itria',
     cover: '/images/covers/martina-franca.jpg',
     alt: 'Palazzo Ducale di Martina Franca, cortile barocco',
-    soon: true,
+    price: '€4,99',
   },
 ];
 ---
@@ -189,28 +189,27 @@ const valleItria: GuideEntry[] = [
         <h2 id="area-valle" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
           Valle d'Itria
         </h2>
-        <span class="font-body text-sm text-ink-muted">in arrivo</span>
+        <span class="font-body text-sm text-ink-muted">3 guide live</span>
       </div>
 
       <ol class="guide-grid list-none p-0 m-0">
         {valleItria.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
-            <div class="guide-card is-soon" aria-label={`In arrivo: ${g.title}`}>
+            <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
               <figure class="guide-photo m-0">
-                <div class="guide-soon-placeholder" aria-hidden="true">
-                  <span class="guide-soon-num">{String(i + 1).padStart(2, '0')}</span>
-                  <span class="guide-soon-label">In arrivo</span>
-                </div>
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
                 <span class="guide-scrim" aria-hidden="true">
                   <span class="guide-area">{g.area}</span>
                   <span class="guide-dur">{g.duration}</span>
                 </span>
               </figure>
               <div class="guide-meta">
-                <h3 class="guide-title font-display font-light text-ink-subtle leading-[1.2] m-0">{g.title}</h3>
-                <p class="guide-sub font-body text-sm text-ink-subtle m-0">{g.subtitle}</p>
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
               </div>
-            </div>
+            </a>
           </li>
         ))}
       </ol>
