@@ -22,6 +22,12 @@ const { lang, currentPath } = Astro.props;
 
     <nav class="flex items-center gap-lg">
       <a
+        href={localizedHref('/guide', lang)}
+        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+      >
+        {lang === 'it' ? 'Guide' : 'Guides'}
+      </a>
+      <a
         href={localizedHref('/diventa-partner', lang)}
         class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
       >

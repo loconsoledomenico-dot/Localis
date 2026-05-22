@@ -1,0 +1,339 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import SectionDivider from '../../components/SectionDivider.astro';
+import PriceCard from '../../components/PriceCard.astro';
+
+const lang = 'it';
+
+interface GuideEntry {
+  slug: string;
+  title: string;
+  subtitle: string;
+  duration: string;
+  area: string;
+  cover: string;
+  alt: string;
+  price?: string;
+  soon?: boolean;
+}
+
+const bariGuides: GuideEntry[] = [
+  {
+    slug: 'bari-vecchia',
+    title: 'Bari Vecchia — Dentro la Città',
+    subtitle: 'Il borgo antico, quattromila anni di storia.',
+    duration: '21 min',
+    area: 'Borgo Antico',
+    cover: '/images/covers/bari-vecchia.jpg',
+    alt: 'Vicolo del Borgo Antico di Bari con colonne romane e palazzi storici',
+    price: '€4,99',
+  },
+  {
+    slug: 'san-nicola',
+    title: 'San Nicola — Il Santo Rubato',
+    subtitle: 'Come le ossa di un santo divennero una città.',
+    duration: '30 min',
+    area: 'Borgo Antico',
+    cover: '/images/covers/san-nicola.jpg',
+    alt: 'Processione di San Nicola al tramonto davanti alla Basilica',
+    price: '€4,99',
+  },
+  {
+    slug: 'il-meglio-di-bari',
+    title: 'Il Meglio di Bari — Mangia Prima di Capire',
+    subtitle: 'Orecchiette, sgagliozze e focaccia barese.',
+    duration: '29 min',
+    area: 'Borgo Antico',
+    cover: '/images/covers/il-meglio-di-bari.jpg',
+    alt: 'Strada delle Orecchiette a Bari Vecchia, donne che lavorano la pasta',
+    price: '€4,99',
+  },
+  {
+    slug: 'porto-bari',
+    title: 'Porto di Bari — Dove è Successo Tutto',
+    subtitle: 'Crociati, commercianti, migranti.',
+    duration: '33 min',
+    area: 'Lungomare',
+    cover: '/images/covers/porto-bari.jpg',
+    alt: 'Bari dal alto al tramonto, lungomare e porto turistico',
+    price: '€4,99',
+  },
+  {
+    slug: 'tre-teatri',
+    title: 'I Tre Teatri — Fuoco, Musica e Borghesia',
+    subtitle: 'La Bari che volle diventare città europea.',
+    duration: '28 min',
+    area: 'Murat',
+    cover: '/images/covers/tre-teatri.jpg',
+    alt: 'Teatro Margherita di Bari, edificio liberty sul mare',
+    price: '€4,99',
+  },
+  {
+    slug: 'bari-sotterranea',
+    title: 'Bari Sotterranea — Quello che sta sotto',
+    subtitle: 'Cisterne, catacombe e città sepolta.',
+    duration: '25 min',
+    area: 'Borgo Antico',
+    cover: '/images/covers/bari-sotterranea.jpg',
+    alt: 'Cripta della Basilica di San Nicola, colonne romane e mosaici',
+    price: '€4,99',
+  },
+];
+
+const valleItria: GuideEntry[] = [
+  {
+    slug: 'alberobello',
+    title: 'Alberobello — Dentro i Trulli',
+    subtitle: 'La storia fiscale che nessuno ti ha mai raccontato.',
+    duration: '~25 min',
+    area: 'Valle d\'Itria',
+    cover: '/images/covers/alberobello.jpg',
+    alt: 'Trulli di Alberobello, Rione Monti',
+    soon: true,
+  },
+  {
+    slug: 'locorotondo',
+    title: 'Locorotondo — Il Borgo Rotondo',
+    subtitle: 'Un vino DOC, le cummerse e l\'olio essenziale di lavanda.',
+    duration: '~25 min',
+    area: 'Valle d\'Itria',
+    cover: '/images/covers/locorotondo.jpg',
+    alt: 'Locorotondo, case bianche con tetti a doppio spiovente',
+    soon: true,
+  },
+  {
+    slug: 'martina-franca',
+    title: 'Martina Franca — La Città Franca',
+    subtitle: 'Trecento anni di ducato, raccontati da chi li ha nel sangue.',
+    duration: '~25 min',
+    area: 'Valle d\'Itria',
+    cover: '/images/covers/martina-franca.jpg',
+    alt: 'Palazzo Ducale di Martina Franca, cortile barocco',
+    soon: true,
+  },
+];
+---
+
+<Layout
+  title="Guide — Localis · Audioguide narrative della Puglia"
+  description="Tutte le guide Localis: Bari in sei itinerari, Valle d'Itria con Alberobello, Locorotondo e Martina Franca. Audio narrative da chi ci vive."
+  lang="it"
+>
+  <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+
+    {/* PAGE HEADER */}
+    <header class="mb-3xl max-w-[52ch]">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          Tutte le guide
+        </span>
+      </div>
+      <h1 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(2rem,5vw,3.2rem)]">
+        <span class="font-light">La Puglia</span>
+        <span class="block font-body font-normal text-ink-muted mt-sm text-[clamp(1.1rem,2.2vw,1.45rem)] leading-relaxed tracking-normal">
+          una storia alla volta.
+        </span>
+      </h1>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
+        Non un catalogo. Una collezione di voci: baresi, martinesi, vignaioli, discendenti. Ogni guida è scritta da chi quei posti li vive.
+      </p>
+    </header>
+
+    {/* ——— BARI ——— */}
+    <section class="mb-3xl lg:mb-4xl" aria-labelledby="area-bari">
+      <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
+        <h2 id="area-bari" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
+          Bari
+        </h2>
+        <span class="font-body text-sm text-ink-muted">6 guide live</span>
+      </div>
+
+      <ol class="guide-grid list-none p-0 m-0">
+        {bariGuides.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+              <figure class="guide-photo m-0">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-area">{g.area}</span>
+                  <span class="guide-dur">{g.duration}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+
+      {/* Bari bundle pricing */}
+      <div class="mt-2xl">
+        <SectionDivider label="Bundle Bari" />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
+          <PriceCard product="single" guideSlug="bari-vecchia" lang="it" features={['Una guida a tua scelta','Accesso illimitato, per sempre','Italiano e inglese','Rimborso 1-click entro 24h']} />
+          <PriceCard product="essenziale" lang="it" features={['Bari Vecchia · San Nicola · Il Meglio di Bari','~1h 20min di racconto · 3 voci diverse','Italiano e inglese','Rimborso 1-click entro 24h']} />
+          <PriceCard product="bundle" lang="it" primary features={['Tutte le 6 guide di Bari','~2h 20min di racconto · 6 voci diverse','Risparmi €14,95 vs guide singole','Rimborso 1-click entro 24h']} />
+        </div>
+      </div>
+    </section>
+
+    {/* ——— VALLE D'ITRIA ——— */}
+    <section aria-labelledby="area-valle">
+      <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
+        <h2 id="area-valle" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
+          Valle d'Itria
+        </h2>
+        <span class="font-body text-sm text-ink-muted">in arrivo</span>
+      </div>
+
+      <ol class="guide-grid list-none p-0 m-0">
+        {valleItria.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <div class="guide-card is-soon" aria-label={`In arrivo: ${g.title}`}>
+              <figure class="guide-photo m-0">
+                <div class="guide-soon-placeholder" aria-hidden="true">
+                  <span class="guide-soon-num">{String(i + 1).padStart(2, '0')}</span>
+                  <span class="guide-soon-label">In arrivo</span>
+                </div>
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-area">{g.area}</span>
+                  <span class="guide-dur">{g.duration}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink-subtle leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-subtle m-0">{g.subtitle}</p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+  </div>
+</Layout>
+
+<style>
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg) var(--spacing-lg);
+    row-gap: var(--spacing-2xl);
+  }
+  @media (min-width: 640px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .guide-cell {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: guideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 80ms + 100ms);
+  }
+
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-decoration: none;
+    color: inherit;
+    border-top: 1px solid var(--color-ink);
+    padding-top: var(--spacing-md);
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .guide-card:hover { transform: translateY(-2px); }
+  .guide-card.is-soon {
+    border-top-style: dashed;
+    border-top-color: var(--color-border);
+    cursor: default;
+  }
+
+  .guide-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: var(--color-surface-elev);
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08), 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
+    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .guide-card:nth-child(6n+1) .guide-photo { transform: rotate(-1deg); }
+  .guide-card:nth-child(6n+2) .guide-photo { transform: rotate(0.8deg); }
+  .guide-card:nth-child(6n+3) .guide-photo { transform: rotate(-0.6deg); }
+  .guide-card:nth-child(6n+4) .guide-photo { transform: rotate(1.1deg); }
+  .guide-card:nth-child(6n+5) .guide-photo { transform: rotate(-0.8deg); }
+  .guide-card:nth-child(6n+6) .guide-photo { transform: rotate(0.6deg); }
+  .guide-card:hover .guide-photo,
+  .guide-card:focus-visible .guide-photo {
+    transform: rotate(0deg) scale(1.01);
+    box-shadow: 0 2px 4px oklch(15% 0.012 240 / 0.12), 0 24px 48px -16px oklch(15% 0.012 240 / 0.22);
+  }
+
+  .guide-img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    filter: saturate(0.94) contrast(1.04);
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .guide-card:hover .guide-img { transform: scale(1.03); }
+
+  .guide-soon-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-sm);
+    background: radial-gradient(ellipse at 50% 40%, oklch(78% 0.012 75) 0%, oklch(78% 0.012 75) 28%, transparent 48%), var(--color-surface-elev);
+  }
+  .guide-soon-num {
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: clamp(4rem, 9vw, 6rem); line-height: 1; color: var(--color-accent);
+    letter-spacing: -0.04em; user-select: none; opacity: 0.55;
+  }
+  .guide-soon-label {
+    font-family: var(--font-body); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.32em; text-transform: uppercase; color: var(--color-ink-subtle);
+  }
+
+  .guide-num {
+    position: absolute; top: var(--spacing-sm); left: var(--spacing-sm);
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: clamp(2.4rem, 4.4vw, 3.2rem); line-height: 0.85;
+    color: var(--color-surface); letter-spacing: -0.04em;
+    text-shadow: 0 1px 8px oklch(15% 0.012 240 / 0.55);
+    pointer-events: none; user-select: none;
+  }
+  .guide-price {
+    position: absolute; top: var(--spacing-sm); right: var(--spacing-sm);
+    font-family: var(--font-body); font-size: 0.8125rem; font-weight: 700;
+    color: var(--color-ink); background: var(--color-surface);
+    border: 1px solid var(--color-accent); padding: 4px 10px 5px; line-height: 1.2;
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.18);
+    pointer-events: none; user-select: none; z-index: 1;
+  }
+  .guide-scrim {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: linear-gradient(to top, oklch(15% 0.012 240 / 0.78), transparent 100%);
+    color: var(--color-surface); font-family: var(--font-body);
+    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    pointer-events: none;
+  }
+  .guide-area { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .guide-dur { flex-shrink: 0; color: var(--color-accent-soft); }
+
+  .guide-meta { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+  .guide-title { font-size: clamp(1.1rem, 2.4vw, 1.35rem); }
+  .guide-sub { line-height: 1.5; }
+
+  .guide-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 2px; }
+
+  @keyframes guideIn { to { opacity: 1; transform: translateY(0); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .guide-cell, .guide-card, .guide-img { animation: none !important; transition: none !important; opacity: 1; transform: none; }
+  }
+</style>
