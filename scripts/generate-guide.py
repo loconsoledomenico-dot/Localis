@@ -81,6 +81,8 @@ VOICE_MAP: dict[str, str] = {
     "callum":   "N2lVS1w4EtoT3dr4eOWO",  # Callum — husky trickster, gravelly american
     "jessica":  "cgSgspJ2msm6clMCkdW9",  # Jessica — american female young playful, bright, warm (Rachele EN)
     "jane":     "RILOU7YmBhvwJGDGjNmP",  # Jane — british female 50s, audiobook narrator, warm cadence (Rosa la Perpetua EN)
+    # Custom cloned voices
+    "custom-alberobello": "G0q9AYE8QsarSbMtaIEu",  # Concetta — massaia Rione Aia Piccola, Alberobello IT
 }
 
 # Cost: ElevenLabs Creator plan = $22/mo for 100k chars. ~$0.00022 per char.
