@@ -23,7 +23,7 @@ const { lang, currentPath } = Astro.props;
     <nav class="flex items-center gap-lg">
       <a
         href={localizedHref('/guide', lang)}
-        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
       >
         {lang === 'it' ? 'Guide' : 'Guides'}
       </a>
