@@ -54,9 +54,20 @@ const guides: GuideEntry[] = [
   lang="it"
 >
 
-  {/* PAGE HEADER */}
-  <section class="bg-surface border-b border-border">
-    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+  {/* PAGE HEADER — hero con immagine */}
+  <section class="valle-hero relative overflow-hidden border-b border-border">
+    <img
+      src="/images/covers/valle-d-itria-landing.jpg"
+      alt="Valle d'Itria, trulli e vigneti sotto il sole di Puglia"
+      class="valle-hero-bg"
+      width="1980"
+      height="900"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="valle-hero-scrim" aria-hidden="true"></div>
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
@@ -71,6 +82,45 @@ const guides: GuideEntry[] = [
       </p>
     </div>
   </section>
+
+  <style>
+    .valle-hero {
+      min-height: clamp(280px, 42vh, 480px);
+      display: flex;
+      align-items: center;
+    }
+    .valle-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: saturate(0.92) contrast(1.04);
+    }
+    .valle-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        oklch(from var(--color-surface) l c h / 0.88) 0%,
+        oklch(from var(--color-surface) l c h / 0.65) 35%,
+        oklch(from var(--color-surface) l c h / 0.18) 70%,
+        oklch(from var(--color-surface) l c h / 0) 100%
+      );
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .valle-hero-scrim {
+        background: linear-gradient(
+          to bottom,
+          oklch(from var(--color-surface) l c h / 0.92) 0%,
+          oklch(from var(--color-surface) l c h / 0.72) 60%,
+          oklch(from var(--color-surface) l c h / 0.5) 100%
+        );
+      }
+    }
+  </style>
 
   {/* GUIDE GRID */}
   <section class="bg-surface">
