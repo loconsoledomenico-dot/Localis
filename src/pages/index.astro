@@ -7,8 +7,7 @@ import SectionDivider from '../components/SectionDivider.astro';
 import FeatureBlock from '../components/FeatureBlock.astro';
 import StatsBlock from '../components/StatsBlock.astro';
 import StepsBlock from '../components/StepsBlock.astro';
-import AuthorsBlock from '../components/AuthorsBlock.astro';
-import BariMap from '../components/BariMap.astro';
+import DestinationsBlock from '../components/DestinationsBlock.astro';
 import MobileStickyCTA from '../components/MobileStickyCTA.astro';
 ---
 <Layout
@@ -56,8 +55,8 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     </div>
   </section>
 
-  {/* I sei luoghi — griglia foto, l'unica sezione "scegli la guida" della pagina */}
-  <BariMap lang="it" />
+  {/* DESTINAZIONI — le 3 zone come card */}
+  <DestinationsBlock lang="it" />
 
   {/* PRICING — subito dopo le 6 schede, momento decisione single vs bundle */}
   <section id="prezzi" class="bg-surface">
@@ -121,9 +120,6 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
     mobileAspect="3 / 2"
     framedImage
   />
-
-  {/* TAVOLE AUTORI — voci baresi, una per quartiere */}
-  <AuthorsBlock lang="it" />
 
   {/* 3-PASSI — onboarding chiaro prima della chiusura */}
   <StepsBlock lang="it" ctaHref="/guide/bari-vecchia" />

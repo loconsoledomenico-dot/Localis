@@ -10,18 +10,18 @@ const { lang, ctaHref = '#guide' } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'In tre minuti, sei dentro' : 'Three minutes in, you\'re there';
 const heading = lang === 'it' ? 'Tre passi.' : 'Three steps.';
-const headingItalic = lang === 'it' ? 'Una città che parla, quando vuoi tu.' : 'A city that speaks, whenever you want.';
+const headingItalic = lang === 'it' ? 'Una terra che parla, quando vuoi tu.' : 'A land that speaks, whenever you want.';
 
 const steps = lang === 'it'
   ? [
-      { n: '1', title: 'Apri il link', body: 'Dal porto, dal treno, dal divano di casa.' },
-      { n: '2', title: 'Scegli l\'itinerario', body: 'Bari Vecchia, Porto, San Nicola, Teatri, Sotterranea — o tutto insieme.' },
-      { n: '3', title: 'Premi play', body: 'Le storie partono. Tu ascolti, ti perdi nei vicoli — anche da fermo.' },
+      { n: '1', title: 'Scegli la destinazione', body: 'Bari, Valle d\'Itria, Gargano — ogni zona ha la sua guida.' },
+      { n: '2', title: 'Apri il link', body: 'Niente app. Compri, ti arriva un link, premi play.' },
+      { n: '3', title: 'Ascolta', body: 'Le storie partono. In strada, sul divano, in treno — ovunque.' },
     ]
   : [
-      { n: '1', title: 'Open the link', body: 'From the harbour, the train, your own couch.' },
-      { n: '2', title: 'Pick a route', body: 'Old Bari, Port, San Nicola, Theatres, Underground — or all of them.' },
-      { n: '3', title: 'Press play', body: 'The stories begin. You listen, you wander — even sitting still.' },
+      { n: '1', title: 'Choose a destination', body: 'Bari, Valle d\'Itria, Gargano — every zone has its own guide.' },
+      { n: '2', title: 'Open the link', body: 'No app. Buy, get a link, press play.' },
+      { n: '3', title: 'Listen', body: 'The stories begin. On the street, on the couch, on the train — anywhere.' },
     ];
 
 const ctaLabel = lang === 'it' ? 'Inizia ora · gratis i primi 60 secondi' : 'Start now · first 60 seconds free';
