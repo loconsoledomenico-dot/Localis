@@ -8,20 +8,20 @@ export interface Props {
 const { lang } = Astro.props;
 
 const masthead_l = lang === 'it' ? 'Edizione 01 — Bari' : 'Edition 01 — Bari';
-const masthead_r = lang === 'it' ? 'Sei guide live · edizione completa' : 'Six guides live · full edition';
+const masthead_r = lang === 'it' ? 'Guide live · Puglia' : 'Live guides · Puglia';
 
 const heading1a = lang === 'it' ? 'Audioguide raccontate' : 'Audio guides told';
 const heading1b = lang === 'it' ? 'da chi ci è nato.' : 'by people born there.';
 
 const lede1 = lang === 'it'
-  ? 'I baresi ti raccontano la loro città.'
-  : 'Locals telling their own city.';
+  ? 'I locali ti raccontano la loro terra.'
+  : 'Locals telling their own land.';
 const lede2 = lang === 'it'
   ? 'Quella vera, mica le brochure.'
   : 'The real one — not the brochure version.';
 
-const ctaPrimary = lang === 'it' ? 'Ascolta un assaggio · 60 secondi gratis' : 'Listen a teaser · 60s free';
-const ctaPrimaryHref = lang === 'it' ? '/guide/bari-vecchia' : '/en/guide/bari-vecchia';
+const ctaPrimary = lang === 'it' ? 'Scopri le guide' : 'Explore the guides';
+const ctaPrimaryHref = lang === 'it' ? '/guide' : '/en/guide';
 const ctaSecondary = lang === 'it' ? 'Vedi le guide' : 'See the guides';
 
 interface Pill {
@@ -41,8 +41,6 @@ const pills: Pill[] = lang === 'it'
       { icon: 'pin',        label: 'True stories',       tail: 'tied to real places' },
       { icon: 'heart',      label: 'Locals only',         tail: 'six signed Bari authors' },
     ];
-
-const microline = null; // rimosso — contenuto spostato in StatsBlock (Tav. II)
 
 const altText = lang === 'it'
   ? 'Una ragazza con cuffie sul lungomare di Bari al tramonto: cattedrale e palazzi storici a destra, sole che cala sul mare a sinistra'
