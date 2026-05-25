@@ -189,6 +189,84 @@ const guides: GuideEntry[] = [
     </div>
   </section>
 
+  {/* NARRATORS */}
+  <section class="bg-surface border-t border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center justify-center gap-sm mb-2xl">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">The voices of Gargano</span>
+        <span class="block w-7 h-px bg-accent"></span>
+      </div>
+      <ul class="narr-grid list-none p-0 m-0">
+        {[
+          { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Third generation beach club, Vieste', bio: "Fifty-four. Her family has run the same beach club since her grandfather's time. She has watched this coastline change more in sixty years than in the six hundred before.", guide: 'Vieste', href: '/en/guide/gargano-vieste' },
+          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Fourth generation trabucco fisherman', bio: 'Sixty-eight, from Peschici. On the family trabucco since he was eleven. He knows the Gargano sea by heart — every current, every hour of the day.', guide: 'North Coast', href: '/en/guide/gargano-nord' },
+          { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Thirty years at the Sanctuary of Monte Sant\'Angelo', bio: "Seventy-three. Franciscan friar since 1978. He has guided pilgrims from the Foresta Umbra to the Archangel's grotto — on foot, as they did in the Middle Ages.", guide: 'Sacred Gargano', href: '/en/guide/gargano-sacro' },
+          { name: 'Tonino', photo: '/images/authors/tonino-tremiti.jpg', role: 'Boatman of San Domino', bio: "Seventy-four. Born on the Tremiti Islands, never left. For twenty years he took Lucio Dalla around the sea caves. He knows every cove, every reef, every current of the archipelago.", guide: 'Tremiti Islands', href: '/en/guide/gargano-tremiti' },
+          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Park ranger for thirty years', bio: "Fifty-eight, from Vico del Gargano. Thirty years in the Gargano National Park. He knows the inland villages like few others — the roads, the stories, the names of abandoned farmsteads.", guide: 'The Villages', href: '/en/guide/gargano-paesi' },
+          { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Thirty years in salt quality control', bio: "Fifty-four, from Manfredonia. Thirty years at the Margherita di Savoia salt works. He has seen the basins at every possible hour — from the pink July dawn to the December fog.", guide: 'Salt Flats', href: '/en/guide/gargano-saline' },
+        ].map((n) => (
+          <li class="narr-cell">
+            <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} — ${n.name}'s voice`}>
+              <figure class="narr-photo m-0">
+                <img src={n.photo} alt={`Portrait of ${n.name}`} loading="lazy" decoding="async" />
+              </figure>
+              <div class="narr-text">
+                <p class="narr-guide font-body text-[10px] font-semibold tracking-[0.22em] uppercase text-accent m-0">{n.guide}</p>
+                <h3 class="narr-name font-display font-light text-ink m-0">{n.name}</h3>
+                <p class="narr-role font-body text-xs text-ink-subtle m-0">{n.role}</p>
+                <p class="narr-bio font-body text-sm text-ink-muted m-0 mt-xs">{n.bio}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <style>
+    .narr-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: var(--spacing-2xl);
+    }
+    @media (min-width: 640px) { .narr-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .narr-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .narr-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      text-decoration: none;
+      color: inherit;
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--spacing-md);
+      transition: opacity 0.2s;
+    }
+    .narr-card:hover { opacity: 0.82; }
+    .narr-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 2px; }
+
+    .narr-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: var(--color-surface-elev);
+      box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.06), 0 8px 24px -8px oklch(15% 0.012 240 / 0.14);
+    }
+    .narr-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: grayscale(100%) contrast(1.05) brightness(0.97);
+    }
+    .narr-text { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+    .narr-name { font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.1; }
+    .narr-bio { line-height: 1.55; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .narr-card { transition: none; }
+    }
+  </style>
+
   {/* PRICING */}
   <section id="prezzi" class="bg-surface-elev border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
