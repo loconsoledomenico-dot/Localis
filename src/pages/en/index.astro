@@ -7,8 +7,7 @@ import SectionDivider from '../../components/SectionDivider.astro';
 import FeatureBlock from '../../components/FeatureBlock.astro';
 import StatsBlock from '../../components/StatsBlock.astro';
 import StepsBlock from '../../components/StepsBlock.astro';
-import AuthorsBlock from '../../components/AuthorsBlock.astro';
-import BariMap from '../../components/BariMap.astro';
+import DestinationsBlock from '../../components/DestinationsBlock.astro';
 import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
 ---
 <Layout
@@ -26,10 +25,10 @@ import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
     eyebrow="Stories · Authors — Plate III"
     heading="Signed stories."
     italicEnding="By those who lived them."
-    body="Every chapter is archival research signed by Bari authors. A courtyard, a side altar, the underground Bari nobody knows — told by people who grew up in those alleys."
+    body="Every chapter is archival research signed by local authors. A courtyard, a white trullo, the underground city nobody knows — told by people who grew up in those places."
     bullets={[
-      'Six Bari authors · one per route',
-      'Six live guides · Edition 01 Bari complete',
+      'Local authors · one per route, signed with name and bio',
+      "Live guides · Bari, Valle d'Itria, Gargano coming",
       'Italian and English · written separately, never translated',
       'Public sources · every claim verifiable on /en/fonti',
     ]}
@@ -56,8 +55,8 @@ import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
     </div>
   </section>
 
-  {/* The six places — photo grid, the page's only 'pick a guide' moment */}
-  <BariMap lang="en" />
+  {/* DESTINATIONS — 3 destination cards */}
+  <DestinationsBlock lang="en" />
 
   {/* PRICING — right after the 6 tiles, decision moment single vs bundle */}
   <section id="prezzi" class="bg-surface">
@@ -122,9 +121,6 @@ import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
     framedImage
   />
 
-  {/* AUTHORS — Bari voices, one per route */}
-  <AuthorsBlock lang="en" />
-
   {/* 3-STEPS — clear onboarding before the closer */}
   <StepsBlock lang="en" ctaHref="/en/guide/bari-vecchia" />
 
@@ -132,16 +128,16 @@ import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
   <section class="bg-surface">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl text-center">
       <p class="font-display italic text-xl sm:text-2xl text-ink-muted mb-2xs">
-        Bari can be visited in a day.
+        Puglia is visited in a journey.
       </p>
       <p class="font-display text-3xl sm:text-4xl text-ink mb-lg leading-tight">
         It is understood in chapters.
       </p>
       <a
-        href="#guide"
+        href="/en/guide"
         class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
       >
-        Start listening
+        Explore the guides
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
