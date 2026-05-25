@@ -1,0 +1,33 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+---
+<Layout
+  title="Gargano — Narrative Audio Guides · Localis"
+  description="Narrative audio guides of Gargano are coming. Vieste, Mattinata, the Tremiti Islands — told by locals."
+  lang="en"
+>
+  <section class="bg-surface min-h-[60vh] flex items-center">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          Destination — Gargano
+        </span>
+      </div>
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[20ch] mb-md">
+        Gargano.<br /><em class="not-italic text-ink-muted">Coming soon.</em>
+      </h1>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted max-w-[48ch] mb-2xl">
+        Vieste, Mattinata, the Tremiti Islands, the Sacred Mountain — Gargano guides are in production. Stories told by people who have lived on those cliffs.
+      </p>
+      <a
+        href="/en/guide"
+        class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline min-h-[48px]"
+      >
+        Meanwhile, explore Bari and Valle d'Itria
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+</Layout>

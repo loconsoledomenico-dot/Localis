@@ -1,0 +1,180 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import SectionDivider from '../../components/SectionDivider.astro';
+import PriceCard from '../../components/PriceCard.astro';
+
+interface GuideEntry {
+  slug: string;
+  title: string;
+  subtitle: string;
+  duration: string;
+  area: string;
+  cover: string;
+  alt: string;
+  price?: string;
+}
+
+const guides: GuideEntry[] = [
+  {
+    slug: 'alberobello',
+    title: 'Alberobello — Inside the Trulli',
+    subtitle: 'The tax story nobody ever told you.',
+    duration: '35 min',
+    area: "Valle d'Itria",
+    cover: '/images/covers/alberobello.jpg',
+    alt: "Trulli of Alberobello, Rione Monti district",
+    price: '€4.99',
+  },
+  {
+    slug: 'locorotondo',
+    title: 'Locorotondo — The Round Village',
+    subtitle: 'A DOC wine, the cummerse and lavender essential oil.',
+    duration: '31 min',
+    area: "Valle d'Itria",
+    cover: '/images/covers/locorotondo.jpg',
+    alt: 'Locorotondo, white houses with double-pitched roofs',
+    price: '€4.99',
+  },
+  {
+    slug: 'martina-franca',
+    title: 'Martina Franca — The Free City',
+    subtitle: "Three hundred years of duchy, told by those who carry it in their blood.",
+    duration: '30 min',
+    area: "Valle d'Itria",
+    cover: '/images/covers/martina-franca.jpg',
+    alt: 'Ducal Palace of Martina Franca, baroque courtyard',
+    price: '€4.99',
+  },
+];
+---
+<Layout
+  title="Valle d'Itria — Narrative Audio Guides · Localis"
+  description="Three narrative audio guides of Valle d'Itria: Alberobello, Locorotondo, Martina Franca. Told by locals. From €4.99."
+  lang="en"
+>
+
+  {/* PAGE HEADER */}
+  <section class="bg-surface border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          Destination — Valle d'Itria
+        </span>
+      </div>
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
+        Valle d'Itria told<br /><em class="not-italic text-ink-muted">by people born there.</em>
+      </h1>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
+        Three live guides among trulli, white villages and DOC vineyards. Alberobello, Locorotondo, Martina Franca — every voice belongs to someone who lives there.
+      </p>
+    </div>
+  </section>
+
+  {/* GUIDE GRID */}
+  <section class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <ol class="guide-grid list-none p-0 m-0">
+        {guides.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <a href={`/en/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+              <figure class="guide-photo m-0">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-area">{g.area}</span>
+                  <span class="guide-dur">{g.duration}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  {/* PRICING */}
+  <section id="prezzi" class="bg-surface-elev border-t border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <SectionDivider label="Take what you need" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[46rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="alberobello"
+          lang="en"
+          features={[
+            'One guide of your choice',
+            'Unlimited access, forever',
+            'Italian and English',
+            '1-click refund within 24h',
+          ]}
+        />
+        <PriceCard
+          product="bundle"
+          lang="en"
+          primary
+          features={[
+            "All available guides · Bari + Valle d'Itria",
+            "~3h of storytelling · different voices",
+            '1-click refund within 24h',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
+    row-gap: var(--spacing-2xl);
+  }
+  @media (min-width: 640px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .guide-cell {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: guideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 80ms + 100ms);
+  }
+  .guide-card {
+    display: flex; flex-direction: column; gap: var(--spacing-md);
+    text-decoration: none; color: inherit;
+    border-top: 1px solid var(--color-ink); padding-top: var(--spacing-md);
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .guide-card:hover { transform: translateY(-2px); }
+  .guide-photo {
+    position: relative; width: 100%; aspect-ratio: 4 / 5;
+    background: var(--color-surface-elev); overflow: hidden; border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08), 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
+    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .guide-cell:nth-child(3n+1) .guide-photo { transform: rotate(-1deg); }
+  .guide-cell:nth-child(3n+2) .guide-photo { transform: rotate(0.8deg); }
+  .guide-cell:nth-child(3n+3) .guide-photo { transform: rotate(-0.6deg); }
+  .guide-card:hover .guide-photo { transform: rotate(0deg) scale(1.01); box-shadow: 0 2px 4px oklch(15% 0.012 240 / 0.12), 0 24px 48px -16px oklch(15% 0.012 240 / 0.22); }
+  .guide-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.94) contrast(1.04); transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .guide-card:hover .guide-img { transform: scale(1.03); }
+  .guide-num { position: absolute; top: var(--spacing-sm); left: var(--spacing-sm); font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: clamp(2.4rem, 4.4vw, 3.2rem); line-height: 0.85; color: var(--color-surface); letter-spacing: -0.04em; text-shadow: 0 1px 8px oklch(15% 0.012 240 / 0.55); pointer-events: none; user-select: none; }
+  .guide-price { position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); font-family: var(--font-body); font-size: 0.8125rem; font-weight: 700; color: var(--color-ink); background: var(--color-surface); border: 1px solid var(--color-accent); padding: 4px 10px 5px; line-height: 1.2; box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.18); pointer-events: none; user-select: none; z-index: 1; }
+  .guide-scrim { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: space-between; padding: var(--spacing-sm) var(--spacing-md); background: linear-gradient(to top, oklch(15% 0.012 240 / 0.78), transparent 100%); color: var(--color-surface); font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; pointer-events: none; }
+  .guide-area { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .guide-dur { flex-shrink: 0; color: var(--color-accent-soft); }
+  .guide-meta { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+  .guide-title { font-size: clamp(1.1rem, 2.4vw, 1.35rem); }
+  .guide-sub { line-height: 1.5; }
+  .guide-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 2px; }
+  @keyframes guideIn { to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .guide-cell, .guide-card, .guide-img { animation: none !important; transition: none !important; opacity: 1; transform: none; } }
+</style>
