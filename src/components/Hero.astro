@@ -33,20 +33,20 @@ interface Pill {
 const pills: Pill[] = lang === 'it'
   ? [
       { icon: 'headphones', label: 'Ascolta dove vuoi', tail: 'in strada, sul divano, in treno' },
-      { icon: 'pin',        label: 'Storie vere',       tail: 'sui luoghi reali della città' },
-      { icon: 'heart',      label: 'Da chi ci è nato',   tail: 'sei autori baresi firmati' },
+      { icon: 'pin',        label: 'Storie vere',       tail: 'sui luoghi reali, autentici' },
+      { icon: 'heart',      label: 'Da chi ci è nato',   tail: 'autori locali, firmati con nome' },
     ]
   : [
       { icon: 'headphones', label: 'Listen anywhere',    tail: 'on the street, couch, train' },
       { icon: 'pin',        label: 'True stories',       tail: 'tied to real places' },
-      { icon: 'heart',      label: 'Locals only',         tail: 'six signed Bari authors' },
+      { icon: 'heart',      label: 'Locals only',         tail: 'local authors, signed by name' },
     ];
 
 const altText = lang === 'it'
   ? 'Una ragazza con cuffie sul lungomare di Bari al tramonto: cattedrale e palazzi storici a destra, sole che cala sul mare a sinistra'
   : 'A young woman with headphones on Bari\'s lungomare at sunset: cathedral and historic buildings to the right, sun setting over the sea to the left';
 ---
-<section class="hero relative" aria-label="Localis — audioguide narrative di Bari">
+<section class="hero relative" aria-label="Localis — audioguide narrative della Puglia">
 
   <!-- Full-bleed background image -->
   <img
