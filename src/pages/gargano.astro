@@ -1,12 +1,91 @@
 ---
 export const prerender = true;
 import Layout from '../components/Layout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+import PriceCard from '../components/PriceCard.astro';
+import StepsBlock from '../components/StepsBlock.astro';
+
+interface GuideEntry {
+  slug: string;
+  title: string;
+  subtitle: string;
+  places: string;
+  narrator: string;
+  cover: string;
+  alt: string;
+  price?: string;
+}
+
+const guides: GuideEntry[] = [
+  {
+    slug: 'gargano-vieste',
+    title: 'Vieste — La Città sul Promontorio',
+    subtitle: 'Pizzomunno, le falesie bianche, le calette, Pugnochiuso.',
+    places: 'Vieste · Pugnochiuso · trabucchi · grotte marine',
+    narrator: 'Rossella, terza generazione sul lido',
+    cover: '/images/covers/gargano-vieste.jpg',
+    alt: 'Vieste, promontorio di roccia bianca sul mare del Gargano',
+    price: '€4,99',
+  },
+  {
+    slug: 'gargano-nord',
+    title: 'Il Gargano del Silenzio — Borghi, Trabucchi e Costa',
+    subtitle: 'Lesina, Rodi Garganico, Peschici. Dal trabucco si vede tutto.',
+    places: 'Lesina · Rodi Garganico · Peschici · trabucchi · lago di Lesina',
+    narrator: 'Ferdinando, quarta generazione sul trabucco',
+    cover: '/images/covers/gargano-nord.jpg',
+    alt: 'Trabucco sul Gargano, struttura di legno di ginepro sulla roccia',
+    price: '€4,99',
+  },
+  {
+    slug: 'gargano-sacro',
+    title: 'Il Sacro Monte — Foresta, Fede e Pellegrini',
+    subtitle: 'La foresta, la grotta, il convento. Un percorso che i pellegrini medievali conoscevano bene.',
+    places: 'Foresta Umbra · Monte Sant\'Angelo · San Giovanni Rotondo · Padre Pio',
+    narrator: "Fra' Salvatore, trent'anni al Santuario",
+    cover: '/images/covers/gargano-sacro.jpg',
+    alt: "Foresta Umbra del Gargano, bosco primario con faggi e cerri",
+    price: '€4,99',
+  },
+  {
+    slug: 'gargano-tremiti',
+    title: "Le Tremiti — L'Arcipelago Dimenticato",
+    subtitle: 'San Domino, San Nicola, le grotte marine. Lucio Dalla ci tornava ogni anno.',
+    places: 'San Domino · San Nicola · grotte marine · abbazia benedettina · parco marino',
+    narrator: 'Tonino, barcaiolo di San Domino',
+    cover: '/images/covers/gargano-tremiti.jpg',
+    alt: 'Isole Tremiti, acque turchesi e rocce bianche nel mezzo dell\'Adriatico',
+    price: '€4,99',
+  },
+  {
+    slug: 'gargano-paesi',
+    title: 'I Paesi del Gargano — Pietra Bianca e Vicoli',
+    subtitle: "Il Gargano che non si raggiunge con il navigatore impostato sul mare.",
+    places: 'Vico del Gargano · Ischitella · Carpino · lago di Varano',
+    narrator: 'Stefano, guardiaparco da trent\'anni',
+    cover: '/images/covers/gargano-paesi.jpg',
+    alt: 'Vico del Gargano, vicoli medievali e case di pietra bianca',
+    price: '€4,99',
+  },
+  {
+    slug: 'gargano-saline',
+    title: 'Le Saline di Margherita — Sale e Fenicotteri',
+    subtitle: 'Le saline più grandi d\'Italia. La città abbandonata sotto la sabbia.',
+    places: 'Saline di Margherita di Savoia · Manfredonia · Siponto · fenicotteri',
+    narrator: "Antonello, trent'anni alle saline",
+    cover: '/images/covers/gargano-saline.jpg',
+    alt: 'Saline di Margherita di Savoia, vasche rosa al tramonto con fenicotteri',
+    price: '€4,99',
+  },
+];
 ---
 <Layout
   title="Gargano — Audioguide narrative · Localis"
-  description="Le guide narrative del Gargano sono in arrivo. Vieste, Mattinata, le Isole Tremiti — raccontate da chi ci vive."
+  description="Sei guide narrative del Gargano: Vieste, Costa Nord, Sacro Monte, Tremiti, Paesi dell'entroterra, Saline. Raccontate da chi ci vive. Da €4,99."
   lang="it"
 >
+
+  {/* PAGE HEADER — hero con immagine */}
   <section class="gargano-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/covers/gargano-landing.jpg"
@@ -26,58 +105,161 @@ import Layout from '../components/Layout.astro';
           Destinazione — Gargano
         </span>
       </div>
-      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[20ch] mb-md">
-        Gargano.<br /><em class="not-italic text-ink-muted">In arrivo.</em>
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
+        Il Gargano raccontato<br /><em class="not-italic text-ink-muted">da chi ci è nato.</em>
       </h1>
-      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted max-w-[48ch] mb-2xl">
-        Vieste, Mattinata, le Isole Tremiti, il Sacro Monte — le guide del Gargano sono in produzione. Storie raccontate da chi quei promontori li ha vissuti.
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
+        Sei guide live. Da Vieste alle Tremiti, dalla Foresta Umbra alle saline di Margherita: ogni voce è di chi quei posti li vive davvero.
       </p>
-      <a
-        href="/guide"
-        class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline min-h-[48px]"
-      >
-        Nel frattempo, scopri Bari e Valle d'Itria
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-      </a>
     </div>
   </section>
+
+  <style>
+    .gargano-hero {
+      min-height: clamp(420px, 62vh, 680px);
+      display: flex;
+      align-items: center;
+    }
+    .gargano-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      filter: saturate(0.92) contrast(1.04);
+    }
+    .gargano-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        oklch(from var(--color-surface) l c h / 0.88) 0%,
+        oklch(from var(--color-surface) l c h / 0.65) 35%,
+        oklch(from var(--color-surface) l c h / 0.18) 70%,
+        oklch(from var(--color-surface) l c h / 0) 100%
+      );
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .gargano-hero-scrim {
+        background: linear-gradient(
+          to bottom,
+          oklch(from var(--color-surface) l c h / 0.92) 0%,
+          oklch(from var(--color-surface) l c h / 0.72) 60%,
+          oklch(from var(--color-surface) l c h / 0.5) 100%
+        );
+      }
+    }
+  </style>
+
+  {/* INTERLUDE */}
+  <section class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
+      <span class="block h-px flex-1 bg-border"></span>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei voci · sei luoghi · un promontorio</p>
+      <span class="block h-px flex-1 bg-border"></span>
+    </div>
+  </section>
+
+  {/* GUIDE GRID */}
+  <section class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <ol class="guide-grid list-none p-0 m-0">
+        {guides.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title}`}>
+              <figure class="guide-photo m-0">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-narrator">{g.narrator}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-places font-body text-xs text-accent tracking-[0.12em] uppercase m-0 mb-xs">{g.places}</p>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  {/* PRICING */}
+  <section id="prezzi" class="bg-surface-elev border-t border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <SectionDivider label="Prendi quella che ti serve" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[46rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="gargano-vieste"
+          lang="it"
+          features={[
+            'Una guida a tua scelta',
+            'Accesso illimitato, per sempre',
+            'Italiano e inglese',
+            'Rimborso 1-click entro 24h',
+          ]}
+        />
+        <PriceCard
+          product="bundle"
+          lang="it"
+          primary
+          features={[
+            'Tutte le guide disponibili · Bari + Gargano',
+            '~5h di racconto · voci diverse',
+            'Rimborso 1-click entro 24h',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* 3 PASSI */}
+  <StepsBlock lang="it" ctaHref="/guide/gargano-vieste" />
+
 </Layout>
 
 <style>
-  .gargano-hero {
-    min-height: clamp(280px, 42vh, 480px);
-    display: flex;
-    align-items: center;
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
+    row-gap: var(--spacing-2xl);
   }
-  .gargano-hero-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    filter: saturate(0.92) contrast(1.04);
+  @media (min-width: 640px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .guide-cell {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: guideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 80ms + 100ms);
   }
-  .gargano-hero-scrim {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to right,
-      oklch(from var(--color-surface) l c h / 0.88) 0%,
-      oklch(from var(--color-surface) l c h / 0.65) 35%,
-      oklch(from var(--color-surface) l c h / 0.18) 70%,
-      oklch(from var(--color-surface) l c h / 0) 100%
-    );
-    pointer-events: none;
+  .guide-card {
+    display: flex; flex-direction: column; gap: var(--spacing-md);
+    text-decoration: none; color: inherit;
+    border-top: 1px solid var(--color-ink); padding-top: var(--spacing-md);
   }
-  @media (max-width: 768px) {
-    .gargano-hero-scrim {
-      background: linear-gradient(
-        to bottom,
-        oklch(from var(--color-surface) l c h / 0.92) 0%,
-        oklch(from var(--color-surface) l c h / 0.72) 60%,
-        oklch(from var(--color-surface) l c h / 0.5) 100%
-      );
-    }
+  .guide-photo {
+    position: relative; width: 100%; aspect-ratio: 4 / 5;
+    background: var(--color-surface-elev); overflow: hidden; border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08), 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
   }
+  .guide-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.94) contrast(1.04); }
+  .guide-num { position: absolute; top: var(--spacing-sm); left: var(--spacing-sm); font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: clamp(2.4rem, 4.4vw, 3.2rem); line-height: 0.85; color: var(--color-surface); letter-spacing: -0.04em; text-shadow: 0 1px 8px oklch(15% 0.012 240 / 0.55); pointer-events: none; user-select: none; }
+  .guide-price { position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); font-family: var(--font-body); font-size: 0.8125rem; font-weight: 700; color: var(--color-ink); background: var(--color-surface); border: 1px solid var(--color-accent); padding: 4px 10px 5px; line-height: 1.2; box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.18); pointer-events: none; user-select: none; z-index: 1; }
+  .guide-scrim { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; padding: var(--spacing-sm) var(--spacing-md); background: linear-gradient(to top, oklch(15% 0.012 240 / 0.78), transparent 100%); color: var(--color-surface); font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; pointer-events: none; }
+  .guide-narrator { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .guide-meta { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+  .guide-title { font-size: clamp(1.1rem, 2.4vw, 1.35rem); }
+  .guide-places { letter-spacing: 0.12em; }
+  .guide-sub { line-height: 1.5; }
+  .guide-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 2px; }
+  @keyframes guideIn { to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .guide-cell, .guide-card, .guide-img { animation: none !important; transition: none !important; opacity: 1; transform: none; } }
 </style>

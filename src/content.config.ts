@@ -18,6 +18,7 @@ const guides = defineCollection({
       'locorotondo',
       'martina-franca',
       'vieste',
+      'gargano',
     ]),
     title_it: z.string(),
     title_en: z.string(),
