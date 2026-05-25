@@ -1,0 +1,242 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : 'Plate IV — The destinations';
+const heading1 = lang === 'it' ? 'Scegli dove andare.' : 'Choose your destination.';
+const heading2 = lang === 'it' ? 'Ogni zona, una voce diversa.' : 'Every zone, a different voice.';
+const intro = lang === 'it'
+  ? 'Non un catalogo turistico. Una collezione di voci: ogni destinazione ha i suoi autori, le sue storie, il suo suono.'
+  : 'Not a tourist catalogue. A collection of voices: every destination has its own authors, its own stories, its own sound.';
+
+interface Destination {
+  slug: string;
+  href: string;
+  name: string;
+  tagline: string;
+  guidesLabel: string;
+  cover: string;
+  alt: string;
+  soon?: boolean;
+}
+
+const destinations: Destination[] = lang === 'it'
+  ? [
+      {
+        slug: 'bari',
+        href: '/bari',
+        name: 'Bari',
+        tagline: 'La città che non ti aspetti.',
+        guidesLabel: '6 guide live',
+        cover: '/images/covers/bari-vecchia.jpg',
+        alt: 'Vicolo del Borgo Antico di Bari con colonne romane e palazzi storici',
+      },
+      {
+        slug: 'valle-d-itria',
+        href: '/valle-d-itria',
+        name: "Valle d'Itria",
+        tagline: 'Trulli, vini e borghi bianchi.',
+        guidesLabel: '3 guide live',
+        cover: '/images/covers/alberobello.jpg',
+        alt: 'Trulli di Alberobello, Rione Monti',
+      },
+      {
+        slug: 'gargano',
+        href: '/gargano',
+        name: 'Gargano',
+        tagline: 'Il promontorio che guarda il mondo.',
+        guidesLabel: 'In arrivo',
+        cover: '/images/covers/bari-vecchia.jpg',
+        alt: 'Gargano, promontorio sul mare Adriatico',
+        soon: true,
+      },
+    ]
+  : [
+      {
+        slug: 'bari',
+        href: '/en/bari',
+        name: 'Bari',
+        tagline: "The city you didn't expect.",
+        guidesLabel: '6 guides live',
+        cover: '/images/covers/bari-vecchia.jpg',
+        alt: "Lane of Bari's Old Town with ancient Roman columns",
+      },
+      {
+        slug: 'valle-d-itria',
+        href: '/en/valle-d-itria',
+        name: "Valle d'Itria",
+        tagline: 'Trullos, wines and white villages.',
+        guidesLabel: '3 guides live',
+        cover: '/images/covers/alberobello.jpg',
+        alt: 'Trulli of Alberobello, Rione Monti district',
+      },
+      {
+        slug: 'gargano',
+        href: '/en/gargano',
+        name: 'Gargano',
+        tagline: 'The promontory that faces the world.',
+        guidesLabel: 'Coming soon',
+        cover: '/images/covers/bari-vecchia.jpg',
+        alt: 'Gargano promontory over the Adriatic sea',
+        soon: true,
+      },
+    ];
+---
+
+<section id="guide" class="destinations bg-surface">
+  <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+
+    <div class="flex items-center justify-center gap-sm mb-lg">
+      <span class="block w-7 h-px bg-accent"></span>
+      <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">
+        {eyebrow}
+      </span>
+      <span class="block w-7 h-px bg-accent"></span>
+    </div>
+
+    <div class="text-center mb-2xl max-w-[38ch] mx-auto">
+      <h2 class="font-display font-light text-ink text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.1] tracking-tight mb-md">
+        {heading1}<br /><em class="not-italic text-ink-muted">{heading2}</em>
+      </h2>
+      <p class="font-body text-base text-ink-muted leading-relaxed">{intro}</p>
+    </div>
+
+    <ol class="dest-grid list-none p-0 m-0">
+      {destinations.map((d, i) => (
+        <li class="dest-cell" style={`--idx:${i}`}>
+          {d.soon ? (
+            <div class="dest-card dest-card--soon" aria-label={`${d.name} · ${d.guidesLabel}`}>
+              <figure class="dest-photo m-0">
+                <img src={d.cover} alt={d.alt} class="dest-img" loading="lazy" decoding="async" />
+                <div class="dest-soon-badge">
+                  <span class="text-[10px] font-semibold tracking-[0.28em] uppercase">
+                    {lang === 'it' ? 'In arrivo' : 'Coming soon'}
+                  </span>
+                </div>
+                <span class="dest-scrim" aria-hidden="true">
+                  <span class="dest-name">{d.name}</span>
+                  <span class="dest-count">{d.guidesLabel}</span>
+                </span>
+              </figure>
+              <div class="dest-meta">
+                <h3 class="dest-title font-display font-light text-ink-muted leading-[1.2] m-0">{d.name}</h3>
+                <p class="dest-sub font-body text-sm text-ink-subtle m-0">{d.tagline}</p>
+              </div>
+            </div>
+          ) : (
+            <a href={d.href} class="dest-card" aria-label={`${d.name} · ${d.guidesLabel}`}>
+              <figure class="dest-photo m-0">
+                <img src={d.cover} alt={d.alt} class="dest-img" loading="lazy" decoding="async" />
+                <span class="dest-scrim" aria-hidden="true">
+                  <span class="dest-name">{d.name}</span>
+                  <span class="dest-count">{d.guidesLabel}</span>
+                </span>
+              </figure>
+              <div class="dest-meta">
+                <h3 class="dest-title font-display font-light text-ink leading-[1.2] m-0">{d.name}</h3>
+                <p class="dest-sub font-body text-sm text-ink-muted m-0">{d.tagline}</p>
+              </div>
+            </a>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .dest-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
+    row-gap: var(--spacing-2xl);
+  }
+  @media (min-width: 640px) { .dest-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .dest-cell {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: destIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 100ms + 100ms);
+  }
+
+  .dest-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-decoration: none;
+    color: inherit;
+    border-top: 1px solid var(--color-ink);
+    padding-top: var(--spacing-md);
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .dest-card:hover { transform: translateY(-2px); }
+  .dest-card--soon {
+    border-top-style: dashed;
+    border-top-color: var(--color-border);
+    cursor: default;
+  }
+
+  .dest-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: var(--color-surface-elev);
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08), 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
+    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .dest-card:nth-child(3n+1) .dest-photo { transform: rotate(-1deg); }
+  .dest-card:nth-child(3n+2) .dest-photo { transform: rotate(0.8deg); }
+  .dest-card:nth-child(3n+3) .dest-photo { transform: rotate(-0.6deg); }
+  .dest-card:hover .dest-photo,
+  .dest-card:focus-visible .dest-photo {
+    transform: rotate(0deg) scale(1.01);
+    box-shadow: 0 2px 4px oklch(15% 0.012 240 / 0.12), 0 24px 48px -16px oklch(15% 0.012 240 / 0.22);
+  }
+  .dest-card--soon .dest-photo { filter: grayscale(0.4); }
+
+  .dest-img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    filter: saturate(0.94) contrast(1.04);
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .dest-card:hover .dest-img { transform: scale(1.03); }
+
+  .dest-soon-badge {
+    position: absolute; top: var(--spacing-sm); right: var(--spacing-sm);
+    background: var(--color-surface); color: var(--color-ink-subtle);
+    padding: 4px 10px 5px; font-family: var(--font-body);
+    border: 1px solid var(--color-border);
+  }
+
+  .dest-scrim {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: linear-gradient(to top, oklch(15% 0.012 240 / 0.78), transparent 100%);
+    color: var(--color-surface); font-family: var(--font-body);
+    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    pointer-events: none;
+  }
+  .dest-name { flex: 1; }
+  .dest-count { flex-shrink: 0; color: var(--color-accent-soft); }
+
+  .dest-meta { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+  .dest-title { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+  .dest-sub { line-height: 1.5; }
+
+  .dest-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 2px; }
+
+  @keyframes destIn { to { opacity: 1; transform: translateY(0); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dest-cell, .dest-card, .dest-img { animation: none !important; transition: none !important; opacity: 1; transform: none; }
+  }
+</style>
