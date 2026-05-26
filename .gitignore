@@ -56,3 +56,8 @@ r2_audio/
 
 # Archived placeholder audio (kept locally as reference only)
 public/audio/trailers/_archive_*.mp3
+
+# Outreach credentials
+marketing/outreach/credentials/*.json
+marketing/outreach/.env
+marketing/exports/
