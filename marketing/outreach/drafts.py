@@ -3,6 +3,7 @@ import os
 import base64
 from email.mime.text import MIMEText
 
+GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.compose"]
 TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "templates")
 
 
@@ -46,8 +47,6 @@ def get_gmail_service():
     from googleapiclient.discovery import build
     from config import GMAIL_CREDENTIALS_FILE, GMAIL_TOKEN_FILE
 
-    GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.compose"]
-
     creds = None
     if os.path.exists(GMAIL_TOKEN_FILE):
         creds = Credentials.from_authorized_user_file(GMAIL_TOKEN_FILE, GMAIL_SCOPES)
@@ -76,6 +75,8 @@ def crea_bozza(service, to_email: str, subject: str, body: str) -> str:
 
 
 def crea_bozze_per_candidati(candidati: list[dict]) -> list[dict]:
+    if not candidati:
+        return []
     service = get_gmail_service()
     risultati = []
     for c in candidati:
