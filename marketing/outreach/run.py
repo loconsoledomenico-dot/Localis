@@ -36,9 +36,14 @@ def cmd_drafts(args):
     print(f"Creo bozze per {len(candidati)} candidati...")
     risultati = crea_bozze_per_candidati(candidati)
 
+    # Build id→original_index map so update_stato hits the right sheet row
+    id_to_idx = {str(c.get("id")): i for i, c in enumerate(candidati)}
+
     from sheets import append_outreach
-    for i, c in enumerate(risultati):
-        update_stato(SHEET_CANDIDATI, i, "bozza_pronta")
+    for c in risultati:
+        orig_idx = id_to_idx.get(str(c.get("id")))
+        if orig_idx is not None:
+            update_stato(SHEET_CANDIDATI, orig_idx, "bozza_pronta")
         append_outreach({
             "id": c["id"],
             "nome": c["nome"],
