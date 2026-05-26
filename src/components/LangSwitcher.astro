@@ -1,6 +1,5 @@
 ---
-import { alternateLangUrl, type Lang } from '../lib/i18n';
-import { t } from '../lib/i18n-strings';
+import { allLangUrls, type Lang } from '../lib/i18n';
 
 export interface Props {
   lang: Lang;
@@ -8,13 +7,46 @@ export interface Props {
 }
 
 const { lang, currentPath } = Astro.props;
-const altUrl = alternateLangUrl(currentPath, lang);
-const altLang: Lang = lang === 'it' ? 'en' : 'it';
+const urls = allLangUrls(currentPath);
+
+const flags: { code: Lang; flag: string; label: string }[] = [
+  { code: 'it', flag: '🇮🇹', label: 'Italiano' },
+  { code: 'en', flag: '🇬🇧', label: 'English' },
+  { code: 'de', flag: '🇩🇪', label: 'Deutsch' },
+];
 ---
-<a
-  href={altUrl}
-  class="font-body text-xs font-semibold tracking-widest uppercase text-ink-subtle hover:text-ink no-underline transition-colors duration-fast"
-  aria-label={`Switch language to ${t(`lang.current_${altLang}`, lang)}`}
->
-  {t(`lang.switch_to_${altLang}`, lang)}
-</a>
+<div class="lang-flags" role="navigation" aria-label="Language">
+  {flags.map(({ code, flag, label }) =>
+    code === lang ? (
+      <span class="lang-flag lang-flag--active" aria-current="true" title={label}>{flag}</span>
+    ) : (
+      <a href={urls[code]} class="lang-flag" hreflang={code} title={label} aria-label={label}>{flag}</a>
+    )
+  )}
+</div>
+
+<style>
+  .lang-flags {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .lang-flag {
+    font-size: 1.2rem;
+    line-height: 1;
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 0.15s;
+    cursor: pointer;
+  }
+  .lang-flag:hover {
+    opacity: 1;
+  }
+  .lang-flag--active {
+    opacity: 1;
+    cursor: default;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lang-flag { transition: none; }
+  }
+</style>
