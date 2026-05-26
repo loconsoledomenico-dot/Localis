@@ -24,7 +24,7 @@ def test_get_or_create_tab_nuovo():
     mock_sheet.add_worksheet.assert_called_once_with(title="Candidati", rows=1000, cols=20)
     assert result == new_tab
 
-def test_append_row_candidati():
+def test_row_to_list_candidati():
     mock_tab = MagicMock()
     row = {
         "id": "1", "nome": "Hotel Test", "tipo": "hotel",

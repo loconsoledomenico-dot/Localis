@@ -63,6 +63,8 @@ def update_stato(tab_name: str, row_index: int, nuovo_stato: str):
     sheet = get_spreadsheet()
     tab = get_or_create_tab(sheet, tab_name)
     headers = tab.row_values(1)
+    if "stato" not in headers:
+        raise ValueError(f"Colonna 'stato' non trovata nel tab '{tab_name}'. Headers: {headers}")
     stato_col = headers.index("stato") + 1
     tab.update_cell(row_index + 2, stato_col, nuovo_stato)
 
