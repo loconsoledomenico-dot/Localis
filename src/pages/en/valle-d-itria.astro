@@ -158,6 +158,71 @@ const guides: GuideEntry[] = [
     </div>
   </section>
 
+  {/* NARRATORS */}
+  <section class="bg-surface border-t border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center justify-center gap-sm mb-2xl">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">The voices of the Valley</span>
+        <span class="block w-7 h-px bg-accent"></span>
+      </div>
+      <ul class="narr-grid list-none p-0 m-0">
+        {[
+          { name: 'Concetta', photo: '/images/authors/concetta-alberobello.jpg', role: 'Three generations in Rione Aia Piccola', bio: "Sixty-five, born and raised in Rione Aia Piccola. Three generations under the same stone roof. She tells the trulli the way a neighbour would — from the doorstep she's always sat on.", guide: 'Alberobello', href: '/en/guide/alberobello' },
+          { name: 'Francesco', photo: '/images/authors/francesco-locorotondo.png', role: 'Winemaker of the round village', bio: "Fifty, winemaker of the round village. He produces DOC wine, olive oil and lavender essential oil among the Itria Valley vineyards.", guide: 'Locorotondo', href: '/en/guide/locorotondo' },
+          { name: 'Anonymous', photo: '/images/authors/nobile-martina-franca.png', role: 'Caracciolo family descendant', bio: "A direct descendant of the Caracciolo family. Prefers not to give a name — wants to tell stories, not make statements.", guide: 'Martina Franca', href: '/en/guide/martina-franca' },
+        ].map((n) => (
+          <li>
+            <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} — ${n.name}'s voice`}>
+              <figure class="narr-photo m-0">
+                <img src={n.photo} alt={`Portrait of ${n.name}`} loading="lazy" decoding="async" />
+              </figure>
+              <div class="narr-text">
+                <p class="narr-guide font-body text-[10px] font-semibold tracking-[0.22em] uppercase text-accent m-0">{n.guide}</p>
+                <h3 class="narr-name font-display font-light text-ink m-0">{n.name}</h3>
+                <p class="narr-role font-body text-xs text-ink-subtle m-0">{n.role}</p>
+                <p class="narr-bio font-body text-sm text-ink-muted m-0 mt-xs">{n.bio}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <style>
+    .narr-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: var(--spacing-2xl);
+    }
+    @media (min-width: 640px) { .narr-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .narr-card {
+      display: flex; flex-direction: column; gap: var(--spacing-md);
+      text-decoration: none; color: inherit;
+      border-top: 1px solid var(--color-border); padding-top: var(--spacing-md);
+      transition: opacity 0.2s;
+    }
+    .narr-card:hover { opacity: 0.82; }
+    .narr-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 2px; }
+
+    .narr-photo {
+      width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+      border-radius: var(--radius-md); background: var(--color-surface-elev);
+      box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.06), 0 8px 24px -8px oklch(15% 0.012 240 / 0.14);
+    }
+    .narr-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: grayscale(100%) contrast(1.05) brightness(0.97);
+    }
+    .narr-text { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+    .narr-name { font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.1; }
+    .narr-bio { line-height: 1.55; }
+
+    @media (prefers-reduced-motion: reduce) { .narr-card { transition: none; } }
+  </style>
+
   {/* PRICING */}
   <section id="prezzi" class="bg-surface-elev border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
