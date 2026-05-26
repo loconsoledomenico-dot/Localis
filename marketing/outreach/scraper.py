@@ -19,6 +19,8 @@ def estrai_email(testo: str) -> list[str]:
 def deduplicazione_per_dominio(emails: list[str]) -> list[str]:
     visti = {}
     for email in emails:
+        if "@" not in email:
+            continue
         domain = email.split("@")[1]
         if domain not in visti:
             visti[domain] = email
