@@ -1,0 +1,34 @@
+Oggetto: Collaborazione LocalisGuide × {nome}
+
+Gentili,
+
+mi chiamo Luigi Loconsole e sono il fondatore di LocalisGuide (localis.guide), un servizio di audioguide turistiche per visitatori di Bari e della Puglia.
+
+Le nostre guide sono narrate da persone del posto — baresi veri, con voce e storie autentiche — e disponibili direttamente sullo smartphone del turista, senza app da scaricare. Copriamo Bari Vecchia, Porto Vecchio, San Nicola e altre destinazioni pugliesi, con guide in italiano, inglese e tedesco.
+
+[TIPO:bar|ristorante]
+Ci piacerebbe collaborare con {nome}: un QR code sui tavoli o al bancone permetterebbe ai vostri clienti stranieri di scoprire la città mentre aspettano o si rilassano.
+[/TIPO]
+
+[TIPO:hotel|bb]
+Ci piacerebbe collaborare con {nome}: un QR code in reception o in camera offrirebbe ai vostri ospiti una guida audio della città, curata da chi ci vive.
+[/TIPO]
+
+[TIPO:infopoint]
+Ci piacerebbe collaborare con il vostro Infopoint, che vediamo come un punto di riferimento naturale per i turisti che arrivano in città.
+[/TIPO]
+
+[TIPO:negozio]
+Ci piacerebbe collaborare con {nome}: un QR code in vetrina o all'interno attirerebbe turisti in cerca di esperienze locali autentiche.
+[/TIPO]
+
+Siamo flessibili su come strutturarla:
+- Opzione semplice: lasciare qualche nostro volantino/QR code presso di voi, senza nessun onere economico
+- Opzione partnership: accordo con riconoscimento del 25% su ogni acquisto generato tramite il vostro canale
+
+Saremo felici di presentarvi il prodotto di persona o via call.
+
+Cordiali saluti,
+Luigi Loconsole
+Fondatore, LocalisGuide
+localis.guide
