@@ -7,12 +7,15 @@ import SectionDivider from '../../components/SectionDivider.astro';
 import AuthorsBlock from '../../components/AuthorsBlock.astro';
 import StepsBlock from '../../components/StepsBlock.astro';
 import LangPills from '../../components/LangPills.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 <Layout
   title="Bari — Narrative Audioguides · Localis"
   description="Sechs narrative Audioguides aus Bari, erzählt von Bariser Autoren. Altstadt, San Nicola, Hafen, Theater, Unterstadt, Das Beste von Bari. Ab €4,99."
   lang="de"
 >
+
+  <Breadcrumb items={[{ label: 'Home', href: '/de' }, { label: 'Bari' }]} />
 
   {/* PAGE HEADER — hero with image */}
   <section class="bari-hero relative overflow-hidden border-b border-border">

@@ -4,6 +4,7 @@ import Layout from '../../components/Layout.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import LangPills from '../../components/LangPills.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
 interface GuideEntry {
   slug: string;
@@ -54,6 +55,8 @@ const guides: GuideEntry[] = [
   description="Drei narrative Audioguides des Valle d'Itria: Alberobello, Locorotondo, Martina Franca. Erzählt von Einheimischen. Ab €4,99."
   lang="de"
 >
+
+  <Breadcrumb items={[{ label: 'Home', href: '/de' }, { label: "Valle d'Itria" }]} />
 
   {/* PAGE HEADER — hero with image */}
   <section class="valle-hero relative overflow-hidden border-b border-border">

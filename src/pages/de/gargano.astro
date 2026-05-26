@@ -5,6 +5,7 @@ import SectionDivider from '../../components/SectionDivider.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import StepsBlock from '../../components/StepsBlock.astro';
 import LangPills from '../../components/LangPills.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
 interface GuideEntry {
   slug: string;
@@ -85,6 +86,8 @@ const guides: GuideEntry[] = [
   description="Sechs narrative Audioguides des Gargano: Vieste, Nordküste, Heiliger Berg, Tremiti, Dörfer, Salinen. Erzählt von Einheimischen. Ab €4,99."
   lang="de"
 >
+
+  <Breadcrumb items={[{ label: 'Home', href: '/de' }, { label: 'Gargano' }]} />
 
   {/* PAGE HEADER — hero with image */}
   <section class="gargano-hero relative overflow-hidden border-b border-border">

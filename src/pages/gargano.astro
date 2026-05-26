@@ -5,6 +5,7 @@ import SectionDivider from '../components/SectionDivider.astro';
 import PriceCard from '../components/PriceCard.astro';
 import StepsBlock from '../components/StepsBlock.astro';
 import LangPills from '../components/LangPills.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 interface GuideEntry {
   slug: string;
@@ -85,6 +86,8 @@ const guides: GuideEntry[] = [
   description="Sei guide narrative del Gargano: Vieste, Costa Nord, Sacro Monte, Tremiti, Paesi dell'entroterra, Saline. Raccontate da chi ci vive. Da €4,99."
   lang="it"
 >
+
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Gargano' }]} />
 
   {/* PAGE HEADER — hero con immagine */}
   <section class="gargano-hero relative overflow-hidden border-b border-border">

@@ -11,6 +11,20 @@ import StructuredData from '../../../components/StructuredData.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
 import { audioObjectLD, touristAttractionLD } from '../../../lib/seo';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const CITY_DEST: Record<string, { href: string; label: string }> = {
+  bari: { href: '/en/bari', label: 'Bari' },
+  polignano: { href: '/en/bari', label: 'Bari' },
+  alberobello: { href: '/en/valle-d-itria', label: "Valle d'Itria" },
+  locorotondo: { href: '/en/valle-d-itria', label: "Valle d'Itria" },
+  'martina-franca': { href: '/en/valle-d-itria', label: "Valle d'Itria" },
+  cisternino: { href: '/en/valle-d-itria', label: "Valle d'Itria" },
+  ostuni: { href: '/en/valle-d-itria', label: "Valle d'Itria" },
+  fasano: { href: '/en/valle-d-itria', label: "Valle d'Itria" },
+  vieste: { href: '/en/gargano', label: 'Gargano' },
+  gargano: { href: '/en/gargano', label: 'Gargano' },
+};
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -54,6 +68,7 @@ if (data.coords_start) {
 ---
 <Layout title={`${data.title_en} · Localis`} description={data.seo.description_en} lang="en">
   <StructuredData data={ld} />
+  {(() => { const dest = CITY_DEST[data.city]; return dest ? <Breadcrumb items={[{ label: 'Home', href: '/en' }, { label: dest.label, href: dest.href }, { label: data.title_en }]} /> : <Breadcrumb items={[{ label: 'Home', href: '/en' }, { label: data.title_en }]} />; })()}
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
     <header class="lg:col-span-2 mb-2xl">
       <Eyebrow class="mb-md">{`Bari · ${durationLabel} · IT/EN`}</Eyebrow>
