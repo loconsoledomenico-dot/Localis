@@ -14,8 +14,10 @@ export const STRINGS = {
     'nav.about': 'Chi siamo',
     'lang.switch_to_en': 'EN',
     'lang.switch_to_it': 'IT',
+    'lang.switch_to_de': 'DE',
     'lang.current_it': 'Italiano',
     'lang.current_en': 'English',
+    'lang.current_de': 'Deutsch',
     'footer.copyright': '© Localis · Audioguide narrative della Puglia',
     'footer.terms': 'Termini',
     'footer.privacy': 'Privacy',
@@ -30,20 +32,41 @@ export const STRINGS = {
     'nav.about': 'About',
     'lang.switch_to_en': 'EN',
     'lang.switch_to_it': 'IT',
+    'lang.switch_to_de': 'DE',
     'lang.current_it': 'Italiano',
     'lang.current_en': 'English',
+    'lang.current_de': 'Deutsch',
     'footer.copyright': '© Localis · Narrative audio guides for Puglia',
     'footer.terms': 'Terms',
     'footer.privacy': 'Privacy',
     'a11y.skip_to_content': 'Skip to main content',
+  },
+  de: {
+    'site.name': 'Localis',
+    'site.tagline': 'Narrative Audioguides · Apulien',
+    'nav.home': 'Home',
+    'nav.guide': 'Guides',
+    'nav.partner': 'Partner werden',
+    'nav.about': 'Über uns',
+    'lang.switch_to_en': 'EN',
+    'lang.switch_to_it': 'IT',
+    'lang.switch_to_de': 'DE',
+    'lang.current_it': 'Italiano',
+    'lang.current_en': 'English',
+    'lang.current_de': 'Deutsch',
+    'footer.copyright': '© Localis · Narrative Audioguides für Apulien',
+    'footer.terms': 'AGB',
+    'footer.privacy': 'Datenschutz',
+    'a11y.skip_to_content': 'Zum Inhalt springen',
   },
 } as const;
 
 export type StringKey = keyof typeof STRINGS['it'];
 
 /**
- * Lookup a translation. Falls back to Italian if key missing in English.
+ * Lookup a translation. Falls back to Italian if key missing in target lang.
  */
 export function t(key: StringKey, lang: Lang): string {
-  return STRINGS[lang][key] ?? STRINGS.it[key];
+  const langStrings = STRINGS[lang as keyof typeof STRINGS];
+  return (langStrings as Record<string, string>)[key] ?? STRINGS.it[key];
 }

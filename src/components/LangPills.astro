@@ -1,0 +1,53 @@
+---
+import { allLangUrls, type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const urls = allLangUrls(currentPath);
+const labels: Record<Lang, string> = { it: 'IT', en: 'EN', de: 'DE' };
+---
+<div class="lang-pills" role="navigation" aria-label="Language versions">
+  {(['it', 'en', 'de'] as Lang[]).map((l) =>
+    l === lang ? (
+      <span class="lang-pill lang-pill--active" aria-current="true">{labels[l]}</span>
+    ) : (
+      <a href={urls[l]} class="lang-pill" hreflang={l}>{labels[l]}</a>
+    )
+  )}
+</div>
+
+<style>
+  .lang-pills {
+    display: flex;
+    gap: 6px;
+    margin-bottom: var(--spacing-md);
+  }
+  .lang-pill {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid oklch(from var(--color-ink) l c h / 0.22);
+    color: var(--color-ink-muted);
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .lang-pill:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .lang-pill--active {
+    border-color: var(--color-ink);
+    color: var(--color-ink);
+    cursor: default;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lang-pill { transition: none; }
+  }
+</style>

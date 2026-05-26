@@ -1,28 +1,34 @@
 ---
 import { type Lang } from '../lib/i18n';
+import LangPills from './LangPills.astro';
 
 export interface Props {
   lang: Lang;
+  currentPath?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, currentPath = '/' } = Astro.props;
 
-const masthead_l = lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
-const masthead_r = lang === 'it' ? 'Guide live · Puglia' : 'Live guides · Puglia';
+const masthead_l = lang === 'de' ? 'Ausgabe 01 — Apulien' : lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
+const masthead_r = lang === 'de' ? 'Live-Guides · Apulien' : lang === 'it' ? 'Guide live · Puglia' : 'Live guides · Puglia';
 
-const heading1a = lang === 'it' ? 'Audioguide raccontate' : 'Audio guides told';
-const heading1b = lang === 'it' ? 'da chi ci è nato.' : 'by people born there.';
+const heading1a = lang === 'de' ? 'Audioguides erzählt' : lang === 'it' ? 'Audioguide raccontate' : 'Audio guides told';
+const heading1b = lang === 'de' ? 'von denen, die dort leben.' : lang === 'it' ? 'da chi ci è nato.' : 'by people born there.';
 
-const lede1 = lang === 'it'
+const lede1 = lang === 'de'
+  ? 'Apulier erzählen dir ihr Land.'
+  : lang === 'it'
   ? 'I pugliesi ti raccontano la loro terra.'
   : 'Locals telling their own land.';
-const lede2 = lang === 'it'
+const lede2 = lang === 'de'
+  ? 'Das echte — nicht die Broschüre.'
+  : lang === 'it'
   ? 'Quella vera, mica le brochure.'
   : 'The real one — not the brochure version.';
 
-const ctaPrimary = lang === 'it' ? 'Scopri le guide' : 'Explore the guides';
-const ctaPrimaryHref = lang === 'it' ? '/guide' : '/en/guide';
-const ctaSecondary = lang === 'it' ? 'Vedi le guide' : 'See the guides';
+const ctaPrimary = lang === 'de' ? 'Guides entdecken' : lang === 'it' ? 'Scopri le guide' : 'Explore the guides';
+const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
+const ctaSecondary = lang === 'de' ? 'Alle Guides' : lang === 'it' ? 'Vedi le guide' : 'See the guides';
 
 interface Pill {
   icon: string;
@@ -30,7 +36,13 @@ interface Pill {
   tail: string;
 }
 
-const pills: Pill[] = lang === 'it'
+const pills: Pill[] = lang === 'de'
+  ? [
+      { icon: 'headphones', label: 'Überall anhören',    tail: 'unterwegs, zuhause, im Zug' },
+      { icon: 'pin',        label: 'Wahre Geschichten',  tail: 'an echten Orten' },
+      { icon: 'heart',      label: 'Von Einheimischen',  tail: 'lokale Autoren, namentlich' },
+    ]
+  : lang === 'it'
   ? [
       { icon: 'headphones', label: 'Ascolta dove vuoi', tail: 'in strada, sul divano, in treno' },
       { icon: 'pin',        label: 'Storie vere',       tail: 'sui luoghi reali e autentici' },
@@ -42,7 +54,9 @@ const pills: Pill[] = lang === 'it'
       { icon: 'heart',      label: 'Locals only',         tail: 'local authors, signed by name' },
     ];
 
-const altText = lang === 'it'
+const altText = lang === 'de'
+  ? 'Eine junge Frau mit Kopfhörern auf Baris Lungomare bei Sonnenuntergang'
+  : lang === 'it'
   ? 'Una ragazza con cuffie sul lungomare di Bari al tramonto: cattedrale e palazzi storici a destra, sole che cala sul mare a sinistra'
   : 'A young woman with headphones on Bari\'s lungomare at sunset: cathedral and historic buildings to the right, sun setting over the sea to the left';
 ---
@@ -75,6 +89,7 @@ const altText = lang === 'it'
 
   <!-- Content overlay — anchored left -->
   <div class="hero-content">
+    <LangPills lang={lang} currentPath={currentPath} />
     <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
       <span class="hero-h1-a block font-light text-[clamp(2rem,5.6vw,4.4rem)]">{heading1a}</span>
       <span class="hero-h1-b block font-light text-[clamp(2rem,5.6vw,4.4rem)]">{heading1b}</span>

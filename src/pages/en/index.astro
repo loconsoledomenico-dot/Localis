@@ -15,7 +15,7 @@ import MobileStickyCTA from '../../components/MobileStickyCTA.astro';
   description="Narrative audio guides of Bari that make you understand, not list. Six live guides, written by locals. €4.99."
   lang="en"
 >
-  <Hero lang="en" />
+  <Hero lang="en" currentPath={Astro.url.pathname} />
 
   {/* STATS — thin band, separates hero from rest: 6/0/0/∞ */}
   <StatsBlock lang="en" />

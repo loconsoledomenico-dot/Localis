@@ -20,9 +20,15 @@ const copy = {
     reject: 'Essential only',
     policy: 'Cookie policy',
   },
+  de: {
+    text: 'Wir verwenden Analyse-Cookies (Google Analytics), um zu verstehen, wie die Website genutzt wird. Sie können alle akzeptieren oder nur essentielle Cookies zulassen.',
+    accept: 'Alle akzeptieren',
+    reject: 'Nur essenzielle',
+    policy: 'Cookie-Richtlinie',
+  },
 };
 
-const c = copy[lang];
+const c = copy[lang as keyof typeof copy] ?? copy.en;
 const policyHref = localizedHref('/cookie-policy', lang);
 ---
 

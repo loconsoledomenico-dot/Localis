@@ -15,7 +15,7 @@ import MobileStickyCTA from '../components/MobileStickyCTA.astro';
   description="Audioguide narrative di Bari che ti fanno capire, non elencare. Sei guide live scritte da chi ci vive. €4,99."
   lang="it"
 >
-  <Hero lang="it" />
+  <Hero lang="it" currentPath={Astro.url.pathname} />
 
   {/* STATS — banda sottile, separa l'hero dal resto: 6/0/0/∞ */}
   <StatsBlock lang="it" />

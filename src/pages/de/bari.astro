@@ -9,16 +9,16 @@ import StepsBlock from '../../components/StepsBlock.astro';
 import LangPills from '../../components/LangPills.astro';
 ---
 <Layout
-  title="Bari — Narrative Audio Guides · Localis"
-  description="Six narrative audio guides of Bari told by Bari-born authors. Old Town, San Nicola, Port, Theatres, Underground, Best of Bari. From €4.99."
-  lang="en"
+  title="Bari — Narrative Audioguides · Localis"
+  description="Sechs narrative Audioguides aus Bari, erzählt von Bariser Autoren. Altstadt, San Nicola, Hafen, Theater, Unterstadt, Das Beste von Bari. Ab €4,99."
+  lang="de"
 >
 
   {/* PAGE HEADER — hero with image */}
   <section class="bari-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/hero/hero-bari-tramonto.jpg"
-      alt="Bari, view of the old town and seafront"
+      alt="Bari, Blick auf die Altstadt und die Strandpromenade"
       class="bari-hero-bg"
       width="1980"
       height="900"
@@ -28,18 +28,18 @@ import LangPills from '../../components/LangPills.astro';
     />
     <div class="bari-hero-scrim" aria-hidden="true"></div>
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
-      <LangPills lang="en" currentPath={Astro.url.pathname} />
+      <LangPills lang="de" currentPath={Astro.url.pathname} />
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Destination — Bari
+          Reiseziel — Bari
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[18ch]">
-        Bari told<br /><em class="not-italic text-ink-muted">by people born there.</em>
+        Bari erzählt<br /><em class="not-italic text-ink-muted">von denen, die dort geboren wurden.</em>
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Six live guides, six Bari voices. From the Old Town to the port, from the theatres to the underground city: every route is signed by someone who lived those places as a child.
+        Sechs Live-Guides, sechs Bariser Stimmen. Von der Altstadt bis zum Hafen, von den Theatern bis zur Unterstadt — jede Route stammt von jemandem, der dort aufgewachsen ist.
       </p>
     </div>
   </section>
@@ -83,54 +83,54 @@ import LangPills from '../../components/LangPills.astro';
     }
   </style>
 
-  {/* LE 6 GUIDE */}
-  <BariMap lang="en" />
+  {/* THE 6 GUIDES */}
+  <BariMap lang="de" />
 
   {/* PRICING */}
-  <section id="prezzi" class="bg-surface">
+  <section id="preise" class="bg-surface">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <SectionDivider label="Take what you need" />
+      <SectionDivider label="Nimm was du brauchst" />
       <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
         <PriceCard
           product="single"
           guideSlug="bari-vecchia"
-          lang="en"
+          lang="de"
           features={[
-            'One guide of your choice',
-            'Unlimited access, forever',
-            'Italian and English',
-            '1-click refund within 24h',
+            'Ein Guide nach Wahl',
+            'Unbegrenzter Zugang, für immer',
+            'Italienisch, Englisch und Deutsch',
+            '1-Klick-Rückgabe innerhalb 24h',
           ]}
         />
         <PriceCard
           product="essenziale"
-          lang="en"
+          lang="de"
           features={[
-            'Old Town · San Nicola · Best of Bari',
-            '~1h 20min · 3 different voices',
-            'Italian and English',
-            '1-click refund within 24h',
+            'Altstadt · San Nicola · Das Beste von Bari',
+            '~1h 20min · 3 verschiedene Stimmen',
+            'Italienisch, Englisch und Deutsch',
+            '1-Klick-Rückgabe innerhalb 24h',
           ]}
         />
         <PriceCard
           product="bundle"
-          lang="en"
+          lang="de"
           primary
           features={[
-            'All 6 Bari guides',
-            '~2h 20min · 6 different voices',
-            'Save €14.95 vs single guides',
-            '1-click refund within 24h',
+            'Alle 6 Bari-Guides',
+            '~2h 20min · 6 verschiedene Stimmen',
+            'Spart €14,95 gegenüber Einzelkauf',
+            '1-Klick-Rückgabe innerhalb 24h',
           ]}
         />
       </div>
     </div>
   </section>
 
-  {/* AUTORI */}
-  <AuthorsBlock lang="en" />
+  {/* AUTHORS */}
+  <AuthorsBlock lang="de" />
 
-  {/* 3 PASSI */}
-  <StepsBlock lang="en" ctaHref="/en/guide/bari-vecchia" />
+  {/* 3 STEPS */}
+  <StepsBlock lang="de" ctaHref="/de/guide/bari-vecchia" />
 
 </Layout>

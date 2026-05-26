@@ -1,10 +1,10 @@
 ---
 export const prerender = true;
-import Layout from '../components/Layout.astro';
-import SectionDivider from '../components/SectionDivider.astro';
-import PriceCard from '../components/PriceCard.astro';
-import StepsBlock from '../components/StepsBlock.astro';
-import LangPills from '../components/LangPills.astro';
+import Layout from '../../components/Layout.astro';
+import SectionDivider from '../../components/SectionDivider.astro';
+import PriceCard from '../../components/PriceCard.astro';
+import StepsBlock from '../../components/StepsBlock.astro';
+import LangPills from '../../components/LangPills.astro';
 
 interface GuideEntry {
   slug: string;
@@ -20,77 +20,77 @@ interface GuideEntry {
 const guides: GuideEntry[] = [
   {
     slug: 'gargano-vieste',
-    title: 'Vieste — La Città sul Promontorio',
-    subtitle: 'Pizzomunno, le falesie bianche, le calette, Pugnochiuso.',
-    places: 'Vieste · Pugnochiuso · trabucchi · grotte marine',
-    narrator: 'Rossella, terza generazione sul lido',
+    title: 'Vieste — Die Stadt auf dem Felsen',
+    subtitle: 'Pizzomunno, weiße Klippen, versteckte Buchten, Pugnochiuso.',
+    places: 'Vieste · Pugnochiuso · trabucchi · Meereshöhlen',
+    narrator: 'Rossella, dritte Generation Strandclub',
     cover: '/images/covers/gargano-vieste.jpg',
-    alt: 'Vieste, promontorio di roccia bianca sul mare del Gargano',
+    alt: 'Vieste, weißes Kalksteinvorgebirge über dem Gargano-Meer',
     price: '€4,99',
   },
   {
     slug: 'gargano-nord',
-    title: 'Il Gargano del Silenzio — Borghi, Trabucchi e Costa',
-    subtitle: 'Lesina, Rodi Garganico, Peschici. Dal trabucco si vede tutto.',
-    places: 'Lesina · Rodi Garganico · Peschici · trabucchi · lago di Lesina',
-    narrator: 'Ferdinando, quarta generazione sul trabucco',
+    title: 'Der stille Gargano — Dörfer, Trabucchi und Küste',
+    subtitle: 'Lesina, Rodi Garganico, Peschici. Vom Trabucco aus sieht man alles.',
+    places: 'Lesina · Rodi Garganico · Peschici · trabucchi · Lesina-See',
+    narrator: 'Ferdinando, vierte Generation Trabucco',
     cover: '/images/covers/gargano-nord.jpg',
-    alt: 'Trabucco sul Gargano, struttura di legno di ginepro sulla roccia',
+    alt: 'Trabucco an der Gargano-Küste, Struktur aus Wacholderholz auf dem Felsen',
     price: '€4,99',
   },
   {
     slug: 'gargano-sacro',
-    title: 'Il Sacro Monte — Foresta, Fede e Pellegrini',
-    subtitle: 'La foresta, la grotta, il convento. Un percorso che i pellegrini medievali conoscevano bene.',
+    title: 'Der heilige Berg — Wald, Glaube und Pilger',
+    subtitle: 'Der Wald, die Grotte, das Kloster. Ein Weg, den mittelalterliche Pilger gut kannten.',
     places: 'Foresta Umbra · Monte Sant\'Angelo · San Giovanni Rotondo · Padre Pio',
-    narrator: "Fra' Salvatore, trent'anni al Santuario",
+    narrator: "Fra' Salvatore, dreißig Jahre am Heiligtum",
     cover: '/images/covers/gargano-sacro.jpg',
-    alt: "Foresta Umbra del Gargano, bosco primario con faggi e cerri",
+    alt: 'Foresta Umbra des Gargano, alter Wald mit Buchen und Eichen',
     price: '€4,99',
   },
   {
     slug: 'gargano-tremiti',
-    title: "Le Tremiti — L'Arcipelago Dimenticato",
-    subtitle: 'San Domino, San Nicola, le grotte marine. Lucio Dalla ci tornava ogni anno.',
-    places: 'San Domino · San Nicola · grotte marine · abbazia benedettina · parco marino',
-    narrator: 'Tonino, barcaiolo di San Domino',
+    title: 'Die Tremiti-Inseln — Der vergessene Archipel',
+    subtitle: 'San Domino, San Nicola, Meereshöhlen. Lucio Dalla kam jeden Sommer zurück.',
+    places: 'San Domino · San Nicola · Meereshöhlen · Benediktinerabtei · Meeresschutzgebiet',
+    narrator: 'Tonino, Bootsführer von San Domino',
     cover: '/images/covers/gargano-tremiti.jpg',
-    alt: 'Isole Tremiti, acque turchesi e rocce bianche nel mezzo dell\'Adriatico',
+    alt: 'Tremiti-Inseln, türkisfarbenes Wasser und weiße Felsen in der Adria',
     price: '€4,99',
   },
   {
     slug: 'gargano-paesi',
-    title: 'I Paesi del Gargano — Pietra Bianca e Vicoli',
-    subtitle: "Il Gargano che non si raggiunge con il navigatore impostato sul mare.",
-    places: 'Vico del Gargano · Ischitella · Carpino · lago di Varano',
-    narrator: 'Stefano, guardiaparco da trent\'anni',
+    title: 'Die Dörfer des Gargano — Weißer Stein und Gassen',
+    subtitle: 'Der Gargano, den du mit dem Navi auf Strand-Suche nicht erreichst.',
+    places: 'Vico del Gargano · Ischitella · Carpino · Varano-See',
+    narrator: 'Stefano, dreißig Jahre Nationalparkwächter',
     cover: '/images/covers/gargano-paesi.jpg',
-    alt: 'Vico del Gargano, vicoli medievali e case di pietra bianca',
+    alt: 'Vico del Gargano, mittelalterliche Gassen und weiße Steinhäuser',
     price: '€4,99',
   },
   {
     slug: 'gargano-saline',
-    title: 'Le Saline di Margherita — Sale e Fenicotteri',
-    subtitle: 'Le saline più grandi d\'Italia. La città abbandonata sotto la sabbia.',
-    places: 'Saline di Margherita di Savoia · Manfredonia · Siponto · fenicotteri',
-    narrator: "Antonello, trent'anni alle saline",
+    title: 'Die Salinen von Margherita — Salz und Flamingos',
+    subtitle: "Italiens größtes Salzwerk. Die unter dem Sand begrabene Stadt.",
+    places: 'Salinen Margherita di Savoia · Manfredonia · Siponto · Flamingos',
+    narrator: "Antonello, dreißig Jahre in der Salzqualitätskontrolle",
     cover: '/images/covers/gargano-saline.jpg',
-    alt: 'Saline di Margherita di Savoia, vasche rosa al tramonto con fenicotteri',
+    alt: 'Salinen von Margherita di Savoia, rosa Becken bei Sonnenuntergang mit Flamingos',
     price: '€4,99',
   },
 ];
 ---
 <Layout
-  title="Gargano — Audioguide narrative · Localis"
-  description="Sei guide narrative del Gargano: Vieste, Costa Nord, Sacro Monte, Tremiti, Paesi dell'entroterra, Saline. Raccontate da chi ci vive. Da €4,99."
-  lang="it"
+  title="Gargano — Narrative Audioguides · Localis"
+  description="Sechs narrative Audioguides des Gargano: Vieste, Nordküste, Heiliger Berg, Tremiti, Dörfer, Salinen. Erzählt von Einheimischen. Ab €4,99."
+  lang="de"
 >
 
-  {/* PAGE HEADER — hero con immagine */}
+  {/* PAGE HEADER — hero with image */}
   <section class="gargano-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/covers/gargano-landing.jpg"
-      alt="Gargano, promontorio sul mare Adriatico"
+      alt="Gargano-Vorgebirge über der Adria"
       class="gargano-hero-bg"
       width="1980"
       height="900"
@@ -100,18 +100,18 @@ const guides: GuideEntry[] = [
     />
     <div class="gargano-hero-scrim" aria-hidden="true"></div>
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
-      <LangPills lang="it" currentPath={Astro.url.pathname} />
+      <LangPills lang="de" currentPath={Astro.url.pathname} />
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Destinazione — Gargano
+          Reiseziel — Gargano
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
-        Il Gargano raccontato<br /><em class="not-italic text-ink-muted">da chi ci è nato.</em>
+        Der Gargano erzählt<br /><em class="not-italic text-ink-muted">von denen, die dort leben.</em>
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Sei guide live. Da Vieste alle Tremiti, dalla Foresta Umbra alle saline di Margherita: ogni voce è di chi quei posti li vive davvero.
+        Sechs Live-Guides. Von Vieste bis zu den Tremiti, vom Foresta Umbra bis zu den Salinen von Margherita — jede Stimme gehört jemandem, der dort wirklich lebt.
       </p>
     </div>
   </section>
@@ -159,7 +159,7 @@ const guides: GuideEntry[] = [
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
-      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei voci · sei luoghi · un promontorio</p>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sechs Stimmen · sechs Orte · ein Vorgebirge</p>
       <span class="block h-px flex-1 bg-border"></span>
     </div>
   </section>
@@ -170,7 +170,7 @@ const guides: GuideEntry[] = [
       <ol class="guide-grid list-none p-0 m-0">
         {guides.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
-            <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title}`}>
+            <a href={`/de/guide/${g.slug}`} class="guide-card" aria-label={`${g.title}`}>
               <figure class="guide-photo m-0">
                 <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
@@ -191,27 +191,27 @@ const guides: GuideEntry[] = [
     </div>
   </section>
 
-  {/* NARRATORI */}
+  {/* NARRATORS */}
   <section class="bg-surface border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <div class="flex items-center justify-center gap-sm mb-2xl">
         <span class="block w-7 h-px bg-accent"></span>
-        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">Le voci del Gargano</span>
+        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">Die Stimmen des Gargano</span>
         <span class="block w-7 h-px bg-accent"></span>
       </div>
       <ul class="narr-grid list-none p-0 m-0">
         {[
-          { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Terza generazione sul lido di Vieste', bio: 'Cinquantaquattro anni. La famiglia gestisce lo stesso lido dai tempi di suo nonno. Ha visto questa costa cambiare più in sessant\'anni che nei seicento precedenti.', guide: 'Vieste', href: '/guide/gargano-vieste' },
-          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Quarta generazione sul trabucco', bio: 'Sessantotto anni, di Peschici. Sul trabucco di famiglia da quando aveva undici anni. Il mare del Gargano lo conosce a memoria, ogni corrente, ogni ora del giorno.', guide: 'Costa Nord', href: '/guide/gargano-nord' },
-          { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Trent\'anni al Santuario di Monte Sant\'Angelo', bio: "Settantatré anni. Frate francescano dal 1978. Ha accompagnato pellegrini dalla Foresta Umbra fino alla grotta dell'Arcangelo — a piedi, come si faceva nel Medioevo.", guide: 'Il Gargano Sacro', href: '/guide/gargano-sacro' },
-          { name: 'Tonino', photo: '/images/authors/tonino-tremiti.jpg', role: 'Barcaiolo di San Domino', bio: "Settantaquattro anni. Nato alle Tremiti, non le ha mai lasciate. Per vent'anni ha portato Lucio Dalla in giro per le grotte. Conosce ogni cala, ogni secca, ogni corrente dell'arcipelago.", guide: 'Isole Tremiti', href: '/guide/gargano-tremiti' },
-          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Guardiaparco da trent\'anni', bio: "Cinquantotto anni, di Vico del Gargano. Trent'anni nel Parco Nazionale del Gargano. Conosce i borghi dell'entroterra come pochi — le strade, le storie, i nomi dei casali abbandonati.", guide: 'I Borghi', href: '/guide/gargano-paesi' },
-          { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Trent\'anni al controllo qualità del sale', bio: "Cinquantaquattro anni, di Manfredonia. Trent'anni alle saline di Margherita di Savoia. Ha visto le vasche in tutte le ore possibili — dall'alba rosa di luglio alla nebbia di dicembre.", guide: 'Saline', href: '/guide/gargano-saline' },
+          { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Dritte Generation Strandclub, Vieste', bio: "Vierundfünfzig. Ihre Familie führt denselben Strandclub seit Großvaters Zeiten. Sie hat diese Küste in sechzig Jahren mehr verändern sehen als in den sechshundert davor.", guide: 'Vieste', href: '/de/guide/gargano-vieste' },
+          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Vierte Generation Trabucco-Fischer', bio: 'Achtundsechzig, aus Peschici. Auf dem Familientrabucco seit er elf war. Er kennt das Gargano-Meer auswendig — jede Strömung, jede Tageszeit.', guide: 'Nordküste', href: '/de/guide/gargano-nord' },
+          { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Dreißig Jahre am Heiligtum von Monte Sant\'Angelo', bio: "Dreiundsiebzig. Franziskanermönch seit 1978. Er hat Pilger von der Foresta Umbra bis zur Grottenkirche des Erzengels geführt — zu Fuß, wie im Mittelalter.", guide: 'Heiliger Gargano', href: '/de/guide/gargano-sacro' },
+          { name: 'Tonino', photo: '/images/authors/tonino-tremiti.jpg', role: 'Bootsführer von San Domino', bio: "Vierundsiebzig. Auf den Tremiti-Inseln geboren, nie weggegangen. Zwanzig Jahre lang fuhr er mit Lucio Dalla zu den Meereshöhlen. Er kennt jeden Winkel des Archipels.", guide: 'Tremiti-Inseln', href: '/de/guide/gargano-tremiti' },
+          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Dreißig Jahre Nationalparkwächter', bio: "Achtundfünfzig, aus Vico del Gargano. Dreißig Jahre im Nationalpark Gargano. Er kennt die Innendörfer wie kaum ein anderer — die Straßen, die Geschichten, die Namen verlassener Gehöfte.", guide: 'Die Dörfer', href: '/de/guide/gargano-paesi' },
+          { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Dreißig Jahre Salzqualitätskontrolle', bio: "Vierundfünfzig, aus Manfredonia. Dreißig Jahre in den Salinen von Margherita di Savoia. Er hat die Becken zu jeder möglichen Stunde gesehen — vom rosa Julidämmern bis zum Dezembernebel.", guide: 'Salinen', href: '/de/guide/gargano-saline' },
         ].map((n) => (
           <li class="narr-cell">
-            <a href={n.href} class="narr-card" aria-label={`Guida ${n.guide} — voce di ${n.name}`}>
+            <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} — Stimme von ${n.name}`}>
               <figure class="narr-photo m-0">
-                <img src={n.photo} alt={`Ritratto di ${n.name}`} loading="lazy" decoding="async" />
+                <img src={n.photo} alt={`Porträt von ${n.name}`} loading="lazy" decoding="async" />
               </figure>
               <div class="narr-text">
                 <p class="narr-guide font-body text-[10px] font-semibold tracking-[0.22em] uppercase text-accent m-0">{n.guide}</p>
@@ -270,37 +270,37 @@ const guides: GuideEntry[] = [
   </style>
 
   {/* PRICING */}
-  <section id="prezzi" class="bg-surface-elev border-t border-border">
+  <section id="preise" class="bg-surface-elev border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <SectionDivider label="Prendi quella che ti serve" />
+      <SectionDivider label="Nimm was du brauchst" />
       <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[46rem] mx-auto">
         <PriceCard
           product="single"
           guideSlug="gargano-vieste"
-          lang="it"
+          lang="de"
           features={[
-            'Una guida a tua scelta',
-            'Accesso illimitato, per sempre',
-            'Italiano e inglese',
-            'Rimborso 1-click entro 24h',
+            'Ein Guide nach Wahl',
+            'Unbegrenzter Zugang, für immer',
+            'Italienisch, Englisch und Deutsch',
+            '1-Klick-Rückgabe innerhalb 24h',
           ]}
         />
         <PriceCard
           product="bundle"
-          lang="it"
+          lang="de"
           primary
           features={[
-            'Tutte le guide disponibili · Bari + Gargano',
-            '~5h di racconto · voci diverse',
-            'Rimborso 1-click entro 24h',
+            'Alle verfügbaren Guides · Bari + Gargano',
+            '~5h Storytelling · verschiedene Stimmen',
+            '1-Klick-Rückgabe innerhalb 24h',
           ]}
         />
       </div>
     </div>
   </section>
 
-  {/* 3 PASSI */}
-  <StepsBlock lang="it" ctaHref="/guide/gargano-vieste" />
+  {/* 3 STEPS */}
+  <StepsBlock lang="de" ctaHref="/de/guide/gargano-vieste" />
 
 </Layout>
 

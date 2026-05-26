@@ -19,7 +19,7 @@ export default defineConfig({
 
   i18n: {
     defaultLocale: 'it',
-    locales: ['it', 'en'],
+    locales: ['it', 'en', 'de'],
     routing: {
       prefixDefaultLocale: false,
     },
@@ -33,6 +33,7 @@ export default defineConfig({
         locales: {
           it: 'it-IT',
           en: 'en-US',
+          de: 'de-DE',
         },
       },
       filter: (page) =>

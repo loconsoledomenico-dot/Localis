@@ -6,6 +6,7 @@ import PriceCard from '../components/PriceCard.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 import AuthorsBlock from '../components/AuthorsBlock.astro';
 import StepsBlock from '../components/StepsBlock.astro';
+import LangPills from '../components/LangPills.astro';
 ---
 <Layout
   title="Bari — Audioguide narrative · Localis"
@@ -27,6 +28,7 @@ import StepsBlock from '../components/StepsBlock.astro';
     />
     <div class="bari-hero-scrim" aria-hidden="true"></div>
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
+      <LangPills lang="it" currentPath={Astro.url.pathname} />
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
