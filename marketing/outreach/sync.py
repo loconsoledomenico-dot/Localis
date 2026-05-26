@@ -58,11 +58,15 @@ def sync_da_csv(csv_path: str):
     with open(csv_path, encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
+            slug = row.get("slug", "").strip()
+            if not slug:
+                print("  Riga senza slug, skippata")
+                continue
             visitatori = int(row.get("visitatori", 0))
             acquisti = int(row.get("acquisti", 0))
             revenue = float(row.get("revenue_lorda", 0))
             upsert_analytics({
-                "slug": row["slug"],
+                "slug": slug,
                 "nome": row.get("nome", ""),
                 "periodo_da": row.get("periodo_da", ""),
                 "periodo_a": row.get("periodo_a", ""),
@@ -74,4 +78,4 @@ def sync_da_csv(csv_path: str):
                 "quota_partner_25pct": calcola_quota(revenue),
                 "cr_visit_buy": calcola_cr(visitatori, acquisti),
             })
-            print(f"  Aggiornato: {row['slug']}")
+            print(f"  Aggiornato: {slug}")
