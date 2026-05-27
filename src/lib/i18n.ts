@@ -56,7 +56,7 @@ const SLUG_MAP: Record<string, { en: string; de: string }> = {
  * Returns URLs for all 3 language versions of the current path.
  */
 export function allLangUrls(currentPath: string): Record<Lang, string> {
-  const stripped = stripLocalePrefix(currentPath);
+  const stripped = stripLocalePrefix(currentPath).replace(/\/$/, '') || '/';
   const map = SLUG_MAP[stripped];
   if (map) {
     return {
