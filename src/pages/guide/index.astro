@@ -179,7 +179,7 @@ const valleItria: GuideEntry[] = [
         <span class="font-body text-sm text-ink-muted">6 guide</span>
       </div>
 
-      <ol class="guide-grid list-none p-0 m-0">
+      <ol class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--spacing-lg)] [row-gap:var(--spacing-2xl)] items-start">
         {bariGuides.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
             <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
@@ -212,7 +212,7 @@ const valleItria: GuideEntry[] = [
         <span class="font-body text-sm text-ink-muted">6 guide</span>
       </div>
 
-      <ol class="guide-grid list-none p-0 m-0">
+      <ol class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--spacing-lg)] [row-gap:var(--spacing-2xl)] items-start">
         {valleItria.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
             <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
@@ -244,7 +244,7 @@ const valleItria: GuideEntry[] = [
         <span class="font-body text-sm text-ink-muted">6 guide</span>
       </div>
 
-      <ol class="guide-grid list-none p-0 m-0">
+      <ol class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--spacing-lg)] [row-gap:var(--spacing-2xl)] items-start">
         {[
           { slug: 'gargano-vieste', title: 'Vieste — La Città sul Promontorio', subtitle: 'Pizzomunno, le falesie bianche, Pugnochiuso.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-vieste.jpg', alt: 'Vieste, promontorio di roccia bianca sul mare del Gargano', price: '€4,99' },
           { slug: 'gargano-nord', title: 'Il Gargano del Silenzio — Borghi, Trabucchi e Costa', subtitle: 'Dal trabucco di famiglia si vede tutto.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-nord.jpg', alt: 'Trabucco sul mare del Gargano settentrionale', price: '€4,99' },
@@ -281,17 +281,7 @@ const valleItria: GuideEntry[] = [
 </Layout>
 
 <style>
-  .guide-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--spacing-lg);
-    row-gap: var(--spacing-2xl);
-    align-items: start;
-  }
-  @media (min-width: 640px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
-
-  .guide-cell {
+.guide-cell {
     opacity: 0;
     transform: translateY(14px);
     animation: guideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
