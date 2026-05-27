@@ -168,6 +168,63 @@ import StepsBlock from '../../components/StepsBlock.astro';
     </div>
   </section>
 
+  {/* GUIDE CARDS */}
+  <section class="bg-surface py-xl lg:py-3xl border-b border-border">
+    <div class="max-w-wrap mx-auto px-md">
+      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-xl text-center">
+        Two chapters. One morning you'll remember.
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-lg">
+        {/* Card 1 */}
+        <div class="bg-surface-elev rounded-lg overflow-hidden border border-border flex flex-col">
+          <div class="aspect-[2/3] overflow-hidden">
+            <img
+              src="/images/covers/bari-vecchia.jpg"
+              alt="Old Bari — Inside the City"
+              class="w-full h-full object-cover object-top"
+              width="1024"
+              height="1536"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="p-md flex flex-col gap-xs flex-1">
+            <span class="text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-subtle">21 minutes</span>
+            <h3 class="font-display font-light text-ink text-xl leading-snug">
+              Old Bari — Inside the City
+            </h3>
+            <p class="font-body text-sm text-ink-muted leading-relaxed">
+              Starts at Strada delle Crociate. The ancient quarter chapter by chapter: the Basilica of San Nicola, the narrow streets, the cathedral, the districts. Real history, not the standard tourist guide.
+            </p>
+          </div>
+        </div>
+        {/* Card 2 */}
+        <div class="bg-surface-elev rounded-lg overflow-hidden border border-border flex flex-col">
+          <div class="aspect-[2/3] overflow-hidden">
+            <img
+              src="/images/covers/il-meglio-di-bari.jpg"
+              alt="The Best of Bari — Eat Before You Understand"
+              class="w-full h-full object-cover object-top"
+              width="1024"
+              height="1536"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="p-md flex flex-col gap-xs flex-1">
+            <span class="text-[11px] font-semibold tracking-[0.18em] uppercase text-ink-subtle">28 minutes</span>
+            <h3 class="font-display font-light text-ink text-xl leading-snug">
+              The Best of Bari — Eat Before You Understand
+            </h3>
+            <p class="font-body text-sm text-ink-muted leading-relaxed">
+              Starts at Strada Arco Basso. The seafront, the fish market, the panzerotti. The places locals never explain — because they take them for granted.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   {/* PRICING */}
   <section id="pricing" class="bg-surface">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
