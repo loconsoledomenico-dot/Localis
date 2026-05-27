@@ -283,12 +283,14 @@ const valleItria: GuideEntry[] = [
 <style>
   .guide-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, minmax(0, 400px));
     gap: var(--spacing-lg) var(--spacing-lg);
     row-gap: var(--spacing-2xl);
+    align-items: start;
+    justify-content: center;
   }
-  @media (min-width: 640px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 640px) { .guide-grid { grid-template-columns: repeat(2, minmax(0, 400px)); } }
+  @media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, minmax(0, 400px)); } }
 
   .guide-cell {
     opacity: 0;
@@ -318,6 +320,7 @@ const valleItria: GuideEntry[] = [
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 5;
+    flex-shrink: 0;
     background: var(--color-surface-elev);
     overflow: hidden;
     border-radius: var(--radius-md);
