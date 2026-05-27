@@ -7,7 +7,7 @@ import StickyPlayer from './StickyPlayer.astro';
 import StructuredData from './StructuredData.astro';
 import Analytics from './Analytics.astro';
 import CookieBanner from './CookieBanner.astro';
-import { type Lang, stripLocalePrefix } from '../lib/i18n';
+import { type Lang, allLangUrls } from '../lib/i18n';
 import { organizationLD } from '../lib/seo';
 
 export interface Props {
@@ -19,8 +19,9 @@ export interface Props {
 
 const { title, description = '', lang = 'it', ogImage } = Astro.props;
 const currentPath = Astro.url.pathname;
-const itUrl = lang === 'it' ? currentPath : stripLocalePrefix(currentPath);
-const enUrl = lang === 'en' ? currentPath : `/en${stripLocalePrefix(currentPath)}`;
+const langUrls = allLangUrls(currentPath);
+const itUrl = langUrls.it;
+const enUrl = langUrls.en;
 const SITE = 'https://localis.guide';
 const canonical = `${SITE}${currentPath}`;
 ---
