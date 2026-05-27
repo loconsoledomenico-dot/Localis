@@ -21,7 +21,7 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   const guideSlug = body.guideSlug;
   const lang = (body.lang === 'en' ? 'en' : 'it') as 'it' | 'en';
 
-  if (!product || (product !== 'single' && product !== 'essenziale' && product !== 'bundle')) {
+  if (!product || !['single', 'essenziale', 'bundle', 'crociera'].includes(product)) {
     return jsonError(400, 'Missing or invalid product');
   }
 
