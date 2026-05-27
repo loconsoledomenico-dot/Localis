@@ -1,67 +1,122 @@
 import { describe, it, expect } from 'vitest';
 import {
-  STRIPE_PRICE_IDS,
+  ALL_GUIDES,
   BARI_GUIDES,
-  getGuideSlugsForProduct,
-  getProductPriceCents,
+  VALLE_GUIDES,
+  GARGANO_GUIDES,
+  CROCIERA_GUIDES,
+  PRODUCT_PRICE_CENTS,
+  FREE_CHOICE_TIERS,
+  getTierForCount,
+  getNextTier,
+  validateSelectedSlugs,
+  savingsCents,
 } from '../../src/lib/stripe-prices';
 
-describe('Stripe price catalog', () => {
-  it('contains exactly 2 products: single + bundle', () => {
-    const keys = Object.keys(STRIPE_PRICE_IDS).sort();
-    expect(keys).toEqual(['bundle', 'single']);
+describe('guide catalog', () => {
+  it('ALL_GUIDES has 18 entries', () => {
+    expect(ALL_GUIDES.length).toBe(18);
   });
 
-  it('all price IDs follow Stripe format prefix', () => {
-    for (const [, id] of Object.entries(STRIPE_PRICE_IDS)) {
-      expect(id).toMatch(/^price_/);
-    }
+  it('BARI_GUIDES has 6 entries', () => {
+    expect(BARI_GUIDES.length).toBe(6);
   });
 
-  it('BARI_GUIDES enumerates the 6 live Bari guides', () => {
-    expect([...BARI_GUIDES].sort()).toEqual([
-      'bari-sotterranea',
-      'bari-vecchia',
-      'il-meglio-di-bari',
-      'porto-bari',
-      'san-nicola',
-      'tre-teatri',
-    ]);
+  it('VALLE_GUIDES has 6 entries', () => {
+    expect(VALLE_GUIDES.length).toBe(6);
   });
 
-  describe('getGuideSlugsForProduct', () => {
-    it('single + valid guideSlug resolves to that one guide', () => {
-      expect(getGuideSlugsForProduct('single', 'bari-vecchia')).toEqual(['bari-vecchia']);
-    });
-
-    it('single without guideSlug throws', () => {
-      expect(() => getGuideSlugsForProduct('single')).toThrow();
-    });
-
-    it('single with unknown guideSlug throws', () => {
-      expect(() => getGuideSlugsForProduct('single', 'not-a-guide')).toThrow();
-    });
-
-    it('bundle resolves to all 6 Bari guides', () => {
-      const slugs = getGuideSlugsForProduct('bundle');
-      expect(slugs.sort()).toEqual([
-        'bari-sotterranea',
-        'bari-vecchia',
-        'il-meglio-di-bari',
-        'porto-bari',
-        'san-nicola',
-        'tre-teatri',
-      ]);
-    });
+  it('GARGANO_GUIDES has 6 entries', () => {
+    expect(GARGANO_GUIDES.length).toBe(6);
   });
 
-  describe('getProductPriceCents', () => {
-    it('single guide is 499 cents', () => {
-      expect(getProductPriceCents('single')).toBe(499);
-    });
-
-    it('bundle is 1990 cents', () => {
-      expect(getProductPriceCents('bundle')).toBe(1990);
-    });
+  it('no duplicate slugs across ALL_GUIDES', () => {
+    const unique = new Set(ALL_GUIDES);
+    expect(unique.size).toBe(ALL_GUIDES.length);
   });
+});
+
+describe('PRODUCT_PRICE_CENTS', () => {
+  it('single is 499', () => expect(PRODUCT_PRICE_CENTS.single).toBe(499));
+  it('tris is 1199', () => expect(PRODUCT_PRICE_CENTS.tris).toBe(1199));
+  it('sestina is 1999', () => expect(PRODUCT_PRICE_CENTS.sestina).toBe(1999));
+  it('puglia-completa is 2999', () => expect(PRODUCT_PRICE_CENTS['puglia-completa']).toBe(2999));
+  it('bari-completa is 1499', () => expect(PRODUCT_PRICE_CENTS['bari-completa']).toBe(1499));
+});
+
+describe('getTierForCount', () => {
+  it('3 → tris', () => expect(getTierForCount(3)?.product).toBe('tris'));
+  it('6 → sestina', () => expect(getTierForCount(6)?.product).toBe('sestina'));
+  it('18 → puglia-completa', () => expect(getTierForCount(18)?.product).toBe('puglia-completa'));
+  it('4 → null (not a tier boundary)', () => expect(getTierForCount(4)).toBeNull());
+  it('0 → null', () => expect(getTierForCount(0)).toBeNull());
+});
+
+describe('getNextTier', () => {
+  it('0 guides → next is tris (3)', () => expect(getNextTier(0)?.product).toBe('tris'));
+  it('1 guide → next is tris', () => expect(getNextTier(1)?.product).toBe('tris'));
+  it('3 guides → next is sestina (6)', () => expect(getNextTier(3)?.product).toBe('sestina'));
+  it('4 guides → next is sestina', () => expect(getNextTier(4)?.product).toBe('sestina'));
+  it('6 guides → next is puglia-completa', () => expect(getNextTier(6)?.product).toBe('puglia-completa'));
+  it('18 guides → null (no tier above)', () => expect(getNextTier(18)).toBeNull());
+});
+
+describe('validateSelectedSlugs', () => {
+  const bariSlugs = [...BARI_GUIDES];
+  const threeSlugs = ['bari-vecchia', 'san-nicola', 'alberobello'];
+  const sixSlugs = ['bari-vecchia', 'san-nicola', 'tre-teatri', 'il-meglio-di-bari', 'porto-bari', 'bari-sotterranea'];
+  const allSlugs = [...ALL_GUIDES];
+
+  it('single + 1 valid slug passes', () => {
+    expect(() => validateSelectedSlugs('single', ['bari-vecchia'])).not.toThrow();
+  });
+
+  it('single + 2 slugs throws', () => {
+    expect(() => validateSelectedSlugs('single', ['bari-vecchia', 'san-nicola'])).toThrow();
+  });
+
+  it('single + unknown slug throws', () => {
+    expect(() => validateSelectedSlugs('single', ['not-a-guide'])).toThrow();
+  });
+
+  it('tris + 3 valid slugs passes', () => {
+    expect(() => validateSelectedSlugs('tris', threeSlugs)).not.toThrow();
+  });
+
+  it('tris + 2 slugs throws', () => {
+    expect(() => validateSelectedSlugs('tris', ['bari-vecchia', 'san-nicola'])).toThrow('tris requires exactly 3');
+  });
+
+  it('tris + 4 slugs throws', () => {
+    expect(() => validateSelectedSlugs('tris', [...threeSlugs, 'porto-bari'])).toThrow('tris requires exactly 3');
+  });
+
+  it('sestina + 6 valid slugs passes', () => {
+    expect(() => validateSelectedSlugs('sestina', sixSlugs)).not.toThrow();
+  });
+
+  it('puglia-completa + all 18 passes', () => {
+    expect(() => validateSelectedSlugs('puglia-completa', allSlugs)).not.toThrow();
+  });
+
+  it('puglia-completa + 17 slugs throws', () => {
+    expect(() => validateSelectedSlugs('puglia-completa', allSlugs.slice(0, 17))).toThrow();
+  });
+
+  it('bari-completa + all 6 Bari slugs passes', () => {
+    expect(() => validateSelectedSlugs('bari-completa', bariSlugs)).not.toThrow();
+  });
+
+  it('bari-completa + non-Bari slug throws', () => {
+    const mixed = [...bariSlugs.slice(0, 5), 'alberobello'];
+    expect(() => validateSelectedSlugs('bari-completa', mixed)).toThrow();
+  });
+});
+
+describe('savingsCents', () => {
+  it('tris saves 298 cents', () => expect(savingsCents('tris')).toBe(298));
+  it('sestina saves 995 cents', () => expect(savingsCents('sestina')).toBe(995));
+  it('puglia-completa saves 5983 cents', () => expect(savingsCents('puglia-completa')).toBe(5983));
+  it('bari-completa saves 1495 cents', () => expect(savingsCents('bari-completa')).toBe(1495));
+  it('single saves 0', () => expect(savingsCents('single')).toBe(0));
 });
