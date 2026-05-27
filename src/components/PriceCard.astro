@@ -1,10 +1,9 @@
 ---
 import { formatPrice } from '../lib/format';
 import { type Lang } from '../lib/i18n';
-import { type ProductSlug } from '../lib/stripe-prices';
 
 export interface Props {
-  product: ProductSlug;
+  product: 'single' | 'bari-completa' | 'crociera';
   guideSlug?: string;
   lang: Lang;
   features: string[];
@@ -13,52 +12,46 @@ export interface Props {
 
 const { product, guideSlug, lang, features, primary = false } = Astro.props;
 
-const priceCents = product === 'bundle' ? 1499 : product === 'essenziale' ? 999 : product === 'crociera' ? 799 : 499;
+const priceCents =
+  product === 'bari-completa' ? 1499
+  : product === 'crociera'    ?  799
+  : 499;
+
 const priceLabel = formatPrice(priceCents);
 
 const title =
-  product === 'bundle'
-    ? lang === 'it' ? 'Bari Completa' : 'Complete Bari'
-    : product === 'essenziale'
-      ? lang === 'it' ? 'Bari Essenziale' : 'Essential Bari'
-      : product === 'crociera'
-        ? lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package'
-        : lang === 'it' ? 'Guida singola' : 'Single guide';
+  product === 'bari-completa'
+    ? (lang === 'it' ? 'Bari Completa' : 'Complete Bari')
+    : product === 'crociera'
+      ? (lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package')
+      : (lang === 'it' ? 'Guida singola' : 'Single guide');
 
 const description =
-  product === 'bundle'
-    ? lang === 'it'
-      ? 'Bari come la viviamo noi. Sei voci, sei itinerari.'
-      : 'Bari the way we live it. Six voices, six routes.'
-    : product === 'essenziale'
-      ? lang === 'it'
-        ? 'Il primo giorno a Bari, queste tre.'
-        : 'Your first day in Bari, these three.'
-      : product === 'crociera'
-        ? lang === 'it'
-          ? 'Bari Vecchia + Il Meglio di Bari.'
-          : 'Bari Vecchia + Il Meglio di Bari.'
-        : lang === 'it'
+  product === 'bari-completa'
+    ? (lang === 'it'
+        ? 'Tutte le 6 guide di Bari. Sei voci, sei itinerari.'
+        : 'All 6 Bari guides. Six voices, six routes.')
+    : product === 'crociera'
+      ? (lang === 'it'
+          ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
+          : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
+      : (lang === 'it'
           ? 'Una guida a scelta, tua per sempre.'
-          : 'One guide of your choice, yours forever.';
+          : 'One guide of your choice, yours forever.');
 
 const unitLabel =
-  product === 'bundle'
-    ? lang === 'it' ? '/ 6 guide' : '/ 6 guides'
-    : product === 'essenziale'
-      ? lang === 'it' ? '/ 3 guide' : '/ 3 guides'
-      : product === 'crociera'
-        ? lang === 'it' ? '/ 2 guide' : '/ 2 guides'
-        : lang === 'it' ? '/ guida' : '/ guide';
+  product === 'bari-completa'
+    ? (lang === 'it' ? '/ 6 guide' : '/ 6 guides')
+    : product === 'crociera'
+      ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
+      : (lang === 'it' ? '/ guida' : '/ guide');
 
 const ctaLabel =
-  product === 'bundle'
-    ? lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari'
-    : product === 'essenziale'
-      ? lang === 'it' ? 'Acquista Bari Essenziale' : 'Get Essential Bari'
-      : product === 'crociera'
-        ? lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package'
-        : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
+  product === 'bari-completa'
+    ? (lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari')
+    : product === 'crociera'
+      ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package')
+      : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide');
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
@@ -114,11 +107,24 @@ const ctaLabel =
       const originalText = btn.textContent;
       btn.textContent = lang === 'en' ? 'Opening checkout...' : 'Apertura pagamento...';
 
+      const BARI_SLUGS = ['bari-vecchia','san-nicola','tre-teatri','il-meglio-di-bari','porto-bari','bari-sotterranea'];
+      const CROCIERA_SLUGS = ['bari-vecchia','il-meglio-di-bari'];
+
+      const bodyPayload: Record<string, unknown> = { product, lang };
+      if (product === 'single') {
+        bodyPayload.guideSlug = guideSlug || undefined;
+        bodyPayload.selectedSlugs = guideSlug ? [guideSlug] : [];
+      } else if (product === 'bari-completa') {
+        bodyPayload.selectedSlugs = BARI_SLUGS;
+      } else if (product === 'crociera') {
+        bodyPayload.selectedSlugs = CROCIERA_SLUGS;
+      }
+
       try {
         const res = await fetch('/api/checkout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product, guideSlug, lang }),
+          body: JSON.stringify(bodyPayload),
         });
 
         if (!res.ok) {
