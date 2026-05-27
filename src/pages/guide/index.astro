@@ -112,12 +112,42 @@ const valleItria: GuideEntry[] = [
     alt: 'Palazzo Ducale di Martina Franca, cortile barocco',
     price: '€4,99',
   },
+  {
+    slug: 'cisternino',
+    title: 'Cisternino — Il Paese del Fornello',
+    subtitle: 'Un macellaio di terza generazione e la bombetta più buona che mangerai.',
+    duration: '33 min',
+    area: 'Valle d\'Itria',
+    cover: '/images/covers/cisternino.jpg',
+    alt: 'Cisternino, centro storico bianco con fornello pronto',
+    price: '€4,99',
+  },
+  {
+    slug: 'ostuni',
+    title: 'Ostuni — La Città Bianca',
+    subtitle: 'Quarant\'anni di servizio e i segreti di una città che fa perdere la testa.',
+    duration: '33 min',
+    area: 'Valle d\'Itria',
+    cover: '/images/covers/ostuni.jpg',
+    alt: 'Ostuni, la città bianca vista dal basso',
+    price: '€4,99',
+  },
+  {
+    slug: 'fasano',
+    title: 'Fasano / Selva di Fasano — La Valle Vista dall\'Alto',
+    subtitle: 'Vent\'anni di voli sulla Valle d\'Itria e una prospettiva che non trovi sui libri.',
+    duration: '33 min',
+    area: 'Valle d\'Itria',
+    cover: '/images/covers/fasano.jpg',
+    alt: 'Selva di Fasano, bosco e trulli visti dall\'alto',
+    price: '€4,99',
+  },
 ];
 ---
 
 <Layout
   title="Guide — Localis · Audioguide narrative della Puglia"
-  description="Tutte le guide Localis: Bari in sei itinerari, Valle d'Itria con Alberobello, Locorotondo e Martina Franca. Audio narrative da chi ci vive."
+  description="Tutte le guide Localis: 6 guide di Bari, 6 Valle d'Itria, 6 Gargano. 18 audioguide narrative raccontate da chi ci vive. Da €4,99."
   lang="it"
 >
   <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
@@ -189,11 +219,50 @@ const valleItria: GuideEntry[] = [
         <h2 id="area-valle" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
           Valle d'Itria
         </h2>
-        <span class="font-body text-sm text-ink-muted">3 guide live</span>
+        <span class="font-body text-sm text-ink-muted">6 guide live</span>
       </div>
 
       <ol class="guide-grid list-none p-0 m-0">
         {valleItria.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+              <figure class="guide-photo m-0">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-area">{g.area}</span>
+                  <span class="guide-dur">{g.duration}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    {/* ——— GARGANO ——— */}
+    <section class="mt-3xl lg:mt-4xl" aria-labelledby="area-gargano">
+      <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
+        <h2 id="area-gargano" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
+          Gargano
+        </h2>
+        <span class="font-body text-sm text-ink-muted">6 guide live</span>
+      </div>
+
+      <ol class="guide-grid list-none p-0 m-0">
+        {[
+          { slug: 'gargano-vieste', title: 'Vieste — La Città sul Promontorio', subtitle: 'Pizzomunno, le falesie bianche, Pugnochiuso.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-vieste.jpg', alt: 'Vieste, promontorio di roccia bianca sul mare del Gargano', price: '€4,99' },
+          { slug: 'gargano-nord', title: 'Il Gargano del Silenzio — Borghi, Trabucchi e Costa', subtitle: 'Dal trabucco di famiglia si vede tutto.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-nord.jpg', alt: 'Trabucco sul mare del Gargano settentrionale', price: '€4,99' },
+          { slug: 'gargano-sacro', title: 'Il Sacro Monte — Foresta, Fede e Pellegrini', subtitle: 'Foresta Umbra, Monte Sant\'Angelo, San Giovanni Rotondo.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-sacro.jpg', alt: 'Monte Sant\'Angelo, santuario di San Michele Arcangelo', price: '€4,99' },
+          { slug: 'gargano-tremiti', title: 'Le Tremiti — L\'Arcipelago Dimenticato', subtitle: 'San Domino, San Nicola, le grotte marine.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-tremiti.jpg', alt: 'Isole Tremiti, acque cristalline e scogliere', price: '€4,99' },
+          { slug: 'gargano-paesi', title: 'I Paesi del Gargano — Pietra Bianca e Vicoli', subtitle: 'Il Gargano che non si raggiunge col navigatore sul mare.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-paesi.jpg', alt: 'Vico del Gargano, vicoli del centro storico', price: '€4,99' },
+          { slug: 'gargano-saline', title: 'Le Saline di Margherita — Sale e Fenicotteri', subtitle: 'Il sale più grande d\'Italia e la città abbandonata.', duration: '33 min', area: 'Gargano', cover: '/images/covers/gargano-saline.jpg', alt: 'Saline di Margherita di Savoia, fenicotteri rosa', price: '€4,99' },
+        ].map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
             <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
               <figure class="guide-photo m-0">
