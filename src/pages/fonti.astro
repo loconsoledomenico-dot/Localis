@@ -53,7 +53,7 @@ function formatSource(s: {
       </h1>
       <p class="font-display italic text-xl text-ink-muted leading-snug max-w-prose">
         Le nostre audioguide raccontano storie vere. <br />
-        Qui sotto, per ogni capitolo, le fonti che le sostengono.
+        Qui sotto, per ogni capitolo, la bibliografia completa.
       </p>
     </header>
 
@@ -85,29 +85,23 @@ function formatSource(s: {
             <h3 class="font-display text-xl text-ink leading-tight mb-md">
               {chapter.title_it}
             </h3>
-
-            {chapter.facts.map((fact) => (
-              <div class="mb-lg">
-                <p class="text-base text-ink leading-relaxed mb-sm">
-                  {fact.claim_it}
-                </p>
-                <ul class="list-none m-0 p-0 space-y-2xs">
-                  {fact.sources.map((s) => (
-                    <li class="text-sm text-ink-muted leading-snug flex items-start gap-xs">
-                      <span aria-hidden="true" class="flex-shrink-0">
-                        {sourceIcon[s.type] ?? '📄'}
-                      </span>
-                      <span>
-                        {s.url
-                          ? <a href={s.url} target="_blank" rel="noopener noreferrer" class="hover:text-accent">{formatSource(s)}</a>
-                          : formatSource(s)
-                        }
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <ul class="list-none m-0 p-0 space-y-2xs">
+              {[...new Map(
+                chapter.facts.flatMap(f => f.sources).map(s => [s.title, s])
+              ).values()].map((s) => (
+                <li class="text-sm text-ink-muted leading-snug flex items-start gap-xs">
+                  <span aria-hidden="true" class="flex-shrink-0">
+                    {sourceIcon[s.type] ?? '📄'}
+                  </span>
+                  <span>
+                    {s.url
+                      ? <a href={s.url} target="_blank" rel="noopener noreferrer" class="hover:text-accent">{formatSource(s)}</a>
+                      : formatSource(s)
+                    }
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </section>
