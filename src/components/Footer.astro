@@ -47,6 +47,12 @@ const year = new Date().getFullYear();
         {lang === 'it' ? 'Metodo' : lang === 'de' ? 'Methode' : 'Method'}
       </a>
       <a
+        href={lang === 'en' ? '/en/cruise' : lang === 'de' ? '/de/kreuzfahrt' : '/crocieristi'}
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+      >
+        {lang === 'it' ? 'Crocieristi' : lang === 'de' ? 'Kreuzfahrtgäste' : 'Cruise guests'}
+      </a>
+      <a
         href={localizedHref('/termini', lang)}
         class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
       >
