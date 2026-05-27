@@ -1,0 +1,218 @@
+---
+export const prerender = true;
+import Layout from '../components/Layout.astro';
+import PriceCard from '../components/PriceCard.astro';
+import StepsBlock from '../components/StepsBlock.astro';
+---
+<Layout
+  title="Audioguide di Bari per crocieristi · Localis"
+  description="Hai 4 ore a Bari? Ascolta la storia mentre cammini — niente app, niente account. Bari Vecchia + Il Meglio di Bari da €4,99."
+  lang="it"
+  ogImage="/og/og-bari-vecchia.jpg"
+>
+
+  {/* HERO */}
+  <section class="cruise-hero relative overflow-hidden border-b border-border">
+    <img
+      src="/images/covers/nave-crociera.jpg"
+      alt="Crocieristi sbarcano a Bari davanti alla nave MSC Splendida"
+      class="cruise-hero-bg"
+      width="1980"
+      height="900"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="cruise-hero-scrim" aria-hidden="true"></div>
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          Scali · Bari
+        </span>
+      </div>
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[20ch]">
+        4 ore a Bari.<br />Usale bene.
+      </h1>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
+        Scarichi in banchina, premi play. La guida ti porta dentro Bari Vecchia con la storia vera — non la lista di monumenti. Niente app, niente account, niente dati.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-sm mt-lg">
+        <a
+          href="#percorso"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+        >
+          Vedi il percorso
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a
+          href="#prezzi"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md border border-border text-ink rounded-md font-semibold text-sm hover:bg-surface-elev transition-colors duration-fast no-underline min-h-[48px]"
+        >
+          Acquista ora — da €4,99
+        </a>
+      </div>
+      <p class="text-[11px] text-ink-subtle mt-sm tracking-wide">
+        Available in English · Auch auf Deutsch
+      </p>
+    </div>
+  </section>
+
+  <style>
+    .cruise-hero {
+      min-height: clamp(320px, 50vh, 560px);
+      display: flex;
+      align-items: center;
+    }
+    .cruise-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: saturate(0.9) contrast(1.05);
+    }
+    .cruise-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        oklch(from var(--color-surface) l c h / 0.90) 0%,
+        oklch(from var(--color-surface) l c h / 0.65) 40%,
+        oklch(from var(--color-surface) l c h / 0.15) 75%,
+        oklch(from var(--color-surface) l c h / 0) 100%
+      );
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .cruise-hero-scrim {
+        background: linear-gradient(
+          to bottom,
+          oklch(from var(--color-surface) l c h / 0.92) 0%,
+          oklch(from var(--color-surface) l c h / 0.75) 60%,
+          oklch(from var(--color-surface) l c h / 0.55) 100%
+        );
+      }
+    }
+  </style>
+
+  {/* PERCORSO CONSIGLIATO */}
+  <section id="percorso" class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <p class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm">— Itinerario —</p>
+      <h2 class="font-display text-3xl sm:text-4xl text-ink mb-lg leading-tight max-w-[22ch]">
+        Bari Vecchia + Il Meglio di Bari.<br />
+        <span class="font-light italic text-ink-muted">~1h 20min. Due voci. Una città.</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+        <div class="flex flex-col gap-md">
+          <div class="flex gap-md items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm flex items-center justify-center">1</span>
+            <div>
+              <p class="font-semibold text-ink text-base">Bari Vecchia · ~45 min</p>
+              <p class="text-ink-muted text-sm leading-relaxed mt-1">Il Borgo Antico capitolo per capitolo: la Basilica di San Nicola, le strette, la cattedrale, i rioni. Storia vera, non la guida turistica standard.</p>
+            </div>
+          </div>
+          <div class="flex gap-md items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm flex items-center justify-center">2</span>
+            <div>
+              <p class="font-semibold text-ink text-base">Il Meglio di Bari · ~35 min</p>
+              <p class="text-ink-muted text-sm leading-relaxed mt-1">Il lungomare, il mercato del pesce, i panzerotti. I posti che i baresi non spiegano — perché li danno per scontati.</p>
+            </div>
+          </div>
+          <div class="flex gap-md items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-surface border border-border text-ink-subtle font-semibold text-sm flex items-center justify-center">+</span>
+            <div>
+              <p class="font-semibold text-ink-muted text-base">Altre 4 guide disponibili</p>
+              <p class="text-ink-muted text-sm leading-relaxed mt-1">Porto · San Nicola · Teatri · Sotterranea. Per chi ha più tempo o vuole approfondire.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface border border-border rounded-lg p-lg flex flex-col gap-md">
+          <p class="text-[10px] font-semibold tracking-[0.28em] uppercase text-ink-subtle">Come funziona</p>
+          <ul class="flex flex-col gap-sm text-sm text-ink-muted leading-relaxed">
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Acquisti ora con carta o PayPal — <strong class="text-ink">30 secondi</strong></span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Ricevi un <strong class="text-ink">link via email</strong> — niente account, niente app</span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Apri il link in banchina, premi play, <strong class="text-ink">cammina</strong></span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Funziona offline dopo il primo caricamento</span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Il link è tuo per sempre — riascolti quando vuoi</span>
+            </li>
+          </ul>
+          <div class="border-t border-border pt-md mt-auto">
+            <p class="text-[11px] text-ink-subtle leading-relaxed">
+              Disponibile in <strong class="text-ink">italiano</strong>, <strong class="text-ink">inglese</strong> e <strong class="text-ink">tedesco</strong>. Puoi acquistare per qualcuno — ti arrivano due link.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* PRICING */}
+  <section id="prezzi" class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <p class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm text-center">— Prezzi —</p>
+      <h2 class="font-display text-3xl text-ink mb-lg leading-tight text-center">
+        Prendi quella che ti serve.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="bari-vecchia"
+          lang="it"
+          features={[
+            "Una guida a tua scelta",
+            "Accesso illimitato, per sempre",
+            "Italiano, inglese, tedesco",
+            "Rimborso 1-click entro 24h",
+          ]}
+        />
+        <PriceCard
+          product="essenziale"
+          lang="it"
+          features={[
+            "Bari Vecchia + Il Meglio di Bari + San Nicola",
+            "~1h 20min · 3 voci diverse",
+            "Italiano, inglese, tedesco",
+            "Rimborso 1-click entro 24h",
+          ]}
+        />
+        <PriceCard
+          product="bundle"
+          lang="it"
+          primary
+          features={[
+            "Tutte le 6 guide di Bari",
+            "~2h 20min · 6 voci diverse",
+            "Risparmi €14,95 vs guide singole",
+            "Rimborso 1-click entro 24h",
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* 3 PASSI */}
+  <StepsBlock lang="it" ctaHref="/guide/bari-vecchia" />
+
+</Layout>

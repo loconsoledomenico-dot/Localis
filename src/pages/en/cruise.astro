@@ -1,0 +1,218 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import PriceCard from '../../components/PriceCard.astro';
+import StepsBlock from '../../components/StepsBlock.astro';
+---
+<Layout
+  title="Audio guides for cruise passengers in Bari · Localis"
+  description="Got 4 hours in Bari? Listen to the real story while you walk — no app, no account. Old Bari + The Best of Bari from €4.99."
+  lang="en"
+  ogImage="/og/og-bari-vecchia.jpg"
+>
+
+  {/* HERO */}
+  <section class="cruise-hero relative overflow-hidden border-b border-border">
+    <img
+      src="/images/covers/nave-crociera.jpg"
+      alt="Cruise passengers disembark in Bari in front of the MSC Splendida"
+      class="cruise-hero-bg"
+      width="1980"
+      height="900"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="cruise-hero-scrim" aria-hidden="true"></div>
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          Port call · Bari
+        </span>
+      </div>
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[20ch]">
+        4 hours in Bari.<br />Make them count.
+      </h1>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
+        Off the gangway, press play. The guide takes you through Old Bari with the real history — not a list of monuments. No app, no account, no data needed.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-sm mt-lg">
+        <a
+          href="#route"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+        >
+          See the route
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a
+          href="#pricing"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md border border-border text-ink rounded-md font-semibold text-sm hover:bg-surface-elev transition-colors duration-fast no-underline min-h-[48px]"
+        >
+          Buy now — from €4.99
+        </a>
+      </div>
+      <p class="text-[11px] text-ink-subtle mt-sm tracking-wide">
+        Disponibile anche in italiano · Auch auf Deutsch verfügbar
+      </p>
+    </div>
+  </section>
+
+  <style>
+    .cruise-hero {
+      min-height: clamp(320px, 50vh, 560px);
+      display: flex;
+      align-items: center;
+    }
+    .cruise-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: saturate(0.9) contrast(1.05);
+    }
+    .cruise-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        oklch(from var(--color-surface) l c h / 0.90) 0%,
+        oklch(from var(--color-surface) l c h / 0.65) 40%,
+        oklch(from var(--color-surface) l c h / 0.15) 75%,
+        oklch(from var(--color-surface) l c h / 0) 100%
+      );
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .cruise-hero-scrim {
+        background: linear-gradient(
+          to bottom,
+          oklch(from var(--color-surface) l c h / 0.92) 0%,
+          oklch(from var(--color-surface) l c h / 0.75) 60%,
+          oklch(from var(--color-surface) l c h / 0.55) 100%
+        );
+      }
+    }
+  </style>
+
+  {/* ROUTE */}
+  <section id="route" class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <p class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm">— Itinerary —</p>
+      <h2 class="font-display text-3xl sm:text-4xl text-ink mb-lg leading-tight max-w-[24ch]">
+        Old Bari + The Best of Bari.<br />
+        <span class="font-light italic text-ink-muted">~1h 20min. Two voices. One city.</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+        <div class="flex flex-col gap-md">
+          <div class="flex gap-md items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm flex items-center justify-center">1</span>
+            <div>
+              <p class="font-semibold text-ink text-base">Old Bari · ~45 min</p>
+              <p class="text-ink-muted text-sm leading-relaxed mt-1">The ancient quarter chapter by chapter: the Basilica of San Nicola, the narrow streets, the cathedral, the districts. Real history, not the standard tourist script.</p>
+            </div>
+          </div>
+          <div class="flex gap-md items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm flex items-center justify-center">2</span>
+            <div>
+              <p class="font-semibold text-ink text-base">The Best of Bari · ~35 min</p>
+              <p class="text-ink-muted text-sm leading-relaxed mt-1">The seafront, the fish market, the panzerotti. The places locals never explain — because they take them for granted.</p>
+            </div>
+          </div>
+          <div class="flex gap-md items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-surface border border-border text-ink-subtle font-semibold text-sm flex items-center justify-center">+</span>
+            <div>
+              <p class="font-semibold text-ink-muted text-base">4 more guides available</p>
+              <p class="text-ink-muted text-sm leading-relaxed mt-1">Harbour · San Nicola · Theatres · Underground. For those with more time or who want to dig deeper.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface border border-border rounded-lg p-lg flex flex-col gap-md">
+          <p class="text-[10px] font-semibold tracking-[0.28em] uppercase text-ink-subtle">How it works</p>
+          <ul class="flex flex-col gap-sm text-sm text-ink-muted leading-relaxed">
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Buy now with card or PayPal — <strong class="text-ink">30 seconds</strong></span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Get a <strong class="text-ink">link via email</strong> — no account, no app</span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Open the link at the pier, press play, <strong class="text-ink">walk</strong></span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>Works offline after first load</span>
+            </li>
+            <li class="flex gap-sm items-start">
+              <span class="text-accent mt-0.5">→</span>
+              <span>The link is yours forever — listen again anytime</span>
+            </li>
+          </ul>
+          <div class="border-t border-border pt-md mt-auto">
+            <p class="text-[11px] text-ink-subtle leading-relaxed">
+              Available in <strong class="text-ink">English</strong>, <strong class="text-ink">Italian</strong> and <strong class="text-ink">German</strong>. You can buy for someone else — we send two links.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* PRICING */}
+  <section id="pricing" class="bg-surface">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <p class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm text-center">— Pricing —</p>
+      <h2 class="font-display text-3xl text-ink mb-lg leading-tight text-center">
+        Pick what you need.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="bari-vecchia"
+          lang="en"
+          features={[
+            "One guide of your choice",
+            "Unlimited access, forever",
+            "Italian, English, German",
+            "1-click refund within 24h",
+          ]}
+        />
+        <PriceCard
+          product="essenziale"
+          lang="en"
+          features={[
+            "Old Bari + The Best of Bari + San Nicola",
+            "~1h 20min · 3 different voices",
+            "Italian, English, German",
+            "1-click refund within 24h",
+          ]}
+        />
+        <PriceCard
+          product="bundle"
+          lang="en"
+          primary
+          features={[
+            "All 6 Bari guides",
+            "~2h 20min · 6 different voices",
+            "Save €14.95 vs single guides",
+            "1-click refund within 24h",
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* 3 STEPS */}
+  <StepsBlock lang="en" ctaHref="/en/guide/bari-vecchia" />
+
+</Layout>
