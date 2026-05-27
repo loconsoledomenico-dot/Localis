@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import Layout from '../../../components/Layout.astro';
 import SectionDivider from '../../../components/SectionDivider.astro';
@@ -21,102 +21,102 @@ interface GuideEntry {
 const bariGuides: GuideEntry[] = [
   {
     slug: 'bari-vecchia',
-    title: 'Old Bari — Inside the City',
+    title: 'Old Bari â€” Inside the City',
     subtitle: 'The ancient quarter, four thousand years of history.',
     duration: '21 min',
     area: 'Old town',
     cover: '/images/covers/bari-vecchia.jpg',
     alt: 'Old Bari alley with ancient Roman columns and historic buildings',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
   {
     slug: 'san-nicola',
-    title: 'San Nicola — The Stolen Saint',
+    title: 'San Nicola â€” The Stolen Saint',
     subtitle: 'How the bones of a saint became a city.',
     duration: '30 min',
     area: 'Old town',
     cover: '/images/covers/san-nicola.jpg',
     alt: 'San Nicola procession at dusk before the Basilica',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
   {
     slug: 'il-meglio-di-bari',
-    title: 'The Best of Bari — Eat Before You Think',
+    title: 'The Best of Bari â€” Eat Before You Think',
     subtitle: 'Orecchiette, sgagliozze and Bari focaccia.',
     duration: '29 min',
     area: 'Old town',
     cover: '/images/covers/il-meglio-di-bari.jpg',
     alt: 'The Orecchiette Street in Old Bari, women shaping pasta on wooden tables',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
   {
     slug: 'porto-bari',
-    title: 'Port of Bari — Where It All Happened',
+    title: 'Port of Bari â€” Where It All Happened',
     subtitle: 'Crusaders, merchants, migrants.',
     duration: '33 min',
     area: 'Lungomare',
     cover: '/images/covers/porto-bari.jpg',
     alt: 'Aerial view of Bari at sunset, lungomare and tourist marina',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
   {
     slug: 'tre-teatri',
-    title: 'The Three Theatres — Fire, Music, Bourgeoisie',
+    title: 'The Three Theatres â€” Fire, Music, Bourgeoisie',
     subtitle: 'The Bari that wanted to become a European city.',
     duration: '28 min',
     area: 'Murat',
     cover: '/images/covers/tre-teatri.jpg',
     alt: 'Teatro Margherita of Bari, white Liberty-style building over the sea',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
   {
     slug: 'bari-sotterranea',
-    title: 'Underground Bari — What Lies Beneath',
+    title: 'Underground Bari â€” What Lies Beneath',
     subtitle: 'Cisterns, catacombs and a buried city.',
     duration: '25 min',
     area: 'Old town',
     cover: '/images/covers/bari-sotterranea-v2.jpg',
     alt: 'Crypt of the Basilica of San Nicola, reused Roman columns and Byzantine mosaics',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
 ];
 
 const valleItria: GuideEntry[] = [
   {
     slug: 'alberobello',
-    title: 'Alberobello — Inside the Trulli',
+    title: 'Alberobello â€” Inside the Trulli',
     subtitle: 'The fiscal story nobody ever told you.',
     duration: '35 min',
     area: 'Itria Valley',
     cover: '/images/covers/alberobello.jpg',
     alt: 'Trulli of Alberobello, Rione Monti',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
   {
     slug: 'locorotondo',
-    title: 'Locorotondo — The Round Village',
+    title: 'Locorotondo â€” The Round Village',
     subtitle: 'A DOC wine, the cummerse houses, and lavender essential oil.',
     duration: '31 min',
     area: 'Itria Valley',
     cover: '/images/covers/locorotondo.jpg',
     alt: 'Locorotondo, white houses with double-pitched roofs',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
   {
     slug: 'martina-franca',
-    title: 'Martina Franca — The Free City',
+    title: 'Martina Franca â€” The Free City',
     subtitle: 'Three hundred years of a dukedom, told by someone who carries it in their blood.',
     duration: '30 min',
     area: 'Itria Valley',
     cover: '/images/covers/martina-franca.jpg',
     alt: 'Palazzo Ducale of Martina Franca, baroque courtyard',
-    price: '€4.99',
+    price: 'â‚¬4.99',
   },
 ];
 ---
 
 <Layout
-  title="Guides — Localis · Narrative audio guides of Puglia"
+  title="Guides â€” Localis Â· Narrative audio guides of Puglia"
   description="All Localis guides: six Bari itineraries, Itria Valley with Alberobello, Locorotondo and Martina Franca. Narrative audio from the people who live there."
   lang="en"
 >
@@ -141,7 +141,7 @@ const valleItria: GuideEntry[] = [
       </p>
     </header>
 
-    {/* ——— BARI ——— */}
+    {/* â€”â€”â€” BARI â€”â€”â€” */}
     <section class="mb-3xl lg:mb-4xl" aria-labelledby="area-bari">
       <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
         <h2 id="area-bari" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
@@ -153,7 +153,7 @@ const valleItria: GuideEntry[] = [
       <ol class="guide-grid list-none p-0 m-0">
         {bariGuides.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
-            <a href={`/en/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+            <a href={`/en/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} Â· ${g.duration}`}>
               <figure class="guide-photo m-0">
                 <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
@@ -177,13 +177,13 @@ const valleItria: GuideEntry[] = [
         <SectionDivider label="Bari Bundle" />
         <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
           <PriceCard product="single" guideSlug="bari-vecchia" lang="en" features={['One guide of your choice','Unlimited access, forever','Italian and English','1-click refund within 24h']} />
-          <PriceCard product="essenziale" lang="en" features={['Old Bari · San Nicola · Best of Bari','~1h 20min · 3 different voices','Italian and English','1-click refund within 24h']} />
-          <PriceCard product="bundle" lang="en" primary features={['All 6 Bari guides','~2h 20min · 6 different voices','Save €14.95 vs single guides','1-click refund within 24h']} />
+          <PriceCard product="tris" lang="en" features={['Old Bari Â· San Nicola Â· Best of Bari','~1h 20min Â· 3 different voices','Italian and English','1-click refund within 24h']} />
+          <PriceCard product="bari-completa" lang="en" primary features={['All 6 Bari guides','~2h 20min Â· 6 different voices','Save â‚¬14.95 vs single guides','1-click refund within 24h']} />
         </div>
       </div>
     </section>
 
-    {/* ——— ITRIA VALLEY ——— */}
+    {/* â€”â€”â€” ITRIA VALLEY â€”â€”â€” */}
     <section aria-labelledby="area-valle">
       <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
         <h2 id="area-valle" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
@@ -195,7 +195,7 @@ const valleItria: GuideEntry[] = [
       <ol class="guide-grid list-none p-0 m-0">
         {valleItria.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
-            <a href={`/en/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+            <a href={`/en/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} Â· ${g.duration}`}>
               <figure class="guide-photo m-0">
                 <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>

@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import Layout from '../components/Layout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
@@ -21,75 +21,75 @@ interface GuideEntry {
 const guides: GuideEntry[] = [
   {
     slug: 'gargano-vieste',
-    title: 'Vieste — La Città sul Promontorio',
+    title: 'Vieste â€” La CittÃ  sul Promontorio',
     subtitle: 'Pizzomunno, le falesie bianche, le calette, Pugnochiuso.',
-    places: 'Vieste · Pugnochiuso · trabucchi · grotte marine',
+    places: 'Vieste Â· Pugnochiuso Â· trabucchi Â· grotte marine',
     narrator: 'Rossella, terza generazione sul lido',
     cover: '/images/covers/gargano-vieste.jpg',
     alt: 'Vieste, promontorio di roccia bianca sul mare del Gargano',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'gargano-nord',
-    title: 'Il Gargano del Silenzio — Borghi, Trabucchi e Costa',
+    title: 'Il Gargano del Silenzio â€” Borghi, Trabucchi e Costa',
     subtitle: 'Lesina, Rodi Garganico, Peschici. Dal trabucco si vede tutto.',
-    places: 'Lesina · Rodi Garganico · Peschici · trabucchi · lago di Lesina',
+    places: 'Lesina Â· Rodi Garganico Â· Peschici Â· trabucchi Â· lago di Lesina',
     narrator: 'Ferdinando, quarta generazione sul trabucco',
     cover: '/images/covers/gargano-nord.jpg',
     alt: 'Trabucco sul Gargano, struttura di legno di ginepro sulla roccia',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'gargano-sacro',
-    title: 'Il Sacro Monte — Foresta, Fede e Pellegrini',
+    title: 'Il Sacro Monte â€” Foresta, Fede e Pellegrini',
     subtitle: 'La foresta, la grotta, il convento. Un percorso che i pellegrini medievali conoscevano bene.',
-    places: 'Foresta Umbra · Monte Sant\'Angelo · San Giovanni Rotondo · Padre Pio',
+    places: 'Foresta Umbra Â· Monte Sant\'Angelo Â· San Giovanni Rotondo Â· Padre Pio',
     narrator: "Fra' Salvatore, trent'anni al Santuario",
     cover: '/images/covers/gargano-sacro.jpg',
     alt: "Foresta Umbra del Gargano, bosco primario con faggi e cerri",
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'gargano-tremiti',
-    title: "Le Tremiti — L'Arcipelago Dimenticato",
+    title: "Le Tremiti â€” L'Arcipelago Dimenticato",
     subtitle: 'San Domino, San Nicola, le grotte marine. Lucio Dalla ci tornava ogni anno.',
-    places: 'San Domino · San Nicola · grotte marine · abbazia benedettina · parco marino',
+    places: 'San Domino Â· San Nicola Â· grotte marine Â· abbazia benedettina Â· parco marino',
     narrator: 'Tonino, barcaiolo di San Domino',
     cover: '/images/covers/gargano-tremiti.jpg',
     alt: 'Isole Tremiti, acque turchesi e rocce bianche nel mezzo dell\'Adriatico',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'gargano-paesi',
-    title: 'I Paesi del Gargano — Pietra Bianca e Vicoli',
+    title: 'I Paesi del Gargano â€” Pietra Bianca e Vicoli',
     subtitle: "Il Gargano che non si raggiunge con il navigatore impostato sul mare.",
-    places: 'Vico del Gargano · Ischitella · Carpino · lago di Varano',
+    places: 'Vico del Gargano Â· Ischitella Â· Carpino Â· lago di Varano',
     narrator: 'Stefano, guardiaparco da trent\'anni',
     cover: '/images/covers/gargano-paesi.jpg',
     alt: 'Vico del Gargano, vicoli medievali e case di pietra bianca',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'gargano-saline',
-    title: 'Le Saline di Margherita — Sale e Fenicotteri',
-    subtitle: 'Le saline più grandi d\'Italia. La città abbandonata sotto la sabbia.',
-    places: 'Saline di Margherita di Savoia · Manfredonia · Siponto · fenicotteri',
+    title: 'Le Saline di Margherita â€” Sale e Fenicotteri',
+    subtitle: 'Le saline piÃ¹ grandi d\'Italia. La cittÃ  abbandonata sotto la sabbia.',
+    places: 'Saline di Margherita di Savoia Â· Manfredonia Â· Siponto Â· fenicotteri',
     narrator: "Antonello, trent'anni alle saline",
     cover: '/images/covers/gargano-saline.jpg',
     alt: 'Saline di Margherita di Savoia, vasche rosa al tramonto con fenicotteri',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
 ];
 ---
 <Layout
-  title="Gargano — Audioguide narrative · Localis"
-  description="Sei guide narrative del Gargano: Vieste, Costa Nord, Sacro Monte, Tremiti, Paesi dell'entroterra, Saline. Fonti d'archivio verificabili. Da €4,99."
+  title="Gargano â€” Audioguide narrative Â· Localis"
+  description="Sei guide narrative del Gargano: Vieste, Costa Nord, Sacro Monte, Tremiti, Paesi dell'entroterra, Saline. Fonti d'archivio verificabili. Da â‚¬4,99."
   lang="it"
 >
 
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Gargano' }]} />
 
-  {/* PAGE HEADER — hero con immagine */}
+  {/* PAGE HEADER â€” hero con immagine */}
   <section class="gargano-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/covers/gargano-landing.jpg"
@@ -107,14 +107,14 @@ const guides: GuideEntry[] = [
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Destinazione — Gargano
+          Destinazione â€” Gargano
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
         Il Gargano, sei capitoli.
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Ogni guida è uno studio sul posto, scritto con fonti verificabili e raccolta di memoria locale. Da Vieste alle Tremiti, dalla Foresta Umbra alle saline di Margherita.
+        Ogni guida Ã¨ uno studio sul posto, scritto con fonti verificabili e raccolta di memoria locale. Da Vieste alle Tremiti, dalla Foresta Umbra alle saline di Margherita.
       </p>
     </div>
   </section>
@@ -170,7 +170,7 @@ const guides: GuideEntry[] = [
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
-      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei voci · sei luoghi · un promontorio</p>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei voci Â· sei luoghi Â· un promontorio</p>
       <span class="block h-px flex-1 bg-border"></span>
     </div>
   </section>
@@ -212,15 +212,15 @@ const guides: GuideEntry[] = [
       </div>
       <ul class="narr-grid list-none p-0 m-0">
         {[
-          { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Terza generazione sul lido di Vieste', bio: 'Cinquantaquattro anni. La famiglia gestisce lo stesso lido dai tempi di suo nonno. Ha visto questa costa cambiare più in sessant\'anni che nei seicento precedenti.', guide: 'Vieste', href: '/guide/gargano-vieste' },
+          { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Terza generazione sul lido di Vieste', bio: 'Cinquantaquattro anni. La famiglia gestisce lo stesso lido dai tempi di suo nonno. Ha visto questa costa cambiare piÃ¹ in sessant\'anni che nei seicento precedenti.', guide: 'Vieste', href: '/guide/gargano-vieste' },
           { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Quarta generazione sul trabucco', bio: 'Sessantotto anni, di Peschici. Sul trabucco di famiglia da quando aveva undici anni. Il mare del Gargano lo conosce a memoria, ogni corrente, ogni ora del giorno.', guide: 'Costa Nord', href: '/guide/gargano-nord' },
-          { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Trent\'anni al Santuario di Monte Sant\'Angelo', bio: "Settantatré anni. Frate francescano dal 1978. Ha accompagnato pellegrini dalla Foresta Umbra fino alla grotta dell'Arcangelo — a piedi, come si faceva nel Medioevo.", guide: 'Il Gargano Sacro', href: '/guide/gargano-sacro' },
+          { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Trent\'anni al Santuario di Monte Sant\'Angelo', bio: "SettantatrÃ© anni. Frate francescano dal 1978. Ha accompagnato pellegrini dalla Foresta Umbra fino alla grotta dell'Arcangelo â€” a piedi, come si faceva nel Medioevo.", guide: 'Il Gargano Sacro', href: '/guide/gargano-sacro' },
           { name: 'Tonino', photo: '/images/authors/tonino-tremiti.jpg', role: 'Barcaiolo di San Domino', bio: "Settantaquattro anni. Nato alle Tremiti, non le ha mai lasciate. Per vent'anni ha portato Lucio Dalla in giro per le grotte. Conosce ogni cala, ogni secca, ogni corrente dell'arcipelago.", guide: 'Isole Tremiti', href: '/guide/gargano-tremiti' },
-          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Guardiaparco da trent\'anni', bio: "Cinquantotto anni, di Vico del Gargano. Trent'anni nel Parco Nazionale del Gargano. Conosce i borghi dell'entroterra come pochi — le strade, le storie, i nomi dei casali abbandonati.", guide: 'I Borghi', href: '/guide/gargano-paesi' },
-          { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Trent\'anni al controllo qualità del sale', bio: "Cinquantaquattro anni, di Manfredonia. Trent'anni alle saline di Margherita di Savoia. Ha visto le vasche in tutte le ore possibili — dall'alba rosa di luglio alla nebbia di dicembre.", guide: 'Saline', href: '/guide/gargano-saline' },
+          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Guardiaparco da trent\'anni', bio: "Cinquantotto anni, di Vico del Gargano. Trent'anni nel Parco Nazionale del Gargano. Conosce i borghi dell'entroterra come pochi â€” le strade, le storie, i nomi dei casali abbandonati.", guide: 'I Borghi', href: '/guide/gargano-paesi' },
+          { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Trent\'anni al controllo qualitÃ  del sale', bio: "Cinquantaquattro anni, di Manfredonia. Trent'anni alle saline di Margherita di Savoia. Ha visto le vasche in tutte le ore possibili â€” dall'alba rosa di luglio alla nebbia di dicembre.", guide: 'Saline', href: '/guide/gargano-saline' },
         ].map((n) => (
           <li class="narr-cell">
-            <a href={n.href} class="narr-card" aria-label={`Guida ${n.guide} — voce di ${n.name}`}>
+            <a href={n.href} class="narr-card" aria-label={`Guida ${n.guide} â€” voce di ${n.name}`}>
               <figure class="narr-photo m-0">
                 <img src={n.photo} alt={`Ritratto di ${n.name}`} loading="lazy" decoding="async" />
               </figure>
@@ -297,12 +297,12 @@ const guides: GuideEntry[] = [
           ]}
         />
         <PriceCard
-          product="bundle"
+          product="bari-completa"
           lang="it"
           primary
           features={[
-            'Tutte le guide disponibili · Bari + Gargano',
-            '~5h di racconto · voci diverse',
+            'Tutte le guide disponibili Â· Bari + Gargano',
+            '~5h di racconto Â· voci diverse',
             'Rimborso 1-click entro 24h',
           ]}
         />

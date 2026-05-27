@@ -27,7 +27,7 @@ type GuideCard = {
 const guideMap = new Map<string, GuideCard>();
 for (const entry of allEntries) {
   const d = entry.data;
-  const slug = (d.slug ?? entry.slug) as string;
+  const slug = (d.slug ?? entry.id) as string;
   const isIt = lang !== 'en';
   guideMap.set(slug, {
     slug,

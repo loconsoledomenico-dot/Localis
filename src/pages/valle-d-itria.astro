@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import Layout from '../components/Layout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
@@ -20,75 +20,75 @@ interface GuideEntry {
 const guides: GuideEntry[] = [
   {
     slug: 'alberobello',
-    title: 'Alberobello — Dentro i Trulli',
+    title: 'Alberobello â€” Dentro i Trulli',
     subtitle: 'La storia fiscale che nessuno ti ha mai raccontato.',
     duration: '35 min',
     area: "Valle d'Itria",
     cover: '/images/covers/alberobello.jpg',
     alt: 'Trulli di Alberobello, Rione Monti',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'locorotondo',
-    title: 'Locorotondo — Il Borgo Rotondo',
+    title: 'Locorotondo â€” Il Borgo Rotondo',
     subtitle: "Un vino DOC, le cummerse e l'olio essenziale di lavanda.",
     duration: '31 min',
     area: "Valle d'Itria",
     cover: '/images/covers/locorotondo.jpg',
     alt: 'Locorotondo, case bianche con tetti a doppio spiovente',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'martina-franca',
-    title: 'Martina Franca — La Città Franca',
+    title: 'Martina Franca â€” La CittÃ  Franca',
     subtitle: 'Trecento anni di ducato, raccontati da chi li ha nel sangue.',
     duration: '30 min',
     area: "Valle d'Itria",
     cover: '/images/covers/martina-franca.jpg',
     alt: 'Palazzo Ducale di Martina Franca, cortile barocco',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'cisternino',
-    title: 'Cisternino — Il Paese del Fornello',
-    subtitle: 'Un macellaio di terza generazione e la bombetta più buona che mangerai.',
+    title: 'Cisternino â€” Il Paese del Fornello',
+    subtitle: 'Un macellaio di terza generazione e la bombetta piÃ¹ buona che mangerai.',
     duration: '33 min',
     area: "Valle d'Itria",
     cover: '/images/covers/cisternino.jpg',
     alt: 'Cisternino, centro storico bianco con fornello pronto',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'ostuni',
-    title: 'Ostuni — La Città Bianca',
-    subtitle: 'Quarant\'anni di servizio e i segreti di una città che fa perdere la testa.',
+    title: 'Ostuni â€” La CittÃ  Bianca',
+    subtitle: 'Quarant\'anni di servizio e i segreti di una cittÃ  che fa perdere la testa.',
     duration: '33 min',
     area: "Valle d'Itria",
     cover: '/images/covers/ostuni.jpg',
-    alt: 'Ostuni, la città bianca vista dal basso',
-    price: '€4,99',
+    alt: 'Ostuni, la cittÃ  bianca vista dal basso',
+    price: 'â‚¬4,99',
   },
   {
     slug: 'fasano',
-    title: 'Fasano / Selva di Fasano — La Valle Vista dall\'Alto',
+    title: 'Fasano / Selva di Fasano â€” La Valle Vista dall\'Alto',
     subtitle: 'Vent\'anni di voli sulla Valle d\'Itria e una prospettiva che non trovi sui libri.',
     duration: '33 min',
     area: "Valle d'Itria",
     cover: '/images/covers/fasano.jpg',
     alt: 'Selva di Fasano, bosco e trulli visti dall\'alto',
-    price: '€4,99',
+    price: 'â‚¬4,99',
   },
 ];
 ---
 <Layout
-  title="Valle d'Itria — Audioguide narrative · Localis"
-  description="Sei guide narrative della Valle d'Itria: Alberobello, Locorotondo, Martina Franca, Cisternino, Ostuni, Fasano. Fonti d'archivio verificabili. Da €4,99."
+  title="Valle d'Itria â€” Audioguide narrative Â· Localis"
+  description="Sei guide narrative della Valle d'Itria: Alberobello, Locorotondo, Martina Franca, Cisternino, Ostuni, Fasano. Fonti d'archivio verificabili. Da â‚¬4,99."
   lang="it"
 >
 
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: "Valle d'Itria" }]} />
 
-  {/* PAGE HEADER — hero con immagine */}
+  {/* PAGE HEADER â€” hero con immagine */}
   <section class="valle-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/covers/valle-d-itria-landing.jpg"
@@ -106,14 +106,14 @@ const guides: GuideEntry[] = [
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Destinazione — Valle d'Itria
+          Destinazione â€” Valle d'Itria
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
         Valle d'Itria, sei capitoli.
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Ogni guida è uno studio sul posto, scritto con fonti verificabili e raccolta di memoria locale. Dai trulli di Alberobello ai vigneti DOC di Locorotondo, dai vicoli di Cisternino alla Selva di Fasano.
+        Ogni guida Ã¨ uno studio sul posto, scritto con fonti verificabili e raccolta di memoria locale. Dai trulli di Alberobello ai vigneti DOC di Locorotondo, dai vicoli di Cisternino alla Selva di Fasano.
       </p>
     </div>
   </section>
@@ -170,7 +170,7 @@ const guides: GuideEntry[] = [
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
-      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei guide · sei capitoli · una valle</p>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei guide Â· sei capitoli Â· una valle</p>
       <span class="block h-px flex-1 bg-border"></span>
     </div>
   </section>
@@ -181,7 +181,7 @@ const guides: GuideEntry[] = [
       <ol class="guide-grid list-none p-0 m-0">
         {guides.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
-            <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+            <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} Â· ${g.duration}`}>
               <figure class="guide-photo m-0">
                 <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
@@ -212,12 +212,12 @@ const guides: GuideEntry[] = [
       </div>
       <ul class="narr-grid list-none p-0 m-0">
         {[
-          { name: 'Concetta', photo: '/images/authors/concetta-alberobello.jpg', role: 'Tre generazioni nel Rione Aia Piccola', bio: "Sessantacinque anni, nata e cresciuta nel Rione Aia Piccola. Tre generazioni sotto lo stesso tetto di pietra. Racconta i trulli come la vicina di casa che è sempre stata seduta su quella porta.", guide: 'Alberobello', href: '/guide/alberobello' },
+          { name: 'Concetta', photo: '/images/authors/concetta-alberobello.jpg', role: 'Tre generazioni nel Rione Aia Piccola', bio: "Sessantacinque anni, nata e cresciuta nel Rione Aia Piccola. Tre generazioni sotto lo stesso tetto di pietra. Racconta i trulli come la vicina di casa che Ã¨ sempre stata seduta su quella porta.", guide: 'Alberobello', href: '/guide/alberobello' },
           { name: 'Francesco', photo: '/images/authors/francesco-locorotondo.png', role: 'Vignaiolo del borgo rotondo', bio: "Cinquant'anni, vignaiolo del borgo rotondo. Produce vino DOC, olio e olio essenziale di lavanda tra i vigneti della Valle d'Itria.", guide: 'Locorotondo', href: '/guide/locorotondo' },
-          { name: 'Anonimo', photo: '/images/authors/nobile-martina-franca.png', role: 'Discendente dei Caracciolo', bio: "Discendente diretto della famiglia Caracciolo. Preferisce non dare il nome — vuole raccontare storie, non fare dichiarazioni.", guide: 'Martina Franca', href: '/guide/martina-franca' },
+          { name: 'Anonimo', photo: '/images/authors/nobile-martina-franca.png', role: 'Discendente dei Caracciolo', bio: "Discendente diretto della famiglia Caracciolo. Preferisce non dare il nome â€” vuole raccontare storie, non fare dichiarazioni.", guide: 'Martina Franca', href: '/guide/martina-franca' },
         ].map((n) => (
           <li>
-            <a href={n.href} class="narr-card" aria-label={`Guida ${n.guide} — voce di ${n.name}`}>
+            <a href={n.href} class="narr-card" aria-label={`Guida ${n.guide} â€” voce di ${n.name}`}>
               <figure class="narr-photo m-0">
                 <img src={n.photo} alt={`Ritratto di ${n.name}`} loading="lazy" decoding="async" />
               </figure>
@@ -284,12 +284,12 @@ const guides: GuideEntry[] = [
           ]}
         />
         <PriceCard
-          product="bundle"
+          product="bari-completa"
           lang="it"
           primary
           features={[
-            'Tutte le guide disponibili · Bari + Valle d\'Itria',
-            '~3h di racconto · voci diverse',
+            'Tutte le guide disponibili Â· Bari + Valle d\'Itria',
+            '~3h di racconto Â· voci diverse',
             'Rimborso 1-click entro 24h',
           ]}
         />
