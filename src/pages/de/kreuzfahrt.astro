@@ -1,82 +1,68 @@
 ---
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
-import PriceCard from '../../components/PriceCard.astro';
-import StepsBlock from '../../components/StepsBlock.astro';
+import StartMap from '../../components/StartMap.astro';
 ---
 <Layout
-  title="4 Stunden in Bari. Nutzen Sie sie. · Localis"
-  description="4 Stunden in Bari. Nutzen Sie sie. Altstadt Bari + Das Beste von Bari — echte Geschichte, keine App, kein Konto. Play drücken am Kai. Ab €4,99."
+  title="Bari Kreuzfahrthafen · was tun in 4 Stunden · Localis"
+  description="Zwei narrative Audioguides für Kreuzfahrtgäste in Bari. €7,99 das Paket, offline, keine App. Besuchen Sie die Altstadt in 4 Stunden."
   lang="de"
-  ogImage="/og/og-bari-vecchia.jpg"
+  ogImage="/images/covers/nave-crociera.jpg"
 >
 
-  {/* HERO */}
-  <section class="cruise-hero relative overflow-hidden border-b border-border">
+  {/* ── HERO ── */}
+  <section id="hero-crociera" class="relative overflow-hidden border-b border-border">
     <img
       src="/images/covers/nave-crociera.jpg"
-      alt="Kreuzfahrtgäste gehen in Bari von Bord vor dem Schiff MSC Splendida"
-      class="cruise-hero-bg"
+      alt="Kreuzfahrtschiff im Hafen von Bari"
+      class="absolute inset-0 w-full h-full object-cover object-center"
       width="1980"
       height="900"
       loading="eager"
       fetchpriority="high"
       decoding="async"
     />
-    <div class="cruise-hero-scrim" aria-hidden="true"></div>
+    <div class="cruise-scrim" aria-hidden="true"></div>
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
-        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Hafenstopp · Bari
-        </span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Hafenstopp · Bari</span>
       </div>
-      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[20ch]">
-        4 Stunden in Bari.<br />Nutzen Sie sie.
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]" style="color:oklch(12% 0.005 240)">
+        Sie sind in Bari angelegt.<br />Sie haben 4 Stunden.<br />Nutzen Sie sie.
       </h1>
-      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Von der Gangway, Play drücken. Der Guide führt Sie durch die Altstadt mit echter Geschichte — keine Sehenswürdigkeitenliste. Keine App, kein Konto, keine Daten nötig.
+      <p class="font-body text-base sm:text-lg leading-relaxed mt-md max-w-[52ch]" style="color:oklch(22% 0.008 240 / 0.88)">
+        Zwei Audioguides für alle, die wenig Zeit haben und die echte Altstadt sehen wollen. Keine App, keine Reservierung, kein Guide der hinterherläuft.
       </p>
       <div class="flex flex-col sm:flex-row gap-sm mt-lg">
-        <a
-          href="#route"
-          class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+        <button
+          class="checkout-btn-crociera inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px]"
+          data-product="crociera"
+          data-lang="de"
         >
-          Route ansehen
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
+          Kreuzfahrt-Paket — €7,99
+        </button>
+        <button
+          id="play-trailer-btn"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md border border-border text-ink rounded-md font-semibold text-sm hover:bg-surface-elev transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px]"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <polygon points="5,3 19,12 5,21"></polygon>
           </svg>
-        </a>
-        <a
-          href="#preise"
-          class="inline-flex items-center justify-center gap-xs px-lg py-md border border-border text-ink rounded-md font-semibold text-sm hover:bg-surface-elev transition-colors duration-fast no-underline min-h-[48px]"
-        >
-          Jetzt kaufen — ab €4,99
-        </a>
+          60 Sekunden anhören
+        </button>
       </div>
-      <p class="text-[11px] text-ink-subtle mt-sm tracking-wide">
-        Disponibile anche in italiano · Also available in English
-      </p>
+      <audio id="trailer-audio" src="/audio/trailers/bari-vecchia-de.mp3" class="hidden" preload="none"></audio>
     </div>
   </section>
 
   <style>
-    .cruise-hero {
-      min-height: clamp(320px, 50vh, 560px);
+    #hero-crociera {
+      min-height: clamp(280px, 42vh, 480px);
       display: flex;
       align-items: center;
     }
-    .cruise-hero-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 40%;
-      filter: saturate(0.9) contrast(1.05);
-    }
-    .cruise-hero-scrim {
+    .cruise-scrim {
       position: absolute;
       inset: 0;
       background: linear-gradient(
@@ -89,7 +75,7 @@ import StepsBlock from '../../components/StepsBlock.astro';
       pointer-events: none;
     }
     @media (max-width: 768px) {
-      .cruise-hero-scrim {
+      .cruise-scrim {
         background: linear-gradient(
           to bottom,
           oklch(from var(--color-surface) l c h / 0.92) 0%,
@@ -100,75 +86,7 @@ import StepsBlock from '../../components/StepsBlock.astro';
     }
   </style>
 
-  {/* ROUTE */}
-  <section id="route" class="bg-surface-elev border-b border-border">
-    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <p class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm">— Reiseroute —</p>
-      <h2 class="font-display text-3xl sm:text-4xl text-ink mb-lg leading-tight max-w-[26ch]">
-        Altstadt Bari + Das Beste von Bari.<br />
-        <span class="font-light italic text-ink-muted">~1h 20min. Zwei Stimmen. Eine Stadt.</span>
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
-        <div class="flex flex-col gap-md">
-          <div class="flex gap-md items-start">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm flex items-center justify-center">1</span>
-            <div>
-              <p class="font-semibold text-ink text-base">Altstadt Bari · ~45 Min.</p>
-              <p class="text-ink-muted text-sm leading-relaxed mt-1">Das historische Viertel Kapitel für Kapitel: die Basilika San Nicola, die engen Gassen, die Kathedrale, die Stadtviertel. Echte Geschichte, kein Standard-Touristenskript.</p>
-            </div>
-          </div>
-          <div class="flex gap-md items-start">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 text-accent font-semibold text-sm flex items-center justify-center">2</span>
-            <div>
-              <p class="font-semibold text-ink text-base">Das Beste von Bari · ~35 Min.</p>
-              <p class="text-ink-muted text-sm leading-relaxed mt-1">Die Uferpromenade, der Fischmarkt, die Panzerotti. Die Orte, die Einheimische nie erklären — weil sie sie für selbstverständlich halten.</p>
-            </div>
-          </div>
-          <div class="flex gap-md items-start">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-surface border border-border text-ink-subtle font-semibold text-sm flex items-center justify-center">+</span>
-            <div>
-              <p class="font-semibold text-ink-muted text-base">4 weitere Guides verfügbar</p>
-              <p class="text-ink-muted text-sm leading-relaxed mt-1">Hafen · San Nicola · Theater · Unterirdisches Bari. Für mehr Zeit oder tieferes Eintauchen.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-surface border border-border rounded-lg p-lg flex flex-col gap-md">
-          <p class="text-[10px] font-semibold tracking-[0.28em] uppercase text-ink-subtle">So funktioniert es</p>
-          <ul class="flex flex-col gap-sm text-sm text-ink-muted leading-relaxed">
-            <li class="flex gap-sm items-start">
-              <span class="text-accent mt-0.5">→</span>
-              <span>Jetzt mit Karte oder PayPal kaufen — <strong class="text-ink">30 Sekunden</strong></span>
-            </li>
-            <li class="flex gap-sm items-start">
-              <span class="text-accent mt-0.5">→</span>
-              <span><strong class="text-ink">Link per E-Mail</strong> erhalten — kein Konto, keine App</span>
-            </li>
-            <li class="flex gap-sm items-start">
-              <span class="text-accent mt-0.5">→</span>
-              <span>Link am Kai öffnen, Play drücken, <strong class="text-ink">loslaufen</strong></span>
-            </li>
-            <li class="flex gap-sm items-start">
-              <span class="text-accent mt-0.5">→</span>
-              <span>Funktioniert offline nach erstem Laden</span>
-            </li>
-            <li class="flex gap-sm items-start">
-              <span class="text-accent mt-0.5">→</span>
-              <span>Der Link gehört Ihnen für immer — jederzeit wieder hören</span>
-            </li>
-          </ul>
-          <div class="border-t border-border pt-md mt-auto">
-            <p class="text-[11px] text-ink-subtle leading-relaxed">
-              Verfügbar auf <strong class="text-ink">Deutsch</strong>, <strong class="text-ink">Englisch</strong> und <strong class="text-ink">Italienisch</strong>. Kaufen für jemand anderen möglich — zwei Links werden versendet.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* GUIDE CARDS */}
+  {/* ── WAS SIE HÖREN ── */}
   <section class="bg-surface py-xl lg:py-3xl border-b border-border">
     <div class="max-w-wrap mx-auto px-md">
       <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-xl text-center">
@@ -194,7 +112,7 @@ import StepsBlock from '../../components/StepsBlock.astro';
               Altstadt Bari — In der Stadt
             </h3>
             <p class="font-body text-sm text-ink-muted leading-relaxed">
-              Beginnt an der Strada delle Crociate. Das historische Viertel Kapitel für Kapitel: die Basilika San Nicola, die engen Gassen, die Kathedrale. Echte Geschichte, kein Touristenskript.
+              Beginnt an der Strada delle Crociate. Das historische Viertel Kapitel für Kapitel: die Basilika San Nicola, die engen Gassen, die Kathedrale, die Stadtviertel. Echte Geschichte, kein Touristenskript.
             </p>
           </div>
         </div>
@@ -222,54 +140,251 @@ import StepsBlock from '../../components/StepsBlock.astro';
           </div>
         </div>
       </div>
+      <p class="font-body text-sm text-ink-muted text-center mt-lg">
+        49 Minuten Audio plus Gehzeit. Insgesamt 3–4 Stunden, Rückweg zum Schiff inklusive.
+      </p>
     </div>
   </section>
 
-  {/* PRICING */}
-  <section id="preise" class="bg-surface">
-    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <p class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm text-center">— Preise —</p>
-      <h2 class="font-display text-3xl text-ink mb-lg leading-tight text-center">
-        Nehmen Sie, was Sie brauchen.
+  {/* ── DIE ROUTE ── */}
+  <section id="route" class="bg-surface-elev py-xl lg:py-3xl border-b border-border">
+    <div class="max-w-wrap mx-auto px-md">
+      <div class="flex items-center gap-sm justify-center mb-sm">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-ink-subtle">— Karte —</span>
+        <span class="block w-7 h-px bg-accent"></span>
+      </div>
+      <h2 class="font-display font-light text-ink text-[clamp(1.5rem,3vw,2.2rem)] leading-tight tracking-[-0.01em] text-center mb-xl">
+        Vom Kai zur Altstadt. 600 Meter.
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
-        <PriceCard
-          product="single"
-          guideSlug="bari-vecchia"
+      <div class="mb-lg">
+        <StartMap
+          lat={41.1268}
+          lng={16.8716}
           lang="de"
-          features={[
-            "Ein Guide nach Wahl",
-            "Unbegrenzter Zugang, für immer",
-            "Deutsch, Englisch, Italienisch",
-            "1-Klick-Erstattung innerhalb 24h",
-          ]}
+          startsAt="Molo Pizzoli — 8 Minuten zu Fuß"
+          delta={0.008}
         />
-        <PriceCard
-          product="essenziale"
-          lang="de"
-          features={[
-            "Altstadt + Das Beste von Bari + San Nicola",
-            "~1h 20min · 3 verschiedene Stimmen",
-            "Deutsch, Englisch, Italienisch",
-            "1-Klick-Erstattung innerhalb 24h",
-          ]}
-        />
-        <PriceCard
-          product="bundle"
-          lang="de"
-          primary
-          features={[
-            "Alle 6 Bari-Guides",
-            "~2h 20min · 6 verschiedene Stimmen",
-            "€14,95 sparen gegenüber Einzelkauf",
-            "1-Klick-Erstattung innerhalb 24h",
-          ]}
-        />
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-xs text-sm font-body text-ink-muted">
+        <span class="text-ink font-semibold">Molo Pizzoli</span>
+        <span class="text-ink-subtle">→ 8 Min. zu Fuß →</span>
+        <span class="text-ink font-semibold">Kathedrale San Sabino</span>
+        <span class="text-ink-subtle">→</span>
+        <span class="text-ink font-semibold">Basilika San Nicola</span>
+        <span class="text-ink-subtle">→</span>
+        <span class="text-ink font-semibold">Orecchiette-Gasse</span>
+        <span class="text-ink-subtle">→</span>
+        <span class="text-ink font-semibold">Zurück zum Kai</span>
+      </div>
+      <p class="font-body text-sm text-ink-subtle text-center mt-md">
+        Der Guide beginnt dort, wo Sie ihn brauchen. Sie gehen in Ihrem eigenen Tempo.
+      </p>
+    </div>
+  </section>
+
+  {/* ── SO FUNKTIONIERT ES ── */}
+  <section class="bg-surface py-xl lg:py-3xl border-b border-border">
+    <div class="max-w-wrap mx-auto px-md">
+      <h2 class="font-display font-light text-ink text-[clamp(1.5rem,3vw,2.2rem)] leading-tight tracking-[-0.01em] text-center mb-xl">
+        In zwei Minuten sind Sie dabei.
+      </h2>
+      <div class="grid sm:grid-cols-3 gap-lg mb-xl">
+        <div class="flex flex-col gap-sm">
+          <span class="font-display font-light text-accent text-4xl leading-none">01</span>
+          <h3 class="font-display font-light text-ink text-lg leading-snug">Kaufen</h3>
+          <p class="font-body text-sm text-ink-muted leading-relaxed">
+            Über das WLAN des Schiffes, des Terminals oder eines Cafés. Kreditkarte, keine Registrierung.
+          </p>
+        </div>
+        <div class="flex flex-col gap-sm">
+          <span class="font-display font-light text-accent text-4xl leading-none">02</span>
+          <h3 class="font-display font-light text-ink text-lg leading-snug">Link öffnen</h3>
+          <p class="font-body text-sm text-ink-muted leading-relaxed">
+            Kommt per E-Mail. Herunterladen, auch offline hören — keine App, kein Konto.
+          </p>
+        </div>
+        <div class="flex flex-col gap-sm">
+          <span class="font-display font-light text-accent text-4xl leading-none">03</span>
+          <h3 class="font-display font-light text-ink text-lg leading-snug">Gehen und hören</h3>
+          <p class="font-body text-sm text-ink-muted leading-relaxed">
+            Hände frei für Fotos und Kaffee. Der Guide begleitet Sie Schritt für Schritt.
+          </p>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          class="checkout-btn-crociera inline-flex items-center justify-center gap-xs px-lg py-md bg-accent text-white rounded-md font-semibold text-sm hover:bg-accent/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px]"
+          data-product="crociera"
+          data-lang="de"
+        >
+          Jetzt starten — €7,99
+        </button>
       </div>
     </div>
   </section>
 
-  {/* 3 SCHRITTE */}
-  <StepsBlock lang="de" ctaHref="/de/guide/bari-vecchia" />
+  {/* ── PÜNKTLICH ZURÜCK ── */}
+  <section class="bg-surface-elev py-xl lg:py-3xl border-b border-border">
+    <div class="max-w-narrow mx-auto px-md">
+      <div class="flex items-center gap-sm justify-center mb-sm">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-ink-subtle">— Timing —</span>
+        <span class="block w-7 h-px bg-accent"></span>
+      </div>
+      <h2 class="font-display font-light text-ink text-[clamp(1.5rem,3vw,2.2rem)] leading-tight tracking-[-0.01em] text-center mb-xl">
+        Pünktlich zurück an Bord. Garantiert.
+      </h2>
+      <ul class="flex flex-col gap-md">
+        {[
+          'Die Guides sind absichtlich kurz — 49 Minuten insgesamt',
+          'Rechnen Sie anderthalb bis zwei Stunden gemütliches Gehen dazu',
+          'Halten Sie 30 Minuten Puffer für den Rückweg zum Kai',
+          'Wenn Sie um 9 Uhr anlegen und um 17 Uhr ablegen, haben Sie alle Zeit der Welt',
+        ].map((item) => (
+          <li class="flex items-start gap-md">
+            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-[2px]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.172l7.879-7.879a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="font-body text-sm text-ink-muted leading-relaxed">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  {/* ── FAQ ── */}
+  <section class="bg-surface py-xl lg:py-3xl border-b border-border">
+    <div class="max-w-narrow mx-auto px-md">
+      <h2 class="font-display font-light text-ink text-[clamp(1.5rem,3vw,2.2rem)] leading-tight tracking-[-0.01em] text-center mb-xl">
+        Häufige Fragen
+      </h2>
+      <dl class="flex flex-col gap-lg">
+        {[
+          {
+            q: 'Brauche ich Internet beim Gehen?',
+            a: 'Nein. Nach dem Download funktioniert der Guide offline. Kaufen Sie ihn über das WLAN des Terminals oder Schiffes.',
+          },
+          {
+            q: 'Wie weit ist die Altstadt vom Kai entfernt?',
+            a: '600 Meter, 8–10 Minuten zu Fuß entlang der Uferpromenade. Alles eben.',
+          },
+          {
+            q: 'Was ist, wenn ich das Schiff verpasse?',
+            a: 'Die Guides sind absichtlich kurz. Mit 4 Stunden an Land haben Sie immer 2 Stunden Puffer.',
+          },
+          {
+            q: 'Kann ich ihn auch zu Hause nochmal hören?',
+            a: 'Ja, der Guide gehört Ihnen für immer. Viele hören ihn nach der Reise nochmal.',
+          },
+          {
+            q: 'Sind die Stimmen echt oder KI?',
+            a: 'Synthetische Stimmen — das sagen wir offen. Die Texte sind von uns geschrieben, mit nachprüfbaren Quellen.',
+          },
+        ].map(({ q, a }) => (
+          <div class="border-b border-border pb-lg last:border-b-0 last:pb-0">
+            <dt class="font-body font-semibold text-ink text-sm mb-xs">{q}</dt>
+            <dd class="font-body text-sm text-ink-muted leading-relaxed">{a}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  {/* ── CLOSER ── */}
+  <section class="bg-surface-elev py-xl lg:py-3xl">
+    <div class="max-w-narrow mx-auto px-md text-center">
+      <blockquote class="font-display font-light text-ink text-[clamp(1.2rem,2.5vw,1.7rem)] leading-relaxed tracking-[-0.01em] italic mb-xl">
+        "Wir verkaufen Ihnen keine Tour. Wir verkaufen Ihnen die richtigen Worte — zum Anhören wann immer Sie wollen, an einem Morgen der Ihnen gehört."
+      </blockquote>
+      <button
+        class="checkout-btn-crociera inline-flex items-center justify-center gap-xs px-lg py-md bg-accent text-white rounded-md font-semibold text-sm hover:bg-accent/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px] mb-md"
+        data-product="crociera"
+        data-lang="de"
+      >
+        Kreuzfahrt-Paket kaufen — €7,99
+      </button>
+      <p class="font-body text-xs text-ink-subtle leading-relaxed">
+        Sofortiger Zugang per E-Mail · Offline · Für immer Ihres · 1-Klick-Rückerstattung innerhalb 24h
+      </p>
+    </div>
+  </section>
+
+  {/* ── STICKY CTA MOBILE ── */}
+  <div
+    id="sticky-cta"
+    class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-surface border-t border-border px-md py-sm shadow-lg translate-y-full transition-transform duration-300"
+    aria-hidden="true"
+  >
+    <button
+      class="checkout-btn-crociera w-full inline-flex items-center justify-center gap-xs px-lg py-md bg-accent text-white rounded-md font-semibold text-sm min-h-[48px]"
+      data-product="crociera"
+      data-lang="de"
+    >
+      Kreuzfahrt-Paket — €7,99
+    </button>
+  </div>
 
 </Layout>
+
+<script>
+  const playBtn = document.getElementById('play-trailer-btn') as HTMLButtonElement | null;
+  const audio = document.getElementById('trailer-audio') as HTMLAudioElement | null;
+  if (playBtn && audio) {
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pause';
+      } else {
+        audio.pause();
+        playBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"></polygon></svg> 60 Sekunden anhören`;
+      }
+    });
+    audio.addEventListener('ended', () => {
+      playBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"></polygon></svg> 60 Sekunden anhören`;
+    });
+  }
+
+  const hero = document.getElementById('hero-crociera');
+  const stickyCta = document.getElementById('sticky-cta');
+  if (hero && stickyCta) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          stickyCta.classList.remove('translate-y-full');
+          stickyCta.removeAttribute('aria-hidden');
+        } else {
+          stickyCta.classList.add('translate-y-full');
+          stickyCta.setAttribute('aria-hidden', 'true');
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(hero);
+  }
+
+  const lang = 'de';
+  document.querySelectorAll<HTMLButtonElement>('.checkout-btn-crociera').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const product = btn.dataset.product ?? 'crociera';
+      btn.disabled = true;
+      const orig = btn.textContent;
+      btn.textContent = 'Lädt…';
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ product, lang }),
+        });
+        if (!res.ok) throw new Error('checkout error');
+        const { url } = await res.json() as { url: string };
+        if (!url) throw new Error('no url');
+        window.location.href = url;
+      } catch {
+        btn.disabled = false;
+        btn.textContent = orig;
+        alert('Checkout-Fehler. Bitte versuchen Sie es in einem Moment erneut.');
+      }
+    });
+  });
+</script>
