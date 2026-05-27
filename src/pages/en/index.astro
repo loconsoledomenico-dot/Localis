@@ -2,13 +2,10 @@
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Hero from '../../components/Hero.astro';
-import PriceCard from '../../components/PriceCard.astro';
-import SectionDivider from '../../components/SectionDivider.astro';
 import FeatureBlock from '../../components/FeatureBlock.astro';
 import StatsBlock from '../../components/StatsBlock.astro';
 import StepsBlock from '../../components/StepsBlock.astro';
 import DestinationsBlock from '../../components/DestinationsBlock.astro';
-import GuideBuilder from '../../components/GuideBuilder.astro';
 ---
 <Layout
   title="Localis — audio guides written in Puglia"
@@ -58,27 +55,20 @@ import GuideBuilder from '../../components/GuideBuilder.astro';
   {/* DESTINATIONS — 3 destination cards */}
   <DestinationsBlock lang="en" />
 
-  {/* BUILDER */}
-  <GuideBuilder lang="en" />
-
-  {/* BARI COMPLETA */}
-  <section class="bg-surface-elev border-y border-border" id="prezzi">
-    <div class="max-w-wrap mx-auto px-md py-2xl">
-      <SectionDivider label="Special Edition — Bari Only" />
-      <div class="max-w-sm mx-auto">
-        <PriceCard
-          product="bari-completa"
-          lang="en"
-          features={[
-            'All 6 Bari guides',
-            '~2h 20min of narration · 6 different voices',
-            'Italian and English',
-            'Save €14.95 vs single guides',
-            '1-click refund within 24h',
-          ]}
-          primary
-        />
-      </div>
+  {/* CTA → builder on /en/guide */}
+  <section class="bg-surface" id="prezzi">
+    <div class="max-w-wrap mx-auto px-md py-2xl text-center">
+      <p class="font-display font-light text-[clamp(1.2rem,2.5vw,1.7rem)] text-ink mb-md">
+        Want 3, 6 or all 18 guides?
+      </p>
+      <a
+        href="/en/guide#builder"
+        class="inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
+      >
+        Build your package
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <p class="text-sm text-ink-muted mt-sm">Tris €11.99 · Sestina €19.99 · Puglia Completa €29.99</p>
     </div>
   </section>
 

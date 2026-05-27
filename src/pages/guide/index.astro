@@ -1,8 +1,7 @@
 ---
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
-import SectionDivider from '../../components/SectionDivider.astro';
-import PriceCard from '../../components/PriceCard.astro';
+import GuideBuilder from '../../components/GuideBuilder.astro';
 
 const lang = 'it';
 
@@ -202,38 +201,6 @@ const valleItria: GuideEntry[] = [
         ))}
       </ol>
 
-      <div class="mt-2xl">
-        <SectionDivider label="Bari Completa" />
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[46rem] mx-auto">
-          <PriceCard
-            product="single"
-            guideSlug="bari-vecchia"
-            lang="it"
-            features={[
-              'Una guida a tua scelta',
-              'Accesso illimitato, per sempre',
-              'Italiano e inglese',
-              'Rimborso 1-click entro 24h',
-            ]}
-          />
-          <PriceCard
-            product="bari-completa"
-            lang="it"
-            features={[
-              'Tutte le 6 guide di Bari',
-              '~2h 20min di racconto · 6 voci diverse',
-              'Risparmi €14,95 vs guide singole',
-              'Rimborso 1-click entro 24h',
-            ]}
-            primary
-          />
-        </div>
-      </div>
-      <div class="text-center mt-2xl">
-        <a href="/#builder" class="inline-flex items-center gap-xs text-sm font-semibold text-link underline-offset-4 hover:underline">
-          Vuoi mescolare zone diverse? → Usa il builder
-        </a>
-      </div>
     </section>
 
     {/* ——— VALLE D'ITRIA ——— */}
@@ -308,6 +275,9 @@ const valleItria: GuideEntry[] = [
     </section>
 
   </div>
+
+  <GuideBuilder lang="it" />
+
 </Layout>
 
 <style>
