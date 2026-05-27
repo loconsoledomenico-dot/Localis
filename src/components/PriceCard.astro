@@ -1,9 +1,10 @@
 ---
 import { formatPrice } from '../lib/format';
 import { type Lang } from '../lib/i18n';
+import { type ProductSlug } from '../lib/stripe-prices';
 
 export interface Props {
-  product: 'single' | 'essenziale' | 'bundle';
+  product: ProductSlug;
   guideSlug?: string;
   lang: Lang;
   features: string[];
@@ -12,7 +13,7 @@ export interface Props {
 
 const { product, guideSlug, lang, features, primary = false } = Astro.props;
 
-const priceCents = product === 'bundle' ? 1499 : product === 'essenziale' ? 999 : 499;
+const priceCents = product === 'bundle' ? 1499 : product === 'essenziale' ? 999 : product === 'crociera' ? 799 : 499;
 const priceLabel = formatPrice(priceCents);
 
 const title =
@@ -20,7 +21,9 @@ const title =
     ? lang === 'it' ? 'Bari Completa' : 'Complete Bari'
     : product === 'essenziale'
       ? lang === 'it' ? 'Bari Essenziale' : 'Essential Bari'
-      : lang === 'it' ? 'Guida singola' : 'Single guide';
+      : product === 'crociera'
+        ? lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package'
+        : lang === 'it' ? 'Guida singola' : 'Single guide';
 
 const description =
   product === 'bundle'
@@ -31,23 +34,31 @@ const description =
       ? lang === 'it'
         ? 'Il primo giorno a Bari, queste tre.'
         : 'Your first day in Bari, these three.'
-      : lang === 'it'
-        ? 'Una guida a scelta, tua per sempre.'
-        : 'One guide of your choice, yours forever.';
+      : product === 'crociera'
+        ? lang === 'it'
+          ? 'Bari Vecchia + Il Meglio di Bari.'
+          : 'Bari Vecchia + Il Meglio di Bari.'
+        : lang === 'it'
+          ? 'Una guida a scelta, tua per sempre.'
+          : 'One guide of your choice, yours forever.';
 
 const unitLabel =
   product === 'bundle'
     ? lang === 'it' ? '/ 6 guide' : '/ 6 guides'
     : product === 'essenziale'
       ? lang === 'it' ? '/ 3 guide' : '/ 3 guides'
-      : lang === 'it' ? '/ guida' : '/ guide';
+      : product === 'crociera'
+        ? lang === 'it' ? '/ 2 guide' : '/ 2 guides'
+        : lang === 'it' ? '/ guida' : '/ guide';
 
 const ctaLabel =
   product === 'bundle'
     ? lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari'
     : product === 'essenziale'
       ? lang === 'it' ? 'Acquista Bari Essenziale' : 'Get Essential Bari'
-      : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
+      : product === 'crociera'
+        ? lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package'
+        : lang === 'it' ? 'Ascolta tutto' : 'Listen full';
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
