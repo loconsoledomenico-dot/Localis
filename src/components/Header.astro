@@ -9,6 +9,16 @@ export interface Props {
 }
 
 const { lang, currentPath } = Astro.props;
+
+const navLinks = [
+  { href: localizedHref('/guide', lang), label: lang === 'it' ? 'Guide' : 'Guides' },
+  { href: localizedHref('/fonti', lang), label: lang === 'it' ? 'Fonti' : lang === 'de' ? 'Quellen' : 'Sources' },
+  { href: localizedHref('/about', lang), label: lang === 'it' ? 'Chi siamo' : lang === 'de' ? 'Über uns' : 'About' },
+  ...(lang === 'it' ? [{ href: '/crocieristi', label: 'Crocieristi' }] : []),
+  ...(lang === 'en' ? [{ href: '/en/cruise', label: 'Cruise guests' }] : []),
+  ...(lang === 'de' ? [{ href: '/de/kreuzfahrt', label: 'Kreuzfahrtgäste' }] : []),
+  { href: localizedHref('/diventa-partner', lang), label: t('nav.partner', lang) },
+];
 ---
 <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border">
   <div class="max-w-wrap mx-auto px-md flex items-center justify-between h-14">
@@ -20,40 +30,80 @@ const { lang, currentPath } = Astro.props;
       Loc<em class="text-accent not-italic">alis</em>
     </a>
 
-    <nav class="flex items-center gap-lg">
-      <a
-        href={localizedHref('/guide', lang)}
-        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
-      >
-        {lang === 'it' ? 'Guide' : 'Guides'}
-      </a>
-      <a
-        href={localizedHref('/fonti', lang)}
-        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
-      >
-        {lang === 'it' ? 'Fonti' : lang === 'de' ? 'Quellen' : 'Sources'}
-      </a>
-      <a
-        href={localizedHref('/about', lang)}
-        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
-      >
-        {lang === 'it' ? 'Chi siamo' : lang === 'de' ? 'Über uns' : 'About'}
-      </a>
-      {lang === 'it' && (
+    <!-- Desktop nav -->
+    <nav class="hidden sm:flex items-center gap-lg">
+      {navLinks.map(l => (
         <a
-          href={localizedHref('/crocieristi', lang)}
-          class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+          href={l.href}
+          class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
         >
-          Crocieristi
+          {l.label}
         </a>
-      )}
-      <a
-        href={localizedHref('/diventa-partner', lang)}
-        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
-      >
-        {t('nav.partner', lang)}
-      </a>
+      ))}
       <LangSwitcher lang={lang} currentPath={currentPath} />
     </nav>
+
+    <!-- Mobile: lang switcher + hamburger -->
+    <div class="flex sm:hidden items-center gap-sm">
+      <LangSwitcher lang={lang} currentPath={currentPath} />
+      <button
+        id="mobile-menu-btn"
+        aria-label={lang === 'it' ? 'Apri menu' : 'Open menu'}
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="w-10 h-10 flex items-center justify-center text-ink rounded-md hover:bg-surface-elev transition-colors duration-fast"
+      >
+        <svg id="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="hidden">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
   </div>
+
+  <!-- Mobile menu drawer -->
+  <nav
+    id="mobile-menu"
+    class="hidden sm:hidden border-t border-border bg-surface/98 backdrop-blur"
+    aria-label={lang === 'it' ? 'Menu principale' : 'Main menu'}
+  >
+    <ul class="list-none m-0 p-0 flex flex-col">
+      {navLinks.map(l => (
+        <li>
+          <a
+            href={l.href}
+            class="block px-md py-sm font-body text-base font-medium text-ink-muted hover:text-ink hover:bg-surface-elev no-underline transition-colors duration-fast border-b border-border/50 last:border-0"
+          >
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 </header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn')!;
+  const menu = document.getElementById('mobile-menu')!;
+  const iconMenu = document.getElementById('icon-menu')!;
+  const iconClose = document.getElementById('icon-close')!;
+
+  btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!open));
+    iconMenu.classList.toggle('hidden', !open);
+    iconClose.classList.toggle('hidden', open);
+  });
+
+  // Chiudi al click su un link
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+</script>
