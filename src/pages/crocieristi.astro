@@ -307,7 +307,7 @@ import Layout from '../components/Layout.astro';
     playBtn.addEventListener('click', () => {
       if (audio.paused) {
         audio.play();
-        playBtn.textContent = 'Pausa assaggio';
+        playBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pausa assaggio';
       } else {
         audio.pause();
         playBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"></polygon></svg> Ascolta 60 secondi di assaggio`;
@@ -343,6 +343,7 @@ import Layout from '../components/Layout.astro';
     btn.addEventListener('click', async () => {
       const product = btn.dataset.product ?? 'crociera';
       btn.disabled = true;
+      const orig = btn.textContent;
       btn.textContent = 'Caricamento…';
       try {
         const res = await fetch('/api/checkout', {
@@ -351,11 +352,12 @@ import Layout from '../components/Layout.astro';
           body: JSON.stringify({ product, lang }),
         });
         if (!res.ok) throw new Error('checkout error');
-        const session = await res.json();
-        window.location.href = session.url;
+        const { url } = await res.json() as { url: string };
+        if (!url) throw new Error('no url');
+        window.location.href = url;
       } catch {
         btn.disabled = false;
-        btn.textContent = 'Pacchetto Crociera — €7,99';
+        btn.textContent = orig;
         alert('Errore nel checkout. Riprova tra qualche secondo.');
       }
     });
