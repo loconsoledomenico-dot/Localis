@@ -6,11 +6,10 @@ export interface Props {
   lng: number;
   lang: Lang;
   startsAt?: string;
+  delta?: number;
 }
 
-const { lat, lng, lang, startsAt } = Astro.props;
-
-const delta = 0.0035;
+const { lat, lng, lang, startsAt, delta = 0.0035 } = Astro.props;
 const bbox = `${(lng - delta).toFixed(5)},${(lat - delta).toFixed(5)},${(lng + delta).toFixed(5)},${(lat + delta).toFixed(5)}`;
 const embedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat.toFixed(5)},${lng.toFixed(5)}`;
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${lat.toFixed(5)},${lng.toFixed(5)}`;

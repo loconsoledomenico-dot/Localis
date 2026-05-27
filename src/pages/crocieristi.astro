@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import Layout from '../components/Layout.astro';
+import StartMap from '../components/StartMap.astro';
 ---
 <Layout
   title="Bari porto crociere · cosa fare in 4 ore · Localis"
@@ -126,16 +127,13 @@ import Layout from '../components/Layout.astro';
       <h2 class="font-display font-light text-ink text-[clamp(1.5rem,3vw,2.2rem)] leading-tight tracking-[-0.01em] text-center mb-xl">
         Dal molo a Bari Vecchia. 600 metri.
       </h2>
-      <div class="rounded-lg overflow-hidden border border-border bg-surface mb-lg">
-        <img
-          src="/images/maps/bari-crociera-route.png"
-          alt="Mappa percorso dal porto di Bari a Bari Vecchia"
-          class="w-full object-cover"
-          width="900"
-          height="500"
-          loading="lazy"
-          decoding="async"
-          onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-48 text-ink-subtle text-sm font-body\'>Mappa in arrivo</div>'"
+      <div class="mb-lg">
+        <StartMap
+          lat={41.1268}
+          lng={16.8716}
+          lang="it"
+          startsAt="Molo Pizzoli — 8 minuti a piedi"
+          delta={0.008}
         />
       </div>
       <div class="flex flex-wrap items-center justify-center gap-xs text-sm font-body text-ink-muted">
