@@ -166,40 +166,8 @@ const guides: GuideEntry[] = [
     }
   </style>
 
-  {/* NARRATORI */}
-  <section class="bg-surface-elev border-b border-border">
-    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <div class="flex items-center justify-center gap-sm mb-2xl">
-        <span class="block w-7 h-px bg-accent"></span>
-        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">Le voci della Valle</span>
-        <span class="block w-7 h-px bg-accent"></span>
-      </div>
-      <ul class="narr-grid list-none p-0 m-0">
-        {[
-          { name: 'Concetta', photo: '/images/authors/concetta-alberobello.jpg', role: 'Tre generazioni nel Rione Aia Piccola', bio: "Sessantacinque anni, nata e cresciuta nel Rione Aia Piccola. Tre generazioni sotto lo stesso tetto di pietra. Racconta i trulli come la vicina di casa che è sempre stata seduta su quella porta.", guide: 'Alberobello', href: '/guide/alberobello' },
-          { name: 'Francesco', photo: '/images/authors/francesco-locorotondo.png', role: 'Vignaiolo del borgo rotondo', bio: "Cinquant'anni, vignaiolo del borgo rotondo. Produce vino DOC, olio e olio essenziale di lavanda tra i vigneti della Valle d'Itria.", guide: 'Locorotondo', href: '/guide/locorotondo' },
-          { name: 'Anonimo', photo: '/images/authors/nobile-martina-franca.png', role: 'Discendente dei Caracciolo', bio: "Discendente diretto della famiglia Caracciolo. Preferisce non dare il nome — vuole raccontare storie, non fare dichiarazioni.", guide: 'Martina Franca', href: '/guide/martina-franca' },
-        ].map((n) => (
-          <li>
-            <a href={n.href} class="narr-card" aria-label={`Guida ${n.guide} — voce di ${n.name}`}>
-              <figure class="narr-photo m-0">
-                <img src={n.photo} alt={`Ritratto di ${n.name}`} loading="lazy" decoding="async" />
-              </figure>
-              <div class="narr-text">
-                <p class="narr-guide font-body text-[10px] font-semibold tracking-[0.22em] uppercase text-accent m-0">{n.guide}</p>
-                <h3 class="narr-name font-display font-light text-ink m-0">{n.name}</h3>
-                <p class="narr-role font-body text-xs text-ink-subtle m-0">{n.role}</p>
-                <p class="narr-bio font-body text-sm text-ink-muted m-0 mt-xs">{n.bio}</p>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
   {/* INTERLUDE */}
-  <section class="bg-surface border-b border-border">
+  <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
       <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei guide · sei capitoli · una valle</p>
@@ -231,6 +199,38 @@ const guides: GuideEntry[] = [
           </li>
         ))}
       </ol>
+    </div>
+  </section>
+
+  {/* NARRATORI */}
+  <section class="bg-surface border-t border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center justify-center gap-sm mb-2xl">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">Le voci della Valle</span>
+        <span class="block w-7 h-px bg-accent"></span>
+      </div>
+      <ul class="narr-grid list-none p-0 m-0">
+        {[
+          { name: 'Concetta', photo: '/images/authors/concetta-alberobello.jpg', role: 'Tre generazioni nel Rione Aia Piccola', bio: "Sessantacinque anni, nata e cresciuta nel Rione Aia Piccola. Tre generazioni sotto lo stesso tetto di pietra. Racconta i trulli come la vicina di casa che è sempre stata seduta su quella porta.", guide: 'Alberobello', href: '/guide/alberobello' },
+          { name: 'Francesco', photo: '/images/authors/francesco-locorotondo.png', role: 'Vignaiolo del borgo rotondo', bio: "Cinquant'anni, vignaiolo del borgo rotondo. Produce vino DOC, olio e olio essenziale di lavanda tra i vigneti della Valle d'Itria.", guide: 'Locorotondo', href: '/guide/locorotondo' },
+          { name: 'Anonimo', photo: '/images/authors/nobile-martina-franca.png', role: 'Discendente dei Caracciolo', bio: "Discendente diretto della famiglia Caracciolo. Preferisce non dare il nome — vuole raccontare storie, non fare dichiarazioni.", guide: 'Martina Franca', href: '/guide/martina-franca' },
+        ].map((n) => (
+          <li>
+            <a href={n.href} class="narr-card" aria-label={`Guida ${n.guide} — voce di ${n.name}`}>
+              <figure class="narr-photo m-0">
+                <img src={n.photo} alt={`Ritratto di ${n.name}`} loading="lazy" decoding="async" />
+              </figure>
+              <div class="narr-text">
+                <p class="narr-guide font-body text-[10px] font-semibold tracking-[0.22em] uppercase text-accent m-0">{n.guide}</p>
+                <h3 class="narr-name font-display font-light text-ink m-0">{n.name}</h3>
+                <p class="narr-role font-body text-xs text-ink-subtle m-0">{n.role}</p>
+                <p class="narr-bio font-body text-sm text-ink-muted m-0 mt-xs">{n.bio}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
