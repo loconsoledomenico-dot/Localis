@@ -136,6 +136,17 @@ const destinations: Destination[] = lang === 'it'
               <div class="dest-meta">
                 <h3 class="dest-title font-display font-light text-ink leading-[1.2] m-0">{d.name}</h3>
                 <p class="dest-sub font-body text-sm text-ink-muted m-0">{d.tagline}</p>
+                {d.slug === 'bari' && lang === 'it' && (
+                  <span
+                    role="link"
+                    tabindex="0"
+                    class="inline-flex items-center gap-xs self-start text-[11px] font-semibold tracking-[0.18em] uppercase text-accent border border-accent/30 rounded-full px-sm py-[3px] cursor-pointer hover:bg-accent/5 transition-colors"
+                    onclick="event.stopPropagation(); window.location.href='/crocieristi'"
+                    onkeydown="if(event.key==='Enter'){event.stopPropagation();window.location.href='/crocieristi'}"
+                  >
+                    Sei in crociera? → Pacchetto dedicato
+                  </span>
+                )}
               </div>
             </a>
           )}
