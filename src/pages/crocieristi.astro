@@ -22,21 +22,21 @@ import StartMap from '../components/StartMap.astro';
       fetchpriority="high"
       decoding="async"
     />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" aria-hidden="true"></div>
+    <div class="cruise-scrim" aria-hidden="true"></div>
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Scali · Bari</span>
       </div>
-      <h1 class="font-display font-light text-white leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]" style="color:oklch(12% 0.005 240)">
         Sei sbarcato a Bari?<br />Hai 4 ore.<br />Te le facciamo valere.
       </h1>
-      <p class="font-body text-base sm:text-lg leading-relaxed text-white/80 mt-md max-w-[52ch]">
+      <p class="font-body text-base sm:text-lg leading-relaxed mt-md max-w-[52ch]" style="color:oklch(22% 0.008 240 / 0.88)">
         Due audioguide pensate per chi ha poco tempo e vuole vedere il vero centro storico. Senza app, senza prenotazioni, senza guide al seguito.
       </p>
       <div class="flex flex-col sm:flex-row gap-sm mt-lg">
         <button
-          class="checkout-btn-crociera inline-flex items-center justify-center gap-xs px-lg py-md bg-accent text-white rounded-md font-semibold text-sm hover:bg-accent/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px]"
+          class="checkout-btn-crociera inline-flex items-center justify-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px]"
           data-product="crociera"
           data-lang="it"
         >
@@ -44,7 +44,7 @@ import StartMap from '../components/StartMap.astro';
         </button>
         <button
           id="play-trailer-btn"
-          class="inline-flex items-center justify-center gap-xs px-lg py-md bg-white/10 border border-white/30 text-white rounded-md font-semibold text-sm hover:bg-white/20 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px] backdrop-blur-sm"
+          class="inline-flex items-center justify-center gap-xs px-lg py-md border border-border text-ink rounded-md font-semibold text-sm hover:bg-surface-elev transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 min-h-[48px]"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <polygon points="5,3 19,12 5,21"></polygon>
@@ -55,6 +55,36 @@ import StartMap from '../components/StartMap.astro';
       <audio id="trailer-audio" src="/audio/trailers/bari-vecchia.mp3" class="hidden" preload="none"></audio>
     </div>
   </section>
+
+  <style>
+    #hero-crociera {
+      min-height: clamp(280px, 42vh, 480px);
+      display: flex;
+      align-items: center;
+    }
+    .cruise-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        oklch(from var(--color-surface) l c h / 0.90) 0%,
+        oklch(from var(--color-surface) l c h / 0.65) 40%,
+        oklch(from var(--color-surface) l c h / 0.15) 75%,
+        oklch(from var(--color-surface) l c h / 0) 100%
+      );
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .cruise-scrim {
+        background: linear-gradient(
+          to bottom,
+          oklch(from var(--color-surface) l c h / 0.92) 0%,
+          oklch(from var(--color-surface) l c h / 0.75) 60%,
+          oklch(from var(--color-surface) l c h / 0.55) 100%
+        );
+      }
+    }
+  </style>
 
   {/* ── COSA ASCOLTI ── */}
   <section class="bg-surface py-xl lg:py-3xl border-b border-border">
