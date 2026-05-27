@@ -1,0 +1,388 @@
+---
+import { type Lang } from '../lib/i18n';
+import {
+  BARI_GUIDES,
+  VALLE_GUIDES,
+  GARGANO_GUIDES,
+  PRODUCT_PRICE_CENTS,
+  FREE_CHOICE_TIERS,
+} from '../lib/stripe-prices';
+import { getCollection } from 'astro:content';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const allEntries = await getCollection('guides');
+
+type GuideCard = {
+  slug: string;
+  title: string;
+  subtitle: string;
+  cover: string;
+};
+
+const guideMap = new Map<string, GuideCard>();
+for (const entry of allEntries) {
+  const d = entry.data;
+  const slug = (d.slug ?? entry.slug) as string;
+  const isIt = lang !== 'en';
+  guideMap.set(slug, {
+    slug,
+    title:    isIt ? (d.title_it as string)    : ((d.title_en ?? d.title_it) as string),
+    subtitle: isIt ? (d.subtitle_it as string) : ((d.subtitle_en ?? d.subtitle_it) as string),
+    cover:    d.cover as string,
+  });
+}
+
+const ZONE_ORDER = [
+  { label: lang === 'it' ? 'Bari' : 'Bari', slugs: BARI_GUIDES },
+  { label: "Valle d'Itria", slugs: VALLE_GUIDES },
+  { label: 'Gargano', slugs: GARGANO_GUIDES },
+];
+---
+
+<section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : 'Choose your guides'}>
+  <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+
+    <div class="text-center mb-2xl">
+      <p class="text-xs font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm">
+        {lang === 'it' ? '— Costruisci il tuo pacchetto —' : '— Build your package —'}
+      </p>
+      <h2 class="font-display font-light text-[clamp(1.8rem,4vw,3rem)] text-ink leading-tight">
+        {lang === 'it' ? 'Scegli le guide che vuoi.' : 'Choose the guides you want.'}
+      </h2>
+      <p class="font-body text-ink-muted text-base mt-sm max-w-[48ch] mx-auto">
+        {lang === 'it'
+          ? 'Seleziona 3 per il Tris (€11,99), 6 per la Sestina (€19,99), o prendi la Puglia Completa (€29,99). Una guida? €4,99.'
+          : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€29.99). Just one? €4.99.'}
+      </p>
+    </div>
+
+    {ZONE_ORDER.map((zone) => (
+      <div class="mb-2xl">
+        <h3 class="font-display font-light text-xl text-ink mb-lg border-b border-border pb-sm">
+          {zone.label}
+        </h3>
+        <div class="builder-grid">
+          {zone.slugs.map((slug) => {
+            const g = guideMap.get(slug);
+            if (!g) return null;
+            return (
+              <button
+                type="button"
+                class="builder-card"
+                data-slug={slug}
+                aria-pressed="false"
+                aria-label={g.title}
+              >
+                <figure class="builder-card-fig m-0">
+                  <img src={g.cover} alt={g.title} class="builder-card-img" loading="lazy" decoding="async" />
+                  <span class="builder-card-check" aria-hidden="true">✓</span>
+                </figure>
+                <div class="builder-card-meta">
+                  <p class="builder-card-title font-display text-sm font-light text-ink leading-tight m-0">{g.title}</p>
+                  <p class="builder-card-sub font-body text-xs text-ink-muted m-0 mt-[2px]">{g.subtitle}</p>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    ))}
+
+    <div class="builder-cta-bar" id="builder-cta-bar" aria-live="polite">
+      <div class="builder-cta-inner">
+        <div class="builder-cta-status">
+          <span id="builder-count" class="builder-count-badge">0</span>
+          <span id="builder-status-text" class="text-sm text-ink-muted">
+            {lang === 'it' ? 'guide selezionate' : 'guides selected'}
+          </span>
+        </div>
+        <button
+          type="button"
+          id="builder-checkout-btn"
+          class="builder-checkout-btn"
+          disabled
+          data-lang={lang}
+        >
+          {lang === 'it' ? 'Seleziona almeno una guida' : 'Select at least one guide'}
+        </button>
+      </div>
+      <p id="builder-upsell" class="builder-upsell" aria-hidden="true"></p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .builder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .builder-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    background: none;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    text-align: left;
+  }
+
+  .builder-card:hover {
+    border-color: var(--color-ink-muted);
+  }
+
+  .builder-card[aria-pressed="true"] {
+    border-color: var(--color-ink);
+    box-shadow: 0 0 0 1px var(--color-ink);
+  }
+
+  .builder-card-fig {
+    position: relative;
+    aspect-ratio: 3/2;
+  }
+
+  .builder-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .builder-card-check {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-ink);
+    color: var(--color-surface);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  .builder-card[aria-pressed="true"] .builder-card-check {
+    opacity: 1;
+  }
+
+  .builder-card-meta {
+    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-sm);
+  }
+
+  .builder-cta-bar {
+    position: sticky;
+    bottom: 0;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-md) 0;
+    padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom, 0px));
+    margin-top: var(--spacing-2xl);
+    z-index: 40;
+  }
+
+  .builder-cta-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+
+  .builder-cta-status {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .builder-count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-ink);
+    color: var(--color-surface);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .builder-checkout-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--color-ink);
+    color: var(--color-surface);
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+    min-height: 48px;
+  }
+
+  .builder-checkout-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .builder-checkout-btn:not(:disabled):hover {
+    background: oklch(15% 0.025 240);
+  }
+
+  .builder-upsell {
+    max-width: 1280px;
+    margin: var(--spacing-xs) auto 0;
+    padding: 0 var(--spacing-md);
+    font-size: 0.8rem;
+    color: var(--color-ink-muted);
+    min-height: 1.2em;
+  }
+</style>
+
+<script>
+  const TIERS = [
+    { product: 'tris',            count: 3,  cents: 1199, label: 'Tris' },
+    { product: 'sestina',         count: 6,  cents: 1999, label: 'Sestina' },
+    { product: 'puglia-completa', count: 18, cents: 2999, label: 'Puglia Completa' },
+  ] as const;
+  const SINGLE_CENTS = 499;
+  const fmt = (c: number, lang: string) =>
+    `€${(c / 100).toFixed(2).replace('.', lang === 'en' ? '.' : ',')}`;
+
+  const cards = Array.from(document.querySelectorAll<HTMLButtonElement>('.builder-card'));
+  const btn = document.getElementById('builder-checkout-btn') as HTMLButtonElement;
+  const countBadge = document.getElementById('builder-count') as HTMLElement;
+  const statusText = document.getElementById('builder-status-text') as HTMLElement;
+  const upsell = document.getElementById('builder-upsell') as HTMLElement;
+  const lang = btn?.dataset.lang ?? 'it';
+  const it = lang !== 'en';
+
+  if (!btn) throw new Error('[GuideBuilder] checkout btn not found');
+
+  const selected = new Set<string>();
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const slug = card.dataset.slug!;
+      if (selected.has(slug)) {
+        selected.delete(slug);
+        card.setAttribute('aria-pressed', 'false');
+      } else {
+        selected.add(slug);
+        card.setAttribute('aria-pressed', 'true');
+      }
+      updateUI();
+    });
+  });
+
+  function updateUI() {
+    const n = selected.size;
+    countBadge.textContent = String(n);
+    statusText.textContent = it
+      ? (n === 1 ? 'guida selezionata' : 'guide selezionate')
+      : (n === 1 ? 'guide selected' : 'guides selected');
+
+    const tier = TIERS.find((t) => t.count === n) ?? null;
+    const nextTier = TIERS.find((t) => t.count > n) ?? null;
+
+    if (n === 0) {
+      btn.disabled = true;
+      btn.textContent = it ? 'Seleziona almeno una guida' : 'Select at least one guide';
+      upsell.textContent = '';
+    } else if (tier) {
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista ${tier.label} · ${fmt(tier.cents, lang)}`
+        : `Get ${tier.label} · ${fmt(tier.cents, lang)}`;
+      if (nextTier) {
+        const extra = nextTier.count - n;
+        upsell.textContent = it
+          ? `➕ Aggiungi ${extra} ${extra === 1 ? 'guida' : 'guide'} → ${nextTier.label} a ${fmt(nextTier.cents, lang)} (risparmi di più)`
+          : `➕ Add ${extra} more guide${extra > 1 ? 's' : ''} → ${nextTier.label} at ${fmt(nextTier.cents, lang)}`;
+      } else {
+        upsell.textContent = it ? '🎉 Hai la Puglia Completa!' : '🎉 You have all of Puglia!';
+      }
+    } else if (n === 1) {
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista guida singola · ${fmt(SINGLE_CENTS, lang)}`
+        : `Buy single guide · ${fmt(SINGLE_CENTS, lang)}`;
+      upsell.textContent = it
+        ? `➕ Aggiungi 2 guide → Tris a ${fmt(1199, lang)} (risparmi €2,98)`
+        : `➕ Add 2 more → Tris at ${fmt(1199, lang)} (save €2.98)`;
+    } else {
+      btn.disabled = true;
+      const toNext = nextTier ? nextTier.count - n : 0;
+      btn.textContent = it
+        ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} → ${nextTier?.label ?? ''}`
+        : `Add ${toNext} more guide${toNext > 1 ? 's' : ''} → ${nextTier?.label ?? ''}`;
+      if (nextTier) {
+        upsell.textContent = `${nextTier.label} · ${fmt(nextTier.cents, lang)}`;
+      }
+    }
+  }
+
+  btn.addEventListener('click', async () => {
+    const n = selected.size;
+    if (n === 0 || btn.disabled) return;
+
+    const slugsArray = [...selected];
+    let product: string;
+    if (n === 1) {
+      product = 'single';
+    } else {
+      const tier = TIERS.find((t) => t.count === n);
+      if (!tier) return;
+      product = tier.product;
+    }
+
+    btn.disabled = true;
+    const originalText = btn.textContent;
+    btn.textContent = it ? 'Apertura pagamento...' : 'Opening checkout...';
+
+    try {
+      const bodyPayload: Record<string, unknown> = { product, lang, selectedSlugs: slugsArray };
+      if (product === 'single') bodyPayload.guideSlug = slugsArray[0];
+
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(bodyPayload),
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json() as { url?: string };
+      if (!data.url) throw new Error('No checkout URL');
+
+      if (typeof (window as unknown as { localisTrack?: Function }).localisTrack === 'function') {
+        (window as unknown as { localisTrack: Function }).localisTrack('checkout_started', { product, guides: n, lang });
+      }
+      window.location.assign(data.url);
+    } catch (err) {
+      console.error('[builder]', err);
+      btn.disabled = false;
+      btn.textContent = originalText;
+      alert(it ? 'Impossibile aprire il pagamento. Riprova.' : 'Could not open checkout. Please try again.');
+    }
+  });
+</script>
