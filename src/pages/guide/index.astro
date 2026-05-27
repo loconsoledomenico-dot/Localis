@@ -202,14 +202,26 @@ const valleItria: GuideEntry[] = [
         ))}
       </ol>
 
-      {/* Bari bundle pricing */}
       <div class="mt-2xl">
-        <SectionDivider label="Bundle Bari" />
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
-          <PriceCard product="single" guideSlug="bari-vecchia" lang="it" features={['Una guida a tua scelta','Accesso illimitato, per sempre','Italiano e inglese','Rimborso 1-click entro 24h']} />
-          <PriceCard product="essenziale" lang="it" features={['Bari Vecchia · San Nicola · Il Meglio di Bari','~1h 20min di racconto · 3 voci diverse','Italiano e inglese','Rimborso 1-click entro 24h']} />
-          <PriceCard product="bundle" lang="it" primary features={['Tutte le 6 guide di Bari','~2h 20min di racconto · 6 voci diverse','Risparmi €14,95 vs guide singole','Rimborso 1-click entro 24h']} />
+        <SectionDivider label="Bari Completa" />
+        <div class="max-w-sm mx-auto">
+          <PriceCard
+            product="bari-completa"
+            lang="it"
+            features={[
+              'Tutte le 6 guide di Bari',
+              '~2h 20min di racconto · 6 voci diverse',
+              'Risparmi €14,95 vs guide singole',
+              'Rimborso 1-click entro 24h',
+            ]}
+            primary
+          />
         </div>
+      </div>
+      <div class="text-center mt-2xl">
+        <a href="/#builder" class="inline-flex items-center gap-xs text-sm font-semibold text-link underline-offset-4 hover:underline">
+          Vuoi mescolare zone diverse? → Usa il builder
+        </a>
       </div>
     </section>
 

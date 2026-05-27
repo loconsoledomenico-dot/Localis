@@ -8,6 +8,7 @@ import FeatureBlock from '../../components/FeatureBlock.astro';
 import StatsBlock from '../../components/StatsBlock.astro';
 import StepsBlock from '../../components/StepsBlock.astro';
 import DestinationsBlock from '../../components/DestinationsBlock.astro';
+import GuideBuilder from '../../components/GuideBuilder.astro';
 ---
 <Layout
   title="Localis — audio guides written in Puglia"
@@ -57,42 +58,25 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
   {/* DESTINATIONS — 3 destination cards */}
   <DestinationsBlock lang="en" />
 
-  {/* PRICING — right after the 6 tiles, decision moment single vs bundle */}
-  <section id="prezzi" class="bg-surface">
-    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <SectionDivider label="Pick what you need" />
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
+  {/* BUILDER */}
+  <GuideBuilder lang="en" />
+
+  {/* BARI COMPLETA */}
+  <section class="bg-surface-elev border-y border-border" id="prezzi">
+    <div class="max-w-wrap mx-auto px-md py-2xl">
+      <SectionDivider label="Special Edition — Bari Only" />
+      <div class="max-w-sm mx-auto">
         <PriceCard
-          product="single"
-          guideSlug="bari-vecchia"
+          product="bari-completa"
           lang="en"
-          features={[
-            '1 guide of your choice',
-            'Unlimited access, forever',
-            'Italian and English',
-            '1-click refund within 24h',
-          ]}
-        />
-        <PriceCard
-          product="essenziale"
-          lang="en"
-          features={[
-            'Old Bari · San Nicola · The Best of Bari',
-            '~1h 20min · 3 different voices',
-            'Italian and English',
-            '1-click refund within 24h',
-          ]}
-        />
-        <PriceCard
-          product="bundle"
-          lang="en"
-          primary
           features={[
             'All 6 Bari guides',
-            '~2h 20min · 6 different voices',
+            '~2h 20min of narration · 6 different voices',
+            'Italian and English',
             'Save €14.95 vs single guides',
             '1-click refund within 24h',
           ]}
+          primary
         />
       </div>
     </div>
