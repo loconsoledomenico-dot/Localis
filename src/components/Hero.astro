@@ -100,7 +100,7 @@ const altText = lang === 'de'
       <span class="block">{lede2}</span>
     </p>
 
-    <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm">
+    <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm flex-wrap">
       <a
         href={ctaPrimaryHref}
         class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
@@ -108,6 +108,30 @@ const altText = lang === 'de'
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
         {ctaPrimary}
       </a>
+      {lang === 'it' && (
+        <a
+          href="/crocieristi"
+          class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-full font-semibold text-xs border border-ink/30 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[40px] backdrop-blur-sm"
+        >
+          ⚓ Sei in crociera? Pacchetto dedicato
+        </a>
+      )}
+      {lang === 'en' && (
+        <a
+          href="/en/cruise"
+          class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-full font-semibold text-xs border border-ink/30 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[40px] backdrop-blur-sm"
+        >
+          ⚓ On a cruise? Dedicated package
+        </a>
+      )}
+      {lang === 'de' && (
+        <a
+          href="/de/kreuzfahrt"
+          class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-full font-semibold text-xs border border-ink/30 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[40px] backdrop-blur-sm"
+        >
+          ⚓ Auf Kreuzfahrt? Spezielles Paket
+        </a>
+      )}
     </div>
 
     <HeroAudioSample lang={lang} />
