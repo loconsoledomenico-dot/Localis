@@ -48,6 +48,35 @@ export function audioObjectLD(g: GuideLDInput) {
   };
 }
 
+export interface ProductLDInput {
+  slug: string;
+  title: string;
+  description: string;
+  cover: string;
+  priceCents: number;
+  language: 'it' | 'en' | 'de';
+}
+
+export function productLD(g: ProductLDInput) {
+  const url = `https://localis.guide${g.language === 'en' ? '/en' : g.language === 'de' ? '/de' : ''}/guide/${g.slug}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: g.title,
+    description: g.description,
+    image: `https://localis.guide${g.cover}`,
+    url,
+    brand: { '@type': 'Brand', name: 'Localis' },
+    offers: {
+      '@type': 'Offer',
+      price: (g.priceCents / 100).toFixed(2),
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      url,
+    },
+  };
+}
+
 export function touristAttractionLD(name: string, coords: { lat: number; lng: number }, city: string) {
   return {
     '@context': 'https://schema.org',

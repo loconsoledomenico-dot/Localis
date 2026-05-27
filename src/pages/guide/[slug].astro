@@ -2,7 +2,6 @@
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
-import TrailerPlayer from '../../components/TrailerPlayer.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import ChapterList from '../../components/ChapterList.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
@@ -11,7 +10,7 @@ import NarratorCard from '../../components/NarratorCard.astro';
 import StructuredData from '../../components/StructuredData.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDuration } from '../../lib/format';
-import { audioObjectLD, touristAttractionLD } from '../../lib/seo';
+import { audioObjectLD, touristAttractionLD, productLD } from '../../lib/seo';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const CITY_DEST: Record<string, { href: string; label: string }> = {
@@ -65,8 +64,17 @@ if (data.coords_start) {
     ),
   );
 }
+
+ld.push(productLD({
+  slug: data.slug,
+  title: data.title_it,
+  description: data.seo.description_it,
+  cover: data.cover,
+  priceCents: data.price_cents,
+  language: 'it',
+}));
 ---
-<Layout title={`${data.title_it} · Localis`} description={data.seo.description_it} lang="it">
+<Layout title={`${data.title_it} · Localis`} description={data.seo.description_it} lang="it" ogImage={`/og/og-${data.slug}.jpg`}>
   <StructuredData data={ld} />
   {(() => { const dest = CITY_DEST[data.city]; return dest ? <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: dest.label, href: dest.href }, { label: data.title_it }]} /> : <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: data.title_it }]} />; })()}
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
@@ -82,12 +90,6 @@ if (data.coords_start) {
         alt=""
         class="w-full aspect-[4/3] object-cover rounded-lg"
         loading="eager"
-      />
-
-      <TrailerPlayer
-        src={data.audio_trailer_path}
-        label="Anteprima · 60s"
-        lang="it"
       />
 
       {data.narrator && (

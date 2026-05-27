@@ -1,0 +1,149 @@
+---
+import { type Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const src = lang === 'de'
+  ? '/audio/trailers/san-nicola-en.mp3'
+  : lang === 'it'
+  ? '/audio/trailers/san-nicola.mp3'
+  : '/audio/trailers/san-nicola-en.mp3';
+
+const label = lang === 'de'
+  ? 'Hör rein · San Nicola-Guide'
+  : lang === 'it'
+  ? 'Ascolta un assaggio · Guida San Nicola'
+  : 'Listen to a sample · San Nicola guide';
+
+const playLabel  = lang === 'de' ? 'Abspielen' : lang === 'it' ? 'Play' : 'Play';
+const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Pause';
+---
+
+<div class="hero-sample" data-src={src}>
+  <button
+    class="hero-sample-btn"
+    aria-label={playLabel}
+    data-play-label={playLabel}
+    data-pause-label={pauseLabel}
+  >
+    <!-- play icon -->
+    <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <polygon points="6 4 20 12 6 20 6 4"/>
+    </svg>
+    <!-- pause icon -->
+    <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none">
+      <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+    </svg>
+  </button>
+
+  <div class="hero-sample-info">
+    <span class="hero-sample-label">{label}</span>
+    <div class="hero-sample-bar" aria-hidden="true">
+      <div class="hero-sample-progress"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.hero-sample').forEach((el) => {
+    const src     = el.dataset.src!;
+    const btn     = el.querySelector<HTMLButtonElement>('.hero-sample-btn')!;
+    const bar     = el.querySelector<HTMLElement>('.hero-sample-progress')!;
+    const iconPlay  = btn.querySelector<SVGElement>('.icon-play')!;
+    const iconPause = btn.querySelector<SVGElement>('.icon-pause')!;
+
+    let audio: HTMLAudioElement | null = null;
+
+    btn.addEventListener('click', () => {
+      if (!audio) {
+        audio = new Audio(src);
+        audio.addEventListener('timeupdate', () => {
+          if (audio!.duration) {
+            bar.style.width = `${(audio!.currentTime / audio!.duration) * 100}%`;
+          }
+        });
+        audio.addEventListener('ended', () => {
+          bar.style.width = '0%';
+          iconPlay.style.display  = '';
+          iconPause.style.display = 'none';
+          btn.setAttribute('aria-label', btn.dataset.playLabel!);
+        });
+      }
+
+      if (audio.paused) {
+        audio.play();
+        iconPlay.style.display  = 'none';
+        iconPause.style.display = '';
+        btn.setAttribute('aria-label', btn.dataset.pauseLabel!);
+      } else {
+        audio.pause();
+        iconPlay.style.display  = '';
+        iconPause.style.display = 'none';
+        btn.setAttribute('aria-label', btn.dataset.playLabel!);
+      }
+    });
+  });
+</script>
+
+<style>
+  .hero-sample {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    max-width: 320px;
+  }
+
+  .hero-sample-btn {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-ink);
+    background: transparent;
+    color: var(--color-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color var(--duration-fast), color var(--duration-fast);
+  }
+  .hero-sample-btn:hover {
+    background: var(--color-ink);
+    color: var(--color-surface);
+  }
+
+  .hero-sample-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero-sample-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--color-ink-muted);
+    line-height: 1.2;
+  }
+
+  .hero-sample-bar {
+    width: 100%;
+    height: 2px;
+    background: oklch(from var(--color-border) l c h / 0.5);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+
+  .hero-sample-progress {
+    height: 100%;
+    width: 0%;
+    background: var(--color-accent);
+    transition: width 0.25s linear;
+    border-radius: 1px;
+  }
+</style>

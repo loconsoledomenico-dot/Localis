@@ -1,6 +1,7 @@
 ---
 import { type Lang } from '../lib/i18n';
 import LangPills from './LangPills.astro';
+import HeroAudioSample from './HeroAudioSample.astro';
 
 export interface Props {
   lang: Lang;
@@ -10,25 +11,24 @@ export interface Props {
 const { lang, currentPath = '/' } = Astro.props;
 
 const masthead_l = lang === 'de' ? 'Ausgabe 01 — Apulien' : lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
-const masthead_r = lang === 'de' ? 'Live-Guides · Apulien' : lang === 'it' ? 'Guide live · Puglia' : 'Live guides · Puglia';
+const masthead_r = lang === 'de' ? 'Veröffentlichte Audioguides · Apulien' : lang === 'it' ? 'Guide pubblicate · Puglia' : 'Published guides · Puglia';
 
-const heading1a = lang === 'de' ? 'Audioguides erzählt' : lang === 'it' ? 'Audioguide raccontate' : 'Audio guides told';
-const heading1b = lang === 'de' ? 'von denen, die dort leben.' : lang === 'it' ? 'da chi ci è nato.' : 'by people born there.';
+const heading1a = lang === 'de' ? 'Audioguides, geschrieben in Apulien.' : lang === 'it' ? 'Audioguide scritte in Puglia.' : 'Audio guides written in Puglia.';
+const heading1b = '';
 
 const lede1 = lang === 'de'
-  ? 'Apulier erzählen dir ihr Land.'
+  ? 'Überprüfbare Archivquellen.'
   : lang === 'it'
-  ? 'I pugliesi ti raccontano la loro terra.'
-  : 'Locals telling their own land.';
+  ? 'Fonti d\'archivio verificabili.'
+  : 'Verifiable archive sources.';
 const lede2 = lang === 'de'
-  ? 'Das echte — nicht die Broschüre.'
+  ? 'Vor Ort gesammelte Geschichten.'
   : lang === 'it'
-  ? 'Quella vera, mica le brochure.'
-  : 'The real one — not the brochure version.';
+  ? 'Storie raccolte sul territorio.'
+  : 'Stories gathered on the ground.';
 
-const ctaPrimary = lang === 'de' ? 'Guides entdecken' : lang === 'it' ? 'Scopri le guide' : 'Explore the guides';
+const ctaPrimary = lang === 'de' ? 'Guides ansehen' : lang === 'it' ? 'Vedi le guide' : 'See the guides';
 const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
-const ctaSecondary = lang === 'de' ? 'Alle Guides' : lang === 'it' ? 'Vedi le guide' : 'See the guides';
 
 interface Pill {
   icon: string;
@@ -38,20 +38,20 @@ interface Pill {
 
 const pills: Pill[] = lang === 'de'
   ? [
-      { icon: 'headphones', label: 'Überall anhören',    tail: 'unterwegs, zuhause, im Zug' },
-      { icon: 'pin',        label: 'Wahre Geschichten',  tail: 'an echten Orten' },
-      { icon: 'heart',      label: 'Von Einheimischen',  tail: 'lokale Autoren, namentlich' },
+      { icon: 'headphones', label: 'Überall anhören',        tail: 'unterwegs, zuhause, im Zug' },
+      { icon: 'pin',        label: 'Wahre Geschichten',      tail: 'an echten Orten' },
+      { icon: 'heart',      label: 'Archivrecherche',        tail: 'alle Quellen prüfbar auf /fonti' },
     ]
   : lang === 'it'
   ? [
-      { icon: 'headphones', label: 'Ascolta dove vuoi', tail: 'in strada, sul divano, in treno' },
-      { icon: 'pin',        label: 'Storie vere',       tail: 'sui luoghi reali e autentici' },
-      { icon: 'heart',      label: 'Da chi ci è nato',   tail: 'autori locali, firmati con nome' },
+      { icon: 'headphones', label: 'Ascolta dove vuoi',      tail: 'in strada, sul divano, in treno' },
+      { icon: 'pin',        label: 'Storie vere',            tail: 'sui luoghi reali e autentici' },
+      { icon: 'heart',      label: 'Ricerca d\'archivio',    tail: 'fonti verificabili su /fonti' },
     ]
   : [
-      { icon: 'headphones', label: 'Listen anywhere',    tail: 'on the street, couch, train' },
-      { icon: 'pin',        label: 'True stories',       tail: 'tied to real places' },
-      { icon: 'heart',      label: 'Locals only',         tail: 'local authors, signed by name' },
+      { icon: 'headphones', label: 'Listen anywhere',        tail: 'on the street, couch, train' },
+      { icon: 'pin',        label: 'True stories',           tail: 'tied to real places' },
+      { icon: 'heart',      label: 'Archive research',       tail: 'all sources verifiable at /fonti' },
     ];
 
 const altText = lang === 'de'
@@ -92,7 +92,7 @@ const altText = lang === 'de'
     <LangPills lang={lang} currentPath={currentPath} />
     <h1 class="hero-h1 font-display text-ink leading-[0.96] tracking-[-0.018em] m-0">
       <span class="hero-h1-a block font-light text-[clamp(2rem,5.6vw,4.4rem)]">{heading1a}</span>
-      <span class="hero-h1-b block font-light text-[clamp(2rem,5.6vw,4.4rem)]">{heading1b}</span>
+      {heading1b && <span class="hero-h1-b block font-light text-[clamp(2rem,5.6vw,4.4rem)]">{heading1b}</span>}
     </h1>
 
     <p class="hero-lede mt-md font-display italic text-ink text-[clamp(1.05rem,1.8vw,1.35rem)] leading-snug max-w-[42ch]">
@@ -108,13 +108,9 @@ const altText = lang === 'de'
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
         {ctaPrimary}
       </a>
-      <a
-        href="/guide"
-        class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm border border-ink text-ink hover:bg-ink hover:text-surface transition-colors duration-fast no-underline min-h-[48px]"
-      >
-        {ctaSecondary}
-      </a>
     </div>
+
+    <HeroAudioSample lang={lang} />
 
     <ul class="hero-pills">
       {pills.map((p) => (

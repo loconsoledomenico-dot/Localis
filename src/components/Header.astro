@@ -28,6 +28,18 @@ const { lang, currentPath } = Astro.props;
         {lang === 'it' ? 'Guide' : 'Guides'}
       </a>
       <a
+        href={localizedHref('/fonti', lang)}
+        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+      >
+        {lang === 'it' ? 'Fonti' : lang === 'de' ? 'Quellen' : 'Sources'}
+      </a>
+      <a
+        href={localizedHref('/about', lang)}
+        class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+      >
+        {lang === 'it' ? 'Chi siamo' : lang === 'de' ? 'Über uns' : 'About'}
+      </a>
+      <a
         href={localizedHref('/diventa-partner', lang)}
         class="font-body text-sm font-medium text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
       >

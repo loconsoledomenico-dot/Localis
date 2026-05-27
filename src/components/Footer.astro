@@ -16,7 +16,11 @@ const year = new Date().getFullYear();
         Loc<em class="text-accent not-italic">alis</em>
       </p>
       <p class="font-display italic text-sm text-ink-muted mb-2xs">
-        {lang === 'it' ? 'Le città raccontate da dentro.' : 'Cities told from the inside.'}
+        {lang === 'it'
+          ? 'Audioguide scritte in Puglia · Fonti d\'archivio verificabili · Storie raccolte sul territorio'
+          : lang === 'de'
+          ? 'Audioguides aus Apulien · Überprüfbare Archivquellen · Vor Ort gesammelte Geschichten'
+          : 'Audio guides written in Puglia · Verifiable archive sources · Stories gathered on the ground'}
       </p>
       <p class="text-sm text-ink-muted">
         {t('footer.copyright', lang)} · {year}
@@ -29,6 +33,18 @@ const year = new Date().getFullYear();
         class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
       >
         {lang === 'it' ? 'Fonti' : 'Sources'}
+      </a>
+      <a
+        href={localizedHref('/faq', lang)}
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
+      >
+        FAQ
+      </a>
+      <a
+        href={lang === 'en' ? '/en/method' : lang === 'de' ? '/de/methode' : '/metodo'}
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+      >
+        {lang === 'it' ? 'Metodo' : lang === 'de' ? 'Methode' : 'Method'}
       </a>
       <a
         href={localizedHref('/termini', lang)}

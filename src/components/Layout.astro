@@ -14,9 +14,10 @@ export interface Props {
   title: string;
   description?: string;
   lang?: Lang;
+  ogImage?: string;
 }
 
-const { title, description = '', lang = 'it' } = Astro.props;
+const { title, description = '', lang = 'it', ogImage } = Astro.props;
 const currentPath = Astro.url.pathname;
 const itUrl = lang === 'it' ? currentPath : stripLocalePrefix(currentPath);
 const enUrl = lang === 'en' ? currentPath : `/en${stripLocalePrefix(currentPath)}`;
@@ -43,12 +44,12 @@ const canonical = `${SITE}${currentPath}`;
   <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'it_IT'} />
   <meta property="og:locale:alternate" content={lang === 'en' ? 'it_IT' : 'en_US'} />
   <meta property="og:site_name" content="Localis" />
-  <meta property="og:image" content={`${SITE}/og-default.jpg`} />
+  <meta property="og:image" content={ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.jpg`} />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   {description && <meta name="twitter:description" content={description} />}
-  <meta name="twitter:image" content={`${SITE}/og-default.jpg`} />
+  <meta name="twitter:image" content={ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.jpg`} />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 

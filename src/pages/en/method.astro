@@ -1,0 +1,65 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+---
+<Layout
+  title="Our method · Localis"
+  description="How we build Localis audio guides: archival research with academic sources, oral memory gathered on the ground, four-handed writing, audio production."
+  lang="en"
+>
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <Eyebrow class="mb-md">How we work</Eyebrow>
+    <h1 class="font-display text-4xl text-ink mb-lg">The Localis method.</h1>
+
+    <div class="prose prose-ink max-w-prose">
+      <p class="text-lg text-ink-muted leading-relaxed">
+        Every Localis guide is the result of four distinct steps. There is no shortcut between them.
+      </p>
+
+      <h2>Step 1 — Archival research</h2>
+      <p>
+        Before writing a single word, we collect sources. For Bari: the <em>Dizionario Biografico degli Italiani</em> (Treccani), Gerardo Cioffari's monographs on the Basilica of San Nicola, Pina Belli D'Elia's work on Apulian Romanesque art, Hubert Houben on Norman history, David Abulafia on the medieval Mediterranean. For the Gargano saltpans, UNESCO site studies. For the Alberobello stone quarries, the MiC dossier and architectural surveys.
+      </p>
+      <p>
+        The result is a bibliography for every guide — public and verifiable — published at <a href="/en/fonti">/fonti</a>, chapter by chapter. No other Italian audio guide has this level of source transparency.
+      </p>
+
+      <h2>Step 2 — Collecting oral memory</h2>
+      <p>
+        Books give structure. Oral memory gives texture. For every guide, we go into the field: we talk with people who lived those places as children, who worked those spaces for decades, who hold traditions that never appear on tourist panels.
+      </p>
+      <p>
+        These conversations are not formally recorded or published — they remain raw material for writing. The people we speak with choose if and how they appear. Some stories stay anonymous at the request of those who told them.
+      </p>
+
+      <h2>Step 3 — Writing the text</h2>
+      <p>
+        Domenico Loconsole handles the historical research and the first draft. Luigi Loconsole revises, tightens, and brings the non-expert's perspective. The final text goes through at least three rounds of cross-revision before approval.
+      </p>
+      <p>
+        Italian, English, and German versions are written separately. We do not use machine translation: each version is rewritten with the cultural expectations and register of that reader in mind. A German tourist landing in Bari has a different frame of reference from an Italian traveller — the text should respect that.
+      </p>
+
+      <h2>Step 4 — Audio production</h2>
+      <p>
+        Voices are generated with ElevenLabs (AI voice synthesis). This is a declared choice, not a hidden one: the people who describe an alley perfectly over coffee often freeze in front of a microphone. Synthetic voice lets us keep stories in the words of those who gave them to us, without the limitations of the recording studio.
+      </p>
+      <p>
+        We are working to progressively replace the synthetic voices with professional Pugliese narrators. The goal is not to hide the AI, but to move past it when we find the right voices.
+      </p>
+      <p>
+        Every guide is listened to at least three times by beta-testers in the field before publication. If a sentence sounds false on the street, we rewrite it.
+      </p>
+
+      <hr />
+
+      <p>
+        The result is a guide you can listen to on the sofa before you leave, in your headphones as you walk, and replay after the trip to better understand what you saw. Not a list of names and dates: a story with structure, tension, and interpretation.
+      </p>
+      <p>
+        All sources are at <a href="/en/fonti">/fonti</a>. If you find an error, write to us: <a href="mailto:hello@localis.guide">hello@localis.guide</a>.
+      </p>
+    </div>
+  </article>
+</Layout>

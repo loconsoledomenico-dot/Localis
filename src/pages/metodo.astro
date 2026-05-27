@@ -1,0 +1,65 @@
+---
+export const prerender = true;
+import Layout from '../components/Layout.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+---
+<Layout
+  title="Il nostro metodo · Localis"
+  description="Come costruiamo le audioguide Localis: ricerca d'archivio con fonti accademiche, memoria orale raccolta sul territorio, scrittura a quattro mani, produzione audio."
+  lang="it"
+>
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <Eyebrow class="mb-md">Come lavoriamo</Eyebrow>
+    <h1 class="font-display text-4xl text-ink mb-lg">Il metodo Localis.</h1>
+
+    <div class="prose prose-ink max-w-prose">
+      <p class="text-lg text-ink-muted leading-relaxed">
+        Ogni guida Localis è il risultato di quattro passi distinti. Non c'è scorciatoia tra uno e l'altro.
+      </p>
+
+      <h2>Passo 1 — Ricerca d'archivio</h2>
+      <p>
+        Prima di scrivere una parola, raccogliamo le fonti. Per Bari: il <em>Dizionario Biografico degli Italiani</em> (Treccani), le monografie di Gerardo Cioffari sulla Basilica di San Nicola, i lavori di Pina Belli D'Elia sull'arte romanica pugliese, Hubert Houben sulla storia normanna, David Abulafia sul Mediterraneo medievale. Per le saline del Gargano, gli studi UNESCO sul sito. Per le cave di tufo di Alberobello, il dossier MiC e le perizie architettoniche.
+      </p>
+      <p>
+        Il risultato è una bibligrafia per ogni guida, pubblica e verificabile — la trovi su <a href="/fonti">/fonti</a>, capitolo per capitolo. Non esiste un'altra audioguida italiana con questo livello di trasparenza sulle fonti.
+      </p>
+
+      <h2>Passo 2 — Raccolta di memoria orale</h2>
+      <p>
+        I libri danno la struttura. La memoria orale dà la texture. Per ogni guida, usciamo sul territorio: conversiamo con chi quei luoghi li ha vissuti da bambino, con chi ha lavorato in quegli spazi per decenni, con chi custodisce tradizioni che non finiscono in nessun pannello turistico.
+      </p>
+      <p>
+        Queste conversazioni non vengono registrate formalmente né pubblicate — restano materia prima per la scrittura. I protagonisti scelgono se e come comparire. Alcune storie restano anonime per volontà di chi le ha raccontate.
+      </p>
+
+      <h2>Passo 3 — Scrittura del testo</h2>
+      <p>
+        Domenico Loconsole si occupa della ricerca storica e della prima stesura. Luigi Loconsole rivede, stringe, porta il punto di vista del non-esperto. Il testo finale passa almeno tre revisioni incrociate prima di essere approvato.
+      </p>
+      <p>
+        Le versioni italiana, inglese e tedesca sono scritte separatamente. Non utilizziamo traduzione automatica: ogni versione è riscritta tenendo conto delle aspettative culturali del lettore e del registro della lingua. Un turista tedesco che sbarca a Bari ha un orizzonte di riferimento diverso da un viaggiatore italiano — il testo deve rispettarlo.
+      </p>
+
+      <h2>Passo 4 — Produzione audio</h2>
+      <p>
+        Le voci sono generate con ElevenLabs (sintesi vocale AI). È una scelta dichiarata, non nascosta: chi sa raccontare un vicolo davanti a un caffè, davanti al microfono spesso ammutolisce. La voce sintetica permette di mantenere le storie nelle parole di chi ce le ha date, senza le limitazioni del microfono.
+      </p>
+      <p>
+        Stiamo lavorando per sostituire progressivamente le voci sintetiche con narratori professionisti pugliesi. L'obiettivo non è nascondere l'AI, ma superarla quando avremo trovato le voci giuste.
+      </p>
+      <p>
+        Ogni guida viene ascoltata almeno tre volte da beta-tester sul territorio prima della pubblicazione. Se una frase suona falsa in strada, riscriviamo.
+      </p>
+
+      <hr />
+
+      <p>
+        Il risultato è una guida che puoi ascoltare sul divano prima di partire, in cuffia mentre cammini, e riascoltare dopo il viaggio per capire meglio quello che hai visto. Non un elenco di nomi e date: un racconto con una struttura, una tensione, un'interpretazione.
+      </p>
+      <p>
+        Tutte le fonti sono su <a href="/fonti">/fonti</a>. Se trovi un errore, scrivici: <a href="mailto:hello@localis.guide">hello@localis.guide</a>.
+      </p>
+    </div>
+  </article>
+</Layout>
