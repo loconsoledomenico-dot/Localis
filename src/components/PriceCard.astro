@@ -3,7 +3,7 @@ import { formatPrice } from '../lib/format';
 import { type Lang } from '../lib/i18n';
 
 export interface Props {
-  product: 'single' | 'tris' | 'bari-completa' | 'crociera';
+  product: 'single' | 'bari-completa' | 'crociera';
   guideSlug?: string;
   lang: Lang;
   features: string[];
@@ -14,7 +14,6 @@ const { product, guideSlug, lang, features, primary = false } = Astro.props;
 
 const priceCents =
   product === 'bari-completa' ? 1499
-  : product === 'tris'        ?  999
   : product === 'crociera'    ?  799
   : 499;
 
@@ -23,46 +22,36 @@ const priceLabel = formatPrice(priceCents);
 const title =
   product === 'bari-completa'
     ? (lang === 'it' ? 'Bari Completa' : 'Complete Bari')
-    : product === 'tris'
-      ? (lang === 'it' ? 'Bari Essenziale' : 'Essential Bari')
-      : product === 'crociera'
-        ? (lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package')
-        : (lang === 'it' ? 'Guida singola' : 'Single guide');
+    : product === 'crociera'
+      ? (lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package')
+      : (lang === 'it' ? 'Guida singola' : 'Single guide');
 
 const description =
   product === 'bari-completa'
     ? (lang === 'it'
         ? 'Tutte le 6 guide di Bari. Sei voci, sei itinerari.'
         : 'All 6 Bari guides. Six voices, six routes.')
-    : product === 'tris'
+    : product === 'crociera'
       ? (lang === 'it'
-          ? 'Bari Vecchia · San Nicola · Il Meglio di Bari.'
-          : 'Bari Vecchia · San Nicola · Best of Bari.')
-      : product === 'crociera'
-        ? (lang === 'it'
-            ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
-            : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
-        : (lang === 'it'
-            ? 'Una guida a scelta, tua per sempre.'
-            : 'One guide of your choice, yours forever.');
+          ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
+          : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
+      : (lang === 'it'
+          ? 'Una guida a scelta, tua per sempre.'
+          : 'One guide of your choice, yours forever.');
 
 const unitLabel =
   product === 'bari-completa'
     ? (lang === 'it' ? '/ 6 guide' : '/ 6 guides')
-    : product === 'tris'
-      ? (lang === 'it' ? '/ 3 guide' : '/ 3 guides')
-      : product === 'crociera'
-        ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
-        : (lang === 'it' ? '/ guida' : '/ guide');
+    : product === 'crociera'
+      ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
+      : (lang === 'it' ? '/ guida' : '/ guide');
 
 const ctaLabel =
   product === 'bari-completa'
     ? (lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari')
-    : product === 'tris'
-      ? (lang === 'it' ? 'Acquista Bari Essenziale' : 'Get Essential Bari')
-      : product === 'crociera'
-        ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package')
-        : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide');
+    : product === 'crociera'
+      ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package')
+      : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide');
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
@@ -119,7 +108,6 @@ const ctaLabel =
       btn.textContent = lang === 'en' ? 'Opening checkout...' : 'Apertura pagamento...';
 
       const BARI_SLUGS = ['bari-vecchia','san-nicola','tre-teatri','il-meglio-di-bari','porto-bari','bari-sotterranea'];
-      const TRIS_SLUGS = ['bari-vecchia','san-nicola','il-meglio-di-bari'];
       const CROCIERA_SLUGS = ['bari-vecchia','il-meglio-di-bari'];
 
       const bodyPayload: Record<string, unknown> = { product, lang };
@@ -128,8 +116,6 @@ const ctaLabel =
         bodyPayload.selectedSlugs = guideSlug ? [guideSlug] : [];
       } else if (product === 'bari-completa') {
         bodyPayload.selectedSlugs = BARI_SLUGS;
-      } else if (product === 'tris') {
-        bodyPayload.selectedSlugs = TRIS_SLUGS;
       } else if (product === 'crociera') {
         bodyPayload.selectedSlugs = CROCIERA_SLUGS;
       }
