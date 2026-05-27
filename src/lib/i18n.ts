@@ -45,11 +45,26 @@ export function alternateLangUrl(currentPath: string, currentLang: Lang): string
   return localizedHref(stripped, targetLang);
 }
 
+/** Pages where the slug differs across languages. Key = IT slug (no prefix). */
+const SLUG_MAP: Record<string, { en: string; de: string }> = {
+  '/crocieristi':   { en: '/cruise',      de: '/kreuzfahrt' },
+  '/cruise':        { en: '/cruise',      de: '/kreuzfahrt' },
+  '/kreuzfahrt':    { en: '/cruise',      de: '/kreuzfahrt' },
+};
+
 /**
  * Returns URLs for all 3 language versions of the current path.
  */
 export function allLangUrls(currentPath: string): Record<Lang, string> {
   const stripped = stripLocalePrefix(currentPath);
+  const map = SLUG_MAP[stripped];
+  if (map) {
+    return {
+      it: '/crocieristi',
+      en: `/en${map.en}`,
+      de: `/de${map.de}`,
+    };
+  }
   return {
     it: localizedHref(stripped, 'it'),
     en: localizedHref(stripped, 'en'),
