@@ -1,40 +1,331 @@
 ---
 export const prerender = true;
 import Layout from '../../../components/Layout.astro';
-import GuideCard from '../../../components/GuideCard.astro';
 import GuideBuilder from '../../../components/GuideBuilder.astro';
 import { getCollection } from 'astro:content';
+import { guideSubtitle, guideTitle } from '../../../lib/guide-localization';
+import { BARI_GUIDES, GARGANO_GUIDES, VALLE_GUIDES } from '../../../lib/stripe-prices';
+import { localizedHref } from '../../../lib/i18n';
 
-const guides = (await getCollection('guides'))
-  .filter((g) => g.data.status === 'live')
-  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
+interface GuideEntry {
+  slug: string;
+  title: string;
+  subtitle: string;
+  duration: string;
+  area: string;
+  cover: string;
+  alt: string;
+  price?: string;
+}
+
+const allGuides = await getCollection('guides');
+const guideMap = new Map(
+  allGuides
+    .filter((g) => g.data.status === 'live')
+    .map((g) => [g.data.slug, g]),
+);
+
+function buildEntries(slugs: readonly string[], area: string): GuideEntry[] {
+  return slugs
+    .map((slug) => guideMap.get(slug))
+    .filter(Boolean)
+    .map((guide) => {
+      const g = guide!;
+      return {
+        slug: g.data.slug,
+        title: guideTitle(g.data, 'de'),
+        subtitle: guideSubtitle(g.data, 'de'),
+        duration: `${Math.round((g.data.duration_seconds_de ?? g.data.duration_seconds_en ?? g.data.duration_seconds) / 60)} min`,
+        area,
+        cover: g.data.cover,
+        alt: guideTitle(g.data, 'de'),
+        price: '4,99 €',
+      };
+    });
+}
+
+const bariGuides = buildEntries(BARI_GUIDES, 'Bari');
+const valleGuides = buildEntries(VALLE_GUIDES, "Valle d'Itria");
+const garganoGuides = buildEntries(GARGANO_GUIDES, 'Gargano');
 ---
+
 <Layout
   title="Guides — Localis · Apulien"
   description="Alle Localis Audioguides für Bari, Valle d'Itria und Gargano. Narrative Audioguides ohne App."
   lang="de"
 >
-  <main>
-    <section class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
-      <header class="mb-2xl max-w-[56ch]">
-        <p class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent mb-md">
-          Alle Guides
-        </p>
-        <h1 class="font-display text-ink leading-[1.05] mb-md text-[clamp(2rem,5vw,3.2rem)]">
-          Apulien, eine Geschichte nach der anderen.
-        </h1>
-        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
-          Bari, Valle d'Itria, Gargano: Öffne den Link und höre dann, wenn es für dich passt — vor Ort, vor der Reise oder danach. Jeder Guide ist eine Erzählung über einen Ort, mit lokalen Geschichten und nachvollziehbaren Quellen.
-        </p>
-      </header>
+  <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
-        {guides.map((guide, index) => (
-          <GuideCard guide={guide} lang="de" index={index} />
-        ))}
+    <header class="mb-3xl max-w-[52ch]">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          Alle Guides
+        </span>
       </div>
+      <h1 class="font-display text-ink leading-[1.05] tracking-[-0.014em] mb-md text-[clamp(2rem,5vw,3.2rem)]">
+        <span class="font-light">Apulien</span>
+        <span class="block font-body font-normal text-ink-muted mt-sm text-[clamp(1.1rem,2.2vw,1.45rem)] leading-relaxed tracking-normal">
+          eine Geschichte nach der anderen.
+        </span>
+      </h1>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
+        Keine Sammlung von Sehenswürdigkeiten, sondern eine Sammlung von Stimmen: Menschen aus Bari, Nachkommen alter Familien, Winzer, Erzähler aus den Dörfern.
+      </p>
+      <p class="font-body text-sm leading-relaxed text-ink-muted mt-sm">
+        Öffne den Link und höre dann, wenn es für dich passt: vor Ort, vor der Reise oder danach. Jeder Guide ist eine Erzählung über einen Ort, mit lokalen Geschichten und nachvollziehbaren Quellen.
+      </p>
+    </header>
+
+    <section class="mb-3xl lg:mb-4xl" aria-labelledby="area-bari">
+      <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
+        <h2 id="area-bari" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
+          Bari
+        </h2>
+        <span class="font-body text-sm text-ink-muted">6 Guides</span>
+      </div>
+
+      <ol class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--spacing-lg)] [row-gap:var(--spacing-2xl)] items-start">
+        {bariGuides.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <a href={localizedHref(`/guide/${g.slug}`, 'de')} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+              <figure class="guide-photo m-0" style="height:clamp(16rem,24vw,21rem);">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-area">{g.area}</span>
+                  <span class="guide-dur">{g.duration}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
     </section>
 
-    <GuideBuilder lang="de" />
-  </main>
+    <section aria-labelledby="area-valle">
+      <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
+        <h2 id="area-valle" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
+          Valle d'Itria
+        </h2>
+        <span class="font-body text-sm text-ink-muted">6 Guides</span>
+      </div>
+
+      <ol class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--spacing-lg)] [row-gap:var(--spacing-2xl)] items-start">
+        {valleGuides.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <a href={localizedHref(`/guide/${g.slug}`, 'de')} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+              <figure class="guide-photo m-0" style="height:clamp(16rem,24vw,21rem);">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-area">{g.area}</span>
+                  <span class="guide-dur">{g.duration}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="mt-3xl lg:mt-4xl" aria-labelledby="area-gargano">
+      <div class="flex items-baseline gap-md mb-2xl border-b border-border pb-md">
+        <h2 id="area-gargano" class="font-display font-light text-[clamp(1.5rem,3.5vw,2.2rem)] text-ink tracking-tight">
+          Gargano
+        </h2>
+        <span class="font-body text-sm text-ink-muted">6 Guides</span>
+      </div>
+
+      <ol class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[var(--spacing-lg)] [row-gap:var(--spacing-2xl)] items-start">
+        {garganoGuides.map((g, i) => (
+          <li class="guide-cell" style={`--idx:${i}`}>
+            <a href={localizedHref(`/guide/${g.slug}`, 'de')} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
+              <figure class="guide-photo m-0" style="height:clamp(16rem,24vw,21rem);">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
+                <span class="guide-scrim" aria-hidden="true">
+                  <span class="guide-area">{g.area}</span>
+                  <span class="guide-dur">{g.duration}</span>
+                </span>
+              </figure>
+              <div class="guide-meta">
+                <h3 class="guide-title font-display font-light text-ink leading-[1.2] m-0">{g.title}</h3>
+                <p class="guide-sub font-body text-sm text-ink-muted m-0">{g.subtitle}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+  </div>
+
+  <GuideBuilder lang="de" />
 </Layout>
+
+<style>
+  .guide-cell {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: guideIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--idx, 0) * 80ms + 100ms);
+  }
+
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    border-top: 1px solid var(--color-ink);
+    padding-top: var(--spacing-md);
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .guide-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .guide-photo {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: clamp(16rem, 24vw, 21rem);
+    background: var(--color-surface-elev);
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.08), 0 12px 32px -12px oklch(15% 0.012 240 / 0.16);
+    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .guide-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.94) contrast(1.04);
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .guide-card:hover .guide-img {
+    transform: scale(1.03);
+  }
+
+  .guide-num {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.4vw, 3.2rem);
+    line-height: 0.85;
+    color: var(--color-surface);
+    letter-spacing: -0.04em;
+    text-shadow: 0 1px 8px oklch(15% 0.012 240 / 0.55);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .guide-price {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-ink);
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    padding: 4px 10px 5px;
+    line-height: 1.2;
+    box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.18);
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+  }
+
+  .guide-scrim {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: linear-gradient(to top, oklch(15% 0.012 240 / 0.78), transparent 100%);
+    color: var(--color-surface);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .guide-area {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .guide-dur {
+    flex-shrink: 0;
+    color: var(--color-accent-soft);
+  }
+
+  .guide-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+  }
+
+  .guide-title {
+    font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  }
+
+  .guide-sub {
+    line-height: 1.5;
+  }
+
+  .guide-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  @keyframes guideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .guide-cell,
+    .guide-card,
+    .guide-img {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
