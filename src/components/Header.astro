@@ -48,7 +48,7 @@ const navLinks = [
       <LangSwitcher lang={lang} currentPath={currentPath} />
       <button
         id="mobile-menu-btn"
-        aria-label={lang === 'it' ? 'Apri menu' : 'Open menu'}
+        aria-label={lang === 'it' ? 'Apri menu' : lang === 'de' ? 'Menü öffnen' : 'Open menu'}
         aria-expanded="false"
         aria-controls="mobile-menu"
         class="w-10 h-10 flex items-center justify-center text-ink rounded-md hover:bg-surface-elev transition-colors duration-fast"
@@ -67,7 +67,7 @@ const navLinks = [
   <nav
     id="mobile-menu"
     class="hidden sm:hidden border-t border-border bg-surface/98 backdrop-blur"
-    aria-label={lang === 'it' ? 'Menu principale' : 'Main menu'}
+    aria-label={lang === 'it' ? 'Menu principale' : lang === 'de' ? 'Hauptmenü' : 'Main menu'}
   >
     <ul class="list-none m-0 p-0 flex flex-col">
       {navLinks.map(l => (

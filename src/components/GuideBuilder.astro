@@ -98,7 +98,7 @@ const ZONE_ORDER = [
         <div class="builder-cta-status">
           <span id="builder-count" class="builder-count-badge">0</span>
           <span id="builder-status-text" class="text-sm text-ink-muted">
-            {lang === 'it' ? 'guide selezionate' : lang === 'de' ? 'Guides ausgewahlt' : 'guides selected'}
+            {lang === 'it' ? 'guide selezionate' : lang === 'de' ? 'Guides ausgewählt' : 'guides selected'}
           </span>
         </div>
         <button
@@ -331,7 +331,7 @@ const ZONE_ORDER = [
     statusText.textContent = it
       ? (n === 1 ? 'guida selezionata' : 'guide selezionate')
       : de
-        ? (n === 1 ? 'Guide ausgewahlt' : 'Guides ausgewahlt')
+        ? (n === 1 ? 'Guide ausgewählt' : 'Guides ausgewählt')
         : (n === 1 ? 'guide selected' : 'guides selected');
 
     const tier = TIERS.find((t) => t.count === n) ?? null;
@@ -353,7 +353,7 @@ const ZONE_ORDER = [
         upsell.textContent = it
           ? `➕ Aggiungi ${extra} ${extra === 1 ? 'guida' : 'guide'} → ${nextTier.label} a ${fmt(nextTier.cents, lang)} (risparmi di più)`
           : de
-            ? `+ ${extra} weitere${extra === 1 ? 'n Guide' : ' Guides'} hinzufugen → ${nextTier.label} fur ${fmt(nextTier.cents, lang)}`
+            ? `+ ${extra} weitere${extra === 1 ? 'n Guide' : ' Guides'} hinzufügen → ${nextTier.label} für ${fmt(nextTier.cents, lang)}`
             : `➕ Add ${extra} more guide${extra > 1 ? 's' : ''} → ${nextTier.label} at ${fmt(nextTier.cents, lang)}`;
       } else {
         upsell.textContent = it ? 'Hai la Puglia Completa!' : de ? 'Du hast ganz Apulien!' : 'You have all of Puglia!';
@@ -368,7 +368,7 @@ const ZONE_ORDER = [
       upsell.textContent = it
         ? `➕ Aggiungi 2 guide → Tris a ${fmt(1199, lang)} (risparmi €2,98)`
         : de
-          ? `+ 2 weitere Guides → Tris fur ${fmt(1199, lang)}`
+          ? `+ 2 weitere Guides → Tris für ${fmt(1199, lang)}`
           : `➕ Add 2 more → Tris at ${fmt(1199, lang)} (save €2.98)`;
     } else {
       btn.disabled = true;
@@ -376,7 +376,7 @@ const ZONE_ORDER = [
       btn.textContent = it
         ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} → ${nextTier?.label ?? ''}`
         : de
-          ? `${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzufugen → ${nextTier?.label ?? ''}`
+          ? `${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzufügen → ${nextTier?.label ?? ''}`
           : `Add ${toNext} more guide${toNext > 1 ? 's' : ''} → ${nextTier?.label ?? ''}`;
       if (nextTier) {
         upsell.textContent = `${nextTier.label} · ${fmt(nextTier.cents, lang)}`;

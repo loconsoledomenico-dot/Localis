@@ -74,7 +74,7 @@ ld.push(productLD({
 ---
 <Layout title={`${title} - Localis`} description={description} lang="de" ogImage={`/og/og-${data.slug}.jpg`}>
   <StructuredData data={ld} />
-  {(() => { const dest = CITY_DEST[data.city]; return dest ? <Breadcrumb items={[{ label: 'Home', href: '/de' }, { label: dest.label, href: dest.href }, { label: title }]} /> : <Breadcrumb items={[{ label: 'Home', href: '/de' }, { label: title }]} />; })()}
+  {(() => { const dest = CITY_DEST[data.city]; return dest ? <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: dest.label, href: dest.href }, { label: title }]} /> : <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: title }]} />; })()}
 
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
     <header class="lg:col-span-2 mb-2xl">

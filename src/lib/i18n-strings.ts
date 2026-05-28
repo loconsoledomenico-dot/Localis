@@ -8,7 +8,7 @@ export const STRINGS = {
   it: {
     'site.name': 'Localis',
     'site.tagline': 'Audioguide narrative · Puglia',
-    'nav.home': 'Home',
+    'nav.home': 'Start',
     'nav.guide': 'Guide',
     'nav.partner': 'Diventa partner',
     'nav.about': 'Chi siamo',

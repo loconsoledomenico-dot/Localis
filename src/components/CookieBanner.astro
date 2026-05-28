@@ -35,7 +35,7 @@ const policyHref = localizedHref('/cookie-policy', lang);
 <div
   id="cookie-banner"
   role="dialog"
-  aria-label={lang === 'it' ? 'Preferenze cookie' : 'Cookie preferences'}
+  aria-label={lang === 'it' ? 'Preferenze cookie' : lang === 'de' ? 'Cookie-Einstellungen' : 'Cookie preferences'}
   aria-live="polite"
   class="fixed bottom-0 left-0 right-0 z-50 bg-surface border-t border-border shadow-lg px-md py-md hidden"
 >
