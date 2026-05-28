@@ -10,6 +10,8 @@ import {
   type ProductSlug,
 } from '../../lib/stripe-prices';
 import { getActivePartner } from '../../lib/partners';
+import type { Lang } from '../../lib/i18n';
+import { hasAllowedOrigin } from '../../lib/request-security';
 import type Stripe from 'stripe';
 
 const VALID_PRODUCTS = new Set<ProductSlug>([
@@ -27,6 +29,11 @@ const PRODUCT_DISPLAY_NAME: Record<ProductSlug, string> = {
 
 const STORED_PRICE_PRODUCTS = new Set<ProductSlug>(['single', 'crociera']);
 
+function normalizeLang(value: string | undefined): Lang {
+  if (value === 'en' || value === 'de') return value;
+  return 'it';
+}
+
 function resolveFixedSlugs(product: ProductSlug): string[] | null {
   if (product === 'puglia-completa') return [...ALL_GUIDES];
   if (product === 'bari-completa')   return [...BARI_GUIDES];
@@ -35,6 +42,10 @@ function resolveFixedSlugs(product: ProductSlug): string[] | null {
 }
 
 export const POST: APIRoute = async ({ request, cookies, url }) => {
+  if (!hasAllowedOrigin(request, url.origin)) {
+    return jsonError(403, 'Forbidden origin');
+  }
+
   let body: {
     product?: string;
     selectedSlugs?: string[];
@@ -48,7 +59,7 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   }
 
   const product = body.product as ProductSlug | undefined;
-  const lang = (body.lang === 'en' ? 'en' : 'it') as 'it' | 'en';
+  const lang = normalizeLang(body.lang);
 
   if (!product || !VALID_PRODUCTS.has(product)) {
     return jsonError(400, 'Missing or invalid product');
@@ -77,11 +88,13 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
 
   let partnerStripeAccount: string | null = null;
   let resolvedPartnerId: string | null = null;
+  let partnerCommissionRate = 0;
   if (partner_id_raw) {
     const partner = await getActivePartner(partner_id_raw);
     if (partner) {
       partnerStripeAccount = partner.data.stripe_account_id;
       resolvedPartnerId = partner.data.slug;
+      partnerCommissionRate = partner.data.commission_rate;
     }
   }
 
@@ -116,7 +129,7 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     payment_method_types: ['card'],
     line_items: [lineItem],
     customer_creation: 'if_required',
-    locale: lang === 'en' ? 'en' : 'it',
+    locale: lang,
     automatic_tax: { enabled: true },
     consent_collection: { terms_of_service: 'required' },
     allow_promotion_codes: true,
@@ -127,14 +140,14 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
       lang,
     },
     success_url: `${siteUrl}/thanks?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url:  `${siteUrl}${lang === 'en' ? '/en' : ''}/guide/${guide_slugs[0]}?cancelled=1`,
+    cancel_url:  `${siteUrl}${cancelPathFor(lang, product, guide_slugs[0])}`,
   };
 
   if (partnerStripeAccount) {
     sessionParams['payment_intent_data'] = {
       transfer_data: {
         destination: partnerStripeAccount,
-        amount: Math.floor(totalCents * 0.25),
+        amount: Math.floor(totalCents * partnerCommissionRate),
       },
     };
   }
@@ -143,7 +156,7 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create(sessionParams as Stripe.Checkout.SessionCreateParams);
     return new Response(JSON.stringify({ url: session.url }), {
-      headers: { 'Content-Type': 'application/json' },
+      headers: jsonHeaders(),
     });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'unknown error';
@@ -152,9 +165,25 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   }
 };
 
+function cancelPathFor(lang: Lang, product: ProductSlug, firstGuideSlug: string): string {
+  if (lang === 'de') {
+    return product === 'crociera' ? '/de/kreuzfahrt?cancelled=1' : '/de?cancelled=1';
+  }
+
+  const prefix = lang === 'en' ? '/en' : '';
+  return `${prefix}/guide/${firstGuideSlug}?cancelled=1`;
+}
+
 function jsonError(status: number, message: string): Response {
   return new Response(JSON.stringify({ error: message }), {
     status,
-    headers: { 'Content-Type': 'application/json' },
+    headers: jsonHeaders(),
   });
+}
+
+function jsonHeaders(): HeadersInit {
+  return {
+    'Content-Type': 'application/json',
+    'Cache-Control': 'private, no-store',
+  };
 }

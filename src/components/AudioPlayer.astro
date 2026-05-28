@@ -159,7 +159,7 @@ const labels = {
     retry: HTMLButtonElement;
     slug: string;
     token: string;
-    lang: 'it' | 'en';
+    lang: 'it' | 'en' | 'de';
     audioUrl?: string;
     fullPlayedTracked?: boolean;
   };
@@ -172,7 +172,7 @@ const labels = {
     return `${m}:${sec.toString().padStart(2, '0')}`;
   }
 
-  async function fetchAudioUrl(slug: string, token: string, lang: 'it' | 'en'): Promise<string> {
+  async function fetchAudioUrl(slug: string, token: string, lang: 'it' | 'en' | 'de'): Promise<string> {
     const res = await fetch(`/api/audio-url?guide=${encodeURIComponent(slug)}&token=${encodeURIComponent(token)}&lang=${lang}`);
     if (!res.ok) {
       const err = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));

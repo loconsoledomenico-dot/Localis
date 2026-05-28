@@ -80,7 +80,7 @@ const welcomeIt =
   </section>
 </Layout>
 
-<script define:vars={{ slug: partner.data.slug }}>
+<script is:inline define:vars={{ slug: partner.data.slug }}>
   try {
     document.cookie = `lg_partner=${slug}; path=/; max-age=${30*24*60*60}; SameSite=Lax`;
     localStorage.setItem('lg_partner', slug);

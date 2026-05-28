@@ -4,11 +4,17 @@ import { verifyAccessToken } from '../../lib/jwt';
 import { ensureWatermarkedVariant } from '../../lib/watermark';
 import { getSignedDownloadUrl } from '../../lib/r2';
 import { checkAndIncrement } from '../../lib/usage-tracker';
+import type { Lang } from '../../lib/i18n';
+
+function normalizeLang(value: string | null): Lang {
+  if (value === 'en' || value === 'de') return value;
+  return 'it';
+}
 
 export const GET: APIRoute = async ({ url }) => {
   const guide = url.searchParams.get('guide');
   const token = url.searchParams.get('token');
-  const lang = (url.searchParams.get('lang') === 'en' ? 'en' : 'it') as 'it' | 'en';
+  const lang = normalizeLang(url.searchParams.get('lang'));
 
   if (!guide || !token) {
     return jsonError(400, 'Missing guide or token');
@@ -53,6 +59,9 @@ export const GET: APIRoute = async ({ url }) => {
 function jsonError(status: number, message: string): Response {
   return new Response(JSON.stringify({ error: message }), {
     status,
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'private, no-store',
+    },
   });
 }

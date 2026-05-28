@@ -1,12 +1,44 @@
 import type { APIRoute } from 'astro';
 import { sendEmail } from '../../lib/resend';
+import { hasAllowedOrigin } from '../../lib/request-security';
 
-export const POST: APIRoute = async ({ request }) => {
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 60 * 60 * 1000;
+
+function isAllowed(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+
+  if (!entry || entry.resetAt < now) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return true;
+  }
+
+  if (entry.count >= RATE_LIMIT) return false;
+  entry.count += 1;
+  return true;
+}
+
+export const POST: APIRoute = async ({ request, clientAddress, url }) => {
+  if (!hasAllowedOrigin(request, url.origin)) {
+    return jsonResponse({ error: 'Forbidden origin' }, 403);
+  }
+
+  if (!isAllowed(clientAddress || 'unknown')) {
+    return jsonResponse({ error: 'Too many requests' }, 429);
+  }
+
   let body: Record<string, unknown>;
   try {
     body = await request.json();
   } catch {
-    return new Response(JSON.stringify({ error: 'Invalid JSON' }), { status: 400 });
+    return jsonResponse({ error: 'Invalid JSON' }, 400);
+  }
+
+  const website = String(body.website || '').trim();
+  if (website) {
+    return jsonResponse({ ok: true });
   }
 
   const businessName = String(body.business_name || '').trim().slice(0, 200);
@@ -17,7 +49,7 @@ export const POST: APIRoute = async ({ request }) => {
   const message = String(body.message || '').trim().slice(0, 2000);
 
   if (!businessName || !email || !email.includes('@')) {
-    return new Response(JSON.stringify({ error: 'Missing required fields' }), { status: 400 });
+    return jsonResponse({ error: 'Missing required fields' }, 400);
   }
 
   const html = `<!DOCTYPE html>
@@ -54,13 +86,21 @@ Messaggio: ${message}
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'unknown';
     console.error('[partner-signup]', msg);
-    return new Response(JSON.stringify({ error: 'Send failed' }), { status: 500 });
+    return jsonResponse({ error: 'Send failed' }, 500);
   }
 
-  return new Response(JSON.stringify({ ok: true }), {
-    headers: { 'Content-Type': 'application/json' },
-  });
+  return jsonResponse({ ok: true });
 };
+
+function jsonResponse(body: Record<string, unknown>, status = 200): Response {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'private, no-store',
+    },
+  });
+}
 
 function esc(s: string): string {
   return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));

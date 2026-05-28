@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
 const guides = defineCollection({
@@ -75,7 +76,7 @@ const partners = defineCollection({
     display_name: z.string(),
     type: z.enum(['hotel', 'bb', 'bar', 'restaurant', 'shop', 'other']),
     city: z.string(),
-    contact_email: z.string().email(),
+    contact_email: z.email(),
     stripe_account_id: z.string().regex(/^acct_/),
     commission_rate: z.number().min(0).max(0.5).default(0.25),
     created_at: z.date(),
@@ -92,7 +93,7 @@ const sourceEntry = z.object({
   title: z.string(),
   publisher: z.string().optional(),
   year: z.number().int().optional(),
-  url: z.string().url().optional(),
+  url: z.url().optional(),
 });
 
 const sources = defineCollection({

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { computeWatermarkKey, normalizeEmail } from '../../src/lib/watermark';
+import { computeWatermarkKey, normalizeEmail, sourceAudioKey } from '../../src/lib/watermark';
 
 describe('watermark module', () => {
   describe('normalizeEmail', () => {
@@ -31,6 +31,12 @@ describe('watermark module', () => {
       const a = computeWatermarkKey('a@test.com', 'bari-vecchia', 'it');
       const b = computeWatermarkKey('a@test.com', 'bari-vecchia', 'en');
       expect(a).not.toBe(b);
+    });
+
+    it('supports German audio variants', () => {
+      const key = computeWatermarkKey('a@test.com', 'bari-vecchia', 'de');
+      expect(key).toMatch(/^wm\/[a-f0-9]+\.mp3$/);
+      expect(sourceAudioKey('bari-vecchia', 'de')).toBe('guides/bari-vecchia/full-de.mp3');
     });
 
     it('returns key with wm/ prefix and .mp3 suffix', () => {

@@ -4,8 +4,15 @@ import { generateAccessToken } from '../../lib/jwt';
 import { sendEmail } from '../../lib/resend';
 import { renderAccessEmailIt } from '../../lib/emails/access-email-it';
 import { renderAccessEmailEn } from '../../lib/emails/access-email-en';
+import { renderAccessEmailDe } from '../../lib/emails/access-email-de';
 import { getCollection } from 'astro:content';
+import type { Lang } from '../../lib/i18n';
 import type Stripe from 'stripe';
+
+function normalizeLang(value: string | undefined): Lang {
+  if (value === 'en' || value === 'de') return value;
+  return 'it';
+}
 
 export const POST: APIRoute = async ({ request }) => {
   const sig = request.headers.get('stripe-signature');
@@ -52,7 +59,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
 
   const guide_slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
   const partner_id = meta.partner_id || null;
-  const lang = (meta.lang === 'en' ? 'en' : 'it') as 'it' | 'en';
+  const lang = normalizeLang(meta.lang);
 
   if (guide_slugs.length === 0) {
     throw new Error(`Session ${session.id} has no guide_slugs in metadata`);
@@ -67,20 +74,22 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
   });
 
   const siteUrl = (process.env.PUBLIC_SITE_URL || 'https://localis.guide').replace(/\/$/, '');
-  const accessUrl = `${siteUrl}/access/${token}`;
+  const accessUrl = `${siteUrl}/access/${token}?lang=${lang}`;
 
   // Look up guide titles in correct language
   const guides = await getCollection('guides');
   const guideTitles = guide_slugs.map((slug) => {
     const g = guides.find((g) => g.data.slug === slug);
     if (!g) return slug;
-    return lang === 'en' ? g.data.title_en : g.data.title_it;
+    return lang === 'it' ? g.data.title_it : g.data.title_en;
   });
 
   // Render email
-  const { subject, html, text } = lang === 'en'
-    ? renderAccessEmailEn({ accessUrl, guideTitles })
-    : renderAccessEmailIt({ accessUrl, guideTitles });
+  const { subject, html, text } = lang === 'it'
+    ? renderAccessEmailIt({ accessUrl, guideTitles })
+    : lang === 'de'
+      ? renderAccessEmailDe({ accessUrl, guideTitles })
+      : renderAccessEmailEn({ accessUrl, guideTitles });
 
   // Send via Resend
   await sendEmail({ to: email, subject, html, text });

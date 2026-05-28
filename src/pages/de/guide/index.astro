@@ -1,0 +1,40 @@
+---
+export const prerender = true;
+import Layout from '../../../components/Layout.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import GuideBuilder from '../../../components/GuideBuilder.astro';
+import { getCollection } from 'astro:content';
+
+const guides = (await getCollection('guides'))
+  .filter((g) => g.data.status === 'live')
+  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
+---
+<Layout
+  title="Guides - Localis · Apulien"
+  description="Alle Localis Audioguides für Bari, Valle d'Itria und Gargano. Narrative Audioguides, ohne App."
+  lang="de"
+>
+  <main>
+    <section class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
+      <header class="mb-2xl max-w-[56ch]">
+        <p class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent mb-md">
+          Alle Guides
+        </p>
+        <h1 class="font-display text-ink leading-[1.05] mb-md text-[clamp(2rem,5vw,3.2rem)]">
+          Apulien, eine Geschichte nach der anderen.
+        </h1>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
+          Bari, Valle d'Itria, Gargano. Die deutschen Seiten nutzen aktuell die englischen Guide-Titel als Fallback; die Audioausgabe bleibt sprachabhängig.
+        </p>
+      </header>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+        {guides.map((guide, index) => (
+          <GuideCard guide={guide} lang="de" index={index} />
+        ))}
+      </div>
+    </section>
+
+    <GuideBuilder lang="de" />
+  </main>
+</Layout>

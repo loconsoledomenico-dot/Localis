@@ -6,7 +6,6 @@ import {
   GARGANO_GUIDES,
   CROCIERA_GUIDES,
   PRODUCT_PRICE_CENTS,
-  FREE_CHOICE_TIERS,
   getTierForCount,
   getNextTier,
   validateSelectedSlugs,
@@ -42,6 +41,7 @@ describe('PRODUCT_PRICE_CENTS', () => {
   it('sestina is 1999', () => expect(PRODUCT_PRICE_CENTS.sestina).toBe(1999));
   it('puglia-completa is 2999', () => expect(PRODUCT_PRICE_CENTS['puglia-completa']).toBe(2999));
   it('bari-completa is 1499', () => expect(PRODUCT_PRICE_CENTS['bari-completa']).toBe(1499));
+  it('crociera is 799', () => expect(PRODUCT_PRICE_CENTS.crociera).toBe(799));
 });
 
 describe('getTierForCount', () => {
@@ -110,6 +110,14 @@ describe('validateSelectedSlugs', () => {
   it('bari-completa + non-Bari slug throws', () => {
     const mixed = [...bariSlugs.slice(0, 5), 'alberobello'];
     expect(() => validateSelectedSlugs('bari-completa', mixed)).toThrow();
+  });
+
+  it('crociera + cruise guide pair passes', () => {
+    expect(() => validateSelectedSlugs('crociera', [...CROCIERA_GUIDES])).not.toThrow();
+  });
+
+  it('crociera + one slug throws', () => {
+    expect(() => validateSelectedSlugs('crociera', ['bari-vecchia'])).toThrow('crociera requires exactly 2');
   });
 });
 

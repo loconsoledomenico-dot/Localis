@@ -11,7 +11,14 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://localis.guide',
   output: 'server',
-  adapter: netlify(),
+  adapter: netlify({
+    excludeFiles: [
+      './public/audio/guides/**',
+      './public/video/**',
+      './chunks/**',
+      './scripts/*.mp3',
+    ],
+  }),
 
   vite: {
     plugins: [tailwindcss()],

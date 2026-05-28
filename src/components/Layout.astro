@@ -22,8 +22,11 @@ const currentPath = Astro.url.pathname;
 const langUrls = allLangUrls(currentPath);
 const itUrl = langUrls.it;
 const enUrl = langUrls.en;
+const deUrl = langUrls.de;
 const SITE = 'https://localis.guide';
 const canonical = `${SITE}${currentPath}`;
+const ogLocale = lang === 'en' ? 'en_US' : lang === 'de' ? 'de_DE' : 'it_IT';
+const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale !== ogLocale);
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -34,6 +37,7 @@ const canonical = `${SITE}${currentPath}`;
   <link rel="canonical" href={canonical} />
   <link rel="alternate" hreflang="it" href={`${SITE}${itUrl}`} />
   <link rel="alternate" hreflang="en" href={`${SITE}${enUrl}`} />
+  <link rel="alternate" hreflang="de" href={`${SITE}${deUrl}`} />
   <link rel="alternate" hreflang="x-default" href={`${SITE}${itUrl}`} />
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
@@ -42,8 +46,8 @@ const canonical = `${SITE}${currentPath}`;
   <meta property="og:title" content={title} />
   {description && <meta property="og:description" content={description} />}
   <meta property="og:url" content={canonical} />
-  <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'it_IT'} />
-  <meta property="og:locale:alternate" content={lang === 'en' ? 'it_IT' : 'en_US'} />
+  <meta property="og:locale" content={ogLocale} />
+  {alternateOgLocales.map((locale) => <meta property="og:locale:alternate" content={locale} />)}
   <meta property="og:site_name" content="Localis" />
   <meta property="og:image" content={ogImage ? `${SITE}${ogImage}` : `${SITE}/og-default.jpg`} />
 

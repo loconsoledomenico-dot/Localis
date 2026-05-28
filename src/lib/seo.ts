@@ -1,3 +1,5 @@
+import type { Lang } from './i18n';
+
 export function organizationLD() {
   return {
     '@context': 'https://schema.org',
@@ -19,14 +21,14 @@ export interface GuideLDInput {
   description: string;
   durationSeconds: number;
   audioUrl?: string;
-  language: 'it' | 'en';
+  language: Lang;
   priceCents: number;
   coords?: { lat: number; lng: number };
   cityName?: string;
 }
 
 export function audioObjectLD(g: GuideLDInput) {
-  const url = `https://localis.guide${g.language === 'en' ? '/en' : ''}/guide/${g.slug}`;
+  const url = `https://localis.guide${g.language === 'en' ? '/en' : g.language === 'de' ? '/de' : ''}/guide/${g.slug}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'AudioObject',
@@ -54,7 +56,7 @@ export interface ProductLDInput {
   description: string;
   cover: string;
   priceCents: number;
-  language: 'it' | 'en' | 'de';
+  language: Lang;
 }
 
 export function productLD(g: ProductLDInput) {

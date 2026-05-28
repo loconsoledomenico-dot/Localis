@@ -4,8 +4,6 @@ import {
   BARI_GUIDES,
   VALLE_GUIDES,
   GARGANO_GUIDES,
-  PRODUCT_PRICE_CENTS,
-  FREE_CHOICE_TIERS,
 } from '../lib/stripe-prices';
 import { getCollection } from 'astro:content';
 
@@ -28,7 +26,7 @@ const guideMap = new Map<string, GuideCard>();
 for (const entry of allEntries) {
   const d = entry.data;
   const slug = (d.slug ?? entry.id) as string;
-  const isIt = lang !== 'en';
+  const isIt = lang === 'it';
   guideMap.set(slug, {
     slug,
     title:    isIt ? (d.title_it as string)    : ((d.title_en ?? d.title_it) as string),
@@ -275,7 +273,7 @@ const ZONE_ORDER = [
   const statusText = document.getElementById('builder-status-text') as HTMLElement;
   const upsell = document.getElementById('builder-upsell') as HTMLElement;
   const lang = btn?.dataset.lang ?? 'it';
-  const it = lang !== 'en';
+  const it = lang === 'it';
 
   if (!btn) throw new Error('[GuideBuilder] checkout btn not found');
 

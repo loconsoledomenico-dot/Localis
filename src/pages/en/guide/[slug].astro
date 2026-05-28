@@ -7,7 +7,7 @@ import ChapterList from '../../../components/ChapterList.astro';
 import StartMap from '../../../components/StartMap.astro';
 import NarratorCard from '../../../components/NarratorCard.astro';
 import StructuredData from '../../../components/StructuredData.astro';
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
 import { audioObjectLD, touristAttractionLD, productLD } from '../../../lib/seo';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
@@ -37,10 +37,8 @@ export async function getStaticPaths() {
 
 const { guide } = Astro.props;
 const data = guide.data;
-const { Content } = await render(guide);
 
 const durationLabel = formatDuration(data.duration_seconds_en ?? data.duration_seconds);
-const trailerSrc = data.audio_trailer_path_en ?? data.audio_trailer_path;
 
 const ld: object[] = [
   audioObjectLD({

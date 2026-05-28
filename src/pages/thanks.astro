@@ -2,6 +2,12 @@
 import Layout from '../components/Layout.astro';
 import { getStripe } from '../lib/stripe';
 import { generateAccessToken } from '../lib/jwt';
+import type { Lang } from '../lib/i18n';
+
+function normalizeLang(value: string | undefined): Lang {
+  if (value === 'en' || value === 'de') return value;
+  return 'it';
+}
 
 const sessionId = Astro.url.searchParams.get('session_id');
 let directAccessUrl: string | null = null;
@@ -14,6 +20,7 @@ if (sessionId) {
     const email = session.customer_email || session.customer_details?.email;
     const meta = session.metadata || {};
     const guide_slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
+    const lang = normalizeLang(meta.lang);
 
     if (email && guide_slugs.length > 0 && session.payment_status === 'paid') {
       const token = generateAccessToken({
@@ -22,7 +29,7 @@ if (sessionId) {
         stripe_session_id: session.id,
         partner_id: meta.partner_id || null,
       });
-      directAccessUrl = `/access/${token}`;
+      directAccessUrl = `/access/${token}?lang=${lang}`;
       buyerEmail = email;
     }
   } catch (err) {

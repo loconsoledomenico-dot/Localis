@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { r2ObjectExists, getSignedDownloadUrl, uploadToR2 } from './r2';
+import type { Lang } from './i18n';
 
 /**
  * Normalize email for consistent hashing.
@@ -11,7 +12,7 @@ export function normalizeEmail(email: string): string {
 /**
  * Compute deterministic R2 key for a buyer's watermarked variant.
  */
-export function computeWatermarkKey(email: string, slug: string, lang: 'it' | 'en'): string {
+export function computeWatermarkKey(email: string, slug: string, lang: Lang): string {
   const normalized = normalizeEmail(email);
   const hash = createHash('sha256').update(`${normalized}|${slug}|${lang}`).digest('hex');
   return `wm/${hash}.mp3`;
@@ -20,7 +21,7 @@ export function computeWatermarkKey(email: string, slug: string, lang: 'it' | 'e
 /**
  * Source audio key for a given guide+language.
  */
-export function sourceAudioKey(slug: string, lang: 'it' | 'en'): string {
+export function sourceAudioKey(slug: string, lang: Lang): string {
   return `guides/${slug}/full-${lang}.mp3`;
 }
 
@@ -34,7 +35,7 @@ export function sourceAudioKey(slug: string, lang: 'it' | 'en'): string {
 export async function ensureWatermarkedVariant(
   email: string,
   slug: string,
-  lang: 'it' | 'en',
+  lang: Lang,
 ): Promise<string> {
   const wmKey = computeWatermarkKey(email, slug, lang);
   const srcKey = sourceAudioKey(slug, lang);

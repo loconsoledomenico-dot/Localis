@@ -23,10 +23,6 @@ const PUBLIC = join(ROOT, 'public');
 const OUT    = join(PUBLIC, 'og');
 
 // ─── Palette (hex → RGB) ──────────────────────────────────────────────────────
-const CREAM  = { r: 250, g: 247, b: 242 }; // #FAF7F2
-const INK    = { r: 31,  g: 24,  b: 15  }; // ~#1F180F
-const ACCENT = { r: 180, g: 110, b: 60  }; // terracotta warm
-
 // ─── Dimensioni ───────────────────────────────────────────────────────────────
 const W = 1200;
 const H = 630;
@@ -75,7 +71,7 @@ function esc(str) {
  * - "Localis" logo (in basso a sinistra)
  * - linea accent sotto il titolo
  */
-function buildOverlaySvg(title_it, chapters, slug) {
+function buildOverlaySvg(title_it, chapters) {
   const title      = esc(truncate(title_it, 42));
   const chapLabel  = esc(`${chapters} capitoli`);
   const logoText   = 'Localis';
@@ -190,7 +186,7 @@ async function main() {
     }
 
     try {
-      const svgBuffer = Buffer.from(buildOverlaySvg(title_it, chapters, slug));
+      const svgBuffer = Buffer.from(buildOverlaySvg(title_it, chapters));
 
       await sharp(coverPath)
         .resize(W, H, { fit: 'cover', position: 'center' })

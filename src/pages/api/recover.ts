@@ -5,6 +5,8 @@ import { sendEmail } from '../../lib/resend';
 import { renderAccessEmailIt } from '../../lib/emails/access-email-it';
 import { renderAccessEmailEn } from '../../lib/emails/access-email-en';
 import { getCollection } from 'astro:content';
+import type Stripe from 'stripe';
+import { hasAllowedOrigin } from '../../lib/request-security';
 
 // Simple in-memory rate limit (resets on cold start)
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
@@ -23,7 +25,11 @@ function rateLimit(ip: string): boolean {
   return true;
 }
 
-export const POST: APIRoute = async ({ request, clientAddress }) => {
+export const POST: APIRoute = async ({ request, clientAddress, url }) => {
+  if (!hasAllowedOrigin(request, url.origin)) {
+    return jsonError(403, 'Forbidden origin');
+  }
+
   const ip = clientAddress || 'unknown';
   if (!rateLimit(ip)) {
     return jsonError(429, 'Too many requests. Try again in 1 hour.');
@@ -43,27 +49,41 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     return jsonError(400, 'Invalid email');
   }
 
-  // Look up purchases by listing recent paid sessions, filtering client-side by email
+  // Stripe Checkout does not offer a direct customer_email list filter here,
+  // so paginate instead of only checking the latest 100 sessions.
   const allGuideSlugs: string[] = [];
   let lastSessionId: string | null = null;
   let lastPartnerId: string | null = null;
 
   try {
     const stripe = getStripe();
-    const sessions = await stripe.checkout.sessions.list({ limit: 100 });
+    let startingAfter: string | undefined;
+    let hasMore = true;
+    let pagesScanned = 0;
 
-    for (const session of sessions.data) {
-      if (session.payment_status !== 'paid') continue;
-      const sessionEmail = (session.customer_email || session.customer_details?.email || '').toLowerCase();
-      if (sessionEmail !== email) continue;
+    while (hasMore && pagesScanned < 20) {
+      const params: Stripe.Checkout.SessionListParams = { limit: 100 };
+      if (startingAfter) params.starting_after = startingAfter;
 
-      const meta = session.metadata || {};
-      const slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
-      for (const s of slugs) {
-        if (!allGuideSlugs.includes(s)) allGuideSlugs.push(s);
+      const sessions = await stripe.checkout.sessions.list(params);
+      for (const session of sessions.data) {
+        if (session.payment_status !== 'paid') continue;
+        const sessionEmail = (session.customer_email || session.customer_details?.email || '').toLowerCase();
+        if (sessionEmail !== email) continue;
+
+        const meta = session.metadata || {};
+        const slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
+        for (const s of slugs) {
+          if (!allGuideSlugs.includes(s)) allGuideSlugs.push(s);
+        }
+        lastSessionId = session.id;
+        lastPartnerId = meta.partner_id || null;
       }
-      lastSessionId = session.id;
-      lastPartnerId = meta.partner_id || null;
+
+      hasMore = sessions.has_more;
+      startingAfter = sessions.data.at(-1)?.id;
+      pagesScanned++;
+      if (!startingAfter) break;
     }
   } catch (err: unknown) {
     console.error('[recover] Stripe lookup error', err);
@@ -72,7 +92,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   if (allGuideSlugs.length === 0) {
     // Don't leak whether email exists; respond with generic success
     return new Response(JSON.stringify({ ok: true }), {
-      headers: { 'Content-Type': 'application/json' },
+      headers: jsonHeaders(),
     });
   }
 
@@ -102,13 +122,20 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   await sendEmail({ to: email, subject, html, text });
 
   return new Response(JSON.stringify({ ok: true }), {
-    headers: { 'Content-Type': 'application/json' },
+    headers: jsonHeaders(),
   });
 };
 
 function jsonError(status: number, message: string): Response {
   return new Response(JSON.stringify({ error: message }), {
     status,
-    headers: { 'Content-Type': 'application/json' },
+    headers: jsonHeaders(),
   });
+}
+
+function jsonHeaders(): HeadersInit {
+  return {
+    'Content-Type': 'application/json',
+    'Cache-Control': 'private, no-store',
+  };
 }

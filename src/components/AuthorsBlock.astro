@@ -144,7 +144,6 @@ function bioFor(a: Author): string {
         const initials = deriveInitials(a);
         const bio = bioFor(a);
         const isPlaceholderName = !a.name;
-        const isPlaceholderPhoto = !a.photo;
 
         return (
           <li class="author-cell" style={`--idx:${i}`}>

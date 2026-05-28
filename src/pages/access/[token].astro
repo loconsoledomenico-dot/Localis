@@ -4,6 +4,7 @@ import Eyebrow from '../../components/Eyebrow.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import { verifyAccessToken } from '../../lib/jwt';
 import { getCollection } from 'astro:content';
+import type { Lang } from '../../lib/i18n';
 
 const { token } = Astro.params;
 
@@ -22,24 +23,53 @@ const userGuides = decoded.guide_slugs
   .map((slug) => allGuides.find((g) => g.data.slug === slug))
   .filter((g): g is NonNullable<typeof g> => Boolean(g));
 
-const lang: 'it' | 'en' = 'it';
+const requestedLang = Astro.url.searchParams.get('lang');
+const lang: Lang = requestedLang === 'en' || requestedLang === 'de' ? requestedLang : 'it';
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+Astro.response.headers.set('Cache-Control', 'private, no-store');
+
+const labels = lang === 'it'
+  ? {
+      title: 'Le tue guide',
+      eyebrow: 'Accesso permanente',
+      intro: 'Salva questa pagina nei preferiti. Resta solo tua, vale per sempre. Funziona offline dopo il primo play su ogni dispositivo.',
+      phone: 'Cambiato telefono? Riapri questo link.',
+      recover: 'Smarrita email?',
+      recoverLink: 'Recupera l\'accesso',
+    }
+  : lang === 'de'
+    ? {
+        title: 'Deine Guides',
+        eyebrow: 'Dauerhafter Zugang',
+        intro: 'Speichere diese Seite in deinen Lesezeichen. Sie gehoert dir und bleibt gueltig. Nach dem ersten Abspielen funktioniert sie offline auf jedem Geraet.',
+        phone: 'Neues Smartphone? Oeffne diesen Link erneut.',
+        recover: 'E-Mail verloren?',
+        recoverLink: 'Zugang wiederherstellen',
+      }
+    : {
+        title: 'Your guides',
+        eyebrow: 'Permanent access',
+        intro: 'Bookmark this page. It is yours and stays valid. It works offline after the first play on each device.',
+        phone: 'Changed phone? Open this link again.',
+        recover: 'Lost the email?',
+        recoverLink: 'Recover access',
+      };
 ---
-<Layout title="Le tue guide · Localis" description="" lang={lang}>
+<Layout title={`${labels.title} - Localis`} description="" lang={lang}>
   <main class="max-w-wrap mx-auto px-md py-2xl">
     <header class="mb-2xl">
-      <Eyebrow class="mb-md">Accesso permanente · {decoded.email}</Eyebrow>
-      <h1 class="font-display text-4xl text-ink mb-md">Le tue guide</h1>
+      <Eyebrow class="mb-md">{labels.eyebrow} - {decoded.email}</Eyebrow>
+      <h1 class="font-display text-4xl text-ink mb-md">{labels.title}</h1>
       <p class="text-base text-ink-muted max-w-prose">
-        Salva questa pagina nei preferiti — è solo tua, vale per sempre.
-        Funziona offline dopo il primo play su ogni dispositivo.
+        {labels.intro}
       </p>
     </header>
 
     <div class="flex flex-col gap-2xl">
       {userGuides.map((guide) => (
         <section>
-          <h2 class="font-display text-2xl text-ink mb-xs">{guide.data.title_it}</h2>
-          <p class="text-sm text-ink-muted mb-md">{guide.data.subtitle_it}</p>
+          <h2 class="font-display text-2xl text-ink mb-xs">{lang === 'it' ? guide.data.title_it : guide.data.title_en}</h2>
+          <p class="text-sm text-ink-muted mb-md">{lang === 'it' ? guide.data.subtitle_it : guide.data.subtitle_en}</p>
           <AudioPlayer guide={guide.data} token={token} lang={lang} />
         </section>
       ))}
@@ -47,10 +77,10 @@ const lang: 'it' | 'en' = 'it';
 
     <footer class="mt-3xl pt-lg border-t border-border text-center">
       <p class="text-sm text-ink-muted mb-xs">
-        Cambiato telefono? Riapri questo link.
+        {labels.phone}
       </p>
       <p class="text-sm text-ink-muted">
-        Smarrita email? <a href="/recover" class="text-link hover:text-link-pressed">Recupera l'accesso</a>.
+        {labels.recover} <a href="/recover" class="text-link hover:text-link-pressed">{labels.recoverLink}</a>.
       </p>
     </footer>
   </main>

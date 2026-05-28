@@ -50,6 +50,11 @@ playwright/.cache/
 
 # Audio production output — source of truth lives in Cloudflare R2
 r2_audio/
+chunks/
+public/audio/guides/
+public/audio/guides/backup-r2/
+scripts/*.mp3
+public/video/
 
 # Raw source texts at repo root (final versions live in src/content/scripts/)
 /bari-vecchia-guida-completa.txt
