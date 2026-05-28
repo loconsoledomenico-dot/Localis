@@ -13,21 +13,21 @@ const { lang, currentPath = '/' } = Astro.props;
 const masthead_l = lang === 'de' ? 'Ausgabe 01 — Apulien' : lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
 const masthead_r = lang === 'de' ? 'Veröffentlichte Audioguides · Apulien' : lang === 'it' ? 'Guide pubblicate · Puglia' : 'Published guides · Puglia';
 
-const heading1a = lang === 'de' ? 'Audioguides, geschrieben in Apulien.' : lang === 'it' ? 'Audioguide scritte in Puglia.' : 'Audio guides written in Puglia.';
+const heading1a = lang === 'de' ? 'Entdecke Apulien mit Audioguides, die von echten Kennern geschrieben wurden.' : lang === 'it' ? 'Scopri la Puglia con audioguide scritte da chi la conosce davvero.' : 'Discover Puglia with audio guides written by those who truly know it.';
 const heading1b = '';
 
 const lede1 = lang === 'de'
-  ? 'Überprüfbare Archivquellen.'
+  ? 'Wahre Geschichten, überprüfbare Quellen und Routen zum Hören – wann immer du willst.'
   : lang === 'it'
-  ? 'Fonti d\'archivio verificabili.'
-  : 'Verifiable archive sources.';
+  ? 'Storie vere, fonti verificabili e percorsi da ascoltare quando vuoi.'
+  : 'True stories, verifiable sources and routes to listen to whenever you want.';
 const lede2 = lang === 'de'
-  ? 'Vor Ort gesammelte Geschichten.'
+  ? 'Keine App nötig, sofortiges Abspielen auf deinem Handy.'
   : lang === 'it'
-  ? 'Storie raccolte sul territorio.'
-  : 'Stories gathered on the ground.';
+  ? 'Niente app da installare, ascolto immediato dal tuo telefono.'
+  : 'No app to install, instant listening from your phone.';
 
-const ctaPrimary = lang === 'de' ? 'Guides ansehen' : lang === 'it' ? 'Vedi le guide' : 'See the guides';
+const ctaPrimary = lang === 'de' ? 'Guides kaufen' : lang === 'it' ? 'Acquista le guide' : 'Buy the guides';
 const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
 
 interface Pill {
@@ -133,6 +133,24 @@ const altText = lang === 'de'
         </a>
       )}
     </div>
+
+    <ul class="hero-microcopy">
+      {lang === 'it' && <>
+        <li>~30 min per guida</li>
+        <li>Disponibile subito</li>
+        <li>Rimborso 1-click entro 24h</li>
+      </>}
+      {lang === 'en' && <>
+        <li>~30 min per guide</li>
+        <li>Available instantly</li>
+        <li>1-click refund within 24h</li>
+      </>}
+      {lang === 'de' && <>
+        <li>~30 Min. pro Guide</li>
+        <li>Sofort verfügbar</li>
+        <li>1-Klick-Rückgabe innerhalb 24h</li>
+      </>}
+    </ul>
 
     <HeroAudioSample lang={lang} />
 
@@ -261,6 +279,29 @@ const altText = lang === 'de'
     }
   }
 
+  /* Microcopy */
+  .hero-microcopy {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-sm) 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs) var(--spacing-md);
+  }
+  .hero-microcopy li {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--color-ink-subtle);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .hero-microcopy li::before {
+    content: '✓';
+    color: var(--color-accent);
+    font-size: 0.7rem;
+  }
+
   /* Pills */
   .hero-pills {
     list-style: none;
@@ -321,6 +362,7 @@ const altText = lang === 'de'
   .hero-h1-b { animation-delay: 0.55s; }
   .hero-lede,
   .hero-actions,
+  .hero-microcopy,
   .hero-pills {
     opacity: 0;
     transform: translateY(10px);
@@ -328,6 +370,7 @@ const altText = lang === 'de'
   }
   .hero-lede     { animation-delay: 0.75s; }
   .hero-actions  { animation-delay: 0.9s; }
+  .hero-microcopy { animation-delay: 0.95s; }
   .hero-pills    { animation-delay: 1.05s; }
 
   @keyframes ruleDraw { to { transform: scaleX(1); } }
