@@ -167,7 +167,7 @@ const valleItria: GuideEntry[] = [
         Non un catalogo. Una collezione di voci: baresi, martinesi, vignaioli, discendenti. Ogni guida è scritta da chi quei posti li vive.
       </p>
       <p class="font-body text-sm leading-relaxed text-ink-muted mt-sm">
-        Apri il link, premi play, segui i capitoli sul posto: ogni guida funziona come un tour autoguidato, ma con storie e fonti verificabili.
+        Apri il link e ascolta quando vuoi: sul posto, sul divano prima di partire o al ritorno. Ogni guida è un racconto del luogo, con storie, memoria locale e fonti verificabili.
       </p>
     </header>
 
@@ -290,7 +290,9 @@ const valleItria: GuideEntry[] = [
   }
 
   .guide-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
     color: inherit;
     border-top: 1px solid var(--color-ink);
@@ -308,7 +310,7 @@ const valleItria: GuideEntry[] = [
     display: block;
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    height: clamp(16rem, 24vw, 21rem);
     background: var(--color-surface-elev);
     overflow: hidden;
     border-radius: var(--radius-md);
