@@ -378,12 +378,44 @@ const altText = lang === 'de'
   @keyframes heroFade { to { opacity: 1; } }
 
   @media (max-width: 768px) {
+    /* animations */
     .hero-h1-a { animation-delay: 0.1s; animation-duration: 0.5s; }
     .hero-h1-b { animation-delay: 0.25s; animation-duration: 0.5s; }
     .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
     .hero-actions { animation-delay: 0.45s; animation-duration: 0.4s; }
     .hero-pills { animation-delay: 0.55s; animation-duration: 0.4s; }
     .hero-masthead > span { animation-delay: 0.3s; }
+
+    /* legibility */
+    .hero-lede {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-top: var(--spacing-lg);
+    }
+    .hero-actions {
+      margin-top: var(--spacing-xl);
+      gap: var(--spacing-md);
+    }
+    .hero-microcopy {
+      margin-top: var(--spacing-md);
+      gap: var(--spacing-sm) var(--spacing-lg);
+    }
+    .hero-microcopy li {
+      font-size: 0.9rem;
+    }
+    .hero-pill-label {
+      font-size: 1rem;
+    }
+    .hero-pill-tail {
+      font-size: 0.875rem;
+    }
+    .hero-pills {
+      margin-top: var(--spacing-xl);
+      gap: var(--spacing-md);
+    }
+    .hero-pill {
+      gap: var(--spacing-sm);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
