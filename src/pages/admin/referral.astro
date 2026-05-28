@@ -9,8 +9,11 @@ Astro.response.headers.set('Cache-Control', 'private, no-store');
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
 
 if (requestUrl.searchParams.has('token')) {
-  requestUrl.searchParams.delete('token');
-  return Astro.redirect(requestUrl.toString(), 303);
+  const cleanParams = new URLSearchParams(requestUrl.searchParams);
+  cleanParams.delete('token');
+  let cleanPath = requestUrl.pathname;
+  if (cleanParams.size > 0) cleanPath += `?${cleanParams.toString()}`;
+  return Astro.redirect(cleanPath, 303);
 }
 
 if (Astro.request.method === 'POST') {
