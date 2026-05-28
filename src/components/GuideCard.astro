@@ -24,7 +24,7 @@ const indexLabel = String(index + 1).padStart(2, '0');
 ---
 <a
   href={href}
-  class={`group relative flex flex-col bg-surface-elev border border-border rounded-lg overflow-hidden transition-colors duration-med hover:border-accent/40 ${isSoon ? 'opacity-60 pointer-events-none' : ''}`}
+  class={`guide-card-link group relative flex flex-col bg-surface-elev border border-border rounded-lg overflow-hidden transition-colors duration-med hover:border-accent/40 ${isSoon ? 'opacity-60 pointer-events-none' : ''}`}
   aria-label={title}
   aria-disabled={isSoon}
 >
@@ -52,11 +52,11 @@ const indexLabel = String(index + 1).padStart(2, '0');
       <span>{lang === 'de' ? `${chapterCount} Kap.` : `${chapterCount} cap.`}</span>
     </div>
 
-    <h3 class="font-display text-2xl font-normal leading-tight text-ink">
+    <h3 class="guide-card-title font-display text-2xl font-normal leading-tight text-ink">
       {title}
     </h3>
 
-    <p class="text-sm text-ink-muted leading-relaxed">{subtitle}</p>
+    <p class="guide-card-subtitle text-sm text-ink-muted leading-relaxed">{subtitle}</p>
 
     <p class="text-[0.72rem] text-ink-subtle leading-none mt-auto italic">
       {lang === 'it' ? 'Voce sintetizzata · Testo scritto da Domenico e Luigi Loconsole' : lang === 'de' ? 'Synthetische Stimme · Text von Domenico und Luigi Loconsole' : 'Synthetic voice · Written by Domenico & Luigi Loconsole'}
@@ -72,3 +72,27 @@ const indexLabel = String(index + 1).padStart(2, '0');
     </div>
   </div>
 </a>
+
+<style>
+  .guide-card-link {
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .guide-card-title,
+  .guide-card-subtitle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .guide-card-title {
+    -webkit-line-clamp: 3;
+    min-height: calc(1.25em * 3);
+  }
+
+  .guide-card-subtitle {
+    -webkit-line-clamp: 3;
+    min-height: calc(1.6em * 3);
+  }
+</style>
