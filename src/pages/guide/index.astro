@@ -184,8 +184,8 @@ const valleItria: GuideEntry[] = [
         {bariGuides.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
             <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
-              <figure class="guide-photo m-0">
-                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+              <figure class="guide-photo m-0" style="height:clamp(16rem,24vw,21rem);">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
                 <span class="guide-scrim" aria-hidden="true">
@@ -217,8 +217,8 @@ const valleItria: GuideEntry[] = [
         {valleItria.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
             <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
-              <figure class="guide-photo m-0">
-                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+              <figure class="guide-photo m-0" style="height:clamp(16rem,24vw,21rem);">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
                 <span class="guide-scrim" aria-hidden="true">
@@ -256,8 +256,8 @@ const valleItria: GuideEntry[] = [
         ].map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
             <a href={`/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
-              <figure class="guide-photo m-0">
-                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
+              <figure class="guide-photo m-0" style="height:clamp(16rem,24vw,21rem);">
+                <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 {g.price && <span class="guide-price" aria-hidden="true">{g.price}</span>}
                 <span class="guide-scrim" aria-hidden="true">
