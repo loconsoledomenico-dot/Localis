@@ -8,7 +8,8 @@ export interface Props {
 }
 
 const { src, label, lang } = Astro.props;
-const playLabel = lang === 'it' ? 'Riproduci anteprima' : 'Play preview';
+const playLabel = lang === 'it' ? 'Riproduci anteprima' : lang === 'de' ? 'Hörprobe abspielen' : 'Play preview';
+const progressLabel = lang === 'it' ? 'Avanzamento trailer' : lang === 'de' ? 'Fortschritt der Hörprobe' : 'Trailer progress';
 ---
 <div class="trailer-player" data-src={src}>
   <div class="trailer-row">
@@ -36,7 +37,7 @@ const playLabel = lang === 'it' ? 'Riproduci anteprima' : 'Play preview';
           <span class="trailer-duration">--:--</span>
         </span>
       </div>
-      <div class="trailer-progress" role="progressbar" aria-label="Trailer progress" tabindex="0">
+      <div class="trailer-progress" role="progressbar" aria-label={progressLabel} tabindex="0">
         <div class="trailer-fill"></div>
       </div>
     </div>

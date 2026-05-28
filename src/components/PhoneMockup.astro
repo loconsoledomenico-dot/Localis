@@ -34,11 +34,13 @@ const {
   class: className = '',
 } = Astro.props;
 
-const fallbackEyebrow = lang === 'it' ? 'Cap. 03 · Bari Vecchia' : 'Ch. 03 · Bari Vecchia';
-const fallbackTitle = lang === 'it' ? 'Strada' : 'A street';
-const fallbackItalic = lang === 'it' ? 'delle Crociate' : 'of the Crusades';
+const fallbackEyebrow = lang === 'it' ? 'Cap. 03 · Bari Vecchia' : lang === 'de' ? 'Kap. 03 · Bari Vecchia' : 'Ch. 03 · Bari Vecchia';
+const fallbackTitle = lang === 'it' ? 'Strada' : lang === 'de' ? 'Die Straße' : 'A street';
+const fallbackItalic = lang === 'it' ? 'delle Crociate' : lang === 'de' ? 'delle Crociate' : 'of the Crusades';
 const fallbackCoverAlt = lang === 'it'
   ? 'Vicolo del Borgo Antico di Bari, pietra calcarea consumata'
+  : lang === 'de'
+  ? 'Gasse in der Altstadt von Bari mit verwitterten Kalksteinwänden'
   : 'Alley in Bari old town, weathered limestone walls';
 
 const eyebrow = chapterEyebrow ?? fallbackEyebrow;
@@ -46,16 +48,21 @@ const title = chapterTitle ?? fallbackTitle;
 const italic = chapterItalic ?? fallbackItalic;
 const altText = coverAlt ?? fallbackCoverAlt;
 
-const nowLabel = lang === 'it' ? 'In ascolto' : 'Now playing';
-const tracklistLabel = lang === 'it' ? 'Capitolo successivo' : 'Next chapter';
-const nextChapter = lang === 'it' ? '04 · Cattedrale di San Sabino' : '04 · San Sabino Cathedral';
+const nowLabel = lang === 'it' ? 'In ascolto' : lang === 'de' ? 'Wird abgespielt' : 'Now playing';
+const tracklistLabel = lang === 'it' ? 'Capitolo successivo' : lang === 'de' ? 'Nächstes Kapitel' : 'Next chapter';
+const nextChapter = lang === 'it' ? '04 · Cattedrale di San Sabino' : lang === 'de' ? '04 · Kathedrale San Sabino' : '04 · San Sabino Cathedral';
+const editionLabel = lang === 'it' ? 'Edizione · Bari' : lang === 'de' ? 'Ausgabe · Bari' : 'Edition · Bari';
+const deviceAriaLabel = lang === 'it' ? 'Localis su smartphone — anteprima interfaccia' : lang === 'de' ? 'Localis auf dem Smartphone — Vorschau der Oberfläche' : 'Localis on smartphone — interface preview';
+const progressAriaLabel = lang === 'it' ? 'Avanzamento capitolo' : lang === 'de' ? 'Kapitel-Fortschritt' : 'Chapter progress';
+const backAriaLabel = lang === 'it' ? 'Indietro 15s' : lang === 'de' ? '15 Sekunden zurück' : 'Back 15 seconds';
+const pauseAriaLabel = lang === 'it' ? 'Pausa' : lang === 'de' ? 'Pause' : 'Pause';
 
 // Static example time — purely decorative inside the device
 const elapsedTime = '2:14';
 const totalTime = '8:52';
 const progressPct = 26;
 ---
-<div class={`phone-mockup ${tilt ? 'phone-tilt' : ''} ${className}`} aria-label="Localis su smartphone — anteprima interfaccia" role="img">
+<div class={`phone-mockup ${tilt ? 'phone-tilt' : ''} ${className}`} aria-label={deviceAriaLabel} role="img">
   <!-- Outer frame: matte black device silhouette, no glow, no shadow -->
   <div class="phone-frame">
     <!-- Side button hints (subtle) -->
@@ -83,7 +90,7 @@ const progressPct = 26;
         <!-- App header — minimal Localis brand -->
         <div class="app-header">
           <span class="app-logo">Localis</span>
-          <span class="app-edition">Edizione · Bari</span>
+          <span class="app-edition">{editionLabel}</span>
         </div>
 
         <!-- Cover photo -->
@@ -103,7 +110,7 @@ const progressPct = 26;
 
         <!-- Player controls -->
         <div class="player">
-          <div class="progress" role="progressbar" aria-valuenow={progressPct} aria-valuemin="0" aria-valuemax="100" aria-label="Avanzamento capitolo">
+          <div class="progress" role="progressbar" aria-valuenow={progressPct} aria-valuemin="0" aria-valuemax="100" aria-label={progressAriaLabel}>
             <span class="progress-fill" style={`width: ${progressPct}%`}></span>
           </div>
           <div class="time-row">
@@ -111,10 +118,10 @@ const progressPct = 26;
             <span class="time-total">{totalTime}</span>
           </div>
           <div class="controls">
-            <button type="button" class="ctrl ctrl-back" aria-label="Indietro 15s" tabindex="-1">
+            <button type="button" class="ctrl ctrl-back" aria-label={backAriaLabel} tabindex="-1">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5"/><path d="M18 18V8a4 4 0 0 0-4-4H6"/></svg>
             </button>
-            <button type="button" class="ctrl ctrl-play" aria-label="Pausa" tabindex="-1">
+            <button type="button" class="ctrl ctrl-play" aria-label={pauseAriaLabel} tabindex="-1">
               <svg width="14" height="16" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true">
                 <path d="M2 0h3v14H2zM7 0h3v14H7z" />
               </svg>

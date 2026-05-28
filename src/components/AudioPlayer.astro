@@ -49,9 +49,10 @@ const labels = {
     chapters: 'Kapitel',
     loading: 'Laden...',
     offline_ready: 'Offline verfügbar ✓',
-    offline_caching: 'Für Offline speichern...',
+    offline_caching: 'Für Offline hören gespeichert...',
     error: 'Audio konnte nicht geladen werden.',
     retry: 'Erneut versuchen',
+    progress: 'Audio-Fortschritt',
   },
 }[lang];
 ---
@@ -61,6 +62,8 @@ const labels = {
   data-token={token}
   data-lang={lang}
   data-duration={durationSeconds}
+  data-offline-ready={labels.offline_ready}
+  data-offline-caching={labels.offline_caching}
 >
   <div class="p-md flex items-center gap-md">
     <button
@@ -85,7 +88,7 @@ const labels = {
     </button>
 
     <div class="flex-1 min-w-0">
-      <div class="ap-progress h-1 bg-ink/10 rounded-full overflow-hidden cursor-pointer" role="progressbar" aria-label="Audio progress" tabindex="0">
+      <div class="ap-progress h-1 bg-ink/10 rounded-full overflow-hidden cursor-pointer" role="progressbar" aria-label={labels.progress} tabindex="0">
         <div class="ap-fill h-full bg-accent rounded-full" style="width: 0%"></div>
       </div>
       <div class="flex justify-between mt-xs text-xs text-ink-subtle font-mono tabular-nums">
@@ -234,7 +237,7 @@ const labels = {
           url: p.audioUrl,
           guide: p.slug,
         });
-        showStatus(p, p.el.dataset.lang === 'en' ? 'Saving for offline...' : 'Salvataggio per offline...');
+        showStatus(p, p.el.dataset.offlineCaching || '');
       }
     } catch (err) {
       showError(p);
@@ -268,7 +271,7 @@ const labels = {
       retry: el.querySelector<HTMLButtonElement>('.ap-retry')!,
       slug: el.dataset.guideSlug!,
       token: el.dataset.token!,
-      lang: (el.dataset.lang === 'en' ? 'en' : 'it') as 'it' | 'en',
+      lang: (el.dataset.lang === 'en' ? 'en' : el.dataset.lang === 'de' ? 'de' : 'it') as 'it' | 'en' | 'de',
     };
 
     p.audio.addEventListener('loadedmetadata', () => {
@@ -291,7 +294,7 @@ const labels = {
     p.audio.addEventListener('ended', () => setPlayingState(p, false));
     p.audio.addEventListener('canplaythrough', () => {
       hideStatus(p);
-      showStatus(p, p.lang === 'en' ? 'Available offline ✓' : 'Disponibile offline ✓');
+      showStatus(p, p.el.dataset.offlineReady || '');
       setTimeout(() => hideStatus(p), 3000);
     });
     p.audio.addEventListener('error', () => showError(p));

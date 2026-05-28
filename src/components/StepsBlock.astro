@@ -8,15 +8,21 @@ export interface Props {
 
 const { lang, ctaHref = '#guide' } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'In tre minuti, sei dentro' : 'Three minutes in, you\'re there';
-const heading = lang === 'it' ? 'Tre passi.' : 'Three steps.';
-const headingItalic = lang === 'it' ? 'Una terra che parla, quando vuoi tu.' : 'A land that speaks, whenever you want.';
+const eyebrow = lang === 'it' ? 'In tre minuti, sei dentro' : lang === 'de' ? 'In wenigen Minuten bereit' : 'Three minutes in, you\'re there';
+const heading = lang === 'it' ? 'Tre passi.' : lang === 'de' ? 'Drei Schritte.' : 'Three steps.';
+const headingItalic = lang === 'it' ? 'Una terra che parla, quando vuoi tu.' : lang === 'de' ? 'Ein Land, das spricht. Dann, wenn du hören willst.' : 'A land that speaks, whenever you want.';
 
 const steps = lang === 'it'
   ? [
       { n: '1', title: 'Scegli la destinazione', body: 'Bari, Valle d\'Itria, Gargano — ogni zona ha la sua guida.' },
       { n: '2', title: 'Apri il link', body: 'Niente app. Compri, ti arriva un link, premi play.' },
       { n: '3', title: 'Ascolta', body: 'Le storie partono. In strada, sul divano, in treno — ovunque.' },
+    ]
+  : lang === 'de'
+  ? [
+      { n: '1', title: 'Ort wählen', body: 'Bari, Valle d\'Itria, Gargano: Jede Gegend hat ihre eigene Audioerzählung.' },
+      { n: '2', title: 'Link öffnen', body: 'Keine App. Du kaufst, bekommst einen Link und drückst auf Play.' },
+      { n: '3', title: 'Anhören', body: 'Vor Ort, auf dem Sofa oder im Zug. Du hörst dann, wenn es für dich passt.' },
     ]
   : [
       { n: '1', title: 'Choose a destination', body: 'Bari, Valle d\'Itria, Gargano — every zone has its own guide.' },

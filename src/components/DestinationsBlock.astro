@@ -7,11 +7,13 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : 'Plate IV — The destinations';
-const heading1 = lang === 'it' ? 'Scegli dove andare.' : 'Choose your destination.';
-const heading2 = lang === 'it' ? 'Ogni zona, una voce diversa.' : 'Every zone, a different voice.';
+const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : lang === 'de' ? 'Tafel IV — Die Reiseziele' : 'Plate IV — The destinations';
+const heading1 = lang === 'it' ? 'Scegli dove andare.' : lang === 'de' ? 'Wähle, wohin du hören willst.' : 'Choose your destination.';
+const heading2 = lang === 'it' ? 'Ogni zona, una voce diversa.' : lang === 'de' ? 'Jede Gegend hat ihre eigene Stimme.' : 'Every zone, a different voice.';
 const intro = lang === 'it'
   ? 'Non un catalogo turistico. Una collezione di voci: ogni destinazione ha i suoi autori, le sue storie, il suo suono.'
+  : lang === 'de'
+  ? 'Kein touristischer Katalog, sondern eine Sammlung von Stimmen: Jedes Reiseziel hat seine eigenen Erzähler, seine eigenen Geschichten und seinen eigenen Klang.'
   : 'Not a tourist catalogue. A collection of voices: every destination has its own authors, its own stories, its own sound.';
 
 interface Destination {
@@ -53,6 +55,36 @@ const destinations: Destination[] = lang === 'it'
         guidesLabel: '6 guide',
         cover: '/images/covers/gargano-landing.jpg',
         alt: 'Gargano, promontorio sul mare Adriatico',
+      },
+    ]
+  : lang === 'de'
+  ? [
+      {
+        slug: 'bari',
+        href: '/de/bari',
+        name: 'Bari',
+        tagline: 'Die Stadt, die du so nicht erwartest.',
+        guidesLabel: '6 Erzählungen',
+        cover: '/images/covers/bari-landing-v2.jpg',
+        alt: 'Gasse in der Altstadt von Bari mit antiken römischen Säulen',
+      },
+      {
+        slug: 'valle-d-itria',
+        href: '/de/valle-d-itria',
+        name: "Valle d'Itria",
+        tagline: 'Trulli, Wein und weiße Dörfer.',
+        guidesLabel: '3 Erzählungen',
+        cover: '/images/covers/valle-d-itria-landing.jpg',
+        alt: "Valle d'Itria mit Trulli und Weinbergen unter der Sonne Apuliens",
+      },
+      {
+        slug: 'gargano',
+        href: '/de/gargano',
+        name: 'Gargano',
+        tagline: 'Das Vorgebirge mit Blick auf die Welt.',
+        guidesLabel: '6 Erzählungen',
+        cover: '/images/covers/gargano-landing.jpg',
+        alt: 'Gargano-Vorgebirge über der Adria',
       },
     ]
   : [

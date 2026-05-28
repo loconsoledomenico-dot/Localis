@@ -17,12 +17,12 @@ const {
   lang,
   href,
   label,
-  price = lang === 'it' ? '€4,99' : '€4.99',
+  price = lang === 'it' ? '€4,99' : lang === 'de' ? '4,99 €' : '€4.99',
   hideAtSelector = '#prezzi',
 } = Astro.props;
 
-const finalHref = href ?? (lang === 'it' ? '/guide/bari-vecchia' : '/en/guide/bari-vecchia');
-const finalLabel = label ?? (lang === 'it' ? 'Ascolta un assaggio' : 'Listen a teaser');
+const finalHref = href ?? (lang === 'it' ? '/guide/bari-vecchia' : lang === 'de' ? '/de/guide/bari-vecchia' : '/en/guide/bari-vecchia');
+const finalLabel = label ?? (lang === 'it' ? 'Ascolta un assaggio' : lang === 'de' ? 'Hörprobe öffnen' : 'Listen to a teaser');
 const ariaLabel = `${finalLabel} · ${price}`;
 ---
 <a

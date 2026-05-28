@@ -7,11 +7,13 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola IV — I luoghi' : 'Plate IV — The places';
-const heading1 = lang === 'it' ? 'Le storie del centro.' : 'The stories of the centre.';
-const heading2 = lang === 'it' ? 'Un itinerario alla volta.' : 'One route at a time.';
+const eyebrow = lang === 'it' ? 'Tavola IV — I luoghi' : lang === 'de' ? 'Tafel IV — Die Orte' : 'Plate IV — The places';
+const heading1 = lang === 'it' ? 'Le storie del centro.' : lang === 'de' ? 'Geschichten aus dem Zentrum.' : 'The stories of the centre.';
+const heading2 = lang === 'it' ? 'Un itinerario alla volta.' : lang === 'de' ? 'Eine Erzählung nach der anderen.' : 'One route at a time.';
 const intro = lang === 'it'
   ? 'Sei voci baresi. Dalla città di pietra al porto, dai teatri ai sotterranei: ogni itinerario è firmato da chi quei posti li ha vissuti da bambino. Tocca un riquadro per ascoltare.'
+  : lang === 'de'
+  ? 'Sechs Stimmen aus Bari. Von der steinernen Altstadt bis zum Hafen, von den Theatern bis in den Untergrund: Jede Audioerzählung stammt von jemandem, der diese Orte seit der Kindheit kennt. Tippe auf eine Karte, um mehr zu erfahren.'
   : 'Six Bari voices. From the stone old town to the port, from the theatres to the underground city: every route is signed by someone who lived those places as a child. Tap a tile to listen.';
 
 interface Place {
@@ -90,6 +92,69 @@ const places: Place[] = lang === 'it'
         price: '€4,99',
       },
     ]
+  : lang === 'de'
+  ? [
+      {
+        slug: 'bari-vecchia',
+        title: 'Bari Vecchia — In der Altstadt',
+        duration: '21 min',
+        quartiere: 'Altstadt',
+        startsAt: 'Strada delle Crociate',
+        cover: '/images/covers/bari-vecchia.jpg',
+        alt: 'Gasse in der Altstadt von Bari mit antiken römischen Säulen und historischen Häusern',
+        price: '4,99 €',
+      },
+      {
+        slug: 'san-nicola',
+        title: 'San Nicola — Der geraubte Heilige',
+        duration: '30 min',
+        quartiere: 'Altstadt',
+        startsAt: 'Basilika San Nicola',
+        cover: '/images/covers/san-nicola.jpg',
+        alt: 'San-Nicola-Prozession bei Sonnenuntergang vor der Basilika, mit Gläubigen und Klerus',
+        price: '4,99 €',
+      },
+      {
+        slug: 'il-meglio-di-bari',
+        title: 'Das Beste von Bari — Erst essen, dann verstehen',
+        duration: '29 min',
+        quartiere: 'Altstadt',
+        startsAt: 'Strada Arco Basso',
+        cover: '/images/covers/il-meglio-di-bari.jpg',
+        alt: 'Orecchiette-Gasse in Bari Vecchia, Frauen formen Pasta auf Holztischen',
+        price: '4,99 €',
+      },
+      {
+        slug: 'porto-bari',
+        title: 'Hafen von Bari — Wo alles begann',
+        duration: '33 min',
+        quartiere: 'Uferpromenade',
+        startsAt: 'Molo San Nicola',
+        cover: '/images/covers/porto-bari.jpg',
+        alt: 'Bari aus der Vogelperspektive bei Sonnenuntergang mit Uferpromenade und Yachthafen',
+        price: '4,99 €',
+      },
+      {
+        slug: 'tre-teatri',
+        title: 'Die drei Theater — Feuer, Musik und Bürgertum',
+        duration: '28 min',
+        quartiere: 'Murat',
+        startsAt: 'Teatro Piccinni',
+        cover: '/images/covers/tre-teatri.jpg',
+        alt: 'Teatro Margherita in Bari, Jugendstilgebäude auf Stelzen über dem Meer',
+        price: '4,99 €',
+      },
+      {
+        slug: 'bari-sotterranea',
+        title: 'Bari unter der Erde — Was darunter liegt',
+        duration: '25 min',
+        quartiere: 'Altstadt',
+        startsAt: 'Basilika San Nicola',
+        cover: '/images/covers/bari-sotterranea-v2.jpg',
+        alt: 'Krypta der Basilika San Nicola mit wiederverwendeten römischen Säulen und byzantinischen Mosaiken',
+        price: '4,99 €',
+      },
+    ]
   : [
       {
         slug: 'bari-vecchia',
@@ -153,9 +218,9 @@ const places: Place[] = lang === 'it'
       },
     ];
 
-const guidePathPrefix = lang === 'it' ? '/guide/' : '/en/guide/';
-const startsLabel = lang === 'it' ? 'Parte da' : 'Starts at';
-const comingLabel = lang === 'it' ? 'In arrivo' : 'Coming';
+const guidePathPrefix = lang === 'it' ? '/guide/' : lang === 'de' ? '/de/guide/' : '/en/guide/';
+const startsLabel = lang === 'it' ? 'Parte da' : lang === 'de' ? 'Beginnt bei' : 'Starts at';
+const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' : 'Coming';
 ---
 <section id="guide" class="places-section bg-surface scroll-mt-lg">
   <div class="max-w-wrap mx-auto px-md sm:px-lg py-3xl lg:py-4xl">

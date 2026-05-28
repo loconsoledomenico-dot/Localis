@@ -7,18 +7,18 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const playLabel = lang === 'it' ? 'Riproduci' : 'Play';
+const playLabel = lang === 'it' ? 'Riproduci' : lang === 'de' ? 'Abspielen' : 'Play';
 const pauseLabel = lang === 'it' ? 'Pausa' : 'Pause';
-const closeLabel = lang === 'it' ? 'Chiudi player' : 'Close player';
-const progressLabel = lang === 'it' ? 'Avanzamento' : 'Progress';
-const fallbackTitle = lang === 'it' ? 'In ascolto' : 'Now playing';
-const eyebrowLabel = lang === 'it' ? 'In ascolto · Localis' : 'Now playing · Localis';
+const closeLabel = lang === 'it' ? 'Chiudi player' : lang === 'de' ? 'Player schließen' : 'Close player';
+const progressLabel = lang === 'it' ? 'Avanzamento' : lang === 'de' ? 'Fortschritt' : 'Progress';
+const fallbackTitle = lang === 'it' ? 'In ascolto' : lang === 'de' ? 'Wird abgespielt' : 'Now playing';
+const eyebrowLabel = lang === 'it' ? 'In ascolto · Localis' : lang === 'de' ? 'Wird abgespielt · Localis' : 'Now playing · Localis';
 ---
 <aside
   id="sticky-player"
   class="sticky-player"
   data-active="false"
-  aria-label={lang === 'it' ? 'Player audio in basso' : 'Bottom audio player'}
+  aria-label={lang === 'it' ? 'Player audio in basso' : lang === 'de' ? 'Audio-Player am unteren Rand' : 'Bottom audio player'}
   hidden
 >
   <div class="sticky-player-inner">
