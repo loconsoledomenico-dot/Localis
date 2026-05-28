@@ -30,29 +30,6 @@ const lede2 = lang === 'de'
 const ctaPrimary = lang === 'de' ? 'Guide auswahlen' : lang === 'it' ? 'Scegli la tua audioguida' : 'Choose your audio guide';
 const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
 
-interface Pill {
-  icon: string;
-  label: string;
-  tail: string;
-}
-
-const pills: Pill[] = lang === 'de'
-  ? [
-      { icon: 'headphones', label: 'Auf dem Handy hoeren',   tail: 'vor Ort, davor oder danach' },
-      { icon: 'pin',        label: 'Self-guided Routen',     tail: 'in deinem Tempo' },
-      { icon: 'heart',      label: 'Archivrecherche',        tail: 'Quellen auf /fonti' },
-    ]
-  : lang === 'it'
-  ? [
-      { icon: 'headphones', label: 'Ascolta dal telefono',   tail: 'sul posto, prima o dopo' },
-      { icon: 'pin',        label: 'Tour self-guided',       tail: 'cammini al tuo ritmo' },
-      { icon: 'heart',      label: 'Ricerca d\'archivio',    tail: 'fonti verificabili su /fonti' },
-    ]
-  : [
-      { icon: 'headphones', label: 'Listen on your phone',   tail: 'before, during or after' },
-      { icon: 'pin',        label: 'Self-guided routes',     tail: 'walk at your own pace' },
-      { icon: 'heart',      label: 'Archive research',       tail: 'all sources verifiable at /fonti' },
-    ];
 const altText = lang === 'de'
   ? 'Eine junge Frau mit Kopfhörern auf Baris Lungomare bei Sonnenuntergang'
   : lang === 'it'
@@ -133,47 +110,8 @@ const altText = lang === 'de'
       )}
     </div>
 
-    <ul class="hero-microcopy">
-      {lang === 'it' && <>
-        <li>~30 min per guida</li>
-        <li>Disponibile subito</li>
-        <li>Rimborso 1-click entro 24h</li>
-      </>}
-      {lang === 'en' && <>
-        <li>~30 min per guide</li>
-        <li>Available instantly</li>
-        <li>1-click refund within 24h</li>
-      </>}
-      {lang === 'de' && <>
-        <li>~30 Min. pro Guide</li>
-        <li>Sofort verfügbar</li>
-        <li>1-Klick-Rückgabe innerhalb 24h</li>
-      </>}
-    </ul>
-
     <HeroAudioSample lang={lang} />
 
-    <ul class="hero-pills">
-      {pills.map((p) => (
-        <li class="hero-pill">
-          <span class="hero-pill-icon" aria-hidden="true">
-            {p.icon === 'headphones' && (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-            )}
-            {p.icon === 'pin' && (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            )}
-            {p.icon === 'heart' && (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            )}
-          </span>
-          <span class="hero-pill-text">
-            <span class="hero-pill-label">{p.label}</span>
-            <span class="hero-pill-tail">{p.tail}</span>
-          </span>
-        </li>
-      ))}
-    </ul>
   </div>
 
 
@@ -278,75 +216,6 @@ const altText = lang === 'de'
     }
   }
 
-  /* Microcopy */
-  .hero-microcopy {
-    list-style: none;
-    padding: 0;
-    margin: var(--spacing-sm) 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs) var(--spacing-md);
-  }
-  .hero-microcopy li {
-    font-family: var(--font-body);
-    font-size: 0.78rem;
-    color: var(--color-ink);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .hero-microcopy li::before {
-    content: '✓';
-    color: var(--color-accent);
-    font-size: 0.7rem;
-  }
-
-  /* Pills */
-  .hero-pills {
-    list-style: none;
-    padding: 0;
-    margin: clamp(2.25rem, 4vw, 3.25rem) 0 0 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-    max-width: 560px;
-  }
-  @media (max-width: 600px) {
-    .hero-pills {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-sm);
-    }
-  }
-
-  .hero-pill {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-    color: var(--color-ink);
-  }
-  .hero-pill-icon {
-    color: var(--color-accent);
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .hero-pill-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.25;
-  }
-  .hero-pill-label {
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-size: 0.92rem;
-    color: var(--color-ink);
-  }
-  .hero-pill-tail {
-    font-family: var(--font-body);
-    font-size: 0.78rem;
-    color: var(--color-ink);
-    margin-top: 1px;
-  }
-
   /* === Reveal animations === */
   .hero-masthead > span {
     opacity: 0;
@@ -360,17 +229,13 @@ const altText = lang === 'de'
   .hero-h1-a { animation-delay: 0.35s; }
   .hero-h1-b { animation-delay: 0.55s; }
   .hero-lede,
-  .hero-actions,
-  .hero-microcopy,
-  .hero-pills {
+  .hero-actions {
     opacity: 0;
     transform: translateY(10px);
     animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
   .hero-lede     { animation-delay: 0.75s; }
   .hero-actions  { animation-delay: 0.9s; }
-  .hero-microcopy { animation-delay: 0.95s; }
-  .hero-pills    { animation-delay: 1.05s; }
 
   @keyframes ruleDraw { to { transform: scaleX(1); } }
   @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
@@ -382,7 +247,6 @@ const altText = lang === 'de'
     .hero-h1-b { animation-delay: 0.25s; animation-duration: 0.5s; }
     .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
     .hero-actions { animation-delay: 0.45s; animation-duration: 0.4s; }
-    .hero-pills { animation-delay: 0.55s; animation-duration: 0.4s; }
     .hero-masthead > span { animation-delay: 0.3s; }
 
     /* legibility */
@@ -395,26 +259,6 @@ const altText = lang === 'de'
       margin-top: var(--spacing-xl);
       gap: var(--spacing-md);
     }
-    .hero-microcopy {
-      margin-top: var(--spacing-md);
-      gap: var(--spacing-sm) var(--spacing-lg);
-    }
-    .hero-microcopy li {
-      font-size: 0.9rem;
-    }
-    .hero-pill-label {
-      font-size: 1rem;
-    }
-    .hero-pill-tail {
-      font-size: 0.875rem;
-    }
-    .hero-pills {
-      margin-top: var(--spacing-xl);
-      gap: var(--spacing-md);
-    }
-    .hero-pill {
-      gap: var(--spacing-sm);
-    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -422,8 +266,7 @@ const altText = lang === 'de'
     .hero-masthead > span,
     .hero-h1 > span,
     .hero-lede,
-    .hero-actions,
-    .hero-pills {
+    .hero-actions {
       animation: none;
       transform: none;
       opacity: 1;
