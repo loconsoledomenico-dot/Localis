@@ -121,6 +121,7 @@ const ZONE_ORDER = [
     grid-template-columns: repeat(6, minmax(0, 160px));
     gap: var(--spacing-md);
     justify-content: center;
+    align-items: stretch;
   }
   @media (max-width: 900px) {
     .builder-grid { grid-template-columns: repeat(3, minmax(0, 160px)); }
@@ -132,6 +133,7 @@ const ZONE_ORDER = [
   .builder-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     background: none;
     border: 2px solid var(--color-border);
     border-radius: 8px;
@@ -189,6 +191,13 @@ const ZONE_ORDER = [
     flex: 1;
     display: flex;
     flex-direction: column;
+  }
+
+  .builder-card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .builder-card-sub {
