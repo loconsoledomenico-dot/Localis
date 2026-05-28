@@ -8,9 +8,12 @@ export interface Props {
   lang: Lang;
   features: string[];
   primary?: boolean;
+  titleOverride?: string;
+  descriptionOverride?: string;
+  ctaOverride?: string;
 }
 
-const { product, guideSlug, lang, features, primary = false } = Astro.props;
+const { product, guideSlug, lang, features, primary = false, titleOverride, descriptionOverride, ctaOverride } = Astro.props;
 
 const priceCents =
   product === 'bari-completa' ? 1999
@@ -19,14 +22,15 @@ const priceCents =
 
 const priceLabel = formatPrice(priceCents);
 
-const title =
+const title = titleOverride ?? (
   product === 'bari-completa'
     ? (lang === 'it' ? 'Bari Completa' : 'Complete Bari')
     : product === 'crociera'
       ? (lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package')
-      : (lang === 'it' ? 'Guida singola' : 'Single guide');
+      : (lang === 'it' ? 'Guida singola' : 'Single guide')
+);
 
-const description =
+const description = descriptionOverride ?? (
   product === 'bari-completa'
     ? (lang === 'it'
         ? 'Tutte le 6 guide di Bari. Sei voci, sei itinerari.'
@@ -37,7 +41,8 @@ const description =
           : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
       : (lang === 'it'
           ? 'Una guida a scelta, tua per sempre.'
-          : 'One guide of your choice, yours forever.');
+          : 'One guide of your choice, yours forever.')
+);
 
 const unitLabel =
   product === 'bari-completa'
@@ -46,12 +51,13 @@ const unitLabel =
       ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
       : (lang === 'it' ? '/ guida' : '/ guide');
 
-const ctaLabel =
+const ctaLabel = ctaOverride ?? (
   product === 'bari-completa'
     ? (lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari')
     : product === 'crociera'
       ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package')
-      : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide');
+      : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide')
+);
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>

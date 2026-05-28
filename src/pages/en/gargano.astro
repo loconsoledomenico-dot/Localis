@@ -1,4 +1,4 @@
-﻿---
+---
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
@@ -21,75 +21,75 @@ interface GuideEntry {
 const guides: GuideEntry[] = [
   {
     slug: 'gargano-vieste',
-    title: 'Vieste â€” The City on the Cliff',
+    title: 'Vieste — The City on the Cliff',
     subtitle: 'Pizzomunno, white cliffs, hidden coves, Pugnochiuso.',
-    places: 'Vieste Â· Pugnochiuso Â· trabucchi Â· sea caves',
+    places: 'Vieste · Pugnochiuso · trabucchi · sea caves',
     narrator: 'Rossella, third generation beach club',
     cover: '/images/covers/gargano-vieste.jpg',
     alt: 'Vieste, white limestone promontory over the Gargano sea',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
   {
     slug: 'gargano-nord',
-    title: 'The Silent Gargano â€” Villages, Trabucchi and Coast',
+    title: 'The Silent Gargano — Villages, Trabucchi and Coast',
     subtitle: 'Lesina, Rodi Garganico, Peschici. From the trabucco you see everything.',
-    places: 'Lesina Â· Rodi Garganico Â· Peschici Â· trabucchi Â· Lake Lesina',
+    places: 'Lesina · Rodi Garganico · Peschici · trabucchi · Lake Lesina',
     narrator: 'Ferdinando, fourth generation trabucco',
     cover: '/images/covers/gargano-nord.jpg',
     alt: 'Trabucco on the Gargano coast, juniper wood structure on the rock',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
   {
     slug: 'gargano-sacro',
-    title: 'The Sacred Mountain â€” Forest, Faith and Pilgrims',
+    title: 'The Sacred Mountain — Forest, Faith and Pilgrims',
     subtitle: 'The forest, the grotto, the convent. A route medieval pilgrims knew well.',
-    places: 'Foresta Umbra Â· Monte Sant\'Angelo Â· San Giovanni Rotondo Â· Padre Pio',
+    places: 'Foresta Umbra · Monte Sant\'Angelo · San Giovanni Rotondo · Padre Pio',
     narrator: "Fra' Salvatore, thirty years at the Sanctuary",
     cover: '/images/covers/gargano-sacro.jpg',
     alt: 'Foresta Umbra of Gargano, ancient forest with beech and oak trees',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
   {
     slug: 'gargano-tremiti',
-    title: 'The Tremiti Islands â€” The Forgotten Archipelago',
+    title: 'The Tremiti Islands — The Forgotten Archipelago',
     subtitle: 'San Domino, San Nicola, sea caves. Lucio Dalla came back every year.',
-    places: 'San Domino Â· San Nicola Â· sea caves Â· Benedictine abbey Â· marine park',
+    places: 'San Domino · San Nicola · sea caves · Benedictine abbey · marine park',
     narrator: 'Tonino, San Domino boatman',
     cover: '/images/covers/gargano-tremiti.jpg',
     alt: 'Tremiti Islands, turquoise waters and white rocks in the Adriatic',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
   {
     slug: 'gargano-paesi',
-    title: 'The Villages of Gargano â€” White Stone and Alleys',
+    title: 'The Villages of Gargano — White Stone and Alleys',
     subtitle: "The Gargano you can't reach with your GPS set to the beach.",
-    places: 'Vico del Gargano Â· Ischitella Â· Carpino Â· Lake Varano',
+    places: 'Vico del Gargano · Ischitella · Carpino · Lake Varano',
     narrator: 'Stefano, park ranger for thirty years',
     cover: '/images/covers/gargano-paesi.jpg',
     alt: 'Vico del Gargano, medieval alleys and white stone houses',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
   {
     slug: 'gargano-saline',
-    title: 'The Margherita Salt Flats â€” Salt and Flamingos',
+    title: 'The Margherita Salt Flats — Salt and Flamingos',
     subtitle: "Italy's largest salt works. The city buried under the sand.",
-    places: 'Margherita di Savoia salt flats Â· Manfredonia Â· Siponto Â· flamingos',
+    places: 'Margherita di Savoia salt flats · Manfredonia · Siponto · flamingos',
     narrator: "Antonello, thirty years at the salt works",
     cover: '/images/covers/gargano-saline.jpg',
     alt: 'Margherita di Savoia salt flats, pink basins at sunset with flamingos',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
 ];
 ---
 <Layout
-  title="Gargano â€” Narrative Audio Guides Â· Localis"
-  description="Six narrative audio guides of Gargano: Vieste, North Coast, Sacred Mountain, Tremiti Islands, inland villages, salt flats. Told by locals. From â‚¬4.99."
+  title="Gargano — Narrative Audio Guides · Localis"
+  description="Six narrative audio guides of Gargano: Vieste, North Coast, Sacred Mountain, Tremiti Islands, inland villages, salt flats. Told by locals. From €4.99."
   lang="en"
 >
 
   <Breadcrumb items={[{ label: 'Home', href: '/en' }, { label: 'Gargano' }]} />
 
-  {/* PAGE HEADER â€” hero with image */}
+  {/* PAGE HEADER — hero with image */}
   <section class="gargano-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/covers/gargano-landing.jpg"
@@ -107,14 +107,14 @@ const guides: GuideEntry[] = [
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Destination â€” Gargano
+          Destination — Gargano
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
         Gargano told<br /><em class="not-italic text-ink-muted">by people born there.</em>
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Six live guides. From Vieste to the Tremiti Islands, from the Foresta Umbra to the Margherita salt flats â€” every voice belongs to someone who actually lives there.
+        Six live guides. From Vieste to the Tremiti Islands, from the Foresta Umbra to the Margherita salt flats — every voice belongs to someone who actually lives there.
       </p>
     </div>
   </section>
@@ -162,7 +162,7 @@ const guides: GuideEntry[] = [
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
-      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Six voices Â· six places Â· one promontory</p>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Six voices · six places · one promontory</p>
       <span class="block h-px flex-1 bg-border"></span>
     </div>
   </section>
@@ -205,14 +205,14 @@ const guides: GuideEntry[] = [
       <ul class="narr-grid list-none p-0 m-0">
         {[
           { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Third generation beach club, Vieste', bio: "Fifty-four. Her family has run the same beach club since her grandfather's time. She has watched this coastline change more in sixty years than in the six hundred before.", guide: 'Vieste', href: '/en/guide/gargano-vieste' },
-          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Fourth generation trabucco fisherman', bio: 'Sixty-eight, from Peschici. On the family trabucco since he was eleven. He knows the Gargano sea by heart â€” every current, every hour of the day.', guide: 'North Coast', href: '/en/guide/gargano-nord' },
-          { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Thirty years at the Sanctuary of Monte Sant\'Angelo', bio: "Seventy-three. Franciscan friar since 1978. He has guided pilgrims from the Foresta Umbra to the Archangel's grotto â€” on foot, as they did in the Middle Ages.", guide: 'Sacred Gargano', href: '/en/guide/gargano-sacro' },
+          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Fourth generation trabucco fisherman', bio: 'Sixty-eight, from Peschici. On the family trabucco since he was eleven. He knows the Gargano sea by heart — every current, every hour of the day.', guide: 'North Coast', href: '/en/guide/gargano-nord' },
+          { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Thirty years at the Sanctuary of Monte Sant\'Angelo', bio: "Seventy-three. Franciscan friar since 1978. He has guided pilgrims from the Foresta Umbra to the Archangel's grotto — on foot, as they did in the Middle Ages.", guide: 'Sacred Gargano', href: '/en/guide/gargano-sacro' },
           { name: 'Tonino', photo: '/images/authors/tonino-tremiti.jpg', role: 'Boatman of San Domino', bio: "Seventy-four. Born on the Tremiti Islands, never left. For twenty years he took Lucio Dalla around the sea caves. He knows every cove, every reef, every current of the archipelago.", guide: 'Tremiti Islands', href: '/en/guide/gargano-tremiti' },
-          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Park ranger for thirty years', bio: "Fifty-eight, from Vico del Gargano. Thirty years in the Gargano National Park. He knows the inland villages like few others â€” the roads, the stories, the names of abandoned farmsteads.", guide: 'The Villages', href: '/en/guide/gargano-paesi' },
-          { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Thirty years in salt quality control', bio: "Fifty-four, from Manfredonia. Thirty years at the Margherita di Savoia salt works. He has seen the basins at every possible hour â€” from the pink July dawn to the December fog.", guide: 'Salt Flats', href: '/en/guide/gargano-saline' },
+          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Park ranger for thirty years', bio: "Fifty-eight, from Vico del Gargano. Thirty years in the Gargano National Park. He knows the inland villages like few others — the roads, the stories, the names of abandoned farmsteads.", guide: 'The Villages', href: '/en/guide/gargano-paesi' },
+          { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Thirty years in salt quality control', bio: "Fifty-four, from Manfredonia. Thirty years at the Margherita di Savoia salt works. He has seen the basins at every possible hour — from the pink July dawn to the December fog.", guide: 'Salt Flats', href: '/en/guide/gargano-saline' },
         ].map((n) => (
           <li class="narr-cell">
-            <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} â€” ${n.name}'s voice`}>
+            <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} — ${n.name}'s voice`}>
               <figure class="narr-photo m-0">
                 <img src={n.photo} alt={`Portrait of ${n.name}`} loading="lazy" decoding="async" />
               </figure>
@@ -292,9 +292,12 @@ const guides: GuideEntry[] = [
           product="bari-completa"
           lang="en"
           primary
+          titleOverride="Gargano Complete"
+          descriptionOverride="All 6 Gargano guides. Six voices, six landscapes."
+          ctaOverride="Get Gargano Complete"
           features={[
-            'All available guides Â· Bari + Gargano',
-            '~5h of storytelling Â· different voices',
+            'All 6 Gargano guides',
+            '~5h of storytelling · different voices',
             '1-click refund within 24h',
           ]}
         />

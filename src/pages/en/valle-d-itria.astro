@@ -1,4 +1,4 @@
-﻿---
+---
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
@@ -20,45 +20,45 @@ interface GuideEntry {
 const guides: GuideEntry[] = [
   {
     slug: 'alberobello',
-    title: 'Alberobello â€” Inside the Trulli',
+    title: 'Alberobello — Inside the Trulli',
     subtitle: 'The tax story nobody ever told you.',
     duration: '35 min',
     area: "Valle d'Itria",
     cover: '/images/covers/alberobello.jpg',
     alt: "Trulli of Alberobello, Rione Monti district",
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
   {
     slug: 'locorotondo',
-    title: 'Locorotondo â€” The Round Village',
+    title: 'Locorotondo — The Round Village',
     subtitle: 'A DOC wine, the cummerse and lavender essential oil.',
     duration: '31 min',
     area: "Valle d'Itria",
     cover: '/images/covers/locorotondo.jpg',
     alt: 'Locorotondo, white houses with double-pitched roofs',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
   {
     slug: 'martina-franca',
-    title: 'Martina Franca â€” The Free City',
+    title: 'Martina Franca — The Free City',
     subtitle: "Three hundred years of duchy, told by those who carry it in their blood.",
     duration: '30 min',
     area: "Valle d'Itria",
     cover: '/images/covers/martina-franca.jpg',
     alt: 'Ducal Palace of Martina Franca, baroque courtyard',
-    price: 'â‚¬4.99',
+    price: '€4.99',
   },
 ];
 ---
 <Layout
-  title="Valle d'Itria â€” Narrative Audio Guides Â· Localis"
-  description="Three narrative audio guides of Valle d'Itria: Alberobello, Locorotondo, Martina Franca. Told by locals. From â‚¬4.99."
+  title="Valle d'Itria — Narrative Audio Guides · Localis"
+  description="Three narrative audio guides of Valle d'Itria: Alberobello, Locorotondo, Martina Franca. Told by locals. From €4.99."
   lang="en"
 >
 
   <Breadcrumb items={[{ label: 'Home', href: '/en' }, { label: "Valle d'Itria" }]} />
 
-  {/* PAGE HEADER â€” hero with image */}
+  {/* PAGE HEADER — hero with image */}
   <section class="valle-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/covers/valle-d-itria-landing.jpg"
@@ -76,14 +76,14 @@ const guides: GuideEntry[] = [
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Destination â€” Valle d'Itria
+          Destination — Valle d'Itria
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
         Valle d'Itria told<br /><em class="not-italic text-ink-muted">by people born there.</em>
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Three live guides among trulli, white villages and DOC vineyards. Alberobello, Locorotondo, Martina Franca â€” every voice belongs to someone who lives there.
+        Three live guides among trulli, white villages and DOC vineyards. Alberobello, Locorotondo, Martina Franca — every voice belongs to someone who lives there.
       </p>
     </div>
   </section>
@@ -131,7 +131,7 @@ const guides: GuideEntry[] = [
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
-      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Three voices Â· three villages Â· one valley</p>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Three voices · three villages · one valley</p>
       <span class="block h-px flex-1 bg-border"></span>
     </div>
   </section>
@@ -142,7 +142,7 @@ const guides: GuideEntry[] = [
       <ol class="guide-grid list-none p-0 m-0">
         {guides.map((g, i) => (
           <li class="guide-cell" style={`--idx:${i}`}>
-            <a href={`/en/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} Â· ${g.duration}`}>
+            <a href={`/en/guide/${g.slug}`} class="guide-card" aria-label={`${g.title} · ${g.duration}`}>
               <figure class="guide-photo m-0">
                 <img src={g.cover} alt={g.alt} class="guide-img" loading="lazy" decoding="async" />
                 <span class="guide-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
@@ -173,12 +173,12 @@ const guides: GuideEntry[] = [
       </div>
       <ul class="narr-grid list-none p-0 m-0">
         {[
-          { name: 'Concetta', photo: '/images/authors/concetta-alberobello.jpg', role: 'Three generations in Rione Aia Piccola', bio: "Sixty-five, born and raised in Rione Aia Piccola. Three generations under the same stone roof. She tells the trulli the way a neighbour would â€” from the doorstep she's always sat on.", guide: 'Alberobello', href: '/en/guide/alberobello' },
+          { name: 'Concetta', photo: '/images/authors/concetta-alberobello.jpg', role: 'Three generations in Rione Aia Piccola', bio: "Sixty-five, born and raised in Rione Aia Piccola. Three generations under the same stone roof. She tells the trulli the way a neighbour would — from the doorstep she's always sat on.", guide: 'Alberobello', href: '/en/guide/alberobello' },
           { name: 'Francesco', photo: '/images/authors/francesco-locorotondo.png', role: 'Winemaker of the round village', bio: "Fifty, winemaker of the round village. He produces DOC wine, olive oil and lavender essential oil among the Itria Valley vineyards.", guide: 'Locorotondo', href: '/en/guide/locorotondo' },
-          { name: 'Anonymous', photo: '/images/authors/nobile-martina-franca.png', role: 'Caracciolo family descendant', bio: "A direct descendant of the Caracciolo family. Prefers not to give a name â€” wants to tell stories, not make statements.", guide: 'Martina Franca', href: '/en/guide/martina-franca' },
+          { name: 'Anonymous', photo: '/images/authors/nobile-martina-franca.png', role: 'Caracciolo family descendant', bio: "A direct descendant of the Caracciolo family. Prefers not to give a name — wants to tell stories, not make statements.", guide: 'Martina Franca', href: '/en/guide/martina-franca' },
         ].map((n) => (
           <li>
-            <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} â€” ${n.name}'s voice`}>
+            <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} — ${n.name}'s voice`}>
               <figure class="narr-photo m-0">
                 <img src={n.photo} alt={`Portrait of ${n.name}`} loading="lazy" decoding="async" />
               </figure>
@@ -248,9 +248,12 @@ const guides: GuideEntry[] = [
           product="bari-completa"
           lang="en"
           primary
+          titleOverride="Valle d'Itria Complete"
+          descriptionOverride="All 6 Valle d'Itria guides. Six voices, six villages."
+          ctaOverride="Get Valle d'Itria Complete"
           features={[
-            "All available guides Â· Bari + Valle d'Itria",
-            "~3h of storytelling Â· different voices",
+            "All 6 Valle d'Itria guides",
+            '~3h of storytelling · different voices',
             '1-click refund within 24h',
           ]}
         />
