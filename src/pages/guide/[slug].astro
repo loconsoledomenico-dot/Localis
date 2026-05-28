@@ -7,6 +7,7 @@ import ChapterList from '../../components/ChapterList.astro';
 import StartMap from '../../components/StartMap.astro';
 import NarratorCard from '../../components/NarratorCard.astro';
 import StructuredData from '../../components/StructuredData.astro';
+import GuideUseCase from '../../components/GuideUseCase.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../lib/format';
 import { audioObjectLD, touristAttractionLD, productLD } from '../../lib/seo';
@@ -90,6 +91,8 @@ ld.push(productLD({
         loading="eager"
       />
 
+      <GuideUseCase guide={data} lang="it" />
+
       {data.narrator && (
         <NarratorCard
           name={data.narrator.name}
@@ -117,8 +120,9 @@ ld.push(productLD({
         features={[
           `${data.chapters.length} capitoli`,
           `${durationLabel} di ascolto`,
-          'Italiano e inglese',
-          'Per sempre accessibile',
+          'Tour self-guided dal telefono',
+          'Italiano, inglese e tedesco dove disponibile',
+          'Link permanente, tuo per sempre',
           'Funziona offline dopo il primo play',
         ]}
       />

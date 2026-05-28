@@ -13,21 +13,21 @@ const { lang, currentPath = '/' } = Astro.props;
 const masthead_l = lang === 'de' ? 'Ausgabe 01 — Apulien' : lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
 const masthead_r = lang === 'de' ? 'Veröffentlichte Audioguides · Apulien' : lang === 'it' ? 'Guide pubblicate · Puglia' : 'Published guides · Puglia';
 
-const heading1a = lang === 'de' ? 'Entdecke Apulien mit Audioguides, die von echten Kennern geschrieben wurden.' : lang === 'it' ? 'Scopri la Puglia con audioguide scritte da chi la conosce davvero.' : 'Discover Puglia with audio guides written by those who truly know it.';
+const heading1a = lang === 'de' ? 'Self-guided Audiotouren durch Apulien, direkt auf deinem Handy.' : lang === 'it' ? 'Audioguide self-guided per capire la Puglia mentre cammini.' : 'Self-guided audio tours of Puglia, right on your phone.';
 const heading1b = '';
 
 const lede1 = lang === 'de'
   ? 'Wahre Geschichten, überprüfbare Quellen und Routen zum Hören – wann immer du willst.'
   : lang === 'it'
-  ? 'Storie vere, fonti verificabili e percorsi da ascoltare quando vuoi.'
-  : 'True stories, verifiable sources and routes to listen to whenever you want.';
+  ? 'Bari, Valle d’Itria, Gargano: itinerari da ascoltare sul posto, prima di partire o al ritorno.'
+  : 'Bari, Valle d’Itria and Gargano: routes, true stories and verifiable sources.';
 const lede2 = lang === 'de'
   ? 'Keine App nötig, sofortiges Abspielen auf deinem Handy.'
   : lang === 'it'
-  ? 'Niente app da installare, ascolto immediato dal tuo telefono.'
-  : 'No app to install, instant listening from your phone.';
+  ? 'Niente app, niente account: compri, apri il link, premi play.'
+  : 'No app, no account: buy, open the link, press play.';
 
-const ctaPrimary = lang === 'de' ? 'Guides kaufen' : lang === 'it' ? 'Acquista le guide' : 'Buy the guides';
+const ctaPrimary = lang === 'de' ? 'Guide auswahlen' : lang === 'it' ? 'Scegli la tua audioguida' : 'Choose your audio guide';
 const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
 
 interface Pill {
@@ -38,22 +38,21 @@ interface Pill {
 
 const pills: Pill[] = lang === 'de'
   ? [
-      { icon: 'headphones', label: 'Überall anhören',        tail: 'unterwegs, zuhause, im Zug' },
-      { icon: 'pin',        label: 'Wahre Geschichten',      tail: 'an echten Orten' },
-      { icon: 'heart',      label: 'Archivrecherche',        tail: 'alle Quellen prüfbar auf /fonti' },
+      { icon: 'headphones', label: 'Auf dem Handy hoeren',   tail: 'vor Ort, davor oder danach' },
+      { icon: 'pin',        label: 'Self-guided Routen',     tail: 'in deinem Tempo' },
+      { icon: 'heart',      label: 'Archivrecherche',        tail: 'Quellen auf /fonti' },
     ]
   : lang === 'it'
   ? [
-      { icon: 'headphones', label: 'Ascolta dove vuoi',      tail: 'in strada, sul divano, in treno' },
-      { icon: 'pin',        label: 'Storie vere',            tail: 'sui luoghi reali e autentici' },
+      { icon: 'headphones', label: 'Ascolta dal telefono',   tail: 'sul posto, prima o dopo' },
+      { icon: 'pin',        label: 'Tour self-guided',       tail: 'cammini al tuo ritmo' },
       { icon: 'heart',      label: 'Ricerca d\'archivio',    tail: 'fonti verificabili su /fonti' },
     ]
   : [
-      { icon: 'headphones', label: 'Listen anywhere',        tail: 'on the street, couch, train' },
-      { icon: 'pin',        label: 'True stories',           tail: 'tied to real places' },
+      { icon: 'headphones', label: 'Listen on your phone',   tail: 'before, during or after' },
+      { icon: 'pin',        label: 'Self-guided routes',     tail: 'walk at your own pace' },
       { icon: 'heart',      label: 'Archive research',       tail: 'all sources verifiable at /fonti' },
     ];
-
 const altText = lang === 'de'
   ? 'Eine junge Frau mit Kopfhörern auf Baris Lungomare bei Sonnenuntergang'
   : lang === 'it'

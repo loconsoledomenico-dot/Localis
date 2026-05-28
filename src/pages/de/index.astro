@@ -14,14 +14,30 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
 >
   <Hero lang="de" currentPath={Astro.url.pathname} />
 
+  <section class="bg-surface border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-lg grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-lg items-start">
+      <div>
+        <p class="text-xs font-semibold tracking-[0.24em] uppercase text-accent mb-xs">
+          Self-guided Audiotouren
+        </p>
+        <p class="font-display text-2xl text-ink leading-tight m-0">
+          Starte an einem echten Ort, höre Kapitel für Kapitel und geh in deinem Tempo.
+        </p>
+      </div>
+      <p class="text-base text-ink-muted leading-relaxed m-0">
+        Jeder Guide verbindet eine praktische Route, lokale Erzählung und überprüfbare Quellen. Keine App: Du erhältst einen dauerhaften Link und hörst vor, während oder nach der Reise.
+      </p>
+    </div>
+  </section>
+
   <StatsBlock lang="de" />
 
   <FeatureBlock
     eyebrow="Geschichten · Autoren"
     heading="Jede Stimme hat einen Namen."
     body="Unsere Guides werden von echten Einheimischen erzählt — Leuten, die dort geboren wurden und aufgewachsen sind. Keine Schauspieler, keine Skripte von Reiseagenturen."
-    imageSrc="/images/feature/autori-bari.jpg"
-    imageAlt="Autoren aus Bari"
+    imageSrc="/images/covers/scrivania-ricerca.jpg"
+    imageAlt="Recherche-Schreibtisch mit Notizen und Buechern ueber Bari"
     bullets={[]}
     ctaLabel="Guides entdecken"
     ctaHref="/de/guide"

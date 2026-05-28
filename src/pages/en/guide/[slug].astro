@@ -7,6 +7,7 @@ import ChapterList from '../../../components/ChapterList.astro';
 import StartMap from '../../../components/StartMap.astro';
 import NarratorCard from '../../../components/NarratorCard.astro';
 import StructuredData from '../../../components/StructuredData.astro';
+import GuideUseCase from '../../../components/GuideUseCase.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
 import { audioObjectLD, touristAttractionLD, productLD } from '../../../lib/seo';
@@ -85,6 +86,8 @@ ld.push(productLD({
     <div class="flex flex-col gap-lg">
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
 
+      <GuideUseCase guide={data} lang="en" />
+
       {data.narrator && (
         <NarratorCard
           name={data.narrator.name}
@@ -112,8 +115,9 @@ ld.push(productLD({
         features={[
           `${data.chapters.length} chapters`,
           `${durationLabel} runtime`,
-          'Italian and English',
-          'Forever accessible',
+          'Self-guided route on your phone',
+          'Italian, English and German where available',
+          'Permanent link, yours forever',
           'Works offline after first play',
         ]}
       />

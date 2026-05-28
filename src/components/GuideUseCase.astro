@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../lib/i18n';
+import { formatDuration } from '../lib/format';
+import { guideDurationSeconds } from '../lib/guide-localization';
+
+export interface Props {
+  guide: CollectionEntry<'guides'>['data'];
+  lang: Lang;
+}
+
+const { guide, lang } = Astro.props;
+const durationLabel = formatDuration(guideDurationSeconds(guide, lang));
+const chapterCount = guide.chapters.length;
+
+const copy = lang === 'it'
+  ? {
+      heading: 'Come usare questa audioguida',
+      intro: 'È pensata come un tour autoguidato: la apri dal telefono, cammini al tuo ritmo e ascolti quando sei sul posto. Funziona anche prima di partire o dopo il viaggio.',
+      items: [
+        { label: 'Durata', value: `${durationLabel}, ${chapterCount} capitoli` },
+        { label: 'Formato', value: 'Link permanente via email, senza app e senza account' },
+        { label: 'Ideale per', value: 'Una passeggiata autonoma, una pausa in viaggio o un ascolto preparatorio' },
+      ],
+    }
+  : lang === 'de'
+    ? {
+        heading: 'So nutzt du diesen Audioguide',
+        intro: 'Ein selbstgeführter Rundgang auf deinem Handy: Link öffnen, losgehen, zuhören. Keine App, kein Konto, dein Tempo.',
+        items: [
+          { label: 'Dauer', value: `${durationLabel}, ${chapterCount} Kapitel` },
+          { label: 'Format', value: 'Dauerhafter Link per E-Mail, ohne App und ohne Konto' },
+          { label: 'Ideal für', value: 'Einen eigenen Spaziergang, Vorbereitung oder Nachhören nach der Reise' },
+        ],
+      }
+    : {
+        heading: 'How to use this audio guide',
+        intro: 'It works as a self-guided walking tour: open it on your phone, walk at your own pace, and listen on location. It also works before or after the trip.',
+        items: [
+          { label: 'Runtime', value: `${durationLabel}, ${chapterCount} chapters` },
+          { label: 'Format', value: 'Permanent email link, no app and no account' },
+          { label: 'Best for', value: 'A self-guided walk, travel prep, or listening again after the visit' },
+        ],
+      };
+---
+<section class="border border-border bg-surface-elev rounded-lg p-lg">
+  <h2 class="font-display text-2xl text-ink mb-sm">{copy.heading}</h2>
+  <p class="text-base text-ink-muted leading-relaxed mb-md">{copy.intro}</p>
+  <dl class="grid grid-cols-1 sm:grid-cols-3 gap-md">
+    {copy.items.map((item) => (
+      <div>
+        <dt class="text-xs font-semibold tracking-[0.18em] uppercase text-accent mb-2xs">{item.label}</dt>
+        <dd class="text-sm text-ink leading-relaxed m-0">{item.value}</dd>
+      </div>
+    ))}
+  </dl>
+</section>

@@ -14,6 +14,22 @@ import DestinationsBlock from '../components/DestinationsBlock.astro';
 >
   <Hero lang="it" currentPath={Astro.url.pathname} />
 
+  <section class="bg-surface border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-lg grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-lg items-start">
+      <div>
+        <p class="text-xs font-semibold tracking-[0.24em] uppercase text-accent mb-xs">
+          Tour autoguidati sul telefono
+        </p>
+        <p class="font-display text-2xl text-ink leading-tight m-0">
+          Parti da un luogo reale, ascolti i capitoli, cammini al tuo ritmo.
+        </p>
+      </div>
+      <p class="text-base text-ink-muted leading-relaxed m-0">
+        Ogni guida unisce itinerario pratico, racconto locale e fonti verificabili. Non devi scaricare app: ricevi un link permanente e puoi ascoltare sul posto, prima di partire o al ritorno.
+      </p>
+    </div>
+  </section>
+
   {/* STATS — banda sottile, separa l'hero dal resto: 6/0/0/∞ */}
   <StatsBlock lang="it" />
 

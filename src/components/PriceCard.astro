@@ -27,47 +27,55 @@ const title = titleOverride ?? (
   product === 'tris'
     ? (lang === 'it' ? 'Tris' : 'Tris')
     : product === 'bari-completa'
-      ? (lang === 'it' ? 'Bari Completa' : 'Complete Bari')
+      ? (lang === 'it' ? 'Bari Completa' : lang === 'de' ? 'Bari Komplett' : 'Complete Bari')
       : product === 'crociera'
-        ? (lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package')
-        : (lang === 'it' ? 'Guida singola' : 'Single guide')
+        ? (lang === 'it' ? 'Pacchetto Crociera' : lang === 'de' ? 'Kreuzfahrt-Paket' : 'Cruise Package')
+        : (lang === 'it' ? 'Guida singola' : lang === 'de' ? 'Einzelner Guide' : 'Single guide')
 );
 
 const description = descriptionOverride ?? (
   product === 'tris'
     ? (lang === 'it'
         ? '3 guide a tua scelta tra tutte le zone.'
-        : '3 guides of your choice across all zones.')
+        : lang === 'de'
+          ? '3 Guides deiner Wahl aus allen Zonen.'
+          : '3 guides of your choice across all zones.')
     : product === 'bari-completa'
       ? (lang === 'it'
           ? 'Tutte le 6 guide di Bari. Sei voci, sei itinerari.'
-          : 'All 6 Bari guides. Six voices, six routes.')
+          : lang === 'de'
+            ? 'Alle 6 Bari-Guides. Sechs Stimmen, sechs Routen.'
+            : 'All 6 Bari guides. Six voices, six routes.')
       : product === 'crociera'
         ? (lang === 'it'
             ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
-            : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
+            : lang === 'de'
+              ? 'Bari Vecchia + Best of Bari. Fuer einen kurzen Landgang.'
+              : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
         : (lang === 'it'
             ? 'Una guida a scelta, tua per sempre.'
-            : 'One guide of your choice, yours forever.')
+            : lang === 'de'
+              ? 'Ein Guide deiner Wahl, dauerhaft nutzbar.'
+              : 'One guide of your choice, yours forever.')
 );
 
 const unitLabel =
   (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
-    ? (lang === 'it' ? '/ 6 guide' : '/ 6 guides')
+    ? (lang === 'it' ? '/ 6 guide' : lang === 'de' ? '/ 6 Guides' : '/ 6 guides')
     : product === 'tris'
-      ? (lang === 'it' ? '/ 3 guide' : '/ 3 guides')
+      ? (lang === 'it' ? '/ 3 guide' : lang === 'de' ? '/ 3 Guides' : '/ 3 guides')
       : product === 'crociera'
-        ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
-        : (lang === 'it' ? '/ guida' : '/ guide');
+        ? (lang === 'it' ? '/ 2 guide' : lang === 'de' ? '/ 2 Guides' : '/ 2 guides')
+        : (lang === 'it' ? '/ guida' : lang === 'de' ? '/ Guide' : '/ guide');
 
 const ctaLabel = ctaOverride ?? (
   product === 'tris'
-    ? (lang === 'it' ? 'Scegli 3 guide' : 'Choose 3 guides')
+    ? (lang === 'it' ? 'Scegli 3 guide' : lang === 'de' ? '3 Guides auswahlen' : 'Choose 3 guides')
     : product === 'bari-completa'
-      ? (lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari')
+      ? (lang === 'it' ? 'Acquista Bari Completa' : lang === 'de' ? 'Bari Komplett kaufen' : 'Get Complete Bari')
       : product === 'crociera'
-        ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package')
-        : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide')
+        ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : lang === 'de' ? 'Kreuzfahrt-Paket kaufen' : 'Get Cruise Package')
+        : (lang === 'it' ? 'Acquista guida singola' : lang === 'de' ? 'Guide kaufen' : 'Buy single guide')
 );
 
 const builderHref = lang === 'en' ? '/en/guide#builder' : lang === 'de' ? '/de/guide#builder' : '/guide#builder';
@@ -77,7 +85,7 @@ const isTris = product === 'tris';
   <header>
     {primary && (
       <p class="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-xs">
-        {lang === 'it' ? 'Più scelto' : 'Most popular'}
+        {lang === 'it' ? 'Piu scelto' : lang === 'de' ? 'Am beliebtesten' : 'Most popular'}
       </p>
     )}
     <h3 class="font-display text-2xl text-ink leading-tight">{title}</h3>
@@ -134,7 +142,7 @@ const isTris = product === 'tris';
 
       btn.disabled = true;
       const originalText = btn.textContent;
-      btn.textContent = lang === 'en' ? 'Opening checkout...' : 'Apertura pagamento...';
+      btn.textContent = lang === 'it' ? 'Apertura pagamento...' : lang === 'de' ? 'Zahlung wird geoeffnet...' : 'Opening checkout...';
 
       const BARI_SLUGS = ['bari-vecchia','san-nicola','tre-teatri','il-meglio-di-bari','porto-bari','bari-sotterranea'];
       const CROCIERA_SLUGS = ['bari-vecchia','il-meglio-di-bari'];
@@ -176,9 +184,11 @@ const isTris = product === 'tris';
         btn.disabled = false;
         btn.textContent = originalText;
         alert(
-          lang === 'en'
-            ? 'Could not open checkout. Please try again in a moment.'
-            : 'Impossibile aprire il pagamento. Riprova tra un istante.',
+          lang === 'it'
+            ? 'Impossibile aprire il pagamento. Riprova tra un istante.'
+            : lang === 'de'
+              ? 'Zahlung konnte nicht geoeffnet werden. Bitte versuche es gleich erneut.'
+              : 'Could not open checkout. Please try again in a moment.',
         );
       }
     });
