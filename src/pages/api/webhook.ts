@@ -8,6 +8,7 @@ import { renderAccessEmailDe } from '../../lib/emails/access-email-de';
 import { getCollection } from 'astro:content';
 import type { Lang } from '../../lib/i18n';
 import type Stripe from 'stripe';
+import { guideTitle } from '../../lib/guide-localization';
 
 function normalizeLang(value: string | undefined): Lang {
   if (value === 'en' || value === 'de') return value;
@@ -81,7 +82,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
   const guideTitles = guide_slugs.map((slug) => {
     const g = guides.find((g) => g.data.slug === slug);
     if (!g) return slug;
-    return lang === 'it' ? g.data.title_it : g.data.title_en;
+    return guideTitle(g.data, lang);
   });
 
   // Render email

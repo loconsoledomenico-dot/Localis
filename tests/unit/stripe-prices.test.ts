@@ -39,8 +39,8 @@ describe('PRODUCT_PRICE_CENTS', () => {
   it('single is 499', () => expect(PRODUCT_PRICE_CENTS.single).toBe(499));
   it('tris is 1199', () => expect(PRODUCT_PRICE_CENTS.tris).toBe(1199));
   it('sestina is 1999', () => expect(PRODUCT_PRICE_CENTS.sestina).toBe(1999));
-  it('puglia-completa is 2999', () => expect(PRODUCT_PRICE_CENTS['puglia-completa']).toBe(2999));
-  it('bari-completa is 1499', () => expect(PRODUCT_PRICE_CENTS['bari-completa']).toBe(1499));
+  it('puglia-completa is 3999', () => expect(PRODUCT_PRICE_CENTS['puglia-completa']).toBe(3999));
+  it('bari-completa is 1999', () => expect(PRODUCT_PRICE_CENTS['bari-completa']).toBe(1999));
   it('crociera is 799', () => expect(PRODUCT_PRICE_CENTS.crociera).toBe(799));
 });
 
@@ -124,7 +124,7 @@ describe('validateSelectedSlugs', () => {
 describe('savingsCents', () => {
   it('tris saves 298 cents', () => expect(savingsCents('tris')).toBe(298));
   it('sestina saves 995 cents', () => expect(savingsCents('sestina')).toBe(995));
-  it('puglia-completa saves 5983 cents', () => expect(savingsCents('puglia-completa')).toBe(5983));
-  it('bari-completa saves 1495 cents', () => expect(savingsCents('bari-completa')).toBe(1495));
+  it('puglia-completa saves 4983 cents', () => expect(savingsCents('puglia-completa')).toBe(4983));
+  it('bari-completa saves 995 cents', () => expect(savingsCents('bari-completa')).toBe(995));
   it('single saves 0', () => expect(savingsCents('single')).toBe(0));
 });

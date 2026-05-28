@@ -5,6 +5,7 @@ import AudioPlayer from '../../components/AudioPlayer.astro';
 import { verifyAccessToken } from '../../lib/jwt';
 import { getCollection } from 'astro:content';
 import type { Lang } from '../../lib/i18n';
+import { guideSubtitle, guideTitle } from '../../lib/guide-localization';
 
 const { token } = Astro.params;
 
@@ -68,8 +69,8 @@ const labels = lang === 'it'
     <div class="flex flex-col gap-2xl">
       {userGuides.map((guide) => (
         <section>
-          <h2 class="font-display text-2xl text-ink mb-xs">{lang === 'it' ? guide.data.title_it : guide.data.title_en}</h2>
-          <p class="text-sm text-ink-muted mb-md">{lang === 'it' ? guide.data.subtitle_it : guide.data.subtitle_en}</p>
+          <h2 class="font-display text-2xl text-ink mb-xs">{guideTitle(guide.data, lang)}</h2>
+          <p class="text-sm text-ink-muted mb-md">{guideSubtitle(guide.data, lang)}</p>
           <AudioPlayer guide={guide.data} token={token} lang={lang} />
         </section>
       ))}

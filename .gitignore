@@ -53,6 +53,7 @@ r2_audio/
 chunks/
 public/audio/guides/
 public/audio/guides/backup-r2/
+private/audio/guides/
 scripts/*.mp3
 public/video/
 

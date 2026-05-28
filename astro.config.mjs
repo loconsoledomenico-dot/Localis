@@ -51,7 +51,6 @@ export default defineConfig({
         !page.includes('/recover'),
       changefreq: 'weekly',
       priority: 0.8,
-      lastmod: new Date(),
     }),
   ],
 });

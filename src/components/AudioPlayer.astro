@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { formatDuration } from '../lib/format';
 import type { Lang } from '../lib/i18n';
+import { chapterStartSeconds, chapterTitle, guideDurationSeconds } from '../lib/guide-localization';
 
 export interface Props {
   guide: CollectionEntry<'guides'>['data'];
@@ -10,6 +11,7 @@ export interface Props {
 }
 
 const { guide, token, lang } = Astro.props;
+const durationSeconds = guideDurationSeconds(guide, lang);
 
 const labels = {
   it: {
@@ -58,7 +60,7 @@ const labels = {
   data-guide-slug={guide.slug}
   data-token={token}
   data-lang={lang}
-  data-duration={guide.duration_seconds}
+  data-duration={durationSeconds}
 >
   <div class="p-md flex items-center gap-md">
     <button
@@ -88,7 +90,7 @@ const labels = {
       </div>
       <div class="flex justify-between mt-xs text-xs text-ink-subtle font-mono tabular-nums">
         <span class="ap-current">0:00</span>
-        <span class="ap-duration">{formatDuration(guide.duration_seconds, 'long')}</span>
+        <span class="ap-duration">{formatDuration(durationSeconds, 'long')}</span>
       </div>
     </div>
 
@@ -107,17 +109,18 @@ const labels = {
     </summary>
     <ol class="px-md pb-md flex flex-col gap-2xs">
       {guide.chapters.map((ch, i) => {
-        const title = lang === 'it' ? ch.title_it : ch.title_en;
+        const title = chapterTitle(ch, lang);
+        const startSeconds = chapterStartSeconds(ch, lang);
         return (
           <li>
             <button
               type="button"
               class="ap-chapter w-full text-left flex items-baseline gap-sm py-xs hover:bg-surface rounded-sm transition-colors duration-fast"
-              data-time={ch.start_seconds}
+              data-time={startSeconds}
             >
               <span class="font-mono text-xs text-ink-subtle tabular-nums w-6">{String(i + 1).padStart(2, '0')}</span>
               <span class="flex-1 text-sm text-ink">{title}</span>
-              <span class="font-mono text-xs text-ink-subtle tabular-nums">{formatDuration(ch.start_seconds, 'long')}</span>
+              <span class="font-mono text-xs text-ink-subtle tabular-nums">{formatDuration(startSeconds, 'long')}</span>
             </button>
           </li>
         );

@@ -26,22 +26,29 @@ const guides = defineCollection({
     ]),
     title_it: z.string(),
     title_en: z.string(),
+    title_de: z.string().optional(),
     subtitle_it: z.string(),
     subtitle_en: z.string(),
+    subtitle_de: z.string().optional(),
     duration_seconds: z.number().int().nonnegative(),
     duration_seconds_en: z.number().int().nonnegative().optional(),
+    duration_seconds_de: z.number().int().nonnegative().optional(),
     cover: z.string(),
     audio_full_key_it: z.string(),
     audio_full_key_en: z.string(),
+    audio_full_key_de: z.string().optional(),
     audio_trailer_path: z.string(),
     audio_trailer_path_en: z.string().optional(),
+    audio_trailer_path_de: z.string().optional(),
     chapters: z
       .array(
         z.object({
           title_it: z.string(),
           title_en: z.string(),
+          title_de: z.string().optional(),
           start_seconds: z.number().int().nonnegative(),
           start_seconds_en: z.number().int().nonnegative().optional(),
+          start_seconds_de: z.number().int().nonnegative().optional(),
         }),
       )
       .min(1),
@@ -57,6 +64,7 @@ const guides = defineCollection({
         photo: z.string(),
         bio_it: z.string(),
         bio_en: z.string(),
+        bio_de: z.string().optional(),
       })
       .optional(),
     price_cents: z.number().int().default(499),
@@ -65,6 +73,7 @@ const guides = defineCollection({
     seo: z.object({
       description_it: z.string().max(160),
       description_en: z.string().max(160),
+      description_de: z.string().max(160).optional(),
     }),
   }),
 });

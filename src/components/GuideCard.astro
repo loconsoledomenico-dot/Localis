@@ -2,6 +2,7 @@
 import { localizedHref, type Lang } from '../lib/i18n';
 import { formatDuration, formatPrice } from '../lib/format';
 import type { CollectionEntry } from 'astro:content';
+import { guideDurationSeconds, guideSubtitle, guideTitle } from '../lib/guide-localization';
 
 export interface Props {
   guide: CollectionEntry<'guides'>;
@@ -11,13 +12,13 @@ export interface Props {
 
 const { guide, lang, index } = Astro.props;
 const data = guide.data;
-const title = lang === 'it' ? data.title_it : data.title_en;
-const subtitle = lang === 'it' ? data.subtitle_it : data.subtitle_en;
+const title = guideTitle(data, lang);
+const subtitle = guideSubtitle(data, lang);
 const isSoon = data.status === 'soon';
 const href = isSoon ? '#' : localizedHref(`/guide/${data.slug}`, lang);
 
 const chapterCount = data.chapters.length;
-const durationLabel = formatDuration(data.duration_seconds);
+const durationLabel = formatDuration(guideDurationSeconds(data, lang));
 const priceLabel = formatPrice(data.price_cents);
 const indexLabel = String(index + 1).padStart(2, '0');
 ---
@@ -37,7 +38,7 @@ const indexLabel = String(index + 1).padStart(2, '0');
     />
     {isSoon && (
       <div class="absolute top-sm right-sm bg-ink/80 text-surface text-xs uppercase tracking-widest font-semibold px-sm py-2xs rounded-full backdrop-blur-sm">
-        {lang === 'it' ? 'Presto' : 'Soon'}
+        {lang === 'it' ? 'Presto' : lang === 'de' ? 'Bald' : 'Soon'}
       </div>
     )}
   </div>
@@ -65,7 +66,7 @@ const indexLabel = String(index + 1).padStart(2, '0');
       <span class="font-display text-lg italic text-accent">{priceLabel}</span>
       {!isSoon && (
         <span class="font-body text-xs uppercase tracking-widest font-semibold text-ink-subtle group-hover:text-ink transition-colors duration-fast">
-          {lang === 'it' ? 'Ascolta →' : 'Listen →'}
+          {lang === 'it' ? 'Ascolta →' : lang === 'de' ? 'Anhoren →' : 'Listen →'}
         </span>
       )}
     </div>

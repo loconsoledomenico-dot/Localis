@@ -6,6 +6,7 @@ import {
   GARGANO_GUIDES,
 } from '../lib/stripe-prices';
 import { getCollection } from 'astro:content';
+import { guideSubtitle, guideTitle } from '../lib/guide-localization';
 
 export interface Props {
   lang: Lang;
@@ -26,11 +27,10 @@ const guideMap = new Map<string, GuideCard>();
 for (const entry of allEntries) {
   const d = entry.data;
   const slug = (d.slug ?? entry.id) as string;
-  const isIt = lang === 'it';
   guideMap.set(slug, {
     slug,
-    title:    isIt ? (d.title_it as string)    : ((d.title_en ?? d.title_it) as string),
-    subtitle: isIt ? (d.subtitle_it as string) : ((d.subtitle_en ?? d.subtitle_it) as string),
+    title: guideTitle(d, lang),
+    subtitle: guideSubtitle(d, lang),
     cover:    d.cover as string,
   });
 }
@@ -42,20 +42,22 @@ const ZONE_ORDER = [
 ];
 ---
 
-<section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : 'Choose your guides'}>
+<section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : lang === 'de' ? 'Guides auswahlen' : 'Choose your guides'}>
   <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
 
     <div class="text-center mb-2xl">
       <p class="text-xs font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm">
-        {lang === 'it' ? '— Costruisci il tuo pacchetto —' : '— Build your package —'}
+        {lang === 'it' ? '— Costruisci il tuo pacchetto —' : lang === 'de' ? '— Stelle dein Paket zusammen —' : '— Build your package —'}
       </p>
       <h2 class="font-display font-light text-[clamp(1.8rem,4vw,3rem)] text-ink leading-tight">
-        {lang === 'it' ? 'Scegli le guide che vuoi.' : 'Choose the guides you want.'}
+        {lang === 'it' ? 'Scegli le guide che vuoi.' : lang === 'de' ? 'Wahle die Guides aus, die du mochtest.' : 'Choose the guides you want.'}
       </h2>
       <p class="font-body text-ink-muted text-base mt-sm max-w-[48ch] mx-auto">
         {lang === 'it'
           ? 'Seleziona 3 per il Tris (€11,99), 6 per la Sestina (€19,99), o prendi la Puglia Completa (€39,99). Una guida? €4,99.'
-          : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€39.99). Just one? €4.99.'}
+          : lang === 'de'
+            ? 'Wahle 3 fur Tris (EUR 11,99), 6 fur Sestina (EUR 19,99), oder nimm Puglia Completa (EUR 39,99). Nur ein Guide? EUR 4,99.'
+            : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€39.99). Just one? €4.99.'}
       </p>
     </div>
 
@@ -96,7 +98,7 @@ const ZONE_ORDER = [
         <div class="builder-cta-status">
           <span id="builder-count" class="builder-count-badge">0</span>
           <span id="builder-status-text" class="text-sm text-ink-muted">
-            {lang === 'it' ? 'guide selezionate' : 'guides selected'}
+            {lang === 'it' ? 'guide selezionate' : lang === 'de' ? 'Guides ausgewahlt' : 'guides selected'}
           </span>
         </div>
         <button
@@ -106,7 +108,7 @@ const ZONE_ORDER = [
           disabled
           data-lang={lang}
         >
-          {lang === 'it' ? 'Seleziona almeno una guida' : 'Select at least one guide'}
+          {lang === 'it' ? 'Seleziona almeno una guida' : lang === 'de' ? 'Mindestens einen Guide auswahlen' : 'Select at least one guide'}
         </button>
       </div>
       <p id="builder-upsell" class="builder-upsell" aria-hidden="true"></p>
@@ -299,6 +301,7 @@ const ZONE_ORDER = [
   const upsell = document.getElementById('builder-upsell') as HTMLElement;
   const lang = btn?.dataset.lang ?? 'it';
   const it = lang === 'it';
+  const de = lang === 'de';
 
   if (!btn) throw new Error('[GuideBuilder] checkout btn not found');
 
@@ -323,42 +326,54 @@ const ZONE_ORDER = [
     countBadge.textContent = String(n);
     statusText.textContent = it
       ? (n === 1 ? 'guida selezionata' : 'guide selezionate')
-      : (n === 1 ? 'guide selected' : 'guides selected');
+      : de
+        ? (n === 1 ? 'Guide ausgewahlt' : 'Guides ausgewahlt')
+        : (n === 1 ? 'guide selected' : 'guides selected');
 
     const tier = TIERS.find((t) => t.count === n) ?? null;
     const nextTier = TIERS.find((t) => t.count > n) ?? null;
 
     if (n === 0) {
       btn.disabled = true;
-      btn.textContent = it ? 'Seleziona almeno una guida' : 'Select at least one guide';
+      btn.textContent = it ? 'Seleziona almeno una guida' : de ? 'Mindestens einen Guide auswahlen' : 'Select at least one guide';
       upsell.textContent = '';
     } else if (tier) {
       btn.disabled = false;
       btn.textContent = it
         ? `Acquista ${tier.label} · ${fmt(tier.cents, lang)}`
-        : `Get ${tier.label} · ${fmt(tier.cents, lang)}`;
+        : de
+          ? `${tier.label} kaufen · ${fmt(tier.cents, lang)}`
+          : `Get ${tier.label} · ${fmt(tier.cents, lang)}`;
       if (nextTier) {
         const extra = nextTier.count - n;
         upsell.textContent = it
           ? `➕ Aggiungi ${extra} ${extra === 1 ? 'guida' : 'guide'} → ${nextTier.label} a ${fmt(nextTier.cents, lang)} (risparmi di più)`
-          : `➕ Add ${extra} more guide${extra > 1 ? 's' : ''} → ${nextTier.label} at ${fmt(nextTier.cents, lang)}`;
+          : de
+            ? `+ ${extra} weitere${extra === 1 ? 'n Guide' : ' Guides'} hinzufugen → ${nextTier.label} fur ${fmt(nextTier.cents, lang)}`
+            : `➕ Add ${extra} more guide${extra > 1 ? 's' : ''} → ${nextTier.label} at ${fmt(nextTier.cents, lang)}`;
       } else {
-        upsell.textContent = it ? '🎉 Hai la Puglia Completa!' : '🎉 You have all of Puglia!';
+        upsell.textContent = it ? 'Hai la Puglia Completa!' : de ? 'Du hast ganz Apulien!' : 'You have all of Puglia!';
       }
     } else if (n === 1) {
       btn.disabled = false;
       btn.textContent = it
         ? `Acquista guida singola · ${fmt(SINGLE_CENTS, lang)}`
-        : `Buy single guide · ${fmt(SINGLE_CENTS, lang)}`;
+        : de
+          ? `Einzelnen Guide kaufen · ${fmt(SINGLE_CENTS, lang)}`
+          : `Buy single guide · ${fmt(SINGLE_CENTS, lang)}`;
       upsell.textContent = it
         ? `➕ Aggiungi 2 guide → Tris a ${fmt(1199, lang)} (risparmi €2,98)`
-        : `➕ Add 2 more → Tris at ${fmt(1199, lang)} (save €2.98)`;
+        : de
+          ? `+ 2 weitere Guides → Tris fur ${fmt(1199, lang)}`
+          : `➕ Add 2 more → Tris at ${fmt(1199, lang)} (save €2.98)`;
     } else {
       btn.disabled = true;
       const toNext = nextTier ? nextTier.count - n : 0;
       btn.textContent = it
         ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} → ${nextTier?.label ?? ''}`
-        : `Add ${toNext} more guide${toNext > 1 ? 's' : ''} → ${nextTier?.label ?? ''}`;
+        : de
+          ? `${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzufugen → ${nextTier?.label ?? ''}`
+          : `Add ${toNext} more guide${toNext > 1 ? 's' : ''} → ${nextTier?.label ?? ''}`;
       if (nextTier) {
         upsell.textContent = `${nextTier.label} · ${fmt(nextTier.cents, lang)}`;
       }
@@ -381,7 +396,7 @@ const ZONE_ORDER = [
 
     btn.disabled = true;
     const originalText = btn.textContent;
-    btn.textContent = it ? 'Apertura pagamento...' : 'Opening checkout...';
+    btn.textContent = it ? 'Apertura pagamento...' : de ? 'Zahlung wird geoffnet...' : 'Opening checkout...';
 
     try {
       const bodyPayload: Record<string, unknown> = { product, lang, selectedSlugs: slugsArray };
@@ -405,7 +420,7 @@ const ZONE_ORDER = [
       console.error('[builder]', err);
       btn.disabled = false;
       btn.textContent = originalText;
-      alert(it ? 'Impossibile aprire il pagamento. Riprova.' : 'Could not open checkout. Please try again.');
+      alert(it ? 'Impossibile aprire il pagamento. Riprova.' : de ? 'Zahlung konnte nicht geoffnet werden. Bitte erneut versuchen.' : 'Could not open checkout. Please try again.');
     }
   });
 </script>

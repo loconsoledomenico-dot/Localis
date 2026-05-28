@@ -1,9 +1,11 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { generateAccessToken, verifyAccessToken, type AccessTokenPayload } from '../../src/lib/jwt';
+import { generateAccessToken, tokenRevocationHash, verifyAccessToken, type AccessTokenPayload } from '../../src/lib/jwt';
 
 describe('JWT module', () => {
   beforeEach(() => {
     vi.stubEnv('JWT_SECRET', 'test-secret-min-32-chars-aaaaaaaaaaaa');
+    vi.stubEnv('JWT_REVOKED_TOKEN_HASHES', '');
+    vi.stubEnv('JWT_REVOKED_SESSION_IDS', '');
   });
 
   describe('generateAccessToken', () => {
@@ -83,6 +85,32 @@ describe('JWT module', () => {
       const after = Math.floor(Date.now() / 1000);
       expect(verified!.iat).toBeGreaterThanOrEqual(before);
       expect(verified!.iat).toBeLessThanOrEqual(after);
+    });
+
+    it('returns null when the token hash is revoked', () => {
+      const token = generateAccessToken({
+        email: 'a@b.com',
+        guide_slugs: ['x'],
+        stripe_session_id: 'cs_revoked_hash',
+        partner_id: null,
+      });
+
+      vi.stubEnv('JWT_REVOKED_TOKEN_HASHES', tokenRevocationHash(token));
+
+      expect(verifyAccessToken(token)).toBeNull();
+    });
+
+    it('returns null when the Stripe session id is revoked', () => {
+      const token = generateAccessToken({
+        email: 'a@b.com',
+        guide_slugs: ['x'],
+        stripe_session_id: 'cs_revoked_session',
+        partner_id: null,
+      });
+
+      vi.stubEnv('JWT_REVOKED_SESSION_IDS', 'cs_other, cs_revoked_session');
+
+      expect(verifyAccessToken(token)).toBeNull();
     });
   });
 });

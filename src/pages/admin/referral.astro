@@ -1,23 +1,62 @@
 ---
 import { fetchPartnerSales, groupByPartner, formatEur } from '../../lib/referral';
 
-// Simple token-based protection
+const ADMIN_COOKIE = 'lg_admin_referral';
 const ADMIN_TOKEN = import.meta.env.ADMIN_TOKEN;
+const requestUrl = new URL(Astro.request.url);
+
+Astro.response.headers.set('Cache-Control', 'private, no-store');
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+
+if (requestUrl.searchParams.has('token')) {
+  requestUrl.searchParams.delete('token');
+  return Astro.redirect(requestUrl.toString(), 303);
+}
+
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  const formToken = String(form.get('token') || '');
+
+  if (ADMIN_TOKEN && formToken === ADMIN_TOKEN) {
+    Astro.cookies.set(ADMIN_COOKIE, formToken, {
+      path: '/admin/referral',
+      httpOnly: true,
+      secure: import.meta.env.PROD,
+      sameSite: 'strict',
+      maxAge: 60 * 60 * 8,
+    });
+    return Astro.redirect('/admin/referral', 303);
+  }
+}
+
 const reqToken = Astro.request.headers.get('x-admin-token')
-  ?? new URL(Astro.request.url).searchParams.get('token');
+  ?? Astro.cookies.get(ADMIN_COOKIE)?.value;
 
 if (!ADMIN_TOKEN || reqToken !== ADMIN_TOKEN) {
   return new Response(
-    `<html><body style="font-family:monospace;padding:2rem">
-      <h2>401 — Token mancante o non valido</h2>
-      <p>Aggiungi <code>?token=TUO_ADMIN_TOKEN</code> all'URL.</p>
+    `<html><head>
+      <meta name="robots" content="noindex,nofollow">
+    </head><body style="font-family:system-ui,sans-serif;padding:2rem;max-width:420px">
+      <h2>Accesso admin referral</h2>
+      <form method="post">
+        <label for="token" style="display:block;margin-bottom:.5rem">Admin token</label>
+        <input id="token" name="token" type="password" autocomplete="current-password" required style="width:100%;padding:.65rem;margin-bottom:.75rem">
+        <button type="submit" style="padding:.65rem 1rem">Accedi</button>
+      </form>
     </body></html>`,
-    { status: 401, headers: { 'Content-Type': 'text/html' } },
+    {
+      status: 401,
+      headers: {
+        'Content-Type': 'text/html; charset=utf-8',
+        'Cache-Control': 'private, no-store',
+        'X-Robots-Tag': 'noindex, nofollow',
+      },
+    },
   );
 }
 
 // Optional: filter from date via ?from=YYYY-MM-DD
-const fromParam = new URL(Astro.request.url).searchParams.get('from');
+const fromParam = requestUrl.searchParams.get('from');
 const createdAfter = fromParam ? new Date(fromParam) : undefined;
 
 let sales: Awaited<ReturnType<typeof fetchPartnerSales>> = [];
@@ -40,6 +79,7 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
   <title>Localis · Admin Referral</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -122,7 +162,7 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
   <p class="meta">
     Generata il {generatedAt} · Fonte: Stripe live
     {fromParam && <span> · Filtro da: <strong>{fromParam}</strong></span>}
-    · <a href="?token={reqToken}">Aggiorna</a>
+    · <a href={fromParam ? `?from=${fromParam}` : '/admin/referral'}>Aggiorna</a>
   </p>
 
   {error && <div class="error"><strong>Errore Stripe:</strong> {error}</div>}
@@ -152,7 +192,7 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
     <label for="from-date">Da data:</label>
     <input type="date" id="from-date" value={fromParam ?? ''} />
     <button id="filter-btn">Filtra</button>
-    {fromParam && <a href={`?token=${reqToken}`} style="font-size:12px;color:var(--muted)">Rimuovi filtro</a>}
+    {fromParam && <a href="/admin/referral" style="font-size:12px;color:var(--muted)">Rimuovi filtro</a>}
   </div>
 
   <!-- Tabella riepilogo partner -->

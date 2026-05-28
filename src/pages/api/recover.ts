@@ -4,9 +4,12 @@ import { generateAccessToken } from '../../lib/jwt';
 import { sendEmail } from '../../lib/resend';
 import { renderAccessEmailIt } from '../../lib/emails/access-email-it';
 import { renderAccessEmailEn } from '../../lib/emails/access-email-en';
+import { renderAccessEmailDe } from '../../lib/emails/access-email-de';
 import { getCollection } from 'astro:content';
 import type Stripe from 'stripe';
 import { hasAllowedOrigin } from '../../lib/request-security';
+import type { Lang } from '../../lib/i18n';
+import { guideTitle } from '../../lib/guide-localization';
 
 // Simple in-memory rate limit (resets on cold start)
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
@@ -43,7 +46,7 @@ export const POST: APIRoute = async ({ request, clientAddress, url }) => {
   }
 
   const email = (body.email || '').trim().toLowerCase();
-  const lang = (body.lang === 'en' ? 'en' : 'it') as 'it' | 'en';
+  const lang: Lang = body.lang === 'en' || body.lang === 'de' ? body.lang : 'it';
 
   if (!email || !email.includes('@')) {
     return jsonError(400, 'Invalid email');
@@ -105,18 +108,20 @@ export const POST: APIRoute = async ({ request, clientAddress, url }) => {
   });
 
   const siteUrl = (process.env.PUBLIC_SITE_URL || 'https://localis.guide').replace(/\/$/, '');
-  const accessUrl = `${siteUrl}/access/${token}`;
+  const accessUrl = `${siteUrl}/access/${token}?lang=${lang}`;
 
   // Look up guide titles in language
   const guides = await getCollection('guides');
   const guideTitles = allGuideSlugs.map((slug) => {
     const g = guides.find((g) => g.data.slug === slug);
     if (!g) return slug;
-    return lang === 'en' ? g.data.title_en : g.data.title_it;
+    return guideTitle(g.data, lang);
   });
 
   const { subject, html, text } = lang === 'en'
     ? renderAccessEmailEn({ accessUrl, guideTitles })
+    : lang === 'de'
+      ? renderAccessEmailDe({ accessUrl, guideTitles })
     : renderAccessEmailIt({ accessUrl, guideTitles });
 
   await sendEmail({ to: email, subject, html, text });

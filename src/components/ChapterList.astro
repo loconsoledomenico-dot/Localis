@@ -1,13 +1,16 @@
 ---
 import { formatDuration } from '../lib/format';
 import { type Lang } from '../lib/i18n';
+import { chapterStartSeconds, chapterTitle } from '../lib/guide-localization';
 
 export interface Props {
   chapters: Array<{
     title_it: string;
     title_en: string;
+    title_de?: string;
     start_seconds: number;
     start_seconds_en?: number;
+    start_seconds_de?: number;
   }>;
   lang: Lang;
 }
@@ -16,8 +19,8 @@ const { chapters, lang } = Astro.props;
 ---
 <ol class="flex flex-col gap-sm">
   {chapters.map((ch, i) => {
-    const title = lang === 'it' ? ch.title_it : ch.title_en;
-    const seconds = lang === 'en' && ch.start_seconds_en !== undefined ? ch.start_seconds_en : ch.start_seconds;
+    const title = chapterTitle(ch, lang);
+    const seconds = chapterStartSeconds(ch, lang);
     const time = formatDuration(seconds, 'long');
     const num = String(i + 1).padStart(2, '0');
     return (

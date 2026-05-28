@@ -11,6 +11,7 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
 import { audioObjectLD, productLD, touristAttractionLD } from '../../../lib/seo';
+import { guideDescription, guideDurationSeconds, guideSubtitle, guideTitle, narratorBio } from '../../../lib/guide-localization';
 
 const CITY_DEST: Record<string, { href: string; label: string }> = {
   bari: { href: '/de/bari', label: 'Bari' },
@@ -37,18 +38,20 @@ export async function getStaticPaths() {
 
 const { guide } = Astro.props;
 const data = guide.data;
-const durationLabel = formatDuration(data.duration_seconds_en ?? data.duration_seconds);
-const title = data.title_en;
-const subtitle = data.subtitle_en;
-const description = data.seo.description_en;
+const lang = 'de';
+const durationSeconds = guideDurationSeconds(data, lang);
+const durationLabel = formatDuration(durationSeconds);
+const title = guideTitle(data, lang);
+const subtitle = guideSubtitle(data, lang);
+const description = guideDescription(data, lang);
 
 const ld: object[] = [
   audioObjectLD({
     slug: data.slug,
     title,
     description,
-    durationSeconds: data.duration_seconds_en ?? data.duration_seconds,
-    language: 'de',
+    durationSeconds,
+    language: lang,
     priceCents: data.price_cents,
     coords: data.coords_start,
     cityName: data.city,
@@ -65,7 +68,7 @@ ld.push(productLD({
   description,
   cover: data.cover,
   priceCents: data.price_cents,
-  language: 'de',
+  language: lang,
 }));
 ---
 <Layout title={`${title} - Localis`} description={description} lang="de" ogImage={`/og/og-${data.slug}.jpg`}>
@@ -86,18 +89,18 @@ ld.push(productLD({
         <NarratorCard
           name={data.narrator.name}
           photo={data.narrator.photo}
-          bio={data.narrator.bio_en}
-          lang="de"
+          bio={narratorBio(data, lang) ?? ''}
+          lang={lang}
         />
       )}
 
       <section>
         <h2 class="font-display text-3xl text-ink mb-md">Kapitel</h2>
-        <ChapterList chapters={data.chapters} lang="de" />
+        <ChapterList chapters={data.chapters} lang={lang} />
       </section>
 
       {data.coords_start && (
-        <StartMap lat={data.coords_start.lat} lng={data.coords_start.lng} lang="de" />
+        <StartMap lat={data.coords_start.lat} lng={data.coords_start.lng} lang={lang} />
       )}
     </div>
 
