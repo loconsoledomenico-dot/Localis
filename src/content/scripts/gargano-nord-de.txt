@@ -1,0 +1,276 @@
+GARGANO — DIE VERGESSENE KÜSTE
+Stimme: Ferdinando, 68 Jahre alt, vierte Generation am Familien-Trabucco, heute Restaurantbetreiber
+
+=====
+KAP. 1 — INTRO: DER TRABUCCO
+voice: dante
+
+Setz dich kurz auf den Rand. <break time="1.2s"/>
+
+Schau nach unten. <break time="0.8s"/> Das Wasser ist direkt unter deinen Füßen. <break time="0.8s"/> Wacholderbalken halten alles zusammen — <break time="0.5s"/> dasselbe Holz, das mein Urgroßvater verwendet hat, als er diese Konstruktion gebaut hat. <break time="0.8s"/> Neunzig Jahre Salz, Wind und Wellen. <break time="0.8s"/> Halten immer noch. <break time="1.5s"/>
+
+Ich heiße Ferdinando. <break time="0.8s"/> Achtundsechzig Jahre alt. <break time="0.8s"/> Vierte Generation auf diesem Trabucco. <break time="0.8s"/> Mein Urgroßvater hat ihn in den Dreißigern gebaut, <break time="0.5s"/> mein Großvater hat hier sein ganzes Leben gefischt, <break time="0.5s"/> mein Vater auch. <break time="0.8s"/> Ich habe mit elf angefangen — <break time="0.5s"/> um vier aufstehen, <break time="0.5s"/> die Netze auswerfen, <break time="0.5s"/> hochziehen was kam. <break time="1.2s"/>
+
+Vor dreißig Jahren habe ich das Restaurant auf dem Trabucco eröffnet. <break time="0.8s"/> Nicht weil ich aufgehört hatte zu fischen — <break time="0.5s"/> sondern weil der Fisch, den ich fing, so gut war, <break time="0.5s"/> dass es sich lohnte, ihn hier zu kochen, <break time="0.5s"/> an Ort und Stelle, <break time="0.5s"/> mit dem Meer darunter. <break time="1.2s"/>
+
+Ich erzähle euch von dieser Küste so, wie sie jemand kennt, der sein ganzes Leben hier verbracht hat. <break time="0.8s"/> Vom Trabucco aus sieht man alles. <break time="0.8s"/> Und man versteht alles. <break time="1.5s"/>
+
+=====
+KAP. 2 — DIE TRABUCCHI: FISCHMASCHINEN AM MEER
+voice: dante
+
+Ein Trabucco ist keine Hütte auf dem Wasser. <break time="1.0s"/>
+
+Er ist eine Maschine. <break time="1.2s"/>
+
+Eine Fischmaschine, gebaut auf Fels, <break time="0.5s"/> mit einer Präzision konstruiert, die noch heute überrascht. <break time="0.8s"/> Die Antennen — jene langen Balken, die sich fächerförmig über das Meer ausbreiten — <break time="0.5s"/> halten das Netz. <break time="0.8s"/> Das Netz lässt sich senkrecht ins Wasser ab, durch ein System aus Seilen und Gegengewichten. <break time="0.8s"/> Wenn die Fische darunter vorbeiziehen, <break time="0.5s"/> zieht man es hoch. <break time="1.2s"/>
+
+Die Kraft kommt vom Menschen — <break time="0.5s"/> keine Motoren, kein Strom. <break time="0.8s"/> Ein System aus Hebeln und Flaschenzügen, das mein Urgroßvater auswendig kannte <break time="0.5s"/> und das ich von meinem Vater gelernt habe — <break time="0.5s"/> durch Zuschauen, <break time="0.5s"/> nicht durch Lesen. <break time="1.2s"/>
+
+Die Trabucchi am Gargano sind etwas Besonderes — <break time="0.5s"/> so findet man sie nirgendwo sonst auf der Welt. <break time="0.8s"/> In den Abruzzen und in Molise gibt es sie auch, <break time="0.5s"/> aber die am Gargano sind die ältesten, <break time="0.5s"/> die größten, <break time="0.5s"/> die am besten gebauten. <break time="1.2s"/>
+
+Die Küste zwischen Vieste und Peschici hatte einst fünfzig davon. <break time="0.8s"/> Heute sind noch etwa zwanzig übrig, <break time="0.5s"/> fast alle zu Restaurants umgewandelt. <break time="0.8s"/> Gefischt wird noch immer — <break time="0.5s"/> aber was abends auf eurem Teller landet, <break time="0.5s"/> ist an genau jenem Morgen aus diesem Netz gekommen. <break time="0.8s"/> Schlimm finde ich das nicht. <break time="1.5s"/>
+
+=====
+KAP. 3 — LESINA: DER SEE ZWISCHEN MEER UND LAND
+voice: dante
+
+Der Lago di Lesina ist die erste Überraschung des nördlichen Gargano. <break time="1.2s"/>
+
+Man fährt an der Hauptstraße entlang und sieht das Meer auf der rechten Seite. <break time="0.8s"/> Dann plötzlich, links, <break time="0.5s"/> ein See. <break time="0.8s"/> Zweiundvierzig Quadratkilometer stillen Wassers, <break time="0.5s"/> von der Adria getrennt durch einen Sandstreifen von gerade einmal wenigen hundert Metern Breite. <break time="1.2s"/>
+
+Das Wasser ist brackig — <break time="0.5s"/> weder Meer noch Süßwasser. <break time="0.8s"/> Meerwasser kommt durch zwei künstliche Kanäle herein, <break time="0.5s"/> Süßwasser fließt aus den Bächen zu. <break time="0.8s"/> Das Ergebnis ist ein einzigartiges Ökosystem — <break time="0.5s"/> Aale, Wolfsbarsche, Goldbrassen, <break time="0.5s"/> die unter völlig anderen Bedingungen als im offenen Meer aufwachsen. <break time="1.2s"/>
+
+Die Austern von Lesina. <break time="0.8s"/> Davon habe ich mein ganzes Leben gehört. <break time="0.8s"/> Die Temperaturen des Sees sind perfekt — <break time="0.5s"/> nicht zu warm, nicht zu kalt. <break time="0.8s"/> Die Austern wachsen langsam, <break time="0.5s"/> ernähren sich vom Plankton des Sees <break time="0.5s"/> und entwickeln einen Geschmack, den keine Meeresauster hat. <break time="0.8s"/> Süßer, <break time="0.5s"/> weniger Jod, <break time="0.5s"/> mit etwas Mineralischem, das ich nicht in Worte fassen kann. <break time="1.2s"/>
+
+Das Dorf Lesina liegt am Nordrand des Sees. <break time="0.8s"/> Dreitausend Einwohner, <break time="0.5s"/> ein kleines, aber lebendiges historisches Zentrum, <break time="0.5s"/> die Kirche Santa Maria Assunta mit Blick aufs Wasser. <break time="0.8s"/> Massentourismus kommt hier nicht an — <break time="0.5s"/> es ist ein Ort für Menschen, die etwas Echtes suchen. <break time="1.5s"/>
+
+=====
+KAP. 4 — RODI GARGANICO: ZITRUSFRÜCHTE AM MEER
+voice: dante
+
+Rodi Garganico hat den schönsten Duft am Gargano. <break time="1.2s"/>
+
+Im Winter, <break time="0.5s"/> wenn man zum Dorf fährt, <break time="0.5s"/> riecht man die Zitrusfrüchte, bevor man sie sieht. <break time="0.8s"/> Orangen, Mandarinen, Zitronen — <break time="0.5s"/> seit Jahrhunderten auf Terrassen angebaut, <break time="0.5s"/> die zum Meer hin abfallen. <break time="1.0s"/>
+
+Die Lage ist besonders. <break time="0.8s"/> Rodi liegt auf einem Vorgebirge, das nach Westen auf den Golf von Manfredonia blickt. <break time="0.8s"/> Der Sonnenuntergang hier ist keine Kleinigkeit — <break time="0.5s"/> die Sonne versinkt direkt vor euch im Wasser, <break time="0.5s"/> die Diomedischen Inseln am Horizont — <break time="0.5s"/> der alte Name der Tremiti, <break time="0.5s"/> so nannten sie die Griechen. <break time="1.2s"/>
+
+Das historische Zentrum ist mittelalterlich — <break time="0.5s"/> enge Gassen, <break time="0.5s"/> niedrige Bögen, <break time="0.5s"/> Treppen, die zum Hafen hinunterführen. <break time="0.8s"/> Der Hafen ist noch immer ein Fischerhafen — <break time="0.5s"/> die Boote fahren nachts hinaus <break time="0.5s"/> und kommen morgens zurück. <break time="0.8s"/> Dieselbe Szene wie vor fünfzig Jahren. <break time="1.2s"/>
+
+Der Fisch aus Rodi ist im ganzen Gargano berühmt. <break time="0.8s"/> Nicht aus einem bestimmten Grund — <break time="0.5s"/> sondern weil die Fischer aus Rodi wirklich jede Nacht hinausfahren, <break time="0.5s"/> bei jedem Wetter, <break time="0.5s"/> und bringen, was sie finden. <break time="0.8s"/> Das ist kein Folklore. <break time="0.8s"/> Das ist Arbeit. <break time="1.5s"/>
+
+=====
+KAP. 5 — PESCHICI: DAS DORF, DAS NICHT FÄLLT
+voice: dante
+
+Peschici scheint seit tausend Jahren im Begriff zu sein, ins Meer zu stürzen. <break time="1.2s"/>
+
+Und fällt nicht. <break time="1.5s"/>
+
+Das historische Zentrum klammert sich an einen Felssporn <break time="0.5s"/> am Rand des nördlichen Vorgebirges. <break time="0.8s"/> Die weißen Häuser sind übereinander gebaut, <break time="0.5s"/> verbunden durch Außentreppen, <break time="0.5s"/> Bögen über den Gassen, <break time="0.5s"/> Terrassen, die sich über dem Nichts öffnen. <break time="1.2s"/>
+
+Die normannische Burg oben — <break time="0.5s"/> 10. Jahrhundert, noch stehend, <break time="0.5s"/> Türme noch intakt. <break time="0.8s"/> Von den Normannen gebaut, um die Küste vor sarazenischen Überfällen zu schützen. <break time="0.8s"/> Tausend Jahre später ist sie noch dort, <break time="0.5s"/> und der Blick von oben reicht über die gesamte Küste bis nach Vieste. <break time="1.2s"/>
+
+Im Sommer explodiert Peschici. <break time="0.8s"/> Aus dreitausend werden fünfzigtausend Einwohner. <break time="0.8s"/> Die Gassen füllen sich mit deutschen, niederländischen, italienischen Touristen. <break time="0.8s"/> Restaurants haben Schlangen draußen. <break time="0.8s"/> Jede Terrasse ist ein Tisch. <break time="1.2s"/>
+
+Im Winter ist Peschici ein anderer Ort. <break time="0.8s"/> Alte Männer spielen Karten in der Bar, <break time="0.5s"/> Fischer flicken Netze am Hafen, <break time="0.5s"/> Kinder spielen auf den Stufen. <break time="0.8s"/> Ein echtes Dorf. <break time="0.8s"/> Keine Kulisse. <break time="1.5s"/>
+
+=====
+KAP. 6 — DIE STRASSE: RODI BIS PESCHICI
+voice: dante
+
+Es gibt eine Straße, die ihr nicht vergessen werdet. <break time="1.2s"/>
+
+Die Provinzstraße von Rodi Garganico nach Peschici. <break time="0.8s"/> Keine Autobahn. <break time="0.8s"/> Nicht bequem. <break time="0.8s"/> Stellenweise schmal, <break time="0.5s"/> mit unübersichtlichen Kurven <break time="0.5s"/> und dem Abgrund auf der rechten Seite. <break time="0.8s"/> Aber was man von dieser Straße sieht, <break time="0.5s"/> sieht man nirgendwo sonst. <break time="1.2s"/>
+
+An einem Punkt steigt die Straße an. <break time="0.8s"/> Das Vorgebirge erhebt sich über das Meer. <break time="0.8s"/> Und plötzlich, <break time="0.5s"/> hinter der Leitplanke, <break time="0.5s"/> hat man hundert Meter weißen Fels unter sich <break time="0.5s"/> und dann das Meer. <break time="1.0s"/> Grün, <break time="0.5s"/> flach, <break time="0.5s"/> mit Buchten, die wie Einschnitte in den Fels gehauen sind. <break time="0.8s"/> Die Diomedischen Inseln am Horizont. <break time="0.8s"/> An klaren Tagen <break time="0.5s"/> hat man das Gefühl, in der Luft zu hängen. <break time="1.2s"/>
+
+Entlang der Straße gibt es Stellen zum Anhalten — <break time="0.5s"/> Buchten am Rand, <break time="0.5s"/> die eine oder andere natürliche Ausweitung. <break time="0.8s"/> Die Leute halten an, <break time="0.5s"/> steigen aus, <break time="0.5s"/> machen Fotos. <break time="0.8s"/> Ich verstehe das. <break time="0.8s"/> Ich halte auch noch an, <break time="0.5s"/> nach vierzig Jahren auf dieser Strecke. <break time="1.2s"/>
+
+Aber ich sage euch etwas. <break time="1.0s"/>
+
+Diese Straße ist schmal. <break time="0.8s"/> Die Kurven kommen schnell. <break time="0.8s"/> Wenn ihr anhält, <break time="0.5s"/> dann vollständig neben der Fahrbahn — <break time="0.5s"/> nicht halb drauf und halb daneben. <break time="0.8s"/> Im Sommer kommen Wohnmobile durch, <break time="0.5s"/> Reisebusse, <break time="0.5s"/> Motorräder. <break time="0.8s"/> Das Wiedereinfahren kann gefährlich sein, <break time="0.5s"/> wenn man nicht gut aufpasst. <break time="0.8s"/> Die Aussicht ist den Stopp wert. <break time="0.5s"/> Macht ihn richtig. <break time="1.5s"/>
+
+Ich empfehle immer, früh morgens zu fahren, <break time="0.5s"/> bevor der Verkehr einsetzt. <break time="0.8s"/> Das Morgenlicht an dieser Küste ist anders als zu jeder anderen Tageszeit. <break time="0.8s"/> Das Meer ist fast weiß. <break time="0.8s"/> Die Schatten sind lang. <break time="0.8s"/> Und man ist allein. <break time="1.5s"/>
+
+=====
+KAP. 7 — DAS MEER: WO MAN SCHWIMMEN GEHT
+voice: dante
+
+Das Problem am nördlichen Gargano ist, dass das schönste Meer von der Straße aus nicht zu sehen ist. <break time="1.2s"/>
+
+Große Strände gibt es keine. <break time="0.8s"/> Was es gibt, sind Buchten — <break time="0.5s"/> Einschnitte in den weißen Fels, <break time="0.5s"/> zu Fuß oder per Boot erreichbar, <break time="0.5s"/> mit Wasser, das an manchen Stellen so klar ist, <break time="0.5s"/> dass man es kaum sieht. <break time="1.2s"/>
+
+Von Peschici aus, entlang der Küste Richtung Vieste, <break time="0.5s"/> gibt es Buchten, die man zu Fuß über markierte Abstiegspfade erreicht. <break time="0.8s"/> Keine gemütlichen Spazierwege — <break time="0.5s"/> Abstiege über Fels, <break time="0.5s"/> manchmal mit gehauenen Stufen, <break time="0.5s"/> manchmal ohne. <break time="0.8s"/> Unten findet man Wasser ohne Farbe, <break time="0.5s"/> weil es zu klar ist, um eine zu haben. <break time="1.2s"/>
+
+Die Alternative ist ein Schlauchboot mieten. <break time="0.8s"/> Im Hafen von Peschici oder Rodi <break time="0.5s"/> kann man auch ohne Führerschein eines mieten. <break time="0.8s"/> Zwei Stunden auf dem Wasser, <break time="0.5s"/> ihr entscheidet, wo ihr anhält. <break time="0.8s"/> Das ist der beste Weg, diese Küste zu sehen. <break time="0.8s"/> Vom Meer aus versteht man, wie sie gebaut ist. <break time="0.8s"/> Von Land aus sieht man nur die Straße. <break time="1.2s"/>
+
+Eine wichtige Sache: <break time="0.8s"/> Die schönsten Buchten sind die ohne Namen. <break time="0.8s"/> Die findet man nicht auf Google Maps. <break time="0.8s"/> Die findet man, indem man jemanden vor Ort fragt — <break time="0.5s"/> den Bootsvermieter, <break time="0.5s"/> den Barmann am Hafen, <break time="0.5s"/> den Fischer, der seine Netze flickt. <break time="0.8s"/> Fragt sie: <break time="0.5s"/> Wo geht ihr selbst schwimmen? <break time="0.8s"/> Das ist der Ort. <break time="1.5s"/>
+
+=====
+KAP. 8 — DIE URSPRÜNGE: WARUM ES DIE TRABUCCHI GIBT
+voice: dante
+
+Mein Urgroßvater hat den Trabucco nicht gebaut, weil er romantisch war. <break time="1.2s"/>
+
+Er hat ihn gebaut, weil er Hunger hatte. <break time="1.5s"/>
+
+Diese Küste ist felsig. <break time="0.8s"/> Es gibt keine Strände, wo man ein Boot ans Ufer ziehen und mit normalen Netzen hinausfahren kann. <break time="0.8s"/> Der Meeresgrund fällt sofort steil ab, <break time="0.5s"/> die Strömungen sind unberechenbar, <break time="0.5s"/> das Meer kann in einer halben Stunde aufgewühlt sein. <break time="0.8s"/> Hier vom offenen Meer aus zu fischen bedeutete, jedes Mal das Leben zu riskieren. <break time="1.2s"/>
+
+Der Trabucco ist die Antwort auf dieses Problem. <break time="0.8s"/> Man baut auf Fels, <break time="0.5s"/> der stabil ist. <break time="0.8s"/> Man lässt das Netz von oben herab, <break time="0.5s"/> ohne aufs Meer hinausfahren zu müssen. <break time="0.8s"/> Man wartet, bis der Fisch vorbeikommt. <break time="0.8s"/> Und wenn er kommt, zieht man hoch. <break time="1.2s"/>
+
+Die Idee kommt nicht vom Gargano. <break time="0.8s"/> Sie kommt aus dem Nahen Osten — <break time="0.5s"/> ähnliche Maschinen gab es in Syrien und im Libanon schon im Mittelalter. <break time="0.8s"/> Nach Italien kam sie mit dem Mittelmeerhandel. <break time="0.8s"/> Am Gargano hat sie sich durchgesetzt, weil diese Küste wie gemacht für diese Strukturen schien. <break time="1.2s"/>
+
+Das Wort "trabucco" kommt vom altfranzösischen "trabuc" — <break time="0.5s"/> einer mittelalterlichen Kriegsmaschine, die Steine warf. <break time="0.8s"/> Die Ähnlichkeit liegt im Mechanismus: <break time="0.5s"/> Gegengewichte, <break time="0.5s"/> Hebel, <break time="0.5s"/> kalibrierte Kraft. <break time="0.8s"/> Nur dass statt Steine zu schleudern <break time="0.5s"/> Netze gesenkt werden. <break time="1.2s"/>
+
+Mein Urgroßvater wusste nichts von alledem. <break time="0.8s"/> Er wusste, dass es funktionierte. <break time="0.8s"/> Und dass er damit die Familie ernähren konnte. <break time="0.8s"/> Das reicht. <break time="1.5s"/>
+
+=====
+KAP. 9 — DIE KÜSTE: ZWISCHEN TRABUCCHI UND BUCHTEN
+voice: dante
+
+Die Küste zwischen Peschici und Vieste ist die schönste des nördlichen Gargano. <break time="1.2s"/>
+
+Keine breiten Strände. <break time="0.8s"/> Nur Buchten aus weißem Fels, <break time="0.5s"/> klein, <break time="0.5s"/> zu Fuß über steile Pfade erreichbar <break time="0.5s"/> oder per Boot entlang der Küste. <break time="1.0s"/>
+
+Entlang der Küste stehen noch immer die Trabucchi der Familien. <break time="0.8s"/> Die, die keine Restaurants geworden sind, <break time="0.5s"/> sind noch in Betrieb — <break time="0.5s"/> Söhne, Enkelkinder, <break time="0.5s"/> die noch so fischen wie eh und je. <break time="0.8s"/> Nicht aus Notwendigkeit. <break time="0.8s"/> Um nicht zu vergessen, wie es geht. <break time="1.2s"/>
+
+Mein Trabucco liegt zwischen Peschici und Vieste. <break time="0.8s"/> Früh morgens, <break time="0.5s"/> wenn die Sonne noch tief steht, <break time="0.5s"/> ist das Wasser unter den Balken grün und durchsichtig. <break time="0.8s"/> Man sieht den Grund. <break time="0.8s"/> Man sieht die Fische vorbeischwimmen. <break time="0.8s"/> Dann wirft man das Netz aus und wartet. <break time="1.2s"/>
+
+Mein Sohn will nicht fischen. <break time="0.8s"/> Er studiert Ingenieurwesen in Bologna. <break time="0.8s"/> Ich verstehe das. <break time="0.8s"/> Aber ich hoffe, wenn er zurückkommt, <break time="0.5s"/> ab und zu, <break time="0.5s"/> kommt er morgens mit mir her. <break time="0.8s"/> Um den Faden nicht zu verlieren. <break time="1.5s"/>
+
+=====
+KAP. 10 — DAS ESSEN: VOM TRABUCCO AUF DEN TELLER
+voice: dante
+
+Was ich auf dem Trabucco koche, hat kein festes Menü. <break time="1.2s"/>
+
+Es kommt darauf an, was ich gefangen habe. <break time="0.8s"/> Es kommt aufs Meer an. <break time="0.8s"/> Es kommt auf die Jahreszeit an. <break time="1.0s"/>
+
+Wenn an jenem Morgen Makrelen hochgekommen sind, <break time="0.5s"/> gibt es Makrelen. <break time="0.8s"/> Wenn Tintenfische hochgekommen sind, <break time="0.5s"/> gibt es Tintenfische. <break time="0.8s"/> Wenn nichts Besonderes kam, <break time="0.5s"/> nehmen wir, was der Fischer vom Vortag gebracht hat. <break time="0.8s"/> Aber selten kommt gar nichts. <break time="1.2s"/>
+
+Das Gericht, das ich am besten mache, ist das Brodetto alla garganica. <break time="0.8s"/> Gemischter Fisch — <break time="0.5s"/> Drachenkopf, Petermännchen, Knurrhahn, <break time="0.5s"/> was da ist — <break time="0.5s"/> mit Tomate, Knoblauch, Peperoncino <break time="0.5s"/> und einem Schuss gutem Öl am Ende. <break time="0.8s"/> Man isst es mit geröstetem Brot, <break time="0.5s"/> eingetaucht in die Brühe. <break time="0.8s"/> Keine Gabel. <break time="0.8s"/> Die Hände. <break time="1.2s"/>
+
+Die Austern von Lesina serviere ich roh. <break time="0.8s"/> Nur Zitrone. <break time="0.8s"/> Wer Sauce drauftut, hat alles falsch gemacht. <break time="0.8s"/> Eine Auster aus Lesina hat schon alles, was sie braucht. <break time="1.2s"/>
+
+Der Wein ist Falanghina del Gargano — <break time="0.5s"/> weiß, frisch, <break time="0.5s"/> mit Zitrusaromen. <break time="0.8s"/> Hier produziert, <break time="0.5s"/> zwei Kilometer entfernt. <break time="0.8s"/> Muss nicht reisen. <break time="1.5s"/>
+
+=====
+KAP. 11 — DIE JAHRESZEITEN: NÖRDLICHER GARGANO AUSSERHALB DES AUGUSTS
+voice: dante
+
+Ich sage euch etwas, was die meisten Touristen nicht wissen. <break time="1.2s"/>
+
+Der nördliche Gargano außerhalb des Augusts ist das Paradies. <break time="1.5s"/>
+
+Mai: Die Zitrushaine von Rodi sind noch voll. <break time="0.8s"/> Das Meer ist frisch, aber nicht kalt. <break time="0.8s"/> Die Trabucchi sind geöffnet, aber nicht überfüllt. <break time="0.8s"/> Die Preise sind normal. <break time="1.0s"/>
+
+Juni: Das Meer wärmt sich auf. <break time="0.8s"/> Die Buchten sind halb leer. <break time="0.8s"/> Einen Tisch im Restaurant bekommt man, ohne drei Wochen im Voraus zu reservieren. <break time="1.0s"/>
+
+September: Das Meer ist auf dem Höhepunkt. <break time="0.8s"/> Die Touristen sind weg. <break time="0.8s"/> Die Köche kochen in Ruhe. <break time="0.8s"/> Man schläft. <break time="1.0s"/>
+
+Oktober: Fast menschenleer. <break time="0.8s"/> Das Licht ist tief und golden. <break time="0.8s"/> Der nahe Wald beginnt sich zu färben. <break time="0.8s"/> Das Meer ist noch warm genug zum Baden. <break time="0.8s"/> Und es ist niemand da. <break time="1.2s"/>
+
+Den August überlasse ich den Deutschen. <break time="0.8s"/> Ich respektiere sie — <break time="0.5s"/> sie kommen jedes Jahr, <break time="0.5s"/> bringen die Kinder mit, <break time="0.5s"/> sie lieben diesen Ort wirklich. <break time="0.8s"/> Aber der August ist nicht der echte Gargano. <break time="0.8s"/> Es ist die Sommerversion des Gargano. <break time="0.8s"/> Schön, <break time="0.5s"/> aber nicht die, die ich bevorzuge. <break time="1.5s"/>
+
+=====
+KAP. 12 — WAS TUN: FERDINANDOS TIPPS
+voice: dante
+
+Erstens: Sucht euch einen Trabucco, der ein Restaurant ist, <break time="0.5s"/> und reserviert zum Abendessen. <break time="0.8s"/> Nicht zum Mittagessen — zum Abendessen. <break time="0.8s"/> Wenn die Sonne über dem Meer untergeht <break time="0.5s"/> und das Licht orange wird <break time="0.5s"/> und man frischen Fisch auf Holzbalken isst <break time="0.5s"/> mit dem Wasser unter den Füßen — <break time="0.5s"/> das vergisst man nicht. <break time="1.2s"/>
+
+Zweitens: Geht nach Lesina. <break time="0.8s"/> Nicht nur zum See. <break time="0.5s"/> Geht ins Dorf. <break time="0.8s"/> Sucht jemanden, der euch frische Austern probieren lässt. <break time="0.8s"/> Wenn ihr sie roh mit Zitrone direkt vor Ort bekommt, <break time="0.5s"/> esst sie. <break time="1.0s"/>
+
+Drittens: Nehmt ein Boot. <break time="0.8s"/> Auch nur für zwei Stunden. <break time="0.8s"/> Die Küste vom Wasser aus ist völlig anders. <break time="0.8s"/> Die Buchten, die man von Land aus nicht erreicht, <break time="0.5s"/> die Trabucchi vom Meer aus gesehen, <break time="0.5s"/> die Meereshöhlen. <break time="0.8s"/> Jeden Euro wert. <break time="1.2s"/>
+
+Viertens: Steht früh auf. <break time="0.8s"/> Der nördliche Gargano früh morgens, <break time="0.5s"/> vor acht Uhr, <break time="0.5s"/> ist etwas anderes. <break time="0.8s"/> Das Meer ist glatt, <break time="0.5s"/> das Licht ist tief, <break time="0.5s"/> niemand ist da. <break time="0.8s"/> Das ist es, was ich jeden Morgen seit sechzig Jahren sehe. <break time="0.8s"/> Der Wecker um sechs ist es wert. <break time="1.5s"/>
+
+=====
+KAP. 13 — DIE AALE VON LESINA: ESSEN AUS DEM SEE
+voice: dante
+
+Vom Lago di Lesina habe ich schon gesprochen. <break time="0.8s"/> Aber ich habe das Wichtigste nicht gesagt. <break time="1.2s"/>
+
+Die Aale. <break time="1.5s"/>
+
+Der Lago di Lesina ist seit Jahrhunderten für seine Aale berühmt. <break time="0.8s"/> Brackiges Wasser, <break time="0.5s"/> reich an Nährstoffen, <break time="0.5s"/> das ganze Jahr über milde Temperaturen — <break time="0.5s"/> perfekte Bedingungen für diesen Fisch, der wandert, <break time="0.5s"/> jahrzehntelang lebt <break time="0.5s"/> und sich nicht leicht fangen lässt. <break time="1.2s"/>
+
+Den Aal aus Lesina isst man auf verschiedene Arten. <break time="0.8s"/> Gegrillt — <break time="0.5s"/> über Holzfeuer, <break time="0.5s"/> mit Salz und Zitrone, <break time="0.5s"/> nichts sonst. <break time="0.8s"/> Als Brodetto — <break time="0.5s"/> mit Tomate, Zwiebel, Peperoncino. <break time="0.8s"/> Frittiert. <break time="0.8s"/> Mariniert. <break time="0.8s"/> Die Alten vom See haben ihn auf alle erdenklichen Arten zubereitet, und keine war falsch. <break time="1.2s"/>
+
+Mein Vater hat ihn jeden Freitag gegessen. <break time="0.8s"/> Er sagte, der Aal gibt einem Kraft für die ganze Woche. <break time="0.8s"/> Vielleicht übertrieb er. <break time="0.8s"/> Aber er war zweiundneunzig, als er starb, <break time="0.5s"/> und hatte nie aufgehört, am Trabucco zu arbeiten. <break time="0.8s"/> Der Aal wird etwas dazu beigetragen haben. <break time="1.5s"/>
+
+=====
+KAP. 14 — DIE TÜRKEN AN DER KÜSTE: DIE WACHTÜRME
+voice: dante
+
+Entlang dieser Küste gibt es Türme. <break time="1.2s"/>
+
+Wachtürme, <break time="0.5s"/> im 16. und 17. Jahrhundert von den Spaniern gebaut, die das Königreich Neapel regierten. <break time="0.8s"/> Einer alle paar Kilometer — <break time="0.5s"/> so dass man vom Wehrgang des einen den nächsten sehen konnte. <break time="0.8s"/> Eine Kette aus steinernen Wächtern. <break time="1.2s"/>
+
+Der Grund war einfach: <break time="0.8s"/> osmanische Überfälle. <break time="0.8s"/> Türkische Flotten plünderten regelmäßig die Küsten des südlichen Mittelmeers. <break time="0.8s"/> Die Türme dienten dazu, ankommende Schiffe zu sichten — <break time="0.5s"/> ein Signalfeuer, <break time="0.5s"/> ein Alarm, <break time="0.5s"/> genug Zeit, um sich zu verstecken oder zu fliehen. <break time="1.2s"/>
+
+Die Türme sind noch da. <break time="0.8s"/> Manche restauriert, <break time="0.5s"/> manche in Ruinen. <break time="0.8s"/> Wenn ich am Trabucco arbeite und die Küste hinaufblicke, <break time="0.5s"/> sehe ich immer zwei oder drei davon — <break time="0.5s"/> dunkle Silhouetten vor dem Grün. <break time="0.8s"/> Jahrhunderte später, <break time="0.5s"/> noch immer aufs Meer blickend. <break time="1.5s"/>
+
+=====
+KAP. 15 — DER WIND: WIE ER DEN GARGANO VERÄNDERT
+voice: dante
+
+Der nördliche Gargano ist nie ganz gleich. <break time="1.2s"/>
+
+Der Tramontano — <break time="0.5s"/> der Nordwind — <break time="0.5s"/> verändert alles. <break time="1.0s"/>
+
+Wenn der Tramontano weht, <break time="0.8s"/> hebt sich das Meer in wenigen Stunden. <break time="0.8s"/> Die Wellen dringen in die Buchten. <break time="0.8s"/> Die Farbe des Wassers wechselt von Türkis zu Dunkelgrün. <break time="0.8s"/> Schaum legt sich auf die Felsen wie Schnee. <break time="1.2s"/>
+
+Bei Tramontano fischt man nicht. <break time="0.8s"/> Man fährt nicht mit dem Boot hinaus. <break time="0.8s"/> Man lässt das Netz des Trabucco nicht herab — <break time="0.5s"/> die Bewegung des Wassers würde es zerreißen. <break time="0.8s"/> Man wartet. <break time="0.8s"/> Man bleibt in Deckung. <break time="0.8s"/> Man trinkt Kaffee und beobachtet das Meer aus der Ferne. <break time="1.2s"/>
+
+Ich habe gelernt, den Himmel zu lesen, bevor ich lesen lernte. <break time="0.8s"/> Mein Vater lehrte mich: <break time="0.5s"/> Schau da, <break time="0.5s"/> diese Wolke im Nordwesten. <break time="0.8s"/> Schau, wie sie sich bewegt. <break time="0.8s"/> Du brauchst keinen Wetterbericht. <break time="0.8s"/> Du musst nur hinschauen. <break time="1.5s"/>
+
+=====
+KAP. 16 — DIE DÜFTE: DER GARGANO, DEN MAN NICHT SIEHT
+voice: dante
+
+Den nördlichen Gargano erkennt man auch mit geschlossenen Augen. <break time="1.2s"/>
+
+Im Sommer: Kiefernharz, <break time="0.5s"/> Salzluft, <break time="0.5s"/> Macchiaблüten. <break time="0.8s"/> Früh morgens, <break time="0.5s"/> bevor die Hitze alles niederdrückt, <break time="0.5s"/> hat die Luft einen Geruch, den man nirgendwo sonst findet. <break time="1.0s"/>
+
+Im Frühling: Die blühenden Zitrushaine von Rodi und Vico del Gargano. <break time="0.8s"/> Orangenblüten haben einen kräftigen Duft, <break time="0.5s"/> fast süß, <break time="0.5s"/> der einen vom Meer aus erreicht. <break time="0.8s"/> Wer im April oder Mai kommt, <break time="0.5s"/> sollte die Fenster öffnen, sobald man das Zitrusgebiet betritt. <break time="0.8s"/> Das bereut man nicht. <break time="1.2s"/>
+
+Im Herbst: nasses Holz, <break time="0.5s"/> Pilze, <break time="0.5s"/> Erde nach dem Regen. <break time="0.8s"/> Der Wald, der atmet. <break time="1.2s"/>
+
+Ich arbeite auf dem Trabucco und spüre immer den Wind. <break time="0.8s"/> Nicht alle Winde sind gleich. <break time="0.8s"/> Der Wind vom Land bringt die Kiefern. <break time="0.8s"/> Der Wind vom Meer bringt das Salz. <break time="0.8s"/> Der Nordwind bringt Kälte und Regen. <break time="0.8s"/> Jeder Wind hat seinen eigenen Geruch. <break time="0.8s"/> Nach so vielen Jahren <break time="0.5s"/> erkenne ich das Wetter, bevor ich den Himmel anschaue. <break time="1.5s"/>
+
+=====
+KAP. 17 — DIE SCHWIERIGEN SEITEN: GUT LEBEN HIER DRAUSSEN
+voice: dante
+
+Manche fragen mich: Aber hier zu leben — lastet das nicht auf euch? <break time="1.2s"/>
+
+Es lastet und lastet nicht. <break time="1.5s"/>
+
+Es lastet im Winter — <break time="0.5s"/> wenn die Straße wegen Schnee gesperrt ist, <break time="0.5s"/> wenn das nächste Krankenhaus weit weg ist, <break time="0.5s"/> wenn man etwas kaufen möchte und der Laden geschlossen ist. <break time="0.8s"/> Das Leben in den Binnengebieten Apuliens ist nicht einfach. <break time="0.8s"/> Es fehlen Dienstleistungen, <break time="0.5s"/> Arbeitsmöglichkeiten, <break time="0.5s"/> die Jungen gehen fort. <break time="0.8s"/> Das ist ein echtes Problem. <break time="1.2s"/>
+
+Aber es lastet nicht, wenn man um sechs Uhr morgens auf dem Trabucco sitzt und das Meer glatt ist und das Licht tief. <break time="0.8s"/> Es lastet nicht, wenn man im Dorf jeden kennt und niemand ein Fremder ist. <break time="0.8s"/> Es lastet nicht, wenn man weiß, dass das, was man isst, man selbst gefangen hat <break time="0.5s"/> oder jemand, den man kennt, es angebaut hat. <break time="1.2s"/>
+
+Es ist ein schwieriges Gleichgewicht. <break time="0.8s"/> Ich weiß nicht, ob es für alle gilt. <break time="0.8s"/> Ich weiß, dass es für mich gilt. <break time="0.8s"/> Und dass ich nie weggegangen bin. <break time="1.5s"/>
+
+=====
+KAP. 18 — ABSCHLUSS: FERDINANDO VERABSCHIEDET SICH
+voice: dante
+
+Mein Urgroßvater hat diesen Trabucco mit seinen eigenen Händen gebaut. <break time="1.0s"/>
+
+Die Wacholderbalken hat er im Wald oberhalb von Peschici gefällt. <break time="0.8s"/> Er brachte sie mit dem Maultier herunter. <break time="0.8s"/> Es hat ein Jahr gedauert. <break time="0.8s"/> Dann fischte er hier dreißig Jahre lang. <break time="0.8s"/> Dann mein Großvater. <break time="0.8s"/> Dann mein Vater. <break time="0.8s"/> Dann ich. <break time="1.2s"/>
+
+Vier Generationen. <break time="0.8s"/> Dasselbe Holz. <break time="0.8s"/> Dasselbe Wasser. <break time="0.8s"/> Derselbe Fisch. <break time="1.5s"/>
+
+Wenn die Gäste hier abends sitzen <break time="0.5s"/> und den Sonnenuntergang betrachten <break time="0.5s"/> und das essen, was ich morgens gefangen habe, <break time="0.5s"/> denke ich, mein Urgroßvater hätte es verstanden. <break time="0.8s"/> Das Restaurant vielleicht nicht. <break time="0.8s"/> Aber er hätte die Idee verstanden — <break time="0.5s"/> dieser Ort ist schön, <break time="0.5s"/> der Fisch ist gut, <break time="0.5s"/> die Menschen sollen kommen und ihn sehen. <break time="1.2s"/>
+
+Diese Küste muss nicht erfunden werden. <break time="0.8s"/> Sie muss nur angeschaut werden. <break time="1.5s"/>
+
+Genießt eure Zeit am Gargano. <break time="0.8s"/> Und wenn ihr an einem Trabucco vorbeikommt, <break time="0.5s"/> haltet an. <break time="0.8s"/> Es lohnt sich. <break time="1.5s"/>
+
+Dieses Vorgebirge hat andere Gesichter. <break time="1.0s"/>
+
+Die Buchten von Vieste vom Wasser aus gesehen, <break time="0.5s"/> die Grotte, wo der Erzengel die Spur seines Mantels hinterlassen hat, <break time="0.5s"/> die Inseln von Lucio Dalla am Horizont, <break time="0.5s"/> die auf Felsen thronenden Dörfer über dem See. <break time="0.8s"/> Jedes hat jemanden, der seine Geschichte erzählt. <break time="0.8s"/> Jemanden, der nie weggegangen ist. <break time="1.2s"/>
+
+Der Gargano endet hier nicht. <break time="1.5s"/>

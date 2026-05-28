@@ -1,0 +1,285 @@
+## AUDIO-SKRIPT — CISTERNINO-GUIDE
+*Stimme: Michele, Metzger in dritter Generation — fornello pronto in Cisternino*
+*Format: gemischt Auto + zu Fuß · 30 Minuten*
+
+=====
+KAP. 1 — INTRO: DAS DORF AUF DEM KAMM
+voice: custom-cisternino
+*(im Auto, bei der Anfahrt nach Cisternino)*
+
+Du fährst bergauf. <break time="1.5s"/>
+
+Nicht weit, wir sind nicht in den Bergen. <break time="0.8s"/> Aber hoch genug, um zu spüren, wie sich die Luft verändert. <break time="0.8s"/> Wir sind auf vierhundertdrei Metern — höher als Locorotondo, auch ein kleines Stück höher als Martina Franca. <break time="0.8s"/> Und von hier oben, wenn der Tag klar ist, <break time="0.5s"/> siehst du auf einer Seite das Valle d'Itria mit den Trulli und den Weinbergen, <break time="0.5s"/> und auf der anderen das Meer. <break time="1.2s"/>
+
+Zwei Welten. <break time="0.8s"/> Zwei Horizonte. <break time="0.8s"/> Ein Dorf dazwischen. <break time="1.5s"/>
+
+Ich heiße Michele. <break time="0.8s"/> Ich bin Metzger — dritte Generation. <break time="0.8s"/> Mein Großvater hatte einen Stand auf dem Markt, mein Vater hat die Metzgerei im Dorf eröffnet, <break time="0.5s"/> und ich habe das fornello pronto — den Grillstand in der Metzgerei — dazugebracht. <break time="0.8s"/> Was das genau ist, erkläre ich dir später. <break time="0.8s"/> Erst will ich, dass du hier mit klarem Kopf ankommst. <break time="1.2s"/>
+
+Cisternino ist nicht Alberobello. <break time="0.8s"/> Kein Museum. <break time="0.8s"/> Du findest keine Reisebusse davor und keine Menschenschlange für das Selfie mit dem Trullo. <break time="0.8s"/> Du findest ein Dorf, in dem man lebt. <break time="0.8s"/> Wo dienstags Markt ist, wo die Bars um sieben öffnen, <break time="0.5s"/> wo im Sommer abends der Platz voll wird und Kinder zwischen den Stühlen der Terrassengäste spielen. <break time="1.2s"/>
+
+Was du hier findest, ist das Dorf so, wie es gebaut wurde — <break time="0.5s"/> und wie es noch heute funktioniert. <break time="1.5s"/>
+
+=====
+KAP. 2 — DAS SCHÖNSTE DORF ITALIENS
+voice: custom-cisternino
+*(im Auto oder kurz nach dem Parken)*
+
+Cisternino wurde in die Liste der Borghi più belli d'Italia aufgenommen — der schönsten Dörfer Italiens. <break time="1s"/>
+
+Das sagen wir Cisterniner nicht aus Eitelkeit. <break time="0.8s"/> Es ist eine offizielle Auszeichnung mit klaren Kriterien: <break time="0.5s"/> Erhaltungszustand der Altstadt, <break time="0.5s"/> architektonische Qualität, <break time="0.5s"/> Lebensqualität. <break time="0.8s"/> Und Cisternino ist seit Jahren dabei. <break time="1.2s"/>
+
+Wer wirklich herkommt, versteht: das Schöne hier wird nicht ausgestellt. <break time="0.8s"/> Es gibt kein Hauptdenkmal, das man fotografiert und dann wieder geht. <break time="0.8s"/> Das Schöne liegt im Detail — <break time="0.5s"/> eine Außentreppe mit Geranienkübeln, <break time="0.5s"/> eine Gasse so schmal, dass nur einer auf einmal durchpasst, <break time="0.5s"/> ein altes Holztor in Himmelblau gestrichen. <break time="1.2s"/>
+
+Touristen, die in Eile kommen, sehen wenig. <break time="0.8s"/> Wer bleibt, isst, abends wiederkommt, <break time="0.8s"/> der versteht, warum dieser Ort diese Auszeichnung hat. <break time="1.5s"/>
+
+Das Schöne an Cisternino ist auch dies: wenn du vom Parkplatz kommst und zu Fuß in die Altstadt gehst, <break time="0.8s"/> verstummt der Straßenlärm in dreißig Sekunden. <break time="0.8s"/> Das Dorf schluckt den Schall. <break time="0.5s"/> Die Steine, die dicken Mauern, die engen Gassen — <break time="0.5s"/> alles wirkt als natürliche Barriere. <break time="0.8s"/> Du bist drin, und der Rest der Welt bleibt draußen. <break time="1.5s"/>
+
+=====
+KAP. 3 — DIE ALTSTADT: GASSEN, TREPPEN, BLUMEN
+voice: custom-cisternino
+*(zu Fuß, beim Eingang in die Altstadt)*
+
+Jetzt bist du in der Altstadt. <break time="1.2s"/>
+
+Alles weiß. <break time="0.8s"/> Die Häuser sind mit Kalk verputzt — <break time="0.5s"/> eine Praxis aus Nützlichkeit, erst dann aus Ästhetik. <break time="0.8s"/> Kalk ist antibakteriell, <break time="0.5s"/> reflektiert die Hitze <break time="0.5s"/> und hält jahrelang ohne Pflege. <break time="0.8s"/> Vor der Klimaanlage war das die einzige Möglichkeit, die Häuser kühl zu halten. <break time="1.2s"/>
+
+Die Außentreppen fallen sofort auf. <break time="0.8s"/> Jedes Haus hat eine, manchmal zwei. <break time="0.8s"/> Gerade oder geschwungen, oft schmal, <break time="0.5s"/> mit vom Gebrauch abgetretenen Stufen. <break time="0.8s"/> Auf den Podesten stehen Blumentöpfe — <break time="0.5s"/> rote Geranien, Basilikum, irgendein Strauch, dessen Namen ich dir nicht nennen könnte. <break time="0.8s"/> Kein Hochglanzmagazin-Dekor. <break time="0.5s"/> So machen es die Leute, wenn sie einen Platz vor der Tür haben. <break time="1.2s"/>
+
+Die Gassen verengen und weiten sich ohne erkennbare Logik. <break time="0.8s"/> Manchmal stehst du plötzlich auf einem kleinen Platz — <break time="0.5s"/> einem Freiraum mit einer Bank und vielleicht einem Brunnen. <break time="0.8s"/> Hier blieben früher die Frauen stehen zum Reden, als die Häuser noch voller Großfamilien waren. <break time="0.8s"/> Heute setzen sich hier Touristen und alte Leute hin. <break time="0.8s"/> Die Funktion ist dieselbe: <break time="0.5s"/> man hält inne, schaut sich um, <break time="0.5s"/> verlangsamt. <break time="1.5s"/>
+
+Der Geruch der Altstadt wechselt je nach Tageszeit. <break time="0.8s"/> Früh morgens, wenn sie die Gassen fegen und nass wischen, <break time="0.5s"/> riecht es feucht nach nassen Steinen und Seife. <break time="0.8s"/> Gegen Mittag kommt der Essensduft — <break time="0.5s"/> die kochende Tomatensoße, das Brot, das schon aus dem Ofen ist, <break time="0.5s"/> und wenn du nahe an den Metzgereien bist, der Rauch der Glut, die gerade angezündet wird. <break time="0.8s"/> Abends riecht das Dorf nach Sommer — <break time="0.5s"/> Blumen, warmes Gras, der Tabak von jemandem, der auf den Stufen sitzt. <break time="1.2s"/>
+
+Eil dich nicht. <break time="0.8s"/> Diese Altstadt braucht Ruhe. <break time="0.8s"/> Zwanzig Minuten im Schnellgang reichen nicht. <break time="0.8s"/> Du musst für eine Weile das Zeitgefühl verlieren. <break time="1.5s"/>
+
+=====
+KAP. 4 — DIE URSPRÜNGE: MESSAPIER, TURM, BORGO
+voice: custom-cisternino
+*(in der Altstadt, nahe dem Turm oder der Mutterkirche)*
+
+Cisternino ist alt. <break time="1.2s"/>
+
+Zuerst lebten hier die Messapier — das Volk, das diesen Teil Apuliens vor den Römern bewohnte. <break time="0.8s"/> Ackerbauern und Krieger, sie bauten in Stein <break time="0.5s"/> und kannten diese Hügel gut, denn von hier aus kontrollierte man die Wege zum Meer. <break time="1.2s"/>
+
+Der Name Cisternino kommt wahrscheinlich vom Wasser. <break time="0.8s"/> Cisterne — Becken zum Auffangen von Regenwasser. <break time="0.8s"/> Auf diesem Hügel gab es keine ergiebigen natürlichen Quellen, <break time="0.5s"/> und Wasser war eine kostbare Ressource. <break time="0.8s"/> Wer die Zisternen kontrollierte, kontrollierte das Gebiet. <break time="1.2s"/>
+
+Im Mittelalter organisiert sich der Ort um einen Wachturm — <break time="0.5s"/> denselben, den du heute zum Kirchturm umgebaut siehst. <break time="0.8s"/> Die Mauern der Altstadt folgen einem Verteidigungsperimeter. <break time="0.8s"/> Die Häuser am äußeren Rand sind dicht gebaut, ohne Fenster nach außen, <break time="0.5s"/> weil die Hausmauern auch die Dorfmauern waren. <break time="1.2s"/>
+
+In den folgenden Jahrhunderten wechselt der Ort die Hände — <break time="0.5s"/> lokale Herren, Mönchsorden, aragonische Herrschaft. <break time="0.8s"/> Die Struktur der Altstadt, die du heute siehst, festigt sich zwischen dem 15. und 17. Jahrhundert. <break time="0.8s"/> Was die Baumeister von damals hinterlassen haben, <break time="0.5s"/> steht noch heute, fast unverändert. <break time="1.5s"/>
+
+Mein Großvater brachte mich als Kind hierher und ließ mich die Steine berühren. <break time="0.8s"/> Er sagte: Diese Steine haben Männer von Hand behauen, ohne Maschinen. <break time="0.8s"/> Mit Meißel und Hammer, von April bis Oktober, bevor die Kälte kam. <break time="0.8s"/> Ob das in den Einzelheiten stimmt, weiß ich nicht, <break time="0.5s"/> aber der Gedanke ist richtig — <break time="0.5s"/> was du hier siehst, ist das Ergebnis von Generationen von Handarbeit auf diesem Hügel. <break time="1.5s"/>
+
+=====
+KAP. 5 — DAS FORNELLO PRONTO: DIE EINZIGARTIGE TRADITION
+voice: custom-cisternino
+*(nahe einer Metzgerei mit Grillstand)*
+
+Jetzt muss ich dir erklären, warum Cisternino anders ist als alle anderen Dörfer. <break time="1.2s"/>
+
+Das fornello pronto — der Metzger grillt das Fleisch direkt vor dir. <break time="1.5s"/>
+
+In fast jedem Ort der Welt verkauft die Metzgerei rohes Fleisch, und du kochst es zu Hause. <break time="0.8s"/> Hier nicht. <break time="0.8s"/> Hier hat die Metzgerei Feuer. <break time="0.8s"/> Du kommst rein, suchst dir das Stück aus, das du willst — <break time="0.5s"/> die bombette — gerollte Schweinepäckchen mit Käsefüllung —, die Würste, die gnumarieddi — aufgespießte Innereien —, die Bracioline — <break time="0.5s"/> und der Metzger grillt es dir auf der Stelle, auf der offenen Glut, direkt vor deinen Augen. <break time="1.2s"/>
+
+Kein Restaurant. <break time="0.8s"/> Keine Speisekarte, kein Kellner, kein Gedeck. <break time="0.8s"/> Die Metzgerei grillt. <break time="0.8s"/> Sie geben dir die Sachen auf einem Pappteller oder einem Tablett, <break time="0.5s"/> du setzt dich draußen auf einen Plastikstuhl oder eine Treppenstufe, <break time="0.5s"/> und isst. <break time="1.2s"/>
+
+Wie ist diese Tradition entstanden? <break time="0.8s"/> Die Version, die mir mein Großvater erzählt hat, geht so: <break time="0.5s"/> Die Dorfbewohner kauften Fleisch, hatten aber nicht immer die Möglichkeit, es gut zu kochen — <break time="0.5s"/> nicht jedes Haus hatte einen Ofen, Brennmaterial kostete Geld. <break time="0.8s"/> Also grillten die Metzger für sie. <break time="0.8s"/> Das Feuer war im Winter sowieso angezündet, um die Werkstatt zu heizen — <break time="0.5s"/> da war das Grillen des Kundenfleisches ein natürlicher Zusatzdienst. <break time="1.2s"/>
+
+Aus dem Dienst wurde Tradition. <break time="0.8s"/> Aus der Tradition wurde Identität. <break time="0.8s"/> Heute sind die fornelli pronto von Cisternino in ganz Apulien bekannt. <break time="0.8s"/> Leute aus Tarent, aus Bari, aus Brindisi — <break time="0.5s"/> kommen extra hierher, nur um das frisch gegrillte Fleisch zu essen. <break time="1.5s"/>
+
+Einer der wenigen Orte der Welt, wo der Metzger auch Koch ist. <break time="0.8s"/> Und wo der Kunde das rohe Stück aussucht <break time="0.5s"/> und es dann in zehn Minuten als sein Mittagessen wiedersieht. <break time="1.5s"/>
+
+Wenn du eine Metzgerei mit fornello betrittst, ist der erste Eindruck der Geruch. <break time="0.8s"/> Der Rauch des Hartholzes — hier nimmt man vor allem Feigen- oder Eichenholz — <break time="0.5s"/> vermischt mit dem Schweinefett, das auf die Glut tropft. <break time="0.8s"/> Ein kräftiger Geruch, <break time="0.5s"/> der sich in Kleidung und Haaren festsetzt. <break time="0.8s"/> Du gehst raus und trägst ihn den ganzen Tag mit dir. <break time="0.8s"/> Kein Problem. <break time="0.5s"/> Das ist die Erinnerung, die du mit nach Hause nimmst. <break time="1.5s"/>
+
+=====
+KAP. 6 — DIE BOMBETTE: ZUTATEN UND ZUBEREITUNG
+voice: custom-cisternino
+*(in der Metzgerei, vor der Glut)*
+
+Die bombette — gerollte Schweinepäckchen mit Käsefüllung. <break time="1.5s"/>
+
+Ich sage dir gleich, was das ist, denn der Name kann täuschen — <break time="0.5s"/> mit Sprengstoff haben sie nichts zu tun. <break time="0.8s"/> Es sind Röllchen aus Schweineschweinenacken, capocollo — <break time="0.5s"/> dünne Scheiben Schweinenacken, um eine Füllung gerollt. <break time="1.2s"/>
+
+Die Grundfüllung ist Käse, <break time="0.5s"/> meistens caciocavallo — ein halbfester Kuhmilchkäse — oder ein frischer Pecorino. <break time="0.8s"/> Dann kommt es drauf an, wer sie macht. <break time="0.8s"/> Manche geben Petersilie dazu, manche viel Pfeffer, <break time="0.5s"/> manche eine Spur Knoblauch, manche nicht. <break time="0.8s"/> Jeder Metzger hat seine Version. <break time="0.8s"/> Jede Familie schwört, dass die ihres Stamm-Metzgers die beste ist. <break time="1.2s"/>
+
+Gegart wird auf der Glut. <break time="0.8s"/> Nicht in der Pfanne, nicht im Ofen, nicht in der Fritteuse. <break time="0.8s"/> Glut. <break time="0.8s"/> Offenes Feuer von unten, <break time="0.5s"/> das Schweinefett tropft auf die Glut und macht Rauch, <break time="0.5s"/> der Käse schmilzt innen, <break time="0.5s"/> das Fleisch bekommt außen Farbe und bleibt innen weich. <break time="1.2s"/>
+
+Eine gut gemachte bombette muss drei Dinge haben. <break time="0.8s"/> Das Fleisch nicht durchgegart — in der Mitte noch leicht rosa. <break time="0.8s"/> Der Käse, der an der Seite herausläuft, gerade flüssig. <break time="0.8s"/> Die Oberfläche mit einer dunklen Kruste, aber nicht verbrannt — <break time="0.5s"/> was wir im Dialekt arrostita nennen: geröstet, nicht verkohlt. <break time="1.2s"/>
+
+Eine schlecht gemachte bombette ist trocken. <break time="0.8s"/> Der Käse ist bereits verdunstet, <break time="0.5s"/> das Fleisch gräulich, <break time="0.5s"/> kein Saft mehr drin. <break time="0.8s"/> Die hat zu lang auf dem Feuer gelegen oder wurde schlecht vorbereitet. <break time="0.8s"/> Ich erkenne das auf den ersten Blick, nach dreißig Jahren an der Glut. <break time="1.5s"/>
+
+Das Geheimnis, das niemand verrät, ist der richtige Moment zum Wenden. <break time="0.8s"/> Zu früh, und sie öffnen sich — die Füllung läuft raus. <break time="0.8s"/> Zu spät, und sie verbrennen auf einer Seite. <break time="0.8s"/> Den richtigen Moment spürst du — <break time="0.5s"/> die bombette löst sich von selbst vom Rost, wenn sie bereit ist gewendet zu werden. <break time="0.8s"/> Wenn du sie früher anfasst, klebt sie noch. <break time="0.5s"/> Das Fleisch sagt dir, wann es soweit ist. <break time="1.2s"/>
+
+Zwei oder drei davon zu essen ist normal. <break time="0.8s"/> Mit etwas Brot und einem Glas Locorotondo-Weißwein, <break time="0.5s"/> ist das ein vollständiges Mittagessen. <break time="0.8s"/> Ohne Förmlichkeiten, ohne Tischtuch, <break time="0.5s"/> mit den Fingern. <break time="1.5s"/>
+
+=====
+KAP. 7 — DIE METZGEREI: MICHELES ARBEITSTAG
+voice: custom-cisternino
+*(in der Metzgerei oder in der Gasse davor)*
+
+Willst du wissen, wie mein Tag aussieht? <break time="1.2s"/>
+
+Ich stehe um fünf auf. <break time="0.8s"/> Nicht aus philosophischer Überzeugung — das Fleisch kommt früh. <break time="0.8s"/> Die Morgenlieferanten bringen, was für den Tag gebraucht wird. <break time="0.8s"/> Ich kontrolliere alles: <break time="0.5s"/> Farbe, Konsistenz, Geruch. <break time="0.8s"/> Fleisch lügt nicht. <break time="0.8s"/> Entweder es ist frisch, oder es ist es nicht — <break time="0.5s"/> und nach dreißig Jahren merkst du das in dreißig Sekunden. <break time="1.2s"/>
+
+Von sechs bis acht bereite ich vor. <break time="0.8s"/> Ich schneide die Scheiben für die bombette — sie müssen gleichmäßig sein, weder zu dick noch zu dünn. <break time="0.8s"/> Ich bereite die Füllung: geriebener caciocavallo, Petersilie, Pfeffer. <break time="0.8s"/> Ich rolle sie eine nach der anderen. <break time="0.8s"/> Die bombette werden von Hand gemacht — es gibt keine Möglichkeit, das zu mechanisieren, ohne dass sie schlechter werden. <break time="0.5s"/> Ein guter Metzger macht hundert in einer Stunde. <break time="0.8s"/> Ich brauche länger, weil ich jedes Stück kontrolliere. <break time="1.2s"/>
+
+Der Dienstagmarkt ist der stärkste Tag der Woche. <break time="0.8s"/> Kunden aus dem ganzen Gebiet — <break time="0.5s"/> aus Fasano, aus Ostuni, von mancher Masseria draußen auf dem Land. <break time="0.8s"/> Gesichter, die ich seit Jahren kenne. <break time="0.8s"/> Ich kenne die Familien, weiß welche Kinder das Fett nicht mögen, <break time="0.5s"/> wer die schärfere Wurst will, <break time="0.5s"/> wer immer den Nacken nimmt und nie das Rückenstück. <break time="1.2s"/>
+
+Der Nachmittag gehört dem Grillstand. <break time="0.8s"/> Ich zünde die Glut nach dem Mittagessen an und arbeite bis acht Uhr abends. <break time="0.8s"/> Im Sommer länger — die Touristen kommen spät, nach dem Strand. <break time="0.8s"/> Im Winter sind es vor allem die Einheimischen, Gruppen, die etwas Warmes essen wollen, bevor sie heimfahren. <break time="1.2s"/>
+
+Ich habe Kunden, die seit zwanzig Jahren jeden Samstag herkommen. <break time="0.8s"/> Gleiche Uhrzeit, gleiche Bestellung. <break time="0.8s"/> Bombette und Wurst, ein Viertel Weißwein. <break time="0.8s"/> Ändert sich nie. <break time="0.8s"/> Und es interessiert sie nicht, etwas zu ändern, <break time="0.5s"/> weil sie hier jedes Mal das bekommen, was sie wollen. <break time="1.5s"/>
+
+Das ist meine Arbeit. <break time="0.8s"/> Kein Glamour, kein Social Media. <break time="0.8s"/> Feuer, Fleisch, Messer und zufriedene Kunden. <break time="1.5s"/>
+
+=====
+KAP. 8 — DIE STAMMKUNDEN: PORTRÄTS EINES DORFES
+voice: custom-cisternino
+*(in der Metzgerei oder auf der Gasse)*
+
+Dreißig Jahre lang an einem Ort zu arbeiten bedeutet, das Dorf durch seine Kunden kennenzulernen. <break time="1.2s"/>
+
+Da ist Totò. <break time="0.8s"/> Kommt jeden Freitagmorgen, Punkt neun. <break time="0.8s"/> Er hat das Gesicht von jemandem, der sein ganzes Leben woanders gearbeitet hat <break time="0.5s"/> und jetzt ins Dorf zurückgekehrt ist und noch nicht recht weiß, was er mit der Zeit anfangen soll. <break time="0.8s"/> Kauft immer wenig — zwei Bracioline, vielleicht eine Wurst — <break time="0.5s"/> bleibt aber eine halbe Stunde zum Reden. <break time="0.8s"/> Nicht über das Essen. <break time="0.5s"/> Über das Wetter, das Feld, seinen Sohn in Mailand. <break time="0.8s"/> Die Metzgerei ist für ihn der Anlass, das Haus zu verlassen. <break time="1.2s"/>
+
+Da ist die Familie Taranto — Vater, Mutter, drei Kinder. <break time="0.8s"/> Kommen im Sommer fast jeden Sonntag, aus Tarent eben. <break time="0.8s"/> Zwei Stunden Autofahrt, nur für die bombette. <break time="0.8s"/> Die Kinder kennen sie auswendig — <break time="0.5s"/> wissen schon, was sie wollen, bevor sie reinkommen. <break time="0.8s"/> Die Älteste, die jetzt schon älter ist, <break time="0.5s"/> sagte mir als kleines Mädchen immer, meine bombette seien zu klein. <break time="0.8s"/> Da machte ich sie so groß wie ihre Faust. <break time="1.2s"/>
+
+Da ist der alte Carmelo, der zweihundert Meter von der Metzgerei entfernt wohnt. <break time="0.8s"/> Kommt fast täglich, kauft etwas Kleines — <break time="0.5s"/> ein Stück Fleisch für die Soße, etwas Hackfleisch für Fleischbällchen. <break time="0.8s"/> Zweiundneunzig Jahre alt und geht noch allein. <break time="0.8s"/> Er sagt, er esse Fleisch seit seiner Jugend <break time="0.5s"/> und habe nie verstanden, warum die Leute damit aufhören. <break time="0.8s"/> Ich sage nichts dazu. <break time="0.5s"/> Er hat Recht, aus seiner Sicht. <break time="1.2s"/>
+
+Dann gibt es die Touristen — die zum ersten Mal reinkommen, <break time="0.8s"/> mit dem Gesicht von jemandem, der noch nicht ganz verstanden hat, wie das hier funktioniert. <break time="0.8s"/> Sie schauen auf die Theke, auf das Feuer, auf mich. <break time="0.8s"/> Fragen: Wie geht das hier? <break time="0.5s"/> Ich erkläre es. <break time="0.8s"/> Jedes Mal wie zum ersten Mal. <break time="0.8s"/> Denn für sie ist es das erste Mal. <break time="1.5s"/>
+
+Das Gesicht, wenn sie es verstehen — das ist der Teil meiner Arbeit, der mir am meisten gefällt. <break time="1.5s"/>
+
+=====
+KAP. 9 — DER WEIN: ZONE LOCOROTONDO DOC
+voice: custom-cisternino
+*(in der Altstadt, vielleicht nahe einer Weinbar)*
+
+Cisternino hat keine eigene DOC für Wein. <break time="0.8s"/> Aber es liegt in der richtigen Gegend. <break time="1.2s"/>
+
+Das Gebiet gehört zur Locorotondo DOC-Zone — <break time="0.5s"/> jener Denominazione d'Origine Controllata, die die Weinberge zwischen Locorotondo, Cisternino <break time="0.5s"/> und einem Teil des Fasano-Gebiets umfasst. <break time="0.8s"/> Die Hauptrebsorten sind Verdeca und Bianco d'Alessano — <break time="0.5s"/> einheimische Sorten, die hier seit Jahrhunderten angebaut werden. <break time="1.2s"/>
+
+Das Ergebnis ist ein leichter, <break time="0.5s"/> frischer Weißwein <break time="0.5s"/> mit einer Note Säure. <break time="0.8s"/> Kein Wein, der Eindruck schinden will, <break time="0.5s"/> nicht so körperreich wie ein Primitivo oder ein Negroamaro. <break time="0.8s"/> Es ist der Wein, den man braucht, um im Sommer draußen zu sitzen <break time="0.5s"/> und Fleisch vom Grill zu essen. <break time="0.8s"/> Er kämpft nicht mit dem Essen — er begleitet es. <break time="1.2s"/>
+
+Im Dorf findet ihr lokale Weinkeller und Flaschen zu fairen Preisen. <break time="0.8s"/> Sucht keine internationalen Marken — das sind wir nicht. <break time="0.8s"/> Sucht den Wein vom Ort, <break time="0.5s"/> gemacht von Leuten, die dieses Land kennen. <break time="1.5s"/>
+
+Zu den bombette passt ein frisches Viertel Weißwein am besten. <break time="0.8s"/> Wenn ihr Rotwein wollt, nehmt den Primitivo — <break time="0.5s"/> der wird hier auch angebaut, auch wenn er nicht die Hauptsorte ist. <break time="1.5s"/>
+
+Ich bin kein Weinexperte — ich bin Metzger, kein Sommelier. <break time="0.8s"/> Aber ich weiß, was ich kombinieren würde. <break time="0.8s"/> Die bombette wollen etwas Leichtes, das den Fleischgeschmack nicht überdeckt. <break time="0.8s"/> Der lokale Weiße funktioniert. <break time="0.8s"/> Ein Rosato geht im Sommer auch gut, <break time="0.5s"/> gut gekühlt aus dem Kühlschrank. <break time="0.8s"/> Der Rote ist für die gnumarieddi und die kräftigeren Würste — <break time="0.5s"/> die vertragen einen volleren Wein. <break time="0.8s"/> Die Grundregel: je fettreicher und aromatischer das Fleisch, <break time="0.5s"/> desto kräftiger darf der Wein sein. <break time="1.5s"/>
+
+=====
+KAP. 10 — DIE TRULLETTI: TRULLI, IN DENEN MAN NOCH LEBT
+voice: custom-cisternino
+*(in der Altstadt oder mit Blick auf die Landschaft)*
+
+Im Gebiet von Cisternino gibt es Trulli. <break time="1.2s"/>
+
+Nicht wie in Alberobello, <break time="0.5s"/> wo die Trulli fast alle Läden und B&Bs für Touristen sind. <break time="0.8s"/> Hier, auf dem Lande rund um das Dorf, sind die Trulli noch Privathäuser. <break time="0.8s"/> Da wohnen Leute. <break time="0.8s"/> Dort wird man geboren, dort wächst man auf, <break time="0.5s"/> und die Großeltern sterben darin noch nach achtzig Jahren. <break time="1.2s"/>
+
+Das ist etwas, das Außenstehende schwer begreifen. <break time="0.8s"/> Der Trullo ist kein Museumsobjekt. <break time="0.8s"/> Er ist ein funktionierendes Haus. <break time="0.8s"/> Mit Badezimmer und Kühlschrank drin, <break time="0.5s"/> mit Parabolantenne auf dem Dach, <break time="0.5s"/> mit Enkeln, die im Sommer dort schlafen, wenn sie aus der Stadt kommen. <break time="1.2s"/>
+
+Viele Trulli hier wurden als Ferienwohnungen umgebaut — <break time="0.5s"/> Agritourismusbetriebe, Ferienhäuser. <break time="0.8s"/> Eine Ressource des Gebiets. <break time="0.8s"/> Aber rund um Cisternino findet man noch immer von alters her bewohnte Trulli, <break time="0.5s"/> auf den Masserien, entlang der Landstraßen. <break time="0.8s"/> Man kann sie nicht besichtigen, denn es ist Privatbesitz. <break time="0.8s"/> Aber man schaut sie an, versteht was sie sind. <break time="1.2s"/>
+
+Wenn ihr einen "echten" Trullo wollt — <break time="0.5s"/> im Sinne von echt, nicht Postkarte — <break time="0.5s"/> kommt ins Gebiet von Cisternino. <break time="1.5s"/>
+
+Eine Frage, die mir oft gestellt wird: wie ist es drin in einem Trullo? <break time="0.8s"/> Die Antwort ist: kühl im Sommer und kalt im Winter. <break time="0.8s"/> Die Steine des Kegels halten die Temperatur. <break time="0.8s"/> Im Sommer ist er der kühlste Ort auf dem Land. <break time="0.8s"/> Im Winter braucht man Feuer — <break time="0.5s"/> die Alten hatten den Kamin, wer ihn heute umbaut, installiert Heizung. <break time="0.8s"/> Aber die natürliche Dämmung bleibt. <break time="0.8s"/> Eine alte Bautechnik, die noch heute funktioniert, <break time="0.5s"/> ohne dass man Physik erklären müsste. <break time="1.5s"/>
+
+=====
+KAP. 11 — DIE FESTE UND DER KALENDER DES METZGERS
+voice: custom-cisternino
+*(auf dem Platz oder vor der Metzgerei)*
+
+Cisternino hat seinen eigenen Veranstaltungskalender. <break time="1.2s"/>
+
+Das Patronatsfest ist dem heiligen Quirico gewidmet. <break time="0.8s"/> Der Schutzpatron des Dorfes — die Hauptkirche auf dem Platz trägt seinen Namen. <break time="0.8s"/> Die Feierlichkeiten sind im Sommer, wie in fast allen Dörfern des Südens. <break time="0.8s"/> Prozession, Musik, Marktstände, Leute auf dem Platz bis spät in die Nacht. <break time="0.8s"/> Das Fest, das man nicht per App organisiert — <break time="0.5s"/> man weiß, wann es ist, und kommt. <break time="1.2s"/>
+
+Für mich sind die Feste die anstrengendste Zeit des Jahres. <break time="0.8s"/> Das Feuer brennt länger, <break time="0.5s"/> die Kunden kommen in Wellen, <break time="0.5s"/> man muss doppelt so viel vorbereitet haben. <break time="0.8s"/> Aber es ist auch die Zeit, die ich am liebsten mag. <break time="0.8s"/> Das Dorf lebt — <break time="0.5s"/> es riecht nach Frittiertem und Grillrauch in der ganzen Altstadt, <break time="0.5s"/> die Musik dringt bis in die Metzgerei, <break time="0.5s"/> Kinder rennen zwischen den Barsitzen durch. <break time="1.2s"/>
+
+Im Sommer gibt es auch Veranstaltungen in der Altstadt — <break time="0.8s"/> Konzerte, Aufführungen, Kunsthandwerksmärkte. <break time="0.8s"/> Cisternino hat sich in den letzten Jahren dem Kulturtourismus geöffnet, <break time="0.5s"/> nicht nur dem gastronomischen. <break time="0.8s"/> Gut so — <break time="0.5s"/> das Dorf hat auch jenseits des Grillstands einiges zu sagen. <break time="1.2s"/>
+
+Mein persönlicher Kalender teilt das Jahr in zwei: <break time="0.8s"/> Von Juni bis September ist das Dorf voll und man arbeitet ohne Pause. <break time="0.8s"/> Von Oktober bis Mai kehren die normalen Rhythmen zurück — <break time="0.5s"/> die Stammkunden, der Dienstagmarkt, <break time="0.5s"/> und die Freude, ohne Gedränge zu arbeiten. <break time="0.8s"/> Im Winter wärmt das Glutfeuer die Werkstatt, <break time="0.5s"/> und die Kunden bleiben stehen und reden, während das Fleisch gart. <break time="0.8s"/> Die haben keine Eile. <break time="0.5s"/> Ich auch nicht. <break time="1.5s"/>
+
+=====
+KAP. 12 — DAS KULTURLEBEN: FESTE UND EIN LEBENDIGES DORF
+voice: custom-cisternino
+*(in der Altstadt, nahe dem Platz)*
+
+Cisternino ist nicht nur Fleisch und Aussicht. <break time="1.2s"/>
+
+Das Dorf hat sein eigenes Leben. <break time="0.8s"/> In der Nähe gibt es die archäologische Stätte Egnathia — <break time="0.5s"/> eine alte messapische und dann römische Stadt, <break time="0.5s"/> mit einem interessanten Ausgrabungsgelände auf Fasanos Gebiet. <break time="0.8s"/> Aber Cisternino hat seinen eigenen Kalender. <break time="1.2s"/>
+
+Die Bars im Zentrum sind das Nervensystem des Dorfes. <break time="0.8s"/> Morgens voll mit Leuten, die frühstücken, bevor sie den Laden öffnen oder zur Arbeit gehen. <break time="0.8s"/> Nachmittags mit Alten, die Karten spielen. <break time="0.8s"/> Abends mit denen, die ein Glas trinken, bevor sie zum Abendessen gehen. <break time="0.8s"/> Kein Tourismus. <break time="0.5s"/> Ein Dorf, das funktioniert. <break time="1.5s"/>
+
+Das ist es, was mir gefällt, wenn ich Leute sehe, die herkommen und nicht nur essen und wieder gehen. <break time="0.8s"/> Wenn sie sich setzen, sich umsehen, <break time="0.5s"/> das Dorf spüren. <break time="0.8s"/> Das kauft man nicht, das bucht man nicht. <break time="0.5s"/> Entweder ist es da oder nicht. <break time="0.8s"/> Hier ist es da. <break time="1.5s"/>
+
+Der Dienstagmarkt ist außerhalb der Saison der lebendigste Moment der Woche. <break time="0.8s"/> Die Marktstände belegen die Platzränder und die Hauptstraßen. <break time="0.8s"/> Obst, Gemüse, Kleidung, Haushaltswaren. <break time="0.8s"/> Die Bauern der Gegend bringen, was sie geerntet haben. <break time="0.5s"/> Kein Gourmetmarkt für Touristen — <break time="0.5s"/> es ist der Dorfmarkt, mit Dorfpreisen. <break time="0.8s"/> Wenn du zufällig dienstags hier bist, schau vorbei. <break time="0.5s"/> Es lohnt den Umweg. <break time="1.5s"/>
+
+=====
+KAP. 13 — DAS DORF BEI NACHT
+voice: custom-cisternino
+*(abends auf dem Platz)*
+
+Was dich an Cisternino überraschen wird, ist die Nacht. <break time="1.5s"/>
+
+Im Sommer verändert das Dorf nach neun Uhr sein Gesicht. <break time="0.8s"/> Die Tageshitze weicht, <break time="0.5s"/> ein leichter Wind kommt aus dem Tal, <break time="0.5s"/> und der Platz füllt sich. <break time="0.8s"/> Die Bars stellen die Tische nach draußen — <break time="0.5s"/> wer tagsüber drinnen im Schatten saß, kommt raus, wenn die Sonne sinkt. <break time="0.8s"/> Die Gassen beleben sich, <break time="0.5s"/> in den Häusern gehen die Lichter an, <break time="0.5s"/> die weiße Altstadt wird fast leuchtend, auch ohne besondere Strahler. <break time="1.2s"/>
+
+Die Steine speichern die Tageswärme und geben sie abends langsam ab. <break time="0.8s"/> Wenn du nach Sonnenuntergang die Hand an eine Mauer in der Altstadt legst, <break time="0.5s"/> ist sie noch warm. <break time="0.8s"/> Das ist die Wärme aus zehn Stunden Sonneneinstrahlung. <break time="0.8s"/> Das ist das Gefühl, das den Abendspaziergang angenehm macht, auch wenn es draußen dreißig Grad hat — <break time="0.5s"/> die kühle Luft und die Wärme der Steine gleichen sich aus. <break time="1.2s"/>
+
+Kinder spielen bis spät — hier geht man im Sommer nicht früh schlafen, <break time="0.5s"/> weder die Großen noch die Kleinen. <break time="0.8s"/> Die Alten kommen aus ihren Häusern, die sie tagsüber wegen der Hitze gemieden hatten — <break time="0.5s"/> aber abends geht es. <break time="0.8s"/> Sie setzen sich auf die Stühle vor dem Haustor, <break time="0.5s"/> wie man es immer getan hat, <break time="0.5s"/> und schauen, wer vorbeigeht. <break time="1.2s"/>
+
+Mein Rat: wenn du bis zum Abend bleiben kannst, tu es. <break time="0.8s"/> Cisternino ist tagsüber schön. <break time="0.8s"/> Im Sommer bei Nacht ist es etwas anderes. <break time="0.8s"/> Der Platz, die Lichter, das ferne Stimmengewirr, <break time="0.5s"/> der Fleischgeruch aus irgendeiner Metzgerei, die noch Glut hat — <break time="0.5s"/> denn jemand hat den Grill bis spät geöffnet. <break time="0.8s"/> Nicht ich, der um fünf aufsteht. <break time="0.5s"/> Aber jemand. <break time="1.5s"/>
+
+=====
+KAP. 14 — DAS VALLE D'ITRIA VON CISTERNINO AUS — DIE AUSSICHT
+voice: custom-cisternino
+*(am Aussichtspunkt oder am Rand der Altstadt)*
+
+Komm hier bei Sonnenuntergang. <break time="1.5s"/>
+
+Es gibt einen Aussichtspunkt auf der Seite des Dorfes, die zum Valle d'Itria schaut. <break time="0.8s"/> Von dort siehst du die Trulli verstreut zwischen den Olivenbäumen, <break time="0.5s"/> die weißen Dächer von Locorotondo in der Ferne, <break time="0.5s"/> die Weinberge, die mit den Jahreszeiten die Farbe wechseln. <break time="0.8s"/> Im Frühling leuchtendes Grün. <break time="0.5s"/> Im Sommer dunkel und schwer. <break time="0.5s"/> Im Herbst golden. <break time="1.2s"/>
+
+Das Valle d'Itria versteht man besser von oben. <break time="0.8s"/> Wenn du drin bist — auf den Landstraßen, zwischen den Trockenmauern — <break time="0.5s"/> siehst du es nicht ganz. <break time="0.8s"/> Von hier aber hast du die Perspektive. <break time="0.8s"/> Du begreifst, warum man es Valle nennt — <break time="0.5s"/> eine sanfte Senke zwischen den Hügeln, <break time="0.5s"/> keine enge Schlucht, sondern ein offenes Becken, <break time="0.5s"/> mit den Gipfeln der Sassi di Matera weit entfernt an besonders klaren Tagen. <break time="1.2s"/>
+
+Auf der anderen Seite, nach Osten, <break time="0.8s"/> sieht man an klaren Tagen den blauen Streifen der Adria. <break time="0.8s"/> Nicht weit — <break time="0.5s"/> Ostuni ist weniger als dreißig Kilometer entfernt, <break time="0.5s"/> Fasano noch näher. <break time="0.8s"/> Aber von hier wirkt das Meer wie eine ferne Grenze, <break time="0.5s"/> wie etwas, das auf der anderen Seite der Welt liegt. <break time="1.2s"/>
+
+Das ist das Privileg, auf dem Kamm zu leben. <break time="0.8s"/> Du hast beides. <break time="0.8s"/> Du musst nicht zwischen Hügel und Meer wählen — <break time="0.5s"/> du siehst beides gleichzeitig. <break time="1.5s"/>
+
+Mein Großvater sagte, von Cisternino aus sähe man genug von der Welt, <break time="0.5s"/> um nie sehr weit reisen zu müssen. <break time="0.8s"/> Vielleicht übertrieb er. <break time="0.8s"/> Aber jedes Mal, wenn ich mich hier bei Sonnenuntergang hinsetze und schaue, <break time="0.5s"/> verstehe ich, was er meinte. <break time="1.5s"/>
+
+Der Himmel hier ändert sich schnell. <break time="0.8s"/> Besonders im September — <break time="0.8s"/> das Nachmittagslicht ist dieses tiefstehende Licht, das alles schärfer erscheinen lässt, <break time="0.5s"/> die Farben intensiver als sie sind. <break time="0.8s"/> Die Fotografen wissen das — sie kommen extra in dieser Jahreszeit. <break time="0.8s"/> Ich verstehe nichts von Fotografie, <break time="0.5s"/> aber ich merke, dass dieses Licht mich glücklich macht. <break time="0.5s"/> Und das reicht. <break time="1.5s"/>
+
+=====
+KAP. 15 — WO MAN ISST: JENSEITS DES GRILLSTANDS
+voice: custom-cisternino
+*(im Zentrum, Restaurantzone)*
+
+Der Grillstand ist die Hauptsache. <break time="0.8s"/> Das sage ich nicht zurück. <break time="1.2s"/>
+
+Aber wenn ihr euch in Ruhe hinsetzen und essen wollt, <break time="0.5s"/> machen die Restaurants in der Altstadt ernsthafte apulische Küche. <break time="0.8s"/> Kein Haute Cuisine mit Michelin-Sternen — <break time="0.5s"/> Küche, die auf den Produkten der Region basiert, <break time="0.5s"/> mit Orecchiette, Hülsenfrüchten, Fleisch <break time="0.5s"/> und einigen Fischgerichten von der nahen Küste. <break time="1.2s"/>
+
+Die Zeiten hier sind süditalienisch. <break time="0.8s"/> Mittagessen von eins bis drei, <break time="0.5s"/> Abendessen ab acht. <break time="0.8s"/> Wenn ihr um halb acht abends mit Hunger kommt <break time="0.5s"/> und alles geschlossen findet, <break time="0.5s"/> wundert euch nicht. <break time="0.8s"/> Kommt in einer halben Stunde wieder. <break time="1.2s"/>
+
+Die fornelli pronto schließen oft früher als die Restaurants — <break time="0.5s"/> die Glut wird am frühen Nachmittag angezündet und läuft bis acht, maximal neun Uhr. <break time="0.8s"/> Wenn ihr im Sommer spät kommt, <break time="0.5s"/> ruft vorher an oder schaut nach, ob noch Feuer brennt. <break time="1.2s"/>
+
+Ein praktischer Hinweis: <break time="0.8s"/> Kommt nicht nach Cisternino in der Erwartung, in zehn Minuten gegessen zu haben und weiterzufahren. <break time="0.8s"/> Plant mindestens zwei Stunden ein. <break time="0.5s"/> Ein Rundgang durch die Altstadt, <break time="0.5s"/> Fleisch am Grillstand, <break time="0.5s"/> ein Kaffee auf dem Platz. <break time="0.8s"/> So funktioniert das hier. <break time="1.5s"/>
+
+=====
+KAP. 16 — ABSCHLUSS: MICHELES RAT
+voice: custom-cisternino
+*(auf dem Platz oder vor der Metzgerei)*
+
+Gut. <break time="1.2s"/>
+
+Du hast die Altstadt gesehen, die Geschichte gehört, <break time="0.5s"/> und ich hoffe, du hast mindestens eine bombette gegessen. <break time="0.8s"/> Falls nicht, geh zurück — <break time="0.5s"/> du kannst nicht gehen, ohne eine probiert zu haben. <break time="1.2s"/>
+
+Mein letzter Rat ist dieser. <break time="1.2s"/>
+
+Wenn du am Grillstand bist und die bombette aussuchst, <break time="0.8s"/> schau nicht nur auf den Preis und nimm nicht die ersten, die du auf der Theke siehst. <break time="0.8s"/> Schau, wie sie gemacht sind. <break time="0.8s"/> Die Scheibe capocollo muss fest um die Füllung gerollt sein — <break time="0.5s"/> wenn der Käse schon vor dem Grillen herausschaut, <break time="0.5s"/> läuft er auf der Glut weg und drin bleibt nichts mehr. <break time="0.8s"/> Und bitte den Metzger, sie etwas weniger lange zu grillen, <break time="0.5s"/> wenn du zartes Fleisch magst. <break time="0.8s"/> Metzger, die an Touristen gewöhnt sind, grillen sie oft zu lange, <break time="0.5s"/> weil sie denken, die Leute wollen die Kruste sehen. <break time="0.8s"/> Dabei ist die richtige bombette innen zart und außen goldbraun — <break time="0.5s"/> nicht trocken. <break time="1.2s"/>
+
+Das ist das Geheimnis, das ich dir mitgebe. <break time="0.8s"/> Nicht aus Büchern — aus dreißig Jahren an der Glut. <break time="1.2s"/>
+
+Cisternino besucht man langsam, isst man langsam, <break time="0.5s"/> und verlässt man mit einem kleinen Bedauern. <break time="0.8s"/> Das ist das Zeichen, dass du zurückkommen musst. <break time="1.5s"/>
+
+Wenn du wiederkommst — und du wirst wiederkommen — <break time="0.8s"/> weißt du schon, wie es läuft. <break time="0.8s"/> Du kommst an, parkst draußen, gehst zu Fuß in die Altstadt. <break time="0.8s"/> Du machst einen Rundgang durch die Gassen, auch wenn du sie schon kennst — <break time="0.5s"/> sie verändern sich immer ein bisschen, <break time="0.5s"/> ein Blumentopf steht woanders, ein Tor ist neu gestrichen. <break time="0.8s"/> Dann gehst du zum Grillstand. <break time="0.8s"/> Dann setzt du dich irgendwo mit dem Glas in der Hand <break time="0.5s"/> und schaust den vorbeigehenden Leuten zu. <break time="0.8s"/> Das ist Cisternino. <break time="1.2s"/>
+
+Ich bin Michele. <break time="0.8s"/> Wenn du in der Metzgerei vorbeikommst, <break time="0.5s"/> erkenne ich dich am Gesicht — dem Gesicht von jemandem, der gerade verstanden hat, was das fornello pronto ist. <break time="0.8s"/> Es ist immer dasselbe Gesicht. <break time="1.5s"/>
+
+Und wenn ihr nach Cisternino noch weiterwollt, <break time="0.5s"/> sind Fasano und Selva di Fasano zwanzig Minuten entfernt. <break time="0.8s"/> Anderes Terrain — <break time="0.5s"/> jahrtausendealte Olivenbäume, <break time="0.5s"/> eine römische Stätte am Meer, <break time="0.5s"/> und ein Hochplateau, von dem man das ganze Tal sieht. <break time="0.8s"/> Es gibt dort auch einen Gleitschirmflieger-Fan, <break time="0.5s"/> der euch den Ort von oben erklärt. <break time="1.2s"/>
+
+Gute Reise. <break time="2s"/>

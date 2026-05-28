@@ -1,0 +1,285 @@
+## TESTI AUDIO — GUIDA CISTERNINO
+*Voce: Michele, macellaio — terza generazione, fornello pronto di Cisternino*
+*Formato: misto auto + piedi · 30 minuti*
+
+=====
+CAP. 1 — INTRO: IL PAESE SUL CRINALE
+voice: custom-cisternino
+*(in auto, avvicinandosi a Cisternino)*
+
+Stai salendo. <break time="1.5s"/>
+
+Non tanto, non siamo in montagna. <break time="0.8s"/> Ma abbastanza da sentire che l'aria cambia. <break time="0.8s"/> Siamo a quattrocentotré metri — più su di Locorotondo, più su di Martina Franca anche solo di poco. <break time="0.8s"/> E da qui, quando la giornata è limpida, <break time="0.5s"/> vedi da una parte la Valle d'Itria con i trulli e i vigneti, <break time="0.5s"/> e dall'altra il mare. <break time="1.2s"/>
+
+Due mondi. <break time="0.8s"/> Due orizzonti. <break time="0.8s"/> Un paese in mezzo. <break time="1.5s"/>
+
+Io mi chiamo Michele. <break time="0.8s"/> Faccio il macellaio — terza generazione. <break time="0.8s"/> Mio nonno aveva il banco al mercato, mio padre ha aperto la macelleria in paese, <break time="0.5s"/> e io ho aggiunto il fornello pronto. <break time="0.8s"/> Di cosa si tratta te lo spiego dopo. <break time="0.8s"/> Prima voglio che arrivi qui con le idee chiare. <break time="1.2s"/>
+
+Cisternino non è Alberobello. <break time="0.8s"/> Non è un museo. <break time="0.8s"/> Non trovi i torpedoni parcheggiati davanti e la gente in coda per il selfie col trullo. <break time="0.8s"/> Trovi un paese dove si vive. <break time="0.8s"/> Dove il martedì c'è il mercato, dove i bar aprono alle sette, <break time="0.5s"/> dove d'estate la piazza si riempie la sera e ci sono i bambini che giocano tra le sedie dei tavolini. <break time="1.2s"/>
+
+Quello che trovi qui è il paese come era fatto — <break time="0.5s"/> e come funziona ancora. <break time="1.5s"/>
+
+=====
+CAP. 2 — IL PAESE PIÙ BELLO D'ITALIA
+voice: custom-cisternino
+*(in auto o appena parcheggiato)*
+
+Cisternino è stato inserito nei Borghi più belli d'Italia. <break time="1s"/>
+
+Non è una cosa che diciamo noi cisternintani per fare i vanitosi. <break time="0.8s"/> È un riconoscimento ufficiale, con criteri precisi: <break time="0.5s"/> stato di conservazione del centro storico, <break time="0.5s"/> qualità architettonica, <break time="0.5s"/> vivibilità. <break time="0.8s"/> E Cisternino ci è dentro da anni. <break time="1.2s"/>
+
+La cosa che capisce chi ci arriva davvero è che il bello qui non è messo in vetrina. <break time="0.8s"/> Non c'è un monumento principale da fotografare e andarsene. <break time="0.8s"/> Il bello è nel dettaglio — <break time="0.5s"/> una scala esterna con i vasi di gerani, <break time="0.5s"/> un vicolo così stretto che ci passa uno alla volta, <break time="0.5s"/> un portone antico dipinto di azzurro. <break time="1.2s"/>
+
+I turisti che vengono e hanno fretta vedono poco. <break time="0.8s"/> Quelli che si fermano, che mangiano, che tornano la sera, <break time="0.8s"/> capiscono perché questo posto ha quel riconoscimento. <break time="1.5s"/>
+
+Il bello di Cisternino è anche questo: che quando esci dal parcheggio e entri nel centro storico a piedi, <break time="0.8s"/> il rumore della strada sparisce in trenta secondi. <break time="0.8s"/> Il paese assorbe il suono. <break time="0.5s"/> Le pietre, i muri spessi, i vicoli stretti — <break time="0.5s"/> tutto funziona da barriera naturale. <break time="0.8s"/> Sei dentro, e il resto del mondo sta fuori. <break time="1.5s"/>
+
+=====
+CAP. 3 — IL CENTRO STORICO: VICOLI, SCALE, FIORI
+voice: custom-cisternino
+*(a piedi, entrando nel centro storico)*
+
+Adesso sei nel centro storico. <break time="1.2s"/>
+
+Tutto bianco. <break time="0.8s"/> Le case sono intonacate di calce — <break time="0.5s"/> una tradizione pratica prima ancora che estetica. <break time="0.8s"/> La calce è antibatterica, <break time="0.5s"/> riflette il calore, <break time="0.5s"/> e dura anni senza manutenzione. <break time="0.8s"/> Prima dell'aria condizionata, era l'unico modo per tenere le case fresche. <break time="1.2s"/>
+
+Le scale esterne sono una cosa che noti subito. <break time="0.8s"/> Ogni casa ne ha una, a volte due. <break time="0.8s"/> Salgono dritte o a curva, spesso strette, <break time="0.5s"/> con i pioli consumati dall'uso. <break time="0.8s"/> Sui pianerottoli ci sono vasi di fiori — <break time="0.5s"/> gerani rossi, basilico, qualche arbusto che non saprei nominarti. <break time="0.8s"/> Non è una decorazione da rivista. <break time="0.5s"/> È quello che fa la gente quando ha uno spazio davanti alla porta. <break time="1.2s"/>
+
+I vicoli si stringono e si allargano senza logica apparente. <break time="0.8s"/> Ogni tanto ti ritrovi in una piccola piazzetta <break time="0.5s"/> — uno slargo con una panchina e magari una fontanella. <break time="0.8s"/> Qui si fermavano a parlare le donne mentre le case erano ancora piene di famiglie numerose. <break time="0.8s"/> Adesso ci si siedono i turisti e i vecchi. <break time="0.8s"/> La funzione è la stessa: <break time="0.5s"/> ci si ferma, ci si guarda intorno, <break time="0.5s"/> si rallenta. <break time="1.5s"/>
+
+L'odore del centro storico cambia a seconda dell'ora. <break time="0.8s"/> La mattina presto, quando spazzano e bagnano i vicoli, <break time="0.5s"/> c'è quella nota umida di pietra bagnata e sapone. <break time="0.8s"/> Verso mezzogiorno arriva il profumo del cibo — <break time="0.5s"/> il sugo che cuoce, il pane che è già uscito dal forno, <break time="0.5s"/> e se sei vicino alle macellerie, il fumo della brace che inizia ad accendersi. <break time="0.8s"/> La sera invece il paese profuma di estate — <break time="0.5s"/> fiori, erba calda, il tabacco di qualcuno seduto sui gradini. <break time="1.2s"/>
+
+Non affrettarti. <break time="0.8s"/> Questo centro storico richiede calma. <break time="0.8s"/> Venti minuti a piedi veloci non bastano. <break time="0.8s"/> Devi perdere il senso del tempo per un po'. <break time="1.5s"/>
+
+=====
+CAP. 4 — LE ORIGINI: MESSAPI, TORRE, BORGO
+voice: custom-cisternino
+*(nel centro storico, vicino alla torre o alla chiesa madre)*
+
+Cisternino è antico. <break time="1.2s"/>
+
+Prima di tutto qui c'erano i Messapi — il popolo che abitava questa parte della Puglia prima dei Romani. <break time="0.8s"/> Erano agricoltori e guerrieri, costruivano in pietra, <break time="0.5s"/> e conoscevano bene queste colline perché da qui si controllavano i percorsi verso il mare. <break time="1.2s"/>
+
+Il nome Cisternino viene probabilmente dall'acqua. <break time="0.8s"/> Cisterne — le vasche per raccogliere l'acqua piovana. <break time="0.8s"/> Su questa collina non c'erano sorgenti naturali abbondanti, <break time="0.5s"/> e l'acqua era una risorsa preziosa. <break time="0.8s"/> Chi controllava le cisterne controllava il territorio. <break time="1.2s"/>
+
+Nel medioevo il borgo si organizza attorno a una torre di avvistamento — <break time="0.5s"/> quella che oggi vedi trasformata nel campanile. <break time="0.8s"/> Le mura del centro storico seguono un perimetro difensivo. <break time="0.8s"/> Le case sul bordo esterno sono costruite compatte, senza finestre verso l'esterno, <break time="0.5s"/> perché le mura delle case erano anche le mura del paese. <break time="1.2s"/>
+
+Nei secoli successivi il borgo passa di mano in mano — <break time="0.5s"/> signori locali, ordini religiosi, dominio aragonese. <break time="0.8s"/> La struttura del centro storico che vedi oggi si consolida tra il Quattrocento e il Seicento. <break time="0.8s"/> Quello che i costruttori di allora hanno lasciato <break time="0.5s"/> è ancora qui, quasi intatto. <break time="1.5s"/>
+
+Mio nonno mi portava qui da bambino e mi faceva toccare le pietre. <break time="0.8s"/> Diceva: queste pietre le hanno tagliate gli uomini a mano, senza macchine. <break time="0.8s"/> Con lo scalpello e la mazza, lavorando da aprile a ottobre prima che arrivasse il freddo. <break time="0.8s"/> Non so se è vero nei dettagli, <break time="0.5s"/> ma l'idea è giusta — <break time="0.5s"/> quello che vedi qui è il risultato di generazioni di lavoro manuale su questa collina. <break time="1.5s"/>
+
+=====
+CAP. 5 — IL FORNELLO PRONTO: LA TRADIZIONE UNICA
+voice: custom-cisternino
+*(vicino a una delle macellerie con fornello)*
+
+Adesso ti devo spiegare perché Cisternino è diversa da tutti gli altri paesi. <break time="1.2s"/>
+
+Il fornello pronto. <break time="1.5s"/>
+
+In quasi ogni paese del mondo, la macelleria vende carne cruda e tu la cucini a casa. <break time="0.8s"/> Qui no. <break time="0.8s"/> Qui la macelleria ha il fuoco. <break time="0.8s"/> Entri, scegli il taglio che vuoi — <break time="0.5s"/> le bombette, le salsicce, i gnumarieddi, le bracioline — <break time="0.5s"/> e il macellaio te lo cuoce sul momento, sulla brace accesa, davanti a te. <break time="1.2s"/>
+
+Non è un ristorante. <break time="0.8s"/> Non c'è il menu, non c'è il cameriere, non c'è il coperto. <break time="0.8s"/> È la macelleria che cuoce. <break time="0.8s"/> Ti danno la roba in un piatto di carta o su un vassoio, <break time="0.5s"/> ti siedi fuori su una sedia di plastica o su un gradino, <break time="0.5s"/> e mangi. <break time="1.2s"/>
+
+Come è nata questa tradizione? <break time="0.8s"/> La versione che mi ha raccontato mio nonno è questa: <break time="0.5s"/> le famiglie del paese compravano la carne ma non avevano sempre modo di cucinarla bene — <break time="0.5s"/> i forni non c'erano in tutte le case, il combustibile costava. <break time="0.8s"/> Allora erano i macellai a cuocere. <break time="0.8s"/> Con il fuoco già acceso per riscaldare la bottega d'inverno, <break time="0.5s"/> cuocere la carne del cliente era un servizio naturale. <break time="1.2s"/>
+
+Da servizio è diventata tradizione. <break time="0.8s"/> Da tradizione è diventata identità. <break time="0.8s"/> Oggi i fornelli pronto di Cisternino sono conosciuti in tutta la Puglia. <break time="0.8s"/> Gente da Taranto, da Bari, da Brindisi — <break time="0.5s"/> viene fin qui solo per mangiare la carne cotta al momento. <break time="1.5s"/>
+
+È uno dei pochi posti al mondo dove il macellaio è anche il cuoco. <break time="0.8s"/> E dove il cliente sceglie il taglio crudo <break time="0.5s"/> e poi lo vede diventare il suo pranzo nel giro di dieci minuti. <break time="1.5s"/>
+
+Quando entri in una macelleria con il fornello, il primo impatto è l'odore. <break time="0.8s"/> Il fumo del legno bruciato — qui si usano principalmente legni duri, come il fico o la quercia — <break time="0.5s"/> misto al grasso del maiale che cola sulla brace. <break time="0.8s"/> È un odore potente, <break time="0.5s"/> che si attacca ai vestiti e ai capelli. <break time="0.8s"/> Esci dal fornello e lo porti con te per il resto della giornata. <break time="0.8s"/> Non è un problema. <break time="0.5s"/> È il ricordo che ti porti a casa. <break time="1.5s"/>
+
+=====
+CAP. 6 — LE BOMBETTE: INGREDIENTI E COTTURA
+voice: custom-cisternino
+*(alla macelleria, davanti alla brace)*
+
+Le bombette. <break time="1.5s"/>
+
+Ti dico subito cosa sono, perché il nome inganna — <break time="0.5s"/> non hanno niente a che fare con esplosivi. <break time="0.8s"/> Sono involtini di capocollo di maiale — <break time="0.5s"/> fette sottili di coppa avvolte attorno a un ripieno. <break time="1.2s"/>
+
+Il ripieno base è formaggio, <break time="0.5s"/> quasi sempre caciocavallo o un pecorino fresco. <break time="0.8s"/> Poi dipende da chi le fa. <break time="0.8s"/> C'è chi aggiunge prezzemolo, chi aggiunge pepe abbondante, <break time="0.5s"/> chi mette una punta di aglio, chi no. <break time="0.8s"/> Ogni macellaio ha la sua versione. <break time="0.8s"/> Ogni famiglia giura che quella del macellaio di fiducia è la migliore. <break time="1.2s"/>
+
+La cottura è sulla brace. <break time="0.8s"/> Non in padella, non al forno, non in friggitrice. <break time="0.8s"/> Brace. <break time="0.8s"/> Il fuoco vivo da sotto, <break time="0.5s"/> il grasso del capocollo che cola e fa fumo, <break time="0.5s"/> il formaggio che si fonde dentro, <break time="0.5s"/> la carne che prende colore da fuori e rimane morbida dentro. <break time="1.2s"/>
+
+Una bombetta fatta bene deve avere tre cose. <break time="0.8s"/> La carne non stracotta — rimane un filo rosata al centro. <break time="0.8s"/> Il formaggio che esce dal lato, appena liquido. <break time="0.8s"/> La superficie con la crosticina scura ma non bruciata — <break time="0.5s"/> quella che in dialetto diciamo arrostita, non carbonizzata. <break time="1.2s"/>
+
+Una bombetta fatta male è secca. <break time="0.8s"/> Il formaggio è già evaporato, <break time="0.5s"/> la carne è grigiastra, <break time="0.5s"/> non c'è più succo dentro. <break time="0.8s"/> Quella è una bombetta che ha passato troppo tempo sul fuoco o che è stata preparata male. <break time="0.8s"/> Io le riconosco a vista, dopo trent'anni di brace. <break time="1.5s"/>
+
+Il segreto che non dice nessuno è il momento in cui le giri. <break time="0.8s"/> Troppo presto e si aprono — il ripieno esce tutto. <break time="0.8s"/> Troppo tardi e bruciano da un lato. <break time="0.8s"/> Il tempo giusto lo senti — <break time="0.5s"/> la bombetta si stacca dalla griglia da sola quando è pronta a girarsi. <break time="0.8s"/> Se la forzi prima, ti rimane attaccata. <break time="0.5s"/> È la carne che ti dice quando è il momento. <break time="1.2s"/>
+
+Mangiarne due o tre è normale. <break time="0.8s"/> Con un po' di pane e un bicchiere di Locorotondo bianco, <break time="0.5s"/> è un pranzo completo. <break time="0.8s"/> Senza cerimonie, senza tovaglia, <break time="0.5s"/> con le dita. <break time="1.5s"/>
+
+=====
+CAP. 7 — LA MACELLERIA: LA GIORNATA DI MICHELE
+voice: custom-cisternino
+*(alla macelleria o nel vicolo davanti)*
+
+Vuoi sapere come funziona la mia giornata? <break time="1.2s"/>
+
+Mi alzo alle cinque. <break time="0.8s"/> Non per scelta filosofica — è che la carne arriva presto. <break time="0.8s"/> I fornitori del mattino portano quello che serve per il giorno. <break time="0.8s"/> Controllo tutto: <break time="0.5s"/> il colore, la consistenza, l'odore. <break time="0.8s"/> La carne non mente. <break time="0.8s"/> O è fresca o non lo è, <break time="0.5s"/> e in trent'anni impari a capirlo in trenta secondi. <break time="1.2s"/>
+
+Dalle sei alle otto preparo. <break time="0.8s"/> Taglio le fette per le bombette — devono essere uniformi, né troppo spesse né troppo sottili. <break time="0.8s"/> Preparo il ripieno: il caciocavallo grattugiato, il prezzemolo, il pepe. <break time="0.8s"/> Arrotolo una per una. <break time="0.8s"/> Le bombette si fanno a mano, non c'è modo di meccanizzare questa cosa senza che vengano peggio. <break time="0.5s"/> Un macellaio che lavora bene ne fa cento in un'ora. <break time="0.8s"/> Io ci metto ancora più tempo perché controllo ogni pezzo. <break time="1.2s"/>
+
+Il mercato del martedì è il giorno più grosso della settimana. <break time="0.8s"/> Clienti che vengono da tutto il territorio — <break time="0.5s"/> da Fasano, da Ostuni, da qualche masseria fuori. <break time="0.8s"/> Sono facce che vedo da anni. <break time="0.8s"/> Conosco le famiglie, so chi ha i bambini che non mangiano il grasso, <break time="0.5s"/> so chi vuole la salsiccia più piccante, <break time="0.5s"/> so chi prende sempre la coppa e mai il lombo. <break time="1.2s"/>
+
+Il pomeriggio è il fornello. <break time="0.8s"/> Accendo la brace dopo pranzo e vado avanti fino alle otto di sera. <break time="0.8s"/> D'estate di più — i turisti arrivano tardi, dopo la spiaggia. <break time="0.8s"/> D'inverno sono soprattutto i locali, i gruppi che vengono a mangiare una cosa calda prima di rientrare. <break time="1.2s"/>
+
+Ho clienti che vengono qui ogni sabato da vent'anni. <break time="0.8s"/> Stessa ora, stessa ordinazione. <break time="0.8s"/> Bombette e salsiccia, un quarto di vino bianco. <break time="0.8s"/> Non cambia mai. <break time="0.8s"/> E non gliene frega niente di cambiare, <break time="0.5s"/> perché quello che vogliono lo trovano qui ogni volta. <break time="1.5s"/>
+
+Questo è il mio lavoro. <break time="0.8s"/> Non glamour, non social media. <break time="0.8s"/> Fuoco, carne, coltello e clienti contenti. <break time="1.5s"/>
+
+=====
+CAP. 8 — I CLIENTI FISSI: RITRATTI DI PAESE
+voice: custom-cisternino
+*(alla macelleria o sul vicolo)*
+
+Lavori in un posto per trent'anni e conosci il paese attraverso i tuoi clienti. <break time="1.2s"/>
+
+C'è Totò. <break time="0.8s"/> Viene ogni venerdì mattina, alle nove in punto. <break time="0.8s"/> Ha la faccia di uno che ha lavorato fuori tutta la vita <break time="0.5s"/> e adesso è tornato al paese e non sa ancora bene cosa farsene del tempo. <break time="0.8s"/> Compra sempre poco — due bracioline, magari una salsiccia — <break time="0.5s"/> ma resta mezz'ora a parlare. <break time="0.8s"/> Non del cibo. <break time="0.5s"/> Del tempo, del campo, di suo figlio che vive a Milano. <break time="0.8s"/> La macelleria per lui è l'occasione per uscire di casa. <break time="1.2s"/>
+
+C'è la famiglia Taranto — padre, madre, tre bambini. <break time="0.8s"/> Vengono d'estate quasi ogni domenica, da Taranto appunto. <break time="0.8s"/> Due ore di macchina solo per le bombette. <break time="0.8s"/> I bambini le conoscono a memoria — <break time="0.5s"/> sanno già cosa vogliono prima di entrare. <break time="0.8s"/> La più grande, sarà avanti con gli anni adesso, <break time="0.5s"/> da piccola mi diceva sempre che le bombette le facevo troppo piccole. <break time="0.8s"/> Le facevo grandi come quelle sue. <break time="1.2s"/>
+
+C'è il vecchio Carmelo, che abita a duecento metri dalla macelleria. <break time="0.8s"/> Viene quasi ogni giorno a comprare qualcosa di piccolo — <break time="0.5s"/> un pezzo di carne per il sugo, un po' di macinato per le polpette. <break time="0.8s"/> Ha novantadue anni e cammina ancora da solo. <break time="0.8s"/> Dice che mangia carne da quando era ragazzo <break time="0.5s"/> e che non ha mai capito perché la gente sta smettendo di mangiarla. <break time="0.8s"/> Io non gli rispondo niente. <break time="0.5s"/> Ha ragione lui, dal suo punto di vista. <break time="1.2s"/>
+
+Poi ci sono i turisti — quelli che entrano per la prima volta, <break time="0.8s"/> con la faccia di chi non ha ben capito come funziona. <break time="0.8s"/> Guardano il bancone, guardano il fuoco, guardano me. <break time="0.8s"/> Chiedono: ma come si fa? <break time="0.5s"/> Io spiego. <break time="0.8s"/> Ogni volta come se fosse la prima. <break time="0.8s"/> Perché per loro è la prima. <break time="1.5s"/>
+
+Quella faccia quando capiscono — quella è la parte del lavoro che mi piace di più. <break time="1.5s"/>
+
+=====
+CAP. 9 — IL VINO: ZONA LOCOROTONDO DOC
+voice: custom-cisternino
+*(nel centro storico, magari vicino a un'enoteca)*
+
+Cisternino non ha una DOC propria per il vino. <break time="0.8s"/> Ma è in zona. <break time="1.2s"/>
+
+Il territorio fa parte dell'area del Locorotondo DOC — <break time="0.5s"/> quel disciplinare che copre i vigneti tra Locorotondo, Cisternino, <break time="0.5s"/> e parte del territorio di Fasano. <break time="0.8s"/> Le uve principali sono la Verdeca e il Bianco d'Alessano — <break time="0.5s"/> varietà autoctone, coltivate qui da secoli. <break time="1.2s"/>
+
+Il risultato è un bianco leggero, <break time="0.5s"/> fresco, <break time="0.5s"/> con una punta di acidità. <break time="0.8s"/> Non è un vino che fa effetto, <break time="0.5s"/> non è strutturato come un Primitivo o un Negroamaro. <break time="0.8s"/> È il vino che ci vuole per stare seduti fuori d'estate <break time="0.5s"/> e mangiare la carne alla brace. <break time="0.8s"/> Non si combatte con il cibo — lo accompagna. <break time="1.2s"/>
+
+In paese trovate cantine locali e bottiglie a prezzi onesti. <break time="0.8s"/> Non cercate griffe internazionali — non è quello che siamo. <break time="0.8s"/> Cercate il vino del posto, <break time="0.5s"/> prodotto da gente che conosce questa terra. <break time="1.5s"/>
+
+Con le bombette, un quartino di bianco fresco è la combinazione giusta. <break time="0.8s"/> Se volete il rosso, andate sul Primitivo — <break time="0.5s"/> qui si produce anche quello, anche se non è la firma principale. <break time="1.5s"/>
+
+Io al vino non sono un esperto — sono un macellaio, non un sommelier. <break time="0.8s"/> Ma so quello che abbinerei io. <break time="0.8s"/> Le bombette vogliono qualcosa di leggero che non copra il sapore della carne. <break time="0.8s"/> Il bianco locale funziona. <break time="0.8s"/> Un rosato funziona anche bene, d'estate, <break time="0.5s"/> fresco di frigorifero. <break time="0.8s"/> Il rosso è per i gnumarieddi e le salsicce più cariche — <break time="0.5s"/> quelli reggono un vino più strutturato. <break time="0.8s"/> La regola base: più la carne è grassa e aromatica, <break time="0.5s"/> più il vino può essere robusto. <break time="1.5s"/>
+
+=====
+CAP. 10 — I TRULLETTI: TRULLI CHE SI VIVONO ANCORA
+voice: custom-cisternino
+*(nel centro storico o guardando verso la campagna)*
+
+Nel territorio di Cisternino ci sono i trulli. <break time="1.2s"/>
+
+Non come ad Alberobello, <break time="0.5s"/> dove i trulli sono quasi tutti negozi e B&B per turisti. <break time="0.8s"/> Qui, nelle campagne attorno al paese, i trulli sono ancora case private. <break time="0.8s"/> Ci vive gente. <break time="0.8s"/> Ci si nasce, ci si cresce, <break time="0.5s"/> e i nonni ci muoiono ancora dentro dopo ottant'anni. <break time="1.2s"/>
+
+Questo è un aspetto che chi viene da fuori fatica a capire. <break time="0.8s"/> Il trullo non è un oggetto da museo. <break time="0.8s"/> È una casa funzionante. <break time="0.8s"/> Con il bagno e il frigo dentro, <break time="0.5s"/> con la parabola sul tetto, <break time="0.5s"/> con i nipoti che ci dormono d'estate quando vengono dalla città. <break time="1.2s"/>
+
+Molti trulli qui sono stati ristrutturati come alloggi per i turisti — <break time="0.5s"/> agriturismi, case vacanze. <break time="0.8s"/> È una risorsa del territorio. <break time="0.8s"/> Ma intorno a Cisternino trovi ancora trulli abitati da sempre, <break time="0.5s"/> nelle masserie, lungo le strade di campagna. <break time="0.8s"/> Non si visitano, perché sono proprietà private. <break time="0.8s"/> Ma si guardano, si capisce cosa sono. <break time="1.2s"/>
+
+Se volete un trullo "autentico" — <break time="0.5s"/> nel senso di autentico, non da cartolina — <break time="0.5s"/> venite nel territorio di Cisternino. <break time="1.5s"/>
+
+Una cosa che mi chiede spesso la gente: ma dentro com'è un trullo? <break time="0.8s"/> La risposta è: fresco d'estate e freddo d'inverno. <break time="0.8s"/> Le pietre del cono trattengono la temperatura. <break time="0.8s"/> D'estate è il posto più fresco della campagna. <break time="0.8s"/> D'inverno ci vuole il fuoco — <break time="0.5s"/> i vecchi avevano il camino, adesso chi lo ristruttura mette il riscaldamento. <break time="0.8s"/> Ma l'isolamento naturale rimane. <break time="0.8s"/> È una tecnologia costruttiva antica che funziona ancora, <break time="0.5s"/> senza bisogno di spiegarsi con la fisica. <break time="1.5s"/>
+
+=====
+CAP. 11 — LE SAGRE E IL CALENDARIO DEL MACELLAIO
+voice: custom-cisternino
+*(in piazza o davanti alla macelleria)*
+
+Cisternino ha la sua agenda di eventi. <break time="1.2s"/>
+
+La festa patronale è dedicata a San Quirico. <break time="0.8s"/> Il patrono del paese — la chiesa principale in piazza porta il suo nome. <break time="0.8s"/> I festeggiamenti sono d'estate, come in quasi tutti i paesi del Sud. <break time="0.8s"/> Processione, musica, bancarelle, gente che sta in piazza fino a tardi. <break time="0.8s"/> Il tipo di festa che non si organizza su un app — <break time="0.5s"/> si sa quando è e si viene. <break time="1.2s"/>
+
+Per me le feste sono il periodo più faticoso dell'anno. <break time="0.8s"/> Il fuoco rimane acceso più a lungo, <break time="0.5s"/> i clienti arrivano a ondate, <break time="0.5s"/> devi avere il doppio della roba preparata. <break time="0.8s"/> Ma è anche il periodo che preferisco. <break time="0.8s"/> Il paese è vivo — <break time="0.5s"/> c'è odore di fritto e di brace per tutto il centro storico, <break time="0.5s"/> la musica arriva fino dentro alla macelleria, <break time="0.5s"/> i bambini corrono tra i tavolini dei bar. <break time="1.2s"/>
+
+D'estate ci sono anche eventi nel centro storico — <break time="0.8s"/> concerti, spettacoli, mercatini di artigianato. <break time="0.8s"/> Cisternino negli ultimi anni si è aperta al turismo culturale, <break time="0.5s"/> non solo a quello gastronomico. <break time="0.8s"/> Bene così — <break time="0.5s"/> il paese ha cose da dire anche fuori dal fornello. <break time="1.2s"/>
+
+Il mio calendario personale divide l'anno in due: <break time="0.8s"/> da giugno a settembre, il paese è pieno e si lavora senza fermarsi. <break time="0.8s"/> Da ottobre a maggio, si torna ai ritmi normali — <break time="0.5s"/> i clienti fissi, il mercato del martedì, <break time="0.5s"/> e il piacere di lavorare senza ressa. <break time="0.8s"/> D'inverno il fuoco della brace riscalda la bottega, <break time="0.5s"/> e i clienti si fermano a parlare mentre la carne cuoce. <break time="0.8s"/> Non hanno fretta. <break time="0.5s"/> Io neanche. <break time="1.5s"/>
+
+=====
+CAP. 12 — LA VITA CULTURALE: FESTE E PAESE VIVO
+voice: custom-cisternino
+*(nel centro storico, vicino alla piazza)*
+
+Cisternino non è solo carne e panorama. <break time="1.2s"/>
+
+Il paese ha una vita sua. <break time="0.8s"/> Nelle vicinanze c'è il sito di Egnathia — <break time="0.5s"/> un'antica città messapica e poi romana, <break time="0.5s"/> con un'area archeologica interessante nel territorio di Fasano. <break time="0.8s"/> Ma Cisternino ha la sua agenda. <break time="1.2s"/>
+
+I bar del centro sono il sistema nervoso del paese. <break time="0.8s"/> La mattina sono pieni di chi fa colazione prima di aprire il negozio o di andare al lavoro. <break time="0.8s"/> Il pomeriggio di anziani che giocano a carte. <break time="0.8s"/> La sera di chi si ferma a bere qualcosa prima di cena. <break time="0.8s"/> Non è turismo. <break time="0.5s"/> È un paese che funziona. <break time="1.5s"/>
+
+Questo è quello che mi fa piacere quando vedo gente che viene qui e non solo mangia e va via. <break time="0.8s"/> Quando si siedono, guardano intorno, <break time="0.5s"/> sentono il paese. <break time="0.8s"/> Quello lì non si compra, non si prenota. <break time="0.5s"/> C'è o non c'è. <break time="0.8s"/> Qui c'è. <break time="1.5s"/>
+
+Il mercato del martedì è il momento più vivo della settimana fuori stagione. <break time="0.8s"/> Le bancarelle occupano i bordi della piazza e le strade principali. <break time="0.8s"/> Frutta, verdura, abbigliamento, qualche oggetto da casa. <break time="0.8s"/> I contadini della zona portano quello che hanno raccolto. <break time="0.5s"/> Non è un mercato gourmet per turisti — <break time="0.5s"/> è il mercato del paese, con i prezzi del paese. <break time="0.8s"/> Se capiti di martedì, passa. <break time="0.5s"/> Vale la deviazione. <break time="1.5s"/>
+
+=====
+CAP. 13 — IL PAESE DI NOTTE
+voice: custom-cisternino
+*(in piazza la sera)*
+
+La cosa che non ti aspetti di Cisternino è la notte. <break time="1.5s"/>
+
+D'estate il paese cambia faccia dopo le nove. <break time="0.8s"/> Il caldo del giorno cede, <break time="0.5s"/> entra un po' di vento dalla valle, <break time="0.5s"/> e la piazza si riempie. <break time="0.8s"/> I bar mettono i tavolini fuori — <break time="0.5s"/> quelli che durante il giorno stanno dentro all'ombra escono quando cala il sole. <break time="0.8s"/> I vicoli si animano, <break time="0.5s"/> le luci delle case si accendono, <break time="0.5s"/> il centro storico bianco diventa quasi luminoso anche senza faretti particolari. <break time="1.2s"/>
+
+Le pietre assorbono il calore del giorno e la sera lo rilasciano lentamente. <break time="0.8s"/> Se metti la mano su un muro del centro storico dopo il tramonto, <break time="0.5s"/> è ancora caldo. <break time="0.8s"/> Quella è la temperatura accumulata in dieci ore di sole. <break time="0.8s"/> È quella sensazione che rende la passeggiata serale piacevole anche quando fuori ci sono trenta gradi — <break time="0.5s"/> il fresco dell'aria e il calore delle pietre si bilanciano. <break time="1.2s"/>
+
+I bambini giocano fino a tardi — qui non si va a letto presto d'estate, <break time="0.5s"/> né i grandi né i piccoli. <break time="0.8s"/> Gli anziani escono di casa che di giorno stavano dentro — <break time="0.5s"/> il caldo non fa per loro, ma la sera sì. <break time="0.8s"/> Si siedono sulle sedie davanti al portone, <break time="0.5s"/> come si faceva sempre, <break time="0.5s"/> e guardano chi passa. <break time="1.2s"/>
+
+Il mio consiglio: se riesci a restare fino a sera, fallo. <break time="0.8s"/> Cisternino di giorno è bella. <break time="0.8s"/> Di notte d'estate è un'altra cosa. <break time="0.8s"/> La piazza, le luci, il vociare lontano, <break time="0.5s"/> il profumo della carne che da qualche macelleria è ancora accesa — <break time="0.5s"/> perché qualcuno ha la brace aperta fino a tardi. <break time="0.8s"/> Non io, che mi alzo alle cinque. <break time="0.5s"/> Ma qualcuno. <break time="1.5s"/>
+
+=====
+CAP. 14 — LA VALLE D'ITRIA DA CISTERNINO — LA VISTA
+voice: custom-cisternino
+*(al belvedere o al bordo del centro storico)*
+
+Vieni qui al tramonto. <break time="1.5s"/>
+
+C'è un belvedere sul lato del paese che guarda verso la Valle d'Itria. <break time="0.8s"/> Da lì vedi i trulli sparsi tra gli ulivi, <break time="0.5s"/> i tetti bianchi di Locorotondo in lontananza, <break time="0.5s"/> i vigneti che cambiano colore con la stagione. <break time="0.8s"/> In primavera sono verdi accesi. <break time="0.5s"/> D'estate diventano cupi, carichi. <break time="0.5s"/> In autunno dorati. <break time="1.2s"/>
+
+La Valle d'Itria è un paesaggio che si capisce meglio dall'alto. <break time="0.8s"/> Quando sei dentro — lungo le strade di campagna, tra i muretti a secco — <break time="0.5s"/> non riesci a vederla tutta. <break time="0.8s"/> Da qui invece hai la prospettiva. <break time="0.8s"/> Capisci perché si chiama valle — <break time="0.5s"/> è una depressione dolce tra le colline, <break time="0.5s"/> non una gola stretta ma un bacino aperto, <break time="0.5s"/> con le cime dei Sassi di Matera lontane in certi giorni molto nitidi. <break time="1.2s"/>
+
+Dall'altro lato, verso est, <break time="0.8s"/> nelle giornate limpide si vede la striscia azzurra del mare Adriatico. <break time="0.8s"/> Non lontano — <break time="0.5s"/> Ostuni è a meno di trenta chilometri, <break time="0.5s"/> Fasano ancora meno. <break time="0.8s"/> Ma da qui il mare sembra un confine distante, <break time="0.5s"/> qualcosa che sta dall'altra parte del mondo. <break time="1.2s"/>
+
+Questo è il privilegio di stare sul crinale. <break time="0.8s"/> Hai entrambe le cose. <break time="0.8s"/> Non devi scegliere tra collina e mare — <break time="0.5s"/> li vedi insieme, nello stesso momento. <break time="1.5s"/>
+
+Mio nonno diceva che da Cisternino vedevi abbastanza mondo <break time="0.5s"/> da non aver mai bisogno di andare troppo lontano. <break time="0.8s"/> Forse esagerava. <break time="0.8s"/> Ma ogni volta che mi fermo qui al tramonto e guardo, <break time="0.5s"/> capisco cosa intendeva. <break time="1.5s"/>
+
+Il cielo qui cambia velocemente. <break time="0.8s"/> A settembre soprattutto — <break time="0.8s"/> la luce del pomeriggio è quella luce bassa che fa sembrare tutto più netto, <break time="0.5s"/> i colori più intensi di quello che sono. <break time="0.8s"/> I fotografi lo sanno — vengono apposta in questo periodo. <break time="0.8s"/> Io non capisco di fotografia, <break time="0.5s"/> ma capisco che quella luce mi fa sentire bene. <break time="0.5s"/> E quello basta. <break time="1.5s"/>
+
+=====
+CAP. 15 — DOVE MANGIARE: OLTRE IL FORNELLO
+voice: custom-cisternino
+*(in centro, zona ristoranti)*
+
+Il fornello pronto è la cosa principale. <break time="0.8s"/> Non vi dirò il contrario. <break time="1.2s"/>
+
+Ma se volete sedervi e mangiare con un po' più di calma, <break time="0.5s"/> i ristoranti del centro storico fanno cucina pugliese seria. <break time="0.8s"/> Non alta cucina da stelle Michelin — <break time="0.5s"/> cucina che si basa sui prodotti del territorio, <break time="0.5s"/> con le orecchiette, i legumi, la carne, <break time="0.5s"/> e qualche proposta di pesce che viene dalla costa vicina. <break time="1.2s"/>
+
+Gli orari qui sono quelli del Sud. <break time="0.8s"/> A pranzo si mangia dall'una alle tre, <break time="0.5s"/> a cena dalle otto in poi. <break time="0.8s"/> Se arrivate alle sette e mezza di sera con fame <break time="0.5s"/> e trovate tutto chiuso, <break time="0.5s"/> non sorprendetevi. <break time="0.8s"/> Tornate tra mezz'ora. <break time="1.2s"/>
+
+I fornelli pronto spesso chiudono prima dei ristoranti — <break time="0.5s"/> la brace si accende nel primo pomeriggio e va avanti fino alle otto, le nove al massimo. <break time="0.8s"/> Se arrivate tardi in estate, <break time="0.5s"/> chiamate prima o passate a vedere se c'è ancora fuoco acceso. <break time="1.2s"/>
+
+Un consiglio pratico: <break time="0.8s"/> non venite a Cisternino aspettandovi di mangiare in dieci minuti e ripartire. <break time="0.8s"/> Pianificate una sosta di almeno due ore. <break time="0.5s"/> Un giro del centro storico, <break time="0.5s"/> la carne al fornello, <break time="0.5s"/> un caffè in piazza. <break time="0.8s"/> Così funziona. <break time="1.5s"/>
+
+=====
+CAP. 16 — CHIUSURA: IL CONSIGLIO DI MICHELE
+voice: custom-cisternino
+*(in piazza o davanti alla macelleria)*
+
+Bene. <break time="1.2s"/>
+
+Hai visto il centro storico, hai sentito la storia, <break time="0.5s"/> e spero che tu abbia mangiato almeno una bombetta. <break time="0.8s"/> Se non l'hai fatto, torna indietro — <break time="0.5s"/> non puoi andartene senza. <break time="1.2s"/>
+
+Il mio consiglio finale è questo. <break time="1.2s"/>
+
+Quando sei al fornello e scegli le bombette, <break time="0.8s"/> non guardare solo il prezzo e non prendere le prime che vedi sul bancone. <break time="0.8s"/> Guarda come sono fatte. <break time="0.8s"/> La fetta di capocollo deve essere avvolta stretta attorno al ripieno — <break time="0.5s"/> se si vede il formaggio che sporge già prima della cottura, <break time="0.5s"/> si scioglie tutto sul fuoco e non ci rimane niente dentro. <break time="0.8s"/> E chiedi al macellaio di cuocerle un po' meno, <break time="0.5s"/> se ti piace la carne morbida. <break time="0.8s"/> I macellai abituati ai turisti le cuociono spesso troppo, <break time="0.5s"/> perché pensano che la gente voglia la crosticina visibile. <break time="0.8s"/> Invece la bombetta giusta è tenera dentro e colorata fuori — <break time="0.5s"/> non secca. <break time="1.2s"/>
+
+Questo è il segreto che ti lascio. <break time="0.8s"/> Non viene dai libri — viene da trent'anni di brace. <break time="1.2s"/>
+
+Cisternino si visita lentamente, si mangia lentamente, <break time="0.5s"/> e si lascia con un po' di rimpianto. <break time="0.8s"/> Quello è il segno che ci devi tornare. <break time="1.5s"/>
+
+Quando torni — e tornerai — <break time="0.8s"/> sai già come funziona. <break time="0.8s"/> Arrivi, parcheggi fuori, entri nel centro storico a piedi. <break time="0.8s"/> Fai un giro dei vicoli anche se li conosci già — <break time="0.5s"/> cambiano sempre un po', <break time="0.5s"/> c'è sempre un vaso di fiori spostato, un portone ridipinto. <break time="0.8s"/> Poi vai al fornello. <break time="0.8s"/> Poi ti siedi da qualche parte con il bicchiere in mano <break time="0.5s"/> e guardi la gente che passa. <break time="0.8s"/> Quella è Cisternino. <break time="1.2s"/>
+
+Io sono Michele. <break time="0.8s"/> Se passi dalla macelleria, <break time="0.5s"/> ti riconosco dalla faccia di chi ha appena capito cos'è il fornello pronto. <break time="0.8s"/> È sempre la stessa faccia. <break time="1.5s"/>
+
+E se dopo Cisternino volete continuare, <break time="0.5s"/> Fasano e Selva di Fasano sono a venti minuti. <break time="0.8s"/> Territorio diverso — <break time="0.5s"/> ulivi millenari, <break time="0.5s"/> un sito romano sul mare, <break time="0.5s"/> e un altopiano da cui si vede tutta la Valle. <break time="0.8s"/> C'è anche un appassionato di parapendio <break time="0.5s"/> che vi racconta il posto dall'alto. <break time="1.2s"/>
+
+Buona visita. <break time="2s"/>

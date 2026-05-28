@@ -64,7 +64,7 @@ export const PRODUCT_PRICE_CENTS: Record<ProductSlug, number> = {
   tris:              1199,
   sestina:           1999,
   'puglia-completa': 3999,
-  'bari-completa':   1499,
+  'bari-completa':   1999,
   crociera:           799,
 };
 
@@ -146,7 +146,7 @@ export function savingsCents(product: ProductSlug): number {
     tris:              3 * 499 - 1199,   // 298
     sestina:           6 * 499 - 1999,   // 995
     'puglia-completa': 18 * 499 - 3999,  // 4983
-    'bari-completa':   6 * 499 - 1499,   // 1495
+    'bari-completa':   6 * 499 - 1999,   // 995
   };
   return tiers[product] ?? 0;
 }

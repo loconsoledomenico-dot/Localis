@@ -1,0 +1,295 @@
+## AUDIO-SKRIPT — FASANO / SELVA DI FASANO-GUIDE
+*Stimme: Andrea, Gleitschirmflieger — fliegt seit zwanzig Jahren über die Valle d'Itria*
+*Format: gemischt Auto + zu Fuß · 30 Minuten*
+
+=====
+KAP. 1 — INTRO: HINAUF NACH SELVA
+voice: custom-fasano
+
+*(Im Auto, von Fasano hinauf nach Selva di Fasano)*
+
+Du fährst bergauf. <break time="1.5s"/>
+
+Du lässt Fasano hinter dir — <break time="0.5s"/> das Meer, die Ebene, die Augusthitze, die sich flach bis zur Adria erstreckt — <break time="0.8s"/> und beginnst den Anstieg in die Hügel. <break time="0.8s"/> Die Straße steigt in weiten Kurven durch die Olivenhaine. <break time="0.8s"/> Jede Kurve bringt dich hundert Meter höher, <break time="0.5s"/> und mit jedem Hundert verändert sich das Licht ein wenig. <break time="0.8s"/> Die Luft verändert sich. <break time="0.8s"/> Auch die Stille verändert sich. <break time="1.2s"/>
+
+Mein Name ist Andrea. <break time="0.8s"/> Ich fliege seit zwanzig Jahren mit dem Gleitschirm über dieses Tal. <break time="0.8s"/> Ich habe gelernt, diese Landschaft von oben zu lesen — <break time="0.5s"/> die Thermik, die Geometrie der Felder, <break time="0.5s"/> wo die Wärme aufsteigt und wo der Schatten sich staut. <break time="0.8s"/> Und ich sage dir eines: <break time="0.8s"/> der beste Weg, diesen Ort zu verstehen, <break time="0.5s"/> ist, ihn von oben zu sehen. <break time="0.8s"/> Da du aber gerade im Auto sitzt, <break time="0.5s"/> versuche ich, dich mit Worten dort hinaufzubringen. <break time="1.2s"/>
+
+Selva di Fasano liegt vierhundert Meter über dem Meeresspiegel. <break time="0.8s"/> Es liegt auf der Murgia dei Trulli — <break time="0.5s"/> dem Kalksteinplateau, das sanft zur Valle d'Itria hinabfällt. <break time="0.8s"/> Von hier oben sieht man an klaren Tagen <break time="0.5s"/> das Profil der lukanischen Apenninen im Westen <break time="0.5s"/> und die Meerlinie im Osten. <break time="0.8s"/> Zwei entgegengesetzte Horizonte. <break time="0.8s"/> Dazwischen alles, was ich dir erzählen werde. <break time="1.2s"/>
+
+Das erste Mal, als ich über dieses Tal flog, <break time="0.8s"/> war ich dreiundzwanzig Jahre alt und wusste noch nicht so recht, was ich da tat. <break time="0.8s"/> Ich war mit meinem Fluglehrer dabei, einem Mann aus Ostuni, der wenig redete und den Himmel anschaute, als würde er darin etwas lesen. <break time="0.8s"/> Als er mir sagte, ich solle zum Kammrand laufen und die Kappe öffnen, <break time="0.5s"/> tat ich es, ohne nachzudenken. <break time="0.8s"/> Und dann kam dieser Moment — <break time="0.5s"/> der Moment, in dem die Füße den Boden nicht mehr berühren — <break time="0.8s"/> den man nie vergisst. <break time="0.8s"/> Die Landschaft öffnete sich um mich wie ein aufgezogener Vorhang vor einem riesigen Theater. <break time="1.2s"/>
+
+Seit diesem Tag habe ich nicht aufgehört. <break time="0.8s"/> Und jedes Mal, wenn ich von Selva starte, <break time="0.5s"/> auch jetzt, wo ich jede Thermik, jede Strömung, jeden Winkel dieses Tales kenne, <break time="0.5s"/> hält etwas in mir inne. <break time="0.8s"/> Nicht Gewohnheit. <break time="0.8s"/> Dankbarkeit. <break time="1.5s"/>
+
+=====
+KAP. 2 — FASANO UND SELVA: ZWEI STÄDTE, EINE SEELE
+voice: custom-fasano
+
+*(Noch im Auto, Annäherung an den Ort)*
+
+Fasano und Selva di Fasano sind dieselbe Gemeinde. <break time="0.8s"/> Aber es sind zwei völlig verschiedene Orte. <break time="1.2s"/>
+
+Fasano liegt unten, in der Ebene. <break time="0.8s"/> Eine normale, bodenständige Stadt, <break time="0.5s"/> mit dem Hafen von Savelletri wenige Kilometer entfernt, <break time="0.5s"/> den Stränden an der Adria, <break time="0.5s"/> einem überschaubaren und ruhigen historischen Zentrum. <break time="0.8s"/> Es ist eine Stadt, die arbeitet — <break time="0.5s"/> Landwirtschaft, Tourismus, etwas Kleingewerbe. <break time="0.8s"/> Sie behauptet nicht, woanders zu sein. <break time="1.2s"/>
+
+Selva di Fasano liegt hier oben, auf dem Kamm. <break time="0.8s"/> Ende des neunzehnten Jahrhunderts als Sommerfrische entstanden, <break time="0.5s"/> als die wohlhabenden Fasanesen hierher kamen, um der Hitze der Ebene zu entkommen. <break time="0.8s"/> Ein Ort der Ruhe, der Kühle, der Spaziergänge zwischen den Pinien. <break time="0.8s"/> Und so ist er mehr oder weniger geblieben. <break time="1.2s"/>
+
+Vom Himmel sehe ich sie immer zusammen. <break time="0.8s"/> Wenn ich von Selva zum Meer fliege, <break time="0.5s"/> wechsle ich in fünfzehn Minuten vom Plateau zur Ebene. <break time="0.8s"/> Unter mir verändert die Landschaft ihre Textur: <break time="0.5s"/> die verstreuten Trulli — <break time="0.5s"/> die kegelförmigen Steinhäuser — der Hochflächen <break time="0.5s"/> weichen offenen Feldern, <break time="0.5s"/> dann dem Küstengebüsch, <break time="0.5s"/> dann dem gelben Streifen des Sandes. <break time="0.8s"/> Zwei Landschaften, die wie verschiedene Regionen wirken, <break time="0.5s"/> getrennt durch wenige Kilometer Auffahrt. <break time="1.2s"/>
+
+Es gibt ein apulisches Wort für jemanden, der nicht zu einem Ort gehört: <break time="0.8s"/> "forestiero" — der Fremde, der von draußen kommt. <break time="0.8s"/> Es ist keine Beleidigung. <break time="0.5s"/> Es ist eine geografische Feststellung. <break time="0.8s"/> Fasano hatte immer Fremde: <break time="0.5s"/> Händler aus Brindisi, <break time="0.5s"/> Pilger auf dem Weg ins Heilige Land, die eine Nacht blieben, <break time="0.5s"/> Sommergäste, die mit Koffern für die ganze Saison nach Selva kamen. <break time="0.8s"/> Das Gebiet war immer ein Durchgangsort mit der Neigung, Menschen festzuhalten. <break time="0.8s"/> Heute funktioniert es noch genauso. <break time="1.2s"/>
+
+Der Kontrast ist das, was dieses Gebiet interessant macht. <break time="0.8s"/> Nicht wählen. <break time="0.8s"/> Nimm das eine und das andere. <break time="1.5s"/>
+
+=====
+KAP. 3 — SELVA DI FASANO: DER ORT AUF DEM PLATEAU
+voice: custom-fasano
+
+*(Ankunft in Selva, Parken — von hier zu Fuß)*
+
+Du kannst das Auto hier abstellen. <break time="1.2s"/>
+
+Selva di Fasano hat eine kurze Geschichte verglichen mit den Nachbarorten. <break time="0.8s"/> Es ist nicht mittelalterlich wie Locorotondo oder Cisternino. <break time="0.8s"/> Der ursprüngliche Kern entstand Ende des neunzehnten Jahrhunderts, <break time="0.5s"/> als es zum Urlaubsziel für die lokale Bürgerfamilien wurde. <break time="0.8s"/> Villen mit Gärten, baumbestandene Alleen, <break time="0.5s"/> die Strandkiefern, die heute Schatten auf die Straßen werfen. <break time="0.8s"/> Da ist etwas leicht Fehlplatziertes, <break time="0.5s"/> auf faszinierende Weise: <break time="0.5s"/> ein Hauch von Kurort <break time="0.5s"/> eingebettet in den Kalkstein der Murgia. <break time="1.2s"/>
+
+Es ist kein uralter Landort. <break time="0.8s"/> Es ist ein Ort, der für die Erholung gebaut wurde <break time="0.5s"/> von Menschen, die bereits wussten, was sie wollten: <break time="0.5s"/> Kühle, Grün, Stille <break time="0.5s"/> und den Blick über das Tal. <break time="1.2s"/>
+
+Die Strandkiefern sind so sehr Teil der Geschichte des Ortes wie die Häuser. <break time="0.8s"/> Man pflanzte sie zwischen Ende des neunzehnten und Anfang des zwanzigsten Jahrhunderts, <break time="0.5s"/> um den sommerlichen Promenadenalleen Schatten zu geben. <break time="0.8s"/> Heute sind sie hundert Jahre alt, <break time="0.5s"/> und ihre verdrehten, rötlichen Stämme verleihen dem Ort <break time="0.5s"/> einen Charakter, den man in den Dörfern der Ebene nicht findet. <break time="0.8s"/> Nachts, wenn der Wind vom Tal aufsteigt, <break time="0.5s"/> machen die Kiefern ein Geräusch, das dem Meer ähnelt. <break time="0.8s"/> Es ist nicht das Meer. <break time="0.5s"/> Aber es kommt nah heran. <break time="1.2s"/>
+
+Geh zum Aussichtspunkt. <break time="0.8s"/> Es ist nicht weit. <break time="0.8s"/> Der Ort ist klein und kompakt, <break time="0.5s"/> in zwanzig Minuten zu Fuß zu durchqueren. <break time="0.8s"/> Die Gassen sind eng, <break time="0.5s"/> die Häuser niedrig, <break time="0.5s"/> die Balkone im Sommer voller Blumen. <break time="0.8s"/> Etwas Vertrautes liegt in der Luft, <break time="0.5s"/> etwas, das der Stille eines Ortes ähnelt, <break time="0.5s"/> wo die Leute herkommen, um zu bleiben, nicht um durchzufahren. <break time="1.2s"/>
+
+Du wirst wenige Schilder und wenige Hinweistafeln finden. <break time="0.8s"/> Selva bemüht sich nicht, sich zu erklären. <break time="0.5s"/> Entweder erfasst es dich, oder nicht. <break time="0.8s"/> Die meisten, die einmal herkommen, <break time="0.5s"/> kommen im nächsten Jahr wieder. <break time="0.8s"/> So ein Ort ist das. <break time="1.5s"/>
+
+=====
+KAP. 4 — DER FLUG: WAS ANDREA VON OBEN SIEHT
+voice: custom-fasano
+
+*(Am Aussichtspunkt, mit Blick auf die Valle d'Itria)*
+
+Halt hier inne. <break time="1.5s"/>
+
+Diesen Blick kenne ich von oben. <break time="0.8s"/> Und ich versichere dir: aus zweihundert Metern Höhe <break time="0.5s"/> ist er noch unglaublicher. <break time="1.2s"/>
+
+Wenn ich von diesem Kamm mit dem Gleitschirm starte, <break time="0.8s"/> sind die ersten Sekunden Stille. <break time="0.8s"/> Das Geräusch des Windes, der sich in die Kappe füllt, <break time="0.5s"/> dann das Abheben, <break time="0.5s"/> dann der Boden, der sich entfernt. <break time="0.8s"/> Und unter dir erscheint die Valle d'Itria, als hätte jemand sie auf einen Tisch gezeichnet. <break time="1.2s"/>
+
+Was von oben am meisten trifft, <break time="0.8s"/> ist die Geometrie. <break time="0.8s"/> Die Trockenmauern teilen die Landschaft in Tausende kleiner Rechtecke und Rauten. <break time="0.8s"/> Jedes Feld ist eine Geschichte aus Eigentum, <break time="0.5s"/> aus Erbteilungen, <break time="0.5s"/> aus Grenzen, die Jahrhunderte zurückreichen <break time="0.5s"/> und die man vom Boden aus nie vollständig sieht. <break time="0.8s"/> Von oben sieht man sie alle zusammen, <break time="0.5s"/> wie eine aus Stein gezeichnete Karte. <break time="1.2s"/>
+
+Dann gibt es die Trulli. <break time="0.8s"/> Über die Felder verstreut wie graue Pilze, <break time="0.5s"/> unregelmäßig, <break time="0.5s"/> nicht in Reihen — <break time="0.5s"/> jeder im Mittelpunkt seines kleinen Anwesens. <break time="0.8s"/> Einige in Ruinen, <break time="0.5s"/> mit dem Kegelkegel offen zum Himmel. <break time="0.8s"/> Andere restauriert, <break time="0.5s"/> weiß, mit frischem Kalk, der sie leuchten lässt. <break time="0.8s"/> Von oben wirken sie wie Punkte. <break time="0.8s"/> Aus der Nähe sind es Häuser. <break time="0.8s"/> In jedem Trullo lebte einmal ein Leben. <break time="1.2s"/>
+
+Die Thermik, die ich zum Fliegen nutze, <break time="0.8s"/> entsteht genau aus den Elementen, die du vor dir siehst. <break time="0.8s"/> Asphaltierte Straßen erhitzen sich schneller als Olivenhaine und erzeugen Blasen warmer Luft, die aufsteigen. <break time="0.8s"/> Gepflügte Felder mit nackter Erde schicken weit mehr Wärme nach oben als Felder mit Gras. <break time="0.8s"/> Die dunklen Dächer alter Masserie — <break time="0.5s"/> traditioneller befestigter Landgüter — <break time="0.5s"/> sind ausgezeichnete Punkte für den Thermikeinstieg. <break time="0.8s"/> Wenn ich die Landschaft von oben lese, <break time="0.5s"/> lese ich auch die Wärme. <break time="0.5s"/> Die Landschaft ist nicht flach: <break time="0.5s"/> sie ist ein System unsichtbarer Strömungen, <break time="0.5s"/> die sich mit jeder Stunde des Tages verändern. <break time="1.2s"/>
+
+Und dann gibt es die Masserie. <break time="0.8s"/> Die sieht man von oben sehr gut — <break time="0.5s"/> große Steinkomplexe mit Innenhöfen, <break time="0.5s"/> Taubentürmen, <break time="0.5s"/> Gärten. <break time="0.8s"/> Wie Festungen, über die Landschaft verteilt. <break time="0.8s"/> Und gewissermaßen waren sie das. <break time="1.5s"/>
+
+=====
+KAP. 5 — DIE MASSERIE: DIE ECHTEN UND DIE AUS DEM PROSPEKT
+voice: custom-fasano
+
+*(Beim Spaziergang durch den Ort)*
+
+Fasano ist die apulische Hauptstadt der Masserie-Resorts. <break time="1.2s"/>
+
+Das weißt du wahrscheinlich schon. <break time="0.8s"/> Masseria Il Frantoio, Masseria San Domenico, Masseria Torre Coccaro — <break time="0.5s"/> Namen, die in internationalen Luxusmagazinen auftauchen. <break time="0.8s"/> Pools zwischen den Olivenbäumen, <break time="0.5s"/> Wellnessanwendungen in den ehemaligen Unterkünften der Bauern, <break time="0.5s"/> Abendessen bei Kerzenlicht in den Innenhöfen. <break time="0.8s"/> Kein Vorwurf — <break time="0.5s"/> es sind wunderschöne Orte, <break time="0.5s"/> und besser so als aufgegeben. <break time="1.2s"/>
+
+Aber ich kenne die echten Masserie von oben. <break time="0.8s"/> Die, die noch wirklich arbeiten, <break time="0.5s"/> wo früh morgens die Traktoren rausfahren, <break time="0.5s"/> wo die Oliven im November noch geerntet werden, <break time="0.5s"/> wo der Frantoio — die Ölmühle — im Keller nicht dekorativ ist, sondern läuft. <break time="1.2s"/>
+
+Eine traditionelle Masseria war ein autonomes System. <break time="0.8s"/> Sie produzierte alles, was gebraucht wurde: <break time="0.5s"/> Weizen, Öl, Wein, Milch, Fleisch. <break time="0.8s"/> Sie hatte ihre Regenwasserzisterne, <break time="0.5s"/> ihren Backofen für das Brot, <break time="0.5s"/> ihre Kapelle für die Sonntagsmesse. <break time="0.8s"/> Der Massaro — der Verwalter — lebte das ganze Jahr dort <break time="0.5s"/> mit seiner Familie und den Saisonarbeitern. <break time="0.8s"/> Er verließ den Umkreis der Masseria wochenlang nicht. <break time="0.8s"/> Er hatte keinen Grund dazu. <break time="1.2s"/>
+
+Die Taubentürme, die du über den Mauern der alten Masserie herausragen siehst, <break time="0.8s"/> waren nicht dekorativ. <break time="0.8s"/> Die Tauben waren eine Nahrungsquelle, <break time="0.5s"/> und ihr Guano war der wertvollste Dünger für die Innengärten. <break time="0.8s"/> Jedes Element der Masseria hatte eine Funktion. <break time="0.8s"/> Die Logik war, so wenig wie möglich zu verschwenden, <break time="0.5s"/> denn außerhalb der Mauern lag nur Landschaft <break time="0.5s"/> und der nächste Markt war stundenweit entfernt. <break time="1.2s"/>
+
+Wenn ich Ende Oktober über die Masserie fliege, <break time="0.8s"/> sehe ich die weißen Planen, die unter den Olivenbäumen für die Ernte ausgelegt sind. <break time="0.8s"/> Ich sehe die Netze, die Leitern an den Stämmen. <break time="0.8s"/> Das ist die Masseria, die weiterlebt. <break time="0.8s"/> Das ist das Echte. <break time="1.5s"/>
+
+=====
+KAP. 6 — DIE GESCHICHTE FASANOS: DURCHGANGSSTADT UND TOR NACH EGNATHIA
+voice: custom-fasano
+
+*(Sitzend auf einer Mauer, ruhigerer Ton — historisches Kapitel)*
+
+Bevor wir nach Egnathia fahren, <break time="0.5s"/> erkläre ich dir, warum Fasano hier ist. <break time="1.2s"/>
+
+Dieser Winkel Apuliens war immer ein Durchgangsort. <break time="0.8s"/> Nicht im negativen Sinn — <break time="0.5s"/> nicht ein Ort, den man durchquert ohne anzuhalten. <break time="0.8s"/> Im Sinne, dass er immer ein Knotenpunkt war, <break time="0.5s"/> ein Verbindungspunkt zwischen verschiedenen Dingen. <break time="0.8s"/> Das Meer im Osten, das Hinterland im Westen, <break time="0.5s"/> die Via Appia, die wenige Kilometer entfernt die Küste entlangführte, <break time="0.5s"/> die Viehtriften, die vom Innern herunterkamen. <break time="1.2s"/>
+
+Das Gebiet des heutigen Fasano <break time="0.8s"/> war in prähistorischer Zeit besiedelt, <break time="0.5s"/> dann von den Messapiern, <break time="0.5s"/> dann romanisiert. <break time="0.8s"/> Die heutige städtische Siedlung von Fasano als erkennbares Zentrum <break time="0.8s"/> nimmt im Mittelalter Form an, <break time="0.5s"/> als die Landbevölkerung sich an sichereren Orten zusammenschloss <break time="0.5s"/> nach Jahrhunderten von Invasionen und Instabilität. <break time="0.8s"/> Erst die Sarazenen, <break time="0.5s"/> dann die Normannen, <break time="0.5s"/> dann die Staufer unter Friedrich II. <break time="0.8s"/> Jede Herrschaft hat etwas hinterlassen — <break time="0.5s"/> in der Bauweise, in den Ortsnamen, in den Dialekten. <break time="1.2s"/>
+
+Friedrich II. liebte diesen Teil Apuliens. <break time="0.8s"/> Castel del Monte ist siebzig Kilometer von hier. <break time="0.8s"/> Er hatte Jagdresidenzen überall auf der Murgia. <break time="0.8s"/> Das Gebiet zwischen Fasano und Taranto war kaiserliches Reservat. <break time="0.8s"/> Wenn ich über diese Landschaft fliege <break time="0.5s"/> und die Masserie mit Taubentürmen sehe, <break time="0.5s"/> die noch immer zwischen den Olivenbäumen herausragen, <break time="0.5s"/> denke ich, dass einige dieser Steine <break time="0.5s"/> Erinnerung an jene Zeit tragen. <break time="0.8s"/> Nicht im romantischen Sinne. <break time="0.5s"/> Im konkreten Sinne: <break time="0.5s"/> der lokale Kalkstein hält Jahrhunderte, wenn nicht Jahrtausende, <break time="0.5s"/> und manche mittelalterlichen Mauern sind noch da, <break time="0.5s"/> eingebaut in neuere Bauten, <break time="0.5s"/> noch tragend. <break time="1.2s"/>
+
+Fasano wurde dann in der Neuzeit zu einem wichtigen Agrarzentrum, <break time="0.8s"/> mit Getreide- und Olivenanbau als tragende Säulen. <break time="0.8s"/> Und das neunzehnte Jahrhundert brachte die Eisenbahn, <break time="0.5s"/> den Badetourismus an der Küste <break time="0.5s"/> und — hier oben auf dem Kamm — <break time="0.5s"/> Selva als Flucht vor der Hitze der Ebene. <break time="1.2s"/>
+
+Eine Geschichte ohne große Dramen und ohne große Glanzpunkte. <break time="0.8s"/> Eine Geschichte der Arbeit, <break time="0.5s"/> des Territoriums, <break time="0.5s"/> von Menschen, die verstanden haben, mit dem zu arbeiten, was sie hatten. <break time="0.8s"/> In Apulien funktioniert es fast immer so. <break time="1.5s"/>
+
+=====
+KAP. 7 — EGNATHIA: DIE STADT, DIE DAS MEER FAST VERSCHLUCKT HAT
+voice: custom-fasano
+
+*(Eine Pause, auf einer Mauer sitzend — historisches Thema)*
+
+Wenige Kilometer von hier, an der Küste, <break time="0.8s"/> gibt es etwas, das kaum einer besucht — und das man nicht vergisst. <break time="1.2s"/>
+
+Egnathia. <break time="0.8s"/> Oder Gnathia, wie die Römer es nannten. <break time="0.8s"/> Eine antike Stadt, die direkt auf die Adria blickte, <break time="0.5s"/> heute teils von Vegetation begraben, <break time="0.5s"/> teils vom Meer erodiert. <break time="1.2s"/>
+
+Es war zunächst eine messapische Siedlung, <break time="0.5s"/> dann eine römische. <break time="0.8s"/> An einem Kreuzungspunkt der Via Appia — <break time="0.5s"/> die hier von Taranto kam und weiter nach Brindisi führte — <break time="0.5s"/> und dem Meer. <break time="0.8s"/> Ein aktiver Hafen, <break time="0.5s"/> Handel mit Griechenland, <break time="0.5s"/> Keramik, die im ganzen Mittelmeer bekannt war. <break time="0.8s"/> Horaz erwähnt sie im Bericht seiner Reise nach Brindisi, <break time="0.5s"/> und schreibt, dass er in Egnathia ein Wunderzeichen am Altar gesehen habe — <break time="0.5s"/> und dass er es nicht glaubte. <break time="0.8s"/> Bereits im ersten Jahrhundert v. Chr. war es bekannt genug, um in den Briefen eines Dichters aufzutauchen. <break time="1.2s"/>
+
+Die Keramik von Gnathia — <break time="0.8s"/> die sogenannte "Gnathia ware" — <break time="0.8s"/> ist ein erkennbarer Keramikstil, der in der gesamten antiken Welt erforscht wird. <break time="0.8s"/> Gefäße mit Bemalung in Weiß, Gelb und Rot auf schwarzem Glanzgrund. <break time="0.8s"/> Kantharoi, Kratere, Lekythoi. <break time="0.8s"/> Hier produziert, ins östliche Mittelmeer exportiert. <break time="0.8s"/> Man findet sie in den Museen von London, Paris, Berlin, <break time="0.5s"/> sowie im kleinen Standortmuseum hier an der Küste. <break time="0.8s"/> Eine kleine Stadt mit einer künstlerischen Produktion, die internationalen Markt hatte. <break time="1.2s"/>
+
+Von oben, bei bestimmten Lichtverhältnissen — <break time="0.8s"/> früh morgens, mit tief stehender Sonne über der Adria — <break time="0.8s"/> sieht man noch die Spuren der antiken Stadt unter dem Gestrüpp. <break time="0.8s"/> Keine ganzen Gebäude, <break time="0.5s"/> aber die Geometrie des Bodens verändert sich. <break time="0.8s"/> Die Römerstraßen hinterlassen eine Spur im Gelände, <break time="0.5s"/> die Jahrhunderte überdauert, auch begraben. <break time="0.8s"/> Vom Himmel siehst du es. <break time="0.8s"/> Vom Boden aus muss man wissen, wonach man sucht. <break time="1.2s"/>
+
+Das Museum ist klein, aber gepflegt. <break time="0.8s"/> Die messapische Keramik mit ihrer geometrischen schwarzen Bemalung auf Rot. <break time="0.8s"/> Die Fresken des römischen Kolumbariums. <break time="0.8s"/> Die Überreste des Amphitheaters. <break time="0.8s"/> Geh am Morgen, wenn noch niemand da ist, <break time="0.5s"/> und geh über das Ausgrabungsgelände mit dem Meer vor dir. <break time="0.8s"/> Es ist nicht so spektakulär wie Pompeji. <break time="0.8s"/> Es ist etwas Subtileres: <break time="0.5s"/> eine Stadt, die aufgehört hat zu existieren <break time="0.5s"/> und die die Landschaft fast wieder aufgesogen hat. <break time="1.5s"/>
+
+=====
+KAP. 8 — DER PARK DER MONUMENTALEN OLIVENBÄUME
+voice: custom-fasano
+
+*(Spaziergang durch die Gassen, dann zum Ortsrand)*
+
+Das Gebiet zwischen Fasano und der Valle d'Itria hat die höchste Dichte an monumentalen Olivenbäumen Apuliens. <break time="1.2s"/>
+
+Monumental bedeutet im technischen Sinne eine Pflanze mit einem Stammumfang von mehr als hundert Zentimetern. <break time="0.8s"/> Aber hier gibt es welche mit Umfängen von drei, vier Metern. <break time="0.8s"/> Bäume mit Jahrhunderten an Leben, <break time="0.5s"/> manche wahrscheinlich mehr als ein Jahrtausend alt. <break time="0.8s"/> Der verdrehte Stamm, <break time="0.5s"/> vom Lauf der Zeit ausgehöhlt, <break time="0.5s"/> mit Wurzeln, die wie Krallen aus dem Stein hervorragen. <break time="1.2s"/>
+
+Wenn ich über diese Olivenhaine fliege, <break time="0.8s"/> sehe ich von oben ein silbergraues Meer. <break time="0.8s"/> Die Kronen der alten Olivenbäume sind nicht rund wie die der jungen. <break time="0.8s"/> Sie sind unregelmäßig, asymmetrisch, <break time="0.5s"/> jede anders als die andere. <break time="0.8s"/> Ein kultivierter Wald mit derselben Vielfalt wie ein Wildwald. <break time="1.2s"/>
+
+Die monumentalen Olivenbäume dieser Gegend sind großteils die Sorten Ogliarola und Coratina. <break time="0.8s"/> Ich gebe dir keine Sommelierweisheiten. <break time="0.8s"/> Ich sage es dir, weil diese Sorten ein anderes Öl produzieren: <break time="0.5s"/> bitterer, schärfer, <break time="0.5s"/> mit einer Komplexität, die mildere Sorten nicht haben. <break time="0.8s"/> Ein hochwertiges natives Olivenöl extra aus diesen jahrhundertealten Bäumen <break time="0.5s"/> hat ein klares, <break time="0.5s"/> entschiedenes Geschmacksprofil. <break time="0.8s"/> Es ist nicht für jeden. <break time="0.5s"/> Aber wenn du echtes Olivenöl magst, <break time="0.5s"/> ist es eine Offenbarung. <break time="1.2s"/>
+
+Zwischen diesen Olivenbäumen zu laufen ist anders, als mit dem Auto durchzufahren. <break time="0.8s"/> Die enormen Stämme verändern den Maßstab dessen, was man selbst ist. <break time="0.8s"/> Man fühlt sich klein, <break time="0.5s"/> im richtigen Sinne des Wortes. <break time="0.8s"/> Diese Bäume waren bereits hier, bevor jemand die Häuser von Selva baute. <break time="0.5s"/> Sie waren bereits hier, bevor die Masserie des achtzehnten Jahrhunderts entstanden. <break time="0.8s"/> Vielleicht waren sie bereits hier, <break time="0.5s"/> als die Via Appia dort unten an der Küste entlangführte. <break time="1.2s"/>
+
+In Apulien ist es verboten, Olivenbäume zu fällen, <break time="0.5s"/> und die monumentalen genießen besonderen Schutz. <break time="0.8s"/> Es ist ein Gesetz, das etwas Unwiederbringliches schützt: <break time="0.5s"/> Man kann in dreißig Jahren nicht aufwachsen lassen, was tausend Jahre gebraucht hat, um das zu werden, was es ist. <break time="1.5s"/>
+
+=====
+KAP. 9 — DIE THERMIK UND DER HIMMEL ÜBER DEM TAL
+voice: custom-fasano
+
+*(Am Aussichtspunkt, stehend — technischer aber zugänglicher Ton)*
+
+Lass mich erklären, wie der Himmel hier oben funktioniert. <break time="1.5s"/>
+
+Für einen Gleitschirmflieger <break time="0.8s"/> ist dieser Winkel Apuliens ein interessanter Ort, weil das Gelände besondere Bedingungen schafft. <break time="0.8s"/> Die Murgia ist ein Kalksteinplateau. <break time="0.5s"/> Der Kalkstein heizt sich tagsüber schnell auf <break time="0.5s"/> und kühlt nachts ebenso schnell ab. <break time="0.8s"/> Das erzeugt einen gut vorhersehbaren Thermikzyklus, <break time="0.5s"/> der im Sommer — von Mai bis September — <break time="0.5s"/> das Tal hervorragend fürs Fliegen macht. <break time="1.2s"/>
+
+Die Thermik beginnt sich um zehn Uhr morgens zu bilden, <break time="0.8s"/> wenn die Sonne den Boden bereits ausreichend erwärmt hat. <break time="0.8s"/> Am Anfang ist sie schwach, <break time="0.5s"/> unregelmäßig. <break time="0.8s"/> Mittags ist sie stark, <break time="0.5s"/> manchmal turbulent — <break time="0.5s"/> nicht der beste Moment für weniger Erfahrene. <break time="0.8s"/> Am Nachmittag beruhigt sie sich und wird fließender, <break time="0.5s"/> besser handhabbar. <break time="0.8s"/> Dieses Fenster zwischen vier Uhr und Sonnenuntergang <break time="0.5s"/> ist das, was man im Fachjargon die "goldene Stunde" nennt. <break time="1.2s"/>
+
+Von oben sieht man eine Thermik nicht mit den Augen. <break time="0.8s"/> Man spürt sie. <break time="0.8s"/> Das Variometer — das Gerät, das die Steiggeschwindigkeit misst — <break time="0.5s"/> beginnt zu piepen, <break time="0.5s"/> und die Kappe bläht sich auf einer Seite etwas mehr. <break time="0.8s"/> Man korrigiert, kreist in der warmen Luftsäule, <break time="0.5s"/> und steigt. <break time="0.8s"/> Man kann vierhundert, fünfhundert Meter steigen, ohne die Arme zu bewegen. <break time="0.8s"/> Nur die Wärme der Erde, die einen trägt. <break time="1.2s"/>
+
+Von hier oben, an einem guten Augusttag mit aktiver Thermik, <break time="0.8s"/> habe ich zwölfhundert Meter über dem Meeresspiegel erreicht. <break time="0.8s"/> Aus dieser Höhe ist die Valle d'Itria winzig. <break time="0.8s"/> Alberobello sieht aus wie ein Modell. <break time="0.5s"/> Man sieht die Küste von Taranto im Südwesten. <break time="0.5s"/> Man sieht Brindisi im Nordosten. <break time="0.8s"/> Die Basilicata materialisiert sich am Westhorizont als ferne Bergsilhouette. <break time="0.8s"/> In diesem Moment bist du in der Mitte von allem. <break time="0.8s"/> Du bist nirgendwo. <break time="0.8s"/> Du bist im Himmel. <break time="1.5s"/>
+
+=====
+KAP. 10 — DAS MORGENGRAUEN IN SELVA: DER BESTE MOMENT
+voice: custom-fasano
+
+*(Am Aussichtspunkt verweilen — intimerer Ton)*
+
+Ich sage dir etwas, das du in keinem Reiseführer findest. <break time="1.5s"/>
+
+Der beste Moment in Selva di Fasano ist das Morgengrauen. <break time="0.8s"/> Nicht sechs Uhr morgens als müder Tourist. <break time="0.8s"/> Halb sechs, wenn der Himmel im Westen noch dunkel ist <break time="0.5s"/> und sich im Osten zum Meer hin orange zu färben beginnt. <break time="1.2s"/>
+
+Ich stehe hier oft zu dieser Stunde auf. <break time="0.8s"/> Nicht um zu fliegen — <break time="0.5s"/> früh morgens ist nicht gut für den Gleitschirm, <break time="0.5s"/> die Thermik gibt es noch nicht. <break time="0.8s"/> Aber um hier zu sein, still, <break time="0.5s"/> und darauf zu warten, dass der Tag kommt. <break time="1.2s"/>
+
+Hier oben, zu dieser Stunde, ist die Stille körperlich. <break time="0.8s"/> Kein Auto. <break time="0.8s"/> Kein Fußgänger. <break time="0.8s"/> Es gibt den Wind, der vom Meer kommt, <break time="0.5s"/> leicht, <break time="0.5s"/> und das Rauschen der Olivenbäume, die sich im Dunkel bewegen. <break time="0.8s"/> Und dann, nach und nach, <break time="0.5s"/> beginnt sich das Profil der Valle d'Itria abzuzeichnen. <break time="0.8s"/> Zunächst die dunklen Silhouetten der Trulli. <break time="0.5s"/> Dann die Trockenmauern. <break time="0.5s"/> Dann die Weinrebenreihen, <break time="0.5s"/> die weißen Feldwege. <break time="0.8s"/> Das Licht baut die Landschaft Stück für Stück auf, <break time="0.5s"/> als würde es etwas neu zeichnen, das es auswendig kennt. <break time="1.2s"/>
+
+Die Luft dieser Stunde hat einen Duft, der tagsüber verschwindet. <break time="0.8s"/> Wilder Thymian, <break time="0.5s"/> Kalk, <break time="0.5s"/> jene mineralische Note, die vom Stein kommt, wenn er noch frisch von der Nacht ist. <break time="0.8s"/> Und wenn es in der Nähe eine Masseria mit Tieren gibt, <break time="0.5s"/> kommt auch das hinzu — <break time="0.5s"/> Stroh, Mist, Milch. <break time="0.8s"/> Es ist nicht elegant zu beschreiben. <break time="0.5s"/> Aber es ist der Duft des Territoriums, das erwacht. <break time="0.8s"/> Es ist echt. <break time="1.2s"/>
+
+Wenn die Sonne die Adrialinie im Osten berührt, <break time="0.8s"/> verschmelzen für einen Moment Meer und Himmel. <break time="0.8s"/> Dann trennen sie sich. <break time="0.8s"/> Und der Tag beginnt. <break time="1.2s"/>
+
+Die Vögel starten vor der Sonne auf. <break time="0.8s"/> Wenn ich früh morgens fliege — <break time="0.5s"/> an Tagen mit genug Wind, um auch ohne Thermik zu starten — <break time="0.8s"/> begegne ich ihnen im Flug. <break time="0.8s"/> Mauersegler, Bussarde, ab und zu ein Falke. <break time="0.8s"/> Sie schauen mich an, als wäre ich einer von ihnen, der etwas falsch gemacht hat. <break time="0.8s"/> Oder vielleicht nur als ein Fremder in ihrem Himmel. <break time="0.8s"/> Ich habe gelernt, nicht zu nah heranzufliegen: <break time="0.5s"/> sie respektieren die Distanz, <break time="0.5s"/> und ich respektiere ihre. <break time="1.2s"/>
+
+Wenn du kannst, schlafe hier die Nacht davor und stell den Wecker. <break time="0.8s"/> Du wirst es nicht bereuen. <break time="1.5s"/>
+
+=====
+KAP. 11 — DAS ESSEN: BOMBETTE, KÄSESPEZIALITÄTEN UND DAS UNERWARTETE
+voice: custom-fasano
+
+*(Spaziergang zum Ortskern)*
+
+Reden wir übers Essen. <break time="1.2s"/>
+
+Fasano und Selva liegen in der Mitte zwischen der Welt der frischen Käsespezialitäten der Valle d'Itria <break time="0.5s"/> und der Fleischküche der Murgia. <break time="0.8s"/> Du musst nicht wählen. <break time="0.8s"/> Nimm alles. <break time="1.2s"/>
+
+Die Bombette: <break time="0.8s"/> du weißt, dass sie aus Cisternino stammen. <break time="0.8s"/> Röllchen aus Schweinehals, gefüllt mit Käse und Kräutern, <break time="0.5s"/> langsam am Spieß oder auf dem Grill gegart. <break time="0.8s"/> Cisternino ist zehn Minuten von hier. <break time="0.8s"/> Geh in eine der Metzgereien mit eigenem Grill, <break time="0.5s"/> setz dich, bestell eine gemischte Portion. <break time="0.8s"/> Das ist ein anderes Erlebnis als jedes Restaurant. <break time="1.2s"/>
+
+Aber hier bei Fasano interessiert mich das Kapitel der Käsespezialitäten am meisten. <break time="0.8s"/> Mozzarella, Burrata — frischer Käse mit cremiger Stracciatella-Füllung —, Stracciatella. <break time="0.8s"/> Hergestellt aus der Frischmilch des Morgens, <break time="0.5s"/> von Hand geformt, <break time="0.5s"/> innerhalb weniger Stunden verkauft. <break time="0.8s"/> Die echte Mozzarella, die tagesfrische, <break time="0.5s"/> hat eine Konsistenz, die nach vierundzwanzig Stunden verloren geht. <break time="0.8s"/> Sie ist nicht dasselbe wie die abgepackte aus dem Supermarkt. <break time="0.5s"/> Nicht einmal verwandt. <break time="1.2s"/>
+
+Die Burrata stammt aus Apulien — <break time="0.8s"/> aus Andria nach der bekanntesten Legende, <break time="0.5s"/> wird aber überall im Gebiet mit lokaler Milch gemacht. <break time="0.8s"/> Die äußere Hülle ist Mozzarella. <break time="0.8s"/> Innen ist die Stracciatella — <break time="0.5s"/> Fäden von Mozzarella gemischt mit frischer Sahne. <break time="0.8s"/> Wenn man sie aufschneidet, läuft sie aus. <break time="0.8s"/> Man muss sie sofort essen, <break time="0.5s"/> man kann sie nicht pietätvoll behandeln. <break time="0.8s"/> Entweder isst man sie mit den Händen und einem Stück Brot, <break time="0.5s"/> oder man hat sie nicht verstanden. <break time="1.2s"/>
+
+Suche die Käsereien entlang der Staatsstraße hinunter nach Fasano. <break time="0.8s"/> Es gibt mehrere, klein, mit einfachen Schildern. <break time="0.8s"/> Halt an, kauf, iss vor Ort. <break time="0.8s"/> Mit dem lokalen Brot, ein paar Oliven, einer Feldtomate. <break time="0.8s"/> Mehr brauchst du nicht. <break time="1.5s"/>
+
+=====
+KAP. 12 — DIE MASSERIE ALS AGRITURISMO: DAS PHÄNOMEN VON OBEN GESEHEN
+voice: custom-fasano
+
+*(Auf einer Mauer sitzend, nachdenklicher Ton)*
+
+Ich möchte dir sagen, was ich von den Masserie-Resorts halte, <break time="0.5s"/> jetzt, wo ich sie dir bereits von oben gezeigt habe. <break time="1.2s"/>
+
+Das Phänomen hat hier im Raum Fasano zwanzig Jahre ernsthafter Geschichte. <break time="0.8s"/> Und es hat Gutes gebracht: <break time="0.5s"/> Es hat Gebäude gerettet, die verfallen wären, <break time="0.5s"/> hat lokale Arbeitsplätze geschaffen, <break time="0.5s"/> hat einen Tourismus gebracht, der sonst nie gekommen wäre. <break time="0.8s"/> Ich habe nichts dagegen. <break time="1.2s"/>
+
+Aber etwas macht mich nachdenklich, <break time="0.8s"/> wenn ich darüber fliege. <break time="0.8s"/> Die echten Masserie hatten eine direkte Beziehung zur Erde. <break time="0.8s"/> Sie produzierten. <break time="0.5s"/> Sie verarbeiteten. <break time="0.5s"/> Sie lebten von der Landschaft, die sie umgab. <break time="0.8s"/> Viele der zu Resorts umgewandelten <break time="0.5s"/> haben die Olivenbäume als Kulisse behalten, <break time="0.5s"/> arbeiten sie aber nicht mehr. <break time="0.8s"/> Oder lassen sie von anderen bearbeiten, <break time="0.5s"/> und das Öl landet in einer schön etikettierten Flasche, <break time="0.5s"/> die an die Hotelgäste verkauft wird. <break time="0.8s"/> Das ist nicht falsch. <break time="0.8s"/> Es ist einfach anders als das, was war. <break time="1.2s"/>
+
+Die Masserie, die ich bevorzuge, <break time="0.8s"/> die, die ich noch als echt empfinde, <break time="0.5s"/> sind die, die Agriturismo im engeren Sinne betreiben: <break time="0.5s"/> man schläft in einem Zimmer, das aus einem alten Lager gewonnen wurde, <break time="0.5s"/> man isst, was sie selbst produzieren, <break time="0.5s"/> man geht morgens raus und jemand arbeitet im Weinberg. <break time="0.8s"/> Diese Art Ort gibt es noch, <break time="0.5s"/> man muss etwas suchen. <break time="0.8s"/> Aber sie existieren. <break time="1.5s"/>
+
+=====
+KAP. 13 — DER SONNENUNTERGANG: DER MOMENT DES FLUGES
+voice: custom-fasano
+
+*(Wieder am Aussichtspunkt, später Nachmittag)*
+
+Jetzt sage ich dir, warum der Sonnenuntergang der Moment ist, in dem ich fliege. <break time="1.2s"/>
+
+Die Thermik — <break time="0.5s"/> diese Säulen warmer Luft, die von der sonnenerwärmten Erde aufsteigen — <break time="0.5s"/> erreicht ihr Maximum zwischen zwei und vier Uhr nachmittags. <break time="0.8s"/> Nach fünf Uhr beginnen sie sich zu beruhigen. <break time="0.8s"/> Der Wind wird regelmäßiger, vorhersehbarer. <break time="0.8s"/> Für einen Gleitschirmflieger ist das Fenster zwischen fünf Uhr und Sonnenuntergang <break time="0.5s"/> die goldene Stunde. <break time="1.2s"/>
+
+Ich starte vom Kamm bei Selva <break time="0.8s"/> wenn die Valle d'Itria beginnt, im Streiflicht aufzuleuchten. <break time="0.8s"/> Die tiefe Sonne trifft die Kalksteindächer von unten <break time="0.5s"/> und lässt sie leuchten, als würden sie von innen glühen. <break time="0.8s"/> Die Trulli werden zu kleinen grauen Kerzen. <break time="0.5s"/> Die Masserie werfen lange Schatten nach Osten. <break time="0.8s"/> Die Weinstöcke nehmen jene Farbe zwischen Grün und Bronze an, <break time="0.5s"/> die man nur am Ende des Sommers sieht. <break time="1.2s"/>
+
+Es gibt eine spezifische Stille in der Luft beim Sonnenuntergangsflug. <break time="0.8s"/> Die Thermik hat sich beruhigt, <break time="0.5s"/> der Wind ist leicht, <break time="0.5s"/> und das Summen der Tagesinsekten ist bereits verschwunden. <break time="0.8s"/> Noch hört man die Zikaden, aus der Ferne. <break time="0.8s"/> Man hört den Kirchturm eines Dorfes, der die Viertelstunden schlägt. <break time="0.8s"/> Manchmal hört man einen Hund bellen auf einer Masseria darunter. <break time="0.8s"/> Geräusche, die sich am Boden mit dem Grundrauschen mischen. <break time="0.5s"/> Von oben kommen sie gefiltert an, <break time="0.5s"/> auf Abstand gebracht, <break time="0.5s"/> präzise. <break time="1.2s"/>
+
+Ich bleibe so lange wie möglich in der Luft. <break time="0.8s"/> Wenn die Sonne die Linie der Apenninen im Westen berührt <break time="0.5s"/> und das Licht rosa erlischt, <break time="0.8s"/> lande ich. <break time="0.8s"/> Die Valle d'Itria im aufsteigenden Dunkel ist anders als die des Tages: <break time="0.5s"/> die Lichter der Masserie gehen einer nach dem anderen an, <break time="0.5s"/> die Dörfer auf den Kämmen leuchten in der Ferne. <break time="0.8s"/> Von hier oben sehen sie aus wie Sternbilder, die auf der Erde ruhen. <break time="1.5s"/>
+
+Als touristisches Erlebnis kann ich dir das nicht bieten. <break time="0.8s"/> Aber den Sonnenuntergang von diesem Aussichtspunkt, <break time="0.5s"/> still, <break time="0.5s"/> während das Tal vor dir die Farbe wechselt — <break time="0.8s"/> das kannst auch du erleben. <break time="0.8s"/> Bleib hier. <break time="0.8s"/> Warte. <break time="1.5s"/>
+
+=====
+KAP. 14 — DIE KÜSTE: SAVELLETRI UND DAS MEER, DAS SEIN GESICHT WECHSELT
+voice: custom-fasano
+
+*(Auf dem Aussichtspunkt sitzend, Blick nach Osten)*
+
+Von hier oben sieht man die Adria. <break time="1.2s"/>
+
+Oder besser: man sieht ihre Linie, <break time="0.5s"/> einen blauen Streifen zwischen Landschaft und Himmel, <break time="0.5s"/> mehr oder weniger deutlich, je nach Klarheit der Luft. <break time="0.8s"/> An Tramontana-Tagen, <break time="0.5s"/> wenn die Luft sauber und trocken ist, <break time="0.5s"/> glänzt das Meer wie Metall. <break time="0.8s"/> An Scirocco-Tagen <break time="0.5s"/> verschwindet es im Dunst. <break time="1.2s"/>
+
+Savelletri ist der Hafen von Fasano. <break time="0.8s"/> Ein kleiner Fischerhafen, <break time="0.5s"/> der in den letzten zwanzig Jahren auch zu einem Gebiet mit Meeresvillen und einigen Resorts geworden ist. <break time="0.8s"/> Aber er bewahrt noch seine Seele als echter Hafen: <break time="0.5s"/> früh morgens fahren noch die Fischerboote aus, <break time="0.5s"/> und am späten Nachmittag kehren sie mit dem Fisch des Tages zurück. <break time="0.8s"/> Die Restaurants am Hafen kochen, was da ist. <break time="0.5s"/> Sie haben keine feste Speisekarte. <break time="0.5s"/> Es hängt davon ab, was morgens ins Netz gegangen ist. <break time="1.2s"/>
+
+Wenn ich am späten Nachmittag zum Meer fliege, <break time="0.8s"/> ist der Kontrast zwischen der Landschaft des Hinterlandes und der der Küste deutlich. <break time="0.8s"/> Der Kalkstein des Plateaus <break time="0.5s"/> weicht dem Niedergebüsch, <break time="0.5s"/> dann dem Küstenwald, <break time="0.5s"/> dann den Sanddünen. <break time="0.8s"/> Das Grün der Murgia wird in weniger als zehn Kilometern gelb und dann blau. <break time="0.8s"/> Es ist, als würde man drei verschiedene Ökosysteme direkt nebeneinander überfliegen. <break time="1.2s"/>
+
+Wenn du einen Tag mehr hast, <break time="0.8s"/> widme den Morgen Egnathia und Savelletri. <break time="0.5s"/> Frühstücke am Hafen, <break time="0.5s"/> spaziere über das Ausgrabungsgelände, <break time="0.5s"/> bade, wenn Saison ist. <break time="0.8s"/> Dann fahr wieder hoch. <break time="0.8s"/> Die Hitze der Küste, nach einem Morgen dort, <break time="0.5s"/> macht die Rückkehr hierher noch schöner — <break time="0.5s"/> wo die Luft zehn Grad kühler ist. <break time="1.5s"/>
+
+=====
+KAP. 15 — WAS TUN: DER PERFEKTE TAG
+voice: custom-fasano
+
+*(Praktischer Ton, wie ein Rat von einem Freund)*
+
+Ich sage dir, wie ich meinen Tag einteilen würde, <break time="0.5s"/> wenn ich ein Besucher hier wäre, zum ersten Mal. <break time="1.2s"/>
+
+Früh morgens: Egnathia. <break time="0.8s"/> Geh, wenn das Museum öffnet, <break time="0.5s"/> bevor die Hitze kommt und bevor die Gruppen ankommen. <break time="0.8s"/> Geh über das Ausgrabungsgelände, <break time="0.5s"/> schau das Meer vom Bereich des Amphitheaters aus an. <break time="0.8s"/> Gib dir eine Stunde, anderthalb Stunden. <break time="0.8s"/> Nicht hetzen. <break time="1.2s"/>
+
+Am späten Vormittag: hoch nach Selva. <break time="0.8s"/> Halt unterwegs bei einer der Käsereien <break time="0.5s"/> und kauf frische Mozzarella. <break time="0.8s"/> Iss sie dort, im Stehen, <break time="0.5s"/> mit einem Stück Brot. <break time="0.8s"/> Nicht aufs Restaurant warten. <break time="1.2s"/>
+
+Nachmittags: Selva di Fasano zu Fuß. <break time="0.8s"/> Der Aussichtspunkt auf das Tal, <break time="0.5s"/> die Gassen, <break time="0.5s"/> ein Rundgang durch die monumentalen Olivenbäume im umgebenden Gebiet. <break time="0.8s"/> Nimm dir Zeit. <break time="0.8s"/> Das ist kein Ort, den man durchhetzt. <break time="1.2s"/>
+
+Wenn du neugierig auf den Gleitschirm bist, <break time="0.8s"/> frag nach. <break time="0.8s"/> Es gibt Schulen in der Gegend, die Tandemflüge anbieten. <break time="0.5s"/> Keine Erfahrung nötig. <break time="0.5s"/> Du schnallst dich hinter dem Fluglehrer an, <break time="0.5s"/> läufst ein paar Schritte am Kamm, <break time="0.5s"/> und du bist in der Luft. <break time="0.8s"/> Fünf Minuten Flug über dieses Tal <break time="0.5s"/> wiegen so viel wie Stunden des Lesens. <break time="0.8s"/> Die Landschaft versteht sich von selbst, <break time="0.5s"/> wenn man sie auf einmal sieht. <break time="1.2s"/>
+
+Abends: Abendessen in einer Masseria, <break time="0.8s"/> oder wenn du die authentische Version bevorzugst, <break time="0.5s"/> fahr nach Cisternino für die Bombette. <break time="0.8s"/> Dann zurück hier für den Sonnenuntergang. <break time="0.8s"/> Wenn du bis ins Dunkel bleiben kannst, <break time="0.5s"/> warte auf die Sterne. <break time="0.8s"/> Auf vierhundert Metern, weit von der Küste, <break time="0.5s"/> ist der Augusthimmel eine ernste Angelegenheit. <break time="1.5s"/>
+
+Am nächsten Tag: Locorotondo, Cisternino oder Alberobello sind alle weniger als eine halbe Stunde entfernt. <break time="0.8s"/> Du kannst Selva als Basis nutzen <break time="0.5s"/> und von dort alle Orte der Valle in einem Radius anfahren. <break time="0.8s"/> Das ist die beste geografische Position, die du hast. <break time="1.5s"/>
+
+=====
+KAP. 16 — ABSCHLUSS: ANDREA AUS DEM HIMMEL VERABSCHIEDET SICH
+voice: custom-fasano
+
+*(Warmer Ton, wie ein Abschied)*
+
+Also. <break time="1.5s"/>
+
+Fasano und Selva di Fasano. <break time="0.8s"/> Eine Ebenenstadt und ein Plateau auf dem Kamm, <break time="0.5s"/> verbunden durch einen Anstieg und zweitausend Jahre gemeinsamer Geschichte. <break time="0.8s"/> Egnathia, das von unter dem Gestrüpp auf das Meer blickt, <break time="0.5s"/> die jahrtausendealten Olivenbäume, die sich seit vor unseren Urgroßeltern nicht bewegt haben, <break time="0.5s"/> die Masserie, die zwischen Resort und echter Arbeit ein Gleichgewicht suchen. <break time="1.2s"/>
+
+Und die Valle d'Itria darunter, <break time="0.5s"/> mit ihrer Geometrie aus Trockenmauern, Trulli und Weinreben, <break time="0.5s"/> die von oben wie eine alte Zeichnung aussieht <break time="0.5s"/> und aus der Nähe nur das Ergebnis von Jahrhunderten täglicher Arbeit ist. <break time="1.2s"/>
+
+Das ist das Gebiet, das ich durch das Fliegen kennengelernt habe. <break time="0.8s"/> Nicht von der Straße, <break time="0.5s"/> nicht aus Büchern. <break time="0.8s"/> Von oben, <break time="0.5s"/> auf einer Höhe, wo der Wind sauber ist <break time="0.5s"/> und die Landschaft sich offenbart für das, was sie ist: <break time="0.5s"/> ein Ort, der durch Mühe und Zeit gebaut wurde, <break time="0.5s"/> nicht für den Tourismus, sondern für das Leben derer, die hier waren. <break time="0.8s"/> Der Tourismus kam danach. <break time="0.8s"/> Die Landschaft war bereits da <break time="0.5s"/> und wartete. <break time="1.2s"/>
+
+Ich werde weiterhin über all das fliegen. <break time="0.8s"/> Die richtigen Strömungen suchen, <break time="0.5s"/> das Plateau von Selva als Ausgangspunkt nutzen, <break time="0.5s"/> um das Tal von oben zu durchqueren. <break time="0.8s"/> Zwanzig Jahre tue ich das schon, <break time="0.5s"/> und ich bin es nicht leid geworden. <break time="0.8s"/> Ich glaube nicht, dass es passieren wird. <break time="1.2s"/>
+
+Wenn du wissen willst, wie das Gleitschirmfliegen hier ist, <break time="0.8s"/> wenn du dieses Tal so sehen willst, wie ich es sehe — <break time="0.5s"/> es gibt Schulen und Fluglehrer in der Gegend. <break time="0.8s"/> Der Tandemflug erfordert keine Erfahrung. <break time="0.5s"/> Du schnallst dich hinter dem Fluglehrer an und startest. <break time="0.8s"/> Fünf Minuten später <break time="0.5s"/> verstehst du alles, was ich dir heute erzählt habe, <break time="0.5s"/> in einem einzigen Blick. <break time="1.2s"/>
+
+Wenn ihr noch unterwegs seid, <break time="0.5s"/> ist Ostuni dreißig Minuten Richtung Norden. <break time="0.8s"/> Die weiße Stadt auf dem Hügel — <break time="0.5s"/> ihr habt sie von oben gesehen, wenn ihr hier geflogen seid. <break time="0.8s"/> Vom Boden aus ist es etwas anderes. <break time="0.8s"/> Ein pensionierter Stadtpolizist erzählt sie so, wie es kein Geschichtsbuch tut. <break time="1.2s"/>
+
+Guten Tag. <break time="0.8s"/> Und genieß diesen Blick. <break time="2s"/>

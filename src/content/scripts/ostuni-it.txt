@@ -1,0 +1,279 @@
+## TESTI AUDIO — GUIDA OSTUNI
+*Voce: Salvatore, ex vigile urbano, 40 anni di servizio a Ostuni*
+*Formato: misto auto + piedi · 30 minuti*
+
+=====
+CAP. 1 — INTRO: LA CITTÀ BIANCA DAL FINESTRINO
+voice: custom-ostuni
+
+*(in auto, avvicinandosi da sud sulla SS16 o dalla superstrada)*
+
+Alza gli occhi dal telefono un momento. <break time="1s"/>
+
+Guarda là. <break time="1.5s"/>
+
+Quella macchia bianca in cima alla collina — <break time="0.5s"/> quella è Ostuni. <break time="0.8s"/> Duecentodiciotto metri sul livello del mare, <break time="0.5s"/> su uno sperone calcareo che si vede da decine di chilometri di distanza. <break time="0.8s"/> Bianca. <break time="0.5s"/> Bianchissima. <break time="0.8s"/> Come se qualcuno avesse rovesciato un secchio di calce sulla collina <break time="0.5s"/> e non avesse pulito. <break time="1.2s"/>
+
+Mi chiamo Salvatore. <break time="0.8s"/> Ho fatto il vigile urbano per quarant'anni in questa città. <break time="0.8s"/> Ho visto passare i turisti d'estate, <break time="0.5s"/> i pellegrini d'inverno, <break time="0.5s"/> i mercati del martedì, <break time="0.5s"/> le processioni di settembre. <break time="0.8s"/> In agosto ho fatto più multe in una settimana <break time="0.5s"/> che in tutto il resto dell'anno messo insieme — <break time="0.5s"/> e vi dico che non avevano tutti i torti a parcheggiare dove capitava, <break time="0.5s"/> perché Ostuni d'estate fa perdere la testa. <break time="1.2s"/>
+
+Adesso sono in pensione. <break time="0.8s"/> E adesso posso finalmente raccontarvela per bene, <break time="0.5s"/> questa città, <break time="0.5s"/> senza dover stare attento al fischietto. <break time="1.2s"/>
+
+Quella collina che vedete — <break time="0.8s"/> è sempre stata così. <break time="0.8s"/> Alta, isolata, visibile. <break time="0.8s"/> Chiunque abbia vissuto in questa zona negli ultimi tremila anni <break time="0.5s"/> ha capito subito che lassù si stava al sicuro. <break time="0.8s"/> Si vedeva il mare. <break time="0.5s"/> Si vedevano le campagne. <break time="0.5s"/> Si vedeva chi arrivava. <break time="0.8s"/> In questo mestiere, vedere prima degli altri <break time="0.5s"/> vale quanto un plotone di soldati. <break time="1.2s"/>
+
+La prima volta che ho capito davvero dove vivevo — <break time="0.5s"/> e dico davvero, non da bambino abituato alla cosa — <break time="0.8s"/> avevo ventisette anni. <break time="0.8s"/> Ero appena entrato in servizio. <break time="0.8s"/> Stavo tornando a casa di notte, <break time="0.5s"/> dall'autostrada, <break time="0.5s"/> dopo un turno lungo. <break time="0.8s"/> E ho visto Ostuni illuminata in cima alla collina, <break time="0.5s"/> nel buio della campagna intorno. <break time="0.8s"/> Sembrava una cosa impossibile. <break time="0.5s"/> Una città di luce sospesa nel niente. <break time="0.8s"/> Ci ho pensato per anni a quella visione. <break time="0.8s"/> Ci penso ancora adesso. <break time="1.5s"/>
+
+=====
+CAP. 2 — LE ORIGINI: MESSAPI, ROMANI, NORMANNI, ARAGONESI
+voice: custom-ostuni
+
+*(ancora in auto, nei minuti prima di entrare in città)*
+
+Prima di parcheggiare, <break time="0.5s"/> vi racconto chi ha costruito questa città. <break time="0.8s"/> Perché non è una cosa sola, Ostuni — <break time="0.5s"/> è uno strato sopra l'altro, <break time="0.5s"/> come la calce sui muri. <break time="1.2s"/>
+
+I Messapi ci stavano già. <break time="0.8s"/> Erano la popolazione indigena di questa parte di Puglia, <break time="0.5s"/> prima dei Romani. <break time="0.8s"/> Non stavano in cima alla collina, <break time="0.5s"/> stavano più in basso, <break time="0.5s"/> nella pianura intorno. <break time="0.8s"/> Ma la collina la conoscevano — <break time="0.5s"/> era un punto di riferimento, <break time="0.5s"/> un luogo sacro forse, <break time="0.5s"/> certamente un posto da tenere d'occhio. <break time="0.8s"/> I Messapi parlavano una lingua propria, <break time="0.5s"/> non il latino, <break time="0.5s"/> non il greco. <break time="0.8s"/> Avevano scritti, <break time="0.5s"/> leggi, <break time="0.5s"/> una cultura che i Romani hanno poi assorbito e in parte cancellato. <break time="0.8s"/> Come spesso accade con chi vince. <break time="1.2s"/>
+
+Poi arrivarono i Romani. <break time="0.8s"/> Ostuni stava lungo la via che collegava la costa adriatica all'interno. <break time="0.8s"/> Non era la città principale — quella era Brindisi, <break time="0.5s"/> a trenta chilometri — <break time="0.5s"/> ma serviva. <break time="0.8s"/> I Romani usavano i posti come questo: <break time="0.5s"/> posizione geografica utile, presidio, via. <break time="0.8s"/> Non costruivano dove era bello, <break time="0.5s"/> costruivano dove era necessario. <break time="1.2s"/>
+
+Il Medioevo ha cambiato tutto. <break time="0.8s"/> I Normanni arrivano nell'XI secolo <break time="0.5s"/> e capiscono subito il valore della collina. <break time="0.8s"/> La costruzione vera del centro storico medievale <break time="0.5s"/> — i vicoli, le case, l'impianto del borgo — <break time="0.5s"/> comincia con loro. <break time="0.8s"/> Poi gli Angioini, <break time="0.5s"/> poi gli Aragonesi. <break time="1.2s"/>
+
+Le mura che vedete oggi — <break time="0.8s"/> quelle grosse, quelle solide, <break time="0.5s"/> quelle che fanno sembrare la città una fortezza — <break time="0.8s"/> sono aragonesi. <break time="0.8s"/> Le costruirono nel 1495. <break time="0.8s"/> Erano gli anni in cui l'Italia era un campo di battaglia <break time="0.5s"/> tra Francia, Spagna e le città italiane. <break time="0.8s"/> Le mura del 1495 non erano decorazione. <break time="0.5s"/> Erano la differenza tra esistere e non esistere. <break time="1.2s"/>
+
+Le mura hanno tre porte principali. <break time="0.8s"/> Porta Nova, Porta San Demetrio, Porta Nuova — <break time="0.5s"/> i nomi cambiano a seconda di chi racconta. <break time="0.8s"/> Ogni porta era presidiata. <break time="0.8s"/> Si controllava chi entrava e chi usciva. <break time="0.8s"/> Avevo un collega anziano — <break time="0.5s"/> Bruno, lo chiamavamo Brunone perché era alto un metro e novanta — <break time="0.5s"/> che diceva sempre: <break time="0.5s"/> "Salvato', noi facciamo lo stesso lavoro di chi stava a queste porte nel Quattrocento. <break time="0.5s"/> Guardiamo chi entra." <break time="0.8s"/> Brunone esagerava, <break time="0.5s"/> ma non aveva torto del tutto. <break time="1.2s"/>
+
+Io ci ho fatto il giro delle mura centinaia di volte, in servizio. <break time="0.8s"/> Non cambiavano mai — <break time="0.5s"/> la pietra è pietra. <break time="0.8s"/> Ma ogni volta mi fermavo un attimo a pensare <break time="0.5s"/> che qualcuno nel 1495 ha messo quel blocco esattamente lì, <break time="0.5s"/> con le mani, <break time="0.5s"/> sapendo che da quelle mura dipendeva la vita di tutto il borgo. <break time="0.8s"/> Non un lavoro qualunque. <break time="1.5s"/>
+
+=====
+CAP. 3 — LA CATTEDRALE: IL GOTICO PUGLIESE
+voice: custom-ostuni
+
+*(a piedi, arrivando in piazza della Libertà o salendo verso la cattedrale)*
+
+Adesso saliamo. <break time="1s"/>
+
+Quello che vedete davanti — <break time="0.8s"/> quella facciata che sembra quasi fuori posto qui in mezzo ai vicoletti bianchi — <break time="0.8s"/> è la Cattedrale di Santa Maria Assunta. <break time="0.8s"/> Costruita tra la fine del Quattrocento e i primi del Cinquecento. <break time="0.8s"/> Stile gotico pugliese. <break time="1.2s"/>
+
+Non è una cattedrale piccola. <break time="0.8s"/> Per un centro storico di queste dimensioni, <break time="0.5s"/> è una cosa sproporzionata — <break time="0.5s"/> nel senso buono. <break time="0.8s"/> Come se la città avesse voluto dire: <break time="0.5s"/> sì, siamo piccoli, <break time="0.5s"/> ma la nostra chiesa non lo è. <break time="1.2s"/>
+
+Guardate il rosone. <break time="1s"/>
+
+È il pezzo più bello della facciata. <break time="0.8s"/> Circolare, traforato nella pietra calcarea, <break time="0.5s"/> con motivi geometrici e floreali che si intrecciano. <break time="0.8s"/> Quando ci batte il sole al pomeriggio, <break time="0.5s"/> proietta dentro ombre e luci che si muovono. <break time="0.8s"/> Non è un effetto pensato da qualcuno con un software — <break time="0.5s"/> è geometria e luce, fatta a mano, <break time="0.5s"/> cinque secoli fa. <break time="1.2s"/>
+
+I tre portali sono tutti diversi. <break time="0.8s"/> Non è disattenzione — <break time="0.5s"/> in architettura gotica ogni portale racconta qualcosa di diverso. <break time="0.8s"/> Il portale centrale è il più ornato, <break time="0.5s"/> con le colonnine, gli archi a sesto acuto, <break time="0.5s"/> le decorazioni che salgono verso l'alto. <break time="0.8s"/> I laterali sono più sobri. <break time="0.8s"/> Come nella vita: <break time="0.5s"/> l'ingresso principale è quello che si vede, <break time="0.5s"/> gli altri servono, <break time="0.5s"/> ma non fanno scena. <break time="1.2s"/>
+
+Dentro la cattedrale — <break time="0.8s"/> entrate, è aperta. <break time="0.8s"/> Il pavimento è in pietra calcarea locale. <break time="0.8s"/> Le navate sono tre. <break time="0.8s"/> Ci sono cappelle laterali con affreschi di varie epoche, <break time="0.5s"/> alcune ben conservate, <break time="0.5s"/> altre sbiadite dal tempo e dall'umidità. <break time="0.8s"/> Non è un museo — <break time="0.5s"/> è ancora una chiesa attiva. <break time="0.8s"/> Le messe si fanno. <break time="0.5s"/> I matrimoni si fanno. <break time="0.5s"/> Ho visto sposarsi qui ragazzi che erano stati i miei vicini di casa da bambini. <break time="0.8s"/> E poi ho visto i loro figli battezzati. <break time="0.8s"/> Quarant'anni passano. <break time="1.2s"/>
+
+La cosa che noto sempre, <break time="0.8s"/> quando accompagno qualcuno per la prima volta — <break time="0.8s"/> è il silenzio. <break time="0.8s"/> Fuori ci sono i vicoli, il vento, le voci. <break time="0.8s"/> Qui dentro si abbassa tutto. <break time="0.8s"/> La pietra spessa, le volte alte — <break time="0.5s"/> assorbono il rumore. <break time="0.8s"/> Si sente solo il passo sui lastroni. <break time="0.8s"/> E la propria voce, se si parla, <break time="0.5s"/> suona diversa. <break time="0.8s"/> Più seria. <break time="0.8s"/> Come si conviene. <break time="1.2s"/>
+
+Io passavo davanti a questa cattedrale ogni mattina, in servizio. <break time="0.8s"/> Per vent'anni ho pensato poco a cosa fosse. <break time="0.8s"/> Era lì, faceva parte del paesaggio. <break time="0.8s"/> Poi una sera di novembre, inverno, <break time="0.5s"/> nessun turista in giro, <break time="0.5s"/> mi sono fermato davvero a guardare il rosone. <break time="0.8s"/> Ci ho messo dieci minuti. <break time="0.8s"/> È strano quante cose vedi quando smetti di passarci davanti. <break time="1.5s"/>
+
+=====
+CAP. 4 — IL CENTRO STORICO: I VICOLI BIANCHI
+voice: custom-ostuni
+
+*(a piedi nei vicoli del centro storico)*
+
+Allora — i vicoli. <break time="1.5s"/>
+
+Non aspettatevi strade dritte. <break time="0.8s"/> Ostuni non funziona così. <break time="0.8s"/> Il centro storico è un labirinto di viuzze strette, <break time="0.5s"/> scale, <break time="0.5s"/> archi che passano sopra la strada, <break time="0.5s"/> piazzette minuscole che escono dal niente. <break time="0.8s"/> Costruito su una collina, in epoche diverse, <break time="0.5s"/> seguendo la roccia sotto. <break time="0.8s"/> Non c'era un piano regolatore nel Duecento. <break time="0.5s"/> C'era la pietra, e ci si adattava. <break time="1.2s"/>
+
+La calce è ovunque. <break time="0.8s"/> Muri, scalini, vasi di fiori sui davanzali — <break time="0.5s"/> tutto bianco. <break time="0.8s"/> È la stessa tradizione di Locorotondo, <break time="0.5s"/> di tanti borghi della Puglia e del Mediterraneo. <break time="0.8s"/> La calce è antibatterica. <break time="0.8s"/> Prima che esistessero i disinfettanti, <break time="0.5s"/> imbiancare le pareti teneva lontano le malattie. <break time="0.8s"/> E poi col tempo è diventata identità — <break time="0.5s"/> il bianco di Ostuni è Ostuni, <break time="0.5s"/> non c'è altro modo di dirlo. <break time="1.2s"/>
+
+Ogni anno, prima dell'estate, <break time="0.8s"/> i residenti del centro storico imbiancano. <break time="0.8s"/> È una tradizione che si mantiene per regolamento comunale <break time="0.5s"/> ma anche per orgoglio. <break time="0.8s"/> Se la casa di fianco è bianca <break time="0.5s"/> e la tua è grigia, <break time="0.5s"/> si nota. <break time="0.8s"/> Si nota molto. <break time="0.8s"/> Ho ricevuto segnalazioni su questo — <break time="0.5s"/> gente che chiamava la polizia municipale <break time="0.5s"/> perché il vicino non aveva imbiancato. <break time="0.8s"/> Non è uno scherzo. <break time="0.8s"/> La calce è una questione seria, qui. <break time="1.2s"/>
+
+La differenza con Locorotondo — <break time="0.8s"/> perché qualcuno la farà questa domanda — <break time="0.8s"/> è la collina. <break time="0.8s"/> Locorotondo è rotonda, <break time="0.5s"/> il borgo gira in cerchio su un pianoro. <break time="0.8s"/> Ostuni è verticale. <break time="0.8s"/> Sale, scende, gira, <break time="0.5s"/> si arrampica sulla roccia. <break time="0.8s"/> Ci si perde per davvero, qui. <break time="0.8s"/> Non è una cosa organizzata. <break time="0.8s"/> È un borgo che è cresciuto come una pianta — <break time="0.5s"/> dove trovava spazio, si allargava. <break time="1.2s"/>
+
+D'estate queste strade sono piene. <break time="0.8s"/> In agosto, le strade strette del centro storico <break time="0.5s"/> diventano un problema logistico serio. <break time="0.8s"/> Vi dico solo che ho gestito agosto in questo centro storico per quarant'anni <break time="0.5s"/> e c'erano giorni che non passava una bicicletta, <break time="0.5s"/> tanta era la gente. <break time="0.8s"/> D'inverno è un'altra cosa. <break time="0.8s"/> Silenzio, <break time="0.5s"/> qualche gatto, <break time="0.5s"/> l'odore del pane dai forni. <break time="0.8s"/> È come due città diverse. <break time="1.5s"/>
+
+=====
+CAP. 5 — LA DONNA DI OSTUNI: LA DELIA
+voice: custom-ostuni
+
+*(fermandosi in una piazzetta, o indicando il museo)*
+
+Adesso vi dico la cosa che quasi nessuno sa prima di arrivare qui. <break time="1.2s"/>
+
+Nel 1991, durante degli scavi di archeologia preventiva <break time="0.5s"/> nella zona di Santa Maria d'Agnano — <break time="0.5s"/> che è appena fuori dal centro storico — <break time="0.8s"/> gli archeologi trovano uno scheletro. <break time="1.2s"/>
+
+Una donna. <break time="0.8s"/> Ventisette-trent'anni al momento della morte. <break time="0.8s"/> Ventiseimila anni fa. <break time="1.2s"/>
+
+Era incinta. <break time="1.5s"/>
+
+Il feto era ancora in posizione nel bacino. <break time="0.8s"/> Era al nono mese di gravidanza <break time="0.5s"/> quando è morta — <break time="0.5s"/> lei e il bambino che portava. <break time="1.2s"/>
+
+Si chiama Delia. <break time="0.8s"/> Il nome gliel'hanno dato gli archeologi dopo la scoperta — <break time="0.5s"/> Delia, dal nome antico di questa terra. <break time="0.8s"/> Era un'Homo sapiens del Paleolitico superiore. <break time="0.8s"/> Cacciava, raccoglieva, sopravviveva. <break time="0.8s"/> Portava collane di conchiglie — <break time="0.5s"/> gliele hanno trovate addosso. <break time="0.8s"/> Tremila anni prima che cominciasse l'età dei metalli, <break time="0.5s"/> questa donna si metteva i gioielli. <break time="1.2s"/>
+
+Come è morta non lo sappiamo con certezza. <break time="0.8s"/> Il parto, probabilmente — <break time="0.5s"/> o una complicazione durante la gravidanza. <break time="0.8s"/> Era stata sepolta con cura. <break time="0.8s"/> Questo è importante: <break time="0.5s"/> non abbandonata, <break time="0.5s"/> non lasciata. <break time="0.8s"/> Qualcuno l'aveva messa lì con attenzione, <break time="0.5s"/> con rispetto, <break time="0.5s"/> con dolore probabilmente. <break time="0.8s"/> Ventiseimila anni fa, <break time="0.5s"/> qualcuno piangeva i propri morti <break time="0.5s"/> esattamente come facciamo noi. <break time="1.2s"/>
+
+La Delia è esposta al Museo di Civiltà Preclassiche della Murgia Meridionale, <break time="0.8s"/> che sta proprio a Ostuni, <break time="0.5s"/> nel convento di Santa Maria della Grata. <break time="0.8s"/> Se siete qui, andate. <break time="0.8s"/> Non è uno di quei musei dove guardi le cose dietro un vetro <break time="0.5s"/> e pensi "carino" e vai via. <break time="0.8s"/> È un posto dove stai davanti a uno scheletro di ventiseimila anni <break time="0.5s"/> e capisci quanto siamo vecchi, <break time="0.5s"/> noi esseri umani su questa terra. <break time="1.2s"/>
+
+Io ho portato mia nipote a vedere la Delia quando aveva dodici anni. <break time="0.8s"/> Non ha detto una parola per dieci minuti. <break time="0.8s"/> Poi mi ha chiesto: <break time="0.5s"/> "Zio Salvatore, come si chiamava davvero?" <break time="0.8s"/> Non lo sappiamo. <break time="0.8s"/> Non lo sapremo mai. <break time="0.8s"/> Ma era qui, <break time="0.5s"/> ventiseimila anni prima di noi, <break time="0.5s"/> su questa stessa collina. <break time="1.5s"/>
+
+=====
+CAP. 6 — LA VISIONE DEL VIGILE: LE STAGIONI DEL TURISMO
+voice: custom-ostuni
+
+*(camminando per il centro, tono più personale e diretto)*
+
+Vi racconto Ostuni come la so io. <break time="1.2s"/>
+
+Agosto. <break time="1.5s"/>
+
+Agosto è la prova del fuoco. <break time="0.8s"/> Ogni estate, negli ultimi vent'anni, <break time="0.5s"/> Ostuni è diventata una delle mete più frequentate del Salento allargato. <break time="0.8s"/> I turisti arrivano dal Nord Italia, dall'estero, <break time="0.5s"/> dalla Germania, dall'Olanda, dalla Svezia. <break time="0.8s"/> Le stradine del centro storico — <break time="0.5s"/> quelle che avete visto — <break time="0.5s"/> sono larghe quanto due persone affiancate. <break time="0.8s"/> In agosto ce ne passano duecento. <break time="0.8s"/> Allo stesso tempo. <break time="0.8s"/> Nella stessa direzione opposta. <break time="1.2s"/>
+
+Ho fermato macchine con targa svedese, olandese, francese. <break time="0.8s"/> Tutti cercavano di parcheggiare dove non si parcheggia. <break time="0.8s"/> Non perché fossero maleducati — <break time="0.5s"/> perché il centro storico non ha parcheggi <break time="0.5s"/> e non ci capisce niente chi arriva per la prima volta. <break time="0.8s"/> Il consiglio che do a tutti: <break time="0.8s"/> parcheggiate fuori dalle mura e salite a piedi. <break time="0.5s"/> È più semplice, <break time="0.5s"/> è più bello, <break time="0.5s"/> e non rischiate la multa. <break time="0.8s"/> O peggio, <break time="0.5s"/> di non riuscire a muovervi più. <break time="1.2s"/>
+
+Poi viene settembre. <break time="0.8s"/> E Ostuni torna ai suoi. <break time="0.8s"/> La gente del posto riprende i bar, <break time="0.5s"/> le piazze, <break time="0.5s"/> i ritmi normali. <break time="0.8s"/> I bambini tornano a scuola. <break time="0.8s"/> Le famiglie riprendono le abitudini quotidiane. <break time="0.8s"/> La città si porta appresso ancora l'odore dell'estate — <break time="0.5s"/> crema solare, cibo fritto, turisti — <break time="0.5s"/> ma si toglie il vestito delle feste. <break time="1.2s"/>
+
+L'inverno è un altro posto. <break time="0.8s"/> Ostuni d'inverno è quasi deserta. <break time="0.8s"/> Qualche pensionato al bar, <break time="0.5s"/> qualche gatto sui gradini, <break time="0.5s"/> i negozianti che si conoscono tutti per nome. <break time="0.8s"/> Il vento da nord — la tramontana — <break time="0.5s"/> soffia tra i vicoli e porta via tutto il rumore. <break time="0.8s"/> È lì che si capisce com'era davvero questa città, <break time="0.5s"/> prima che diventasse una destinazione turistica. <break time="0.8s"/> Bella, precisa, <break time="0.5s"/> e per niente interessata a farsi guardare. <break time="1.5s"/>
+
+=====
+CAP. 7 — L'OLIO: OGLIAROLA E CELLINA DI NARDÒ
+voice: custom-ostuni
+
+*(vicino a un frantoio, o in un punto panoramico con vista sugli ulivi)*
+
+Guardate là sotto. <break time="1s"/>
+
+Quegli alberi grigi che arrivano fino all'orizzonte — <break time="0.8s"/> quelli sono ulivi. <break time="0.8s"/> Questa zona, tra Ostuni e Fasano, <break time="0.5s"/> è uno dei territori olivicoli più importanti della Puglia. <break time="0.8s"/> E la Puglia produce il settanta per cento dell'olio italiano. <break time="0.8s"/> Fate il conto. <break time="1.2s"/>
+
+Le cultivar di qui sono due principali: <break time="0.8s"/> la Ogliarola barese — <break time="0.5s"/> che qui chiamano semplicemente Ogliarola — <break time="0.5s"/> e la Cellina di Nardò. <break time="0.8s"/> Sono vitigni autoctoni nel senso letterale: <break time="0.5s"/> nati qui, selezionati qui, <break time="0.5s"/> adattati al suolo calcareo e al clima di questa fascia costiera. <break time="1.2s"/>
+
+L'Ogliarola dà un olio delicato, <break time="0.5s"/> fruttato leggero, <break time="0.5s"/> con poco amaro. <break time="0.8s"/> La Cellina è più corposa, <break time="0.5s"/> con un amaro e un piccante più pronunciati. <break time="0.8s"/> Insieme — perché spesso si usano in blend — <break time="0.5s"/> danno un olio equilibrato <break time="0.5s"/> che si abbina bene con quasi tutto. <break time="1.2s"/>
+
+Sotto Ostuni c'è un frantoio ipogeo — <break time="0.8s"/> cioè scavato nella roccia. <break time="0.8s"/> Ce ne sono in questa zona da secoli, <break time="0.5s"/> perché la temperatura costante nella pietra calcarea <break time="0.5s"/> rallentava l'ossidazione dell'olio durante la lavorazione. <break time="0.8s"/> Prima dei frigoriferi, prima della tecnologia, <break time="0.5s"/> la roccia era il frigorifero. <break time="0.8s"/> Una soluzione pratica trovata da qualcuno che aveva capito la fisica <break time="0.5s"/> senza saperlo nominare. <break time="1.2s"/>
+
+La raccolta delle olive comincia a novembre. <break time="0.8s"/> Qui si fa ancora in parte a mano — <break time="0.5s"/> reti stese sotto gli alberi, <break time="0.5s"/> pettini per pettinare i rami. <break time="0.8s"/> Gli ulivi più vecchi, quelli centenari, <break time="0.5s"/> non si toccano con le macchine vibranti — <break time="0.5s"/> la corteccia cederebbe. <break time="0.8s"/> Un ulivo di quattrocento anni va trattato con rispetto. <break time="0.8s"/> Come si tratta un anziano. <break time="0.8s"/> Con pazienza e senza fretta. <break time="1.2s"/>
+
+Mio padre aveva cinque ulivi nel terreno di famiglia, <break time="0.5s"/> fuori dalla zona a est. <break time="0.8s"/> Ci andavamo a raccogliere a novembre, <break time="0.5s"/> tutta la famiglia, <break time="0.5s"/> con i sacchi e le reti. <break time="0.8s"/> Ci si impiegava due giorni per cinque alberi. <break time="0.8s"/> Sembrava tanto, <break time="0.5s"/> per chi ha sei ulivi. <break time="0.8s"/> Ma poi quell'olio durava tutto l'anno, <break time="0.5s"/> sapevi da dove veniva, <break time="0.5s"/> sapevi come era stato fatto. <break time="0.8s"/> Quello che comprate in bottiglia al supermercato <break time="0.5s"/> non vi dirà mai queste cose. <break time="1.5s"/>
+
+=====
+CAP. 8 — IL MERCATO DEL MARTEDÌ VISTO DAL VIGILE
+voice: custom-ostuni
+
+*(in piazza o vicino al mercato, tono vivace)*
+
+Il mercato di Ostuni si fa il martedì. <break time="1s"/>
+
+Se siete qui martedì mattina — <break time="0.8s"/> andate. <break time="0.8s"/> È la città vera, quella. <break time="0.8s"/> Non quella dei vicoli bianchi e delle foto. <break time="0.8s"/> Quella della gente che fa la spesa, <break time="0.5s"/> che discute con il venditore sul prezzo delle verdure, <break time="0.5s"/> che incontra qualcuno che non vede da una settimana <break time="0.5s"/> e si ferma venti minuti a parlare in mezzo alla strada. <break time="1.2s"/>
+
+Ho fatto servizio al mercato per quasi trent'anni. <break time="0.8s"/> Non è un ricordo romantico — <break time="0.5s"/> il martedì mattina era uno dei turni più complicati, <break time="0.5s"/> tra traffico, bancarelle, parcheggi improvvisati e discussioni varie. <break time="0.8s"/> Ma era anche il posto dove capivi come funzionava davvero questa città. <break time="1.2s"/>
+
+La logistica del mercato è una cosa seria. <break time="0.8s"/> I venditori arrivano dalle tre di notte. <break time="0.8s"/> Montano le bancarelle prima dell'alba. <break time="0.8s"/> C'è un ordine preciso — <break time="0.5s"/> chi sta dove, <break time="0.5s"/> chi ha il posto fisso, <break time="0.5s"/> chi gira su più mercati della settimana. <break time="0.8s"/> Brindisi il lunedì, <break time="0.5s"/> Ostuni il martedì, <break time="0.5s"/> Fasano il mercoledì. <break time="0.8s"/> I girovaghi del mercato. <break time="0.8s"/> Un lavoro duro, <break time="0.5s"/> all'aperto, <break time="0.5s"/> estate e inverno. <break time="0.8s"/> Ho rispetto per loro. <break time="1.2s"/>
+
+Cosa trovate al mercato? <break time="0.8s"/> Verdure dell'orto diretto, <break time="0.5s"/> soprattutto in estate — <break time="0.5s"/> pomodori, melanzane, peperoni, zucchine. <break time="0.8s"/> Formaggi locali — <break time="0.5s"/> cacioricotta, <break time="0.5s"/> ricotta forte che sa di fermentazione e fa bruciare un po'. <break time="0.8s"/> Olive di tutte le varietà. <break time="0.8s"/> E poi le friselle — <break time="0.5s"/> che vi spiego nel capitolo sul cibo. <break time="1.2s"/>
+
+Le masserie intorno a Ostuni producono anche pomodori invernali — <break time="0.8s"/> quelli che si appendono in mazzi e si conservano fino a dicembre. <break time="0.8s"/> I pomodorini di Manduria, di Fasano, <break time="0.5s"/> di tutta questa fascia. <break time="0.8s"/> Vengono piccoli e rugosi, <break time="0.5s"/> con una concentrazione di zucchero e sapore <break time="0.5s"/> che quelli del supermercato non hanno. <break time="0.8s"/> Comprateli al mercato. <break time="0.5s"/> Non al supermercato. <break time="0.8s"/> Quello che pagate in più <break time="0.5s"/> lo capite al primo assaggio. <break time="1.2s"/>
+
+Un consiglio da vigile in pensione: <break time="0.8s"/> al mercato non prendete l'auto. <break time="0.8s"/> La zona intorno al mercato il martedì mattina <break time="0.5s"/> è un disastro. <break time="0.8s"/> Ho distribuito più verbali il martedì mattina <break time="0.5s"/> che in tutte le altre mattine della settimana messe insieme. <break time="0.8s"/> Andate a piedi, <break time="0.5s"/> o parcheggiate lontano e camminate. <break time="0.8s"/> È più veloce, <break time="0.5s"/> fidatevi di chi ha passato trent'anni a sbrogliare quel traffico. <break time="1.5s"/>
+
+=====
+CAP. 9 — COSA MANGIARE: ORECCHIETTE, BRACE, FRISELLE
+voice: custom-ostuni
+
+*(seduto a un tavolo, o camminando verso un posto dove si mangia)*
+
+Parliamo di mangiare. <break time="1.2s"/>
+
+Primo: le orecchiette al pomodoro fresco. <break time="0.8s"/> Non il ragù. <break time="0.5s"/> Non il sugo lungo. <break time="0.8s"/> Pomodoro fresco, appena cotto, <break time="0.5s"/> con basilico e un filo d'olio. <break time="0.8s"/> Le orecchiette sono pasta fresca di semola — <break time="0.5s"/> si fanno a mano, <break time="0.5s"/> si trascinano con il pollice sul tavolo. <break time="0.8s"/> La forma tiene il sugo dentro. <break time="0.8s"/> Non è solo estetica — <break time="0.5s"/> è funzionale. <break time="0.8s"/> Con questo piatto semplice non sbagliate mai. <break time="1.2s"/>
+
+Secondo: la carne alla brace. <break time="0.8s"/> Questa zona ha una tradizione di grigliate che non ha niente da invidiare a nessuno. <break time="0.8s"/> Agnello, capretto, salsiccia — <break time="0.5s"/> brace di legno di ulivo. <break time="0.8s"/> Il legno di ulivo brucia lento, <break time="0.5s"/> dà un calore costante, <break time="0.5s"/> un profumo che entra nella carne. <break time="0.8s"/> Non è fumo — è profumo. <break time="0.8s"/> C'è differenza. <break time="1.2s"/>
+
+Terzo: le friselle. <break time="0.8s"/> Sono biscotti di grano duro o orzo, <break time="0.5s"/> cotti due volte — prima cotti come pane, <break time="0.5s"/> poi tagliati a metà e rimessi in forno a seccare. <break time="0.8s"/> Si ammorbidiscono con l'acqua, <break time="0.5s"/> si condiscono con olio, <break time="0.5s"/> pomodoro, origano, sale. <break time="0.8s"/> È il pasto dei contadini, dei pescatori, <break time="0.5s"/> di chi lavorava fuori casa e portava da mangiare con sé. <break time="0.8s"/> Non si deteriora. <break time="0.5s"/> Dura settimane secca. <break time="0.8s"/> Poi si inzuppa nell'acqua e torna a vivere. <break time="0.8s"/> È il cibo più pratico che esista, <break time="0.5s"/> e con l'olio buono di qui <break time="0.5s"/> è anche tra i più buoni. <break time="1.2s"/>
+
+Una cosa che vi dico chiaro: <break time="0.8s"/> evitate i ristoranti con il menu in cinque lingue plastificato <break time="0.5s"/> e la foto del piatto sul cartellino. <break time="0.8s"/> Non è che il cibo sia cattivo — <break time="0.5s"/> è che è costruito per chi non torna. <break time="0.8s"/> Cercate dove mangiano i locali. <break time="0.8s"/> Se alle tredici la trattoria è piena di gente che non ha la macchina fotografica in mano, <break time="0.5s"/> siete nel posto giusto. <break time="1.5s"/>
+
+=====
+CAP. 10 — IL PANORAMA: IL MARE A VENTI CHILOMETRI
+voice: custom-ostuni
+
+*(al punto panoramico più alto del centro storico)*
+
+Fermatevi qui. <break time="2s"/>
+
+Guardate verso est. <break time="1.5s"/>
+
+Quella striscia blu all'orizzonte — <break time="0.8s"/> quello è l'Adriatico. <break time="1.2s"/>
+
+Ostuni sta a circa venti chilometri dalla costa. <break time="0.8s"/> Non è sul mare. <break time="0.8s"/> Sta sulla collina, <break time="0.5s"/> a duecentodiciotto metri, <break time="0.5s"/> e il mare lo vede da lontano. <break time="0.8s"/> Come un guardiano. <break time="1.2s"/>
+
+Nei giorni limpidi — <break time="0.5s"/> soprattutto la mattina presto, <break time="0.5s"/> prima che il caldo di mezzogiorno faccia tremare l'aria — <break time="0.8s"/> si vede la linea del mare con una chiarezza che sorprende. <break time="0.8s"/> Si vede anche qualche torre costiera <break time="0.5s"/> — le torri di avvistamento che i Borboni hanno costruito lungo la costa pugliese nel Settecento <break time="0.5s"/> per segnalare le incursioni dei pirati barbareschi. <break time="1.2s"/>
+
+Questa visione ha una storia. <break time="0.8s"/> Per secoli, l'essere in alto e vedere il mare <break time="0.5s"/> era un vantaggio militare. <break time="0.8s"/> Si vedevano le navi in avvicinamento. <break time="0.8s"/> Si dava l'allarme. <break time="0.8s"/> Le torri costiere e il borgo sull'altura <break time="0.5s"/> erano parte dello stesso sistema di difesa. <break time="0.8s"/> Una rete di punti visivi <break time="0.5s"/> che copriva tutta la costa. <break time="1.2s"/>
+
+Verso ovest invece — <break time="0.8s"/> se girate — <break time="0.8s"/> vedete la Murgia. <break time="0.8s"/> Il tavolato calcareo che sale verso l'interno. <break time="0.8s"/> Ostuni è nel mezzo: <break time="0.5s"/> mare da un lato, <break time="0.5s"/> altopiano dall'altro. <break time="0.8s"/> I suoi abitanti hanno sempre avuto due opzioni davanti. <break time="0.8s"/> Il mare con i commerci, i pirati, i pescatori. <break time="0.5s"/> La terra con i pastori, i contadini, le masserie. <break time="0.8s"/> Ostuni non ha mai scelto tra i due — <break time="0.5s"/> li ha tenuti tutti e due. <break time="1.2s"/>
+
+Io, quando avevo un momento libero dal servizio, <break time="0.5s"/> venivo qui. <break time="0.8s"/> Non per fare niente di particolare — <break time="0.5s"/> solo per guardare quel mare. <break time="0.8s"/> C'è qualcosa di strano nel vedere il mare da così lontano: <break time="0.5s"/> sembra piccolo, <break time="0.5s"/> sembra calmo, <break time="0.5s"/> sembra innocuo. <break time="0.8s"/> Poi ci vai vicino e capisci quanto è grande davvero. <break time="0.8s"/> Ostuni ti dà la prospettiva. <break time="0.5s"/> Il mare ti dà la realtà. <break time="1.5s"/>
+
+=====
+CAP. 11 — IL QUARTIERE EBRAICO: LA GIUDEA
+voice: custom-ostuni
+
+*(camminando verso la zona nord-est del centro storico)*
+
+C'è un quartiere che si chiama la Giudea. <break time="1s"/>
+
+È nella parte più alta e più interna del centro storico. <break time="0.8s"/> I vicoli qui sono ancora più stretti, <break time="0.5s"/> le case ancora più vicine tra loro. <break time="0.8s"/> Un quartiere di quartiere — <break time="0.5s"/> un'area distinta dentro un'area già densa. <break time="1.2s"/>
+
+Il nome dice tutto: <break time="0.8s"/> era il quartiere ebraico medievale di Ostuni. <break time="0.8s"/> La presenza ebraica in Puglia è antichissima — <break time="0.5s"/> ci sono comunità ebraiche documentate in questa regione <break time="0.5s"/> già nell'alto Medioevo, <break time="0.5s"/> se non prima. <break time="0.8s"/> Ostuni aveva la sua. <break time="1.2s"/>
+
+Nel 1541 arriva l'editto di espulsione degli Ebrei dal Regno di Napoli — <break time="0.8s"/> che allora comprendeva la Puglia. <break time="0.8s"/> La comunità ebraica di Ostuni viene dispersa. <break time="0.8s"/> Quello che rimane è il quartiere: <break time="0.5s"/> la forma delle strade, <break time="0.5s"/> qualche soglia in pietra, <break time="0.5s"/> il nome. <break time="0.8s"/> Le iscrizioni, gli oggetti, la vita quotidiana — <break time="0.5s"/> quasi tutto è andato. <break time="1.2s"/>
+
+Non è un quartiere museo. <break time="0.8s"/> Ci vive gente, <break time="0.5s"/> ci sono case private, <break time="0.5s"/> qualche negozietto. <break time="0.8s"/> Ma se camminate in silenzio e guardate le strade, <break time="0.8s"/> potete immaginare quanto questo spazio fosse compresso, <break time="0.5s"/> autosufficiente, <break time="0.5s"/> chiuso in sé stesso. <break time="0.8s"/> Una comunità dentro la comunità. <break time="0.8s"/> Con le proprie regole, <break time="0.5s"/> i propri ritmi, <break time="0.5s"/> la propria vita. <break time="1.2s"/>
+
+Vi dico una cosa: <break time="0.8s"/> di questa storia si parla poco, qui a Ostuni. <break time="0.8s"/> Non per nasconderla — <break time="0.5s"/> ma perché non è rimasto quasi niente di fisico da vedere. <break time="0.8s"/> Il quartiere c'è. <break time="0.5s"/> La storia che porta dentro <break time="0.5s"/> la deve sapere chi ci viene. <break time="1.5s"/>
+
+=====
+CAP. 12 — LE MASSERIE INTORNO: PIETRA, TRULLI E LAVORO
+voice: custom-ostuni
+
+*(in un punto panoramico con vista sulla campagna, o mentre si scende verso la pianura)*
+
+Se avete tempo — <break time="0.8s"/> e intendo mezza giornata, <break time="0.5s"/> non venti minuti — <break time="0.8s"/> scendete dalla collina ed esplorate la campagna intorno. <break time="1.2s"/>
+
+Le masserie sono le aziende agricole tradizionali di questa zona. <break time="0.8s"/> Non sono solo fattorie — <break time="0.5s"/> sono complessi architettonici completi. <break time="0.8s"/> Un insieme di edifici intorno a una corte: <break time="0.5s"/> l'abitazione del proprietario, <break time="0.5s"/> i magazzini, <break time="0.5s"/> la stalla, <break time="0.5s"/> il frantoio. <break time="0.8s"/> Spesso con una cappella. <break time="0.8s"/> Alcune avevano le torri — <break time="0.5s"/> per difendersi, per vedere, <break time="0.5s"/> per segnalare. <break time="1.2s"/>
+
+Molte masserie intorno a Ostuni sono state convertite in agriturismi o hotel di lusso. <break time="0.8s"/> È un fenomeno degli ultimi vent'anni. <break time="0.8s"/> Non è per forza una cosa negativa — <break time="0.5s"/> almeno gli edifici vengono mantenuti, <break time="0.5s"/> restaurati, <break time="0.5s"/> abitati. <break time="0.8s"/> Meglio così che lasciarli cadere. <break time="0.8s"/> Ma non aspettatevi l'autenticità rurale — <break time="0.5s"/> quello che trovate è confort moderno <break time="0.5s"/> dentro muri antichi. <break time="0.8s"/> Che non è una brutta cosa, <break time="0.5s"/> per carità. <break time="0.8s"/> È solo una cosa diversa. <break time="1.2s"/>
+
+Tra le masserie e il centro storico, <break time="0.8s"/> se guidate lentamente, <break time="0.5s"/> vedete i trulli. <break time="0.8s"/> Non siete ad Alberobello — <break time="0.5s"/> quelli di Alberobello sono il concentrato massimo. <break time="0.8s"/> Ma i trulli isolati nella campagna, <break time="0.5s"/> i trulli usati come depositi o ricoveri, <break time="0.5s"/> ce ne sono tanti anche qui. <break time="0.8s"/> Erano costruzioni reversibili — <break time="0.5s"/> si montavano a secco, <break time="0.5s"/> si smontavano, <break time="0.5s"/> si rimontavano altrove. <break time="0.8s"/> Una storia di tasse: <break time="0.5s"/> se la costruzione non aveva malta, <break time="0.5s"/> certi feudatari la consideravano provvisoria <break time="0.5s"/> e non la tassavano. <break time="0.8s"/> La gente adattava l'architettura al fisco, <break time="0.5s"/> e il risultato è diventato patrimonio. <break time="1.2s"/>
+
+Io ho passato molte mattine d'inverno a fare ronde per queste strade. <break time="0.8s"/> Nebbia bassa, <break time="0.5s"/> i trulli che emergevano dal grigio come fantasmi, <break time="0.5s"/> gli ulivi fermi nell'aria. <break time="0.8s"/> È un paesaggio che sembra fermo nel tempo. <break time="0.8s"/> Non si direbbe che siete nel ventunesimo secolo. <break time="0.8s"/> Per qualche minuto, <break time="0.5s"/> si potrebbe essere in qualsiasi epoca. <break time="1.5s"/>
+
+=====
+CAP. 13 — LA FESTA DI SANT'ORONZO: LA PROCESSIONE DI SETTEMBRE
+voice: custom-ostuni
+
+*(seduto in una piazzetta, tono narrativo)*
+
+A settembre, prima che la città si svuoti del tutto dai turisti, <break time="0.5s"/> c'è la festa. <break time="1.2s"/>
+
+Ostuni ha due santi patroni: <break time="0.8s"/> San Biagio, <break time="0.5s"/> e Sant'Oronzo. <break time="0.8s"/> Sant'Oronzo è il patrono principale — <break time="0.5s"/> lo stesso che a Lecce hanno come patrono, <break time="0.5s"/> lo stesso venerato in tutta la Puglia meridionale. <break time="0.8s"/> Primo vescovo cristiano di questa zona, <break time="0.5s"/> martirizzato nell'età romana. <break time="0.8s"/> O almeno così dice la tradizione. <break time="1.2s"/>
+
+La processione di Sant'Oronzo a Ostuni — <break time="0.8s"/> i festeggiamenti principali sono ad agosto, <break time="0.5s"/> con la processione del simulacro per le strade del centro storico — <break time="0.8s"/> è una cosa che merita essere vista una volta nella vita. <break time="0.8s"/> Non per devozione, <break time="0.5s"/> non necessariamente. <break time="0.8s"/> Per vedere come una città si ferma, <break time="0.5s"/> si concentra, <break time="0.5s"/> si muove insieme. <break time="1.2s"/>
+
+Le strade si riempiono. <break time="0.8s"/> Le luci, i fuochi d'artificio, la banda. <break time="0.8s"/> Le famiglie si affacciano dai balconi. <break time="0.8s"/> I bambini corrono. <break time="0.8s"/> Gli anziani stanno fermi e guardano, <break time="0.5s"/> come hanno guardato per sessant'anni la stessa processione. <break time="1.2s"/>
+
+Ho fatto servizio d'ordine durante la processione per trent'anni. <break time="0.8s"/> È un lavoro impegnativo — <break time="0.5s"/> la folla è densa, <break time="0.5s"/> le strade strette, <break time="0.5s"/> le emozioni alte. <break time="0.8s"/> Ma ogni anno, <break time="0.5s"/> in mezzo a quella gente, <break time="0.5s"/> capivo perché questa città era ancora in piedi. <break time="0.8s"/> Non per le mura aragonesi. <break time="0.5s"/> Non per il turismo. <break time="0.8s"/> Per queste cose qui — <break time="0.5s"/> la processione, il bar, il mercato del martedì. <break time="0.8s"/> Il tessuto invisibile che tiene tutto insieme. <break time="1.5s"/>
+
+=====
+CAP. 14 — CHIUSURA: IL VIGILE LASCIA ANDARE
+voice: custom-ostuni
+
+*(tornando verso piazza della Libertà o al parcheggio)*
+
+Allora — <break time="0.5s"/> Ostuni. <break time="1.5s"/>
+
+Ventiseimila anni di presenza umana su questa collina. <break time="0.8s"/> Messapi, Romani, Normanni, Aragonesi. <break time="0.8s"/> Una cattedrale gotica sproporzionata nel senso buono. <break time="0.8s"/> Vicoli bianchi che fanno perdere la testa in agosto <break time="0.5s"/> e il silenzio d'inverno. <break time="0.8s"/> Una donna di ventiseimila anni esposta in un museo <break time="0.5s"/> che aspetta che qualcuno vada a trovarla. <break time="0.8s"/> Un olio fatto con ulivi che hanno più anni di voi. <break time="0.8s"/> Un quartiere che si chiama la Giudea <break time="0.5s"/> e porta dentro una storia che molti non sanno. <break time="0.8s"/> Le masserie nella campagna, <break time="0.5s"/> i trulli isolati, <break time="0.5s"/> la processione di agosto. <break time="1.2s"/>
+
+Non è una città facile. <break time="0.8s"/> Non nel senso che sia pericolosa — <break time="0.5s"/> è tra i posti più tranquilli della Puglia. <break time="0.8s"/> È che ha più strati di quanti ne vedi in un pomeriggio. <break time="0.8s"/> Se venite qui solo per le foto dei vicoli bianchi, <break time="0.5s"/> avete visto un decimo. <break time="1.2s"/>
+
+Qualche consiglio pratico, prima che andiate: <break time="0.8s"/> parcheggio fuori dalle mura, sempre. <break time="0.8s"/> In agosto, venite la mattina presto o il tardo pomeriggio — <break time="0.5s"/> a mezzogiorno il centro è fermo, <break time="0.5s"/> caldo, <break time="0.5s"/> pieno. <break time="0.8s"/> Il museo della Delia è aperto tutto l'anno, <break time="0.5s"/> ma verificate gli orari prima di andare — <break time="0.5s"/> d'inverno riduce. <break time="0.8s"/> Il mercato del martedì mattina: <break time="0.5s"/> non saltatelo se siete qui. <break time="1.2s"/>
+
+E un'ultima cosa. <break time="0.8s"/> Se avete ancora un po' di tempo, <break time="0.8s"/> non andate subito alla spiaggia. <break time="0.8s"/> Sedetevi in una delle piazzette del centro storico, <break time="0.5s"/> ordinate qualcosa, <break time="0.5s"/> e state fermi venti minuti. <break time="0.8s"/> Guardate passare le persone. <break time="0.8s"/> Guardate le case bianche cambiare colore col sole che si sposta. <break time="0.8s"/> Non fate niente. <break time="0.8s"/> Per i turisti è sempre difficile, lo so. <break time="0.5s"/> Ma è il modo migliore per capire come funziona questo posto. <break time="1.2s"/>
+
+Quarant'anni di fischietto mi hanno insegnato una cosa: <break time="0.8s"/> la gente che si ferma davvero a guardare <break time="0.5s"/> porta sempre a casa qualcosa di più. <break time="0.8s"/> Quelli che corrono <break time="0.5s"/> portano solo le foto. <break time="1.5s"/>
+
+Buona permanenza. <break time="1s"/>
+
+E parcheggiate dove si può. <break time="1s"/>
+
+Se da qui andate al mare — <break time="0.5s"/> e qui il mare è a quindici minuti — <break time="0.8s"/> avete finito il giro della Valle d'Itria. <break time="0.8s"/> Alberobello, Locorotondo, Martina Franca, Cisternino, Fasano, Ostuni. <break time="0.8s"/> Sei paesi, sei storie, <break time="0.5s"/> tutte diverse. <break time="0.8s"/> Nessuno vi ha detto che la Puglia era monotona. <break time="1.5s"/>

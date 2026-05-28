@@ -1,0 +1,279 @@
+## AUDIO SCRIPT — OSTUNI GUIDE
+*Voice: Salvatore, retired traffic warden, 40 years of service in Ostuni*
+*Format: mixed car + walking · 30 minutes*
+
+=====
+CAP. 1 — INTRO: THE WHITE CITY THROUGH THE WINDSHIELD
+voice: custom-ostuni
+
+*(in the car, approaching from the south on the SS16 or the expressway)*
+
+Put down your phone for a moment. <break time="1s"/>
+
+Look over there. <break time="1.5s"/>
+
+That white patch on top of the hill — <break time="0.5s"/> that's Ostuni. <break time="0.8s"/> Two hundred and eighteen metres above sea level, <break time="0.5s"/> perched on a limestone spur you can see from dozens of kilometres away. <break time="0.8s"/> White. <break time="0.5s"/> Blazing white. <break time="0.8s"/> Like someone tipped a bucket of whitewash over the hill <break time="0.5s"/> and never bothered to clean it up. <break time="1.2s"/>
+
+My name is Salvatore. <break time="0.8s"/> I was a traffic warden in this city for forty years. <break time="0.8s"/> I watched the summer tourists come and go, <break time="0.5s"/> the winter pilgrims, <break time="0.5s"/> the Tuesday markets, <break time="0.5s"/> the September processions. <break time="0.8s"/> In August I issued more fines in a week <break time="0.5s"/> than in the whole rest of the year put together — <break time="0.5s"/> and I'll tell you, they weren't all wrong to park wherever they could, <break time="0.5s"/> because Ostuni in summer makes people lose their heads. <break time="1.2s"/>
+
+Now I'm retired. <break time="0.8s"/> And now I can finally tell you about it properly, <break time="0.5s"/> this city, <break time="0.5s"/> without having to worry about the whistle. <break time="1.2s"/>
+
+That hill you're looking at — <break time="0.8s"/> it's always been like this. <break time="0.8s"/> High, isolated, visible. <break time="0.8s"/> Anyone who lived in this area over the last three thousand years <break time="0.5s"/> understood straight away that up there you were safe. <break time="0.8s"/> You could see the sea. <break time="0.5s"/> You could see the countryside. <break time="0.5s"/> You could see who was coming. <break time="0.8s"/> In this line of work, seeing before anyone else <break time="0.5s"/> is worth a whole platoon of soldiers. <break time="1.2s"/>
+
+The first time I really understood where I lived — <break time="0.5s"/> and I mean really, not as a kid who's just used to it — <break time="0.8s"/> I was twenty-seven years old. <break time="0.8s"/> I'd just started on the job. <break time="0.8s"/> I was driving home at night, <break time="0.5s"/> off the motorway, <break time="0.5s"/> after a long shift. <break time="0.8s"/> And I saw Ostuni lit up on top of the hill, <break time="0.5s"/> in the darkness of the countryside all around. <break time="0.8s"/> It looked impossible. <break time="0.5s"/> A city of light suspended in nothing. <break time="0.8s"/> I thought about that vision for years. <break time="0.8s"/> I still think about it now. <break time="1.5s"/>
+
+=====
+CAP. 2 — THE ORIGINS: MESSAPI, ROMANS, NORMANS, ARAGONESE
+voice: custom-ostuni
+
+*(still in the car, in the minutes before entering town)*
+
+Before we park, <break time="0.5s"/> let me tell you who built this city. <break time="0.8s"/> Because Ostuni isn't one single thing — <break time="0.5s"/> it's layer upon layer, <break time="0.5s"/> like whitewash on a wall. <break time="1.2s"/>
+
+The Messapi were already here. <break time="0.8s"/> They were the indigenous people of this part of Puglia, <break time="0.5s"/> before the Romans. <break time="0.8s"/> They didn't live on top of the hill — <break time="0.5s"/> they were lower down, <break time="0.5s"/> on the plain around it. <break time="0.8s"/> But they knew the hill — <break time="0.5s"/> it was a landmark, <break time="0.5s"/> maybe a sacred place, <break time="0.5s"/> certainly somewhere to keep an eye on. <break time="0.8s"/> The Messapi spoke their own language, <break time="0.5s"/> not Latin, <break time="0.5s"/> not Greek. <break time="0.8s"/> They had writing, <break time="0.5s"/> laws, <break time="0.5s"/> a culture that the Romans then absorbed and partly erased. <break time="0.8s"/> As tends to happen with whoever wins. <break time="1.2s"/>
+
+Then the Romans arrived. <break time="0.8s"/> Ostuni sat along the road connecting the Adriatic coast to the interior. <break time="0.8s"/> It wasn't the main city — that was Brindisi, <break time="0.5s"/> thirty kilometres away — <break time="0.5s"/> but it served a purpose. <break time="0.8s"/> The Romans used places like this: <break time="0.5s"/> useful geographic position, garrison, road. <break time="0.8s"/> They didn't build where things were beautiful, <break time="0.5s"/> they built where things were necessary. <break time="1.2s"/>
+
+The Middle Ages changed everything. <break time="0.8s"/> The Normans arrived in the eleventh century <break time="0.5s"/> and immediately grasped the value of the hill. <break time="0.8s"/> The real construction of the medieval old town <break time="0.5s"/> — the alleyways, the houses, the layout of the borgo — <break time="0.5s"/> began with them. <break time="0.8s"/> Then the Angevins, <break time="0.5s"/> then the Aragonese. <break time="1.2s"/>
+
+The walls you see today — <break time="0.8s"/> the thick ones, the solid ones, <break time="0.5s"/> the ones that make the city look like a fortress — <break time="0.8s"/> those are Aragonese. <break time="0.8s"/> Built in 1495. <break time="0.8s"/> Those were the years when Italy was a battlefield <break time="0.5s"/> between France, Spain, and the Italian city-states. <break time="0.8s"/> The walls of 1495 weren't decoration. <break time="0.5s"/> They were the difference between existing and not existing. <break time="1.2s"/>
+
+The walls have three main gates. <break time="0.8s"/> Porta Nova, Porta San Demetrio, Porta Nuova — <break time="0.5s"/> the names change depending on who's telling the story. <break time="0.8s"/> Every gate was manned. <break time="0.8s"/> You checked who came in and who went out. <break time="0.8s"/> I had an older colleague — <break time="0.5s"/> Bruno, we called him Brunone because he was six foot three — <break time="0.5s"/> who always used to say: <break time="0.5s"/> "Salvato', we do the same job as the men who stood at these gates in the fifteenth century. <break time="0.5s"/> We watch who comes in." <break time="0.8s"/> Brunone exaggerated, <break time="0.5s"/> but he wasn't entirely wrong. <break time="1.2s"/>
+
+I did the circuit of these walls hundreds of times on duty. <break time="0.8s"/> They never changed — <break time="0.5s"/> stone is stone. <break time="0.8s"/> But every time I'd stop for a moment and think <break time="0.5s"/> that someone in 1495 placed that block exactly there, <break time="0.5s"/> by hand, <break time="0.5s"/> knowing that the lives of everyone in the borgo depended on those walls. <break time="0.8s"/> Not just any job. <break time="1.5s"/>
+
+=====
+CAP. 3 — THE CATHEDRAL: PUGLIAN GOTHIC
+voice: custom-ostuni
+
+*(on foot, arriving at Piazza della Libertà or climbing towards the cathedral)*
+
+Now we go up. <break time="1s"/>
+
+What you see in front of you — <break time="0.8s"/> that façade that looks almost out of place here among the white alleyways — <break time="0.8s"/> is the Cathedral of Santa Maria Assunta. <break time="0.8s"/> Built between the late fifteenth and early sixteenth century. <break time="0.8s"/> Puglian Gothic style. <break time="1.2s"/>
+
+It's not a small cathedral. <break time="0.8s"/> For an old town of this size, <break time="0.5s"/> it's disproportionate — <break time="0.5s"/> in the good sense. <break time="0.8s"/> As if the city wanted to say: <break time="0.5s"/> yes, we're small, <break time="0.5s"/> but our church isn't. <break time="1.2s"/>
+
+Look at the rose window. <break time="1s"/>
+
+It's the finest piece on the façade. <break time="0.8s"/> Circular, carved through the limestone, <break time="0.5s"/> with geometric and floral patterns that interweave. <break time="0.8s"/> When the afternoon sun hits it, <break time="0.5s"/> it casts shifting shadows and light inside. <break time="0.8s"/> Not an effect designed by someone with software — <break time="0.5s"/> it's geometry and light, made by hand, <break time="0.5s"/> five centuries ago. <break time="1.2s"/>
+
+The three portals are all different. <break time="0.8s"/> That's not carelessness — <break time="0.5s"/> in Gothic architecture, each portal tells a different story. <break time="0.8s"/> The central portal is the most ornate, <break time="0.5s"/> with its columns, pointed arches, <break time="0.5s"/> decorations climbing upward. <break time="0.8s"/> The side ones are more restrained. <break time="0.8s"/> Like in life: <break time="0.5s"/> the main entrance is the one that gets noticed, <break time="0.5s"/> the others do their job <break time="0.5s"/> without making a fuss. <break time="1.2s"/>
+
+Inside the cathedral — <break time="0.8s"/> go in, it's open. <break time="0.8s"/> The floor is local limestone. <break time="0.8s"/> Three naves. <break time="0.8s"/> Side chapels with frescoes from various periods, <break time="0.5s"/> some well preserved, <break time="0.5s"/> others faded by time and damp. <break time="0.8s"/> It's not a museum — <break time="0.5s"/> it's still an active church. <break time="0.8s"/> Masses are held here. <break time="0.5s"/> Weddings are held here. <break time="0.5s"/> I've watched neighbours I knew as kids get married in here. <break time="0.8s"/> And then seen their children baptised. <break time="0.8s"/> Forty years go by. <break time="1.2s"/>
+
+The thing I always notice, <break time="0.8s"/> when I bring someone here for the first time — <break time="0.8s"/> is the silence. <break time="0.8s"/> Outside there are alleyways, wind, voices. <break time="0.8s"/> In here everything drops. <break time="0.8s"/> The thick stone, the high vaults — <break time="0.5s"/> they absorb the noise. <break time="0.8s"/> All you hear is footsteps on the flagstones. <break time="0.8s"/> And your own voice, if you speak, <break time="0.5s"/> sounds different. <break time="0.8s"/> More serious. <break time="0.8s"/> As it should. <break time="1.2s"/>
+
+I walked past this cathedral every morning on duty. <break time="0.8s"/> For twenty years I barely gave it a thought. <break time="0.8s"/> It was just there, part of the scenery. <break time="0.8s"/> Then one November evening, winter, <break time="0.5s"/> no tourists around, <break time="0.5s"/> I actually stopped and looked at the rose window. <break time="0.8s"/> Spent ten minutes on it. <break time="0.8s"/> It's strange how much you see when you stop just walking past. <break time="1.5s"/>
+
+=====
+CAP. 4 — THE OLD TOWN: THE WHITE ALLEYWAYS
+voice: custom-ostuni
+
+*(on foot in the alleyways of the old town)*
+
+Right then — the alleyways. <break time="1.5s"/>
+
+Don't expect straight streets. <break time="0.8s"/> Ostuni doesn't work that way. <break time="0.8s"/> The old town is a labyrinth of narrow lanes, <break time="0.5s"/> steps, <break time="0.5s"/> arches spanning the street, <break time="0.5s"/> tiny squares that appear from nowhere. <break time="0.8s"/> Built on a hill, across different centuries, <break time="0.5s"/> following the rock underneath. <break time="0.8s"/> There was no urban planning office in the thirteenth century. <break time="0.5s"/> There was stone, and you adapted to it. <break time="1.2s"/>
+
+Whitewash everywhere. <break time="0.8s"/> Walls, steps, plant pots on windowsills — <break time="0.5s"/> everything white. <break time="0.8s"/> It's the same tradition as Locorotondo, <break time="0.5s"/> as many villages across Puglia and the Mediterranean. <break time="0.8s"/> Whitewash is antibacterial. <break time="0.8s"/> Before disinfectants existed, <break time="0.5s"/> painting the walls kept disease away. <break time="0.8s"/> And over time it became identity — <break time="0.5s"/> the white of Ostuni is Ostuni, <break time="0.5s"/> there's no other way to put it. <break time="1.2s"/>
+
+Every year, before summer, <break time="0.8s"/> the residents of the old town whitewash. <break time="0.8s"/> It's a tradition kept going by local by-law <break time="0.5s"/> but also by pride. <break time="0.8s"/> If the house next door is white <break time="0.5s"/> and yours is grey, <break time="0.5s"/> people notice. <break time="0.8s"/> They really notice. <break time="0.8s"/> I received complaints about this — <break time="0.5s"/> people calling the municipal police <break time="0.5s"/> because their neighbour hadn't whitewashed. <break time="0.8s"/> I'm not joking. <break time="0.8s"/> The whitewash is a serious matter here. <break time="1.2s"/>
+
+The difference with Locorotondo — <break time="0.8s"/> because someone's bound to ask — <break time="0.8s"/> is the hill. <break time="0.8s"/> Locorotondo is round, <break time="0.5s"/> the borgo wraps in a circle on a plateau. <break time="0.8s"/> Ostuni is vertical. <break time="0.8s"/> It climbs, drops, turns, <break time="0.5s"/> scrambles over rock. <break time="0.8s"/> You actually get lost here. <break time="0.8s"/> It's not organised. <break time="0.8s"/> It's a borgo that grew like a plant — <break time="0.5s"/> wherever it found space, it spread. <break time="1.2s"/>
+
+In summer these streets are packed. <break time="0.8s"/> In August, the narrow streets of the old town <break time="0.5s"/> become a serious logistical problem. <break time="0.8s"/> I'll just say that I managed August in this old town for forty years <break time="0.5s"/> and there were days a bicycle couldn't get through, <break time="0.5s"/> that's how many people there were. <break time="0.8s"/> In winter it's a different place. <break time="0.8s"/> Silence, <break time="0.5s"/> a few cats, <break time="0.5s"/> the smell of bread from the bakeries. <break time="0.8s"/> It's like two completely different cities. <break time="1.5s"/>
+
+=====
+CAP. 5 — THE WOMAN OF OSTUNI: DELIA
+voice: custom-ostuni
+
+*(stopping in a small square, or pointing towards the museum)*
+
+Now I'm going to tell you the one thing almost nobody knows before they get here. <break time="1.2s"/>
+
+In 1991, during a preventive archaeological dig <break time="0.5s"/> in the area of Santa Maria d'Agnano — <break time="0.5s"/> just outside the old town — <break time="0.8s"/> archaeologists found a skeleton. <break time="1.2s"/>
+
+A woman. <break time="0.8s"/> Twenty-seven to thirty years old at the time of death. <break time="0.8s"/> Twenty-six thousand years ago. <break time="1.2s"/>
+
+She was pregnant. <break time="1.5s"/>
+
+The foetus was still in position in the pelvis. <break time="0.8s"/> She was nine months along <break time="0.5s"/> when she died — <break time="0.5s"/> her and the child she was carrying. <break time="1.2s"/>
+
+Her name is Delia. <break time="0.8s"/> The archaeologists named her after the discovery — <break time="0.5s"/> Delia, from an ancient name for this land. <break time="0.8s"/> She was a Homo sapiens of the Upper Palaeolithic. <break time="0.8s"/> She hunted, gathered, survived. <break time="0.8s"/> She wore shell necklaces — <break time="0.5s"/> they found them on her. <break time="0.8s"/> Three thousand years before the Bronze Age began, <break time="0.5s"/> this woman wore jewellery. <break time="1.2s"/>
+
+How she died we don't know for certain. <break time="0.8s"/> Childbirth, probably — <break time="0.5s"/> or a complication during pregnancy. <break time="0.8s"/> She had been buried with care. <break time="0.8s"/> That matters: <break time="0.5s"/> not abandoned, <break time="0.5s"/> not left behind. <break time="0.8s"/> Someone had placed her there attentively, <break time="0.5s"/> with respect, <break time="0.5s"/> with grief, probably. <break time="0.8s"/> Twenty-six thousand years ago, <break time="0.5s"/> someone mourned their dead <break time="0.5s"/> exactly as we do. <break time="1.2s"/>
+
+Delia is on display at the Museum of Pre-Classical Civilisations of the Murgia Meridionale, <break time="0.8s"/> right here in Ostuni, <break time="0.5s"/> in the convent of Santa Maria della Grata. <break time="0.8s"/> If you're here, go. <break time="0.8s"/> It's not one of those museums where you look at things through glass <break time="0.5s"/> and think "nice" and leave. <break time="0.8s"/> It's a place where you stand in front of a skeleton twenty-six thousand years old <break time="0.5s"/> and understand how ancient we are, <break time="0.5s"/> we human beings on this earth. <break time="1.2s"/>
+
+I took my niece to see Delia when she was twelve. <break time="0.8s"/> She didn't say a word for ten minutes. <break time="0.8s"/> Then she asked me: <break time="0.5s"/> "Uncle Salvatore, what was her real name?" <break time="0.8s"/> We don't know. <break time="0.8s"/> We'll never know. <break time="0.8s"/> But she was here, <break time="0.5s"/> twenty-six thousand years before us, <break time="0.5s"/> on this very hill. <break time="1.5s"/>
+
+=====
+CAP. 6 — A WARDEN'S VIEW: THE SEASONS OF TOURISM
+voice: custom-ostuni
+
+*(walking through the old town, more personal and direct tone)*
+
+Let me tell you about Ostuni the way I know it. <break time="1.2s"/>
+
+August. <break time="1.5s"/>
+
+August is the trial by fire. <break time="0.8s"/> Every summer, over the past twenty years, <break time="0.5s"/> Ostuni has become one of the most visited destinations in greater Salento. <break time="0.8s"/> Tourists arrive from northern Italy, from abroad, <break time="0.5s"/> from Germany, Holland, Sweden. <break time="0.8s"/> The narrow streets of the old town — <break time="0.5s"/> the ones you've just seen — <break time="0.5s"/> are wide enough for two people side by side. <break time="0.8s"/> In August two hundred people pass through them. <break time="0.8s"/> At the same time. <break time="0.8s"/> In opposite directions. <break time="1.2s"/>
+
+I've pulled over cars with Swedish plates, Dutch plates, French plates. <break time="0.8s"/> Everyone trying to park where you can't park. <break time="0.8s"/> Not because they were rude — <break time="0.5s"/> but because the old town has no car parks <break time="0.5s"/> and anyone arriving for the first time has no idea. <break time="0.8s"/> The advice I give everyone: <break time="0.8s"/> park outside the walls and walk up. <break time="0.5s"/> It's simpler, <break time="0.5s"/> it's better, <break time="0.5s"/> and you won't risk a fine. <break time="0.8s"/> Or worse, <break time="0.5s"/> not being able to move at all. <break time="1.2s"/>
+
+Then September comes. <break time="0.8s"/> And Ostuni returns to its own. <break time="0.8s"/> The locals reclaim the bars, <break time="0.5s"/> the squares, <break time="0.5s"/> the normal rhythms. <break time="0.8s"/> Children go back to school. <break time="0.8s"/> Families return to their daily routines. <break time="0.8s"/> The city still carries the smell of summer — <break time="0.5s"/> sunscreen, fried food, tourists — <break time="0.5s"/> but it takes off its party clothes. <break time="1.2s"/>
+
+Winter is another place entirely. <break time="0.8s"/> Ostuni in winter is almost deserted. <break time="0.8s"/> A few pensioners at the bar, <break time="0.5s"/> a few cats on the steps, <break time="0.5s"/> shopkeepers who all know each other by name. <break time="0.8s"/> The northerly wind — the tramontana — <break time="0.5s"/> blows through the alleyways and carries away all the noise. <break time="0.8s"/> That's when you understand what this city really was, <break time="0.5s"/> before it became a tourist destination. <break time="0.8s"/> Beautiful, precise, <break time="0.5s"/> and completely uninterested in being looked at. <break time="1.5s"/>
+
+=====
+CAP. 7 — THE OIL: OGLIAROLA AND CELLINA DI NARDÒ
+voice: custom-ostuni
+
+*(near an olive press, or at a viewpoint overlooking the olive groves)*
+
+Look down there. <break time="1s"/>
+
+Those grey trees stretching to the horizon — <break time="0.8s"/> those are olive trees. <break time="0.8s"/> This area, between Ostuni and Fasano, <break time="0.5s"/> is one of the most important olive-growing territories in Puglia. <break time="0.8s"/> And Puglia produces seventy percent of Italy's olive oil. <break time="0.8s"/> Do the maths. <break time="1.2s"/>
+
+The main cultivars here are two: <break time="0.8s"/> Ogliarola barese — <break time="0.5s"/> called simply Ogliarola around here — <break time="0.5s"/> and Cellina di Nardò. <break time="0.8s"/> They're native varieties in the literal sense: <break time="0.5s"/> born here, selected here, <break time="0.5s"/> adapted to the limestone soil and coastal climate of this strip. <break time="1.2s"/>
+
+The Ogliarola gives a delicate oil, <break time="0.5s"/> lightly fruity, <break time="0.5s"/> low in bitterness. <break time="0.8s"/> The Cellina is fuller-bodied, <break time="0.5s"/> with a more pronounced bitterness and pepperiness. <break time="0.8s"/> Together — because they're often used in blends — <break time="0.5s"/> they produce a balanced oil <break time="0.5s"/> that goes well with almost everything. <break time="1.2s"/>
+
+Below Ostuni there's a hypogeum olive press — <break time="0.8s"/> carved into the rock. <break time="0.8s"/> There have been ones like it in this area for centuries, <break time="0.5s"/> because the constant temperature inside the limestone <break time="0.5s"/> slowed oxidation of the oil during processing. <break time="0.8s"/> Before refrigerators, before modern technology, <break time="0.5s"/> the rock was the refrigerator. <break time="0.8s"/> A practical solution found by someone who understood physics <break time="0.5s"/> without knowing what to call it. <break time="1.2s"/>
+
+The olive harvest starts in November. <break time="0.8s"/> Here it's still partly done by hand — <break time="0.5s"/> nets spread under the trees, <break time="0.5s"/> rakes combing the branches. <break time="0.8s"/> The oldest trees, the century-old ones, <break time="0.5s"/> can't be touched with vibrating machinery — <break time="0.5s"/> the bark would give way. <break time="0.8s"/> A four-hundred-year-old olive tree must be treated with respect. <break time="0.8s"/> The way you treat an elderly person. <break time="0.8s"/> With patience and without rushing. <break time="1.2s"/>
+
+My father had five olive trees on the family plot, <break time="0.5s"/> outside the area to the east. <break time="0.8s"/> We'd go to harvest in November, <break time="0.5s"/> the whole family, <break time="0.5s"/> with sacks and nets. <break time="0.8s"/> Five trees took two days. <break time="0.8s"/> It seemed like a lot, <break time="0.5s"/> for six olive trees. <break time="0.8s"/> But then that oil lasted the whole year, <break time="0.5s"/> you knew where it came from, <break time="0.5s"/> you knew how it was made. <break time="0.8s"/> What you buy in a bottle at the supermarket <break time="0.5s"/> will never tell you any of that. <break time="1.5s"/>
+
+=====
+CAP. 8 — THE TUESDAY MARKET, AS SEEN BY THE WARDEN
+voice: custom-ostuni
+
+*(in the square or near the market, lively tone)*
+
+The market in Ostuni is on Tuesdays. <break time="1s"/>
+
+If you're here on a Tuesday morning — <break time="0.8s"/> go. <break time="0.8s"/> That's the real city, that is. <break time="0.8s"/> Not the one of white alleyways and photographs. <break time="0.8s"/> The one of people doing their shopping, <break time="0.5s"/> arguing with the vendor over the price of vegetables, <break time="0.5s"/> running into someone they haven't seen in a week <break time="0.5s"/> and stopping twenty minutes to talk in the middle of the street. <break time="1.2s"/>
+
+I did market duty for nearly thirty years. <break time="0.8s"/> It's not a romantic memory — <break time="0.5s"/> Tuesday morning was one of the hardest shifts, <break time="0.5s"/> what with traffic, stalls, improvised parking and various disputes. <break time="0.8s"/> But it was also the place where you understood how this city actually worked. <break time="1.2s"/>
+
+The logistics of the market are serious business. <break time="0.8s"/> The vendors arrive at three in the morning. <break time="0.8s"/> They set up the stalls before dawn. <break time="0.8s"/> There's a precise order — <break time="0.5s"/> who goes where, <break time="0.5s"/> who has a permanent pitch, <break time="0.5s"/> who travels between multiple markets during the week. <break time="0.8s"/> Brindisi on Monday, <break time="0.5s"/> Ostuni on Tuesday, <break time="0.5s"/> Fasano on Wednesday. <break time="0.8s"/> The nomads of the market circuit. <break time="0.8s"/> Hard work, <break time="0.5s"/> outdoors, <break time="0.5s"/> summer and winter. <break time="0.8s"/> I respect them. <break time="1.2s"/>
+
+What do you find at the market? <break time="0.8s"/> Vegetables straight from the garden, <break time="0.5s"/> especially in summer — <break time="0.5s"/> tomatoes, aubergines, peppers, courgettes. <break time="0.8s"/> Local cheeses — <break time="0.5s"/> cacioricotta, <break time="0.5s"/> ricotta forte — a sharp fermented ricotta with a bit of a kick. <break time="0.8s"/> Olives of every variety. <break time="0.8s"/> And then the friselle — <break time="0.5s"/> which I'll explain in the food chapter. <break time="1.2s"/>
+
+The masserie — farmsteads — around Ostuni also produce winter tomatoes — <break time="0.8s"/> the kind you hang in bunches and keep until December. <break time="0.8s"/> The small tomatoes from Manduria, from Fasano, <break time="0.5s"/> from this whole strip. <break time="0.8s"/> They come small and wrinkled, <break time="0.5s"/> with a concentration of sugar and flavour <break time="0.5s"/> that supermarket ones simply don't have. <break time="0.8s"/> Buy them at the market. <break time="0.5s"/> Not the supermarket. <break time="0.8s"/> The extra you pay <break time="0.5s"/> you'll understand at the first bite. <break time="1.2s"/>
+
+A tip from a retired warden: <break time="0.8s"/> don't drive to the market. <break time="0.8s"/> The area around the market on Tuesday morning <break time="0.5s"/> is a disaster. <break time="0.8s"/> I issued more fines on Tuesday mornings <break time="0.5s"/> than all the other mornings of the week combined. <break time="0.8s"/> Walk, <break time="0.5s"/> or park far away and walk. <break time="0.8s"/> It's faster, <break time="0.5s"/> trust someone who spent thirty years untangling that traffic. <break time="1.5s"/>
+
+=====
+CAP. 9 — WHAT TO EAT: ORECCHIETTE, GRILLED MEAT, FRISELLE
+voice: custom-ostuni
+
+*(sitting at a table, or walking towards somewhere to eat)*
+
+Let's talk about food. <break time="1.2s"/>
+
+First: orecchiette with fresh tomato. <break time="0.8s"/> Not ragù. <break time="0.5s"/> Not long-simmered sauce. <break time="0.8s"/> Fresh tomato, barely cooked, <break time="0.5s"/> with basil and a drizzle of oil. <break time="0.8s"/> Orecchiette — little ears — are fresh semolina pasta, <break time="0.5s"/> made by hand, <break time="0.5s"/> dragged along the table with your thumb. <break time="0.8s"/> The shape holds the sauce inside. <break time="0.8s"/> Not just aesthetic — <break time="0.5s"/> it's functional. <break time="0.8s"/> You can't go wrong with this simple dish. <break time="1.2s"/>
+
+Second: grilled meat. <break time="0.8s"/> This area has a grilling tradition that takes a back seat to nobody. <break time="0.8s"/> Lamb, kid, sausage — <break time="0.5s"/> olive wood fire. <break time="0.8s"/> Olive wood burns slowly, <break time="0.5s"/> gives steady heat, <break time="0.5s"/> a fragrance that gets into the meat. <break time="0.8s"/> Not smoke — fragrance. <break time="0.8s"/> There's a difference. <break time="1.2s"/>
+
+Third: friselle — twice-baked bread rings made from durum wheat or barley. <break time="0.8s"/> Baked first like bread, <break time="0.5s"/> then sliced in half and put back in the oven to dry out. <break time="0.8s"/> You soften them with water, <break time="0.5s"/> then dress with oil, <break time="0.5s"/> tomato, oregano, salt. <break time="0.8s"/> It was the food of farmers, fishermen, <break time="0.5s"/> of people who worked outside and brought their own meal. <break time="0.8s"/> It doesn't go off. <break time="0.5s"/> It keeps for weeks when dry. <break time="0.8s"/> Then you soak it in water and it comes back to life. <break time="0.8s"/> The most practical food that exists, <break time="0.5s"/> and with good oil from here <break time="0.5s"/> it's also among the best. <break time="1.2s"/>
+
+One thing I'll tell you straight: <break time="0.8s"/> avoid restaurants with a laminated menu in five languages <break time="0.5s"/> and a photograph of the dish on the card. <break time="0.8s"/> Not that the food is bad — <break time="0.5s"/> it's that it's built for people who aren't coming back. <break time="0.8s"/> Look for where the locals eat. <break time="0.8s"/> If at one o'clock the trattoria is full of people who don't have a camera in their hands, <break time="0.5s"/> you're in the right place. <break time="1.5s"/>
+
+=====
+CAP. 10 — THE VIEW: THE SEA TWENTY KILOMETRES AWAY
+voice: custom-ostuni
+
+*(at the highest viewpoint in the old town)*
+
+Stop here. <break time="2s"/>
+
+Look east. <break time="1.5s"/>
+
+That blue strip on the horizon — <break time="0.8s"/> that's the Adriatic. <break time="1.2s"/>
+
+Ostuni is about twenty kilometres from the coast. <break time="0.8s"/> It's not on the sea. <break time="0.8s"/> It sits on the hill, <break time="0.5s"/> at two hundred and eighteen metres, <break time="0.5s"/> and it sees the sea from far away. <break time="0.8s"/> Like a watchman. <break time="1.2s"/>
+
+On clear days — <break time="0.5s"/> especially early in the morning, <break time="0.5s"/> before the midday heat makes the air shimmer — <break time="0.8s"/> you can see the line of the sea with a clarity that surprises you. <break time="0.8s"/> You can even make out a few coastal towers — <break time="0.5s"/> the watchtowers the Bourbons built along the Puglian coastline in the eighteenth century <break time="0.5s"/> to signal raids by Barbary pirates. <break time="1.2s"/>
+
+This view has a history. <break time="0.8s"/> For centuries, being up high and seeing the sea <break time="0.5s"/> was a military advantage. <break time="0.8s"/> You could see ships approaching. <break time="0.8s"/> You raised the alarm. <break time="0.8s"/> The coastal towers and the hilltop borgo <break time="0.5s"/> were part of the same defence system. <break time="0.8s"/> A network of visual points <break time="0.5s"/> covering the whole coastline. <break time="1.2s"/>
+
+Towards the west, on the other hand — <break time="0.8s"/> if you turn around — <break time="0.8s"/> you see the Murgia. <break time="0.8s"/> The limestone plateau rising towards the interior. <break time="0.8s"/> Ostuni is in the middle: <break time="0.5s"/> sea on one side, <break time="0.5s"/> plateau on the other. <break time="0.8s"/> Its people have always had two options in front of them. <break time="0.8s"/> The sea with its trade, its pirates, its fishermen. <break time="0.5s"/> The land with its shepherds, its farmers, its masserie. <break time="0.8s"/> Ostuni never chose between the two — <break time="0.5s"/> it kept both. <break time="1.2s"/>
+
+When I had a free moment from my shift, <break time="0.5s"/> I'd come here. <break time="0.8s"/> Not to do anything in particular — <break time="0.5s"/> just to look at that sea. <break time="0.8s"/> There's something strange about seeing the sea from this far away: <break time="0.5s"/> it looks small, <break time="0.5s"/> it looks calm, <break time="0.5s"/> it looks harmless. <break time="0.8s"/> Then you go close and you understand how big it really is. <break time="0.8s"/> Ostuni gives you the perspective. <break time="0.5s"/> The sea gives you the reality. <break time="1.5s"/>
+
+=====
+CAP. 11 — THE JEWISH QUARTER: LA GIUDEA
+voice: custom-ostuni
+
+*(walking towards the north-east part of the old town)*
+
+There's a quarter called la Giudea. <break time="1s"/>
+
+It's in the highest and most interior part of the old town. <break time="0.8s"/> The alleyways here are even narrower, <break time="0.5s"/> the houses even closer together. <break time="0.8s"/> A neighbourhood within a neighbourhood — <break time="0.5s"/> a distinct area inside an area that's already dense. <break time="1.2s"/>
+
+The name says it all: <break time="0.8s"/> it was Ostuni's medieval Jewish quarter. <break time="0.8s"/> The Jewish presence in Puglia is ancient — <break time="0.5s"/> there are Jewish communities documented in this region <break time="0.5s"/> from the early Middle Ages, <break time="0.5s"/> if not before. <break time="0.8s"/> Ostuni had its own. <break time="1.2s"/>
+
+In 1541 the edict of expulsion of Jews from the Kingdom of Naples arrived — <break time="0.8s"/> which at the time included Puglia. <break time="0.8s"/> Ostuni's Jewish community was dispersed. <break time="0.8s"/> What remained is the quarter: <break time="0.5s"/> the layout of the streets, <break time="0.5s"/> a few stone thresholds, <break time="0.5s"/> the name. <break time="0.8s"/> The inscriptions, the objects, the daily life — <break time="0.5s"/> almost all gone. <break time="1.2s"/>
+
+It's not a museum quarter. <break time="0.8s"/> People live there, <break time="0.5s"/> there are private homes, <break time="0.5s"/> a few small shops. <break time="0.8s"/> But if you walk through it quietly and look at the streets, <break time="0.8s"/> you can imagine how compressed this space was, <break time="0.5s"/> how self-sufficient, <break time="0.5s"/> closed in on itself. <break time="0.8s"/> A community within the community. <break time="0.8s"/> With its own rules, <break time="0.5s"/> its own rhythms, <break time="0.5s"/> its own life. <break time="1.2s"/>
+
+I'll tell you something: <break time="0.8s"/> this story doesn't get talked about much, here in Ostuni. <break time="0.8s"/> Not to hide it — <break time="0.5s"/> but because there's almost nothing physical left to see. <break time="0.8s"/> The quarter is there. <break time="0.5s"/> The history it carries inside <break time="0.5s"/> has to be known by whoever comes. <break time="1.5s"/>
+
+=====
+CAP. 12 — THE MASSERIE AROUND: STONE, TRULLI AND WORK
+voice: custom-ostuni
+
+*(at a viewpoint overlooking the countryside, or descending towards the plain)*
+
+If you have time — <break time="0.8s"/> and I mean half a day, <break time="0.5s"/> not twenty minutes — <break time="0.8s"/> come down from the hill and explore the countryside around it. <break time="1.2s"/>
+
+The masserie are the traditional farming estates of this area. <break time="0.8s"/> They're not just farms — <break time="0.5s"/> they're complete architectural complexes. <break time="0.8s"/> A group of buildings around a courtyard: <break time="0.5s"/> the owner's house, <break time="0.5s"/> the storerooms, <break time="0.5s"/> the stable, <break time="0.5s"/> the olive press. <break time="0.8s"/> Often with a chapel. <break time="0.8s"/> Some had towers — <break time="0.5s"/> for defence, for looking out, <break time="0.5s"/> for signalling. <break time="1.2s"/>
+
+Many masserie around Ostuni have been converted into agriturismi or luxury hotels. <break time="0.8s"/> It's a phenomenon of the last twenty years. <break time="0.8s"/> Not necessarily a bad thing — <break time="0.5s"/> at least the buildings get maintained, <break time="0.5s"/> restored, <break time="0.5s"/> lived in. <break time="0.8s"/> Better that than leaving them to fall apart. <break time="0.8s"/> But don't expect rural authenticity — <break time="0.5s"/> what you'll find is modern comfort <break time="0.5s"/> inside ancient walls. <break time="0.8s"/> Which isn't a bad thing, <break time="0.5s"/> for what it's worth. <break time="0.8s"/> It's just a different thing. <break time="1.2s"/>
+
+Between the masserie and the old town, <break time="0.8s"/> if you drive slowly, <break time="0.5s"/> you'll see trulli. <break time="0.8s"/> You're not in Alberobello — <break time="0.5s"/> that's where they're at maximum concentration. <break time="0.8s"/> But isolated trulli in the countryside, <break time="0.5s"/> trulli used as storage sheds or shelters, <break time="0.5s"/> there are plenty here too. <break time="0.8s"/> They were reversible constructions — <break time="0.5s"/> built dry, without mortar, <break time="0.5s"/> taken apart, <break time="0.5s"/> rebuilt elsewhere. <break time="0.8s"/> A story of taxes: <break time="0.5s"/> if a building had no mortar, <break time="0.5s"/> certain feudal lords considered it temporary <break time="0.5s"/> and didn't tax it. <break time="0.8s"/> People adapted their architecture to the taxman, <break time="0.5s"/> and the result became heritage. <break time="1.2s"/>
+
+I spent many winter mornings patrolling these roads. <break time="0.8s"/> Low fog, <break time="0.5s"/> trulli emerging from the grey like ghosts, <break time="0.5s"/> olive trees still in the air. <break time="0.8s"/> It's a landscape that seems frozen in time. <break time="0.8s"/> You'd never say you were in the twenty-first century. <break time="0.8s"/> For a few minutes, <break time="0.5s"/> you could be in any era at all. <break time="1.5s"/>
+
+=====
+CAP. 13 — THE FEAST OF SANT'ORONZO: THE SEPTEMBER PROCESSION
+voice: custom-ostuni
+
+*(sitting in a small square, narrative tone)*
+
+In September, before the city fully empties of tourists, <break time="0.5s"/> there's the feast. <break time="1.2s"/>
+
+Ostuni has two patron saints: <break time="0.8s"/> San Biagio, <break time="0.5s"/> and Sant'Oronzo. <break time="0.8s"/> Sant'Oronzo is the main patron — <break time="0.5s"/> the same one Lecce has as its patron, <break time="0.5s"/> the same one venerated throughout southern Puglia. <break time="0.8s"/> First Christian bishop of this area, <break time="0.5s"/> martyred in Roman times. <break time="0.8s"/> Or at least that's what tradition says. <break time="1.2s"/>
+
+The procession of Sant'Oronzo in Ostuni — <break time="0.8s"/> the main celebrations are in August, <break time="0.5s"/> with the procession of the statue through the streets of the old town — <break time="0.8s"/> is something worth seeing at least once in your life. <break time="0.8s"/> Not for devotion, <break time="0.5s"/> not necessarily. <break time="0.8s"/> To see how a city stops, <break time="0.5s"/> focuses itself, <break time="0.5s"/> moves together. <break time="1.2s"/>
+
+The streets fill up. <break time="0.8s"/> The lights, the fireworks, the band. <break time="0.8s"/> Families lean from balconies. <break time="0.8s"/> Children run. <break time="0.8s"/> The elderly stand still and watch, <break time="0.5s"/> as they've watched the same procession for sixty years. <break time="1.2s"/>
+
+I kept order during the procession for thirty years. <break time="0.8s"/> It's demanding work — <break time="0.5s"/> the crowd is dense, <break time="0.5s"/> the streets narrow, <break time="0.5s"/> emotions run high. <break time="0.8s"/> But every year, <break time="0.5s"/> in the middle of all those people, <break time="0.5s"/> I understood why this city was still standing. <break time="0.8s"/> Not because of the Aragonese walls. <break time="0.5s"/> Not because of tourism. <break time="0.8s"/> Because of things like this — <break time="0.5s"/> the procession, the bar, the Tuesday market. <break time="0.8s"/> The invisible fabric that holds everything together. <break time="1.5s"/>
+
+=====
+CAP. 14 — CLOSING: THE WARDEN LETS YOU GO
+voice: custom-ostuni
+
+*(heading back to Piazza della Libertà or to the car park)*
+
+Right then — <break time="0.5s"/> Ostuni. <break time="1.5s"/>
+
+Twenty-six thousand years of human presence on this hill. <break time="0.8s"/> Messapi, Romans, Normans, Aragonese. <break time="0.8s"/> A Gothic cathedral disproportionate in the good sense. <break time="0.8s"/> White alleyways that drive you mad in August <break time="0.5s"/> and silence in winter. <break time="0.8s"/> A woman twenty-six thousand years old on display in a museum <break time="0.5s"/> waiting for someone to come and visit her. <break time="0.8s"/> An oil made from olive trees older than you. <break time="0.8s"/> A quarter called la Giudea <break time="0.5s"/> that carries a history many people don't know. <break time="0.8s"/> The masserie in the countryside, <break time="0.5s"/> the isolated trulli, <break time="0.5s"/> the August procession. <break time="1.2s"/>
+
+It's not an easy city. <break time="0.8s"/> Not in the sense that it's dangerous — <break time="0.5s"/> it's one of the most peaceful places in Puglia. <break time="0.8s"/> It's that it has more layers than you can see in an afternoon. <break time="0.8s"/> If you came here just for photos of white alleyways, <break time="0.5s"/> you've seen one tenth of it. <break time="1.2s"/>
+
+A few practical tips before you go: <break time="0.8s"/> always park outside the walls. <break time="0.8s"/> In August, come early in the morning or late afternoon — <break time="0.5s"/> at midday the old town is gridlocked, <break time="0.5s"/> hot, <break time="0.5s"/> packed. <break time="0.8s"/> The Delia museum is open all year, <break time="0.5s"/> but check the hours before you go — <break time="0.5s"/> in winter they cut back. <break time="0.8s"/> The Tuesday morning market: <break time="0.5s"/> don't miss it if you're here. <break time="1.2s"/>
+
+And one last thing. <break time="0.8s"/> If you've still got a bit of time, <break time="0.8s"/> don't rush straight to the beach. <break time="0.8s"/> Sit down in one of the little squares of the old town, <break time="0.5s"/> order something, <break time="0.5s"/> and stay still for twenty minutes. <break time="0.8s"/> Watch the people go by. <break time="0.8s"/> Watch the white houses change colour as the sun moves. <break time="0.8s"/> Do nothing. <break time="0.8s"/> For tourists it's always hard, I know. <break time="0.5s"/> But it's the best way to understand how this place works. <break time="1.2s"/>
+
+Forty years of blowing a whistle taught me one thing: <break time="0.8s"/> the people who actually stop and look <break time="0.5s"/> always take home something more. <break time="0.8s"/> The ones who rush <break time="0.5s"/> only take home the photos. <break time="1.5s"/>
+
+Enjoy your stay. <break time="1s"/>
+
+And park where you're supposed to. <break time="1s"/>
+
+If you're heading to the sea from here — <break time="0.5s"/> and the sea is fifteen minutes away — <break time="0.8s"/> you've done the full Valle d'Itria loop. <break time="0.8s"/> Alberobello, Locorotondo, Martina Franca, Cisternino, Fasano, Ostuni. <break time="0.8s"/> Six towns, six stories, <break time="0.5s"/> all different. <break time="0.8s"/> Nobody told you Puglia was monotonous. <break time="1.5s"/>

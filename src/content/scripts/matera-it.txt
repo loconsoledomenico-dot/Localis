@@ -1,0 +1,206 @@
+MATERA — I SASSI
+Voce: Rosa, 78 anni, nata nel Sasso Caveoso, evacuata nel 1957, tornata nel 1996
+
+=====
+CAP. 1 — INTRO: IL PRIMO SGUARDO
+voice: jane
+
+Fermati qui. <break time="1.2s"/>
+
+Non guardare ancora il telefono. <break time="0.8s"/> Non cercare la foto da fare. <break time="0.8s"/> Prima guarda. <break time="1.5s"/>
+
+Quello che vedi davanti a te non esiste da nessun'altra parte al mondo. <break time="1.2s"/> Migliaia di case scavate nella roccia, <break time="0.5s"/> scaglionate lungo la parete di un burrone, <break time="0.5s"/> una sopra l'altra come le file di un teatro. <break time="1.0s"/> Il tetto di una casa è il cortile di quella sopra. <break time="0.8s"/> Il cortile di una casa è il tetto di quella sotto. <break time="1.2s"/>
+
+Questa città ha settemila anni. <break time="1.0s"/> Non è un modo di dire. <break time="0.8s"/> Settemila anni di vita continua, <break time="0.5s"/> senza interruzione, <break time="0.5s"/> dalla preistoria a oggi. <break time="1.2s"/> È uno dei luoghi abitati ininterrottamente più antichi del mondo. <break time="1.5s"/>
+
+Io mi chiamo Rosa. <break time="0.8s"/> Sono nata qui nel 1948, <break time="0.5s"/> in una grotta del Sasso Caveoso. <break time="0.8s"/> Avevo nove anni quando lo Stato ci ha mandato via. <break time="0.8s"/> Ci siamo tornati nel 1996. <break time="0.8s"/> Cinquant'anni dopo. <break time="1.5s"/>
+
+Ti racconto Matera come la conosce chi ci ha vissuto dentro. <break time="0.8s"/> Non come la descrivono i libri. <break time="1.5s"/>
+
+=====
+CAP. 2 — COSA SONO I SASSI
+voice: jane
+
+La parola "sassi" può sembrare strana. <break time="0.8s"/> In italiano sasso vuol dire pietra. <break time="0.8s"/> Ma qui i Sassi sono i quartieri — Sasso Barisano e Sasso Caveoso — <break time="0.5s"/> i due bacini scavati ai lati della Civita, <break time="0.5s"/> la collina centrale dove sorge il Duomo. <break time="1.2s"/>
+
+Le abitazioni si chiamano ipogei. <break time="0.8s"/> Cioè caverne. <break time="0.8s"/> Non costruite — scavate. <break time="1.0s"/> La roccia che vedi ovunque è il tufo calcareo, <break time="0.5s"/> una pietra tenera che si taglia con gli scalpelli <break time="0.5s"/> e con il tempo diventa dura come il cemento. <break time="1.2s"/>
+
+Le case più antiche sono completamente dentro la roccia. <break time="0.8s"/> Quelle più recenti — diciamo degli ultimi cinque secoli — <break time="0.5s"/> hanno una facciata costruita davanti all'ingresso della grotta. <break time="0.8s"/> Una facciata con una finestra, una porta, magari un balcone. <break time="0.8s"/> E dietro, la grotta. <break time="1.2s"/>
+
+Mia madre diceva sempre: <break time="0.5s"/> la nostra casa aveva tre stanze. <break time="0.8s"/> Una era nella roccia, <break time="0.5s"/> una era costruita davanti, <break time="0.5s"/> e una era il cielo. <break time="1.2s"/>
+
+Perché i cortili aperti qui non sono uno spazio vuoto. <break time="0.8s"/> Sono una stanza senza tetto. <break time="0.8s"/> Ci si viveva, ci si lavorava, ci si dormiva d'estate. <break time="1.5s"/>
+
+=====
+CAP. 3 — L'ACQUA: IL SISTEMA CHE HA FATTO SOPRAVVIVERE MATERA
+voice: jane
+
+Prima di tutto il resto, devi capire l'acqua. <break time="1.2s"/>
+
+Matera è costruita su un altopiano di tufo senza fiumi, <break time="0.5s"/> senza sorgenti, <break time="0.5s"/> senza pozzi naturali. <break time="1.0s"/> L'unica acqua era quella piovana. <break time="1.2s"/>
+
+In settemila anni, gli abitanti dei Sassi hanno sviluppato il sistema idrico più sofisticato del mondo antico. <break time="1.2s"/>
+
+Sotto ogni casa c'è una cisterna. <break time="0.8s"/> Scavata nella roccia, <break time="0.5s"/> intonacata con la cocciopesto — <break time="0.5s"/> un impasto di calce e terracotta frantumata che non lascia passare l'acqua. <break time="1.0s"/> I tetti sono inclinati e convogliano la pioggia verso le grondaie. <break time="0.8s"/> Le grondaie portano l'acqua alle cisterne. <break time="0.8s"/> Le cisterne la conservano per mesi. <break time="1.2s"/>
+
+Ma c'è di più. <break time="0.8s"/> Le cisterne sono collegate tra loro attraverso la roccia. <break time="0.8s"/> Quando una si riempie, l'eccesso passa alla successiva. <break time="0.8s"/> Un sistema di vasi comunicanti che attraversa l'intero Sasso. <break time="1.2s"/>
+
+Sotto il Sasso Caveoso ci sono centinaia di cisterne ancora intatte. <break time="0.8s"/> Alcune grandi come palestre. <break time="0.8s"/> Molte non sono state ancora esplorate completamente. <break time="1.5s"/>
+
+Quando da bambina andavo a prendere l'acqua con mia madre, <break time="0.5s"/> scendevo una scaletta stretta dentro la roccia <break time="0.5s"/> e arrivavo in questo ambiente buio e fresco <break time="0.5s"/> dove l'acqua rifletteva la fiamma della candela. <break time="1.0s"/> Sembrava magia. <break time="0.8s"/> Era ingegneria di duemila anni fa. <break time="1.5s"/>
+
+=====
+CAP. 4 — VITA NEI SASSI: COM'ERA DAVVERO
+voice: jane
+
+Adesso ti dico come si viveva davvero. <break time="1.0s"/> Non come si legge sui libri di storia. <break time="1.2s"/>
+
+La nostra grotta aveva un solo ambiente. <break time="0.8s"/> Circa quaranta metri quadri. <break time="0.8s"/> Ci vivevano mia nonna, mia madre, mio padre, <break time="0.5s"/> cinque figli e un asino. <break time="1.5s"/>
+
+L'asino non è una battuta. <break time="0.8s"/> Gli animali dormivano con le famiglie. <break time="0.8s"/> Non c'era alternativa — la stalla sarebbe stata un'altra grotta da scavare, <break time="0.5s"/> e chi aveva la stalla era ricco. <break time="0.8s"/> Noi non eravamo ricchi. <break time="1.2s"/>
+
+Il letto dei miei genitori era su una pedana rialzata. <break time="0.8s"/> Noi figli dormivamo sotto, <break time="0.5s"/> accanto all'asino. <break time="0.8s"/> D'inverno il calore dell'animale scaldava tutta la grotta. <break time="1.2s"/>
+
+Non c'era elettricità fino agli anni Cinquanta. <break time="0.8s"/> Non c'era acqua corrente. <break time="0.8s"/> Non c'era fognatura. <break time="0.8s"/> La latrina era un buco nella roccia. <break time="1.0s"/>
+
+Eppure. <break time="1.5s"/>
+
+Eppure io ricordo quella grotta con qualcosa che non è vergogna. <break time="0.8s"/> Ricordo il fresco d'estate, <break time="0.5s"/> quando fuori c'erano quarantadue gradi e dentro la roccia erano vent'anni. <break time="0.8s"/> Ricordo il buio che non faceva paura <break time="0.5s"/> perché era un buio familiare, pieno di voci. <break time="0.8s"/> Ricordo la comunità — <break time="0.5s"/> in questo posto dove una porta aperta sul cortile significava che potevi entrare. <break time="1.5s"/>
+
+Non era bello. <break time="0.8s"/> Ma era vivo. <break time="1.5s"/>
+
+=====
+CAP. 5 — LA VERGOGNA D'ITALIA: L'EVACUAZIONE
+voice: jane
+
+Nel 1945 uno scrittore lucano di nome Carlo Levi pubblicò un libro. <break time="0.8s"/> Si chiamava Cristo si è fermato a Eboli. <break time="0.8s"/> Non parlava di Matera — parlava del confino in Lucania, <break time="0.5s"/> della povertà del Sud. <break time="0.8s"/> Ma l'immagine che il libro diede al mondo <break time="0.5s"/> era quella di un Sud dimenticato, <break time="0.5s"/> abbandonato dalla storia. <break time="1.2s"/>
+
+Poi nel 1948 Alcide De Gasperi visitò Matera. <break time="0.8s"/> Vide le grotte, vide le famiglie, vide i bambini. <break time="1.0s"/>
+
+L'anno dopo, il segretario del Partito Comunista Palmiro Togliatti <break time="0.5s"/> tenne un comizio a Matera <break time="0.5s"/> e dalla piazza gridò: <break time="0.5s"/> "Questa è la vergogna d'Italia." <break time="1.5s"/>
+
+E da quel momento, per quarant'anni, <break time="0.5s"/> Matera è stata questo — <break time="0.5s"/> la vergogna d'Italia. <break time="1.2s"/>
+
+Nel 1952 fu approvata la Legge Colombo. <break time="0.8s"/> Evacuazione obbligatoria dei Sassi. <break time="0.8s"/> Entro il 1963 quindicimila persone <break time="0.5s"/> furono trasferite forzatamente nei nuovi quartieri costruiti sulla pianura. <break time="1.2s"/>
+
+A me toccò nel 1957. <break time="0.8s"/> Avevo nove anni. <break time="0.8s"/> Mio padre caricò su un carretto quello che avevamo — <break time="0.5s"/> il materasso, le pentole, qualche vestito. <break time="0.8s"/> E scendemmo. <break time="0.8s"/> Non ci guardammo indietro. <break time="0.8s"/> O forse ci guardammo, ma non me lo ricordo. <break time="1.2s"/>
+
+La casa nuova aveva due stanze separate, un bagno, l'acqua corrente. <break time="0.8s"/> Mia madre pianse per una settimana. <break time="0.8s"/> Non so se di sollievo o di dolore. <break time="0.8s"/> Forse tutti e due. <break time="1.5s"/>
+
+=====
+CAP. 6 — LE CHIESE RUPESTRI: L'ART CHE NESSUNO CERCA
+voice: jane
+
+Adesso ti porto in un posto che la maggior parte dei turisti non vede. <break time="1.2s"/>
+
+Nei Sassi ci sono oltre cento chiese rupestri. <break time="0.8s"/> Chiese scavate nella roccia dai monaci benedettini e basiliani <break time="0.5s"/> tra il VII e il XIII secolo. <break time="1.2s"/>
+
+Questi monaci arrivarono dall'Oriente — dalla Siria, <break time="0.5s"/> dalla Palestina, <break time="0.5s"/> dalla Cappadocia. <break time="0.8s"/> Fuggivano le persecuzioni, <break time="0.5s"/> cercavano la solitudine, <break time="0.5s"/> trovarono le grotte di Matera perfette per la vita monastica. <break time="1.2s"/>
+
+E dentro queste grotte hanno lasciato affreschi. <break time="1.0s"/>
+
+Colori che dopo mille anni sono ancora vivi — <break time="0.5s"/> il rosso, il blu oltremare, l'ocra. <break time="0.8s"/> Santi con gli occhi spalancati <break time="0.5s"/> che ti guardano dal buio della roccia. <break time="0.8s"/> Madonna con il bambino, <break time="0.5s"/> Cristo pantocratore, <break time="0.5s"/> santi locali di cui i libri non sanno niente. <break time="1.2s"/>
+
+La più famosa è la Madonna de Idris, <break time="0.5s"/> scavata nell'omonima roccia che si vede in mezzo al Sasso Caveoso. <break time="0.8s"/> Ma ce ne sono di meno conosciute <break time="0.5s"/> dove sei praticamente solo, <break time="0.5s"/> con una torcia e il silenzio. <break time="1.2s"/>
+
+Se entri in una di queste chiese e aspetti che gli occhi si abituino al buio, <break time="0.5s"/> inizia a capire perché i monaci sceglievano questo posto. <break time="0.8s"/> Non è solo il fresco. <break time="0.8s"/> È qualcosa nella roccia stessa — <break time="0.5s"/> una presenza. <break time="0.8s"/> Non so come chiamarla altrimenti. <break time="1.5s"/>
+
+=====
+CAP. 7 — IL DUOMO E LA CIVITA
+voice: jane
+
+Cammina adesso verso l'alto. <break time="0.8s"/> Verso la Civita. <break time="1.0s"/>
+
+La Civita è la collina che separa i due Sassi — Barisano a sinistra, <break time="0.5s"/> Caveoso a destra. <break time="0.8s"/> Su questa collina c'era l'insediamento originario, <break time="0.5s"/> il primo nucleo abitato <break time="0.5s"/> che poi si è espanso a scendere su entrambi i lati. <break time="1.2s"/>
+
+In cima c'è il Duomo. <break time="0.8s"/> Costruito tra il 1230 e il 1270, <break time="0.5s"/> in stile romanico pugliese. <break time="0.8s"/> La facciata bianca che brilla al sole della mattina <break time="0.5s"/> si vede da tutta la città — è il punto di riferimento visivo di Matera. <break time="1.2s"/>
+
+Dentro il Duomo c'è la Madonna della Bruna. <break time="0.8s"/> La patrona di Matera. <break time="0.8s"/> La festa si celebra ogni anno il 2 luglio <break time="0.5s"/> con una processione su carro trionfale <break time="0.5s"/> che finisce con una cosa unica — <break time="0.5s"/> i fedeli assaltano il carro e lo fanno a pezzi. <break time="1.2s"/>
+
+Non è vandalismo. <break time="0.8s"/> È un rito. <break time="0.8s"/> Chi porta a casa un pezzo del carro porta fortuna per un anno. <break time="0.8s"/> La Madonna viene salvata prima dell'assalto. <break time="0.8s"/> Il carro viene sacrificato. <break time="1.2s"/>
+
+Matera si riconosce in questo — <break time="0.5s"/> qualcosa di sacro che finisce distrutto <break time="0.5s"/> e poi si ricostruisce ogni anno. <break time="0.8s"/> Come i Sassi stessi. <break time="1.5s"/>
+
+=====
+CAP. 8 — LA MURGIA TIMONE: IL LATO CHE NESSUNO CALCOLA
+voice: jane
+
+Attraversa il burrone. <break time="1.0s"/>
+
+Sul lato opposto ai Sassi c'è il Parco della Murgia Materana. <break time="0.8s"/> Un altopiano di roccia calcarea e macchia mediterranea <break time="0.5s"/> che guarda Matera dall'altra parte del burrone. <break time="1.2s"/>
+
+Da là la vista è incomprensibile. <break time="1.0s"/>
+
+Vedi l'intera città scavata nella collina, <break time="0.5s"/> e capisci per la prima volta come è fatta davvero. <break time="0.8s"/> Come le case si arrampicano sulla roccia, <break time="0.5s"/> come i campanili emergono dal tessuto delle grotte, <break time="0.5s"/> come il Duomo domina tutto dall'alto della Civita. <break time="1.2s"/>
+
+Ma la Murgia non è solo un belvedere. <break time="0.8s"/> È un paesaggio che ha tremila anni di storia. <break time="0.8s"/> Ci sono chiese rupestri anche là — <break time="0.5s"/> la Cripta del Peccato Originale, <break time="0.5s"/> con affreschi dell'VIII secolo <break time="0.5s"/> che la UNESCO ha definito la Cappella Sistina della pittura rupestre. <break time="1.2s"/>
+
+Ci sono villaggi trincerati neolitici. <break time="0.8s"/> Tombe a fossa dell'età del bronzo. <break time="0.8s"/> Tracce di insediamenti che precedono di millenni tutto quello che hai visto nei Sassi. <break time="1.2s"/>
+
+La storia di Matera non inizia con i Sassi. <break time="0.8s"/> I Sassi sono quasi recenti, <break time="0.5s"/> se usi la scala giusta. <break time="1.5s"/>
+
+=====
+CAP. 9 — UNESCO E IL RITORNO
+voice: jane
+
+Nel 1993 accadde qualcosa che nessuno di noi aveva previsto. <break time="1.2s"/>
+
+L'UNESCO inserì i Sassi di Matera nella lista del Patrimonio Mondiale dell'Umanità. <break time="1.2s"/>
+
+Non la vergogna d'Italia. <break time="0.8s"/> Il patrimonio dell'umanità. <break time="1.5s"/>
+
+Da un giorno all'altro il giudizio sul posto dove ero nata si era capovolto. <break time="0.8s"/> Quello che era stato cancellato come arretrato, <break time="0.5s"/> come povero, <break time="0.5s"/> come indegno — <break time="0.5s"/> diventava un bene prezioso da conservare. <break time="1.2s"/>
+
+Gli anni Novanta furono il decennio dei ritorni. <break time="0.8s"/> Famiglie che erano state cacciate <break time="0.5s"/> tornarono a comprare le grotte che avevano lasciato. <break time="0.8s"/> Le grotte costavano poco — nessuno le voleva. <break time="0.8s"/> Ma c'era chi capiva. <break time="1.2s"/>
+
+Io tornai nel 1996. <break time="0.8s"/> Non nella grotta di mia madre — quella era di altri ormai. <break time="0.8s"/> In un'altra, poco distante. <break time="0.8s"/> L'ho restaurata, piano piano, <break time="0.5s"/> con quello che avevo. <break time="1.0s"/>
+
+La prima notte che ho dormito nella roccia dopo quarant'anni, <break time="0.8s"/> ho capito che non avevo mai smesso di sentirmi da nessun'altra parte. <break time="0.8s"/> Come se tutto il tempo passato fuori <break time="0.5s"/> fosse stato solo un'attesa. <break time="1.5s"/>
+
+=====
+CAP. 10 — MATERA 2019 E OGGI
+voice: jane
+
+Nel 2019 Matera è stata Capitale Europea della Cultura. <break time="1.0s"/>
+
+È una cosa strana da spiegare a chi non conosce la storia. <break time="0.8s"/> Una città che cinquant'anni prima era stata evacuata per decreto <break time="0.5s"/> come luogo indegno di essere abitato — <break time="0.5s"/> è diventata capitale culturale d'Europa. <break time="1.2s"/>
+
+Il 2019 ha portato turisti, concerti, installazioni, <break time="0.5s"/> artisti da tutto il mondo. <break time="0.8s"/> Ha portato anche speculazione, <break time="0.5s"/> prezzi dei ristoranti triplicati, <break time="0.5s"/> guesthouse con le grotte trasformate in suite con l'idromassaggio. <break time="1.2s"/>
+
+Non mi lamento. <break time="0.8s"/> Preferisco mille volte questo <break time="0.5s"/> all'oblio. <break time="0.8s"/> Preferisco che vengano a guardare <break time="0.5s"/> piuttosto che dimentichino. <break time="1.2s"/>
+
+Però c'è una Matera che esiste ancora dietro il turismo. <break time="0.8s"/> I vicoli del Sasso Barisano a mezzogiorno, <break time="0.5s"/> quando i turisti dormono. <break time="0.8s"/> La piazza Vittorio Veneto la mattina presto, <break time="0.5s"/> con i vecchi che prendono il caffè. <break time="0.8s"/> I bambini che giocano sui gradini della Civita <break time="0.5s"/> come ci giocavo io. <break time="1.2s"/>
+
+Quella Matera è ancora qui. <break time="0.8s"/> Devi solo sapere quando guardarla. <break time="1.5s"/>
+
+=====
+CAP. 11 — COSA MANGIARE E DOVE
+voice: jane
+
+Il pane di Matera ha il marchio IGP. <break time="0.8s"/> È un pane di grano duro Senatore Cappelli, <break time="0.5s"/> cotto nel forno a legna, <break time="0.5s"/> con una crosta dura che dura giorni <break time="0.5s"/> e una mollica gialla e profumata. <break time="1.0s"/> Ha una forma caratteristica — a cornetto o a pane alto — <break time="0.5s"/> e un peso che va dai chilogrammo a due chili. <break time="0.8s"/> Non si compra a fette. <break time="0.8s"/> Si porta a casa intero. <break time="1.2s"/>
+
+I crapiata sono una zuppa di legumi misti — <break time="0.5s"/> fave, ceci, lenticchie, cicerchie, fagioli — <break time="0.5s"/> che si fa il primo lunedì di agosto <break time="0.5s"/> da secoli in questo territorio. <break time="0.8s"/> Ogni famiglia ha la sua ricetta. <break time="0.8s"/> Ogni ricetta è la migliore. <break time="1.2s"/>
+
+Il peperone crusco è un'altra cosa di Matera — <break time="0.5s"/> peperoni essiccati e poi fritti nell'olio caldo <break time="0.5s"/> finché diventano croccanti come patatine. <break time="0.8s"/> Si sbriciolano sul pane, sulla pasta, su tutto. <break time="1.0s"/>
+
+Per mangiare bene senza spendere molto, <break time="0.5s"/> cerca le trattorie nei vicoli laterali del Sasso Barisano. <break time="0.8s"/> Non quelle con i menù tradotti in cinque lingue. <break time="0.8s"/> Quelle con la lavagna scritta a mano <break time="0.5s"/> e il proprietario che ti chiede da dove vieni. <break time="1.5s"/>
+
+=====
+CAP. 12 — CHIUSURA: ROSA SALUTA
+voice: jane
+
+Settantotto anni. <break time="0.8s"/> Nata in una grotta. <break time="0.8s"/> Evacuata a forza. <break time="0.8s"/> Tornata per scelta. <break time="1.5s"/>
+
+Quando la gente mi chiede se sono arrabbiata con lo Stato che ci ha mandato via, <break time="0.5s"/> ci penso un momento. <break time="0.8s"/> E poi dico: no. <break time="1.2s"/>
+
+Quelle condizioni non erano dignitose. <break time="0.8s"/> I bambini si ammalavano. <break time="0.8s"/> La malaria era ancora una realtà. <break time="0.8s"/> Le donne passavano la vita a portare acqua. <break time="0.8s"/> Andare via era necessario. <break time="1.2s"/>
+
+Ma il modo — <break time="0.5s"/> forzato, senza spiegazioni, senza rispetto — <break time="0.5s"/> quello non era giusto. <break time="0.8s"/> A nessuno fu chiesto. <break time="0.8s"/> A nessuno fu dato il tempo di salutare. <break time="0.8s"/> Ci dissero di andare, <break time="0.5s"/> e andammo. <break time="1.5s"/>
+
+Matera adesso è bella. <break time="0.8s"/> Forse troppo curata, in certi posti. <break time="0.8s"/> Ma è viva. <break time="0.8s"/> E questo è quello che conta. <break time="1.2s"/>
+
+Se ti fermi qui un momento, <break time="0.5s"/> in qualsiasi punto dei Sassi, <break time="0.5s"/> e chiudi gli occhi — <break time="0.5s"/> senti qualcosa. <break time="0.8s"/> Non so se è il vento nel burrone, <break time="0.5s"/> o il peso della storia, <break time="0.5s"/> o semplicemente la roccia che respira. <break time="1.2s"/>
+
+Ma lo senti. <break time="1.5s"/>
+
+Grazie di essere venuto. <break time="0.8s"/> Prenditi il tempo che serve. <break time="0.8s"/> Matera non si vede in fretta. <break time="1.5s"/>

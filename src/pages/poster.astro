@@ -1,0 +1,385 @@
+---
+export const prerender = true;
+/**
+ * Localis · Partner Poster Generator (A5 verticale, bilingue IT+EN)
+ *
+ * Locandina bilingue per affissione in bar / B&B / hotel / ristoranti partner.
+ * QR centrale con logo "Localis" overlay (ECC livello H tollera ~30% di
+ * copertura, il logo resta leggibile).
+ *
+ * Esempi URL:
+ *   /poster                                       → base senza partner
+ *   /poster?p=bar-savino&name=Bar+Savino          → con partner
+ *   /poster?p=bb-vicolo-bari&name=B%26B+Vicolo+Bari&target=https://localis.guide/?p=bb-vicolo-bari
+ *
+ * Query params:
+ *   p       — partner slug (per tracking nel link QR)
+ *   name    — display name partner (mostrato in footer)
+ *   target  — URL override del QR (default: /p/<slug> se p presente, altrimenti homepage)
+ */
+---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Localis · Locandina Partner A5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* === Print A5 verticale, no margini browser === */
+    @page {
+      size: A5 portrait;
+      margin: 0;
+    }
+    @media print {
+      body { margin: 0; background: white; }
+      .controls { display: none !important; }
+      .poster { box-shadow: none; }
+    }
+
+    :root {
+      --color-surface: oklch(96% 0.012 75);
+      --color-ink: oklch(20% 0.025 240);
+      --color-ink-muted: oklch(42% 0.022 240);
+      --color-ink-subtle: oklch(54% 0.018 240);
+      --color-accent: oklch(56% 0.14 45);
+      --color-border: oklch(75% 0.008 75);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+      background: oklch(88% 0.01 75);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      gap: 24px;
+    }
+
+    .controls {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      padding: 16px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px oklch(15% 0.012 240 / 0.1);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .controls h2 {
+      margin: 0 0 8px 0;
+      font-family: 'Spectral', serif;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .controls code {
+      background: oklch(95% 0.005 240);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    .controls button {
+      background: var(--color-ink);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .controls button:hover { opacity: 0.9; }
+
+    /* === Poster A5 (148x210mm) === */
+    .poster {
+      width: 148mm;
+      height: 210mm;
+      background: var(--color-surface);
+      color: var(--color-ink);
+      box-shadow: 0 8px 32px oklch(15% 0.012 240 / 0.18);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 16mm 13mm 12mm 13mm;
+      box-sizing: border-box;
+    }
+
+    /* === Headline IT (protagonista) ===
+     * Pattern editoriale "or-contrast": prima riga regular (alternativa banale),
+     * seconda italic (alternativa desiderabile).
+     */
+    .poster-headline-it {
+      font-family: 'Spectral', serif;
+      font-weight: 400;
+      font-size: 24pt;
+      line-height: 1.08;
+      letter-spacing: -0.014em;
+      color: var(--color-ink);
+      margin: 0 0 3mm 0;
+    }
+    .poster-headline-it em {
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    /* === Headline EN (sub, più piccola, italic muted) === */
+    .poster-headline-en {
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 14pt;
+      line-height: 1.18;
+      color: var(--color-ink-muted);
+      margin: 0 0 8mm 0;
+    }
+    .poster-headline-en em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--color-ink);
+    }
+
+    /* === QR section === */
+    .poster-qr-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 1mm 0 6mm 0;
+    }
+    .poster-qr-frame {
+      width: 62mm;
+      height: 62mm;
+      padding: 2.5mm;
+      background: white;
+      border: 0.4mm solid var(--color-ink);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .poster-qr-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .poster-qr-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--color-surface);
+      padding: 1mm 3.5mm;
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 11pt;
+      color: var(--color-ink);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      border: 0.25mm solid var(--color-ink);
+    }
+
+    /* === Instructions IT + EN === */
+    .poster-instructions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5mm;
+      margin-bottom: 5mm;
+    }
+    .poster-instructions-it {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 11pt;
+      color: var(--color-ink);
+      letter-spacing: 0.01em;
+    }
+    .poster-instructions-en {
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 9.5pt;
+      color: var(--color-ink-muted);
+    }
+
+    /* === Scan invite (flag emoji bilingual cue) === */
+    .poster-scan {
+      text-align: center;
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 9pt;
+      color: var(--color-ink);
+      margin-bottom: 4mm;
+      letter-spacing: 0.02em;
+    }
+    .poster-scan .flag {
+      font-size: 11pt;
+      vertical-align: middle;
+    }
+
+    /* === Micro-claims row (functional details) === */
+    .poster-claims {
+      display: flex;
+      justify-content: center;
+      gap: 2.5mm;
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 7.5pt;
+      color: var(--color-ink-muted);
+      margin-bottom: 4mm;
+      flex-wrap: wrap;
+    }
+    .poster-claims-sep {
+      color: var(--color-accent);
+      font-family: 'Spectral', serif;
+      font-style: italic;
+    }
+
+    /* === Footer === */
+    .poster-footer {
+      margin-top: auto;
+      padding-top: 4mm;
+      border-top: 0.3mm solid var(--color-border);
+      text-align: center;
+    }
+    .poster-footer-url {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 9pt;
+      letter-spacing: 0.04em;
+      color: var(--color-ink);
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .poster-footer-partner {
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 9pt;
+      color: var(--color-ink-muted);
+      display: block;
+    }
+    .poster-footer-partner em {
+      font-weight: 500;
+      color: var(--color-ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <h2>Locandina partner A5 — Localis (bilingue IT+EN)</h2>
+    <p>
+      Personalizza via query string:
+      <code>?p=slug-partner&amp;name=Nome+Partner</code>
+    </p>
+    <p>
+      Per stampare: <strong>Ctrl/Cmd+P</strong> → "Salva come PDF" → manda al tipografo
+      (A5 verticale, no margini, no header/footer browser).
+    </p>
+    <button onclick="window.print()">Stampa / Salva PDF</button>
+  </div>
+
+  <div class="poster" data-poster>
+    <!-- Headline IT -->
+    <p class="poster-headline-it">
+      Puoi attraversare Bari…<br />
+      <em>oppure capirla davvero.</em>
+    </p>
+
+    <!-- Headline EN -->
+    <p class="poster-headline-en">
+      You can walk through Bari…<br />
+      <em>or actually understand it.</em>
+    </p>
+
+    <!-- QR with Localis logo overlay -->
+    <div class="poster-qr-wrap">
+      <div class="poster-qr-frame">
+        <img data-qr-img src="" alt="QR code Localis" />
+        <span class="poster-qr-logo">Localis</span>
+      </div>
+    </div>
+
+    <!-- Instructions IT + EN -->
+    <div class="poster-instructions">
+      <span class="poster-instructions-it">Ascolta mentre cammini 🎧</span>
+      <span class="poster-instructions-en">Listen while you walk 🎧</span>
+    </div>
+
+    <!-- Scan invite bilingue -->
+    <p class="poster-scan">
+      <span class="flag">🇮🇹 🇬🇧</span> &nbsp; Scansiona e parti &nbsp;·&nbsp; Scan &amp; start
+    </p>
+
+    <!-- Micro-claims -->
+    <div class="poster-claims">
+      <span>20 min · 20 min</span>
+      <span class="poster-claims-sep">·</span>
+      <span>niente app · no app</span>
+      <span class="poster-claims-sep">·</span>
+      <span>€4,99</span>
+    </div>
+
+    <!-- Footer -->
+    <div class="poster-footer">
+      <span class="poster-footer-url">localis.guide</span>
+      <span class="poster-footer-partner" data-partner-credit></span>
+    </div>
+  </div>
+
+  <script is:inline>
+    /**
+     * QR generation via qrserver.com (free, no API key).
+     * ECC=H per tollerare il logo overlay centrale (~30% di copertura).
+     */
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const p = params.get('p') || '';
+      const name = params.get('name') || '';
+      const targetOverride = params.get('target');
+
+      // QR target URL — preferisce /p/<slug> se partner attivo, altrimenti homepage
+      let qrUrl;
+      if (targetOverride) {
+        qrUrl = targetOverride;
+      } else if (p) {
+        qrUrl = `https://localis.guide/p/${encodeURIComponent(p)}`;
+      } else {
+        qrUrl = 'https://localis.guide/';
+      }
+
+      const qrImg = document.querySelector('[data-qr-img]');
+      const qrParams = new URLSearchParams({
+        data: qrUrl,
+        size: '700x700',
+        margin: '0',
+        ecc: 'H',           // high error correction (tollera il logo)
+        format: 'svg',
+        color: '231C26',    // ink (deep navy tinted)
+        bgcolor: 'F5EFE3',  // parchment surface
+      });
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?${qrParams.toString()}`;
+      qrImg.alt = `Scansiona per aprire ${qrUrl}`;
+
+      // Partner credit con pointer emoji
+      if (name) {
+        const escaped = (function (s) {
+          const div = document.createElement('div');
+          div.textContent = s;
+          return div.innerHTML;
+        })(name);
+        document.querySelector('[data-partner-credit]').innerHTML =
+          `👉 Consigliato da <em>${escaped}</em>`;
+      }
+    })();
+  </script>
+</body>
+</html>

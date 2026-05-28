@@ -1,0 +1,292 @@
+TREMITI-INSELN
+Erzähler: Tonino, 74 Jahre, Bootsführer von San Domino, begleitete Lucio Dalla dreißig Jahre lang durch die Höhlen
+
+=====
+CAP. 1 — INTRO: LUCIO UND DAS SCHLAUCHBOOT
+voice: valerio
+
+Das erste Mal, dass Lucio Dalla in mein Schlauchboot stieg, war 1979. <break time="1.2s"/>
+
+Er kam mit einer Tasche und einem Strohhut im Hafen von San Domino an. <break time="0.8s"/> Kein Gefolge, <break time="0.5s"/> kein Assistent, <break time="0.5s"/> niemand, der ihn sofort erkannte — <break time="0.5s"/> oder zumindest tat er so. <break time="0.8s"/> Er fragte, ob ich ihn zu den Höhlen fahren würde. <break time="0.8s"/> Ich sagte ja. <break time="0.8s"/> Wir fuhren los. <break time="1.5s"/>
+
+Mein Name ist Tonino. <break time="0.8s"/> Vierundsiebzig Jahre alt. <break time="0.8s"/> Hier geboren, <break time="0.5s"/> hier aufgewachsen, <break time="0.5s"/> hier gelebt. <break time="0.8s"/> Ich fing mit siebzehn als Bootsführer mit meinem Vater an, <break time="0.5s"/> und habe nie aufgehört. <break time="1.2s"/>
+
+Lucio kam jedes Jahr zurück. <break time="0.8s"/> Manchmal mit anderen Musikern — <break time="0.5s"/> Leute, die ich nicht kannte, <break time="0.5s"/> er stellte sie vor und ich nickte. <break time="0.8s"/> Manchmal allein. <break time="0.8s"/> Immer mit mir. <break time="1.2s"/>
+
+Das letzte Mal, als er kam, trug er denselben Huttyp wie 1979. <break time="0.8s"/> Ich weiß nicht, ob es derselbe war. <break time="0.8s"/> Ich fragte ihn, ob er immer zurückkam, weil die Inseln schön seien. <break time="0.8s"/> Er sagte: nein. <break time="0.5s"/> Ich komme zurück, weil du keine Fragen stellst. <break time="1.5s"/>
+
+=====
+CAP. 2 — DIE INSELN: WAS SIE SIND UND WIE MAN HINKOMMT
+voice: valerio
+
+Die Tremiti-Inseln sind fünf. <break time="1.0s"/>
+
+San Domino, die größte — <break time="0.5s"/> Kiefernwald, Höhlen, Strände. <break time="0.8s"/> San Nicola, die historische — <break time="0.5s"/> die Abtei, die Burg, die Mönche. <break time="0.8s"/> Capraia, unbewohnt. <break time="0.8s"/> Cretaccio, ein Felsen. <break time="0.8s"/> La Vecchia, ein weiterer Felsen. <break time="1.2s"/>
+
+Man kommt mit der Fähre von Vieste, <break time="0.5s"/> Peschici, <break time="0.5s"/> Rodi Garganico, <break time="0.5s"/> Manfredonia, <break time="0.5s"/> Termoli. <break time="0.8s"/> Im Sommer gibt es ständige Überfahrten — <break time="0.5s"/> ungefähr jede Stunde. <break time="0.8s"/> Im Winter zwei Überfahrten pro Woche. <break time="1.2s"/>
+
+Dreihundert Einwohner im Winter. <break time="0.8s"/> Dreihunderttausend Besucher im Sommer. <break time="0.8s"/> Man versteht, wie sich das Leben hier verändert. <break time="1.0s"/>
+
+Im Winter sind die Inseln still. <break time="0.8s"/> Der Wind streicht durch die Kiefern. <break time="0.8s"/> Die Fähre bringt Vorräte und Post. <break time="0.8s"/> Jeder kennt jeden. <break time="0.8s"/> Ich kenne jeden, der hier lebt — <break time="0.5s"/> und ich kenne seine Geschichte, <break time="0.5s"/> und die Geschichte seines Vaters. <break time="1.5s"/>
+
+=====
+CAP. 3 — SAN DOMINO: DER WALD UND DAS MEER
+voice: valerio
+
+San Domino ist die Insel der Schönheit. <break time="1.2s"/>
+
+Ein Aleppo-Kiefernwald, der fast die ganze Insel bedeckt — <break time="0.5s"/> Harzduft, <break time="0.5s"/> Schatten auch im Sommer, <break time="0.5s"/> schmale Pfade zwischen den Wurzeln. <break time="1.0s"/>
+
+Und dann das Meer. <break time="0.8s"/> Ein Meer, das Lucio jedes Mal suchte. <break time="0.8s"/> Er sagte mir: Tonino, das Wasser hier hat eine Farbe, die ich nirgendwo sonst gesehen habe. <break time="0.8s"/> Und er hatte recht. <break time="1.2s"/>
+
+Der Meeresgrund rund um die Inseln ist heller Fels und Posidonie — <break time="0.5s"/> diese Meerespflanze, die das Wasser grün macht. <break time="0.8s"/> Wenige Meter vom Ufer entfernt, <break time="0.5s"/> an bestimmten Stellen, <break time="0.5s"/> wechselt das Wasser dreimal die Farbe. <break time="0.5s"/> Smaragdgrün nahe am Ufer. <break time="0.5s"/> Türkis in der Mitte. <break time="0.5s"/> Tiefblau, wo der Grund abfällt. <break time="1.2s"/>
+
+Cala delle Arene ist der Hauptstrand von San Domino. <break time="0.8s"/> Sand gemischt mit Posidonie. <break time="0.8s"/> Im Sommer füllt er sich. <break time="0.8s"/> Aber es gibt Buchten, die nur per Boot erreichbar sind — <break time="0.5s"/> Cala delle Roselle, <break time="0.5s"/> Cala dello Spido — <break time="0.5s"/> wo der Tourismus nicht hinreicht. <break time="0.8s"/> Die kenne ich. <break time="1.5s"/>
+
+=====
+CAP. 4 — DIE HÖHLEN: DIE FAHRT MIT LUCIO
+voice: valerio
+
+Die Höhlenfahrt war das Ritual. <break time="1.2s"/>
+
+Jedes Mal, wenn Lucio kam, <break time="0.5s"/> vor allem anderen, <break time="0.5s"/> die Höhlenfahrt. <break time="0.8s"/> Früh morgens, <break time="0.5s"/> wenn das Meer ruhig war <break time="0.5s"/> und das Licht tief auf dem Wasser einfiel. <break time="1.2s"/>
+
+Die Grotta delle Viole ist die bekannteste. <break time="0.8s"/> Sie heißt so, weil die Wände das Licht des Wassers reflektieren <break time="0.5s"/> und violett werden. <break time="0.8s"/> Es ist kein Spezialeffekt — <break time="0.5s"/> es ist Physik. <break time="0.5s"/> Das Licht, das von unten durch das Wasser filtert, <break time="0.5s"/> färbt die Felswände. <break time="1.2s"/>
+
+Das erste Mal, als Lucio sie sah, verstummte er. <break time="0.8s"/> Er sagte vielleicht zwei Minuten lang nichts. <break time="0.8s"/> Dann sagte er: Tonino, hier höre ich Lieder. <break time="1.0s"/>
+
+Ich wusste nicht, ob er etwas Konkretes oder etwas Metaphorisches meinte. <break time="0.8s"/> Bei ihm konnte man das nie wissen. <break time="0.8s"/> Aber ich verstand, was er meinte — <break time="0.5s"/> manche Orte haben eine Resonanz. <break time="0.5s"/> Ich weiß nicht, wie man das in der Musik nennt. <break time="0.5s"/> Ich weiß, man spürt es. <break time="1.2s"/>
+
+Die Grotta del Bue Marino ist die größte. <break time="0.8s"/> Man fährt mit dem Schlauchboot hinein. <break time="0.8s"/> Innen ist sie zehn Meter hoch, <break time="0.5s"/> mit Stalaktiten, die von der Decke hängen. <break time="0.8s"/> Die Bue Marino — Mönchsrobben — <break time="0.5s"/> lebten hier bis in die 1970er Jahre. <break time="0.8s"/> Dann verschwanden sie. <break time="0.8s"/> Gelegentlich noch eine Sichtung, <break time="0.5s"/> aber selten. <break time="1.5s"/>
+
+=====
+CAP. 5 — SAN NICOLA: DIE INSEL DER MÖNCHE
+voice: valerio
+
+San Nicola ist die Insel der Geschichte. <break time="1.2s"/>
+
+Keine Hotels. <break time="0.8s"/> Keine Restaurants. <break time="0.8s"/> Keine Strände. <break time="0.8s"/> Es gibt einen Anleger, <break time="0.5s"/> eine Treppe, <break time="0.5s"/> eine mittelalterliche Burg, <break time="0.5s"/> und eine Benediktinerabtei aus dem zehnten Jahrhundert. <break time="1.2s"/>
+
+Die Abtei Santa Maria ist über einem heidnischen griechischen Tempel errichtet. <break time="0.8s"/> Darüber gebaut — <break time="0.5s"/> das heißt, die Fundamente des Tempels sind die Fundamente der Abtei. <break time="0.8s"/> Die Mönche räumten das Vorhandene nicht weg. <break time="0.5s"/> Sie bauten darüber. <break time="1.2s"/>
+
+Innen gibt es einen Mosaikboden aus dem zwölften Jahrhundert. <break time="0.8s"/> Tiere, geometrische Muster, Symbole. <break time="0.8s"/> Tausend Jahre Fußschritte — <break time="0.5s"/> und alles ist noch sichtbar. <break time="1.0s"/>
+
+Die Mönche sind noch da. <break time="0.8s"/> Nur wenige — <break time="0.5s"/> zwei oder drei zu bestimmten Zeiten. <break time="0.8s"/> Sie leben in der Abtei, <break time="0.5s"/> öffnen die Kirche für Besucher. <break time="0.8s"/> Manchmal sehe ich sie, wenn ich mit dem Schlauchboot vorbefahre — <break time="0.5s"/> schwarze Gestalten auf dem weißen Anleger. <break time="0.8s"/> Dieselbe Szene wie vor achthundert Jahren. <break time="1.5s"/>
+
+=====
+CAP. 6 — DIE VERBANNUNG: PARADIES UND GEFÄNGNIS
+voice: valerio
+
+Etwas, das Lucio kannte und mich gebeten hatte, ihm zu erzählen. <break time="1.2s"/>
+
+Die Tremiti waren ein Gefängnis. <break time="1.5s"/>
+
+Die Bourbonen schickten im neunzehnten Jahrhundert politische Gefangene hierher. <break time="0.8s"/> Die Insel war perfekt — <break time="0.5s"/> isoliert, <break time="0.5s"/> schwer erreichbar, <break time="0.5s"/> unmöglich zu entkommen. <break time="0.8s"/> Die Gefangenen lebten in der Abtei von San Nicola — <break time="0.5s"/> dieselben Mauern wie die Mönche, <break time="0.5s"/> aber unter sehr anderen Bedingungen. <break time="1.2s"/>
+
+Dann belebte der Faschismus diese Praxis wieder. <break time="0.8s"/> Die dreißiger Jahre — <break time="0.5s"/> Regimegegner wurden hierher in die innere Verbannung geschickt. <break time="0.8s"/> Intellektuelle, Politiker, Antifaschisten. <break time="0.8s"/> Sie lebten auf der Insel, <break time="0.5s"/> nicht in einer Zelle — <break time="0.5s"/> sie konnten sich bewegen, <break time="0.5s"/> aber sie konnten nicht weg. <break time="1.2s"/>
+
+Lucio sagte mir einmal: <break time="0.5s"/> stell dir vor, wie seltsam das war. <break time="0.8s"/> Man schickt dich, deine Strafe am schönsten Ort der Welt zu verbüßen. <break time="0.8s"/> Und die Schönheit macht es noch schlimmer — <break time="0.5s"/> weil man alles sehen kann <break time="0.5s"/> außer dem einen, was man will. <break time="1.0s"/>
+
+Ich saß eine Weile mit diesem Gedanken. <break time="0.8s"/> Er hatte recht, wie immer. <break time="1.5s"/>
+
+=====
+CAP. 7 — INSELLEBEN IM WINTER
+voice: valerio
+
+Im Sommer sind die Tremiti das, was man auf den Fotos sieht. <break time="1.0s"/>
+
+Im Winter sind sie das, was ich kenne. <break time="1.5s"/>
+
+November. <break time="0.8s"/> Die Fähre fährt zweimal pro Woche. <break time="0.8s"/> Wenn das Meer rau ist, <break time="0.5s"/> fährt sie nicht. <break time="0.8s"/> Sie bleibt vielleicht drei, vier Tage aus. <break time="0.8s"/> Nichts kommt an — <break time="0.5s"/> keine Vorräte, keine Post, keine Menschen. <break time="1.2s"/>
+
+An diesen Tagen ist die Insel wirklich isoliert. <break time="0.8s"/> So wie sie immer war. <break time="0.8s"/> Man kommt mit dem aus, was man hat. <break time="0.8s"/> Man hilft sich gegenseitig. <break time="0.8s"/> Man isst zusammen. <break time="1.2s"/>
+
+Das Wintermeer rund um die Inseln ist ein anderes Meer. <break time="0.8s"/> Nicht das Sommerturquoise — <break time="0.5s"/> dunkelgrün, <break time="0.5s"/> fast schwarz an Tramontana-Tagen. <break time="0.8s"/> Die Wellen dringen in die Höhlen ein und machen ein Geräusch, das man einen halben Kilometer weit hört. <break time="1.0s"/>
+
+Ich fahre trotzdem raus. <break time="0.8s"/> Nicht jeden Tag. <break time="0.8s"/> Aber wenn das Wetter es erlaubt. <break time="0.8s"/> Ich umrunde die Inseln, <break time="0.5s"/> überprüfe die Boote, <break time="0.5s"/> schaue. <break time="0.8s"/> In siebzig Jahren Meer werde ich des Schauens nie müde. <break time="1.5s"/>
+
+=====
+CAP. 8 — WAS MAN TUN KANN UND WIE MAN KOMMT
+voice: valerio
+
+Das Wichtigste: Fähre im Voraus buchen. <break time="1.0s"/>
+
+Im Sommer füllen sich die Überfahrten. <break time="0.8s"/> Es ist nicht ungewöhnlich, alles ausgebucht zu finden, wenn man bis zum Vortag wartet. <break time="0.8s"/> Mindestens eine Woche im Voraus buchen, <break time="0.5s"/> zwei, wenn man im August kommt. <break time="1.2s"/>
+
+Um die Höhlen zu sehen: ein Schlauchboot mieten oder eine geführte Bootstour nehmen. <break time="0.8s"/> Die Touren starten jeden Morgen vom Hafen San Domino. <break time="0.8s"/> Sie dauern drei bis vier Stunden. <break time="0.8s"/> Sie beinhalten alle wichtigen Höhlen. <break time="0.8s"/> Bittet den Bootsführer, in der Grotta delle Viole anzuhalten <break time="0.5s"/> und den Motor abzustellen. <break time="0.8s"/> Hört zu. <break time="1.2s"/>
+
+Für San Nicola: mit der Fähre oder dem Privatboot fahren. <break time="0.8s"/> Der Abteibesuch dauert eine Stunde. <break time="0.8s"/> Er ist kostenlos. <break time="0.8s"/> Die Mönche nehmen Spenden an. <break time="1.0s"/>
+
+Wenn möglich, eine Nacht bleiben. <break time="0.8s"/> Es gibt kleine Pensionen auf San Domino. <break time="0.8s"/> Am Abend, <break time="0.5s"/> wenn die Fähre gefahren ist und die Tagesbesucher gegangen sind, <break time="0.5s"/> werden die Inseln wieder still. <break time="0.8s"/> Es ist ein anderer Ort. <break time="1.5s"/>
+
+=====
+CAP. 9 — WAS MAN AUF DEN TREMITI ISST
+voice: valerio
+
+Hummer. <break time="1.5s"/>
+
+Die Gewässer rund um die Tremiti sind geschützt — <break time="0.5s"/> Nationalpark, <break time="0.5s"/> kontrollierte Fischerei. <break time="0.8s"/> Das Ergebnis ist, dass der Meeresgrund noch reich ist. <break time="0.8s"/> Hummer, Seeigel, Oktopus, Zackenbarsch. <break time="0.8s"/> Fisch, der in vielen anderen Teilen des Mittelmeers fast verschwunden ist. <break time="1.2s"/>
+
+Die Restaurants auf San Domino kochen, was die Einheimischen fangen. <break time="0.8s"/> Das ist kein Werbeslogan — <break time="0.5s"/> es ist praktische Realität. <break time="0.8s"/> Es gibt keinen Fischmarkt. <break time="0.8s"/> Es kommt kein Fisch von außen. <break time="0.8s"/> Man kocht, was man hereinbringt. <break time="1.2s"/>
+
+Gegrillter Hummer mit Olivenöl — <break time="0.5s"/> einfach, <break time="0.5s"/> ohne Saucen, <break time="0.5s"/> ohne Komplikationen. <break time="0.8s"/> Frischer Fisch braucht nichts. <break time="0.8s"/> Wer zu viel hinzufügt, vertraut dem Fisch nicht. <break time="1.2s"/>
+
+Lucio nahm immer den Hummer. <break time="0.8s"/> Jedes Mal. <break time="0.8s"/> Mit Weißwein. <break time="0.8s"/> Und er sagte: Tonino, das ist das Beste, was es gibt. <break time="0.8s"/> Ich antwortete: ja, aber sag es deinem Koch nicht. <break time="1.5s"/>
+
+=====
+CAP. 10 — CAPRAIA UND CRETACCIO: DIE INSELN, DIE NIEMAND BESUCHT
+voice: valerio
+
+Die Tremiti-Inseln sind fünf — <break time="0.8s"/> aber alle reden nur über zwei. <break time="1.2s"/>
+
+San Domino und San Nicola kennt jeder. <break time="0.8s"/> Capraia kennen die, die oft kommen. <break time="0.8s"/> Cretaccio und La Vecchia kennt fast niemand — <break time="0.5s"/> und genau deshalb verdienen sie eine Erwähnung. <break time="1.2s"/>
+
+Capraia ist unbewohnt. <break time="0.8s"/> Fels und Mittelmeergestrüpp. <break time="0.8s"/> Kein Hafen, <break time="0.5s"/> kein Anleger. <break time="0.8s"/> Man umrundet sie mit dem Schlauchboot. <break time="0.8s"/> Im Sommer nisten dort Seevögel — <break time="0.5s"/> Sturmtaucher, <break time="0.5s"/> Möwen, <break time="0.5s"/> gelegentlich ein Kormoran. <break time="0.8s"/> Es ist eine Insel, die für sich selbst existiert, <break time="0.5s"/> nicht für die Besucher. <break time="1.2s"/>
+
+Cretaccio ist ein Klumpen roter Tonerde — <break time="0.5s"/> der Name kommt von "creta", <break time="0.5s"/> Ton. <break time="0.8s"/> Je nach Licht wirkt er orange, <break time="0.5s"/> bordeauxrot, <break time="0.5s"/> fast violett. <break time="0.8s"/> Vom Schlauchboot aus, <break time="0.5s"/> wenige Meter entfernt, <break time="0.5s"/> ist es eines der seltsamsten Dinge, die man in diesem Meer sehen kann. <break time="1.5s"/>
+
+=====
+CAP. 11 — DER MEERESPARK: WAS DARUNTER IST
+voice: valerio
+
+Die Gewässer rund um die Tremiti sind geschützt. <break time="1.2s"/>
+
+Meeresschutzgebiet seit 1989 — <break time="0.5s"/> eines der ersten in Italien. <break time="0.8s"/> Das bedeutet, dass die Fischerei geregelt ist, <break time="0.5s"/> bestimmte Zonen gesperrt sind, <break time="0.5s"/> der Meeresgrund Jahrzehnte hatte, sich zu erholen. <break time="1.2s"/>
+
+Das Ergebnis sieht man unter Wasser. <break time="0.8s"/> Wiesenflächen aus Posidonie oceanica — <break time="0.5s"/> jene Meerespflanze, die das Mittelmeer mit Sauerstoff versorgt — <break time="0.5s"/> bevölkert von Zackenbarschen, <break time="0.5s"/> Weißbrassen, <break time="0.5s"/> Goldbrassen. <break time="0.8s"/> Hummer in den Felsspalten. <break time="0.8s"/> An manchen Stellen ist der Meeresgrund so lebendig, <break time="0.5s"/> dass es kaum vorstellbar ist, dass er im Mittelmeer des einundzwanzigsten Jahrhunderts noch existiert. <break time="1.2s"/>
+
+Taucher sagen, die Tremiti gehören zu den besten Tauchstellen der Adria. <break time="0.8s"/> Ich tauche nicht. <break time="0.8s"/> Aber ich sehe es von oben — <break time="0.5s"/> wie das Wasser die Farbe wechselt, <break time="0.5s"/> die Fische, die man vom Schlauchboot aus sieht. <break time="0.8s"/> Was darunter ist, erriere ich aus dem, was ich an der Oberfläche sehe. <break time="1.5s"/>
+
+=====
+CAP. 12 — DER NACHTHIMMEL ÜBER DEN TREMITI
+voice: valerio
+
+Wer auf den Tremiti schläft, weiß etwas, das Tagesbesucher nicht wissen. <break time="1.2s"/>
+
+Der Nachthimmel hier ist etwas ganz anderes. <break time="1.5s"/>
+
+Es gibt kein künstliches Licht ringsum — <break time="0.5s"/> das Meer ist dunkel, <break time="0.5s"/> die Festlandsküsten sind weit weg. <break time="0.8s"/> Im Sommer, <break time="0.5s"/> ohne Mond, <break time="0.5s"/> ist die Milchstraße mit bloßem Auge sichtbar. <break time="0.8s"/> Nicht als vager Schleier — <break time="0.5s"/> als dichtes, <break time="0.5s"/> klar gezeichnetes Band, <break time="0.5s"/> das den Himmel von einem Ende zum anderen durchschneidet. <break time="1.2s"/>
+
+Lucio wusste das. <break time="0.8s"/> Er ging nachts auf den Steg. <break time="0.8s"/> Er saß dort eine Stunde, <break time="0.5s"/> manchmal zwei. <break time="0.8s"/> Er sprach nicht. <break time="0.8s"/> Ich weiß nicht, ob er den Himmel oder das Meer betrachtete. <break time="0.8s"/> Vielleicht beides zusammen. <break time="1.2s"/>
+
+Wenn ihr zu den Tremiti kommt, <break time="0.8s"/> bleibt eine Nacht. <break time="0.8s"/> Wartet, bis die Fähre um siebzehn Uhr abgefahren ist <break time="0.5s"/> und die Tagesbesucher verschwunden sind. <break time="0.8s"/> Dann geht um elf nach draußen. <break time="0.8s"/> Schaut nach oben. <break time="1.5s"/>
+
+=====
+CAP. 13 — DER HAFEN VON SAN DOMINO: WO DAS LEBEN KREIST
+voice: valerio
+
+Alles, was auf den Tremiti geschieht, läuft über den Hafen von San Domino. <break time="1.2s"/>
+
+Die Fähren kommen dort an. <break time="0.8s"/> Die Vorräte kommen dort an. <break time="0.8s"/> Der Fisch geht von dort ab. <break time="0.8s"/> Die Geschichten werden dort erzählt — <break time="0.5s"/> auf dem Steg, <break time="0.5s"/> auf den Poller sitzend, <break time="0.5s"/> mit einem Kaffee in der Hand. <break time="1.2s"/>
+
+Ich habe die Hälfte meines Lebens an diesem Hafen verbracht. <break time="0.8s"/> Ich habe Touristen ankommen sehen, <break time="0.5s"/> Journalisten, <break time="0.5s"/> Politiker, <break time="0.5s"/> Regisseure. <break time="0.8s"/> Ich habe Lucio mit seiner Tasche und dem Strohhut ankommen sehen. <break time="0.8s"/> Ich habe Särge abfahren sehen — <break time="0.5s"/> im Winter, <break time="0.5s"/> wenn jemand auf der Insel stirbt, <break time="0.5s"/> nimmt die Fähre auch die mit. <break time="1.2s"/>
+
+Der Hafen ist das schlagende Herz. <break time="0.8s"/> Wenn er stillsteht — <break time="0.5s"/> wenn das Meer rau ist und niemand kommt — <break time="0.5s"/> hält die Insel den Atem an. <break time="0.8s"/> Wenn die Fähre zurückkommt, <break time="0.5s"/> beginnt sie wieder zu atmen. <break time="1.5s"/>
+
+=====
+CAP. 14 — DIE JAHRESZEITEN: WIE SICH DIE TREMITI VERÄNDERN
+voice: valerio
+
+Die Tremiti im August und die Tremiti im Dezember sind zwei verschiedene Inseln. <break time="1.2s"/>
+
+August: volle Strände, <break time="0.5s"/> stündliche Fähren, <break time="0.5s"/> Restaurants, die Tage im Voraus gebucht werden, <break time="0.5s"/> überall Schlauchboote. <break time="0.8s"/> Die Insel ist lebendig, <break time="0.5s"/> laut, <break time="0.5s"/> schön. <break time="0.8s"/> Aber sie gehört nicht nur euch. <break time="1.2s"/>
+
+Dezember: die Fähre zweimal pro Woche. <break time="0.8s"/> Dreihundert Einwohner. <break time="0.8s"/> Eine offene Bar. <break time="0.8s"/> Der Wind treibt hohe Wellen in die Höhlen. <break time="0.8s"/> Stille. <break time="1.2s"/>
+
+Beide sind real. <break time="0.8s"/> Ich bevorzuge die Dezember-Version — <break time="0.5s"/> aber ich sage das den Touristen nicht, <break time="0.5s"/> sonst kommen sie alle <break time="0.5s"/> und es funktioniert nicht mehr. <break time="0.8s"/> Ich sage es euch, weil ihr schon hier seid. <break time="0.5s"/> Oder zumindest <break time="0.5s"/> fast. <break time="1.5s"/>
+
+=====
+CAP. 15 — GESCHICHTE: RÖMER, BENEDIKTINER, GEFANGENE
+voice: valerio
+
+Die Tremiti haben eine lange Geschichte. <break time="1.2s"/>
+
+Die Römer schickten schon lange vor den Bourbonen Menschen hierher ins Exil. <break time="0.8s"/> Julia, <break time="0.5s"/> Nichte des Augustus, <break time="0.5s"/> wurde im Jahr 8 n. Chr. hierher verbannt. <break time="0.8s"/> Derselbe Ort, <break time="0.5s"/> dieselben Wellen, <break time="0.5s"/> dieselbe Unmöglichkeit wegzugehen. <break time="1.2s"/>
+
+Die Benediktiner kamen im elften Jahrhundert. <break time="0.8s"/> Sie bauten die Abtei Santa Maria auf San Nicola — <break time="0.5s"/> die noch heute steht. <break time="0.8s"/> Sie verwalteten die Inseln jahrhundertelang, <break time="0.5s"/> bewirtschafteten sie, <break time="0.5s"/> fischten, <break time="0.5s"/> kopierten Manuskripte. <break time="0.8s"/> Dann die Piraten, <break time="0.5s"/> dann die Gefangenen, <break time="0.5s"/> dann die Touristen. <break time="1.2s"/>
+
+Tonino — <break time="0.5s"/> also ich — <break time="0.5s"/> bin das letzte Glied in dieser Kette. <break time="0.8s"/> Bootsführer wie mein Vater, <break time="0.5s"/> wie mein Großvater. <break time="0.8s"/> Ich habe keine Abteien gebaut und keine Gefangenen transportiert. <break time="0.8s"/> Ich habe Leute zu den Höhlen gebracht. <break time="0.8s"/> Das ist weniger episch. <break time="0.8s"/> Aber es ist Teil derselben Geschichte. <break time="1.5s"/>
+
+=====
+CAP. 16 — DIE FISCHEREI: HUMMER UND REGELN
+voice: valerio
+
+Der Hummer der Tremiti ist berühmt. <break time="1.2s"/>
+
+Nicht zufällig — <break time="0.5s"/> die geschützten Gewässer haben den Beständen ermöglicht, sich zu erholen. <break time="0.8s"/> Hummer leben in den Felsspalten, <break time="0.5s"/> in unterschiedlichen Tiefen. <break time="0.8s"/> Die Fischer fangen sie mit Hummerkörben — <break time="0.5s"/> Netzfallen auf dem Meeresgrund. <break time="0.8s"/> Nicht viele. <break time="0.8s"/> Was gebraucht wird, <break time="0.5s"/> nicht mehr. <break time="1.2s"/>
+
+Der Meerespark regelt die Fischerei. <break time="0.8s"/> Nicht alles darf genommen werden, <break time="0.5s"/> nicht das ganze Jahr, <break time="0.5s"/> nicht überall. <break time="0.8s"/> Die Fischer beschweren sich manchmal — <break time="0.5s"/> verständlicherweise, <break time="0.5s"/> es ist ihr Lebensunterhalt. <break time="0.8s"/> Aber ohne die Regeln leert sich das Meer. <break time="0.8s"/> Ich habe es anderswo erlebt. <break time="0.8s"/> Hier ist es nicht passiert, weil es die Regeln gibt. <break time="1.2s"/>
+
+Seeigel sind ein weiterer Schatz. <break time="0.8s"/> Roh, <break time="0.5s"/> mit einem Spritzer Zitrone. <break time="0.8s"/> Lucio aß sie auf dem Steg sitzend — <break time="0.5s"/> direkt vom Fischer gekauft, <break time="0.5s"/> kein Teller, <break time="0.5s"/> keine Gabel. <break time="0.8s"/> Das war sein Lieblingsmittagessen. <break time="1.5s"/>
+
+=====
+CAP. 17 — DIE NACHT: STERNE UND DUNKLES MEER
+voice: valerio
+
+Wer auf den Tremiti schläft, weiß etwas, das Tagesbesucher nicht wissen. <break time="1.2s"/>
+
+Nachts wird das Meer phosphoreszierend. <break time="1.2s"/>
+
+Zu bestimmten Zeiten des Jahres, <break time="0.8s"/> an bestimmten Stellen der Küste, <break time="0.5s"/> brechen die Wellen mit einem blauen Leuchten. <break time="0.8s"/> Es ist keine Illusion — <break time="0.5s"/> es sind biolumineszierende Mikroorganismen. <break time="0.8s"/> Phytoplankton, das auf Bewegung reagiert. <break time="0.8s"/> Vom Schlauchboot aus, <break time="0.5s"/> nachts, <break time="0.5s"/> sieht man die leuchtenden Spuren im Wasser. <break time="1.2s"/>
+
+Lucio wusste das. <break time="0.8s"/> Eine Nacht bat er mich, spät rauszufahren — <break time="0.5s"/> nach Mitternacht. <break time="0.8s"/> Wir umrundeten die Insel in der Stille, <break time="0.5s"/> Motor auf kleinstem Lauf. <break time="0.8s"/> Das Wasser schimmerte blau. <break time="0.8s"/> Er sagte nichts. <break time="0.8s"/> Am nächsten Morgen sagte er: <break time="0.5s"/> Tonino, heute Nacht habe ich etwas gespürt, das ich nicht in Musik fassen kann. <break time="0.8s"/> Vielleicht ist das auch besser so. <break time="1.5s"/>
+
+=====
+CAP. 18 — WAS MAN MITBRINGEN UND WAS MAN NICHT TUN SOLLTE
+voice: valerio
+
+Die Tremiti erfordern ein wenig Bedacht. <break time="1.2s"/>
+
+Vor allem: reist mit wenig Gepäck. <break time="0.8s"/> Auf der Insel gibt es keine großen Supermärkte. <break time="0.8s"/> Keine 24-Stunden-Apotheken. <break time="0.8s"/> Keine Tankstellen für Schlauchboote an jeder Ecke. <break time="0.8s"/> Bringt mit, was ihr braucht — <break time="0.5s"/> Sonnenschutz, <break time="0.5s"/> Medikamente, <break time="0.5s"/> Bargeld. <break time="1.2s"/>
+
+Der Respekt gegenüber dem Meerespark ist Pflicht und zugleich das Richtige. <break time="0.8s"/> Nehmt nichts vom Meeresgrund mit. <break time="0.8s"/> Ankert nicht, wo es nicht erlaubt ist — <break time="0.5s"/> Posidonie-Wiesen werden leicht zerstört. <break time="0.8s"/> Nehmt keine Muscheln, <break time="0.5s"/> Korallen, <break time="0.5s"/> Steine mit. <break time="0.8s"/> Das ist nicht romantisch — <break time="0.5s"/> das ist Diebstahl. <break time="1.2s"/>
+
+Und noch etwas: kommt nicht nur im August. <break time="0.8s"/> Juni ist wunderbar — <break time="0.5s"/> warm, <break time="0.5s"/> das Wasser schon klar, <break time="0.5s"/> weniger Menschen. <break time="0.8s"/> September ist noch besser. <break time="0.8s"/> Der Sommer dauert hier bis Oktober. <break time="0.8s"/> Und die Insel kann wieder atmen. <break time="1.5s"/>
+
+=====
+CAP. 19 — DIE ABTEI SANTA MARIA: TAUSEND JAHRE STEIN
+voice: valerio
+
+Die Abtei Santa Maria auf San Nicola ist tausend Jahre alt. <break time="1.2s"/>
+
+Sie wurde von den Benediktinern im elften Jahrhundert erbaut. <break time="0.8s"/> Sie ist nicht groß — <break time="0.5s"/> eine Kirche in menschlichen Proportionen, <break time="0.5s"/> mit einer schlichten romanischen Fassade <break time="0.5s"/> und einem Glockenturm, der weit auf dem Meer zu sehen ist. <break time="0.8s"/> Ich habe ausgerechnet, dass ich sie zehntausend Mal gesehen habe, <break time="0.5s"/> vom Schlauchboot aus vorbeifahrend. <break time="0.8s"/> Sie ermüdet mich nie. <break time="1.2s"/>
+
+Innen: der Mosaikboden aus dem zwölften Jahrhundert. <break time="0.8s"/> Tiere, geometrische Formen, Symbole. <break time="0.8s"/> Tausend Jahre Fußschritte darauf — <break time="0.5s"/> und man sieht noch alles. <break time="0.8s"/> Man erkennt, dass diese Mosaike gemacht wurden, um zu dauern, <break time="0.5s"/> nicht um zu beeindrucken. <break time="0.8s"/> Das ist ein Unterschied. <break time="1.2s"/>
+
+Die Mönche, die noch dort leben, sind wenige. <break time="0.8s"/> Sie öffnen die Kirche für Besucher. <break time="0.8s"/> Sie nehmen Spenden an. <break time="0.8s"/> Sie sprechen nicht viel — <break time="0.5s"/> oder vielleicht sprechen sie viel, <break time="0.5s"/> aber in einem anderen Rhythmus. <break time="0.8s"/> Wenn ich mit dem Schlauchboot vorbeikcomme und sie auf dem Steg sehe, <break time="0.5s"/> in Schwarz, <break time="0.5s"/> still, <break time="0.5s"/> denke ich, dass sie das Meer so betrachten wie ich. <break time="0.8s"/> Mit Respekt und Vertrautheit zugleich. <break time="1.5s"/>
+
+=====
+CAP. 20 — DIE NOSTALGIE: DIE TREMITI IN DEN MENSCHEN
+voice: valerio
+
+Die Tremiti tun den Menschen etwas Seltsames an. <break time="1.2s"/>
+
+Wer einmal kommt, <break time="0.8s"/> kommt wieder. <break time="1.0s"/>
+
+Nicht alle — <break time="0.5s"/> aber ein hoher Anteil derer, die kommen, bleibt verbunden. <break time="0.8s"/> Ich habe es jahrzehntelang beobachtet. <break time="0.8s"/> Familien, die jeden Sommer wiederkommen. <break time="0.5s"/> Paare, die sich hier kennengelernt haben und noch kommen. <break time="0.5s"/> Ältere Menschen, die allein kommen, <break time="0.5s"/> so wie sie es als Junge taten. <break time="1.2s"/>
+
+Lucio war der Extremfall — <break time="0.5s"/> dreißig Jahre ohne eine Ausnahme. <break time="0.8s"/> Aber er war nicht der Einzige. <break time="0.8s"/> Ich habe Stammkunden — <break time="0.5s"/> manche nenne ich beim Namen, <break time="0.5s"/> ich kenne die Kinder, die klein waren und jetzt erwachsen sind. <break time="1.2s"/>
+
+Ich kann es nicht mit Logik erklären. <break time="0.8s"/> Es ist nicht nur das schöne Meer — <break time="0.5s"/> schönes Meer gibt es überall. <break time="0.8s"/> Es ist nicht nur die Ruhe — <break time="0.5s"/> es gibt ruhigere Orte. <break time="0.8s"/> Es hat etwas mit Grenzen zu tun. <break time="0.8s"/> Man ist auf einer Insel. <break time="0.5s"/> Man kann nicht weiter. <break time="0.8s"/> Und paradoxerweise <break time="0.5s"/> fühlt man sich freier. <break time="1.5s"/>
+
+=====
+CAP. 21 — ABSCHLUSS: TONINO VERABSCHIEDET SICH
+voice: valerio
+
+Lucio starb 2012. <break time="1.2s"/>
+
+In jenem Sommer kam niemand mit einem Strohhut in den Hafen. <break time="0.8s"/> Ich wartete — <break time="0.5s"/> nicht bewusst, <break time="0.5s"/> aber ich wartete. <break time="0.8s"/> Dann verstand ich, dass er nicht mehr kommen würde. <break time="1.5s"/>
+
+Das Schlauchboot ist noch dasselbe — <break time="0.5s"/> ich habe es repariert, <break time="0.5s"/> den Motor ersetzt, <break time="0.5s"/> aber es ist dasselbe Boot. <break time="0.8s"/> Manchmal, wenn ich früh morgens rausfahre <break time="0.5s"/> und vor der Grotta delle Viole vorbeikcomme, <break time="0.5s"/> höre ich noch seine Stimme. <break time="0.8s"/> Tonino, hier höre ich Lieder. <break time="1.2s"/>
+
+Diese Inseln tun das. <break time="0.8s"/> Sie dringen in die Menschen ein. <break time="0.8s"/> Wer einmal kommt, <break time="0.5s"/> kommt wieder. <break time="0.8s"/> Wer oft genug zurückkommt, <break time="0.5s"/> kann nie ganz gehen. <break time="1.2s"/>
+
+Kommt. <break time="0.8s"/> Nehmt ein Boot. <break time="0.8s"/> Fahrt in die Höhlen. <break time="0.8s"/> Stellt den Motor ab und hört zu. <break time="1.0s"/>
+
+Die Inseln haben etwas zu sagen. <break time="0.8s"/> Man muss nur lange genug stillhalten, <break time="0.5s"/> um es zu hören. <break time="1.5s"/>
+
+Dieses Vorgebirge hat andere Gesichter. <break time="1.0s"/>
+
+Die Trabucchi-Küste im Sonnenuntergang, <break time="0.5s"/> die Buchten von Vieste, die nur vom Meer erreichbar sind, <break time="0.5s"/> die Engelsgrotte das ganze Jahr über mit zwölf Grad, <break time="0.5s"/> die Dörfer im Hinterland, die kein Navigationsgerät ums Meer herum findet. <break time="0.8s"/> Jedes hat jemanden, der seine Geschichte erzählt. <break time="0.8s"/> Jemanden, der nie weggegangen ist. <break time="1.2s"/>
+
+Der Gargano endet hier nicht. <break time="1.5s"/>
