@@ -1,4 +1,4 @@
-﻿---
+---
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import BariMap from '../../components/BariMap.astro';
@@ -10,14 +10,14 @@ import LangPills from '../../components/LangPills.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 ---
 <Layout
-  title="Bari â€” Narrative Audioguides Â· Localis"
-  description="Sechs narrative Audioguides aus Bari, erzÃ¤hlt von Bariser Autoren. Altstadt, San Nicola, Hafen, Theater, Unterstadt, Das Beste von Bari. Ab â‚¬4,99."
+  title="Bari — Narrative Audioguides · Localis"
+  description="Sechs narrative Audioguides aus Bari, erzählt von Bariser Autoren. Altstadt, San Nicola, Hafen, Theater, Unterstadt, Das Beste von Bari. Ab €4,99."
   lang="de"
 >
 
   <Breadcrumb items={[{ label: 'Home', href: '/de' }, { label: 'Bari' }]} />
 
-  {/* PAGE HEADER â€” hero with image */}
+  {/* PAGE HEADER — hero with image */}
   <section class="bari-hero relative overflow-hidden border-b border-border">
     <img
       src="/images/hero/hero-bari-tramonto.jpg"
@@ -35,21 +35,21 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
       <div class="flex items-center gap-sm mb-md">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Reiseziel â€” Bari
+          Reiseziel — Bari
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[18ch]">
-        Bari erzÃ¤hlt<br /><em class="not-italic text-ink-muted">von denen, die dort geboren wurden.</em>
+        Bari erzählt<br /><em class="not-italic text-ink-muted">von denen, die dort geboren wurden.</em>
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Sechs Live-Guides, sechs Bariser Stimmen. Von der Altstadt bis zum Hafen, von den Theatern bis zur Unterstadt â€” jede Route stammt von jemandem, der dort aufgewachsen ist.
+        Sechs Live-Guides, sechs Bariser Stimmen. Von der Altstadt bis zum Hafen, von den Theatern bis zur Unterstadt — jede Route stammt von jemandem, der dort aufgewachsen ist.
       </p>
     </div>
   </section>
 
   <style>
     .bari-hero {
-      min-height: clamp(280px, 42vh, 480px);
+      min-height: clamp(560px, 78vh, 820px);
       display: flex;
       align-items: center;
     }
@@ -100,9 +100,9 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
           lang="de"
           features={[
             'Ein Guide nach Wahl',
-            'Unbegrenzter Zugang, fÃ¼r immer',
+            'Unbegrenzter Zugang, für immer',
             'Italienisch, Englisch und Deutsch',
-            '1-Klick-RÃ¼ckgabe innerhalb 24h',
+            '1-Klick-Rückgabe innerhalb 24h',
           ]}
         />
         <PriceCard
@@ -111,9 +111,9 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
           primary
           features={[
             'Alle 6 Bari-Guides',
-            '~2h 20min Â· 6 verschiedene Stimmen',
+            '~2h 20min · 6 verschiedene Stimmen',
             'Spart €9,95 gegenüber Einzelkauf',
-            '1-Klick-RÃ¼ckgabe innerhalb 24h',
+            '1-Klick-Rückgabe innerhalb 24h',
           ]}
         />
       </div>
