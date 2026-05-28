@@ -7,11 +7,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const src = lang === 'de'
-  ? '/audio/trailers/san-nicola-en.mp3'
-  : lang === 'it'
-  ? '/audio/trailers/san-nicola.mp3'
-  : '/audio/trailers/san-nicola-en.mp3';
+const src = '/audio/trailers/hero-sample.mp3';
 
 const label = lang === 'de'
   ? 'Reinhören'
