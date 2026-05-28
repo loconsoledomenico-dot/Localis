@@ -49,7 +49,7 @@ const indexLabel = String(index + 1).padStart(2, '0');
       <span class="text-border">·</span>
       <span>{durationLabel}</span>
       <span class="text-border">·</span>
-      <span>{chapterCount} cap.</span>
+      <span>{lang === 'de' ? `${chapterCount} Kap.` : `${chapterCount} cap.`}</span>
     </div>
 
     <h3 class="font-display text-2xl font-normal leading-tight text-ink">
@@ -59,14 +59,14 @@ const indexLabel = String(index + 1).padStart(2, '0');
     <p class="text-sm text-ink-muted leading-relaxed">{subtitle}</p>
 
     <p class="text-[0.72rem] text-ink-subtle leading-none mt-auto italic">
-      {lang === 'it' ? 'Voce sintetizzata · Testo scritto da Domenico e Luigi Loconsole' : lang === 'de' ? 'Synthetische Stimme · Geschrieben von Domenico e Luigi Loconsole' : 'Synthetic voice · Written by Domenico & Luigi Loconsole'}
+      {lang === 'it' ? 'Voce sintetizzata · Testo scritto da Domenico e Luigi Loconsole' : lang === 'de' ? 'Synthetische Stimme · Text von Domenico und Luigi Loconsole' : 'Synthetic voice · Written by Domenico & Luigi Loconsole'}
     </p>
 
     <div class="flex items-center justify-between pt-sm">
       <span class="font-display text-lg italic text-accent">{priceLabel}</span>
       {!isSoon && (
         <span class="font-body text-xs uppercase tracking-widest font-semibold text-ink-subtle group-hover:text-ink transition-colors duration-fast">
-          {lang === 'it' ? 'Ascolta →' : lang === 'de' ? 'Anhoren →' : 'Listen →'}
+          {lang === 'it' ? 'Ascolta →' : lang === 'de' ? 'Anhören →' : 'Listen →'}
         </span>
       )}
     </div>

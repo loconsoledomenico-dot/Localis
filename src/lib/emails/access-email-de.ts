@@ -27,7 +27,7 @@ export function renderAccessEmailDe(data: AccessEmailData): { subject: string; h
 
     <p style="font-size: 16px; line-height: 1.6; color: #1C1510; margin: 0 0 16px 0;">Hallo,</p>
     <p style="font-size: 16px; line-height: 1.6; color: #1C1510; margin: 0 0 24px 0;">
-      Danke, dass du Localis gewaehlt hast. Dein Audioguide ist bereit.
+      Danke, dass du Localis gewählt hast. Dein Audioguide ist bereit.
     </p>
 
     <ul style="list-style: none; padding: 0; margin: 0 0 32px 0;">
@@ -36,7 +36,7 @@ export function renderAccessEmailDe(data: AccessEmailData): { subject: string; h
 
     <p style="margin: 0 0 32px 0;">
       <a href="${data.accessUrl}" style="display: inline-block; padding: 14px 28px; background: #1C1510; color: #FAF7F2; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 15px;">
-        Guide oeffnen
+        Guide öffnen
       </a>
     </p>
 
@@ -44,14 +44,14 @@ export function renderAccessEmailDe(data: AccessEmailData): { subject: string; h
 
     <h2 style="font-family: Georgia, serif; font-size: 18px; font-weight: 400; color: #1C1510; margin: 0 0 12px 0;">So funktioniert es</h2>
     <ol style="font-size: 14px; line-height: 1.7; color: #5A6477; padding-left: 20px; margin: 0 0 24px 0;">
-      <li>Oeffne den Link oben auf deinem Smartphone</li>
-      <li>Tippe auf Play. Geh los. Hoer zu.</li>
-      <li>Der Link gehoert dir dauerhaft und kann jederzeit erneut genutzt werden</li>
+      <li>Öffne den Link oben auf deinem Smartphone</li>
+      <li>Tippe auf Play und höre dann, wenn es für dich passt.</li>
+      <li>Der Link gehört dir dauerhaft und kann jederzeit erneut genutzt werden</li>
       <li>Nach dem ersten Abspielen funktioniert der Guide offline</li>
     </ol>
 
     <p style="font-size: 14px; line-height: 1.6; color: #5A6477; margin: 0 0 16px 0;">
-      Speichere den Link in deinen Browser-Lesezeichen. Wenn du das Smartphone wechselst, oeffne denselben Link erneut.
+      Speichere den Link in deinen Browser-Lesezeichen. Wenn du das Smartphone wechselst, öffne denselben Link erneut.
     </p>
     <p style="font-size: 14px; line-height: 1.6; color: #5A6477; margin: 0 0 24px 0;">
       Fragen? Antworte einfach auf diese E-Mail.
@@ -66,22 +66,22 @@ export function renderAccessEmailDe(data: AccessEmailData): { subject: string; h
 
   const text = `Hallo,
 
-Danke, dass du Localis gewaehlt hast. Dein Audioguide ist bereit.
+Danke, dass du Localis gewählt hast. Dein Audioguide ist bereit.
 
 ${guidesList}
 
-Guide oeffnen: ${data.accessUrl}
+Guide öffnen: ${data.accessUrl}
 
 --------------------------
 
 So funktioniert es:
-1. Oeffne den Link oben auf deinem Smartphone
-2. Tippe auf Play. Geh los. Hoer zu.
-3. Der Link gehoert dir dauerhaft und kann jederzeit erneut genutzt werden
+1. Öffne den Link oben auf deinem Smartphone
+2. Tippe auf Play und höre dann, wenn es für dich passt.
+3. Der Link gehört dir dauerhaft und kann jederzeit erneut genutzt werden
 4. Nach dem ersten Abspielen funktioniert der Guide offline
 
 Speichere den Link in deinen Browser-Lesezeichen.
-Wenn du das Smartphone wechselst, oeffne denselben Link erneut.
+Wenn du das Smartphone wechselst, öffne denselben Link erneut.
 
 Fragen? Antworte einfach auf diese E-Mail.
 

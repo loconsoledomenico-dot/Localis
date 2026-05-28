@@ -19,7 +19,7 @@ const year = new Date().getFullYear();
         {lang === 'it'
           ? 'Audioguide scritte in Puglia · Fonti d\'archivio verificabili · Storie raccolte sul territorio'
           : lang === 'de'
-          ? 'Audioguides aus Apulien · Überprüfbare Archivquellen · Vor Ort gesammelte Geschichten'
+          ? 'Narrative Audioguides aus Apulien · Überprüfbare Archivquellen · Vor Ort gesammelte Geschichten'
           : 'Audio guides written in Puglia · Verifiable archive sources · Stories gathered on the ground'}
       </p>
       <p class="text-sm text-ink-muted">
@@ -32,7 +32,7 @@ const year = new Date().getFullYear();
         href={localizedHref('/fonti', lang)}
         class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
       >
-        {lang === 'it' ? 'Fonti' : 'Sources'}
+        {lang === 'it' ? 'Fonti' : lang === 'de' ? 'Quellen' : 'Sources'}
       </a>
       <a
         href={localizedHref('/faq', lang)}
@@ -74,7 +74,7 @@ const year = new Date().getFullYear();
         id="cookie-reopen"
         class="text-sm text-ink-muted hover:text-ink transition-colors duration-fast bg-transparent border-0 p-0 cursor-pointer"
       >
-        {lang === 'it' ? 'Gestisci cookie' : 'Manage cookies'}
+        {lang === 'it' ? 'Gestisci cookie' : lang === 'de' ? 'Cookies verwalten' : 'Manage cookies'}
       </button>
       <a
         href="mailto:hello@localis.guide"

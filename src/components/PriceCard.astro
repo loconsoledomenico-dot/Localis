@@ -50,7 +50,7 @@ const description = descriptionOverride ?? (
         ? (lang === 'it'
             ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
             : lang === 'de'
-              ? 'Bari Vecchia + Best of Bari. Fuer einen kurzen Landgang.'
+              ? 'Bari Vecchia + Best of Bari. Für einen kurzen Landgang.'
               : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
         : (lang === 'it'
             ? 'Una guida a scelta, tua per sempre.'
@@ -70,7 +70,7 @@ const unitLabel =
 
 const ctaLabel = ctaOverride ?? (
   product === 'tris'
-    ? (lang === 'it' ? 'Scegli 3 guide' : lang === 'de' ? '3 Guides auswahlen' : 'Choose 3 guides')
+    ? (lang === 'it' ? 'Scegli 3 guide' : lang === 'de' ? '3 Guides auswählen' : 'Choose 3 guides')
     : product === 'bari-completa'
       ? (lang === 'it' ? 'Acquista Bari Completa' : lang === 'de' ? 'Bari Komplett kaufen' : 'Get Complete Bari')
       : product === 'crociera'
@@ -142,7 +142,7 @@ const isTris = product === 'tris';
 
       btn.disabled = true;
       const originalText = btn.textContent;
-      btn.textContent = lang === 'it' ? 'Apertura pagamento...' : lang === 'de' ? 'Zahlung wird geoeffnet...' : 'Opening checkout...';
+      btn.textContent = lang === 'it' ? 'Apertura pagamento...' : lang === 'de' ? 'Checkout wird geöffnet...' : 'Opening checkout...';
 
       const BARI_SLUGS = ['bari-vecchia','san-nicola','tre-teatri','il-meglio-di-bari','porto-bari','bari-sotterranea'];
       const CROCIERA_SLUGS = ['bari-vecchia','il-meglio-di-bari'];
@@ -187,7 +187,7 @@ const isTris = product === 'tris';
           lang === 'it'
             ? 'Impossibile aprire il pagamento. Riprova tra un istante.'
             : lang === 'de'
-              ? 'Zahlung konnte nicht geoeffnet werden. Bitte versuche es gleich erneut.'
+              ? 'Checkout konnte nicht geöffnet werden. Bitte versuche es gleich erneut.'
               : 'Could not open checkout. Please try again in a moment.',
         );
       }

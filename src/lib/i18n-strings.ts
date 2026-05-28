@@ -43,7 +43,7 @@ export const STRINGS = {
   },
   de: {
     'site.name': 'Localis',
-    'site.tagline': 'Narrative Audioguides · Apulien',
+    'site.tagline': 'Narrative Audioguides aus Apulien',
     'nav.home': 'Home',
     'nav.guide': 'Guides',
     'nav.partner': 'Partner werden',
@@ -54,7 +54,7 @@ export const STRINGS = {
     'lang.current_it': 'Italiano',
     'lang.current_en': 'English',
     'lang.current_de': 'Deutsch',
-    'footer.copyright': '© Localis · Narrative Audioguides für Apulien',
+    'footer.copyright': '© Localis · Narrative Audioguides aus Apulien',
     'footer.terms': 'AGB',
     'footer.privacy': 'Datenschutz',
     'a11y.skip_to_content': 'Zum Inhalt springen',

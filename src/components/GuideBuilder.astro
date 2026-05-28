@@ -42,7 +42,7 @@ const ZONE_ORDER = [
 ];
 ---
 
-<section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : lang === 'de' ? 'Guides auswahlen' : 'Choose your guides'}>
+<section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : lang === 'de' ? 'Guide auswählen' : 'Choose your guides'}>
   <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
 
     <div class="text-center mb-2xl">
@@ -50,13 +50,13 @@ const ZONE_ORDER = [
         {lang === 'it' ? '— Costruisci il tuo pacchetto —' : lang === 'de' ? '— Stelle dein Paket zusammen —' : '— Build your package —'}
       </p>
       <h2 class="font-display font-light text-[clamp(1.8rem,4vw,3rem)] text-ink leading-tight">
-        {lang === 'it' ? 'Scegli le guide che vuoi.' : lang === 'de' ? 'Wahle die Guides aus, die du mochtest.' : 'Choose the guides you want.'}
+        {lang === 'it' ? 'Scegli le guide che vuoi.' : lang === 'de' ? 'Wähle die Guides, die du möchtest.' : 'Choose the guides you want.'}
       </h2>
       <p class="font-body text-ink-muted text-base mt-sm max-w-[48ch] mx-auto">
         {lang === 'it'
           ? 'Seleziona 3 per il Tris (€11,99), 6 per la Sestina (€19,99), o prendi la Puglia Completa (€39,99). Una guida? €4,99.'
           : lang === 'de'
-            ? 'Wahle 3 fur Tris (EUR 11,99), 6 fur Sestina (EUR 19,99), oder nimm Puglia Completa (EUR 39,99). Nur ein Guide? EUR 4,99.'
+            ? 'Wähle 3 für Tris (11,99 €), 6 für Sestina (19,99 €), oder nimm Puglia Completa (39,99 €). Ein einzelner Guide kostet 4,99 €.'
             : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€39.99). Just one? €4.99.'}
       </p>
     </div>
@@ -108,7 +108,7 @@ const ZONE_ORDER = [
           disabled
           data-lang={lang}
         >
-          {lang === 'it' ? 'Seleziona almeno una guida' : lang === 'de' ? 'Mindestens einen Guide auswahlen' : 'Select at least one guide'}
+          {lang === 'it' ? 'Seleziona almeno una guida' : lang === 'de' ? 'Wähle mindestens einen Guide aus' : 'Select at least one guide'}
         </button>
       </div>
       <p id="builder-upsell" class="builder-upsell" aria-hidden="true"></p>
@@ -339,7 +339,7 @@ const ZONE_ORDER = [
 
     if (n === 0) {
       btn.disabled = true;
-      btn.textContent = it ? 'Seleziona almeno una guida' : de ? 'Mindestens einen Guide auswahlen' : 'Select at least one guide';
+      btn.textContent = it ? 'Seleziona almeno una guida' : de ? 'Wähle mindestens einen Guide aus' : 'Select at least one guide';
       upsell.textContent = '';
     } else if (tier) {
       btn.disabled = false;

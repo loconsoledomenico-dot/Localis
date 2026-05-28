@@ -13,21 +13,21 @@ const { lang, currentPath = '/' } = Astro.props;
 const masthead_l = lang === 'de' ? 'Ausgabe 01 — Apulien' : lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
 const masthead_r = lang === 'de' ? 'Veröffentlichte Audioguides · Apulien' : lang === 'it' ? 'Guide pubblicate · Puglia' : 'Published guides · Puglia';
 
-const heading1a = lang === 'de' ? 'Self-guided Audiotouren durch Apulien, direkt auf deinem Handy.' : lang === 'it' ? 'Audioguide narrative per capire la Puglia, anche prima di partire.' : 'Self-guided audio tours of Puglia, right on your phone.';
+const heading1a = lang === 'de' ? 'Narrative Audioguides, um Apulien besser zu verstehen — auch schon vor der Reise.' : lang === 'it' ? 'Audioguide narrative per capire la Puglia, anche prima di partire.' : 'Self-guided audio tours of Puglia, right on your phone.';
 const heading1b = '';
 
 const lede1 = lang === 'de'
-  ? 'Wahre Geschichten, überprüfbare Quellen und Routen zum Hören – wann immer du willst.'
+  ? 'Geschichten über Orte, Geschichte und lokale Erinnerung — mit überprüfbaren Quellen.'
   : lang === 'it'
   ? 'Bari, Valle d’Itria, Gargano: racconti dei luoghi, tra storia, memoria e fonti verificabili.'
   : 'Bari, Valle d’Itria and Gargano: routes, true stories and verifiable sources.';
 const lede2 = lang === 'de'
-  ? 'Keine App nötig, sofortiges Abspielen auf deinem Handy.'
+  ? 'Keine App, kein Konto: Link öffnen, Play drücken, zuhören.'
   : lang === 'it'
   ? 'Niente app, niente account: compri, apri il link, premi play.'
   : 'No app, no account: buy, open the link, press play.';
 
-const ctaPrimary = lang === 'de' ? 'Guide auswahlen' : lang === 'it' ? 'Scegli la tua audioguida' : 'Choose your audio guide';
+const ctaPrimary = lang === 'de' ? 'Guide auswählen' : lang === 'it' ? 'Scegli la tua audioguida' : 'Choose your audio guide';
 const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
 
 const altText = lang === 'de'
