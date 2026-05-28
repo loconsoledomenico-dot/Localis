@@ -14,7 +14,7 @@ const priceMap = prices as Record<string, string>;
 // Dynamic bundles (tris/sestina/puglia-completa/bari-completa) use price_data.
 export const STRIPE_PRICE_IDS: Record<'single' | 'crociera', string> = {
   single:   process.env.Stripe_id_singola  || priceMap.single  || '',
-  crociera: process.env.Stripe_id_crociera || priceMap.crociera || '',
+  crociera: process.env.Stripe_id_pacchettocrociera || priceMap.crociera || '',
 };
 
 // ── Guide catalog ─────────────────────────────────────────────────────────────
