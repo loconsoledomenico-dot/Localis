@@ -6,6 +6,8 @@ export type ProductSlug =
   | 'sestina'
   | 'puglia-completa'
   | 'bari-completa'
+  | 'valle-completa'
+  | 'gargano-completa'
   | 'crociera';
 
 const priceMap = prices as Record<string, string>;
@@ -60,12 +62,14 @@ export const CROCIERA_GUIDES: readonly string[] = [
 // ── Pricing constants (in euro cents) ────────────────────────────────────────
 
 export const PRODUCT_PRICE_CENTS: Record<ProductSlug, number> = {
-  single:             499,
-  tris:              1199,
-  sestina:           1999,
-  'puglia-completa': 3999,
-  'bari-completa':   1999,
-  crociera:           799,
+  single:              499,
+  tris:               1199,
+  sestina:            1999,
+  'puglia-completa':  3999,
+  'bari-completa':    1999,
+  'valle-completa':   1999,
+  'gargano-completa': 1999,
+  crociera:            799,
 };
 
 // ── Tier definitions ──────────────────────────────────────────────────────────
@@ -119,6 +123,18 @@ export function validateSelectedSlugs(
       throw new Error(`bari-completa requires exactly the 6 Bari guides`);
     }
   }
+  if (product === 'valle-completa') {
+    const valleSet = new Set(VALLE_GUIDES);
+    if (selectedSlugs.length !== 6 || !selectedSlugs.every((s) => valleSet.has(s))) {
+      throw new Error(`valle-completa requires exactly the 6 Valle d'Itria guides`);
+    }
+  }
+  if (product === 'gargano-completa') {
+    const garganoSet = new Set(GARGANO_GUIDES);
+    if (selectedSlugs.length !== 6 || !selectedSlugs.every((s) => garganoSet.has(s))) {
+      throw new Error(`gargano-completa requires exactly the 6 Gargano guides`);
+    }
+  }
   if (product === 'single' && selectedSlugs.length !== 1) {
     throw new Error(`single requires exactly 1 guide slug`);
   }
@@ -146,7 +162,9 @@ export function savingsCents(product: ProductSlug): number {
     tris:              3 * 499 - 1199,   // 298
     sestina:           6 * 499 - 1999,   // 995
     'puglia-completa': 18 * 499 - 3999,  // 4983
-    'bari-completa':   6 * 499 - 1999,   // 995
+    'bari-completa':    6 * 499 - 1999,   // 995
+    'valle-completa':   6 * 499 - 1999,   // 995
+    'gargano-completa': 6 * 499 - 1999,   // 995
   };
   return tiers[product] ?? 0;
 }

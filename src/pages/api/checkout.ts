@@ -6,6 +6,8 @@ import {
   PRODUCT_PRICE_CENTS,
   ALL_GUIDES,
   BARI_GUIDES,
+  VALLE_GUIDES,
+  GARGANO_GUIDES,
   CROCIERA_GUIDES,
   type ProductSlug,
 } from '../../lib/stripe-prices';
@@ -15,16 +17,19 @@ import { hasAllowedOrigin } from '../../lib/request-security';
 import type Stripe from 'stripe';
 
 const VALID_PRODUCTS = new Set<ProductSlug>([
-  'single', 'tris', 'sestina', 'puglia-completa', 'bari-completa', 'crociera',
+  'single', 'tris', 'sestina', 'puglia-completa',
+  'bari-completa', 'valle-completa', 'gargano-completa', 'crociera',
 ]);
 
 const PRODUCT_DISPLAY_NAME: Record<ProductSlug, string> = {
-  single:            'Guida Localis',
-  tris:              'Tris Localis — 3 guide a scelta',
-  sestina:           'Sestina Localis — 6 guide a scelta',
-  'puglia-completa': 'Puglia Completa — 18 guide',
-  'bari-completa':   'Bari Completa — 6 guide di Bari',
-  crociera:          'Pacchetto Crociera Localis',
+  single:              'Guida Localis',
+  tris:                'Tris Localis — 3 guide a scelta',
+  sestina:             'Sestina Localis — 6 guide a scelta',
+  'puglia-completa':   'Puglia Completa — 18 guide',
+  'bari-completa':     'Bari Completa — 6 guide di Bari',
+  'valle-completa':    "Valle d'Itria Completa — 6 guide",
+  'gargano-completa':  'Gargano Completa — 6 guide',
+  crociera:            'Pacchetto Crociera Localis',
 };
 
 const STORED_PRICE_PRODUCTS = new Set<ProductSlug>(['single', 'crociera']);
@@ -35,9 +40,11 @@ function normalizeLang(value: string | undefined): Lang {
 }
 
 function resolveFixedSlugs(product: ProductSlug): string[] | null {
-  if (product === 'puglia-completa') return [...ALL_GUIDES];
-  if (product === 'bari-completa')   return [...BARI_GUIDES];
-  if (product === 'crociera')        return [...CROCIERA_GUIDES];
+  if (product === 'puglia-completa')  return [...ALL_GUIDES];
+  if (product === 'bari-completa')    return [...BARI_GUIDES];
+  if (product === 'valle-completa')   return [...VALLE_GUIDES];
+  if (product === 'gargano-completa') return [...GARGANO_GUIDES];
+  if (product === 'crociera')         return [...CROCIERA_GUIDES];
   return null;
 }
 

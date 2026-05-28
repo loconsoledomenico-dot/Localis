@@ -3,7 +3,7 @@ import { formatPrice } from '../lib/format';
 import { type Lang } from '../lib/i18n';
 
 export interface Props {
-  product: 'single' | 'bari-completa' | 'crociera';
+  product: 'single' | 'bari-completa' | 'valle-completa' | 'gargano-completa' | 'crociera';
   guideSlug?: string;
   lang: Lang;
   features: string[];
@@ -16,8 +16,8 @@ export interface Props {
 const { product, guideSlug, lang, features, primary = false, titleOverride, descriptionOverride, ctaOverride } = Astro.props;
 
 const priceCents =
-  product === 'bari-completa' ? 1999
-  : product === 'crociera'    ?  799
+  (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa') ? 1999
+  : product === 'crociera' ? 799
   : 499;
 
 const priceLabel = formatPrice(priceCents);
@@ -45,7 +45,7 @@ const description = descriptionOverride ?? (
 );
 
 const unitLabel =
-  product === 'bari-completa'
+  (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
     ? (lang === 'it' ? '/ 6 guide' : '/ 6 guides')
     : product === 'crociera'
       ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
