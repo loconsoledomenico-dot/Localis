@@ -71,10 +71,13 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
       }
 
       if (audio.paused) {
-        audio.play();
-        iconPlay.style.display  = 'none';
-        iconPause.style.display = '';
-        btn.setAttribute('aria-label', btn.dataset.pauseLabel!);
+        audio.play().then(() => {
+          iconPlay.style.display  = 'none';
+          iconPause.style.display = '';
+          btn.setAttribute('aria-label', btn.dataset.pauseLabel!);
+        }).catch((e) => {
+          console.error('[HeroAudio] play() failed:', e, 'src:', src);
+        });
       } else {
         audio.pause();
         iconPlay.style.display  = '';
