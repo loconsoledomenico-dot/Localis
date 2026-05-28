@@ -54,8 +54,8 @@ const ZONE_ORDER = [
       </h2>
       <p class="font-body text-ink-muted text-base mt-sm max-w-[48ch] mx-auto">
         {lang === 'it'
-          ? 'Seleziona 3 per il Tris (€11,99), 6 per la Sestina (€19,99), o prendi la Puglia Completa (€29,99). Una guida? €4,99.'
-          : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€29.99). Just one? €4.99.'}
+          ? 'Seleziona 3 per il Tris (€11,99), 6 per la Sestina (€19,99), o prendi la Puglia Completa (€39,99). Una guida? €4,99.'
+          : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€39.99). Just one? €4.99.'}
       </p>
     </div>
 
@@ -261,7 +261,7 @@ const ZONE_ORDER = [
   const TIERS = [
     { product: 'tris',            count: 3,  cents: 1199, label: 'Tris' },
     { product: 'sestina',         count: 6,  cents: 1999, label: 'Sestina' },
-    { product: 'puglia-completa', count: 18, cents: 2999, label: 'Puglia Completa' },
+    { product: 'puglia-completa', count: 18, cents: 3999, label: 'Puglia Completa' },
   ] as const;
   const SINGLE_CENTS = 499;
   const fmt = (c: number, lang: string) =>

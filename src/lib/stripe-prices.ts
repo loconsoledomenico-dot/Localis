@@ -63,7 +63,7 @@ export const PRODUCT_PRICE_CENTS: Record<ProductSlug, number> = {
   single:             499,
   tris:              1199,
   sestina:           1999,
-  'puglia-completa': 2999,
+  'puglia-completa': 3999,
   'bari-completa':   1499,
   crociera:           799,
 };
@@ -75,7 +75,7 @@ export type Tier = { product: ProductSlug; count: number; priceCents: number };
 export const FREE_CHOICE_TIERS: readonly Tier[] = [
   { product: 'tris',            count: 3,  priceCents: 1199 },
   { product: 'sestina',         count: 6,  priceCents: 1999 },
-  { product: 'puglia-completa', count: 18, priceCents: 2999 },
+  { product: 'puglia-completa', count: 18, priceCents: 3999 },
 ] as const;
 
 /**
@@ -145,7 +145,7 @@ export function savingsCents(product: ProductSlug): number {
   const tiers: Partial<Record<ProductSlug, number>> = {
     tris:              3 * 499 - 1199,   // 298
     sestina:           6 * 499 - 1999,   // 995
-    'puglia-completa': 18 * 499 - 2999,  // 5983
+    'puglia-completa': 18 * 499 - 3999,  // 4983
     'bari-completa':   6 * 499 - 1499,   // 1495
   };
   return tiers[product] ?? 0;
