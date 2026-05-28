@@ -3,7 +3,7 @@ import { formatPrice } from '../lib/format';
 import { type Lang } from '../lib/i18n';
 
 export interface Props {
-  product: 'single' | 'bari-completa' | 'valle-completa' | 'gargano-completa' | 'crociera';
+  product: 'single' | 'tris' | 'bari-completa' | 'valle-completa' | 'gargano-completa' | 'crociera';
   guideSlug?: string;
   lang: Lang;
   features: string[];
@@ -17,47 +17,61 @@ const { product, guideSlug, lang, features, primary = false, titleOverride, desc
 
 const priceCents =
   (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa') ? 1999
-  : product === 'crociera' ? 799
+  : product === 'tris'     ? 1199
+  : product === 'crociera' ?  799
   : 499;
 
 const priceLabel = formatPrice(priceCents);
 
 const title = titleOverride ?? (
-  product === 'bari-completa'
-    ? (lang === 'it' ? 'Bari Completa' : 'Complete Bari')
-    : product === 'crociera'
-      ? (lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package')
-      : (lang === 'it' ? 'Guida singola' : 'Single guide')
+  product === 'tris'
+    ? (lang === 'it' ? 'Tris' : 'Tris')
+    : product === 'bari-completa'
+      ? (lang === 'it' ? 'Bari Completa' : 'Complete Bari')
+      : product === 'crociera'
+        ? (lang === 'it' ? 'Pacchetto Crociera' : 'Cruise Package')
+        : (lang === 'it' ? 'Guida singola' : 'Single guide')
 );
 
 const description = descriptionOverride ?? (
-  product === 'bari-completa'
+  product === 'tris'
     ? (lang === 'it'
-        ? 'Tutte le 6 guide di Bari. Sei voci, sei itinerari.'
-        : 'All 6 Bari guides. Six voices, six routes.')
-    : product === 'crociera'
+        ? '3 guide a tua scelta tra tutte le zone.'
+        : '3 guides of your choice across all zones.')
+    : product === 'bari-completa'
       ? (lang === 'it'
-          ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
-          : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
-      : (lang === 'it'
-          ? 'Una guida a scelta, tua per sempre.'
-          : 'One guide of your choice, yours forever.')
+          ? 'Tutte le 6 guide di Bari. Sei voci, sei itinerari.'
+          : 'All 6 Bari guides. Six voices, six routes.')
+      : product === 'crociera'
+        ? (lang === 'it'
+            ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
+            : 'Bari Vecchia + Best of Bari. For a 3-hour port stop.')
+        : (lang === 'it'
+            ? 'Una guida a scelta, tua per sempre.'
+            : 'One guide of your choice, yours forever.')
 );
 
 const unitLabel =
   (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
     ? (lang === 'it' ? '/ 6 guide' : '/ 6 guides')
-    : product === 'crociera'
-      ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
-      : (lang === 'it' ? '/ guida' : '/ guide');
+    : product === 'tris'
+      ? (lang === 'it' ? '/ 3 guide' : '/ 3 guides')
+      : product === 'crociera'
+        ? (lang === 'it' ? '/ 2 guide' : '/ 2 guides')
+        : (lang === 'it' ? '/ guida' : '/ guide');
 
 const ctaLabel = ctaOverride ?? (
-  product === 'bari-completa'
-    ? (lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari')
-    : product === 'crociera'
-      ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package')
-      : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide')
+  product === 'tris'
+    ? (lang === 'it' ? 'Scegli 3 guide' : 'Choose 3 guides')
+    : product === 'bari-completa'
+      ? (lang === 'it' ? 'Acquista Bari Completa' : 'Get Complete Bari')
+      : product === 'crociera'
+        ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : 'Get Cruise Package')
+        : (lang === 'it' ? 'Acquista guida singola' : 'Buy single guide')
 );
+
+const builderHref = lang === 'en' ? '/en/guide#builder' : lang === 'de' ? '/de/guide#builder' : '/guide#builder';
+const isTris = product === 'tris';
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
@@ -84,15 +98,24 @@ const ctaLabel = ctaOverride ?? (
     ))}
   </ul>
 
-  <button
-    type="button"
-    class={`checkout-btn mt-auto w-full px-md py-sm rounded-md font-semibold text-sm text-center transition-colors duration-fast ${primary ? 'bg-ink text-surface hover:bg-ink/90' : 'border border-ink text-ink hover:bg-ink hover:text-surface'}`}
-    data-product={product}
-    data-guide-slug={guideSlug ?? ''}
-    data-lang={lang}
-  >
-    {ctaLabel} · {priceLabel}
-  </button>
+  {isTris ? (
+    <a
+      href={builderHref}
+      class={`mt-auto w-full px-md py-sm rounded-md font-semibold text-sm text-center transition-colors duration-fast no-underline inline-block ${primary ? 'bg-ink text-surface hover:bg-ink/90' : 'border border-ink text-ink hover:bg-ink hover:text-surface'}`}
+    >
+      {ctaLabel} · {priceLabel}
+    </a>
+  ) : (
+    <button
+      type="button"
+      class={`checkout-btn mt-auto w-full px-md py-sm rounded-md font-semibold text-sm text-center transition-colors duration-fast ${primary ? 'bg-ink text-surface hover:bg-ink/90' : 'border border-ink text-ink hover:bg-ink hover:text-surface'}`}
+      data-product={product}
+      data-guide-slug={guideSlug ?? ''}
+      data-lang={lang}
+    >
+      {ctaLabel} · {priceLabel}
+    </button>
+  )}
 </article>
 
 <script>
