@@ -15,6 +15,8 @@ export interface Author {
   initials?: string;
   /** Path foto B/W 3:4. Se vuoto: render silhouette tipografica. */
   photo?: string;
+  /** True quando la voce è un personaggio editoriale composito. */
+  composite?: boolean;
   /** Se true, mostra badge "Profilo in arrivo" sopra la card */
   draft?: boolean;
 }
@@ -25,14 +27,16 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola VI — Gli autori' : 'Plate VI — The authors';
-const heading1 = lang === 'it' ? 'Sei autori baresi.' : 'Six authors from Bari.';
-const heading2 = lang === 'it' ? 'Sei voci, sei guide, una sola Bari.' : 'Six voices, six guides, one Bari.';
+const eyebrow = lang === 'it' ? 'Tavola VI - Gli autori' : lang === 'de' ? 'Tafel VI - Die Autoren' : 'Plate VI - The authors';
+const heading1 = lang === 'it' ? 'Sei autori baresi.' : lang === 'de' ? 'Sechs Autoren aus Bari.' : 'Six authors from Bari.';
+const heading2 = lang === 'it' ? 'Sei voci, sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Stimmen, sechs Guides, ein Bari.' : 'Six voices, six guides, one Bari.';
 const intro = lang === 'it'
-  ? 'Non guide certificate, non copia-incolla Wikipedia. Autori che quei vicoli li hanno vissuti, hanno mangiato in quei panifici, hanno visto cambiare quei mercati. Ogni guida è firmata: nome, volto, storia.'
-  : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, face, story.';
-const draftBadge = lang === 'it' ? 'Profilo in arrivo' : 'Profile coming';
-const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : 'Portrait coming';
+  ? 'Non guide certificate, non copia-incolla Wikipedia. Autori che quei vicoli li hanno vissuti, hanno mangiato in quei panifici, hanno visto cambiare quei mercati. Ogni guida e firmata: nome, volto, storia.'
+  : lang === 'de'
+    ? 'Keine lizenzierten Stadtfuehrer, kein Wikipedia-Copy-and-paste. Stimmen, die aus gelebter Erfahrung, Recherche und redaktioneller Arbeit entstehen. Jeder Guide hat eine Stimme: Name, Gesicht, Geschichte.'
+    : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, face, story.';
+const draftBadge = lang === 'it' ? 'Profilo in arrivo' : lang === 'de' ? 'Profil folgt' : 'Profile coming';
+const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : lang === 'de' ? 'Portraet folgt' : 'Portrait coming';
 
 // Placeholders editoriali — nessun nome inventato di persona reale.
 // Quando il narratore reale è confermato, sostituire `name`, `bioIt`, `bioEn`,
@@ -89,6 +93,7 @@ const authors: Author[] = [
     name: 'Rosa "la Perpetua"',
     initials: 'R.P.',
     photo: '/images/authors/rosa-perpetua.jpg',
+    composite: true,
     bioIt: 'Cinquant\'anni di servizio nella Basilica di San Nicola — a pulire, riordinare, ascoltare. Adesso in pensione, ma le pietre della cripta sa ancora ricordarle a memoria. Una pulita per volta.',
     bioEn: 'Fifty years of service in the Basilica of San Nicola — cleaning, tidying, listening. Now retired, but she can still recall every stone of the crypt by heart. One wipe at a time.',
   },
@@ -108,12 +113,46 @@ function deriveInitials(a: Author): string {
 }
 
 function bioFor(a: Author): string {
-  const draftIt = `Voce confermata per "${a.guideTitle}". Foto e bio breve a giorni — il narratore sta finendo le ultime registrazioni.`;
-  const draftEn = `Voice confirmed for "${a.guideTitle}". Photo and short bio coming soon — narrator is finishing recordings.`;
+  const draftIt = `Voce confermata per "${a.guideTitle}". Foto e bio breve a giorni.`;
+  const draftEn = `Voice confirmed for "${a.guideTitle}". Photo and short bio coming soon.`;
+  const draftDe = `Stimme fuer "${a.guideTitle}" bestaetigt. Foto und Kurzbiografie folgen bald.`;
   if (lang === 'it') {
     return a.bioIt ?? draftIt;
   }
+  if (lang === 'de') {
+    return a.bioEn ?? draftDe;
+  }
   return a.bioEn ?? draftEn;
+}
+
+function photoNoteFor(a: Author): string {
+  if (a.composite) {
+    return lang === 'it'
+      ? 'Voce editoriale composita. Ritratto evocativo.'
+      : lang === 'de'
+        ? 'Zusammengesetzte redaktionelle Stimme. Sinnbildliches Portraet.'
+        : 'Composite editorial voice. Evocative portrait.';
+  }
+  return lang === 'it'
+    ? 'Persona reale. Ritratto dell\'autore.'
+    : lang === 'de'
+      ? 'Reale Person. Autorenportraet.'
+      : 'Real person. Author portrait.';
+}
+
+function photoTitleFor(a: Author): string {
+  if (a.composite) {
+    return lang === 'it'
+      ? `${a.name}: personaggio editoriale composito costruito da ricerca, fonti e raccolta sul campo. Ritratto evocativo.`
+      : lang === 'de'
+        ? `${a.name}: zusammengesetzte redaktionelle Figur aus Recherche, Quellen und Material vor Ort. Sinnbildliches Portraet.`
+        : `${a.name}: composite editorial character built from research, sources and field material. Evocative portrait.`;
+  }
+  return lang === 'it'
+    ? `${a.name}: persona reale e autore della guida ${a.guideTitle}.`
+    : lang === 'de'
+      ? `${a.name}: reale Person und Autor des Guides ${a.guideTitle}.`
+      : `${a.name}: real person and author of the ${a.guideTitle} guide.`;
 }
 ---
 <section class="authors bg-surface">
@@ -143,6 +182,8 @@ function bioFor(a: Author): string {
       {authors.map((a, i) => {
         const initials = deriveInitials(a);
         const bio = bioFor(a);
+        const photoNote = photoNoteFor(a);
+        const photoTitle = photoTitleFor(a);
         const isPlaceholderName = !a.name;
 
         return (
@@ -154,6 +195,7 @@ function bioFor(a: Author): string {
                   <img
                     src={a.photo}
                     alt={a.name ? `Ritratto di ${a.name}, narratore di "${a.guideTitle}"` : `Ritratto in arrivo per "${a.guideTitle}"`}
+                    title={photoTitle}
                     class="author-img"
                     loading="lazy"
                     decoding="async"
@@ -168,6 +210,11 @@ function bioFor(a: Author): string {
                   <span class="author-draft" aria-hidden="true">{draftBadge}</span>
                 )}
               </figure>
+              {a.photo && (
+                <p class="author-photo-note font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-ink-subtle m-0">
+                  {photoNote}
+                </p>
+              )}
 
               <!-- Meta -->
               <div class="author-meta">
@@ -177,7 +224,7 @@ function bioFor(a: Author): string {
                 <h3 class="author-name font-display text-ink leading-[1.1] m-0">
                   {isPlaceholderName ? (
                     <span class="text-ink-subtle italic font-light">
-                      {lang === 'it' ? 'Autore di' : 'Author of'} <span class="not-italic font-normal text-ink">{a.guideTitle}</span>
+                      {lang === 'it' ? 'Autore di' : lang === 'de' ? 'Autor von' : 'Author of'} <span class="not-italic font-normal text-ink">{a.guideTitle}</span>
                     </span>
                   ) : (
                     <>
@@ -235,6 +282,11 @@ function bioFor(a: Author): string {
     display: block;
     /* Editorial B/W treatment */
     filter: grayscale(100%) contrast(1.06) brightness(0.96);
+  }
+
+  .author-photo-note {
+    margin-top: calc(var(--spacing-md) * -0.55);
+    line-height: 1.35;
   }
 
   /* Silhouette placeholder — initials in Spectral italic on parchment */

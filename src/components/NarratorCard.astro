@@ -10,15 +10,40 @@ export interface Props {
 
 const { name, photo, bio, lang } = Astro.props;
 const eyebrow = lang === 'it' ? 'Voce di questa guida' : 'Voice of this guide';
+const realNarrators = new Set(['Domenico', 'Domenico Loconsole', 'Filippo', 'Filippo Bellomo', 'Nonno Nicola', 'Rachele Grande', 'Luigi', 'Luigi Loconsole']);
+const isComposite = !realNarrators.has(name);
+const photoNote = isComposite
+  ? lang === 'it'
+    ? 'Voce editoriale composita. Ritratto evocativo.'
+    : lang === 'de'
+      ? 'Zusammengesetzte redaktionelle Stimme. Sinnbildliches Porträt.'
+      : 'Composite editorial voice. Evocative portrait.'
+  : lang === 'it'
+    ? 'Persona reale. Ritratto dell\'autore.'
+    : lang === 'de'
+      ? 'Reale Person. Autorenporträt.'
+      : 'Real person. Author portrait.';
+const photoTitle = isComposite
+  ? lang === 'it'
+    ? `${name}: personaggio editoriale composito costruito da ricerca, fonti e raccolta sul campo. Ritratto evocativo.`
+    : lang === 'de'
+      ? `${name}: zusammengesetzte redaktionelle Figur aus Recherche, Quellen und Material vor Ort. Sinnbildliches Porträt.`
+      : `${name}: composite editorial character built from research, sources and field material. Evocative portrait.`
+  : lang === 'it'
+    ? `${name}: persona reale e voce della guida.`
+    : lang === 'de'
+      ? `${name}: reale Person und Stimme des Guides.`
+      : `${name}: real person and voice of the guide.`;
 ---
 <aside class="narrator-card">
   <span class="narrator-eyebrow">{eyebrow}</span>
   <div class="narrator-row">
     <figure class="narrator-photo">
-      <img src={photo} alt={`Ritratto di ${name}`} loading="lazy" decoding="async" />
+      <img src={photo} alt={`Ritratto di ${name}`} title={photoTitle} loading="lazy" decoding="async" />
     </figure>
     <div class="narrator-text">
       <h3 class="narrator-name font-display">{name}</h3>
+      <p class="narrator-photo-note">{photoNote}</p>
       <p class="narrator-bio">{bio}</p>
     </div>
   </div>
@@ -82,6 +107,16 @@ const eyebrow = lang === 'it' ? 'Voce di questa guida' : 'Voice of this guide';
     font-size: 0.875rem;
     line-height: 1.5;
     color: var(--color-ink-muted);
+    margin: 0;
+  }
+  .narrator-photo-note {
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
     margin: 0;
   }
   @media (max-width: 480px) {

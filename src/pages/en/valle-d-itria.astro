@@ -185,8 +185,17 @@ const guides: GuideEntry[] = [
           <li>
             <a href={n.href} class="narr-card" aria-label={`Guide ${n.guide} — ${n.name}'s voice`}>
               <figure class="narr-photo m-0">
-                <img src={n.photo} alt={`Portrait of ${n.name}`} loading="lazy" decoding="async" />
+                <img
+                  src={n.photo}
+                  alt={`Evocative portrait of ${n.name}`}
+                  title={`${n.name}: composite editorial character built from research, sources and field material. Evocative portrait.`}
+                  loading="lazy"
+                  decoding="async"
+                />
               </figure>
+              <p class="narr-photo-note font-body text-[10px] font-semibold tracking-[0.18em] uppercase text-ink-subtle m-0">
+                Composite editorial voice. Evocative portrait.
+              </p>
               <div class="narr-text">
                 <p class="narr-guide font-body text-[10px] font-semibold tracking-[0.22em] uppercase text-accent m-0">{n.guide}</p>
                 <h3 class="narr-name font-display font-light text-ink m-0">{n.name}</h3>
@@ -226,6 +235,7 @@ const guides: GuideEntry[] = [
       width: 100%; height: 100%; object-fit: cover; display: block;
       filter: grayscale(100%) contrast(1.05) brightness(0.97);
     }
+    .narr-photo-note { margin-top: calc(var(--spacing-md) * -0.55); line-height: 1.35; }
     .narr-text { display: flex; flex-direction: column; gap: var(--spacing-xs); }
     .narr-name { font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.1; }
     .narr-bio { line-height: 1.55; }
