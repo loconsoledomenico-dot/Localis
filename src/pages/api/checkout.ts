@@ -173,6 +173,12 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
 };
 
 function cancelPathFor(lang: Lang, product: ProductSlug, firstGuideSlug: string): string {
+  if (product === 'tris' || product === 'sestina' || product === 'puglia-completa') {
+    if (lang === 'de') return '/de/guide#builder';
+    if (lang === 'en') return '/en/guide#builder';
+    return '/guide#builder';
+  }
+
   if (lang === 'de') {
     return product === 'crociera' ? '/de/kreuzfahrt?cancelled=1' : '/de?cancelled=1';
   }
