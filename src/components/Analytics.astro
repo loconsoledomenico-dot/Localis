@@ -1,6 +1,8 @@
 ---
 const domain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN || 'localis.guide';
 const ga4Id = import.meta.env.PUBLIC_GA4_ID || '';
+const posthogKey = import.meta.env.PUBLIC_POSTHOG_KEY || '';
+const posthogHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com';
 const isProd = import.meta.env.PROD;
 ---
 {isProd && (
@@ -18,10 +20,10 @@ const isProd = import.meta.env.PROD;
       };
     </script>
 
-    {ga4Id && (
+    {(ga4Id || posthogKey) && (
       <>
-        {/* GA4 — deferred until cookie consent is given (GDPR Art. 6) */}
-        <script define:vars={{ ga4Id }} is:inline>
+        {/* Analytics SDKs - deferred until cookie consent is given (GDPR Art. 6) */}
+        <script define:vars={{ ga4Id, posthogKey, posthogHost }} is:inline>
           // Resolve partner_id from URL / cookie / localStorage (no network call yet).
           let _partnerId = null;
           try {
@@ -44,25 +46,61 @@ const isProd = import.meta.env.PROD;
             if (window._ga4Loaded) return;
             window._ga4Loaded = true;
 
-            const s = document.createElement('script');
-            s.async = true;
-            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga4Id;
-            document.head.appendChild(s);
+            let isInternalTraffic = false;
+            try {
+              const params = new URLSearchParams(window.location.search);
+              const internalFlag = params.get('localis_internal');
+              if (internalFlag === '1') {
+                localStorage.setItem('localis_internal_traffic', '1');
+              } else if (internalFlag === '0') {
+                localStorage.removeItem('localis_internal_traffic');
+              }
+              isInternalTraffic = localStorage.getItem('localis_internal_traffic') === '1';
+            } catch (e) {}
 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){ window.dataLayer.push(arguments); }
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', ga4Id, { anonymize_ip: true, send_page_view: true });
-
+            const baseParams = { anonymize_ip: true };
+            if (isInternalTraffic) baseParams.traffic_type = 'internal';
             const pid = _partnerId || '(direct)';
-            gtag('set', 'user_properties', { partner_id: pid });
-            gtag('set', { partner_id: pid });
+
+            if (ga4Id) {
+              const s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga4Id;
+              document.head.appendChild(s);
+
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){ window.dataLayer.push(arguments); }
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', ga4Id, { ...baseParams, send_page_view: true });
+              gtag('set', 'user_properties', { partner_id: pid });
+              gtag('set', { ...baseParams, partner_id: pid });
+            }
+
+            if (posthogKey && !window.__posthog_initialized) {
+              window.__posthog_initialized = true;
+              !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+              window.posthog.init(posthogKey, {
+                api_host: posthogHost,
+                defaults: '2026-01-30',
+                capture_pageview: true,
+                autocapture: true,
+              });
+              window.posthog.register({
+                partner_id: pid,
+                traffic_type: isInternalTraffic ? 'internal' : 'external',
+              });
+              if (isInternalTraffic) {
+                window.posthog.capture('internal_staff_detected', { partner_id: pid, traffic_type: 'internal' });
+              }
+            }
 
             window.localisTrack = function (name, params) {
               params = params || {};
               if (!params.partner_id) params.partner_id = pid;
+              if (isInternalTraffic && !params.traffic_type) params.traffic_type = 'internal';
               try { if (typeof window.gtag === 'function') window.gtag('event', name, params); } catch (e) {}
+              try { if (window.posthog && typeof window.posthog.capture === 'function') window.posthog.capture(name, params); } catch (e) {}
               try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
             };
           };
