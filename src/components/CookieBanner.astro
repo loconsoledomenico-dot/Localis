@@ -85,6 +85,17 @@ const policyHref = localizedHref('/cookie-policy', lang);
       banner?.classList.add('hidden');
     }
 
+    function resetConsentFromUrl() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('cookie_reset') === '1') {
+          localStorage.removeItem(CONSENT_KEY);
+          return true;
+        }
+      } catch {}
+      return false;
+    }
+
     function loadGA4() {
       // GA4 is already injected conditionally in Analytics.astro;
       // fire the deferred init if window.localisGA4Init was set.
@@ -93,8 +104,10 @@ const policyHref = localizedHref('/cookie-policy', lang);
       }
     }
 
-    // Show banner only if no consent stored yet.
-    if (!getConsent()) {
+    const consentWasReset = resetConsentFromUrl();
+
+    // Show banner only if no consent stored yet, or after an explicit reset URL.
+    if (consentWasReset || !getConsent()) {
       banner?.classList.remove('hidden');
     } else if (getConsent()?.analytics) {
       loadGA4();
