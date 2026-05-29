@@ -59,6 +59,13 @@ const ZONE_ORDER = [
             ? 'Wähle 3 für Tris (11,99 €), 6 für Sestina (19,99 €), oder nimm Puglia Completa (39,99 €). Ein einzelner Guide kostet 4,99 €.'
             : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€39.99). Just one? €4.99.'}
       </p>
+      <p class="font-body text-ink-subtle text-xs mt-xs max-w-[48ch] mx-auto">
+        {lang === 'it'
+          ? 'Tris e Sestina combinano guide di zone diverse. Zona completa include tutte le 6 guide di una sola area.'
+          : lang === 'de'
+            ? 'Tris und Sestina kombinieren Guides aus verschiedenen Zonen. Komplette Zone umfasst alle 6 Guides eines einzigen Gebiets.'
+            : 'Tris and Sestina combine guides from different areas. Complete area includes all 6 guides from a single zone.'}
+      </p>
     </div>
 
     {ZONE_ORDER.map((zone) => (
