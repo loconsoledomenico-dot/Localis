@@ -85,6 +85,7 @@ const isProd = import.meta.env.PROD;
                 defaults: '2026-01-30',
                 capture_pageview: true,
                 autocapture: true,
+                disable_session_recording: isInternalTraffic,
               });
               window.posthog.register({
                 partner_id: pid,
