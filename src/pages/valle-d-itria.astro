@@ -5,6 +5,7 @@ import SectionDivider from '../components/SectionDivider.astro';
 import PriceCard from '../components/PriceCard.astro';
 import LangPills from '../components/LangPills.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import HeroAudioSample from '../components/HeroAudioSample.astro';
 
 interface GuideEntry {
   slug: string;
@@ -115,6 +116,7 @@ const guides: GuideEntry[] = [
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
         Sei racconti audio tra trulli, borghi bianchi, vigne e strade di collina.
       </p>
+      <HeroAudioSample lang="it" />
     </div>
   </section>
 

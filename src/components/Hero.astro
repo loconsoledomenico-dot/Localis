@@ -76,6 +76,8 @@ const altText = lang === 'de'
       <span class="block">{lede2}</span>
     </p>
 
+    <HeroAudioSample lang={lang} />
+
     <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm flex-wrap">
       <a
         href={ctaPrimaryHref}
@@ -109,8 +111,6 @@ const altText = lang === 'de'
         </a>
       )}
     </div>
-
-    <HeroAudioSample lang={lang} />
 
   </div>
 
@@ -229,13 +229,15 @@ const altText = lang === 'de'
   .hero-h1-a { animation-delay: 0.35s; }
   .hero-h1-b { animation-delay: 0.55s; }
   .hero-lede,
+  :global(.hero-sample),
   .hero-actions {
     opacity: 0;
     transform: translateY(10px);
     animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
   .hero-lede     { animation-delay: 0.75s; }
-  .hero-actions  { animation-delay: 0.9s; }
+  :global(.hero-sample) { animation-delay: 0.9s; }
+  .hero-actions  { animation-delay: 1.05s; }
 
   @keyframes ruleDraw { to { transform: scaleX(1); } }
   @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
@@ -246,7 +248,8 @@ const altText = lang === 'de'
     .hero-h1-a { animation-delay: 0.1s; animation-duration: 0.5s; }
     .hero-h1-b { animation-delay: 0.25s; animation-duration: 0.5s; }
     .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
-    .hero-actions { animation-delay: 0.45s; animation-duration: 0.4s; }
+    :global(.hero-sample) { animation-delay: 0.45s; animation-duration: 0.4s; }
+    .hero-actions { animation-delay: 0.55s; animation-duration: 0.4s; }
     .hero-masthead > span { animation-delay: 0.3s; }
 
     /* legibility */
@@ -255,6 +258,7 @@ const altText = lang === 'de'
       line-height: 1.5;
       margin-top: var(--spacing-lg);
     }
+    :global(.hero-sample),
     .hero-actions {
       margin-top: var(--spacing-xl);
       gap: var(--spacing-md);
@@ -266,6 +270,7 @@ const altText = lang === 'de'
     .hero-masthead > span,
     .hero-h1 > span,
     .hero-lede,
+    :global(.hero-sample),
     .hero-actions {
       animation: none;
       transform: none;

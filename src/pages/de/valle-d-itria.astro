@@ -5,6 +5,7 @@ import SectionDivider from '../../components/SectionDivider.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import LangPills from '../../components/LangPills.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import HeroAudioSample from '../../components/HeroAudioSample.astro';
 
 interface GuideEntry {
   slug: string;
@@ -85,6 +86,7 @@ const guides: GuideEntry[] = [
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
         Drei Audioerzählungen zwischen Trulli, weißen Dörfern und DOC-Weinbergen. Alberobello, Locorotondo und Martina Franca — jede Stimme gehört jemandem von dort.
       </p>
+      <HeroAudioSample lang="de" />
     </div>
   </section>
 
