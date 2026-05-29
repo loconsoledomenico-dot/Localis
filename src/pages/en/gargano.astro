@@ -204,11 +204,11 @@ const guides: GuideEntry[] = [
       </div>
       <ul class="narr-grid list-none p-0 m-0">
         {[
-          { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Third generation beach club, Vieste', bio: "Fifty-four. Her family has run the same beach club since her grandfather's time. She has watched this coastline change more in sixty years than in the six hundred before.", guide: 'Vieste', href: '/en/guide/gargano-vieste' },
-          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Fourth generation trabucco fisherman', bio: 'Sixty-eight, from Peschici. On the family trabucco since he was eleven. He knows the Gargano sea by heart — every current, every hour of the day.', guide: 'North Coast', href: '/en/guide/gargano-nord' },
+          { name: 'Rossella', photo: '/images/authors/rossella-vieste-v2.jpg', role: 'Third generation beach club, Vieste', bio: "Fifty-four. Her family has run the same beach club since her grandfather's time. She has watched this coastline change more in sixty years than in the six hundred before.", guide: 'Vieste', href: '/en/guide/gargano-vieste' },
+          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord-v2.jpg', role: 'Fourth generation trabucco fisherman', bio: 'Sixty-eight, from Peschici. On the family trabucco since he was eleven. He knows the Gargano sea by heart — every current, every hour of the day.', guide: 'North Coast', href: '/en/guide/gargano-nord' },
           { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Thirty years at the Sanctuary of Monte Sant\'Angelo', bio: "Seventy-three. Franciscan friar since 1978. He has guided pilgrims from the Foresta Umbra to the Archangel's grotto — on foot, as they did in the Middle Ages.", guide: 'Sacred Gargano', href: '/en/guide/gargano-sacro' },
-          { name: 'Tonino', photo: '/images/authors/tonino-tremiti.jpg', role: 'Boatman of San Domino', bio: "Seventy-four. Born on the Tremiti Islands, never left. For twenty years he took Lucio Dalla around the sea caves. He knows every cove, every reef, every current of the archipelago.", guide: 'Tremiti Islands', href: '/en/guide/gargano-tremiti' },
-          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Park ranger for thirty years', bio: "Fifty-eight, from Vico del Gargano. Thirty years in the Gargano National Park. He knows the inland villages like few others — the roads, the stories, the names of abandoned farmsteads.", guide: 'The Villages', href: '/en/guide/gargano-paesi' },
+          { name: 'Tonino', photo: '/images/authors/tonino-tremiti-v2.jpg', role: 'Boatman of San Domino', bio: "Seventy-four. Born on the Tremiti Islands, never left. For twenty years he took Lucio Dalla around the sea caves. He knows every cove, every reef, every current of the archipelago.", guide: 'Tremiti Islands', href: '/en/guide/gargano-tremiti' },
+          { name: 'Stefano', photo: '/images/authors/stefano-paesi-v2.jpg', role: 'Park ranger for thirty years', bio: "Fifty-eight, from Vico del Gargano. Thirty years in the Gargano National Park. He knows the inland villages like few others — the roads, the stories, the names of abandoned farmsteads.", guide: 'The Villages', href: '/en/guide/gargano-paesi' },
           { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Thirty years in salt quality control', bio: "Fifty-four, from Manfredonia. Thirty years at the Margherita di Savoia salt works. He has seen the basins at every possible hour — from the pink July dawn to the December fog.", guide: 'Salt Flats', href: '/en/guide/gargano-saline' },
         ].map((n) => (
           <li class="narr-cell">
@@ -261,7 +261,7 @@ const guides: GuideEntry[] = [
     }
     .narr-photo img {
       width: 100%; height: 100%; object-fit: cover; display: block;
-      filter: contrast(1.05) brightness(0.97);
+      filter: grayscale(100%) contrast(1.05) brightness(0.97);
     }
     .narr-text { display: flex; flex-direction: column; gap: var(--spacing-xs); }
     .narr-name { font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.1; }

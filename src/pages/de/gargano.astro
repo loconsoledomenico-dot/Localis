@@ -204,11 +204,11 @@ const guides: GuideEntry[] = [
       </div>
       <ul class="narr-grid list-none p-0 m-0">
         {[
-          { name: 'Rossella', photo: '/images/authors/rossella-vieste.jpg', role: 'Dritte Generation Strandclub, Vieste', bio: "Vierundfünfzig. Ihre Familie führt denselben Strandclub seit Großvaters Zeiten. Sie hat diese Küste in sechzig Jahren mehr verändern sehen als in den sechshundert davor.", guide: 'Vieste', href: '/de/guide/gargano-vieste' },
-          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord.jpg', role: 'Vierte Generation Trabucco-Fischer', bio: 'Achtundsechzig, aus Peschici. Auf dem Familientrabucco seit er elf war. Er kennt das Gargano-Meer auswendig — jede Strömung, jede Tageszeit.', guide: 'Nordküste', href: '/de/guide/gargano-nord' },
+          { name: 'Rossella', photo: '/images/authors/rossella-vieste-v2.jpg', role: 'Dritte Generation Strandclub, Vieste', bio: "Vierundfünfzig. Ihre Familie führt denselben Strandclub seit Großvaters Zeiten. Sie hat diese Küste in sechzig Jahren mehr verändern sehen als in den sechshundert davor.", guide: 'Vieste', href: '/de/guide/gargano-vieste' },
+          { name: 'Ferdinando', photo: '/images/authors/ferdinando-nord-v2.jpg', role: 'Vierte Generation Trabucco-Fischer', bio: 'Achtundsechzig, aus Peschici. Auf dem Familientrabucco seit er elf war. Er kennt das Gargano-Meer auswendig — jede Strömung, jede Tageszeit.', guide: 'Nordküste', href: '/de/guide/gargano-nord' },
           { name: "Fra' Salvatore", photo: '/images/authors/fra-salvatore-sacro.jpg', role: 'Dreißig Jahre am Heiligtum von Monte Sant\'Angelo', bio: "Dreiundsiebzig. Franziskanermönch seit 1978. Er hat Pilger von der Foresta Umbra bis zur Grottenkirche des Erzengels geführt — zu Fuß, wie im Mittelalter.", guide: 'Heiliger Gargano', href: '/de/guide/gargano-sacro' },
-          { name: 'Tonino', photo: '/images/authors/tonino-tremiti.jpg', role: 'Bootsführer von San Domino', bio: "Vierundsiebzig. Auf den Tremiti-Inseln geboren, nie weggegangen. Zwanzig Jahre lang fuhr er mit Lucio Dalla zu den Meereshöhlen. Er kennt jeden Winkel des Archipels.", guide: 'Tremiti-Inseln', href: '/de/guide/gargano-tremiti' },
-          { name: 'Stefano', photo: '/images/authors/stefano-paesi.jpg', role: 'Dreißig Jahre Nationalparkwächter', bio: "Achtundfünfzig, aus Vico del Gargano. Dreißig Jahre im Nationalpark Gargano. Er kennt die Innendörfer wie kaum ein anderer — die Straßen, die Geschichten, die Namen verlassener Gehöfte.", guide: 'Die Dörfer', href: '/de/guide/gargano-paesi' },
+          { name: 'Tonino', photo: '/images/authors/tonino-tremiti-v2.jpg', role: 'Bootsführer von San Domino', bio: "Vierundsiebzig. Auf den Tremiti-Inseln geboren, nie weggegangen. Zwanzig Jahre lang fuhr er mit Lucio Dalla zu den Meereshöhlen. Er kennt jeden Winkel des Archipels.", guide: 'Tremiti-Inseln', href: '/de/guide/gargano-tremiti' },
+          { name: 'Stefano', photo: '/images/authors/stefano-paesi-v2.jpg', role: 'Dreißig Jahre Nationalparkwächter', bio: "Achtundfünfzig, aus Vico del Gargano. Dreißig Jahre im Nationalpark Gargano. Er kennt die Innendörfer wie kaum ein anderer — die Straßen, die Geschichten, die Namen verlassener Gehöfte.", guide: 'Die Dörfer', href: '/de/guide/gargano-paesi' },
           { name: 'Antonello', photo: '/images/authors/antonello-saline.jpg', role: 'Dreißig Jahre Salzqualitätskontrolle', bio: "Vierundfünfzig, aus Manfredonia. Dreißig Jahre in den Salinen von Margherita di Savoia. Er hat die Becken zu jeder möglichen Stunde gesehen — vom rosa Julidämmern bis zum Dezembernebel.", guide: 'Salinen', href: '/de/guide/gargano-saline' },
         ].map((n) => (
           <li class="narr-cell">
@@ -261,7 +261,7 @@ const guides: GuideEntry[] = [
     }
     .narr-photo img {
       width: 100%; height: 100%; object-fit: cover; display: block;
-      filter: contrast(1.05) brightness(0.97);
+      filter: grayscale(100%) contrast(1.05) brightness(0.97);
     }
     .narr-text { display: flex; flex-direction: column; gap: var(--spacing-xs); }
     .narr-name { font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.1; }
