@@ -72,6 +72,12 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
 
       if (audio.paused) {
         audio.play().then(() => {
+          if (typeof window.localisTrack === 'function') {
+            window.localisTrack('audio_preview_played', {
+              audio_type: 'hero_sample',
+              audio_src: src,
+            });
+          }
           iconPlay.style.display  = 'none';
           iconPause.style.display = '';
           btn.setAttribute('aria-label', btn.dataset.pauseLabel!);

@@ -417,7 +417,12 @@ const ZONE_ORDER = [
       if (!data.url) throw new Error('No checkout URL');
 
       if (typeof (window as unknown as { localisTrack?: Function }).localisTrack === 'function') {
-        (window as unknown as { localisTrack: Function }).localisTrack('checkout_started', { product, guides: n, lang });
+        (window as unknown as { localisTrack: Function }).localisTrack('checkout_started', {
+          product,
+          guide_count: n,
+          guide_slugs: slugsArray.join(','),
+          lang,
+        });
       }
       window.location.assign(data.url);
     } catch (err) {

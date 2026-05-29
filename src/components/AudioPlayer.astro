@@ -167,6 +167,7 @@ const labels = {
     token: string;
     lang: 'it' | 'en' | 'de';
     audioUrl?: string;
+    startedTracked?: boolean;
     fullPlayedTracked?: boolean;
   };
 
@@ -231,6 +232,13 @@ const labels = {
     try {
       await p.audio.play();
       setPlayingState(p, true);
+      if (!p.startedTracked && typeof window.localisTrack === 'function') {
+        p.startedTracked = true;
+        window.localisTrack('guide_audio_started', {
+          guide: p.slug,
+          lang: p.lang,
+        });
+      }
       if (navigator.serviceWorker?.controller) {
         navigator.serviceWorker.controller.postMessage({
           type: 'PRECACHE_AUDIO',
@@ -285,6 +293,12 @@ const labels = {
       p.cur.textContent = fmtTime(p.audio.currentTime);
       if (pct > 80 && !p.fullPlayedTracked) {
         p.fullPlayedTracked = true;
+        if (typeof window.localisTrack === 'function') {
+          window.localisTrack('guide_audio_80_percent', {
+            guide: p.slug,
+            lang: p.lang,
+          });
+        }
         if (typeof window.plausible === 'function') {
           window.plausible('Audio Played Full', { props: { guide: p.slug } });
         }

@@ -9,6 +9,7 @@ import { getCollection } from 'astro:content';
 import type { Lang } from '../../lib/i18n';
 import type Stripe from 'stripe';
 import { guideTitle } from '../../lib/guide-localization';
+import { captureServerEvent, hashDistinctId } from '../../lib/posthog';
 
 function normalizeLang(value: string | undefined): Lang {
   if (value === 'en' || value === 'de') return value;
@@ -61,6 +62,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
   const guide_slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
   const partner_id = meta.partner_id || null;
   const lang = normalizeLang(meta.lang);
+  const product = meta.product || 'unknown';
 
   if (guide_slugs.length === 0) {
     throw new Error(`Session ${session.id} has no guide_slugs in metadata`);
@@ -94,6 +96,17 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
 
   // Send via Resend
   await sendEmail({ to: email, subject, html, text });
+
+  await captureServerEvent('purchase_completed', hashDistinctId(email), {
+    product,
+    guide_count: guide_slugs.length,
+    guide_slugs: guide_slugs.join(','),
+    partner_id,
+    lang,
+    stripe_session_id: session.id,
+    revenue_cents: session.amount_total ?? null,
+    currency: session.currency ?? 'eur',
+  });
 
   console.log(`[webhook] Sent access email to ${email} for guides ${guide_slugs.join(', ')}`);
 
