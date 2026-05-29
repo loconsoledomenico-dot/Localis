@@ -40,6 +40,11 @@ const { guide } = Astro.props;
 const data = guide.data;
 
 const durationLabel = formatDuration(data.duration_seconds_en ?? data.duration_seconds);
+const zoneBundle = data.city === 'bari' || data.city === 'polignano'
+  ? 'bari-completa'
+  : data.city === 'vieste' || data.city === 'gargano'
+    ? 'gargano-completa'
+    : 'valle-completa';
 
 const ld: object[] = [
   audioObjectLD({
@@ -122,13 +127,13 @@ ld.push(productLD({
         ]}
       />
       <PriceCard
-        product="bari-completa"
+        product={zoneBundle}
         lang="en"
         primary
         features={[
-          'All 6 Bari guides',
+          'All 6 guides in the area',
           'Save €9.95 vs single guides',
-          'Free updates when new Bari content drops',
+          'Free updates when new area content drops',
         ]}
       />
     </aside>

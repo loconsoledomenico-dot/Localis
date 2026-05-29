@@ -25,12 +25,8 @@ const priceLabel = formatPrice(priceCents);
 const title = titleOverride ?? (
   product === 'tris'
     ? (lang === 'it' ? 'Tris' : 'Tris')
-    : product === 'bari-completa'
-      ? (lang === 'it' ? 'Bari Completa' : lang === 'de' ? 'Bari Komplett' : 'Complete Bari')
-      : product === 'valle-completa'
-        ? (lang === 'it' ? "Valle d'Itria Completa" : lang === 'de' ? "Valle d'Itria Komplett" : "Complete Valle d'Itria")
-        : product === 'gargano-completa'
-          ? (lang === 'it' ? 'Gargano Completo' : lang === 'de' ? 'Gargano Komplett' : 'Complete Gargano')
+    : (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
+      ? (lang === 'it' ? 'Zona completa' : lang === 'de' ? 'Komplette Zone' : 'Complete area')
       : product === 'crociera'
         ? (lang === 'it' ? 'Pacchetto Crociera' : lang === 'de' ? 'Kreuzfahrt-Paket' : 'Cruise Package')
         : (lang === 'it' ? 'Guida singola' : lang === 'de' ? 'Einzelner Guide' : 'Single guide')
@@ -86,12 +82,8 @@ const unitLabel =
 const ctaLabel = ctaOverride ?? (
   product === 'tris'
     ? (lang === 'it' ? 'Scegli 3 guide' : lang === 'de' ? '3 Guides auswählen' : 'Choose 3 guides')
-    : product === 'bari-completa'
-      ? (lang === 'it' ? 'Acquista Bari Completa' : lang === 'de' ? 'Bari Komplett kaufen' : 'Get Complete Bari')
-      : product === 'valle-completa'
-        ? (lang === 'it' ? "Acquista Valle d'Itria Completa" : lang === 'de' ? "Valle d'Itria Komplett kaufen" : "Get Complete Valle d'Itria")
-        : product === 'gargano-completa'
-          ? (lang === 'it' ? 'Acquista Gargano Completo' : lang === 'de' ? 'Gargano Komplett kaufen' : 'Get Complete Gargano')
+    : (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
+      ? (lang === 'it' ? 'Acquista Zona completa' : lang === 'de' ? 'Komplette Zone kaufen' : 'Get Complete Area')
       : product === 'crociera'
         ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : lang === 'de' ? 'Kreuzfahrt-Paket kaufen' : 'Get Cruise Package')
         : (lang === 'it' ? 'Acquista guida singola' : lang === 'de' ? 'Guide kaufen' : 'Buy single guide')
