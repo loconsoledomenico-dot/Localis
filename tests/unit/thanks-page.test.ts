@@ -81,8 +81,9 @@ describe('buildThanksPageModel', () => {
     expect(model).toEqual({
       state: 'ready',
       pageTitle: 'Deine Guides sind bereit.',
-      primaryMessage: 'Oeffne jetzt direkt die gekauften Audioguides.',
-      emailMessage: 'Den Zugangslink haben wir an kunde@example.com geschickt.',
+      primaryMessage: 'Du kannst direkt von hier aus mit dem Hoeren beginnen.',
+      emailMessage:
+        'Wir haben dir den Zugangslink auch an kunde@example.com geschickt, damit du spaeter alles wiederfindest.',
       cardCta: 'Jetzt anhoeren',
       cards: [
         {

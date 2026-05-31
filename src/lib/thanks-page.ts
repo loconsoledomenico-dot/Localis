@@ -37,10 +37,10 @@ const COPY = {
   it: {
     ready: {
       pageTitle: 'Le tue guide sono pronte.',
-      primaryMessage: 'Apri subito le audioguide che hai acquistato.',
+      primaryMessage: 'Puoi iniziare ad ascoltare subito da qui.',
       emailMessage: (buyerEmail: string | null) =>
         buyerEmail
-          ? `Ti abbiamo inviato il link di accesso a ${buyerEmail}.`
+          ? `Ti abbiamo inviato anche il link di accesso a ${buyerEmail}, cosi puoi ritrovare tutto piu tardi.`
           : 'Ti inviamo subito il link di accesso via email. Controlla anche la cartella spam.',
     },
     empty: {
@@ -53,10 +53,10 @@ const COPY = {
   en: {
     ready: {
       pageTitle: 'Your guides are ready.',
-      primaryMessage: 'Open your purchased audio guides right away.',
+      primaryMessage: 'You can start listening right here.',
       emailMessage: (buyerEmail: string | null) =>
         buyerEmail
-          ? `We sent the access link to ${buyerEmail}.`
+          ? `We also sent the access link to ${buyerEmail}, so you can find everything again later.`
           : 'We will send your access link by email shortly. Please check spam too.',
     },
     empty: {
@@ -69,10 +69,10 @@ const COPY = {
   de: {
     ready: {
       pageTitle: 'Deine Guides sind bereit.',
-      primaryMessage: 'Oeffne jetzt direkt die gekauften Audioguides.',
+      primaryMessage: 'Du kannst direkt von hier aus mit dem Hoeren beginnen.',
       emailMessage: (buyerEmail: string | null) =>
         buyerEmail
-          ? `Den Zugangslink haben wir an ${buyerEmail} geschickt.`
+          ? `Wir haben dir den Zugangslink auch an ${buyerEmail} geschickt, damit du spaeter alles wiederfindest.`
           : 'Wir senden dir den Zugangslink gleich per E-Mail. Bitte pruefe auch den Spam-Ordner.',
     },
     empty: {

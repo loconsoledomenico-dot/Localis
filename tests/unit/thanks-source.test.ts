@@ -11,5 +11,7 @@ describe('thanks page purchased guide UI', () => {
     expect(source).toContain('model.cards.map');
     expect(source).toContain('card.ctaHref');
     expect(source).toContain('model.cardCta');
+    expect(source).toContain('ui.backupLabel');
+    expect(source).toContain('model.emailMessage');
   });
 });

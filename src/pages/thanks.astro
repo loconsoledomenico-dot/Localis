@@ -17,6 +17,7 @@ const UI_COPY = {
     purchasedGuidesLabel: 'Guide acquistate',
     recoverCta: 'Recupera accesso',
     homeCta: 'Torna in homepage',
+    backupLabel: 'Link di backup via email',
     backupMessage: 'Ti serve di nuovo il link? Puoi recuperarlo in qualsiasi momento.',
     unconfirmedHeading: 'Stiamo preparando il tuo accesso.',
     unconfirmedMessage: (buyerEmail: string | null) =>
@@ -30,6 +31,7 @@ const UI_COPY = {
     purchasedGuidesLabel: 'Purchased guides',
     recoverCta: 'Recover access',
     homeCta: 'Back to homepage',
+    backupLabel: 'Backup link by email',
     backupMessage: 'Need the link again? You can recover it anytime.',
     unconfirmedHeading: 'We are preparing your access.',
     unconfirmedMessage: (buyerEmail: string | null) =>
@@ -43,6 +45,7 @@ const UI_COPY = {
     purchasedGuidesLabel: 'Gekaufte Guides',
     recoverCta: 'Zugang wiederherstellen',
     homeCta: 'Zur Startseite',
+    backupLabel: 'Backup-Link per E-Mail',
     backupMessage: 'Du brauchst den Link erneut? Du kannst ihn jederzeit wiederherstellen.',
     unconfirmedHeading: 'Wir bereiten deinen Zugang vor.',
     unconfirmedMessage: (buyerEmail: string | null) =>
@@ -58,6 +61,7 @@ const UI_COPY = {
     purchasedGuidesLabel: string;
     recoverCta: string;
     homeCta: string;
+    backupLabel: string;
     backupMessage: string;
     unconfirmedHeading: string;
     unconfirmedMessage: (buyerEmail: string | null) => string;
@@ -143,6 +147,12 @@ const pageTitle = success ? model.pageTitle : fallbackHeading;
       <p class="text-base text-ink-muted">
         {success ? model.primaryMessage : fallbackMessage}
       </p>
+      {success ? (
+        <div class="mt-lg rounded-xl border border-accent/20 bg-accent/5 p-md">
+          <p class="text-xs uppercase tracking-[0.18em] text-accent mb-xs">{ui.backupLabel}</p>
+          <p class="text-sm text-ink-muted">{model.emailMessage}</p>
+        </div>
+      ) : null}
     </header>
 
     {success ? (
@@ -191,16 +201,13 @@ const pageTitle = success ? model.pageTitle : fallbackHeading;
 
     <footer class="mt-2xl max-w-prose border-t border-border pt-lg text-sm text-ink-subtle">
       {success ? (
-        <>
-          <p class="mb-xs">{model.emailMessage}</p>
-          <p>
-            {ui.backupMessage}{' '}
-            <a href="/recover" class="text-link hover:text-link-pressed">
-              {ui.recoverCta}
-            </a>
-            .
-          </p>
-        </>
+        <p>
+          {ui.backupMessage}{' '}
+          <a href="/recover" class="text-link hover:text-link-pressed">
+            {ui.recoverCta}
+          </a>
+          .
+        </p>
       ) : (
         <p>{footerMessage}</p>
       )}
