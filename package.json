@@ -2,6 +2,7 @@
   "name": "localis",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@11.4.0",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -12,8 +13,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest --configLoader runner run",
+    "test:watch": "vitest --configLoader runner",
     "test:e2e": "playwright test"
   },
   "dependencies": {
