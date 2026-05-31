@@ -10,7 +10,6 @@ function makeGuideEntry(
 ): GuideEntry {
   return {
     id: `${slug}.mdx`,
-    slug,
     body: '',
     collection: 'guides',
     data: {
