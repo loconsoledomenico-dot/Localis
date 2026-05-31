@@ -1,80 +1,213 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../components/Layout.astro';
-import { getStripe } from '../lib/stripe';
+import { buildThanksPageModel } from '../lib/thanks-page';
 import { generateAccessToken } from '../lib/jwt';
 import type { Lang } from '../lib/i18n';
+import { getStripe } from '../lib/stripe';
 
-function normalizeLang(value: string | undefined): Lang {
+function normalizeLang(value: string | null | undefined): Lang {
   if (value === 'en' || value === 'de') return value;
   return 'it';
 }
 
+const UI_COPY = {
+  it: {
+    eyebrow: 'Localis',
+    purchasedGuidesLabel: 'Guide acquistate',
+    recoverCta: 'Recupera accesso',
+    homeCta: 'Torna in homepage',
+    backupMessage: 'Ti serve di nuovo il link? Puoi recuperarlo in qualsiasi momento.',
+    unconfirmedHeading: 'Stiamo preparando il tuo accesso.',
+    unconfirmedMessage: (buyerEmail: string | null) =>
+      buyerEmail
+        ? `Stiamo verificando l'acquisto associato a ${buyerEmail}. Se il pagamento verra confermato, useremo questa email per inviarti il link di accesso.`
+        : 'Mostriamo le guide acquistate solo dopo la conferma del pagamento. Se hai gia completato l acquisto, controlla la tua email o usa il recupero accesso.',
+    confirmedEmptyHeading: 'Stiamo finalizzando le tue guide.',
+  },
+  en: {
+    eyebrow: 'Localis',
+    purchasedGuidesLabel: 'Purchased guides',
+    recoverCta: 'Recover access',
+    homeCta: 'Back to homepage',
+    backupMessage: 'Need the link again? You can recover it anytime.',
+    unconfirmedHeading: 'We are preparing your access.',
+    unconfirmedMessage: (buyerEmail: string | null) =>
+      buyerEmail
+        ? `We are verifying the purchase linked to ${buyerEmail}. If payment is confirmed, we will use this email to send your access link.`
+        : 'We only show purchased guides after payment is confirmed. If you already completed checkout, check your email or use access recovery.',
+    confirmedEmptyHeading: 'We are finalizing your guides.',
+  },
+  de: {
+    eyebrow: 'Localis',
+    purchasedGuidesLabel: 'Gekaufte Guides',
+    recoverCta: 'Zugang wiederherstellen',
+    homeCta: 'Zur Startseite',
+    backupMessage: 'Du brauchst den Link erneut? Du kannst ihn jederzeit wiederherstellen.',
+    unconfirmedHeading: 'Wir bereiten deinen Zugang vor.',
+    unconfirmedMessage: (buyerEmail: string | null) =>
+      buyerEmail
+        ? `Wir pruefen gerade den Kauf fuer ${buyerEmail}. Wenn die Zahlung bestaetigt wird, senden wir den Zugangslink an diese E-Mail-Adresse.`
+        : 'Wir zeigen gekaufte Guides erst nach bestaetigter Zahlung. Wenn du den Checkout schon abgeschlossen hast, pruefe bitte deine E-Mail oder stelle den Zugang wieder her.',
+    confirmedEmptyHeading: 'Wir finalisieren deine Guides.',
+  },
+} satisfies Record<
+  Lang,
+  {
+    eyebrow: string;
+    purchasedGuidesLabel: string;
+    recoverCta: string;
+    homeCta: string;
+    backupMessage: string;
+    unconfirmedHeading: string;
+    unconfirmedMessage: (buyerEmail: string | null) => string;
+    confirmedEmptyHeading: string;
+  }
+>;
+
 const sessionId = Astro.url.searchParams.get('session_id');
-let directAccessUrl: string | null = null;
-let buyerEmail: string | null = null;
+const allGuides = await getCollection('guides');
+
+let lang = normalizeLang(Astro.url.searchParams.get('lang'));
+let hasConfirmedPayment = false;
+let fallbackBuyerEmail: string | null = null;
+
+let model = buildThanksPageModel({
+  lang,
+  token: null,
+  buyerEmail: null,
+  guideSlugs: [],
+  matchedGuides: [],
+});
 
 if (sessionId) {
   try {
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-    const email = session.customer_email || session.customer_details?.email;
+    const email = session.customer_email || session.customer_details?.email || null;
+    fallbackBuyerEmail = email;
     const meta = session.metadata || {};
-    const guide_slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
-    const lang = normalizeLang(meta.lang);
+    const guideSlugs = (meta.guide_slugs || '')
+      .split(',')
+      .map((slug) => slug.trim())
+      .filter(Boolean);
 
-    if (email && guide_slugs.length > 0 && session.payment_status === 'paid') {
+    lang = normalizeLang(meta.lang ?? Astro.url.searchParams.get('lang'));
+    hasConfirmedPayment = session.payment_status === 'paid';
+
+    const matchedGuides = guideSlugs
+      .map((slug) => allGuides.find((guide) => guide.data.slug === slug))
+      .filter((guide): guide is (typeof allGuides)[number] => Boolean(guide));
+
+    if (email && guideSlugs.length > 0 && hasConfirmedPayment) {
       const token = generateAccessToken({
         email,
-        guide_slugs,
+        guide_slugs: guideSlugs,
         stripe_session_id: session.id,
         partner_id: meta.partner_id || null,
       });
-      directAccessUrl = `/access/${token}?lang=${lang}`;
-      buyerEmail = email;
+
+      model = buildThanksPageModel({
+        lang,
+        token,
+        buyerEmail: email,
+        guideSlugs,
+        matchedGuides,
+      });
+    } else {
+      model = buildThanksPageModel({
+        lang,
+        token: null,
+        buyerEmail: email,
+        guideSlugs,
+        matchedGuides,
+      });
     }
   } catch (err) {
     console.error('[thanks] session lookup error', err);
   }
 }
+
+const ui = UI_COPY[lang];
+const success = model.state === 'ready';
+const fallbackHeading = hasConfirmedPayment ? ui.confirmedEmptyHeading : ui.unconfirmedHeading;
+const fallbackMessage = hasConfirmedPayment ? model.primaryMessage : ui.unconfirmedMessage(fallbackBuyerEmail);
+const footerMessage = success || hasConfirmedPayment ? model.emailMessage : ui.backupMessage;
+const pageTitle = success ? model.pageTitle : fallbackHeading;
 ---
-<Layout title="Grazie · Localis" lang="it">
-  <main class="max-w-narrow mx-auto px-md py-3xl text-center">
-    <p class="font-display italic text-2xl text-accent mb-md">Grazie.</p>
-    <h1 class="font-display text-4xl text-ink mb-lg">La tua guida ti aspetta.</h1>
-
-    {buyerEmail && (
-      <p class="text-base text-ink-muted mb-xl max-w-prose mx-auto">
-        Ti abbiamo inviato il link di accesso a <strong class="text-ink">{buyerEmail}</strong>.
-        Arriva entro 1 minuto, controlla anche lo spam.
+<Layout title={`${pageTitle} · Localis`} lang={lang}>
+  <main class="max-w-wrap mx-auto px-md py-3xl">
+    <header class="max-w-prose mb-2xl">
+      <p class="font-display italic text-2xl text-accent mb-md">{ui.eyebrow}</p>
+      <h1 class="font-display text-4xl text-ink mb-md">{pageTitle}</h1>
+      <p class="text-base text-ink-muted">
+        {success ? model.primaryMessage : fallbackMessage}
       </p>
+    </header>
+
+    {success ? (
+      <section class="grid gap-lg md:grid-cols-2 xl:grid-cols-3" aria-label={ui.purchasedGuidesLabel}>
+        {model.cards.map((card) => (
+          <article class="overflow-hidden rounded-xl border border-border bg-surface-elev">
+            <img
+              src={card.cover}
+              alt={card.title}
+              loading="lazy"
+              decoding="async"
+              class="aspect-[4/3] w-full object-cover"
+            />
+            <div class="flex h-full flex-col p-md">
+              <h2 class="font-display text-2xl text-ink mb-xs">{card.title}</h2>
+              <p class="text-sm text-ink-muted leading-relaxed mb-sm">{card.subtitle}</p>
+              <p class="text-xs uppercase tracking-[0.18em] text-ink-subtle mb-md">{card.duration}</p>
+              <a
+                href={card.ctaHref}
+                class="mt-auto inline-flex items-center justify-center rounded-md bg-ink px-lg py-md text-sm font-semibold text-surface transition-colors duration-fast no-underline hover:bg-ink/90"
+              >
+                {model.cardCta}
+              </a>
+            </div>
+          </article>
+        ))}
+      </section>
+    ) : (
+      <section class="max-w-prose rounded-xl border border-border bg-surface-elev p-lg">
+        <div class="flex flex-wrap items-center gap-md">
+          <a
+            href="/recover"
+            class="inline-flex items-center gap-xs rounded-md bg-ink px-md py-sm text-sm font-semibold text-surface transition-colors duration-fast no-underline hover:bg-ink/90"
+          >
+            {ui.recoverCta}
+          </a>
+          <a
+            href="/"
+            class="inline-flex items-center gap-xs rounded-md border border-border px-md py-sm text-sm font-semibold text-ink transition-colors duration-fast no-underline hover:border-ink"
+          >
+            {ui.homeCta}
+          </a>
+        </div>
+      </section>
     )}
 
-    {!buyerEmail && (
-      <p class="text-base text-ink-muted mb-xl max-w-prose mx-auto">
-        Tra 30 secondi riceverai un'email con il link alla tua audioguida.
-        Non vedi nulla? Controlla lo spam, oppure contattaci a hello@localis.guide.
-      </p>
-    )}
-
-    {directAccessUrl && (
-      <a
-        href={directAccessUrl}
-        class="inline-flex items-center gap-xs px-lg py-md bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast no-underline"
-      >
-        Apri la mia guida ora →
-      </a>
-    )}
-    {!directAccessUrl && (
-      <a
-        href="/"
-        class="inline-flex items-center gap-xs px-md py-sm border border-border text-ink rounded-md font-semibold text-sm hover:border-ink transition-colors duration-fast no-underline"
-      >
-        Torna in homepage
-      </a>
-    )}
+    <footer class="mt-2xl max-w-prose border-t border-border pt-lg text-sm text-ink-subtle">
+      {success ? (
+        <>
+          <p class="mb-xs">{model.emailMessage}</p>
+          <p>
+            {ui.backupMessage}{' '}
+            <a href="/recover" class="text-link hover:text-link-pressed">
+              {ui.recoverCta}
+            </a>
+            .
+          </p>
+        </>
+      ) : (
+        <p>{footerMessage}</p>
+      )}
+    </footer>
   </main>
 
-  <script is:inline define:vars={{ sessionId, success: !!directAccessUrl }}>
+  <script is:inline define:vars={{ sessionId, success }}>
     if (success) {
       const params = { session: sessionId || 'unknown' };
       if (typeof window.localisTrack === 'function') {

@@ -10,9 +10,10 @@ test.describe('Checkout flow', () => {
     expect(page.url()).toContain('checkout.stripe.com');
   });
 
-  test('thanks page handles missing session_id gracefully', async ({ page }) => {
+  test('thanks page handles missing session_id with recovery copy', async ({ page }) => {
     await page.goto('/thanks');
-    await expect(page.getByRole('heading', { name: /tua guida ti aspetta/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /stiamo preparando il tuo accesso/i })).toBeVisible();
+    await expect(page.getByRole('link', { name: /recupera accesso|recover access/i })).toBeVisible();
   });
 
   test('access page with invalid token redirects to access-invalid', async ({ page }) => {
