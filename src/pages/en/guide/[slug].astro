@@ -8,8 +8,10 @@ import StartMap from '../../../components/StartMap.astro';
 import NarratorCard from '../../../components/NarratorCard.astro';
 import StructuredData from '../../../components/StructuredData.astro';
 import GuideUseCase from '../../../components/GuideUseCase.astro';
+import GuideFactsCard from '../../../components/GuideFactsCard.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
+import { guideAccessibility, guideNeeds, guideRouteMode, guideStopsCount } from '../../../lib/guide-localization';
 import { audioObjectLD, touristAttractionLD, productLD } from '../../../lib/seo';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 
@@ -40,6 +42,10 @@ const { guide } = Astro.props;
 const data = guide.data;
 
 const durationLabel = formatDuration(data.duration_seconds_en ?? data.duration_seconds);
+const stopsCount = guideStopsCount(data);
+const routeMode = guideRouteMode(data, 'en') ?? 'Self-paced walking route';
+const accessibility = guideAccessibility(data, 'en') ?? 'Historic center with mixed paving. Suitable for most visitors.';
+const needs = guideNeeds(data, 'en') ?? 'Headphones and a charged phone.';
 const zoneBundle = data.city === 'bari' || data.city === 'polignano'
   ? 'bari-completa'
   : data.city === 'vieste' || data.city === 'gargano'
@@ -92,6 +98,14 @@ ld.push(productLD({
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
 
       <GuideUseCase guide={data} lang="en" />
+      <GuideFactsCard
+        lang="en"
+        distanceKm={data.distance_km}
+        stopsCount={stopsCount}
+        routeMode={routeMode}
+        accessibility={accessibility}
+        needs={needs}
+      />
 
       {data.narrator && (
         <NarratorCard

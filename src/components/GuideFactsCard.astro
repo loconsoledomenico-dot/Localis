@@ -1,0 +1,82 @@
+---
+import type { Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+  distanceKm?: number;
+  stopsCount: number;
+  routeMode?: string;
+  accessibility?: string;
+  needs?: string;
+}
+
+const { lang, distanceKm, stopsCount, routeMode, accessibility, needs } = Astro.props;
+
+const labels = {
+  it: {
+    title: 'Scheda tecnica',
+    distance: 'Distanza stimata',
+    stops: 'Numero di tappe',
+    route: 'Percorso',
+    accessibility: 'Accessibilita',
+    needs: 'Cosa serve',
+    stopsSuffix: 'racconti audio',
+    distanceSuffix: 'km a piedi',
+  },
+  en: {
+    title: 'Guide facts',
+    distance: 'Estimated distance',
+    stops: 'Number of stops',
+    route: 'Route',
+    accessibility: 'Accessibility',
+    needs: 'What you need',
+    stopsSuffix: 'audio stories',
+    distanceSuffix: 'km on foot',
+  },
+  de: {
+    title: 'Guide-Fakten',
+    distance: 'Geschatzte Distanz',
+    stops: 'Anzahl der Stopps',
+    route: 'Route',
+    accessibility: 'Barrierefreiheit',
+    needs: 'Du brauchst',
+    stopsSuffix: 'Audio-Stationen',
+    distanceSuffix: 'km zu Fuss',
+  },
+} as const;
+
+const copy = labels[lang];
+---
+<section class="rounded-xl border border-border bg-surface-deep p-lg">
+  <h2 class="font-display text-2xl text-ink mb-md">{copy.title}</h2>
+  <dl class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+    {distanceKm && (
+      <div>
+        <dt class="text-xs uppercase tracking-[0.15em] text-ink-subtle mb-2xs">{copy.distance}</dt>
+        <dd class="text-base text-ink">{distanceKm.toFixed(1)} {copy.distanceSuffix}</dd>
+      </div>
+    )}
+    <div>
+      <dt class="text-xs uppercase tracking-[0.15em] text-ink-subtle mb-2xs">{copy.stops}</dt>
+      <dd class="text-base text-ink">{stopsCount} {copy.stopsSuffix}</dd>
+    </div>
+    {routeMode && (
+      <div>
+        <dt class="text-xs uppercase tracking-[0.15em] text-ink-subtle mb-2xs">{copy.route}</dt>
+        <dd class="text-base text-ink">{routeMode}</dd>
+      </div>
+    )}
+    {accessibility && (
+      <div>
+        <dt class="text-xs uppercase tracking-[0.15em] text-ink-subtle mb-2xs">{copy.accessibility}</dt>
+        <dd class="text-base text-ink">{accessibility}</dd>
+      </div>
+    )}
+    {needs && (
+      <div class="sm:col-span-2">
+        <dt class="text-xs uppercase tracking-[0.15em] text-ink-subtle mb-2xs">{copy.needs}</dt>
+        <dd class="text-base text-ink">{needs}</dd>
+      </div>
+    )}
+  </dl>
+</section>

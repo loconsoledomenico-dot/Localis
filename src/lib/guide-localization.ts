@@ -46,3 +46,25 @@ export function chapterStartSeconds(chapter: GuideChapter, lang: Lang): number {
   if (lang === 'en') return chapter.start_seconds_en ?? chapter.start_seconds;
   return chapter.start_seconds;
 }
+
+export function guideStopsCount(data: GuideData): number {
+  return data.stops_count ?? data.chapters.length;
+}
+
+export function guideRouteMode(data: GuideData, lang: Lang): string | undefined {
+  if (lang === 'de') return data.route_mode_de ?? data.route_mode_en ?? data.route_mode_it;
+  if (lang === 'en') return data.route_mode_en ?? data.route_mode_it;
+  return data.route_mode_it;
+}
+
+export function guideAccessibility(data: GuideData, lang: Lang): string | undefined {
+  if (lang === 'de') return data.accessibility_de ?? data.accessibility_en ?? data.accessibility_it;
+  if (lang === 'en') return data.accessibility_en ?? data.accessibility_it;
+  return data.accessibility_it;
+}
+
+export function guideNeeds(data: GuideData, lang: Lang): string | undefined {
+  if (lang === 'de') return data.needs_de ?? data.needs_en ?? data.needs_it;
+  if (lang === 'en') return data.needs_en ?? data.needs_it;
+  return data.needs_it;
+}

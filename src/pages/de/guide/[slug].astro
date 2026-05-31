@@ -9,10 +9,11 @@ import NarratorCard from '../../../components/NarratorCard.astro';
 import StructuredData from '../../../components/StructuredData.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import GuideUseCase from '../../../components/GuideUseCase.astro';
+import GuideFactsCard from '../../../components/GuideFactsCard.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
 import { audioObjectLD, productLD, touristAttractionLD } from '../../../lib/seo';
-import { guideDescription, guideDurationSeconds, guideSubtitle, guideTitle, narratorBio } from '../../../lib/guide-localization';
+import { guideAccessibility, guideDescription, guideDurationSeconds, guideNeeds, guideRouteMode, guideStopsCount, guideSubtitle, guideTitle, narratorBio } from '../../../lib/guide-localization';
 
 const CITY_DEST: Record<string, { href: string; label: string }> = {
   bari: { href: '/de/bari', label: 'Bari' },
@@ -45,6 +46,10 @@ const durationLabel = formatDuration(durationSeconds);
 const title = guideTitle(data, lang);
 const subtitle = guideSubtitle(data, lang);
 const description = guideDescription(data, lang);
+const stopsCount = guideStopsCount(data);
+const routeMode = guideRouteMode(data, lang) ?? 'Flexible Stadt-Route zu Fuss';
+const accessibility = guideAccessibility(data, lang) ?? 'Historisches Zentrum mit gemischtem Bodenbelag, fur die meisten Besucher geeignet.';
+const needs = guideNeeds(data, lang) ?? 'Kopfhorer und geladenes Smartphone.';
 
 const zoneBundle =
   data.city === 'bari' || data.city === 'polignano'
@@ -120,6 +125,14 @@ ld.push(productLD({
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
 
       <GuideUseCase guide={data} lang={lang} />
+      <GuideFactsCard
+        lang={lang}
+        distanceKm={data.distance_km}
+        stopsCount={stopsCount}
+        routeMode={routeMode}
+        accessibility={accessibility}
+        needs={needs}
+      />
 
       {data.narrator && (
         <NarratorCard
