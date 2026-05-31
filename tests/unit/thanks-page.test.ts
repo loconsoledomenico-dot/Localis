@@ -53,7 +53,6 @@ function makeGuideEntry(
     },
     rendered: undefined,
     filePath: `src/content/guides/${slug}.mdx`,
-    digest: `${slug}-digest`,
   };
 }
 
