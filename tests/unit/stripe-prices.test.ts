@@ -8,6 +8,8 @@ import {
   PRODUCT_PRICE_CENTS,
   getTierForCount,
   getNextTier,
+  getSelectionZoneState,
+  getPublicBundleLabel,
   validateSelectedSlugs,
   savingsCents,
 } from '../../src/lib/stripe-prices';
@@ -59,6 +61,41 @@ describe('getNextTier', () => {
   it('4 guides → next is sestina', () => expect(getNextTier(4)?.product).toBe('sestina'));
   it('6 guides → next is puglia-completa', () => expect(getNextTier(6)?.product).toBe('puglia-completa'));
   it('18 guides → null (no tier above)', () => expect(getNextTier(18)).toBeNull());
+});
+
+describe('getSelectionZoneState', () => {
+  it('marks all 6 Bari guides as same-zone complete', () => {
+    expect(getSelectionZoneState([...BARI_GUIDES])).toEqual({
+      count: 6,
+      isSameZoneComplete: true,
+      zone: 'bari',
+    });
+  });
+
+  it('marks mixed 6-guide selections as not same-zone complete', () => {
+    expect(getSelectionZoneState([
+      ...BARI_GUIDES.slice(0, 3),
+      ...VALLE_GUIDES.slice(0, 3),
+    ])).toEqual({
+      count: 6,
+      isSameZoneComplete: false,
+      zone: null,
+    });
+  });
+});
+
+describe('getPublicBundleLabel', () => {
+  it('maps tris to Pack 3 Guide in Italian', () => {
+    expect(getPublicBundleLabel('tris', 'it')).toBe('Pack 3 Guide');
+  });
+
+  it('maps sestina to Pack 6 Guides in English', () => {
+    expect(getPublicBundleLabel('sestina', 'en')).toBe('Pack 6 Guides');
+  });
+
+  it('maps valle-completa to Pack 6 Guide (Intera Zona) in Italian', () => {
+    expect(getPublicBundleLabel('valle-completa', 'it')).toBe('Pack 6 Guide (Intera Zona)');
+  });
 });
 
 describe('validateSelectedSlugs', () => {

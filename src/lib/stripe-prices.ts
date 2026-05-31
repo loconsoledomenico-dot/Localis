@@ -75,6 +75,8 @@ export const PRODUCT_PRICE_CENTS: Record<ProductSlug, number> = {
 // ── Tier definitions ──────────────────────────────────────────────────────────
 
 export type Tier = { product: ProductSlug; count: number; priceCents: number };
+export type GuideZone = 'bari' | 'valle' | 'gargano';
+export type PricingLanguage = 'it' | 'en' | 'de';
 
 export const FREE_CHOICE_TIERS: readonly Tier[] = [
   { product: 'tris',            count: 3,  priceCents: 1199 },
@@ -94,6 +96,70 @@ export function getTierForCount(count: number): Tier | null {
  */
 export function getNextTier(count: number): Tier | null {
   return FREE_CHOICE_TIERS.find((t) => t.count > count) ?? null;
+}
+
+export function getZoneForSlug(slug: string): GuideZone | null {
+  if (BARI_GUIDES.includes(slug)) return 'bari';
+  if (VALLE_GUIDES.includes(slug)) return 'valle';
+  if (GARGANO_GUIDES.includes(slug)) return 'gargano';
+  return null;
+}
+
+export function getSelectionZoneState(selectedSlugs: string[]): {
+  count: number;
+  zone: GuideZone | null;
+  isSameZoneComplete: boolean;
+} {
+  const zones = new Set<GuideZone>();
+
+  for (const slug of selectedSlugs) {
+    const zone = getZoneForSlug(slug);
+    if (zone) zones.add(zone);
+  }
+
+  const zone = zones.size === 1 ? [...zones][0] : null;
+
+  return {
+    count: selectedSlugs.length,
+    zone,
+    isSameZoneComplete: selectedSlugs.length === 6 && zone !== null,
+  };
+}
+
+export function getPublicBundleLabel(
+  product: ProductSlug,
+  lang: PricingLanguage,
+): string {
+  switch (product) {
+    case 'tris':
+      return lang === 'en' ? 'Pack 3 Guides' : lang === 'de' ? '3er-Paket' : 'Pack 3 Guide';
+    case 'sestina':
+      return lang === 'en' ? 'Pack 6 Guides' : lang === 'de' ? '6er-Paket' : 'Pack 6 Guide';
+    case 'bari-completa':
+    case 'valle-completa':
+    case 'gargano-completa':
+      return lang === 'en'
+        ? 'Pack 6 Guides (Complete Area)'
+        : lang === 'de'
+          ? '6er-Paket (Komplette Zone)'
+          : 'Pack 6 Guide (Intera Zona)';
+    case 'single':
+      return lang === 'en'
+        ? 'Single guide'
+        : lang === 'de'
+          ? 'Einzelner Guide'
+          : 'Guida singola';
+    case 'puglia-completa':
+      return lang === 'en'
+        ? 'All of Puglia'
+        : lang === 'de'
+          ? 'Ganz Apulien'
+          : 'Tutta la Puglia';
+    case 'crociera':
+      return lang === 'en' ? 'Cruise pack' : lang === 'de' ? 'Kreuzfahrt-Paket' : 'Pacchetto crociera';
+    default:
+      return product;
+  }
 }
 
 // ── Validation ────────────────────────────────────────────────────────────────
