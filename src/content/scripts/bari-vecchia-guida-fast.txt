@@ -180,19 +180,27 @@ Case a livello del vicolo. <break time="0.4s"/> Senza ingresso rialzato. <break 
 
 Qui vivevano famiglie intere in pochi metri. <break time="1.2s"/>
 
-La strada non era spazio pubblico. <break time="0.4s"/> Era parte della casa. <break time="0.6s"/> Si cucinava fuori. <break time="0.4s"/> Si parlava fuori. <break time="0.4s"/> Si viveva fuori. <break time="1.0s"/>
+La metratura media era diciotto, venti metri quadri. <break time="0.5s"/> Due adulti, tre figli, a volte un nonno. <break time="0.5s"/> Un letto, un tavolo, una stufa. <break time="0.4s"/> Niente bagno — i bagni erano comuni, in fondo al vicolo. <break time="1.0s"/>
 
-Quello che oggi può sembrare folklore, per chi ci viveva era necessità. <break time="1.5s"/>
+La strada non era spazio pubblico. <break time="0.4s"/> Era parte della casa. <break time="0.6s"/> Si cucinava fuori. <break time="0.4s"/> Si parlava fuori. <break time="0.4s"/> Si viveva fuori. <break time="0.4s"/> Si litigava fuori. <break time="0.4s"/> Si facevano pace fuori. <break time="1.0s"/>
+
+Il vicolo era il salotto, la cucina, il cortile. <break time="0.6s"/> Quello che oggi può sembrare folklore, per chi ci viveva era l'unica architettura possibile. <break time="1.5s"/>
 
 E poi è cambiato tutto. <break time="0.8s"/>
 
-La riqualificazione ha portato cose buone. <break time="0.5s"/> Bagni in casa, riscaldamento, sicurezza. <break time="0.6s"/> Ma ha portato anche il prezzo che si paga ovunque, in tutto il mondo. <break time="0.8s"/>
+Gli anni Settanta e Ottanta portano i finanziamenti pubblici. <break time="0.5s"/> Risanamento del borgo antico. <break time="0.4s"/> Bagni in casa, riscaldamento, impianti. <break time="0.5s"/> Le famiglie tornano. <break time="0.5s"/> I bassi si ristrutturano. <break time="1.0s"/>
 
-Affitti più alti. <break time="0.4s"/> Case diventate B&B. <break time="0.4s"/> Famiglie che si spostano. <break time="1.0s"/>
+Ma poi arriva il turismo. <break time="0.8s"/>
 
-Bari Vecchia è ancora viva. <break time="0.5s"/> Ma è in equilibrio. <break time="1.0s"/>
+Gli ultimi dieci anni hanno cambiato un'altra volta il profilo degli abitanti. <break time="0.5s"/> Non in modo brutale — non è successo da un giorno all'altro. <break time="0.5s"/> Lentamente. <break time="0.4s"/> Un affitto raddoppiato. <break time="0.4s"/> Un basso trasformato in B&B. <break time="0.5s"/> Una famiglia che si sposta a Japigia, al Libertà, fuori dal centro storico. <break time="1.0s"/>
 
-E quando guardate dentro un basso aperto, mentre passate — <break time="0.5s"/> ricordatevi che chi sta lì non è una cartolina. <break time="0.4s"/> È qualcuno che ha resistito.
+Il numero di residenti nel borgo antico è sceso sotto i quattromila. <break time="0.5s"/> Erano dodicimila negli anni Settanta. <break time="1.2s"/>
+
+Bari Vecchia è ancora viva. <break time="0.5s"/> Ma non è immune. <break time="1.0s"/>
+
+E quando guardate dentro un basso aperto, mentre passate — <break time="0.5s"/> ricordatevi che chi sta lì non è una cartolina. <break time="0.4s"/> È qualcuno che ha resistito alle ristrutturazioni, agli affitti, al turismo. <break time="0.4s"/> Qualcuno che ha deciso che questa strada vale quanto un appartamento normale. <break time="1.0s"/>
+
+Forse più.
 
 
 =====================================
@@ -242,7 +250,25 @@ Entrano nella chiesa. <break time="0.4s"/> Di notte. <break time="0.5s"/> Prendo
 
 In meno di dieci anni la città gli costruisce questa basilica. <break time="0.6s"/> È uno dei capolavori del romanico pugliese. <break time="1.0s"/>
 
-Da quel furto nasce un impero di pellegrinaggi. <break time="0.4s"/> E un Babbo Natale. <break time="0.6s"/> Ma quella storia completa — il rapimento, i pellegrini, l'impatto sulla città — è in un'altra guida.
+Ma fermatevi un secondo fuori, prima di entrare. <break time="0.8s"/>
+
+Guardate la facciata. <break time="0.6s"/> Non ha un campanile centrale. <break time="0.4s"/> Ha due torri ai lati, incomplete. <break time="0.5s"/> Non perché i lavori si siano interrotti — era così il progetto. <break time="0.4s"/> Un'architettura pensata per sembrare aperta, accessibile, non intimidatoria. <break time="0.4s"/> Una chiesa per tutti, non un palazzo del clero. <break time="1.2s"/>
+
+Dentro c'è la cripta. <break time="0.5s"/> Scendete. <break time="0.6s"/>
+
+È lì che stanno le ossa. <break time="0.8s"/> Sotto l'altare, in una cassetta argentata. <break time="0.4s"/> Cinquantanove pellegrini l'anno arrivano a toccare quella pietra. <break time="0.5s"/> Non cinquantanove mila. <break time="0.4s"/> Cinquantanove. <break time="0.4s"/> Ogni giorno. <break time="0.4s"/> Da ogni parte del mondo. <break time="1.0s"/>
+
+E molti di loro sono ortodossi, non cattolici. <break time="0.8s"/>
+
+San Nicola è uno dei pochissimi santi venerati tanto dall'Oriente quanto dall'Occidente cristiano. <break time="0.5s"/> La Russia zarista lo ha sempre considerato il suo patrono. <break time="0.5s"/> In questa cripta ci sono state processioni di greci, russi, rumeni, serbi — a volte celebrate in contemporanea. <break time="1.0s"/>
+
+Una chiesa costruita dai latini per custodire un santo greco. <break time="0.5s"/> Che è diventato il simbolo della Christianity che si parla. <break time="1.2s"/>
+
+Da quel furto è nato anche altro. <break time="0.6s"/>
+
+San Nicola era il vescovo di Myra che di notte lanciava sacchi d'oro alle finestre dei poveri. <break time="0.5s"/> I marinai baresi del 1087 non sapevano che stavano portando via anche quello. <break time="0.5s"/> Che il loro santo, attraverso secoli e continenti, avrebbe indossato un cappotto rosso e si sarebbe messo a portare regali ai bambini. <break time="1.0s"/>
+
+Babbo Natale nasce qui. <break time="0.4s"/> In questa cripta. <break time="0.4s"/> Sotto questa piazza.
 
 
 =====================================
@@ -302,23 +328,53 @@ Da una parte il mare. <break time="0.4s"/> Dall'altra i tetti di Bari Vecchia. <
 
 
 =====================================
+PALAZZO SIMI
+-------------
+voice: sami
+
+Palazzo Simi. <break time="1.0s"/>
+
+Non sembra niente di speciale. <break time="0.5s"/> Un palazzo che si affaccia sul lungomare, vicino alle mura. <break time="1.0s"/>
+
+Ma dentro c'è uno dei più straordinari esempi di archeologia urbana visibile in Puglia. <break time="1.2s"/>
+
+Quando lo Stato lo acquistò nel 1988, cominciarono gli scavi. <break time="0.5s"/> E quello che trovarono ha cambiato la comprensione della città medievale. <break time="1.0s"/>
+
+Sotto il palazzo settecentesco, c'erano fondamenta di una casa medievale. <break time="0.5s"/> Sotto quella, un edificio bizantino. <break time="0.5s"/> Sotto quello, tracce di strutture romane. <break time="0.4s"/> Cinque fasi edilizie sovrapposte, leggibili in verticale. <break time="1.2s"/>
+
+Ma la cosa che colpisce non sono i resti. <break time="0.6s"/>
+
+È il modo in cui li hanno lasciati. <break time="0.8s"/>
+
+Non hanno riempito e ricostruito. <break time="0.5s"/> Hanno tenuto aperta la stratigrafia. <break time="0.5s"/> Potete camminare su passerelle sospese sopra gli scavi. <break time="0.5s"/> Sotto i vostri piedi: un metro e mezzo di storia compattata. <break time="1.0s"/>
+
+Le pareti bizantine, le colonne, le soglie consumate. <break time="0.5s"/> Tutto visibile. <break time="0.4s"/> Tutto lì. <break time="1.2s"/>
+
+Fuori, Bari Vecchia è una città che camminate. <break time="0.5s"/> Qui dentro, è una città che leggete. <break time="1.0s"/>
+
+Il museo è aperto la mattina. <break time="0.4s"/> Entrate se potete. <break time="0.4s"/> Ci vuole mezzora. <break time="0.4s"/> Cambia completamente quello che avete capito camminando fuori.
+
+
+=====================================
 MUSEO SANTA SCOLASTICA
 -------------
 voice: gian
 
 Museo Santa Scolastica. <break time="1.0s"/>
 
-Non è solo un museo. <break time="0.6s"/> È uno dei pochi posti dove quello che sta sotto Bari viene portato in superficie. <break time="1.2s"/>
+L'edificio nasce come monastero benedettino. <break time="0.5s"/> Decimo, undicesimo secolo. <break time="0.5s"/> Poi passa ai domenicani. <break time="0.4s"/> Poi diventa deposito militare. <break time="0.4s"/> Poi prigione. <break time="0.4s"/> Poi uffici del demanio. <break time="0.6s"/> La storia d'Italia condensata in un palazzo. <break time="1.2s"/>
 
-L'edificio nasce come monastero benedettino. <break time="0.4s"/> Decimo, undicesimo secolo. <break time="0.6s"/> Cambia funzione molte volte. <break time="0.4s"/> L'ultimo restauro si è chiuso nel 2021. <break time="1.0s"/>
+L'ultimo restauro si è chiuso nel 2021. <break time="0.6s"/> Adesso è il Museo Civico di Bari. <break time="1.0s"/>
 
-Dentro, i reperti raccontano una storia molto più lunga della città visibile. <break time="0.5s"/> Dalla preistoria al Medioevo. <break time="0.6s"/> Non sono pezzi isolati. <break time="0.4s"/> Sono tracce di tutto quello che c'era prima del Castello, prima della Cattedrale, prima dei vicoli. <break time="1.2s"/>
+Quello che colpisce non sono tanto i reperti — che vanno dalla preistoria al Medioevo. <break time="0.6s"/> È il cortile interno. <break time="0.8s"/>
 
-Nei cortili, la stratificazione archeologica si vede a occhio nudo. <break time="0.6s"/> Duemilacinquecento anni di storia condensati in pochi metri di terra scavata. <break time="1.0s"/>
+Qui la stratificazione è lasciata a vista. <break time="0.5s"/> Uno scavo verticale che taglia duemilacinquecento anni. <break time="0.5s"/> In basso, tracce di abitato del bronzo. <break time="0.4s"/> Sopra, strutture greche. <break time="0.4s"/> Sopra ancora, romane. <break time="0.4s"/> E così via fino al monastero medievale. <break time="1.0s"/>
 
-Se Bari Vecchia è costruita a strati, questo è il posto dove i strati diventano leggibili. <break time="1.0s"/>
+Non è un percorso difficile da seguire. <break time="0.5s"/> I pannelli spiegano cosa vedete. <break time="0.4s"/> Ma l'effetto è straniante, la prima volta. <break time="1.0s"/>
 
-Quello che fuori è nascosto, qui viene spiegato.
+Stai guardando il sottosuolo di Bari Vecchia — quello stesso sottosuolo su cui hai camminato per un'ora — ma da dentro. <break time="0.5s"/> Come se qualcuno avesse tagliato la città in sezione e ti avesse lasciato guardare. <break time="1.5s"/>
+
+Questo è il posto dove quello che sta sotto diventa leggibile. <break time="0.5s"/> Quello che fuori è nascosto, qui viene spiegato.
 
 
 =====================================
@@ -345,6 +401,34 @@ La base ha quattro gradini. <break time="0.4s"/> Sopra, un leone romano del prim
 In origine questo monumento non stava qui. <break time="0.5s"/> Stava al porto vecchio. <break time="0.6s"/> Era il primo avvertimento per chi arrivava dal mare. <break time="1.0s"/>
 
 Prima ancora di mettere piede nella città, sapevi già come funzionava la giustizia.
+
+
+=====================================
+IL BORGO VIVO
+-------------
+voice: gian
+
+Prima di chiudere, fermatevi un secondo. <break time="1.0s"/>
+
+Non in un monumento. <break time="0.4s"/> Qui, in questo vicolo. <break time="1.2s"/>
+
+Quello che state attraversando non è un museo all'aperto. <break time="0.5s"/> Non è un parco tematico. <break time="0.4s"/> Non è un set fotografico. <break time="1.0s"/>
+
+Bari Vecchia è un quartiere con tremila persone che ci abitano davvero. <break time="0.5s"/> Che pagano l'affitto, mandano i figli a scuola, fanno la spesa al mercato del venerdì. <break time="0.4s"/> Che conoscono ogni vicolo a memoria e si arrabbiano quando qualcuno parcheggia dove non deve. <break time="1.2s"/>
+
+Questo è il paradosso del borgo. <break time="0.8s"/>
+
+Più viene amato, più diventa difficile abitarci. <break time="0.5s"/> I turisti portano soldi. <break time="0.4s"/> I soldi portano B&B. <break time="0.4s"/> I B&B portano affitti alti. <break time="0.5s"/> Gli affitti alti spingono fuori chi ci vive da generazioni. <break time="1.0s"/>
+
+Non è colpa vostra essere qui. <break time="0.5s"/> È una dinamica che riguarda Venezia, Firenze, Dubrovnik, ogni centro storico che il mondo vuole vedere. <break time="1.0s"/>
+
+Ma c'è una differenza che potete fare. <break time="0.8s"/>
+
+Se mangiate qui, mangiate da qualcuno che ci abita. <break time="0.4s"/> Se comprate qualcosa, compratelo da chi lo fa a mano su questa porta. <break time="0.4s"/> Se chiedete indicazioni, fermatevi a sentire la risposta. <break time="1.0s"/>
+
+Bari Vecchia vi sta dando qualcosa che pochi posti al mondo ancora hanno. <break time="0.5s"/> Una città che è ancora viva dentro la sua storia. <break time="0.4s"/> Non reconstituita, non recitata. <break time="0.5s"/> Viva. <break time="1.2s"/>
+
+Tenetecela così.
 
 
 =====================================
