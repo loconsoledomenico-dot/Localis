@@ -361,6 +361,12 @@ const ZONE_ORDER = [
       ? '1 Guide'
       : '1 guide';
 
+  const priceComparisonMessage = (fullPriceCents: number, discountedPriceCents: number) => it
+    ? `invece di ${fmt(fullPriceCents, lang)} paghi ${fmt(discountedPriceCents, lang)}`
+    : de
+      ? `statt ${fmt(fullPriceCents, lang)} zahlst du ${fmt(discountedPriceCents, lang)}`
+      : `instead of ${fmt(fullPriceCents, lang)} you pay ${fmt(discountedPriceCents, lang)}`;
+
   const getZoneState = () => {
     const zones = new Set(
       [...selected]
@@ -420,11 +426,12 @@ const ZONE_ORDER = [
     }
 
     if (n === 3) {
+      const fullPriceCents = n * SINGLE_CENTS;
       statusText.textContent = it
-        ? `${selectedMessage(n)} · Pack 3 applicato`
+        ? `${selectedMessage(n)} · Sconto Tris applicato · ${priceComparisonMessage(fullPriceCents, PACK_3_CENTS)}`
         : de
-          ? `${selectedMessage(n)} · Pack 3 aktiviert`
-          : `${selectedMessage(n)} · Pack 3 applied`;
+          ? `${selectedMessage(n)} · Pack 3 Rabatt aktiviert · ${priceComparisonMessage(fullPriceCents, PACK_3_CENTS)}`
+          : `${selectedMessage(n)} · Pack 3 discount applied · ${priceComparisonMessage(fullPriceCents, PACK_3_CENTS)}`;
       btn.disabled = false;
       btn.textContent = it
         ? `Acquista Pack 3 Guide · ${fmt(PACK_3_CENTS, lang)}`
