@@ -247,12 +247,16 @@ const ZONE_ORDER = [
   .builder-cta-bar {
     position: sticky;
     bottom: 0;
-    background: var(--color-surface);
-    border-top: 1px solid var(--color-border);
+    background:
+      linear-gradient(135deg, oklch(20% 0.02 250 / 0.96), oklch(15% 0.018 250 / 0.98));
+    color: var(--color-surface);
+    border-top: 1px solid oklch(100% 0 0 / 0.08);
+    box-shadow: 0 -18px 40px -24px oklch(10% 0.02 250 / 0.75);
     padding: var(--spacing-md) 0;
     padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom, 0px));
     margin-top: var(--spacing-2xl);
     z-index: 40;
+    backdrop-filter: blur(10px);
   }
 
   .builder-cta-inner {
@@ -272,6 +276,12 @@ const ZONE_ORDER = [
     gap: var(--spacing-sm);
   }
 
+  #builder-status-text {
+    color: oklch(97% 0.005 250);
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
   .builder-count-badge {
     display: inline-flex;
     align-items: center;
@@ -279,34 +289,39 @@ const ZONE_ORDER = [
     min-width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: var(--color-ink);
-    color: var(--color-surface);
+    background: var(--color-accent);
+    color: var(--color-ink);
     font-family: var(--font-display);
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 500;
+    box-shadow: 0 10px 22px -14px oklch(from var(--color-accent) l c h / 0.95);
   }
 
   .builder-checkout-btn {
     padding: var(--spacing-sm) var(--spacing-lg);
-    background: var(--color-ink);
-    color: var(--color-surface);
+    background: var(--color-accent);
+    color: var(--color-ink);
     border: none;
     border-radius: 6px;
     font-family: var(--font-body);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: background 0.15s, opacity 0.15s;
+    transition: background 0.15s, opacity 0.15s, transform 0.15s, box-shadow 0.15s;
     min-height: 48px;
+    box-shadow: 0 14px 28px -18px oklch(from var(--color-accent) l c h / 0.9);
   }
 
   .builder-checkout-btn:disabled {
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: not-allowed;
+    box-shadow: none;
   }
 
   .builder-checkout-btn:not(:disabled):hover {
-    background: oklch(15% 0.025 240);
+    background: color-mix(in oklab, var(--color-accent) 88%, white 12%);
+    transform: translateY(-1px);
+    box-shadow: 0 18px 30px -18px oklch(from var(--color-accent) l c h / 1);
   }
 
   .builder-upsell {
@@ -314,8 +329,24 @@ const ZONE_ORDER = [
     margin: var(--spacing-xs) auto 0;
     padding: 0 var(--spacing-md);
     font-size: 0.8rem;
-    color: var(--color-ink-muted);
+    color: oklch(90% 0.01 250 / 0.88);
+    font-weight: 500;
     min-height: 1.2em;
+  }
+
+  @media (max-width: 640px) {
+    .builder-cta-inner {
+      align-items: stretch;
+    }
+
+    .builder-cta-status,
+    .builder-checkout-btn {
+      width: 100%;
+    }
+
+    .builder-checkout-btn {
+      justify-content: center;
+    }
   }
 </style>
 
