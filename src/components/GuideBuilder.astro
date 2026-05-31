@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import { guideSubtitle, guideTitle } from '../lib/guide-localization';
+import { formatDuration } from '../lib/format';
+import { guideDurationSeconds, guideSubtitle, guideTitle } from '../lib/guide-localization';
 import { type Lang } from '../lib/i18n';
 import {
   BARI_GUIDES,
@@ -21,6 +22,7 @@ type GuideCard = {
   title: string;
   subtitle: string;
   cover: string;
+  durationLabel: string;
 };
 
 const guideMap = new Map<string, GuideCard>();
@@ -32,6 +34,7 @@ for (const entry of allEntries) {
     title: guideTitle(d, lang),
     subtitle: guideSubtitle(d, lang),
     cover: d.cover as string,
+    durationLabel: formatDuration(guideDurationSeconds(d, lang)),
   });
 }
 
@@ -45,36 +48,26 @@ const ZONE_ORDER = [
 <section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : lang === 'de' ? 'Guides auswählen' : 'Choose your guides'}>
   <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
     <div class="text-center mb-2xl">
-      <p class="text-xs font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm">
-        {lang === 'it' ? '— Costruisci il tuo pacchetto —' : lang === 'de' ? '— Stelle dein Paket zusammen —' : '— Build your package —'}
-      </p>
       <h2 class="font-display font-light text-[clamp(1.8rem,4vw,3rem)] text-ink leading-tight">
         {lang === 'it'
-          ? 'Più ascolti, meno paghi.'
+          ? 'Scegli le tue storie.'
           : lang === 'de'
-            ? 'Je mehr du hörst, desto weniger zahlst du.'
-            : 'The more you listen, the less you pay.'}
+            ? 'Wähle deine Geschichten.'
+            : 'Choose your stories.'}
       </h2>
-      <p class="font-body text-ink-muted text-base mt-sm max-w-[48ch] mx-auto">
+      <p class="font-body text-ink-muted text-base mt-sm max-w-[42ch] mx-auto">
         {lang === 'it'
-          ? 'Scegli le guide che vuoi. Lo sconto si applica da solo.'
+          ? 'Crea il tuo itinerario ideale. Lo sconto si applica automaticamente nel carrello.'
           : lang === 'de'
-            ? 'Wähle die Guides, die du möchtest. Der Rabatt wird automatisch angewendet.'
-            : 'Choose the guides you want. The discount applies automatically.'}
+            ? 'Stell dir deine ideale Route zusammen. Der Rabatt wird automatisch im Warenkorb angewendet.'
+            : 'Build your ideal itinerary. The discount applies automatically in the cart.'}
       </p>
-      <p class="font-body text-ink-subtle text-xs mt-xs max-w-[48ch] mx-auto">
+      <p class="builder-header-meta font-body text-sm text-ink-subtle mt-sm max-w-[48ch] mx-auto">
         {lang === 'it'
-          ? 'Puoi comporre Pack 6 anche mescolando guide di zone diverse.'
+          ? 'Durata media di ogni guida: 30 minuti | Disponibile in: 🇮🇹 🇬🇧 🇩🇪'
           : lang === 'de'
-            ? 'Du kannst Pack 6 auch mit Guides aus verschiedenen Gebieten zusammenstellen.'
-            : 'You can build Pack 6 by mixing guides from different areas.'}
-      </p>
-      <p class="font-body text-ink-subtle text-xs mt-xs max-w-[48ch] mx-auto">
-        {lang === 'it'
-          ? 'Se scegli tutte le 6 guide di una zona, il pack viene mostrato come Intera Zona.'
-          : lang === 'de'
-            ? 'Wenn du alle 6 Guides eines Gebiets auswählst, wird das Paket als Komplette Zone angezeigt.'
-            : 'If you choose all 6 guides from one area, the pack is shown as Complete Area.'}
+            ? 'Durchschnitt pro Guide: 30 Minuten | Verfügbar in: 🇮🇹 🇬🇧 🇩🇪'
+            : 'Average guide length: 30 minutes | Available in: 🇮🇹 🇬🇧 🇩🇪'}
       </p>
     </div>
 
@@ -103,6 +96,10 @@ const ZONE_ORDER = [
                 <div class="builder-card-meta">
                   <p class="builder-card-title font-display text-sm font-light text-ink leading-tight m-0">{g.title}</p>
                   <p class="builder-card-sub font-body text-xs text-ink-muted m-0 mt-[2px]">{g.subtitle}</p>
+                  <p class="builder-card-duration font-body m-0">
+                    <span aria-hidden="true">⏱️</span>
+                    <span>{g.durationLabel}</span>
+                  </p>
                 </div>
               </button>
             );
@@ -210,10 +207,11 @@ const ZONE_ORDER = [
   }
 
   .builder-card-meta {
-    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-sm);
+    padding: var(--spacing-sm);
     flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 0.35rem;
   }
 
   .builder-card-title {
@@ -228,6 +226,22 @@ const ZONE_ORDER = [
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .builder-card-duration {
+    margin-top: auto;
+    padding-top: 0.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    letter-spacing: 0.01em;
+  }
+
+  .builder-header-meta {
+    line-height: 1.5;
   }
 
   .builder-cta-bar {
