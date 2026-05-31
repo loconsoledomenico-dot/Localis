@@ -67,3 +67,6 @@ public/audio/trailers/_archive_*.mp3
 marketing/outreach/credentials/*.json
 marketing/outreach/.env
 marketing/exports/
+
+# Local sandbox app data
+.sandbox-appdata/
