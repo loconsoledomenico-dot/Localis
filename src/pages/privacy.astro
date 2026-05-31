@@ -1,49 +1,48 @@
 ---
 export const prerender = true;
-import Layout from '../components/Layout.astro';
+import LegalPageShell from '../components/LegalPageShell.astro';
 ---
-<Layout title="Informativa privacy · Localis" lang="it">
-  <article class="max-w-narrow mx-auto px-md py-2xl">
-    <h1 class="font-display text-3xl text-ink mb-lg">Informativa privacy</h1>
-    <p class="text-sm text-ink-subtle mb-2xl">Aggiornata il 22 maggio 2026</p>
+<LegalPageShell
+  title="Informativa privacy · Localis"
+  pageTitle="Informativa privacy"
+  updatedLabel="Aggiornata il"
+  updatedOn="22 maggio 2026"
+  lang="it"
+>
+  <h2>1. Titolare del trattamento</h2>
+  <p>Domenico Loconsole + Luigi Loconsole - Bari (BA), Italia. Email: hello@localis.guide.</p>
 
-    <div class="prose prose-ink max-w-prose">
-      <h2>1. Titolare del trattamento</h2>
-      <p>Domenico Loconsole + Luigi Loconsole — Bari (BA), Italia. Email: hello@localis.guide.</p>
+  <h2>2. Dati raccolti</h2>
+  <ul>
+    <li><strong>Email</strong> - fornita all'acquisto, usata per inviarti il magic link e (se acconsenti) comunicazioni di servizio.</li>
+    <li><strong>Dati di pagamento</strong> - gestiti esclusivamente da Stripe; Localis non li memorizza.</li>
+    <li><strong>Cookie tecnico</strong> - un solo cookie (<code>lg_partner</code>) per attribuire la vendita a un partner se arrivi tramite QR; durata 30 giorni. Vedi la <a href="/cookie-policy">cookie policy</a> completa.</li>
+    <li><strong>Statistiche aggregate</strong> - Plausible Analytics, senza cookie e senza dati personali (GDPR-compliant senza consenso).</li>
+    <li><strong>Google Analytics 4</strong> - attivato solo se presti il consenso tramite il banner cookie. Raccoglie dati di navigazione aggregati con IP anonimizzato. Base giuridica: consenso (art. 6.1.a GDPR). Puoi revocare il consenso in qualsiasi momento dal footer - "Gestisci cookie".</li>
+  </ul>
 
-      <h2>2. Dati raccolti</h2>
-      <ul>
-        <li><strong>Email</strong> — fornita all'acquisto, usata per inviarti il magic link e (se acconsenti) comunicazioni di servizio.</li>
-        <li><strong>Dati di pagamento</strong> — gestiti esclusivamente da Stripe; Localis non li memorizza.</li>
-        <li><strong>Cookie tecnico</strong> — un solo cookie (<code>lg_partner</code>) per attribuire la vendita a un partner se arrivi tramite QR; durata 30 giorni. Vedi la <a href="/cookie-policy">cookie policy</a> completa.</li>
-        <li><strong>Statistiche aggregate</strong> — Plausible Analytics, senza cookie e senza dati personali (GDPR-compliant senza consenso).</li>
-        <li><strong>Google Analytics 4</strong> — attivato solo se presti il consenso tramite il banner cookie. Raccoglie dati di navigazione aggregati con IP anonimizzato. Base giuridica: consenso (art. 6.1.a GDPR). Puoi revocare il consenso in qualsiasi momento dal footer → "Gestisci cookie".</li>
-      </ul>
+  <h2>3. Base giuridica</h2>
+  <ul>
+    <li><strong>Esecuzione del contratto</strong> - per email, pagamento e accesso alle guide.</li>
+    <li><strong>Legittimo interesse</strong> - per Plausible Analytics (statistiche aggregate anonime).</li>
+    <li><strong>Consenso (art. 6.1.a GDPR)</strong> - per Google Analytics 4 e comunicazioni marketing, se fornito.</li>
+  </ul>
 
-      <h2>3. Base giuridica</h2>
-      <ul>
-        <li><strong>Esecuzione del contratto</strong> — per email, pagamento e accesso alle guide.</li>
-        <li><strong>Legittimo interesse</strong> — per Plausible Analytics (statistiche aggregate anonime).</li>
-        <li><strong>Consenso (art. 6.1.a GDPR)</strong> — per Google Analytics 4 e comunicazioni marketing, se fornito.</li>
-      </ul>
+  <h2>4. Conservazione</h2>
+  <p>
+    L'email e conservata finche esiste il tuo accesso alle guide acquistate (illimitato per design). Puoi richiederne cancellazione scrivendo a hello@localis.guide; la cancellazione comporta la perdita di accesso alle guide.
+  </p>
 
-      <h2>4. Conservazione</h2>
-      <p>
-        L'email è conservata finché esiste il tuo accesso alle guide acquistate (illimitato per design). Puoi richiederne cancellazione scrivendo a hello@localis.guide; la cancellazione comporta la perdita di accesso alle guide.
-      </p>
+  <h2>5. Diritti dell'interessato</h2>
+  <p>
+    Hai diritto di accesso, rettifica, cancellazione, limitazione, opposizione e portabilita (artt. 15-22 GDPR). Esercita questi diritti scrivendo a hello@localis.guide.
+  </p>
 
-      <h2>5. Diritti dell'interessato</h2>
-      <p>
-        Hai diritto di accesso, rettifica, cancellazione, limitazione, opposizione e portabilità (artt. 15-22 GDPR). Esercita questi diritti scrivendo a hello@localis.guide.
-      </p>
+  <h2>6. Trasferimenti extra-UE</h2>
+  <p>
+    Stripe (Irlanda, conforme GDPR) processa pagamenti. Resend (USA, partecipante EU-US DPF) consegna email. Cloudflare (USA/internazionale, partecipante EU-US DPF) eroga audio. Google LLC (USA, partecipante EU-US DPF) fornisce Google Analytics 4, attivato solo con consenso.
+  </p>
 
-      <h2>6. Trasferimenti extra-UE</h2>
-      <p>
-        Stripe (Irlanda, conforme GDPR) processa pagamenti. Resend (USA, partecipante EU-US DPF) consegna email. Cloudflare (USA/internazionale, partecipante EU-US DPF) eroga audio. Google LLC (USA, partecipante EU-US DPF) fornisce Google Analytics 4, attivato solo con consenso.
-      </p>
-
-      <h2>7. Reclami</h2>
-      <p>Puoi presentare reclamo al Garante per la Protezione dei Dati Personali (www.garanteprivacy.it).</p>
-    </div>
-  </article>
-</Layout>
+  <h2>7. Reclami</h2>
+  <p>Puoi presentare reclamo al Garante per la Protezione dei Dati Personali (www.garanteprivacy.it).</p>
+</LegalPageShell>

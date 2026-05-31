@@ -1,0 +1,32 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+---
+<Layout
+  title="FAQ · Localis"
+  description="Haufige Fragen zu den Localis Audioguides."
+  lang="de"
+>
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <Eyebrow class="mb-md">Haufige Fragen</Eyebrow>
+    <h1 class="font-display text-4xl text-ink mb-lg">FAQ</h1>
+
+    <div class="prose prose-ink max-w-prose">
+      <h2>Wie erhalte ich die Guide nach dem Kauf?</h2>
+      <p>Direkt nach der Zahlung kommt ein permanenter Magic Link per Email. Kein Download, kein Konto notwendig.</p>
+
+      <h2>Brauche ich Internet zum Horen?</h2>
+      <p>Ja. Die Guides werden gestreamt und brauchen Datenverbindung oder WLAN.</p>
+
+      <h2>Sind die Stimmen echt oder KI?</h2>
+      <p>Die Stimmen sind synthetisch. Die Texte stammen von lokalen Autorinnen und Autoren mit Quellenrecherche vor Ort.</p>
+
+      <h2>Wie funktioniert die Erstattung?</h2>
+      <p>Innerhalb von 24 Stunden nach Kauf per Email an <a href="mailto:hello@localis.guide">hello@localis.guide</a>.</p>
+
+      <h2>Funktioniert es auf iPhone und Android?</h2>
+      <p>Ja, mit allen modernen Browsern (Safari, Chrome, Firefox).</p>
+    </div>
+  </article>
+</Layout>

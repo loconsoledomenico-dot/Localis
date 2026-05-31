@@ -1,52 +1,49 @@
 ---
 export const prerender = true;
-import Layout from '../components/Layout.astro';
+import LegalPageShell from '../components/LegalPageShell.astro';
 ---
-<Layout title="Termini di servizio · Localis" lang="it">
-  <article class="max-w-narrow mx-auto px-md py-2xl">
-    <h1 class="font-display text-3xl text-ink mb-lg">Termini di servizio</h1>
-    <p class="text-sm text-ink-subtle mb-2xl">Aggiornati il 28 maggio 2026</p>
+<LegalPageShell
+  title="Termini di servizio · Localis"
+  pageTitle="Termini di servizio"
+  updatedLabel="Aggiornati il"
+  updatedOn="28 maggio 2026"
+  lang="it"
+>
+  <h2>1. Chi siamo</h2>
+  <p>
+    Localis e un progetto editoriale dei Sig. Domenico Loconsole e Luigi Loconsole, residenti a Bari (BA). Per ogni questione contrattuale o di consumatore, riferimento al foro di Bari.
+  </p>
 
-    <div class="prose prose-ink max-w-prose">
-      <h2>1. Chi siamo</h2>
-      <p>
-        Localis è un progetto editoriale dei Sig. Domenico Loconsole e Luigi Loconsole, residenti a Bari (BA). Per ogni questione contrattuale o di consumatore, riferimento al foro di Bari.
-      </p>
+  <h2>2. Cosa vendiamo</h2>
+  <p>
+    Audioguide narrative in formato audio digitale, distribuite via web browser. Ogni guida e erogata tramite un link permanente (magic link) inviato via email all'indirizzo fornito al momento dell'acquisto.
+  </p>
 
-      <h2>2. Cosa vendiamo</h2>
-      <p>
-        Audioguide narrative in formato audio digitale, distribuite via web browser. Ogni guida è erogata tramite un link permanente (magic link) inviato via email all'indirizzo fornito al momento dell'acquisto.
-      </p>
+  <h2>3. Pagamento e prezzi</h2>
+  <p>
+    Tutti i prezzi sono in Euro e includono l'IVA applicabile (regime OSS). I pagamenti sono processati da Stripe Payments Europe Ltd. Localis non memorizza dati di pagamento.
+  </p>
 
-      <h2>3. Pagamento e prezzi</h2>
-      <p>
-        Tutti i prezzi sono in Euro e includono l'IVA applicabile (regime OSS). I pagamenti sono processati da Stripe Payments Europe Ltd. Localis non memorizza dati di pagamento.
-      </p>
+  <h2>4. Diritto di recesso</h2>
+  <p>
+    Hai diritto al rimborso integrale entro 14 giorni dall'acquisto, conformemente al Codice del Consumo (D.Lgs. 206/2005). Il diritto di recesso si estingue se hai gia fruito di oltre il 30% del contenuto audio. Per esercitare il recesso scrivi a hello@localis.guide o usa il modulo a /recover.
+  </p>
 
-      <h2>4. Diritto di recesso</h2>
-      <p>
-        Hai diritto al rimborso integrale entro 14 giorni dall'acquisto, conformemente al Codice del Consumo (D.Lgs. 206/2005). Il diritto di recesso si estingue se hai già fruito di oltre il 30% del contenuto audio. Per esercitare il recesso scrivi a hello@localis.guide o usa il modulo a /recover.
-      </p>
+  <h2>5. Accesso ai contenuti</h2>
+  <p>
+    Il magic link e personale e legato all'email d'acquisto. Localis si riserva il diritto di limitare il numero di stream mensili (max 50) per impedire condivisione massiva. La condivisione del link con terzi non e consentita. Quando necessario, Localis puo generare copie audio associate all'acquisto per proteggere i contenuti e verificare abusi.
+  </p>
 
-      <h2>5. Accesso ai contenuti</h2>
-      <p>
-        Il magic link è personale e legato all'email d'acquisto. Localis si riserva il diritto di limitare il numero di stream mensili (max 50) per impedire condivisione massiva. La condivisione del link con terzi non è consentita. Quando necessario, Localis può generare copie audio associate all'acquisto per proteggere i contenuti e verificare abusi.
-      </p>
+  <h2>6. Proprieta intellettuale</h2>
+  <p>
+    Tutti i contenuti (testi, audio, immagini) sono di proprieta di Localis o degli autori citati. E vietata la riproduzione, distribuzione o diffusione pubblica senza esplicito consenso scritto.
+  </p>
 
-      <h2>6. Proprietà intellettuale</h2>
-      <p>
-        Tutti i contenuti (testi, audio, immagini) sono di proprietà di Localis o degli autori citati. È vietata la riproduzione, distribuzione o diffusione pubblica senza esplicito consenso scritto.
-      </p>
+  <h2>7. Limitazione di responsabilita</h2>
+  <p>
+    Localis non e responsabile di danni derivanti dall'uso del servizio in luoghi non sicuri. Non camminare ascoltando in zone di traffico veicolare intenso o senza prestare attenzione all'ambiente circostante.
+  </p>
 
-      <h2>7. Limitazione di responsabilità</h2>
-      <p>
-        Localis non è responsabile di danni derivanti dall'uso del servizio in luoghi non sicuri. Non camminare ascoltando in zone di traffico veicolare intenso o senza prestare attenzione all'ambiente circostante.
-      </p>
-
-      <h2>8. Contatti</h2>
-      <p>
-        Email: hello@localis.guide
-      </p>
-    </div>
-  </article>
-</Layout>
+  <h2>8. Contatti</h2>
+  <p>Email: hello@localis.guide</p>
+</LegalPageShell>

@@ -1,0 +1,23 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+---
+<Layout
+  title="Unsere Methode · Localis"
+  description="Wie Localis Guides entstehen: Archivforschung, lokale Erinnerung, redaktionelle Bearbeitung und Audio-Produktion."
+  lang="de"
+>
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <Eyebrow class="mb-md">Wie wir arbeiten</Eyebrow>
+    <h1 class="font-display text-4xl text-ink mb-lg">Die Localis Methode.</h1>
+    <div class="prose prose-ink max-w-prose">
+      <p>
+        Jede Guide entsteht in vier Schritten: Quellenarbeit, lokale Gesprachsrecherche, redaktionelle Uberarbeitung und Audio-Produktion.
+      </p>
+      <p>
+        Alle verwendeten Quellen veroffentlichen wir transparent unter <a href="/de/fonti">/de/fonti</a>. Wenn du einen Fehler siehst, schreibe uns an <a href="mailto:hello@localis.guide">hello@localis.guide</a>.
+      </p>
+    </div>
+  </article>
+</Layout>

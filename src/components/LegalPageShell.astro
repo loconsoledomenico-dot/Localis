@@ -1,0 +1,28 @@
+---
+import Layout from './Layout.astro';
+import type { Lang } from '../lib/i18n';
+
+export interface Props {
+  title: string;
+  pageTitle: string;
+  updatedLabel: string;
+  updatedOn: string;
+  lang: Lang;
+}
+
+const { title, pageTitle, updatedLabel, updatedOn, lang } = Astro.props;
+---
+<Layout title={title} lang={lang}>
+  <article class="max-w-narrow mx-auto px-md py-2xl">
+    <header class="mb-2xl pb-lg border-b border-border">
+      <p class="text-[11px] font-semibold tracking-[0.32em] uppercase text-accent mb-sm">
+        Localis
+      </p>
+      <h1 class="font-display text-4xl text-ink mb-sm">{pageTitle}</h1>
+      <p class="text-sm text-ink-subtle">{updatedLabel} {updatedOn}</p>
+    </header>
+    <div class="prose prose-ink max-w-prose">
+      <slot />
+    </div>
+  </article>
+</Layout>

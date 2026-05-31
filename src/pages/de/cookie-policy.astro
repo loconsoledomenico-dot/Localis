@@ -1,0 +1,73 @@
+---
+export const prerender = true;
+import LegalPageShell from '../../components/LegalPageShell.astro';
+---
+<LegalPageShell
+  title="Cookie-Richtlinie · Localis"
+  pageTitle="Cookie-Richtlinie"
+  updatedLabel="Aktualisiert"
+  updatedOn="22. Mai 2026"
+  lang="de"
+>
+  <h2>Was sind Cookies?</h2>
+  <p>Cookies sind kleine Textdateien, die beim Besuch einer Website im Browser gespeichert werden.</p>
+
+  <h2>Technische Cookies (immer aktiv)</h2>
+  <p>Diese Cookies sind fur den Betrieb der Website erforderlich.</p>
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Zweck</th><th>Dauer</th><th>Anbieter</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>lg_partner</code></td>
+        <td>Partnerzuordnung bei Einstieg uber QR-Code oder Tracking-Link.</td>
+        <td>30 Tage</td>
+        <td>Localis (First-Party)</td>
+      </tr>
+      <tr>
+        <td><code>lg_consent</code></td>
+        <td>Speichert Cookie-Einstellungen im localStorage.</td>
+        <td>Unbegrenzt</td>
+        <td>Localis (First-Party)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Analyse-Cookies (nur mit Zustimmung)</h2>
+  <p>Werden nur nach Klick auf "Alle akzeptieren" aktiviert.</p>
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Zweck</th><th>Dauer</th><th>Anbieter</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>_ga</code>, <code>_ga_*</code></td>
+        <td>Google Analytics 4 fur aggregierte Nutzungsmessung.</td>
+        <td>2 Jahre</td>
+        <td>Google LLC (USA)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Immer aktive Drittanbieter-Dienste</h2>
+  <table>
+    <thead>
+      <tr><th>Dienst</th><th>Zweck</th><th>Cookies</th><th>Anbieter</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Plausible Analytics</td>
+        <td>Aggregierte Statistik ohne personenbezogene Daten.</td>
+        <td>Keine</td>
+        <td>Plausible Insights OU (EU)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cookie-Verwaltung</h2>
+  <p>Du kannst Einstellungen jederzeit uber "Cookies verwalten" im Footer andern.</p>
+
+  <h2>Kontakt</h2>
+  <p>Fragen an <a href="mailto:hello@localis.guide">hello@localis.guide</a></p>
+</LegalPageShell>
