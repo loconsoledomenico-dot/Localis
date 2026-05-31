@@ -1,0 +1,68 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+import AuthorProfileGrid from '../../components/AuthorProfileGrid.astro';
+
+const profiles = [
+  {
+    name: 'Domenico Loconsole',
+    role: 'Historische Recherche und Text',
+    photo: '/images/authors/domenico-loconsole.png',
+    bio: 'Leitet Archivarbeit und Erstfassung. Jede Route basiert auf prufbaren Quellen und mehreren Vor-Ort-Begehungen.',
+  },
+  {
+    name: 'Luigi Loconsole',
+    role: 'Redaktionelle Leitung',
+    photo: '/images/authors/luigi-loconsole.jpg',
+    bio: 'Verbindet Forschung mit Horerlebnis auf der Strasse: Rhythmus, Klarheit und praktische Nutzbarkeit.',
+  },
+  {
+    name: 'Domenico (Stimme Altstadt Bari)',
+    role: 'Lokaler Erzahler',
+    photo: '/images/authors/domenico-loconsole.png',
+    bio: 'In Bari Vecchia aufgewachsen. Bringt Details ein, die in klassischen Reisefuhrern meist fehlen.',
+  },
+  {
+    name: 'Concetta (Alberobello)',
+    role: 'Lokale Autorin',
+    photo: '/images/authors/concetta-alberobello.jpg',
+    bio: 'Sammelt orale Erinnerung und Quartiergeschichten mit starkem lokalem Kontext.',
+  },
+];
+---
+<Layout
+  title="Uber uns · Localis"
+  description="Localis ist ein unabhangiges Redaktionsteam: prufbare Forschung, lokale Stimmen und Guides vom Ort selbst."
+  lang="de"
+>
+  <article class="max-w-wrap mx-auto px-md py-2xl">
+    <Eyebrow class="mb-md">Uber uns</Eyebrow>
+    <h1 class="font-display text-4xl sm:text-5xl text-ink mb-md">Localis ist eine Redaktion, kein Textgenerator.</h1>
+    <p class="font-display italic text-xl text-ink-muted max-w-prose mb-xl">
+      Wir prufen Quellen, laufen die Wege vor Ort und schreiben erst dann.
+    </p>
+
+    <section class="prose prose-ink max-w-prose mb-2xl">
+      <p>
+        Localis wurde in Bari von Domenico und Luigi Loconsole gegrundet. Jede Guide kombiniert
+        prufbare Archivforschung, vor Ort gesammelte orale Erinnerung und menschliche Redaktion.
+        Die vollstandigen Quellen stehen unter <a href="/de/fonti">/de/fonti</a>.
+      </p>
+      <p>
+        Die Audio-Stimmen sind bewusst synthetisch: So bleiben die Geschichten nah am Original und gleichzeitig unterwegs klar verstandlich.
+      </p>
+    </section>
+
+    <AuthorProfileGrid title="Menschen hinter den Guides" profiles={profiles} />
+
+    <section class="prose prose-ink max-w-prose">
+      <h2>Roadmap</h2>
+      <ul>
+        <li><strong>Edition 01 - Apulien:</strong> veroffentlicht zwischen Oktober 2025 und Mai 2026.</li>
+        <li><strong>In Arbeit:</strong> neue Ziele in Apulien.</li>
+        <li><strong>Edition 02:</strong> neues Gebiet fur 2027 geplant.</li>
+      </ul>
+    </section>
+  </article>
+</Layout>

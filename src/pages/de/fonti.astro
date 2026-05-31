@@ -1,14 +1,14 @@
 ---
 export const prerender = true;
-import Layout from '../components/Layout.astro';
+import Layout from '../../components/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const sources = (await getCollection('sources')).sort((a, b) =>
-  a.data.guide_title_it.localeCompare(b.data.guide_title_it),
+  (a.data.guide_title_de ?? a.data.guide_title_en).localeCompare(b.data.guide_title_de ?? b.data.guide_title_en),
 );
 
 function formatDate(d: Date): string {
-  return d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+  return d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
 function formatSource(s: { author?: string; title: string; publisher?: string; year?: number; }): string {
@@ -23,48 +23,46 @@ function formatSource(s: { author?: string; title: string; publisher?: string; y
 }
 ---
 <Layout
-  title="Le fonti delle guide · Localis"
-  description="Le nostre fonti archivistiche e accademiche, raccontate capitolo per capitolo."
-  lang="it"
+  title="Quellen der Guides · Localis"
+  description="Archiv- und Fachquellen hinter den Localis Guides, Kapitel fur Kapitel."
+  lang="de"
 >
   <article class="max-w-wrap mx-auto px-md py-2xl">
     <header class="mb-3xl">
-      <p class="text-[11px] font-semibold tracking-[0.32em] uppercase text-accent mb-sm">Verifica le storie</p>
-      <h1 class="font-display text-4xl sm:text-5xl text-ink leading-tight mb-md">Le fonti delle guide.</h1>
+      <p class="text-[11px] font-semibold tracking-[0.32em] uppercase text-accent mb-sm">Prufe die Geschichten</p>
+      <h1 class="font-display text-4xl sm:text-5xl text-ink leading-tight mb-md">Unsere Quellen.</h1>
       <p class="font-display italic text-xl text-ink-muted leading-snug max-w-prose">
-        Qui non trovi solo bibliografia: trovi il processo di ricerca che rende affidabili i racconti.
+        Keine kalte Literaturliste: hier siehst du den Rechercheweg hinter jeder Guide.
       </p>
     </header>
 
     <section class="mb-3xl rounded-xl border border-border bg-surface-deep p-lg">
       <p class="text-base text-ink-muted leading-relaxed max-w-prose">
-        Ogni guida nasce da fonti verificabili, sopralluoghi e memoria orale locale. Quando un dettaglio non e documentabile, lo dichiariamo come ricostruzione narrativa.
+        Jede Guide basiert auf prufbaren Quellen, Vor-Ort-Kontrollen und lokaler Erinnerung. Nicht belegbare Details markieren wir als narrative Rekonstruktion.
       </p>
     </section>
 
     {sources.map((entry) => (
       <section class="mb-3xl pt-xl border-t border-border">
         <header class="mb-md">
-          <h2 class="font-display text-3xl text-ink leading-tight mb-xs">{entry.data.guide_title_it}</h2>
+          <h2 class="font-display text-3xl text-ink leading-tight mb-xs">{entry.data.guide_title_de ?? entry.data.guide_title_en}</h2>
           <p class="text-xs font-semibold tracking-[0.22em] uppercase text-ink-subtle">
-            Ultima revisione: {formatDate(entry.data.last_review)}
+            Letzte Prufung: {formatDate(entry.data.last_review)}
           </p>
         </header>
 
         <p class="text-base text-ink-muted leading-relaxed max-w-prose mb-lg">
-          {entry.data.research_note_it ?? 'Per questa guida abbiamo incrociato testi storici, archivi e verifiche sul posto per ridurre ogni semplificazione turistica.'}
+          {entry.data.research_note_de ?? entry.data.research_note_en ?? 'Fur diese Guide wurden historische Texte, Archive und Ortsbegehungen gegengepruft, um vereinfachte Touristenerzahlungen zu vermeiden.'}
         </p>
 
         {entry.data.chapters.map((chapter) => (
           <article class="mb-xl rounded-lg border border-border/80 bg-surface p-md">
-            <h3 class="font-display text-xl text-ink mb-xs">{chapter.title_it}</h3>
-            <p class="text-sm text-ink mb-sm">
-              {chapter.framing_it ?? 'Cosa dimostriamo in questo capitolo:'}
-            </p>
+            <h3 class="font-display text-xl text-ink mb-xs">{chapter.title_de ?? chapter.title_en ?? chapter.title_it}</h3>
+            <p class="text-sm text-ink mb-sm">{chapter.framing_de ?? chapter.framing_en ?? 'Was dieses Kapitel belegt:'}</p>
 
             {chapter.facts.map((fact) => (
               <div class="mb-md">
-                <p class="text-sm italic text-ink-muted mb-xs">{fact.claim_it}</p>
+                <p class="text-sm italic text-ink-muted mb-xs">{fact.claim_de ?? fact.claim_en ?? fact.claim_it}</p>
                 <ul class="list-disc pl-lg space-y-2xs">
                   {fact.sources.map((source) => (
                     <li class="text-sm text-ink-muted leading-snug">

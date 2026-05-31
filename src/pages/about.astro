@@ -2,36 +2,68 @@
 export const prerender = true;
 import Layout from '../components/Layout.astro';
 import Eyebrow from '../components/Eyebrow.astro';
+import AuthorProfileGrid from '../components/AuthorProfileGrid.astro';
+
+const profiles = [
+  {
+    name: 'Domenico Loconsole',
+    role: 'Ricerca storica e scrittura',
+    photo: '/images/authors/domenico-loconsole.png',
+    bio: 'Cura la ricerca d archivio e la prima stesura. Ogni itinerario nasce da fonti verificabili e sopralluoghi ripetuti.',
+  },
+  {
+    name: 'Luigi Loconsole',
+    role: 'Direzione editoriale',
+    photo: '/images/authors/luigi-loconsole.jpg',
+    bio: 'Riduce la distanza tra studio e ascolto sul campo: ritmo narrativo, chiarezza, e attenzione ai bisogni reali del viaggiatore.',
+  },
+  {
+    name: 'Domenico (voce Bari Vecchia)',
+    role: 'Narratore locale',
+    photo: '/images/authors/domenico-loconsole.png',
+    bio: 'Barese, cresciuto nel borgo antico. Porta nella guida i dettagli che di solito non arrivano nelle brochure turistiche.',
+  },
+  {
+    name: 'Concetta (Alberobello)',
+    role: 'Autrice territoriale',
+    photo: '/images/authors/concetta-alberobello.jpg',
+    bio: 'Raccoglie memoria orale e microstorie dei rioni storici, con attenzione a lessico locale e contesto sociale.',
+  },
+];
 ---
 <Layout
   title="Chi siamo · Localis"
-  description="Localis nasce da Domenico e Luigi Loconsole, baresi. Abbiamo iniziato con un'audioguida sui misteri di Modugno. Ora raccontiamo la Puglia."
+  description="Localis e una casa editoriale indipendente: ricerca verificabile, voci locali e guide scritte sul territorio."
   lang="it"
 >
-  <article class="max-w-narrow mx-auto px-md py-2xl">
+  <article class="max-w-wrap mx-auto px-md py-2xl">
     <Eyebrow class="mb-md">Chi siamo</Eyebrow>
-    <h1 class="font-display text-4xl text-ink mb-lg">Localis è un progetto editoriale pugliese.</h1>
+    <h1 class="font-display text-4xl sm:text-5xl text-ink mb-md">Localis e una redazione, non un generatore.</h1>
+    <p class="font-display italic text-xl text-ink-muted max-w-prose mb-xl">
+      Studiamo le fonti, camminiamo i luoghi, poi scriviamo. Le audioguide nascono cosi.
+    </p>
 
-    <div class="prose prose-ink max-w-prose">
+    <section class="prose prose-ink max-w-prose mb-2xl">
       <p>
-        Domenico e Luigi Loconsole, baresi, scriviamo audioguide narrative sulla Puglia a partire da ricerca d'archivio verificabile (tutte le fonti sono pubblicate su <a href="/fonti">/fonti</a>, capitolo per capitolo) e da memoria orale raccolta nei luoghi.
+        Localis nasce a Bari da Domenico e Luigi Loconsole. Ogni guida combina ricerca d archivio verificabile,
+        memoria orale raccolta sul territorio e revisione editoriale umana. Le fonti complete sono pubblicate su
+        <a href="/fonti"> /fonti</a>, capitolo per capitolo.
       </p>
       <p>
-        Le voci che ascolti sono sintetizzate, non umane. È una scelta editoriale dichiarata: chi sa raccontare un vicolo davanti a un caffè, davanti al microfono spesso ammutolisce. Preferiamo lasciare le storie nelle parole di chi ce le ha date, e affidare la lettura a uno strumento che non le tradisca.
+        Le voci audio sono sintetiche per una scelta precisa: mantenere i racconti nelle parole di chi ce le ha
+        consegnate, con una lettura stabile e ascoltabile in strada.
       </p>
-      <p>
-        Le guide hanno anche una voce narrativa. Alcune appartengono a persone reali della nostra famiglia e della nostra rete; altre sono personaggi editoriali compositi, costruiti da ricerca, fonti, osservazioni sul campo e sensibilita locali. Non sono testimonianze attribuite a una singola persona: sono un modo dichiarato per dare a ogni luogo un punto di vista umano, riconoscibile e coerente.
-      </p>
-      <p>
-        Il nostro chiodo: siamo l'unica casa editrice italiana che pubblica audioguide con bibliografia accademica verificabile, capitolo per capitolo.
-      </p>
+    </section>
 
+    <AuthorProfileGrid title="Le persone dietro le guide" profiles={profiles} />
+
+    <section class="prose prose-ink max-w-prose">
       <h2>Roadmap</h2>
       <ul>
-        <li><strong>Edizione 01 — Puglia:</strong> 18 guide pubblicate, voci sintetizzate. Ottobre 2025 – maggio 2026.</li>
+        <li><strong>Edizione 01 - Puglia:</strong> guide pubblicate tra ottobre 2025 e maggio 2026.</li>
         <li><strong>In lavorazione:</strong> nuove destinazioni pugliesi.</li>
-        <li><strong>Edizione 02:</strong> zona da definire, prevista 2027.</li>
+        <li><strong>Edizione 02:</strong> nuova area prevista nel 2027.</li>
       </ul>
-    </div>
+    </section>
   </article>
 </Layout>

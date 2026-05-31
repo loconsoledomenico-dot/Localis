@@ -2,36 +2,67 @@
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
+import AuthorProfileGrid from '../../components/AuthorProfileGrid.astro';
+
+const profiles = [
+  {
+    name: 'Domenico Loconsole',
+    role: 'Historical research and writing',
+    photo: '/images/authors/domenico-loconsole.png',
+    bio: 'Leads archive research and first drafts. Every route is built from verifiable sources and repeated field walks.',
+  },
+  {
+    name: 'Luigi Loconsole',
+    role: 'Editorial direction',
+    photo: '/images/authors/luigi-loconsole.jpg',
+    bio: 'Bridges research and on-street listening: pacing, clarity, and practical traveler usability.',
+  },
+  {
+    name: 'Domenico (Old Bari voice)',
+    role: 'Local narrator',
+    photo: '/images/authors/domenico-loconsole.png',
+    bio: 'Born in Bari Vecchia. He brings details that rarely make it into standard tourist narratives.',
+  },
+  {
+    name: 'Concetta (Alberobello)',
+    role: 'Local author',
+    photo: '/images/authors/concetta-alberobello.jpg',
+    bio: 'Collects oral memory and neighborhood stories with strong local context and language accuracy.',
+  },
+];
 ---
 <Layout
   title="About · Localis"
-  description="Localis was started by Domenico and Luigi Loconsole, born in Bari. It began with an audio guide on the mysteries of Modugno. Now we tell the story of Puglia."
+  description="Localis is an independent editorial studio: verifiable research, local voices, and guides written on the ground."
   lang="en"
 >
-  <article class="max-w-narrow mx-auto px-md py-2xl">
+  <article class="max-w-wrap mx-auto px-md py-2xl">
     <Eyebrow class="mb-md">About us</Eyebrow>
-    <h1 class="font-display text-4xl text-ink mb-lg">Localis is a Puglia-born editorial project.</h1>
+    <h1 class="font-display text-4xl sm:text-5xl text-ink mb-md">Localis is an editorial team, not a content generator.</h1>
+    <p class="font-display italic text-xl text-ink-muted max-w-prose mb-xl">
+      We study the sources, walk the places, then write. That is how every guide is made.
+    </p>
 
-    <div class="prose prose-ink max-w-prose">
+    <section class="prose prose-ink max-w-prose mb-2xl">
       <p>
-        Domenico and Luigi Loconsole, born in Bari, write narrative audio guides about Puglia grounded in verifiable archival research (all sources published at <a href="/en/fonti">/fonti</a>, chapter by chapter) and oral memory gathered on the ground.
+        Localis started in Bari with Domenico and Luigi Loconsole. Each guide combines verifiable archive research,
+        oral memory gathered on location, and human editorial revision. Full references are published at
+        <a href="/en/fonti"> /fonti</a>, chapter by chapter.
       </p>
       <p>
-        The voices you hear are synthetic, not human. This is a deliberate editorial choice: the people who can describe an alley perfectly over a coffee often freeze in front of a microphone. We prefer to leave the stories in the words of those who gave them to us, and entrust the reading to a tool that won't betray them.
+        Audio voices are synthetic by explicit editorial choice: stories stay faithful to the original words while remaining clear in real street conditions.
       </p>
-      <p>
-        Each guide also has a narrative voice. Some belong to real people in our family and local network; others are composite editorial characters built from research, sources, field observation and local sensibility. They are not testimonies attributed to one single real person: they are a declared editorial device for giving each place a human, recognisable, coherent point of view.
-      </p>
-      <p>
-        Our defining claim: we are the only Italian publisher that releases audio guides with verifiable academic bibliographies, chapter by chapter.
-      </p>
+    </section>
 
+    <AuthorProfileGrid title="People behind the guides" profiles={profiles} />
+
+    <section class="prose prose-ink max-w-prose">
       <h2>Roadmap</h2>
       <ul>
-        <li><strong>Edition 01 — Puglia:</strong> 18 guides published, synthetic voices. October 2025 – May 2026.</li>
-        <li><strong>In progress:</strong> new Pugliese destinations.</li>
-        <li><strong>Edition 02:</strong> location to be confirmed, planned 2027.</li>
+        <li><strong>Edition 01 - Puglia:</strong> guides published between October 2025 and May 2026.</li>
+        <li><strong>In progress:</strong> new Puglian destinations.</li>
+        <li><strong>Edition 02:</strong> a new area is planned for 2027.</li>
       </ul>
-    </div>
+    </section>
   </article>
 </Layout>

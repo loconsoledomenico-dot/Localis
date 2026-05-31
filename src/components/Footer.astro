@@ -9,25 +9,25 @@ export interface Props {
 const { lang } = Astro.props;
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-border mt-3xl">
-  <div class="max-w-wrap mx-auto px-md py-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-lg">
-    <div>
-      <p class="font-display text-xl text-ink mb-2xs">
+<footer class="border-t border-border mt-3xl bg-surface-deep/45">
+  <div class="max-w-wrap mx-auto px-md py-2xl md:py-3xl grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-xl items-start">
+    <div class="max-w-prose">
+      <p class="font-display text-2xl text-ink mb-2xs">
         Loc<em class="text-accent not-italic">alis</em>
       </p>
-      <p class="font-display italic text-sm text-ink-muted mb-2xs">
+      <p class="font-display italic text-base text-ink-muted mb-sm leading-snug">
         {lang === 'it'
-          ? 'Audioguide scritte in Puglia · Fonti d\'archivio verificabili · Storie raccolte sul territorio'
+          ? "Audioguide scritte in Puglia · Fonti d'archivio verificabili · Storie raccolte sul territorio"
           : lang === 'de'
-          ? 'Narrative Audioguides aus Apulien · Überprüfbare Archivquellen · Vor Ort gesammelte Geschichten'
-          : 'Audio guides written in Puglia · Verifiable archive sources · Stories gathered on the ground'}
+            ? 'Narrative Audioguides aus Apulien · Uberprufbare Archivquellen · Vor Ort gesammelte Geschichten'
+            : 'Audio guides written in Puglia · Verifiable archive sources · Stories gathered on the ground'}
       </p>
-      <p class="text-sm text-ink-muted">
+      <p class="text-sm text-ink-subtle">
         {t('footer.copyright', lang)} · {year}
       </p>
     </div>
 
-    <nav class="flex items-center gap-lg">
+    <nav class="flex flex-wrap items-center gap-x-lg gap-y-sm lg:justify-end">
       <a
         href={localizedHref('/fonti', lang)}
         class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
@@ -42,15 +42,15 @@ const year = new Date().getFullYear();
       </a>
       <a
         href={lang === 'en' ? '/en/method' : lang === 'de' ? '/de/methode' : '/metodo'}
-        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
       >
         {lang === 'it' ? 'Metodo' : lang === 'de' ? 'Methode' : 'Method'}
       </a>
       <a
         href={lang === 'en' ? '/en/cruise' : lang === 'de' ? '/de/kreuzfahrt' : '/crocieristi'}
-        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast hidden sm:inline"
+        class="text-sm text-ink-muted hover:text-ink no-underline transition-colors duration-fast"
       >
-        {lang === 'it' ? 'Crocieristi' : lang === 'de' ? 'Kreuzfahrtgäste' : 'Cruise guests'}
+        {lang === 'it' ? 'Crocieristi' : lang === 'de' ? 'Kreuzfahrtgaste' : 'Cruise guests'}
       </a>
       <a
         href={localizedHref('/termini', lang)}

@@ -1,0 +1,35 @@
+---
+export interface Profile {
+  name: string;
+  role: string;
+  bio: string;
+  photo?: string;
+}
+
+export interface Props {
+  title: string;
+  profiles: Profile[];
+}
+
+const { title, profiles } = Astro.props;
+---
+<section class="mb-2xl">
+  <h2 class="font-display text-3xl text-ink mb-lg">{title}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+    {profiles.map((profile) => (
+      <article class="rounded-xl border border-border bg-surface-deep p-md">
+        {profile.photo && (
+          <img
+            src={profile.photo}
+            alt=""
+            loading="lazy"
+            class="w-full aspect-[4/3] object-cover rounded-md mb-md"
+          />
+        )}
+        <h3 class="font-display text-2xl text-ink mb-2xs">{profile.name}</h3>
+        <p class="text-xs uppercase tracking-[0.15em] text-ink-subtle mb-sm">{profile.role}</p>
+        <p class="text-base text-ink-muted leading-relaxed">{profile.bio}</p>
+      </article>
+    ))}
+  </div>
+</section>
