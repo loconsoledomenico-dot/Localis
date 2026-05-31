@@ -1,11 +1,11 @@
 ---
 export const prerender = true;
-import Layout from '../../components/Layout.astro';
-import Hero from '../../components/Hero.astro';
+import DestinationsBlock from '../../components/DestinationsBlock.astro';
 import FeatureBlock from '../../components/FeatureBlock.astro';
+import Hero from '../../components/Hero.astro';
+import Layout from '../../components/Layout.astro';
 import StatsBlock from '../../components/StatsBlock.astro';
 import StepsBlock from '../../components/StepsBlock.astro';
-import DestinationsBlock from '../../components/DestinationsBlock.astro';
 ---
 <Layout
   title="Localis — Narrative Audioguides aus Apulien"
@@ -47,7 +47,6 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
 
   <StepsBlock lang="de" ctaHref="/de/guide/bari-vecchia" />
 
-  {/* CTA → Builder auf /de/guide */}
   <section class="bg-surface" id="preise">
     <div class="max-w-wrap mx-auto px-md py-2xl text-center">
       <p class="font-display font-light text-[clamp(1.2rem,2.5vw,1.7rem)] text-ink mb-md">
@@ -61,10 +60,9 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
           Paket zusammenstellen
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <p class="text-sm text-ink-muted">Tris 11,99 € · Sestina 19,99 € · Puglia Completa 39,99 €</p>
+        <p class="text-sm text-ink-muted">Einzelner Guide 4,99 € · Pack 3 11,99 € · Pack 6 19,99 €</p>
+        <p class="text-xs text-ink-subtle max-w-[42ch] text-center">Komplette Zone erscheint nur, wenn du alle 6 Guides aus demselben Gebiet auswählst.</p>
       </div>
     </div>
   </section>
-
-
 </Layout>

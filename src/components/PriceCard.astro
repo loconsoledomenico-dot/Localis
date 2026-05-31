@@ -13,20 +13,35 @@ export interface Props {
   ctaOverride?: string;
 }
 
-const { product, guideSlug, lang, features, primary = false, titleOverride, descriptionOverride, ctaOverride } = Astro.props;
+const {
+  product,
+  guideSlug,
+  lang,
+  features,
+  primary = false,
+  titleOverride,
+  descriptionOverride,
+  ctaOverride,
+} = Astro.props;
+
+const isCompleteArea =
+  product === 'bari-completa' ||
+  product === 'valle-completa' ||
+  product === 'gargano-completa';
 
 const priceCents =
-  (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa') ? 1999
-  : product === 'tris'     ? 1199
-  : product === 'crociera' ?  799
+  isCompleteArea ? 1999
+  : product === 'tris' ? 1199
+  : product === 'crociera' ? 799
   : 499;
 
 const priceLabel = formatPrice(priceCents);
+
 const title = titleOverride ?? (
   product === 'tris'
-    ? (lang === 'it' ? 'Tris' : 'Tris')
-    : (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
-      ? (lang === 'it' ? 'Zona completa' : lang === 'de' ? 'Komplette Zone' : 'Complete area')
+    ? (lang === 'it' ? 'Pack 3 Guide' : lang === 'de' ? 'Pack 3' : 'Pack 3 Guides')
+    : isCompleteArea
+      ? (lang === 'it' ? 'Pack 6 Guide (Intera Zona)' : lang === 'de' ? 'Pack 6 (Komplette Zone)' : 'Pack 6 Guides (Complete Area)')
       : product === 'crociera'
         ? (lang === 'it' ? 'Pacchetto Crociera' : lang === 'de' ? 'Kreuzfahrt-Paket' : 'Cruise Package')
         : (lang === 'it' ? 'Guida singola' : lang === 'de' ? 'Einzelner Guide' : 'Single guide')
@@ -71,7 +86,7 @@ const description = descriptionOverride ?? (
 );
 
 const unitLabel =
-  (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
+  isCompleteArea
     ? (lang === 'it' ? '/ 6 guide' : lang === 'de' ? '/ 6 Guides' : '/ 6 guides')
     : product === 'tris'
       ? (lang === 'it' ? '/ 3 guide' : lang === 'de' ? '/ 3 Guides' : '/ 3 guides')
@@ -81,9 +96,9 @@ const unitLabel =
 
 const ctaLabel = ctaOverride ?? (
   product === 'tris'
-    ? (lang === 'it' ? 'Scegli 3 guide' : lang === 'de' ? '3 Guides auswählen' : 'Choose 3 guides')
-    : (product === 'bari-completa' || product === 'valle-completa' || product === 'gargano-completa')
-      ? (lang === 'it' ? 'Acquista Zona completa' : lang === 'de' ? 'Komplette Zone kaufen' : 'Get Complete Area')
+    ? (lang === 'it' ? 'Scegli Pack 3' : lang === 'de' ? 'Pack 3 wählen' : 'Choose Pack 3')
+    : isCompleteArea
+      ? (lang === 'it' ? 'Acquista Pack 6 Guide' : lang === 'de' ? 'Pack 6 kaufen' : 'Get Pack 6 Guides')
       : product === 'crociera'
         ? (lang === 'it' ? 'Acquista Pacchetto Crociera' : lang === 'de' ? 'Kreuzfahrt-Paket kaufen' : 'Get Cruise Package')
         : (lang === 'it' ? 'Acquista guida singola' : lang === 'de' ? 'Guide kaufen' : 'Buy single guide')
@@ -96,7 +111,7 @@ const isTris = product === 'tris';
   <header>
     {primary && (
       <p class="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-xs">
-        {lang === 'it' ? 'Piu scelto' : lang === 'de' ? 'Am beliebtesten' : 'Most popular'}
+        {lang === 'it' ? 'Più scelto' : lang === 'de' ? 'Am beliebtesten' : 'Most popular'}
       </p>
     )}
     <h3 class="font-display text-2xl text-ink leading-tight">{title}</h3>
@@ -155,10 +170,10 @@ const isTris = product === 'tris';
       const originalText = btn.textContent;
       btn.textContent = lang === 'it' ? 'Apertura pagamento...' : lang === 'de' ? 'Checkout wird geöffnet...' : 'Opening checkout...';
 
-      const BARI_SLUGS = ['bari-vecchia','san-nicola','tre-teatri','il-meglio-di-bari','porto-bari','bari-sotterranea'];
-      const VALLE_SLUGS = ['alberobello','locorotondo','martina-franca','cisternino','ostuni','fasano'];
-      const GARGANO_SLUGS = ['gargano-vieste','gargano-tremiti','gargano-nord','gargano-paesi','gargano-sacro','gargano-saline'];
-      const CROCIERA_SLUGS = ['bari-vecchia','il-meglio-di-bari'];
+      const BARI_SLUGS = ['bari-vecchia', 'san-nicola', 'tre-teatri', 'il-meglio-di-bari', 'porto-bari', 'bari-sotterranea'];
+      const VALLE_SLUGS = ['alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano'];
+      const GARGANO_SLUGS = ['gargano-vieste', 'gargano-tremiti', 'gargano-nord', 'gargano-paesi', 'gargano-sacro', 'gargano-saline'];
+      const CROCIERA_SLUGS = ['bari-vecchia', 'il-meglio-di-bari'];
 
       const bodyPayload: Record<string, unknown> = { product, lang };
       if (product === 'single') {

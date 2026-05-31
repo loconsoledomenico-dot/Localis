@@ -1,11 +1,11 @@
 ---
 export const prerender = true;
-import Layout from '../../components/Layout.astro';
-import Hero from '../../components/Hero.astro';
+import DestinationsBlock from '../../components/DestinationsBlock.astro';
 import FeatureBlock from '../../components/FeatureBlock.astro';
+import Hero from '../../components/Hero.astro';
+import Layout from '../../components/Layout.astro';
 import StatsBlock from '../../components/StatsBlock.astro';
 import StepsBlock from '../../components/StepsBlock.astro';
-import DestinationsBlock from '../../components/DestinationsBlock.astro';
 ---
 <Layout
   title="Localis — audio guides written in Puglia"
@@ -30,10 +30,8 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
     </div>
   </section>
 
-  {/* STATS — thin band, separates hero from rest: 6/0/0/∞ */}
   <StatsBlock lang="en" />
 
-  {/* FEATURE BLOCK — Signed stories (image left) */}
   <FeatureBlock
     eyebrow="Research · Method — Plate III"
     heading="Written in Puglia."
@@ -54,7 +52,6 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
     tiltDeg={-1.5}
   />
 
-  {/* MANIFESTO — slim, pull-quote between Plate III and Plate IV */}
   <section class="manifesto-section bg-surface-elev border-y border-border">
     <div class="max-w-narrow mx-auto px-md py-xl lg:py-2xl">
       <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-md">
@@ -68,10 +65,8 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
     </div>
   </section>
 
-  {/* DESTINATIONS — 3 destination cards */}
   <DestinationsBlock lang="en" />
 
-  {/* CTA → builder on /en/guide */}
   <section class="bg-surface" id="prezzi">
     <div class="max-w-wrap mx-auto px-md py-2xl text-center">
       <p class="font-display font-light text-[clamp(1.2rem,2.5vw,1.7rem)] text-ink mb-md">
@@ -85,12 +80,12 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
           Build your package
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <p class="text-sm text-ink-muted">Tris €11.99 · Sestina €19.99 · Puglia Completa €39.99</p>
+        <p class="text-sm text-ink-muted">Single guide €4.99 · Pack 3 Guides €11.99 · Pack 6 Guides €19.99</p>
+        <p class="text-xs text-ink-subtle max-w-[42ch] text-center">Complete Area appears only when you choose all 6 guides from the same area.</p>
       </div>
     </div>
   </section>
 
-  {/* FEATURE BLOCK — Opens with a link (post-pricing reassurance) */}
   <FeatureBlock
     eyebrow="Tool — Plate V"
     heading="Opens with a link."
@@ -112,10 +107,7 @@ import DestinationsBlock from '../../components/DestinationsBlock.astro';
     framedImage
   />
 
-  {/* 3-STEPS — clear onboarding before the closer */}
   <StepsBlock lang="en" ctaHref="/en/guide/bari-vecchia" />
-
-
 </Layout>
 
 <style>
