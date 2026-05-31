@@ -1,12 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
+import { guideSubtitle, guideTitle } from '../lib/guide-localization';
 import { type Lang } from '../lib/i18n';
 import {
   BARI_GUIDES,
-  VALLE_GUIDES,
   GARGANO_GUIDES,
+  VALLE_GUIDES,
 } from '../lib/stripe-prices';
-import { getCollection } from 'astro:content';
-import { guideSubtitle, guideTitle } from '../lib/guide-localization';
 
 export interface Props {
   lang: Lang;
@@ -31,33 +31,43 @@ for (const entry of allEntries) {
     slug,
     title: guideTitle(d, lang),
     subtitle: guideSubtitle(d, lang),
-    cover:    d.cover as string,
+    cover: d.cover as string,
   });
 }
 
 const ZONE_ORDER = [
-  { label: lang === 'it' ? 'Bari' : 'Bari', slugs: BARI_GUIDES },
-  { label: "Valle d'Itria", slugs: VALLE_GUIDES },
-  { label: 'Gargano', slugs: GARGANO_GUIDES },
-];
+  { key: 'bari', label: 'Bari', slugs: BARI_GUIDES },
+  { key: 'valle', label: "Valle d'Itria", slugs: VALLE_GUIDES },
+  { key: 'gargano', label: 'Gargano', slugs: GARGANO_GUIDES },
+] as const;
 ---
 
-<section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : lang === 'de' ? 'Guide auswählen' : 'Choose your guides'}>
+<section class="guide-builder" id="builder" aria-label={lang === 'it' ? 'Scegli le tue guide' : lang === 'de' ? 'Guides auswählen' : 'Choose your guides'}>
   <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-
     <div class="text-center mb-2xl">
       <p class="text-xs font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-sm">
         {lang === 'it' ? '— Costruisci il tuo pacchetto —' : lang === 'de' ? '— Stelle dein Paket zusammen —' : '— Build your package —'}
       </p>
       <h2 class="font-display font-light text-[clamp(1.8rem,4vw,3rem)] text-ink leading-tight">
-        {lang === 'it' ? 'Scegli le guide che vuoi.' : lang === 'de' ? 'Wähle die Guides, die du möchtest.' : 'Choose the guides you want.'}
+        {lang === 'it'
+          ? 'Più ascolti, meno paghi.'
+          : lang === 'de'
+            ? 'Je mehr du hörst, desto weniger zahlst du.'
+            : 'The more you listen, the less you pay.'}
       </h2>
       <p class="font-body text-ink-muted text-base mt-sm max-w-[48ch] mx-auto">
         {lang === 'it'
-          ? 'Seleziona 3 per il Tris (€11,99), 6 per la Sestina (€19,99), o prendi la Puglia Completa (€39,99). Una guida? €4,99.'
+          ? 'Scegli le guide che vuoi. Lo sconto si applica da solo.'
           : lang === 'de'
-            ? 'Wähle 3 für Tris (11,99 €), 6 für Sestina (19,99 €), oder nimm Puglia Completa (39,99 €). Ein einzelner Guide kostet 4,99 €.'
-            : 'Pick 3 for Tris (€11.99), 6 for Sestina (€19.99), or get Puglia Completa (€39.99). Just one? €4.99.'}
+            ? 'Wähle die Guides, die du möchtest. Der Rabatt wird automatisch angewendet.'
+            : 'Choose the guides you want. The discount applies automatically.'}
+      </p>
+      <p class="font-body text-ink-subtle text-xs mt-xs max-w-[48ch] mx-auto">
+        {lang === 'it'
+          ? 'Pack 6 diventa Intera Zona solo quando scegli tutte e 6 le guide della stessa area.'
+          : lang === 'de'
+            ? 'Pack 6 wird nur dann zur Kompletten Zone, wenn du alle 6 Guides aus demselben Gebiet auswählst.'
+            : 'Pack 6 becomes Complete Area only when you choose all 6 guides from the same area.'}
       </p>
       <p class="font-body text-ink-subtle text-xs mt-xs max-w-[48ch] mx-auto">
         {lang === 'it'
@@ -82,6 +92,7 @@ const ZONE_ORDER = [
                 type="button"
                 class="builder-card"
                 data-slug={slug}
+                data-zone={zone.key}
                 aria-pressed="false"
                 aria-label={g.title}
               >
@@ -105,7 +116,7 @@ const ZONE_ORDER = [
         <div class="builder-cta-status">
           <span id="builder-count" class="builder-count-badge">0</span>
           <span id="builder-status-text" class="text-sm text-ink-muted">
-            {lang === 'it' ? 'guide selezionate' : lang === 'de' ? 'Guides ausgewählt' : 'guides selected'}
+            {lang === 'it' ? 'Nessuna guida selezionata' : lang === 'de' ? 'Noch keine Guides ausgewählt' : 'No guides selected'}
           </span>
         </div>
         <button
@@ -120,7 +131,6 @@ const ZONE_ORDER = [
       </div>
       <p id="builder-upsell" class="builder-upsell" aria-hidden="true"></p>
     </div>
-
   </div>
 </section>
 
@@ -296,12 +306,16 @@ const ZONE_ORDER = [
 </style>
 
 <script>
-  const TIERS = [
-    { product: 'tris',            count: 3,  cents: 1199, label: 'Tris' },
-    { product: 'sestina',         count: 6,  cents: 1999, label: 'Sestina' },
-    { product: 'puglia-completa', count: 18, cents: 3999, label: 'Puglia Completa' },
-  ] as const;
   const SINGLE_CENTS = 499;
+  const PACK_3_CENTS = 1199;
+  const PACK_6_CENTS = 1999;
+  const PUGLIA_COMPLETA_CENTS = 3999;
+  const TIERS = [
+    { product: 'tris', count: 3 },
+    { product: 'sestina', count: 6 },
+    { product: 'puglia-completa', count: 18 },
+  ] as const;
+
   const fmt = (c: number, lang: string) =>
     `€${(c / 100).toFixed(2).replace('.', lang === 'en' ? '.' : ',')}`;
 
@@ -317,6 +331,34 @@ const ZONE_ORDER = [
   if (!btn) throw new Error('[GuideBuilder] checkout btn not found');
 
   const selected = new Set<string>();
+  const cardZoneBySlug = new Map(
+    cards.map((card) => [card.dataset.slug ?? '', card.dataset.zone ?? '']),
+  );
+
+  const selectedMessage = (n: number) => it
+    ? `Hai selezionato ${n} ${n === 1 ? 'guida' : 'guide'}`
+    : de
+      ? `Du hast ${n} ${n === 1 ? 'Guide' : 'Guides'} ausgewählt`
+      : `You selected ${n} guide${n === 1 ? '' : 's'}`;
+
+  const singleGuideLabel = () => it
+    ? '1 guida'
+    : de
+      ? '1 Guide'
+      : '1 guide';
+
+  const getZoneState = () => {
+    const zones = new Set(
+      [...selected]
+        .map((slug) => cardZoneBySlug.get(slug))
+        .filter((zone): zone is string => Boolean(zone)),
+    );
+
+    return {
+      zone: zones.size === 1 ? [...zones][0] : null,
+      isSameZoneComplete: selected.size === 6 && zones.size === 1,
+    };
+  };
 
   cards.forEach((card) => {
     card.addEventListener('click', () => {
@@ -334,61 +376,152 @@ const ZONE_ORDER = [
 
   function updateUI() {
     const n = selected.size;
-    countBadge.textContent = String(n);
-    statusText.textContent = it
-      ? (n === 1 ? 'guida selezionata' : 'guide selezionate')
-      : de
-        ? (n === 1 ? 'Guide ausgewählt' : 'Guides ausgewählt')
-        : (n === 1 ? 'guide selected' : 'guides selected');
+    const zoneState = getZoneState();
+    const nextTier = TIERS.find((tier) => tier.count > n) ?? null;
 
-    const tier = TIERS.find((t) => t.count === n) ?? null;
-    const nextTier = TIERS.find((t) => t.count > n) ?? null;
+    countBadge.textContent = String(n);
 
     if (n === 0) {
+      statusText.textContent = it ? 'Nessuna guida selezionata' : de ? 'Noch keine Guides ausgewählt' : 'No guides selected';
       btn.disabled = true;
       btn.textContent = it ? 'Seleziona almeno una guida' : de ? 'Wähle mindestens einen Guide aus' : 'Select at least one guide';
       upsell.textContent = '';
-    } else if (tier) {
-      btn.disabled = false;
-      btn.textContent = it
-        ? `Acquista ${tier.label} · ${fmt(tier.cents, lang)}`
-        : de
-          ? `${tier.label} kaufen · ${fmt(tier.cents, lang)}`
-          : `Get ${tier.label} · ${fmt(tier.cents, lang)}`;
-      if (nextTier) {
-        const extra = nextTier.count - n;
-        upsell.textContent = it
-          ? `➕ Aggiungi ${extra} ${extra === 1 ? 'guida' : 'guide'} → ${nextTier.label} a ${fmt(nextTier.cents, lang)} (risparmi di più)`
-          : de
-            ? `+ ${extra} weitere${extra === 1 ? 'n Guide' : ' Guides'} hinzufügen → ${nextTier.label} für ${fmt(nextTier.cents, lang)}`
-            : `➕ Add ${extra} more guide${extra > 1 ? 's' : ''} → ${nextTier.label} at ${fmt(nextTier.cents, lang)}`;
-      } else {
-        upsell.textContent = it ? 'Hai la Puglia Completa!' : de ? 'Du hast ganz Apulien!' : 'You have all of Puglia!';
-      }
-    } else if (n === 1) {
-      btn.disabled = false;
-      btn.textContent = it
-        ? `Acquista guida singola · ${fmt(SINGLE_CENTS, lang)}`
-        : de
-          ? `Einzelnen Guide kaufen · ${fmt(SINGLE_CENTS, lang)}`
-          : `Buy single guide · ${fmt(SINGLE_CENTS, lang)}`;
-      upsell.textContent = it
-        ? `➕ Aggiungi 2 guide → Tris a ${fmt(1199, lang)} (risparmi €2,98)`
-        : de
-          ? `+ 2 weitere Guides → Tris für ${fmt(1199, lang)}`
-          : `➕ Add 2 more → Tris at ${fmt(1199, lang)} (save €2.98)`;
-    } else {
-      btn.disabled = true;
-      const toNext = nextTier ? nextTier.count - n : 0;
-      btn.textContent = it
-        ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} → ${nextTier?.label ?? ''}`
-        : de
-          ? `${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzufügen → ${nextTier?.label ?? ''}`
-          : `Add ${toNext} more guide${toNext > 1 ? 's' : ''} → ${nextTier?.label ?? ''}`;
-      if (nextTier) {
-        upsell.textContent = `${nextTier.label} · ${fmt(nextTier.cents, lang)}`;
-      }
+      return;
     }
+
+    if (n === 1) {
+      statusText.textContent = `${selectedMessage(n)} · ${fmt(SINGLE_CENTS, lang)}`;
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista ${singleGuideLabel()} · ${fmt(SINGLE_CENTS, lang)}`
+        : de
+          ? `${singleGuideLabel()} kaufen · ${fmt(SINGLE_CENTS, lang)}`
+          : `Buy ${singleGuideLabel()} · ${fmt(SINGLE_CENTS, lang)}`;
+      upsell.textContent = it
+        ? `Aggiungi 2 guide per attivare Pack 3 · Totale ${fmt(PACK_3_CENTS, lang)}`
+        : de
+          ? `Füge 2 weitere Guides hinzu, um Pack 3 zu aktivieren · Gesamt ${fmt(PACK_3_CENTS, lang)}`
+          : `Add 2 guides to unlock Pack 3 · Total ${fmt(PACK_3_CENTS, lang)}`;
+      return;
+    }
+
+    if (n === 3) {
+      statusText.textContent = it
+        ? `${selectedMessage(n)} · Pack 3 applicato`
+        : de
+          ? `${selectedMessage(n)} · Pack 3 aktiviert`
+          : `${selectedMessage(n)} · Pack 3 applied`;
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista Pack 3 Guide · ${fmt(PACK_3_CENTS, lang)}`
+        : de
+          ? `Pack 3 kaufen · ${fmt(PACK_3_CENTS, lang)}`
+          : `Buy Pack 3 Guides · ${fmt(PACK_3_CENTS, lang)}`;
+      upsell.textContent = it
+        ? `Aggiungi 3 guide per attivare Pack 6 · Totale ${fmt(PACK_6_CENTS, lang)}`
+        : de
+          ? `Füge 3 weitere Guides hinzu, um Pack 6 zu aktivieren · Gesamt ${fmt(PACK_6_CENTS, lang)}`
+          : `Add 3 more guides to unlock Pack 6 · Total ${fmt(PACK_6_CENTS, lang)}`;
+      return;
+    }
+
+    if (n === 6) {
+      const pack6Label = zoneState.isSameZoneComplete
+        ? (it ? 'Pack 6 Guide (Intera Zona)' : de ? 'Pack 6 (Komplette Zone)' : 'Pack 6 Guides (Complete Area)')
+        : (it ? 'Pack 6 Guide' : de ? 'Pack 6' : 'Pack 6 Guides');
+
+      statusText.textContent = zoneState.isSameZoneComplete
+        ? (it
+          ? `${selectedMessage(n)} · Intera Zona`
+          : de
+            ? `${selectedMessage(n)} · Komplette Zone`
+            : `${selectedMessage(n)} · Complete Area`)
+        : (it
+          ? `${selectedMessage(n)} · Pack 6 applicato`
+          : de
+            ? `${selectedMessage(n)} · Pack 6 aktiviert`
+            : `${selectedMessage(n)} · Pack 6 applied`);
+
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista ${pack6Label} · ${fmt(PACK_6_CENTS, lang)}`
+        : de
+          ? `${pack6Label} kaufen · ${fmt(PACK_6_CENTS, lang)}`
+          : `Buy ${pack6Label} · ${fmt(PACK_6_CENTS, lang)}`;
+
+      upsell.textContent = zoneState.isSameZoneComplete
+        ? (it
+          ? 'Hai selezionato tutte e 6 le guide della stessa zona.'
+          : de
+            ? 'Du hast alle 6 Guides aus demselben Gebiet ausgewählt.'
+            : 'You selected all 6 guides from the same area.')
+        : (it
+          ? 'Pack 6 applicato su una selezione mista.'
+          : de
+            ? 'Pack 6 wurde auf eine gemischte Auswahl angewendet.'
+            : 'Pack 6 applied to a mixed-area selection.');
+      return;
+    }
+
+    if (n === 18) {
+      statusText.textContent = it
+        ? `${selectedMessage(n)} · Puglia Completa`
+        : de
+          ? `${selectedMessage(n)} · Ganz Apulien`
+          : `${selectedMessage(n)} · All of Puglia`;
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista Puglia Completa · ${fmt(PUGLIA_COMPLETA_CENTS, lang)}`
+        : de
+          ? `Ganz Apulien kaufen · ${fmt(PUGLIA_COMPLETA_CENTS, lang)}`
+          : `Buy All of Puglia · ${fmt(PUGLIA_COMPLETA_CENTS, lang)}`;
+      upsell.textContent = it
+        ? 'Hai selezionato tutte le guide disponibili.'
+        : de
+          ? 'Du hast alle verfügbaren Guides ausgewählt.'
+          : 'You selected every available guide.';
+      return;
+    }
+
+    statusText.textContent = `${selectedMessage(n)} · ${fmt(n * SINGLE_CENTS, lang)}`;
+    btn.disabled = true;
+
+    if (!nextTier) {
+      btn.textContent = it ? 'Selezione non disponibile' : de ? 'Auswahl nicht verfügbar' : 'Selection not available';
+      upsell.textContent = '';
+      return;
+    }
+
+    const toNext = nextTier.count - n;
+    btn.textContent = it
+      ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} per continuare`
+      : de
+        ? `${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzufügen`
+        : `Add ${toNext} more guide${toNext === 1 ? '' : 's'} to continue`;
+
+    if (nextTier.count === 3) {
+      upsell.textContent = it
+        ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} per attivare Pack 3 · Totale ${fmt(PACK_3_CENTS, lang)}`
+        : de
+          ? `Füge ${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzu, um Pack 3 zu aktivieren · Gesamt ${fmt(PACK_3_CENTS, lang)}`
+          : `Add ${toNext} more guide${toNext === 1 ? '' : 's'} to unlock Pack 3 · Total ${fmt(PACK_3_CENTS, lang)}`;
+      return;
+    }
+
+    if (nextTier.count === 6) {
+      upsell.textContent = it
+        ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} per attivare Pack 6 · Totale ${fmt(PACK_6_CENTS, lang)}`
+        : de
+          ? `Füge ${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzu, um Pack 6 zu aktivieren · Gesamt ${fmt(PACK_6_CENTS, lang)}`
+          : `Add ${toNext} more guide${toNext === 1 ? '' : 's'} to unlock Pack 6 · Total ${fmt(PACK_6_CENTS, lang)}`;
+      return;
+    }
+
+    upsell.textContent = it
+      ? `Aggiungi ${toNext} guide per arrivare a Puglia Completa · Totale ${fmt(PUGLIA_COMPLETA_CENTS, lang)}`
+      : de
+        ? `Füge ${toNext} Guides hinzu für Ganz Apulien · Gesamt ${fmt(PUGLIA_COMPLETA_CENTS, lang)}`
+        : `Add ${toNext} guides to reach All of Puglia · Total ${fmt(PUGLIA_COMPLETA_CENTS, lang)}`;
   }
 
   btn.addEventListener('click', async () => {
@@ -400,7 +533,7 @@ const ZONE_ORDER = [
     if (n === 1) {
       product = 'single';
     } else {
-      const tier = TIERS.find((t) => t.count === n);
+      const tier = TIERS.find((tier) => tier.count === n);
       if (!tier) return;
       product = tier.product;
     }

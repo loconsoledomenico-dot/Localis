@@ -82,6 +82,14 @@ describe('getSelectionZoneState', () => {
       zone: null,
     });
   });
+
+  it('does not mark 5 same-zone guides as Intera Zona eligible', () => {
+    expect(getSelectionZoneState(BARI_GUIDES.slice(0, 5))).toEqual({
+      count: 5,
+      isSameZoneComplete: false,
+      zone: 'bari',
+    });
+  });
 });
 
 describe('getPublicBundleLabel', () => {
