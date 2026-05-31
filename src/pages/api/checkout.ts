@@ -23,12 +23,12 @@ const VALID_PRODUCTS = new Set<ProductSlug>([
 
 const PRODUCT_DISPLAY_NAME: Record<ProductSlug, string> = {
   single:              'Guida Localis',
-  tris:                'Tris Localis — 3 guide a scelta',
-  sestina:             'Sestina Localis — 6 guide a scelta',
+  tris:                'Localis - Pack 3 Guide',
+  sestina:             'Localis - Pack 6 Guide',
   'puglia-completa':   'Puglia Completa — 18 guide',
-  'bari-completa':     'Bari Completa — 6 guide di Bari',
-  'valle-completa':    "Valle d'Itria Completa — 6 guide",
-  'gargano-completa':  'Gargano Completa — 6 guide',
+  'bari-completa':     'Localis - Pack 6 Guide (Intera Zona)',
+  'valle-completa':    'Localis - Pack 6 Guide (Intera Zona)',
+  'gargano-completa':  'Localis - Pack 6 Guide (Intera Zona)',
   crociera:            'Pacchetto Crociera Localis',
 };
 
