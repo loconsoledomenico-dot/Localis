@@ -64,17 +64,17 @@ const ZONE_ORDER = [
       </p>
       <p class="font-body text-ink-subtle text-xs mt-xs max-w-[48ch] mx-auto">
         {lang === 'it'
-          ? 'Pack 6 diventa Intera Zona solo quando scegli tutte e 6 le guide della stessa area.'
+          ? 'Puoi comporre Pack 6 anche mescolando guide di zone diverse.'
           : lang === 'de'
-            ? 'Pack 6 wird nur dann zur Kompletten Zone, wenn du alle 6 Guides aus demselben Gebiet auswählst.'
-            : 'Pack 6 becomes Complete Area only when you choose all 6 guides from the same area.'}
+            ? 'Du kannst Pack 6 auch mit Guides aus verschiedenen Gebieten zusammenstellen.'
+            : 'You can build Pack 6 by mixing guides from different areas.'}
       </p>
       <p class="font-body text-ink-subtle text-xs mt-xs max-w-[48ch] mx-auto">
         {lang === 'it'
-          ? 'Tris e Sestina combinano guide di zone diverse. Zona completa include tutte le 6 guide di una sola area.'
+          ? 'Se scegli tutte le 6 guide di una zona, il pack viene mostrato come Intera Zona.'
           : lang === 'de'
-            ? 'Tris und Sestina kombinieren Guides aus verschiedenen Zonen. Komplette Zone umfasst alle 6 Guides eines einzigen Gebiets.'
-            : 'Tris and Sestina combine guides from different areas. Complete area includes all 6 guides from a single zone.'}
+            ? 'Wenn du alle 6 Guides eines Gebiets auswählst, wird das Paket als Komplette Zone angezeigt.'
+            : 'If you choose all 6 guides from one area, the pack is shown as Complete Area.'}
       </p>
     </div>
 
@@ -451,10 +451,10 @@ const ZONE_ORDER = [
 
       upsell.textContent = zoneState.isSameZoneComplete
         ? (it
-          ? 'Hai selezionato tutte e 6 le guide della stessa zona.'
+          ? 'Hai selezionato l’intera zona.'
           : de
-            ? 'Du hast alle 6 Guides aus demselben Gebiet ausgewählt.'
-            : 'You selected all 6 guides from the same area.')
+            ? 'Du hast die komplette Zone ausgewählt.'
+            : 'You selected the complete area.')
         : (it
           ? 'Pack 6 applicato su una selezione mista.'
           : de
