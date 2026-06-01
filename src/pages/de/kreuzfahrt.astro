@@ -337,6 +337,7 @@ import StartMap from '../../components/StartMap.astro';
 </Layout>
 
 <script>
+  import { submitCheckoutRedirect } from '../../lib/checkout-client';
   const playBtn = document.getElementById('play-trailer-btn') as HTMLButtonElement | null;
   const audio = document.getElementById('trailer-audio') as HTMLAudioElement | null;
   if (playBtn && audio) {
@@ -380,15 +381,7 @@ import StartMap from '../../components/StartMap.astro';
       const orig = btn.textContent;
       btn.textContent = 'Lädt…';
       try {
-        const res = await fetch('/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product, lang }),
-        });
-        if (!res.ok) throw new Error('checkout error');
-        const { url } = await res.json() as { url: string };
-        if (!url) throw new Error('no url');
-        window.location.href = url;
+        submitCheckoutRedirect({ product: 'crociera', lang });
       } catch {
         btn.disabled = false;
         btn.textContent = orig;

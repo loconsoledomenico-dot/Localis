@@ -153,6 +153,8 @@ const isTris = product === 'tris';
 </article>
 
 <script>
+  import { submitCheckoutRedirect } from '../lib/checkout-client';
+
   document.querySelectorAll<HTMLButtonElement>('.checkout-btn').forEach((btn) => {
     btn.addEventListener('click', async (e) => {
       e.preventDefault();
@@ -190,27 +192,12 @@ const isTris = product === 'tris';
       }
 
       try {
-        const res = await fetch('/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(bodyPayload),
-        });
-
-        if (!res.ok) {
-          throw new Error(`Checkout API returned ${res.status}`);
-        }
-
-        const data = await res.json();
-        if (!data.url) {
-          throw new Error('No checkout URL returned');
-        }
-
         if (typeof window.localisTrack === 'function') {
           window.localisTrack('checkout_started', { product, guide: guideSlug ?? product, lang });
         } else if (typeof window.plausible === 'function') {
           window.plausible('Checkout Started', { props: { product, guideSlug: guideSlug ?? product, lang } });
         }
-        window.location.assign(data.url);
+        submitCheckoutRedirect(bodyPayload as import('../lib/checkout-client').CheckoutRedirectPayload);
       } catch (err) {
         console.error('[checkout]', err);
         btn.disabled = false;

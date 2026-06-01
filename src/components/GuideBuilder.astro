@@ -351,6 +351,8 @@ const ZONE_ORDER = [
 </style>
 
 <script>
+  import { submitCheckoutRedirect } from '../lib/checkout-client';
+
   const SINGLE_CENTS = 499;
   const PACK_3_CENTS = 1199;
   const PACK_6_CENTS = 1999;
@@ -626,19 +628,6 @@ const ZONE_ORDER = [
     btn.textContent = it ? 'Apertura pagamento...' : de ? 'Zahlung wird geöffnet...' : 'Opening checkout...';
 
     try {
-      const bodyPayload: Record<string, unknown> = { product, lang, selectedSlugs: slugsArray };
-      if (product === 'single') bodyPayload.guideSlug = slugsArray[0];
-
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(bodyPayload),
-      });
-
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json() as { url?: string };
-      if (!data.url) throw new Error('No checkout URL');
-
       if (typeof (window as unknown as { localisTrack?: Function }).localisTrack === 'function') {
         (window as unknown as { localisTrack: Function }).localisTrack('checkout_started', {
           product,
@@ -647,7 +636,12 @@ const ZONE_ORDER = [
           lang,
         });
       }
-      window.location.assign(data.url);
+      submitCheckoutRedirect({
+        product,
+        lang,
+        guideSlug: product === 'single' ? slugsArray[0] : undefined,
+        selectedSlugs: slugsArray,
+      });
     } catch (err) {
       console.error('[builder]', err);
       btn.disabled = false;

@@ -54,6 +54,8 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     return jsonError(403, 'Forbidden origin');
   }
 
+  const redirectMode = url.searchParams.get('redirect') === '1';
+
   let body: {
     product?: string;
     selectedSlugs?: string[];
@@ -61,16 +63,20 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     lang?: string;
   };
   try {
-    body = await request.json();
+    body = await parseCheckoutRequest(request);
   } catch {
-    return jsonError(400, 'Invalid JSON body');
+    return redirectMode
+      ? redirectError(url.origin, '/guide?checkoutError=1')
+      : jsonError(400, 'Invalid checkout payload');
   }
 
   const product = body.product as ProductSlug | undefined;
   const lang = normalizeLang(body.lang);
 
   if (!product || !VALID_PRODUCTS.has(product)) {
-    return jsonError(400, 'Missing or invalid product');
+    return redirectMode
+      ? redirectError(url.origin, fallbackCheckoutErrorPath(lang, product, body.guideSlug))
+      : jsonError(400, 'Missing or invalid product');
   }
 
   let guide_slugs: string[];
@@ -79,7 +85,11 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     guide_slugs = fixedSlugs;
   } else if (product === 'single') {
     const slug = body.guideSlug ?? body.selectedSlugs?.[0];
-    if (!slug) return jsonError(400, 'single requires guideSlug');
+    if (!slug) {
+      return redirectMode
+        ? redirectError(url.origin, fallbackCheckoutErrorPath(lang, product, body.guideSlug))
+        : jsonError(400, 'single requires guideSlug');
+    }
     guide_slugs = [slug];
   } else {
     guide_slugs = body.selectedSlugs ?? [];
@@ -88,7 +98,9 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   try {
     validateSelectedSlugs(product, guide_slugs);
   } catch (err) {
-    return jsonError(400, err instanceof Error ? err.message : 'Invalid slugs');
+    return redirectMode
+      ? redirectError(url.origin, fallbackCheckoutErrorPath(lang, product, guide_slugs[0]))
+      : jsonError(400, err instanceof Error ? err.message : 'Invalid slugs');
   }
 
   const partner_id_raw = cookies.get('lg_partner')?.value || null;
@@ -116,7 +128,9 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     try {
       priceId = getStripePrice(product as 'single' | 'crociera');
     } catch {
-      return jsonError(400, `Stripe price not configured for ${product}`);
+      return redirectMode
+        ? redirectError(url.origin, fallbackCheckoutErrorPath(lang, product, guide_slugs[0]))
+        : jsonError(400, `Stripe price not configured for ${product}`);
     }
     Object.assign(lineItem, { price: priceId, quantity: 1 });
   } else {
@@ -165,15 +179,55 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   try {
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create(sessionParams as Stripe.Checkout.SessionCreateParams);
+    if (redirectMode) {
+      if (!session.url) {
+        return redirectError(url.origin, fallbackCheckoutErrorPath(lang, product, guide_slugs[0]));
+      }
+      return Response.redirect(session.url, 303);
+    }
     return new Response(JSON.stringify({ url: session.url }), {
       headers: jsonHeaders(),
     });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'unknown error';
     console.error('[checkout]', msg);
-    return jsonError(500, 'Checkout creation failed');
+    return redirectMode
+      ? redirectError(url.origin, fallbackCheckoutErrorPath(lang, product, guide_slugs[0]))
+      : jsonError(500, 'Checkout creation failed');
   }
 };
+
+async function parseCheckoutRequest(request: Request): Promise<{
+  product?: string;
+  selectedSlugs?: string[];
+  guideSlug?: string;
+  lang?: string;
+}> {
+  const contentType = request.headers.get('content-type') ?? '';
+  if (contentType.includes('application/json')) {
+    return await request.json();
+  }
+
+  if (
+    contentType.includes('application/x-www-form-urlencoded') ||
+    contentType.includes('multipart/form-data')
+  ) {
+    const form = await request.formData();
+    return {
+      product: readFormValue(form, 'product'),
+      guideSlug: readFormValue(form, 'guideSlug'),
+      lang: readFormValue(form, 'lang'),
+      selectedSlugs: form.getAll('selectedSlugs').map(String).filter(Boolean),
+    };
+  }
+
+  throw new Error('Unsupported content type');
+}
+
+function readFormValue(form: FormData, key: string): string | undefined {
+  const value = form.get(key);
+  return typeof value === 'string' && value.length > 0 ? value : undefined;
+}
 
 function cancelPathFor(lang: Lang, product: ProductSlug, firstGuideSlug: string): string {
   if (product === 'custom' || product === 'tris' || product === 'sestina' || product === 'puglia-completa') {
@@ -188,6 +242,31 @@ function cancelPathFor(lang: Lang, product: ProductSlug, firstGuideSlug: string)
 
   const prefix = lang === 'en' ? '/en' : '';
   return `${prefix}/guide/${firstGuideSlug}?cancelled=1`;
+}
+
+function fallbackCheckoutErrorPath(
+  lang: Lang,
+  product: ProductSlug | undefined,
+  firstGuideSlug?: string,
+): string {
+  const basePath = product
+    ? cancelPathFor(lang, product, firstGuideSlug || 'bari-vecchia')
+    : lang === 'de'
+      ? '/de/guide'
+      : lang === 'en'
+        ? '/en/guide'
+        : '/guide';
+
+  return appendCheckoutError(basePath);
+}
+
+function appendCheckoutError(path: string): string {
+  const divider = path.includes('?') ? '&' : '?';
+  return `${path}${divider}checkoutError=1`;
+}
+
+function redirectError(origin: string, path: string): Response {
+  return Response.redirect(new URL(path, origin), 303);
 }
 
 function jsonError(status: number, message: string): Response {
