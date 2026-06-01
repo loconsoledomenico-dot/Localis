@@ -31,8 +31,8 @@ import StartMap from '../../components/StartMap.astro';
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]" style="color:oklch(12% 0.005 240)">
         You've docked in Bari.<br />You have 4 hours.<br />Make them count.
       </h1>
-      <p class="font-body text-base sm:text-lg leading-relaxed mt-md max-w-[52ch]" style="color:oklch(22% 0.008 240 / 0.88)">
-        Two audio guides built for people with little time who want to see the real old town. No app, no bookings, no guide following you around.
+      <p class="font-body text-base sm:text-lg leading-relaxed mt-md max-w-[54ch]" style="color:oklch(22% 0.008 240 / 0.88)">
+        Two audio guides built for travellers with only a few hours ashore: start on foot from the cruise terminal, cross Old Bari, and still leave you enough buffer to get back on board without stress.
       </p>
       <div class="flex flex-col sm:flex-row gap-sm mt-lg">
         <button
@@ -52,6 +52,11 @@ import StartMap from '../../components/StartMap.astro';
           Listen 60 seconds
         </button>
       </div>
+      <ul class="mt-md flex flex-col gap-xs text-sm text-ink max-w-[48ch] list-none p-0 m-0">
+        <li>2 short audio guides, chosen for a 4 to 5 hour stop ashore.</li>
+        <li>Simple route: cruise terminal, old town, and back to the pier on foot.</li>
+        <li>Optimised timing: listen, walk, and return with time to spare.</li>
+      </ul>
       <audio id="trailer-audio" src="/audio/trailers/bari-vecchia-en.mp3" class="hidden" preload="none"></audio>
     </div>
   </section>

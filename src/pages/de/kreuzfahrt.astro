@@ -31,8 +31,11 @@ import StartMap from '../../components/StartMap.astro';
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]" style="color:oklch(12% 0.005 240)">
         Sie sind in Bari angelegt.<br />Sie haben 4 Stunden.<br />Nutzen Sie sie.
       </h1>
-      <p class="font-body text-base sm:text-lg leading-relaxed mt-md max-w-[52ch]" style="color:oklch(22% 0.008 240 / 0.88)">
+      <p class="font-body text-base sm:text-lg leading-relaxed mt-md max-w-[54ch]" style="color:oklch(22% 0.008 240 / 0.88)">
         Zwei Audioerzählungen für alle, die wenig Zeit haben und Bari trotzdem besser verstehen wollen. Keine App, keine Reservierung, kein Guide, der neben Ihnen herläuft.
+      </p>
+      <p class="font-body text-sm sm:text-base leading-relaxed mt-sm max-w-[54ch]" style="color:oklch(22% 0.008 240 / 0.82)">
+        Speziell fuer 4 bis 5 Stunden an Land: Start zu Fuss am Kreuzfahrtterminal, Altstadt ohne Umwege und genug Puffer fuer den Rueckweg zum Schiff.
       </p>
       <div class="flex flex-col sm:flex-row gap-sm mt-lg">
         <button
@@ -52,6 +55,11 @@ import StartMap from '../../components/StartMap.astro';
           60 Sekunden anhören
         </button>
       </div>
+      <ul class="mt-md flex flex-col gap-xs text-sm text-ink max-w-[48ch] list-none p-0 m-0">
+        <li>2 kurze Audioguides, zugeschnitten auf 4 bis 5 Stunden an Land.</li>
+        <li>Einfache Strecke: Kreuzfahrtterminal, Altstadt und zu Fuss zurueck zum Kai.</li>
+        <li>Optimiertes Timing: hoeren, gehen und mit Reserve wieder an Bord.</li>
+      </ul>
         <audio id="trailer-audio" src="/audio/trailers/bari-vecchia-en.mp3" class="hidden" preload="none"></audio>
     </div>
   </section>
