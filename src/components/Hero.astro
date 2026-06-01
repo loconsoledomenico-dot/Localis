@@ -30,6 +30,12 @@ const lede2 = lang === 'de'
 const ctaPrimary = lang === 'de' ? 'Guide auswählen' : lang === 'it' ? 'Scegli la tua audioguida' : 'Choose your audio guide';
 const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
 
+const quickPrice = lang === 'de' ? 'Ab 4,99 EUR' : lang === 'it' ? 'Da 4,99 EUR' : 'From EUR 4.99';
+const quickBundle = lang === 'de' ? 'Pacchetti da 3, 6 o tutte le 18 guide' : lang === 'it' ? 'Pack da 3, 6 o tutte e 18 le guide' : 'Bundles of 3, 6, or all 18 guides';
+const quickAccess = lang === 'de' ? 'Link sofort. Offline nach dem ersten Play.' : lang === 'it' ? 'Link immediato. Offline dopo il primo play.' : 'Instant link. Offline after the first play.';
+const quickPricingLabel = lang === 'de' ? 'Preise ansehen' : lang === 'it' ? 'Vedi prezzi' : 'See pricing';
+const quickHowLabel = lang === 'de' ? 'Come funziona' : lang === 'it' ? 'Come funziona' : 'How it works';
+
 const altText = lang === 'de'
   ? 'Eine junge Frau mit Kopfhörern auf Baris Lungomare bei Sonnenuntergang'
   : lang === 'it'
@@ -126,6 +132,28 @@ const altText = lang === 'de'
         Fuer Reisende mit nur 4 bis 5 Stunden an Land: 2 kurze Audioguides, zu Fuss ab dem Kreuzfahrtterminal.
       </p>
     )}
+
+    <div class="hero-offer mt-lg" aria-label={lang === 'de' ? 'Schnellueberblick zum Angebot' : lang === 'it' ? 'Panoramica rapida dell offerta' : 'Quick offer summary'}>
+      <div class="hero-offer-grid">
+        <p class="hero-offer-item">
+          <span class="hero-offer-kicker">{lang === 'de' ? 'Catalogo' : lang === 'it' ? 'Catalogo' : 'Catalog'}</span>
+          <span class="hero-offer-value">18 guide</span>
+        </p>
+        <p class="hero-offer-item">
+          <span class="hero-offer-kicker">{lang === 'de' ? 'Prezzo' : lang === 'it' ? 'Prezzo' : 'Pricing'}</span>
+          <span class="hero-offer-value">{quickPrice}</span>
+        </p>
+        <p class="hero-offer-item">
+          <span class="hero-offer-kicker">{lang === 'de' ? 'Accesso' : lang === 'it' ? 'Accesso' : 'Access'}</span>
+          <span class="hero-offer-value">{quickAccess}</span>
+        </p>
+      </div>
+      <p class="hero-offer-summary">{quickBundle}</p>
+      <div class="hero-offer-links">
+        <a href="#prezzi" class="hero-offer-link">{quickPricingLabel}</a>
+        <a href="#come-funziona" class="hero-offer-link">{quickHowLabel}</a>
+      </div>
+    </div>
 
   </div>
 
@@ -253,6 +281,66 @@ const altText = lang === 'de'
   .hero-lede     { animation-delay: 0.75s; }
   :global(.hero-sample) { animation-delay: 0.9s; }
   .hero-actions  { animation-delay: 1.05s; }
+  .hero-offer {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.15s forwards;
+    background: oklch(from var(--color-surface) l c h / 0.72);
+    border: 1px solid oklch(from var(--color-border) l c h / 0.82);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    max-width: 42rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 36px -26px oklch(20% 0.025 240 / 0.35);
+  }
+  .hero-offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-sm);
+  }
+  .hero-offer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0;
+  }
+  .hero-offer-kicker {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+  }
+  .hero-offer-value {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+  .hero-offer-summary {
+    margin-top: var(--spacing-sm);
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--color-ink-muted);
+  }
+  .hero-offer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+  }
+  .hero-offer-link {
+    color: var(--color-ink);
+    font-size: 0.83rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid oklch(from var(--color-ink) l c h / 0.28);
+    padding-bottom: 2px;
+  }
+  .hero-offer-link:hover {
+    color: var(--color-link-pressed);
+    border-bottom-color: oklch(from var(--color-link-pressed) l c h / 0.4);
+  }
 
   @keyframes ruleDraw { to { transform: scaleX(1); } }
   @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
@@ -278,6 +366,16 @@ const altText = lang === 'de'
       margin-top: var(--spacing-xl);
       gap: var(--spacing-md);
     }
+    .hero-offer {
+      margin-top: var(--spacing-xl);
+      animation-delay: 0.65s;
+    }
+    .hero-offer-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-offer-links {
+      gap: var(--spacing-sm);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -286,7 +384,8 @@ const altText = lang === 'de'
     .hero-h1 > span,
     .hero-lede,
     :global(.hero-sample),
-    .hero-actions {
+    .hero-actions,
+    .hero-offer {
       animation: none;
       transform: none;
       opacity: 1;

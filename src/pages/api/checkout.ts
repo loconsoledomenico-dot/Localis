@@ -17,12 +17,13 @@ import { hasAllowedOrigin } from '../../lib/request-security';
 import type Stripe from 'stripe';
 
 const VALID_PRODUCTS = new Set<ProductSlug>([
-  'single', 'tris', 'sestina', 'puglia-completa',
+  'single', 'custom', 'tris', 'sestina', 'puglia-completa',
   'bari-completa', 'valle-completa', 'gargano-completa', 'crociera',
 ]);
 
 const PRODUCT_DISPLAY_NAME: Record<ProductSlug, string> = {
   single:              'Guida Localis',
+  custom:              'Localis - Selezione personalizzata',
   tris:                'Localis - Pack 3 Guide',
   sestina:             'Localis - Pack 6 Guide',
   'puglia-completa':   'Puglia Completa — 18 guide',
@@ -105,7 +106,9 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     }
   }
 
-  const totalCents = PRODUCT_PRICE_CENTS[product];
+  const totalCents = product === 'custom'
+    ? PRODUCT_PRICE_CENTS.single * guide_slugs.length
+    : PRODUCT_PRICE_CENTS[product];
 
   const lineItem: Record<string, unknown> = {};
   if (STORED_PRICE_PRODUCTS.has(product)) {
@@ -173,7 +176,7 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
 };
 
 function cancelPathFor(lang: Lang, product: ProductSlug, firstGuideSlug: string): string {
-  if (product === 'tris' || product === 'sestina' || product === 'puglia-completa') {
+  if (product === 'custom' || product === 'tris' || product === 'sestina' || product === 'puglia-completa') {
     if (lang === 'de') return '/de/guide#builder';
     if (lang === 'en') return '/en/guide#builder';
     return '/guide#builder';

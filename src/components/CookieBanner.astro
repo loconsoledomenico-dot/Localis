@@ -83,6 +83,13 @@ const policyHref = localizedHref('/cookie-policy', lang);
 
     function hideBanner() {
       banner?.classList.add('hidden');
+      document.documentElement.style.setProperty('--cookie-banner-height', '0px');
+    }
+
+    function syncBannerOffset() {
+      const visible = banner && !banner.classList.contains('hidden');
+      const height = visible ? `${banner.getBoundingClientRect().height}px` : '0px';
+      document.documentElement.style.setProperty('--cookie-banner-height', height);
     }
 
     function resetConsentFromUrl() {
@@ -109,6 +116,7 @@ const policyHref = localizedHref('/cookie-policy', lang);
     // Show banner only if no consent stored yet, or after an explicit reset URL.
     if (consentWasReset || !getConsent()) {
       banner?.classList.remove('hidden');
+      syncBannerOffset();
     } else if (getConsent()?.analytics) {
       loadGA4();
     }
@@ -127,6 +135,9 @@ const policyHref = localizedHref('/cookie-policy', lang);
     // "Gestisci cookie" / "Manage cookies" button in footer re-opens the banner.
     document.getElementById('cookie-reopen')?.addEventListener('click', () => {
       banner?.classList.remove('hidden');
+      syncBannerOffset();
     });
+
+    window.addEventListener('resize', syncBannerOffset);
   })();
 </script>

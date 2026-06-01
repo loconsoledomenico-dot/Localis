@@ -8,6 +8,7 @@ import {
   PRODUCT_PRICE_CENTS,
   getTierForCount,
   getNextTier,
+  getCheckoutProductForSelection,
   getSelectionZoneState,
   getPublicBundleLabel,
   validateSelectedSlugs,
@@ -44,6 +45,7 @@ describe('PRODUCT_PRICE_CENTS', () => {
   it('puglia-completa is 3999', () => expect(PRODUCT_PRICE_CENTS['puglia-completa']).toBe(3999));
   it('bari-completa is 1999', () => expect(PRODUCT_PRICE_CENTS['bari-completa']).toBe(1999));
   it('crociera is 799', () => expect(PRODUCT_PRICE_CENTS.crociera).toBe(799));
+  it('custom is priced as a per-guide sum', () => expect(PRODUCT_PRICE_CENTS.custom).toBe(499));
 });
 
 describe('getTierForCount', () => {
@@ -104,6 +106,41 @@ describe('getPublicBundleLabel', () => {
   it('maps valle-completa to Pack 6 Guide (Intera Zona) in Italian', () => {
     expect(getPublicBundleLabel('valle-completa', 'it')).toBe('Pack 6 Guide (Intera Zona)');
   });
+
+  it('maps custom to Selezione personalizzata in Italian', () => {
+    expect(getPublicBundleLabel('custom', 'it')).toBe('Selezione personalizzata');
+  });
+});
+
+describe('getCheckoutProductForSelection', () => {
+  it('returns single for one guide', () => {
+    expect(getCheckoutProductForSelection(['bari-vecchia'])).toBe('single');
+  });
+
+  it('returns tris for 3 guides', () => {
+    expect(getCheckoutProductForSelection(['bari-vecchia', 'san-nicola', 'alberobello'])).toBe('tris');
+  });
+
+  it('returns sestina for 6 mixed guides', () => {
+    expect(getCheckoutProductForSelection([
+      'bari-vecchia',
+      'san-nicola',
+      'alberobello',
+      'locorotondo',
+      'gargano-vieste',
+      'gargano-tremiti',
+    ])).toBe('sestina');
+  });
+
+  it('returns custom for counts outside the pack thresholds', () => {
+    expect(getCheckoutProductForSelection(['bari-vecchia', 'san-nicola'])).toBe('custom');
+    expect(getCheckoutProductForSelection([
+      'bari-vecchia',
+      'san-nicola',
+      'alberobello',
+      'locorotondo',
+    ])).toBe('custom');
+  });
 });
 
 describe('validateSelectedSlugs', () => {
@@ -163,6 +200,14 @@ describe('validateSelectedSlugs', () => {
 
   it('crociera + one slug throws', () => {
     expect(() => validateSelectedSlugs('crociera', ['bari-vecchia'])).toThrow('crociera requires exactly 2');
+  });
+
+  it('custom + 2 valid slugs passes', () => {
+    expect(() => validateSelectedSlugs('custom', ['bari-vecchia', 'san-nicola'])).not.toThrow();
+  });
+
+  it('custom + one slug throws', () => {
+    expect(() => validateSelectedSlugs('custom', ['bari-vecchia'])).toThrow('custom requires at least 2');
   });
 });
 

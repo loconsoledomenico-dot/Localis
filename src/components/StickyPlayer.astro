@@ -78,7 +78,7 @@ const eyebrowLabel = lang === 'it' ? 'In ascolto · Localis' : lang === 'de' ? '
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: var(--cookie-banner-height, 0px);
     z-index: 60;
     background: oklch(96% 0.012 75 / 0.94);
     -webkit-backdrop-filter: blur(10px) saturate(1.05);

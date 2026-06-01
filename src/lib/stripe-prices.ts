@@ -2,6 +2,7 @@ import prices from '../data/stripe-prices.json';
 
 export type ProductSlug =
   | 'single'
+  | 'custom'
   | 'tris'
   | 'sestina'
   | 'puglia-completa'
@@ -63,6 +64,7 @@ export const CROCIERA_GUIDES: readonly string[] = [
 
 export const PRODUCT_PRICE_CENTS: Record<ProductSlug, number> = {
   single:              499,
+  custom:              499,
   tris:               1199,
   sestina:            1999,
   'puglia-completa':  3999,
@@ -89,6 +91,11 @@ export const FREE_CHOICE_TIERS: readonly Tier[] = [
  */
 export function getTierForCount(count: number): Tier | null {
   return FREE_CHOICE_TIERS.find((t) => t.count === count) ?? null;
+}
+
+export function getCheckoutProductForSelection(selectedSlugs: string[]): ProductSlug {
+  if (selectedSlugs.length <= 1) return 'single';
+  return getTierForCount(selectedSlugs.length)?.product ?? 'custom';
 }
 
 /**
@@ -133,6 +140,12 @@ export function getPublicBundleLabel(
   switch (product) {
     case 'tris':
       return lang === 'en' ? 'Pack 3 Guides' : lang === 'de' ? '3er-Paket' : 'Pack 3 Guide';
+    case 'custom':
+      return lang === 'en'
+        ? 'Custom selection'
+        : lang === 'de'
+          ? 'Individuelle Auswahl'
+          : 'Selezione personalizzata';
     case 'sestina':
       return lang === 'en' ? 'Pack 6 Guides' : lang === 'de' ? '6er-Paket' : 'Pack 6 Guide';
     case 'bari-completa':
@@ -203,6 +216,9 @@ export function validateSelectedSlugs(
   }
   if (product === 'single' && selectedSlugs.length !== 1) {
     throw new Error(`single requires exactly 1 guide slug`);
+  }
+  if (product === 'custom' && selectedSlugs.length < 2) {
+    throw new Error(`custom requires at least 2 guide slugs`);
   }
   if (product === 'crociera' && selectedSlugs.length !== 2) {
     throw new Error(`crociera requires exactly 2 guide slugs`);

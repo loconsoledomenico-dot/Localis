@@ -429,6 +429,7 @@ const ZONE_ORDER = [
     const n = selected.size;
     const zoneState = getZoneState();
     const nextTier = TIERS.find((tier) => tier.count > n) ?? null;
+    const customTotal = n * SINGLE_CENTS;
 
     countBadge.textContent = String(n);
 
@@ -456,6 +457,22 @@ const ZONE_ORDER = [
       return;
     }
 
+    if (n === 2) {
+      statusText.textContent = `${selectedMessage(n)} · ${fmt(customTotal, lang)}`;
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista ${n} guide · ${fmt(customTotal, lang)}`
+        : de
+          ? `${n} Guides kaufen · ${fmt(customTotal, lang)}`
+          : `Buy ${n} guides · ${fmt(customTotal, lang)}`;
+      upsell.textContent = it
+        ? `Aggiungi 1 guida per attivare Pack 3 · Totale ${fmt(PACK_3_CENTS, lang)}`
+        : de
+          ? `Füge 1 weiteren Guide hinzu, um Pack 3 zu aktivieren · Gesamt ${fmt(PACK_3_CENTS, lang)}`
+          : `Add 1 more guide to unlock Pack 3 · Total ${fmt(PACK_3_CENTS, lang)}`;
+      return;
+    }
+
     if (n === 3) {
       const fullPriceCents = n * SINGLE_CENTS;
       statusText.textContent = it
@@ -474,6 +491,22 @@ const ZONE_ORDER = [
         : de
           ? `Füge 3 weitere Guides hinzu, um Pack 6 zu aktivieren · Gesamt ${fmt(PACK_6_CENTS, lang)}`
           : `Add 3 more guides to unlock Pack 6 · Total ${fmt(PACK_6_CENTS, lang)}`;
+      return;
+    }
+
+    if (n === 4 || n === 5) {
+      statusText.textContent = `${selectedMessage(n)} · ${fmt(customTotal, lang)}`;
+      btn.disabled = false;
+      btn.textContent = it
+        ? `Acquista ${n} guide · ${fmt(customTotal, lang)}`
+        : de
+          ? `${n} Guides kaufen · ${fmt(customTotal, lang)}`
+          : `Buy ${n} guides · ${fmt(customTotal, lang)}`;
+      upsell.textContent = it
+        ? `Aggiungi ${6 - n} ${6 - n === 1 ? 'guida' : 'guide'} per attivare Pack 6 · Totale ${fmt(PACK_6_CENTS, lang)}`
+        : de
+          ? `Füge ${6 - n} weitere${6 - n === 1 ? 'n Guide' : ' Guides'} hinzu, um Pack 6 zu aktivieren · Gesamt ${fmt(PACK_6_CENTS, lang)}`
+          : `Add ${6 - n} more guide${6 - n === 1 ? '' : 's'} to unlock Pack 6 · Total ${fmt(PACK_6_CENTS, lang)}`;
       return;
     }
 
@@ -535,21 +568,25 @@ const ZONE_ORDER = [
       return;
     }
 
-    statusText.textContent = `${selectedMessage(n)} · ${fmt(n * SINGLE_CENTS, lang)}`;
-    btn.disabled = true;
+    statusText.textContent = `${selectedMessage(n)} · ${fmt(customTotal, lang)}`;
+    btn.disabled = false;
 
     if (!nextTier) {
-      btn.textContent = it ? 'Selezione non disponibile' : de ? 'Auswahl nicht verfügbar' : 'Selection not available';
+      btn.textContent = it
+        ? `Acquista ${n} guide · ${fmt(customTotal, lang)}`
+        : de
+          ? `${n} Guides kaufen · ${fmt(customTotal, lang)}`
+          : `Buy ${n} guides · ${fmt(customTotal, lang)}`;
       upsell.textContent = '';
       return;
     }
 
     const toNext = nextTier.count - n;
     btn.textContent = it
-      ? `Aggiungi ${toNext} ${toNext === 1 ? 'guida' : 'guide'} per continuare`
+      ? `Acquista ${n} guide · ${fmt(customTotal, lang)}`
       : de
-        ? `${toNext} weitere${toNext === 1 ? 'n Guide' : ' Guides'} hinzufügen`
-        : `Add ${toNext} more guide${toNext === 1 ? '' : 's'} to continue`;
+        ? `${n} Guides kaufen · ${fmt(customTotal, lang)}`
+        : `Buy ${n} guides · ${fmt(customTotal, lang)}`;
 
     if (nextTier.count === 3) {
       upsell.textContent = it
@@ -581,14 +618,8 @@ const ZONE_ORDER = [
     if (n === 0 || btn.disabled) return;
 
     const slugsArray = [...selected];
-    let product: string;
-    if (n === 1) {
-      product = 'single';
-    } else {
-      const tier = TIERS.find((tier) => tier.count === n);
-      if (!tier) return;
-      product = tier.product;
-    }
+      const tier = TIERS.find((candidate) => candidate.count === n);
+      const product = n === 1 ? 'single' : tier?.product ?? 'custom';
 
     btn.disabled = true;
     const originalText = btn.textContent;
