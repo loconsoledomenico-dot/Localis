@@ -79,7 +79,7 @@ const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale
   <StickyPlayer lang={lang} />
   <CookieBanner lang={lang} />
 
-  <script is:inline>
+  <script is:inline define:vars={{ currentPath, lang }}>
     (function() {
       try {
         const params = new URLSearchParams(window.location.search);
@@ -91,6 +91,17 @@ const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale
           }
           localStorage.setItem('lg_partner', p);
           localStorage.setItem('lg_partner_ts', String(Date.now()));
+
+          const trackKey = `qr_landing_viewed:${p}:${currentPath}:${lang}`;
+          if (!sessionStorage.getItem(trackKey) && typeof window.localisTrack === 'function') {
+            sessionStorage.setItem(trackKey, '1');
+            window.localisTrack('qr_landing_viewed', {
+              partner_id: p,
+              path: currentPath,
+              lang,
+              source: 'partner_qr',
+            });
+          }
         }
 
         const ls = localStorage.getItem('lg_partner');

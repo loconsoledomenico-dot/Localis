@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { formatDuration } from '../lib/format';
 import type { Lang } from '../lib/i18n';
-import { chapterStartSeconds, chapterTitle, guideDurationSeconds } from '../lib/guide-localization';
+import { chapterStartSeconds, chapterTitle, guideDurationSeconds, guideSubtitle, guideTitle } from '../lib/guide-localization';
 
 export interface Props {
   guide: CollectionEntry<'guides'>['data'];
@@ -21,6 +21,7 @@ const labels = {
     forward: 'Avanti 15 secondi',
     speed: 'Velocità',
     chapters: 'Capitoli',
+    progress: 'Avanzamento audio',
     loading: 'Caricamento...',
     offline_ready: 'Disponibile offline ✓',
     offline_caching: 'Salvataggio per offline...',
@@ -34,6 +35,7 @@ const labels = {
     forward: 'Forward 15 seconds',
     speed: 'Speed',
     chapters: 'Chapters',
+    progress: 'Audio progress',
     loading: 'Loading...',
     offline_ready: 'Available offline ✓',
     offline_caching: 'Saving for offline...',
@@ -62,6 +64,9 @@ const labels = {
   data-token={token}
   data-lang={lang}
   data-duration={durationSeconds}
+  data-guide-title={guideTitle(guide, lang)}
+  data-guide-subtitle={guideSubtitle(guide, lang)}
+  data-guide-cover={guide.cover}
   data-offline-ready={labels.offline_ready}
   data-offline-caching={labels.offline_caching}
 >
@@ -166,6 +171,9 @@ const labels = {
     slug: string;
     token: string;
     lang: 'it' | 'en' | 'de';
+    title: string;
+    subtitle: string;
+    cover: string;
     audioUrl?: string;
     startedTracked?: boolean;
     fullPlayedTracked?: boolean;
@@ -215,6 +223,65 @@ const labels = {
     p.iconPause.classList.toggle('hidden', !playing || loading);
     p.iconLoading.classList.toggle('hidden', !loading);
     p.toggle.disabled = loading;
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.playbackState = loading ? 'none' : playing ? 'playing' : 'paused';
+    }
+  }
+
+  function updateMediaSessionPosition(p: Player): void {
+    if (!('mediaSession' in navigator) || typeof navigator.mediaSession.setPositionState !== 'function') return;
+    if (!Number.isFinite(p.audio.duration) || p.audio.duration <= 0) return;
+    try {
+      navigator.mediaSession.setPositionState({
+        duration: p.audio.duration,
+        position: p.audio.currentTime,
+        playbackRate: p.audio.playbackRate || 1,
+      });
+    } catch {
+      // Some browsers expose the API but reject updates.
+    }
+  }
+
+  function syncMediaSession(p: Player): void {
+    if (!('mediaSession' in navigator)) return;
+
+    if (typeof MediaMetadata !== 'undefined') {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: p.title,
+        artist: p.subtitle,
+        album: 'Localis',
+        artwork: [
+          {
+            src: new URL(p.cover, window.location.origin).href,
+          },
+        ],
+      });
+    }
+
+    const bindAction = (action: MediaSessionAction, handler: MediaSessionActionHandler | null): void => {
+      try {
+        navigator.mediaSession.setActionHandler(action, handler);
+      } catch {
+        // Ignore browsers with partial MediaSession support.
+      }
+    };
+
+    bindAction('play', () => {
+      void play(p);
+    });
+    bindAction('pause', () => pause(p));
+    bindAction('seekbackward', (details) => {
+      const skip = details.seekOffset ?? 15;
+      p.audio.currentTime = Math.max(0, p.audio.currentTime - skip);
+      updateMediaSessionPosition(p);
+    });
+    bindAction('seekforward', (details) => {
+      const skip = details.seekOffset ?? 15;
+      p.audio.currentTime = Math.min(p.audio.duration || 0, p.audio.currentTime + skip);
+      updateMediaSessionPosition(p);
+    });
+
+    updateMediaSessionPosition(p);
   }
 
   async function play(p: Player): Promise<void> {
@@ -231,6 +298,7 @@ const labels = {
     }
     try {
       await p.audio.play();
+      syncMediaSession(p);
       setPlayingState(p, true);
       if (!p.startedTracked && typeof window.localisTrack === 'function') {
         p.startedTracked = true;
@@ -280,10 +348,14 @@ const labels = {
       slug: el.dataset.guideSlug!,
       token: el.dataset.token!,
       lang: (el.dataset.lang === 'en' ? 'en' : el.dataset.lang === 'de' ? 'de' : 'it') as 'it' | 'en' | 'de',
+      title: el.dataset.guideTitle || el.dataset.guideSlug || 'Localis',
+      subtitle: el.dataset.guideSubtitle || 'Localis',
+      cover: el.dataset.guideCover || '/og-default.jpg',
     };
 
     p.audio.addEventListener('loadedmetadata', () => {
       p.dur.textContent = fmtTime(p.audio.duration);
+      updateMediaSessionPosition(p);
     });
 
     p.audio.addEventListener('timeupdate', () => {
@@ -291,6 +363,7 @@ const labels = {
       const pct = (p.audio.currentTime / p.audio.duration) * 100;
       p.fill.style.width = `${pct}%`;
       p.cur.textContent = fmtTime(p.audio.currentTime);
+      updateMediaSessionPosition(p);
       if (pct > 80 && !p.fullPlayedTracked) {
         p.fullPlayedTracked = true;
         if (typeof window.localisTrack === 'function') {
@@ -305,7 +378,10 @@ const labels = {
       }
     });
 
-    p.audio.addEventListener('ended', () => setPlayingState(p, false));
+    p.audio.addEventListener('ended', () => {
+      updateMediaSessionPosition(p);
+      setPlayingState(p, false);
+    });
     p.audio.addEventListener('canplaythrough', () => {
       hideStatus(p);
       showStatus(p, p.el.dataset.offlineReady || '');
@@ -328,10 +404,12 @@ const labels = {
 
     p.rewind.addEventListener('click', () => {
       p.audio.currentTime = Math.max(0, p.audio.currentTime - 15);
+      updateMediaSessionPosition(p);
     });
 
     p.forward.addEventListener('click', () => {
       p.audio.currentTime = Math.min(p.audio.duration || 0, p.audio.currentTime + 15);
+      updateMediaSessionPosition(p);
     });
 
     p.speed.addEventListener('click', () => {
@@ -347,15 +425,18 @@ const labels = {
       if (!p.audio.duration) return;
       const r = p.progress.getBoundingClientRect();
       p.audio.currentTime = ((e.clientX - r.left) / r.width) * p.audio.duration;
+      updateMediaSessionPosition(p);
     });
 
     p.progress.addEventListener('keydown', (e) => {
       if (!p.audio.duration) return;
       if (e.key === 'ArrowRight') {
         p.audio.currentTime = Math.min(p.audio.duration, p.audio.currentTime + 15);
+        updateMediaSessionPosition(p);
         e.preventDefault();
       } else if (e.key === 'ArrowLeft') {
         p.audio.currentTime = Math.max(0, p.audio.currentTime - 15);
+        updateMediaSessionPosition(p);
         e.preventDefault();
       }
     });
@@ -373,6 +454,7 @@ const labels = {
           });
         } else {
           p.audio.currentTime = time;
+          updateMediaSessionPosition(p);
         }
       });
     });
