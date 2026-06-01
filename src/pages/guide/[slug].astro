@@ -9,6 +9,7 @@ import NarratorCard from '../../components/NarratorCard.astro';
 import StructuredData from '../../components/StructuredData.astro';
 import GuideUseCase from '../../components/GuideUseCase.astro';
 import GuideFactsCard from '../../components/GuideFactsCard.astro';
+import GuideSeoEditorial from '../../components/GuideSeoEditorial.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../lib/format';
 import { guideAccessibility, guideNeeds, guideRouteMode, guideStopsCount } from '../../lib/guide-localization';
@@ -125,6 +126,8 @@ ld.push(productLD({
         <h2 class="font-display text-3xl text-ink mb-md">Capitoli</h2>
         <ChapterList chapters={data.chapters} lang="it" />
       </section>
+
+      <GuideSeoEditorial slug={data.slug} lang="it" />
 
       {data.coords_start && (
         <StartMap lat={data.coords_start.lat} lng={data.coords_start.lng} lang="it" />

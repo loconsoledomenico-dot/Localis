@@ -1,0 +1,164 @@
+---
+type Lang = 'it' | 'en' | 'de';
+
+interface Props {
+  slug: string;
+  lang: Lang;
+}
+
+const { slug, lang } = Astro.props;
+
+const copy: Record<string, Record<Lang, {
+  title: string;
+  subtitle: string;
+  sections: { heading: string; paragraphs: string[] }[];
+}>> = {
+  'bari-vecchia': {
+    it: {
+      title: 'Capire Bari Vecchia: L’itinerario audio oltre le trappole turistiche',
+      subtitle: 'Le guide tradizionali vi dicono cosa state guardando. Localis vi spiega perché esiste.',
+      sections: [
+        {
+          heading: 'Vedere Bari Vecchia è facile. Capirla è un’altra cosa.',
+          paragraphs: [
+            "Ogni anno migliaia di viaggiatori attraversano l'Arco del Basso, fotografano le donne che preparano le orecchiette sulla spianatoia di legno e proseguono verso la Basilica di San Nicola. Ma senza il giusto contesto, vedrete solo immagini da cartolina.",
+            'Bari Vecchia non è un museo a cielo aperto pensato per Instagram; è un ecosistema urbano millenario che ha sviluppato regole, architetture e rituali unici per difendersi, sopravvivere e commerciare. Perché le strade del centro storico sono un labirinto asimmetrico? Perché le corti nascoste collegano tra loro famiglie diverse? Questa guida audio non vi elencherà semplicemente le date di costruzione dei monumenti, ma vi fornirà la chiave di lettura per decodificare la realtà antropologica e sociale che state calpestando.',
+          ],
+        },
+        {
+          heading: 'Un viaggio sonoro nel cuore della cultura barese',
+          paragraphs: [
+            "Cosa rende questo itinerario a piedi diverso da qualsiasi enciclopedia online? Il fatto che non troverete sintesi superficiali. Esplorerete la complessità del culto nicolaiano, un legame viscerale che unisce l'Oriente ortodosso e l'Occidente cattolico sotto le stesse volte di pietra calcarea. Scoprirete l'origine sociologica dei vicoli, dove lo spazio pubblico della strada si fonde senza soluzione di continuità con lo spazio privato delle case, trasformando ogni sottano in un palcoscenico di vita vissuta.",
+            'Il nostro percorso guidato vi accompagna passo dopo passo, a piedi e con i vostri tempi, permettendovi di isolarvi dal caos turistico e di connettervi esclusivamente con la storia autentica della città, sia che stiate visitando Bari per un weekend, sia che abbiate solo poche ore a disposizione prima di ripartire dal porto crociere.',
+          ],
+        },
+        {
+          heading: 'Audioguide nate dalla ricerca e raccontate da chi ci è nato',
+          paragraphs: [
+            "Il posizionamento di Localis si basa su una promessa rigida: rifiutiamo lo storytelling artificiale e le banalizzazioni commerciali. Questo itinerario audio è il risultato di mesi di ricerche d'archivio e consultazione di fonti storiche verificate, tradotte in una narrazione fluida da autori e ricercatori locali.",
+            "Le voci che ascolterete sono radicate nel territorio della Puglia. Conoscono i segreti che i motori di ricerca non possono catalogare e vi guideranno attraverso i dettagli invisibili della pietra, i significati nascosti dietro i rituali gastronomici e le leggende medievali che ancora oggi definiscono l'identità di Bari. Visitate meno, comprendete di più.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: 'Understand Old Bari: the audio route beyond tourist traps',
+      subtitle: 'Traditional guides tell you what you are looking at. Localis explains why it exists.',
+      sections: [
+        {
+          heading: 'Seeing Old Bari is easy. Understanding it is something else.',
+          paragraphs: [
+            "Every year thousands of travellers pass through Arco del Basso, photograph the women making orecchiette on wooden boards, and continue toward the Basilica of San Nicola. Without the right context, though, you only see postcard images.",
+            'Old Bari is not an open-air museum designed for Instagram. It is a thousand-year-old urban organism that developed its own rules, architecture, and rituals in order to defend itself, survive, and trade. Why are the streets of the historic center such an asymmetric maze? Why do hidden courtyards connect different families to one another? This audio guide does not simply list construction dates for monuments. It gives you the interpretive key to decode the anthropological and social reality under your feet.',
+          ],
+        },
+        {
+          heading: 'An audio journey into the heart of Bari’s culture',
+          paragraphs: [
+            "What makes this walking route different from any online encyclopedia? You will not find shallow summaries here. You will enter the complexity of the cult of San Nicola, a visceral bond that unites the Orthodox East and the Catholic West under the same limestone vaults. You will discover the social logic of the alleys, where the public space of the street blends seamlessly into the private space of the home, turning every ground-floor room into a stage for lived life.",
+            'Our route guides you step by step, on foot and at your own pace, allowing you to shut out tourist noise and connect only with the city’s authentic history, whether you are visiting Bari for a weekend or only have a few hours before heading back to the cruise port.',
+          ],
+        },
+        {
+          heading: 'Audio guides built from research and told by people born here',
+          paragraphs: [
+            'Localis is built on a strict promise: we reject artificial storytelling and commercial simplifications. This audio route is the result of months of archive research and verified historical sources, translated into a fluid narrative by local authors and researchers.',
+            'The voices you hear are rooted in Puglia. They know the secrets search engines cannot catalogue, and they guide you through the invisible details in the stone, the hidden meanings behind food rituals, and the medieval legends that still define Bari’s identity today. Visit less. Understand more.',
+          ],
+        },
+      ],
+    },
+    de: {
+      title: 'Bari Vecchia verstehen: die Audio-Route jenseits der Touristenfallen',
+      subtitle: 'Klassische Reiseführer sagen Ihnen, was Sie sehen. Localis erklärt, warum es existiert.',
+      sections: [
+        {
+          heading: 'Bari Vecchia zu sehen ist leicht. Es zu verstehen ist etwas anderes.',
+          paragraphs: [
+            'Jedes Jahr gehen Tausende Reisende durch den Arco del Basso, fotografieren die Frauen, die Orecchiette auf Holzbrettchen formen, und ziehen weiter zur Basilika San Nicola. Ohne den richtigen Kontext sehen Sie jedoch nur Postkartenmotive.',
+            'Bari Vecchia ist kein Freilichtmuseum für Instagram. Es ist ein jahrtausendealtes städtisches Gefüge, das eigene Regeln, Architekturen und Rituale entwickelt hat, um sich zu verteidigen, zu überleben und Handel zu treiben. Warum sind die Gassen der Altstadt ein asymmetrisches Labyrinth? Warum verbinden versteckte Höfe unterschiedliche Familien miteinander? Dieser Audioguide zählt nicht einfach Baudaten von Monumenten auf. Er liefert den Schlüssel, um die soziale und anthropologische Wirklichkeit unter Ihren Füßen zu entschlüsseln.',
+          ],
+        },
+        {
+          heading: 'Eine akustische Reise ins Herz der Kultur von Bari',
+          paragraphs: [
+            'Was unterscheidet diese Route zu Fuß von jeder Online-Enzyklopädie? Hier finden Sie keine oberflächlichen Zusammenfassungen. Sie tauchen ein in die Komplexität des Nikolaus-Kults, in jene tiefe Verbindung, die den orthodoxen Osten und den katholischen Westen unter denselben Kalksteingewölben zusammenführt. Sie entdecken die soziale Logik der Gassen, wo der öffentliche Straßenraum nahtlos in den privaten Wohnraum übergeht und jedes Souterrain zur Bühne gelebten Alltags wird.',
+            'Unsere Route begleitet Sie Schritt für Schritt, zu Fuß und in Ihrem eigenen Tempo. So können Sie den touristischen Lärm ausblenden und sich ganz mit der echten Geschichte der Stadt verbinden, egal ob Sie Bari für ein Wochenende besuchen oder nur wenige Stunden Zeit haben, bevor Sie zum Kreuzfahrthafen zurückmüssen.',
+          ],
+        },
+        {
+          heading: 'Audioguides aus Forschung, erzählt von Menschen, die hier geboren wurden',
+          paragraphs: [
+            'Die Positionierung von Localis beruht auf einem klaren Versprechen: Wir lehnen künstliches Storytelling und kommerzielle Vereinfachungen ab. Diese Audio-Route ist das Ergebnis monatelanger Archivrecherche und überprüfter historischer Quellen, übertragen in eine flüssige Erzählung durch lokale Autorinnen, Autoren und Forschende.',
+            'Die Stimmen, die Sie hören, sind in Apulien verwurzelt. Sie kennen die Geheimnisse, die Suchmaschinen nicht katalogisieren können, und führen Sie durch unsichtbare Details im Stein, verborgene Bedeutungen hinter kulinarischen Ritualen und mittelalterliche Legenden, die die Identität Baris bis heute prägen. Weniger abhaken. Mehr verstehen.',
+          ],
+        },
+      ],
+    },
+  },
+};
+
+const entry = copy[slug]?.[lang];
+---
+{entry && (
+  <section class="guide-seo-editorial rounded-[28px] border border-sand-3 bg-sand-1/35 px-lg py-xl md:px-xl">
+    <div class="localis-seo-content">
+      <h1>{entry.title}</h1>
+      <p class="subtitle">{entry.subtitle}</p>
+      {entry.sections.map((section) => (
+        <div class="seo-block">
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .guide-seo-editorial :global(.localis-seo-content) {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .guide-seo-editorial :global(h1) {
+    font-family: var(--font-display, inherit);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05;
+    color: var(--color-ink, #1d1d1d);
+    margin: 0;
+  }
+
+  .guide-seo-editorial :global(.subtitle) {
+    font-family: var(--font-display, inherit);
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--color-ink-muted, #5f5a55);
+    margin: -1rem 0 0;
+  }
+
+  .guide-seo-editorial :global(.seo-block) {
+    display: grid;
+    gap: 0.9rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgb(0 0 0 / 0.08);
+  }
+
+  .guide-seo-editorial :global(.seo-block h2) {
+    font-family: var(--font-display, inherit);
+    font-size: clamp(1.5rem, 3vw, 2.15rem);
+    line-height: 1.15;
+    color: var(--color-ink, #1d1d1d);
+    margin: 0;
+  }
+
+  .guide-seo-editorial :global(.seo-block p) {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-ink, #1d1d1d);
+    margin: 0;
+  }
+</style>

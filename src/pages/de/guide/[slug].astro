@@ -10,6 +10,7 @@ import StructuredData from '../../../components/StructuredData.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import GuideUseCase from '../../../components/GuideUseCase.astro';
 import GuideFactsCard from '../../../components/GuideFactsCard.astro';
+import GuideSeoEditorial from '../../../components/GuideSeoEditorial.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
 import { audioObjectLD, productLD, touristAttractionLD } from '../../../lib/seo';
@@ -147,6 +148,8 @@ ld.push(productLD({
         <h2 class="font-display text-3xl text-ink mb-md">Kapitel</h2>
         <ChapterList chapters={data.chapters} lang={lang} />
       </section>
+
+      <GuideSeoEditorial slug={data.slug} lang={lang} />
 
       {data.coords_start && (
         <StartMap lat={data.coords_start.lat} lng={data.coords_start.lng} lang={lang} />
