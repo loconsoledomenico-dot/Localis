@@ -1,12 +1,18 @@
 import type { AstroGlobal } from 'astro';
 
 export type Lang = 'it' | 'en' | 'de';
+export const LANG_COOKIE_NAME = 'lg_lang';
+const SUPPORTED_LANGS: Lang[] = ['it', 'en', 'de'];
 
 /**
  * Get current language from Astro context.
  */
 export function getLang(astro: AstroGlobal): Lang {
   return (astro.currentLocale as Lang) || 'it';
+}
+
+export function isSupportedLang(value: string | null | undefined): value is Lang {
+  return value === 'it' || value === 'en' || value === 'de';
 }
 
 /**
@@ -22,6 +28,12 @@ export function localizedHref(path: string, lang: Lang): string {
   const normalized = path.startsWith('/') ? path : `/${path}`;
   if (lang === 'it') return normalized;
   return `/${lang}${normalized}`;
+}
+
+export function getPathLang(path: string): Exclude<Lang, 'it'> | null {
+  const match = path.match(/^\/(en|de)(?:\/|$)/);
+  if (!match) return null;
+  return match[1] as Exclude<Lang, 'it'>;
 }
 
 /**
@@ -70,4 +82,45 @@ export function allLangUrls(currentPath: string): Record<Lang, string> {
     en: localizedHref(stripped, 'en'),
     de: localizedHref(stripped, 'de'),
   };
+}
+
+export function getPreferredLangFromHeader(header: string | null): Lang {
+  if (!header) return 'it';
+
+  const ranked = header
+    .split(',')
+    .map((part, index) => {
+      const [tagPart, ...params] = part.trim().split(';');
+      const baseTag = tagPart.toLowerCase().split('-')[0];
+      const qParam = params.find((param) => param.trim().startsWith('q='));
+      const q = qParam ? Number.parseFloat(qParam.trim().slice(2)) : 1;
+
+      return {
+        lang: isSupportedLang(baseTag) ? baseTag : null,
+        q: Number.isFinite(q) ? q : 0,
+        index,
+      };
+    })
+    .filter((entry): entry is { lang: Lang; q: number; index: number } => entry.lang !== null)
+    .sort((a, b) => (b.q - a.q) || (a.index - b.index));
+
+  return ranked[0]?.lang ?? 'it';
+}
+
+export function isPublicHtmlPath(pathname: string): boolean {
+  if (
+    pathname.startsWith('/api/')
+    || pathname.startsWith('/access/')
+    || pathname.startsWith('/_astro/')
+  ) {
+    return false;
+  }
+
+  return !/\.[a-z0-9]+$/i.test(pathname);
+}
+
+export function withLangQuery(href: string, lang: Lang): string {
+  const url = new URL(href, 'https://localis.guide');
+  url.searchParams.set('lang', lang);
+  return `${url.pathname}${url.search}${url.hash}`;
 }

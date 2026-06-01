@@ -1,5 +1,5 @@
 ---
-import { allLangUrls, type Lang } from '../lib/i18n';
+import { allLangUrls, type Lang, withLangQuery } from '../lib/i18n';
 
 export interface Props {
   lang: Lang;
@@ -15,7 +15,7 @@ const labels: Record<Lang, string> = { it: 'IT', en: 'EN', de: 'DE' };
     l === lang ? (
       <span class="lang-pill lang-pill--active" aria-current="true">{labels[l]}</span>
     ) : (
-      <a href={urls[l]} class="lang-pill" hreflang={l}>{labels[l]}</a>
+      <a href={withLangQuery(urls[l], l)} class="lang-pill" hreflang={l}>{labels[l]}</a>
     )
   )}
 </div>
