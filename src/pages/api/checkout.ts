@@ -40,6 +40,10 @@ function normalizeLang(value: string | undefined): Lang {
   return 'it';
 }
 
+function isConfiguredConnectAccount(accountId: string | null | undefined): accountId is string {
+  return typeof accountId === 'string' && !accountId.includes('REPLACE_WITH_REAL_CONNECT_ID');
+}
+
 function resolveFixedSlugs(product: ProductSlug): string[] | null {
   if (product === 'puglia-completa')  return [...ALL_GUIDES];
   if (product === 'bari-completa')    return [...BARI_GUIDES];
@@ -112,9 +116,13 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   if (partner_id_raw) {
     const partner = await getActivePartner(partner_id_raw);
     if (partner) {
-      partnerStripeAccount = partner.data.stripe_account_id;
-      resolvedPartnerId = partner.data.slug;
-      partnerCommissionRate = partner.data.commission_rate;
+      if (isConfiguredConnectAccount(partner.data.stripe_account_id)) {
+        partnerStripeAccount = partner.data.stripe_account_id;
+        resolvedPartnerId = partner.data.slug;
+        partnerCommissionRate = partner.data.commission_rate;
+      } else {
+        console.warn(`[checkout] ignoring unconfigured partner account for slug "${partner.data.slug}"`);
+      }
     }
   }
 
