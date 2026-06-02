@@ -15,14 +15,18 @@ export interface Props {
   description?: string;
   lang?: Lang;
   ogImage?: string;
+  /** Override hreflang quando i slug differiscono tra lingue (es. articoli blog) */
+  langUrlsOverride?: { it: string; en: string; de: string };
+  /** Override og:type (default: 'website') */
+  ogType?: string;
 }
 
-const { title, description = '', lang = 'it', ogImage } = Astro.props;
+const { title, description = '', lang = 'it', ogImage, langUrlsOverride, ogType = 'website' } = Astro.props;
 const currentPath = Astro.url.pathname;
-const langUrls = allLangUrls(currentPath);
-const itUrl = langUrls.it;
-const enUrl = langUrls.en;
-const deUrl = langUrls.de;
+const computedLangUrls = langUrlsOverride ?? allLangUrls(currentPath);
+const itUrl = computedLangUrls.it;
+const enUrl = computedLangUrls.en;
+const deUrl = computedLangUrls.de;
 const SITE = 'https://localis.guide';
 const canonical = `${SITE}${currentPath}`;
 const ogLocale = lang === 'en' ? 'en_US' : lang === 'de' ? 'de_DE' : 'it_IT';
@@ -42,7 +46,7 @@ const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
 
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:title" content={title} />
   {description && <meta property="og:description" content={description} />}
   <meta property="og:url" content={canonical} />

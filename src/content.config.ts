@@ -148,4 +148,44 @@ const sources = defineCollection({
   }),
 });
 
-export const collections = { guides, partners, sources };
+// ─── Blog ────────────────────────────────────────────────────────────────────
+// Un file MDX per lingua per ogni articolo (es. storia-bari-vecchia.mdx,
+// history-old-bari.mdx). Il campo `lang` separa le tre versioni linguistiche.
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
+  schema: z.object({
+    // Lingua di questo file
+    lang: z.enum(['it', 'en', 'de']).default('it'),
+    // Slug URL per questa lingua (es. "storia-bari-vecchia")
+    slug: z.string(),
+    // Slug delle altre versioni — usati per hreflang reciproci
+    slug_it: z.string(),
+    slug_en: z.string(),
+    slug_de: z.string().optional(),
+    // Contenuto localizzato
+    title: z.string(),
+    description: z.string().max(160),
+    // Immagine copertina (file separato, mai base64)
+    cover: z.string(),               // es. /images/blog/storia-bari-vecchia.webp
+    cover_alt: z.string(),
+    cover_width: z.number().int().positive(),
+    cover_height: z.number().int().positive(),
+    // Date
+    published_at: z.date(),
+    updated_at: z.date().optional(),
+    // Guida audio collegata (per il box CTA)
+    guide_slug: z.string(),          // es. "bari-vecchia"
+    guide_title: z.string(),         // es. "Bari Vecchia — Dentro la Città"
+    guide_product: z.enum(['single', 'bari-completa', 'valle-completa', 'gargano-completa', 'tris', 'crociera']).default('single'),
+    guide_price_label: z.string().default('€4,99'),
+    // Articoli correlati (slug blog nella stessa lingua)
+    related: z.array(z.string()).max(3).default([]),
+    // Breadcrumb zona
+    zone_label: z.string(),          // es. "Bari"
+    zone_href: z.string(),           // es. "/bari" (senza prefisso lingua — aggiunto dalla page)
+    // Stato
+    status: z.enum(['published', 'draft']).default('published'),
+  }),
+});
+
+export const collections = { guides, partners, sources, blog };
