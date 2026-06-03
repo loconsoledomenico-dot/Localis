@@ -1,0 +1,139 @@
+Bleib jetzt auf der Piazza Mercantile stehen.
+<break time="0.8s"/>
+
+Schau den Platz so an, wie er heute ist.
+<break time="1s"/>
+
+<prosody rate="90%">Tische draußen,
+<break time="0.4s"/>
+Menschen, die schlendern,
+<break time="0.4s"/>
+jemand, der einen Kaffee trinkt,
+<break time="0.4s"/>
+jemand, der sitzt und zuschaut.</prosody>
+<break time="1s"/>
+
+Es ist einer der angenehmsten Orte in Bari Vecchia.
+<break time="1s"/>
+
+Aber wenn wir Jahrhunderte zurückgehen könnten, würden wir ihn mit anderen Augen sehen.
+<break time="1s"/>
+
+Dieser Platz war das <emphasis level="moderate">praktische</emphasis> Herz der Stadt.
+<break time="0.8s"/>
+
+Hier wurde Handel getrieben,
+<break time="0.4s"/>
+
+hier trafen sich Händler, Handwerker, Bürger und Fremde,
+<break time="0.4s"/>
+
+hier flossen Geld, Waren, Nachrichten und Alltagsprobleme.
+<break time="1s"/>
+
+Der Name „Mercantile" sagt es klar: Bari war nicht nur eine Stadt der Heiligen und Pilger.
+<break time="0.8s"/>
+
+<prosody rate="88%">Es war eine Stadt, die arbeitete,
+<break time="0.4s"/>
+die kaufte,
+<break time="0.4s"/>
+die verkaufte,
+<break time="0.4s"/>
+die stritt,
+<break time="0.4s"/>
+die die Bezahlung von Schulden einforderte.</prosody>
+<break time="1.5s"/>
+
+Suche jetzt die Säule mit dem steinernen Löwen.
+<break time="0.8s"/>
+
+Heute fotografieren ihn viele Menschen, ohne wirklich zu wissen, was er darstellt.
+<break time="1s"/>
+
+Der Löwe war nicht nur zur Dekoration des Platzes da.
+<break time="0.8s"/>
+
+An dieser Säule wurden öffentlich jene ausgestellt, die ihre Schulden nicht bezahlen konnten.
+<break time="1s"/>
+
+Die Strafe war nicht nur finanzieller Natur.
+<break time="0.5s"/>
+
+<emphasis level="moderate">Es war die Schande.</emphasis>
+<break time="1.2s"/>
+
+<prosody rate="88%">Vor der ganzen Stadt zur Schau gestellt werden,
+<break time="0.4s"/>
+von Nachbarn erkannt werden,
+<break time="0.4s"/>
+ein privates Scheitern als öffentliches Schauspiel erleben.</prosody>
+<break time="1.2s"/>
+
+Im baresisc­hen Dialekt hat sich eine sehr direkte Erinnerung an diese Praxis erhalten — ein Ausdruck, der auf jene verwies, die geschickt wurden, dem Löwen ihr Hinterteil zu zeigen.
+<break time="0.8s"/>
+
+Das mag wie ein Volkswitz klingen.
+<break time="0.5s"/>
+
+In Wirklichkeit ist es ein Stück Geschichte, das in der Sprache überlebt hat, lange nachdem der ursprüngliche Anlass fast vergessen war.
+<break time="1.5s"/>
+
+Dieser Platz spiegelt den Charakter Baris gut wider.
+<break time="0.8s"/>
+
+Eine fromme Stadt, sicherlich.
+<break time="0.5s"/>
+
+Aber auch konkret,
+<break time="0.4s"/>
+
+praktisch,
+<break time="0.4s"/>
+
+an den Handel gewöhnt.
+<break time="0.8s"/>
+
+Fähig, Pilger aus aller Welt am Grab des Heiligen Nikolaus zu empfangen, und wenige Meter weiter Schuldner dem öffentlichen Urteil auszusetzen.
+<break time="1s"/>
+
+<prosody pitch="+3%">Die alte Stadt war keine friedliche Ansichtskarte.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Sie war lebendig.</emphasis></prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+2%">Und gerade weil sie lebendig war, war sie auch hart.</prosody>
+<break time="1.5s"/>
+
+Es gibt noch etwas, das ich gerne denke, wenn ich hier vorbeigehe.
+<break time="0.8s"/>
+
+Plätze ändern ihre Funktion, hören aber selten auf, der Ort zu sein, an dem eine Stadt sich selbst erkennt.
+<break time="1s"/>
+
+Früher kam man hierher, um zu verkaufen, zu kaufen, zu urteilen, Neuigkeiten zu hören.
+<break time="0.5s"/>
+
+Heute kommt man, um sich zu treffen, zu essen, etwas zu trinken, den Abend zu verbringen.
+<break time="0.8s"/>
+
+Die Gewohnheiten haben sich verändert.
+<break time="0.5s"/>
+
+Aber der Platz erfüllt noch dieselbe Aufgabe: die Menschen zusammenzuhalten.
+<break time="1.5s"/>
+
+Jetzt, vor dem letzten Teil, geh noch einmal in die Gassen hinein.
+<break time="0.5s"/>
+
+Suche keine perfekte Richtung.
+<break time="0.5s"/>
+
+Lass dich von den Straßen führen.
+<break time="1s"/>
+
+Das Letzte, was ich dir hören lassen möchte, ist kein Monument.
+<break time="0.5s"/>
+
+<prosody rate="85%">Es ist die Stimme der Stadt.</prosody>

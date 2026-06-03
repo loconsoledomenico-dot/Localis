@@ -1,0 +1,147 @@
+Jetzt bist du im ältesten und dem Meer am weitesten vorspringenden Teil des Borgos.
+<break time="0.8s"/>
+
+Hier scheint Bari fast an sein natürliches Ende zu gelangen.
+<break time="0.8s"/>
+
+Die Stadt hört auf.
+<break time="0.5s"/>
+
+Vor dir bleibt das Wasser.
+<break time="1s"/>
+
+Aber unter deinen Füßen geht die Stadt noch weiter in der Zeit zurück.
+<break time="0.5s"/>
+
+<prosody rate="85%">Viel weiter.</prosody>
+<break time="1.5s"/>
+
+Bari hat kein großes Amphitheater mitten auf der Straße.
+<break time="0.5s"/>
+
+Es hat keinen antiken Tempel, der den Platz beherrscht und den alle fotografieren.
+<break time="0.8s"/>
+
+Hier ist die Antike weniger offensichtlich.
+<break time="0.5s"/>
+
+Sie ist verborgen.
+<break time="0.8s"/>
+
+<prosody rate="88%">Sie liegt unter einer Kirche,
+<break time="0.4s"/>
+in einem Kloster,
+<break time="0.4s"/>
+unter einem Pflaster,
+<break time="0.4s"/>
+zwischen Mauerresten, Gräbern, Gegenständen, Überresten von Häusern und Fundamenten, auf denen im Laufe der Jahrhunderte immer weitergebaut wurde.</prosody>
+<break time="1.2s"/>
+
+Das ist eines der echtesten Merkmale von Bari Vecchia: Sie hat das, was vorher da war, nicht vollständig ausgelöscht.
+<break time="0.5s"/>
+
+<emphasis level="moderate">Sie hat darüber gebaut.</emphasis>
+<break time="1.5s"/>
+
+Im Bereich von Santa Scolastica und Santa Maria del Buon Consiglio tauchen Spuren einer sehr langen Geschichte auf.
+<break time="1s"/>
+
+<prosody rate="88%">Zuerst die Präsenz der ältesten Bewohner dieser Halbinsel,
+<break time="0.4s"/>
+dann die griechische und römische Welt,
+<break time="0.4s"/>
+dann die mittelalterlichen Kirchen,
+<break time="0.4s"/>
+dann die Klöster,
+<break time="0.4s"/>
+dann die Stadt, die sich beim Wandel immer wieder denselben Raum neu aneignete.</prosody>
+<break time="1.2s"/>
+
+An anderen Orten ist die Geschichte ordentlich aufbereitet, fast didaktisch.
+<break time="0.5s"/>
+
+Hier nicht.
+<break time="0.8s"/>
+
+Hier überlagert sich die Geschichte.
+<break time="1s"/>
+
+Ein Pflaster über einem anderen,
+<break time="0.4s"/>
+
+eine Mauer, die dort entsteht, wo schon eine war,
+<break time="0.4s"/>
+
+eine Kirche, die unter sich die Spur eines früheren Ortes bewahrt,
+<break time="0.4s"/>
+
+ein Platz, auf dem man geht, ohne zu bemerken, dass darunter ein Stück der Stadt ruht, das man nicht mehr sieht.
+<break time="1.5s"/>
+
+Aber ich möchte dir etwas erzählen, das weniger monumental und viel menschlicher ist.
+<break time="1s"/>
+
+Bari war vom Meer umgeben.
+<break time="0.5s"/>
+
+<prosody rate="88%">Und doch hatte es Durst.</prosody>
+<break time="1.2s"/>
+
+Salzwasser war überall, aber gutes Trinkwasser war kostbar.
+<break time="0.8s"/>
+
+Jahrhundertelang hing das Leben der alten Stadt auch von den Zisternen ab, privaten oder öffentlichen, in denen das Regenwasser gesammelt wurde.
+<break time="1s"/>
+
+Denk daran, was das bedeutete.
+<break time="0.8s"/>
+
+Heute öffnen wir einen Hahn, ohne darüber nachzudenken.
+<break time="0.5s"/>
+
+Damals konnte eine Jahreszeit mit wenig Regen für alle zum Problem werden.
+<break time="1s"/>
+
+Wasser war kein unsichtbarer Dienst.
+<break time="0.5s"/>
+
+Es war eine tägliche Sorge,
+<break time="0.4s"/>
+
+etwas, das man aufbewahren, schützen, teilen musste.
+<break time="1.2s"/>
+
+In diesem Bereich, nahe dem Buon Consiglio, erinnert man sich noch an eine Zisterne für die armen Leute, die gebaut wurde, damit auch jene ohne Mittel trinken konnten.
+<break time="1s"/>
+
+<prosody rate="88%">Dieses Detail berührt mich immer wieder.</prosody>
+<break time="1s"/>
+
+Wir sind es gewohnt, die große Geschichte in Königen, Kaisern, Kriegen, Basiliken zu suchen.
+<break time="0.8s"/>
+
+<prosody pitch="+3%">Aber eine Stadt erkennt man auch an einer einfacheren Geste: jemand, der entscheidet, dass Wasser nicht denen verweigert werden darf, die es brauchen.</prosody>
+<break time="1.5s"/>
+
+Schau noch einmal auf diesen Ort.
+<break time="0.8s"/>
+
+Vor dir liegt das Meer,
+<break time="0.4s"/>
+
+unter dir liegen Jahrhunderte von Bari,
+<break time="0.5s"/>
+
+und dazwischen, zwischen den großen Geschichten und den großen Steinen, liegt das konkrete Leben von Menschen, die jeden Tag Wasser, Nahrung, Schutz und einen Weg nach vorne finden mussten.
+<break time="1.5s"/>
+
+Jetzt werden wir langsam Richtung Inneres des Borgos zurückgehen, in Richtung Dom.
+<break time="0.5s"/>
+
+Denn Bari Vecchia war nicht nur eine Stadt, die von Mauern umgeben war.
+<break time="0.5s"/>
+
+Es war auch eine Stadt, die von Kirchen bedeckt war.
+<break time="0.5s"/>
+
+<prosody rate="88%">Eine Stadt, in der Glaube, Macht und Alltag oft nur wenige Schritte voneinander entfernt lagen.</prosody>

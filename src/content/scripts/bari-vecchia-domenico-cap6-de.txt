@@ -1,0 +1,124 @@
+Bleib jetzt in der Nähe des Doms San Sabino stehen.
+<break time="1s"/>
+
+Viele Besucher kommen wegen San Nicola nach Bari, und das ist verständlich.
+<break time="0.8s"/>
+
+Aber vor der Basilika, vor der Ankunft des Heiligen aus Myra, hatte Bari bereits sein eigenes religiöses Zentrum und seine eigene christliche Geschichte.
+<break time="0.5s"/>
+
+Der Dom San Sabino ist Teil dieser älteren Erinnerung.
+<break time="1s"/>
+
+Schau ihn an.
+<break time="1.2s"/>
+
+Auch hier erzählen das helle Gestein, die Bögen, die strengen Formen der apulischen Romanik von einer Stadt, die keine übermäßigen Ornamente brauchte, um ihre Stärke auszudrücken.
+<break time="1.2s"/>
+
+Aber was wir uns heute kaum vorstellen können, ist, wie viele Kirchen es im alten Bari gab.
+<break time="0.8s"/>
+
+Die Quellen sprechen von Dutzenden von Sakralbauten.
+<break time="1s"/>
+
+<prosody rate="88%">Große Kirchen,
+<break time="0.4s"/>
+kleine Kirchen,
+<break time="0.4s"/>
+Klöster,
+<break time="0.4s"/>
+Kapellen,
+<break time="0.4s"/>
+Kultstätten, die mit Familien, Zünften und verschiedenen Gemeinschaften verbunden waren.</prosody>
+<break time="1.2s"/>
+
+Wenn wir Bari im hohen Mittelalter sehen könnten, hätten wir wahrscheinlich das Gefühl einer Stadt, die in heiliges Gestein gekleidet war.
+<break time="0.5s"/>
+
+Ein unaufhörliches Geflecht von Häusern und Glockentürmen, Gassen und Altären, Höfen und Prozessionen.
+<break time="1.5s"/>
+
+Stell dir aber keine stille Stadt vor, die ewig im Gebet versammelt ist.
+<break time="0.8s"/>
+
+Die Religion war mit dem konkreten Leben vermischt.
+<break time="1s"/>
+
+<prosody rate="88%">Um die Kirchen herum begegneten sich Menschen,
+<break time="0.4s"/>
+wurden Urkunden unterzeichnet,
+<break time="0.4s"/>
+wurden Versprechen gemacht,
+<break time="0.4s"/>
+wurden Hochzeiten gefeiert,
+<break time="0.4s"/>
+wurden die Toten geleitet,
+<break time="0.4s"/>
+wurde Schutz vor Krankheiten gesucht,
+<break time="0.4s"/>
+wurde um Hilfe gebeten, wenn das Meer einen Mann nicht zurückbrachte oder wenn einer Familie nichts mehr zum Leben blieb.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">In Bari stand das Heilige nicht außerhalb des Lebens.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Es stand drinnen.</emphasis></prosody>
+<break time="1.5s"/>
+
+Im Dom befindet sich auch eines der bedeutendsten Bilder für die Verbindung Baris mit dem Orient: die Odegitria, die Madonna, die den Weg weist.
+<break time="0.8s"/>
+
+Ihr Name selbst kommt aus einer byzantinischen Tradition.
+<break time="0.8s"/>
+
+Und es ist schwer, nicht zu denken, dass diese Stadt, die jahrhundertelang gewohnt war, zum anderen Ufer des Meeres zu blicken, in jenem Bild etwas zutiefst Eigenes erkannte.
+<break time="1.2s"/>
+
+<prosody rate="88%">Bari war lateinisch und griechisch,
+<break time="0.4s"/>
+westlich und östlich,
+<break time="0.4s"/>
+mit Rom verbunden, aber jahrhundertelang von Einflüssen durchdrungen, die von der anderen Seite der Adria und des Mittelmeers kamen.</prosody>
+<break time="1s"/>
+
+San Nicola sollte diese Verbindung noch sichtbarer machen.
+<break time="0.5s"/>
+
+Aber er hat sie nicht erfunden.
+<break time="0.5s"/>
+
+Die Stadt trug sie schon in sich.
+<break time="1.5s"/>
+
+Wenn du also zwischen Dom und Basilika gehst, gehst du nicht einfach von einer schönen Kirche zur anderen.
+<break time="0.8s"/>
+
+Du bewegst dich zwischen zwei Seelen der Stadt.
+<break time="1.2s"/>
+
+San Sabino erzählt vom ältesten Bari — dem Bischofssitz, der Kontinuität seiner Geschichte.
+<break time="0.5s"/>
+
+San Nicola erzählt vom Bari, das dank des Heiligen, der aus dem Meer ankam, zum universellen Pilgerziel wurde.
+<break time="1s"/>
+
+Dazwischen, in den Gassen, lebt die echte Stadt weiter.
+<break time="0.5s"/>
+
+Die aus Familien, Werkstätten, Worten, Brot, offenen Türen und Menschen besteht, die Glauben und Alltag nie wirklich voneinander trennen mussten.
+<break time="1.5s"/>
+
+Geh jetzt Richtung Piazza Mercantile.
+<break time="0.8s"/>
+
+Dort werden wir ein anderes Bari sehen.
+<break time="0.5s"/>
+
+Nicht das des Heiligen,
+<break time="0.4s"/>
+
+nicht das der Mauern.
+<break time="0.5s"/>
+
+<prosody rate="88%">Sondern das des Handels, des Marktes und der öffentlichen Schande.</prosody>

@@ -1,0 +1,157 @@
+Jetzt bist du im Borgo.
+<break time="0.8s"/>
+
+Schau, wie sehr sich alles in wenigen Metern verändert.
+<break time="1s"/>
+
+Draußen hattest du das Kastell, den offenen Raum, das Gefühl einer großen Militäranlage.
+<break time="0.8s"/>
+
+Hier hingegen zieht sich die Stadt zusammen.
+<break time="1s"/>
+
+Die Straßen werden enger. Die Häuser rücken näher. Die Fenster scheinen sich fast gegenüberzustehen. Das Leben scheint heute noch von der Haustür auf die Straße überzugehen, ohne wirkliche Trennung.
+<break time="1s"/>
+
+Das ist eines der Dinge, die du über Bari Vecchia verstehen musst.
+<break time="0.5s"/>
+
+Sie wurde nicht dafür gebaut, bequem durchquert zu werden.
+<break time="0.5s"/>
+
+Sie wurde gebaut, um zusammenzuleben, um sich zu schützen, um jeden Handbreit Platz innerhalb der Mauern zu nutzen.
+<break time="1s"/>
+
+Denn außerhalb der Mauern gab es jahrhundertelang nicht das Bari, das du heute kennst.
+<break time="0.5s"/>
+
+Keine breiten Boulevards. Kein Murattianisches Viertel. Kein Libertà, wo ich aufgewachsen bin. Keine moderne Stadt, die sich ins Landesinnere ausgebreitet hatte.
+<break time="0.8s"/>
+
+Es gab diese Halbinsel.
+<break time="1s"/>
+
+Und in diese Halbinsel musste <emphasis level="moderate">alles</emphasis> hineinpassen.
+<break time="1.2s"/>
+
+<prosody rate="88%">Die Häuser,
+<break time="0.4s"/>
+die Werkstätten,
+<break time="0.4s"/>
+die Kirchen,
+<break time="0.4s"/>
+die Backöfen,
+<break time="0.4s"/>
+die Zisternen,
+<break time="0.4s"/>
+die Märkte,
+<break time="0.4s"/>
+die Machtgebäude,
+<break time="0.4s"/>
+die Klöster,
+<break time="0.4s"/>
+die armen und die adeligen Familien,
+<break time="0.4s"/>
+die Soldaten,
+<break time="0.4s"/>
+die Kinder,
+<break time="0.4s"/>
+die Pilger,
+<break time="0.4s"/>
+die Seeleute,
+<break time="0.4s"/>
+die Lebenden und die Toten.</prosody>
+<break time="1.5s"/>
+
+Heute läuft ein Tourist durch diese Gassen und denkt: was für eine Atmosphäre.
+<break time="0.5s"/>
+
+Und das stimmt. Die Atmosphäre ist da.
+<break time="0.8s"/>
+
+Aber für die Menschen, die hier lebten, war diese Enge kein pittoresker Effekt.
+<break time="0.5s"/>
+
+Es war das tägliche Leben.
+<break time="1s"/>
+
+Wenn eine Familie kochte, zog der Geruch in die Straße.
+<break time="0.4s"/>
+
+Wenn jemand stritt, hörten es alle.
+<break time="0.4s"/>
+
+Wenn ein Kind geboren wurde, ein Alter starb, wenn eine Nachricht vom Hafen eintraf, wusste es die ganze Stadt sofort.
+<break time="1s"/>
+
+Diese Stadt war nicht dafür gemacht, allein zu sein.
+<break time="0.5s"/>
+
+<prosody rate="88%" pitch="+3%">Es war eine Stadt, in der das Leben der anderen einem <emphasis level="strong">auf den Leib rückte</emphasis>.</prosody>
+<break time="1.5s"/>
+
+Die Strada delle Crociate trägt bereits in ihrem Namen eine der großen Richtungen der Geschichte Baris: den Durchgang.
+<break time="1s"/>
+
+<prosody rate="88%">Männer, die ankamen,
+<break time="0.4s"/>
+Männer, die aufbrachen,
+<break time="0.4s"/>
+Pilger auf dem Weg zu den heiligen Stätten,
+<break time="0.4s"/>
+Ritter,
+<break time="0.4s"/>
+Händler,
+<break time="0.4s"/>
+Menschen, die Europa durchquert hatten und hier angekommen nach einem Schiff suchten, nach einem Segen, einem Bett, Essen, oder einfach nach der Möglichkeit, wieder aufzubrechen.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">Bari war lange Zeit genau das: <emphasis level="strong">eine Schwelle</emphasis>.</prosody>
+<break time="0.8s"/>
+
+Nicht nur eine Stadt am Meer.
+<break time="0.5s"/>
+
+Ein Punkt, an dem Menschen die Richtung wechselten.
+<break time="1s"/>
+
+<prosody rate="88%">Vom Land zum Schiff,
+<break time="0.4s"/>
+vom Westen zum Osten,
+<break time="0.4s"/>
+von der Reise zum Gebet,
+<break time="0.4s"/>
+von der Angst zur Hoffnung, endlich angekommen zu sein.</prosody>
+<break time="1.5s"/>
+
+Während du gehst, schau auf die Wände.
+<break time="0.8s"/>
+
+Suche nicht nur nach dem wichtigen Monument.
+<break time="0.5s"/>
+
+Beobachte die niedrigen Türen, die Ecken, die abgenutzten Steine, die plötzlichen Erweiterungen.
+<break time="0.8s"/>
+
+In einer Stadt wie dieser erzählte auch der einfachste Weg etwas: wo eine Familie wohnte, wo sich eine kleine Kirche befand, wo Tiere vorbeizogen, wo Wasser gesammelt wurde, wo Brot verkauft wurde.
+<break time="1s"/>
+
+Bari Vecchia versteht man nicht von oben.
+<break time="0.5s"/>
+
+Man versteht sie, indem man sich ein wenig von ihren Gassen umschließen lässt.
+<break time="1.5s"/>
+
+Geh jetzt Richtung Basilika San Nicola.
+<break time="0.5s"/>
+
+Wir werden die ganze Geschichte des Heiligen hier nicht erzählen — die verdient einen eigenen Bericht.
+<break time="0.8s"/>
+
+Aber um Bari Vecchia zu verstehen, müssen wir verstehen, was geschah, als Nicola hierher kam.
+<break time="0.8s"/>
+
+Denn von diesem Moment an war diese Stadt nicht mehr nur ein wichtiger Hafen.
+<break time="0.5s"/>
+
+<prosody rate="85%">Sie wurde ein <emphasis level="moderate">Ziel</emphasis>.</prosody>

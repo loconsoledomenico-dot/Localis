@@ -1,0 +1,102 @@
+<prosody rate="90%">Ich heiße Domenico.</prosody>
+<break time="1.5s"/>
+
+Ich bin Baresi und bin im Viertel Libertà aufgewachsen, nur wenige Schritte von dieser alten Stadt entfernt.
+
+Bari Vecchia hatte ich immer in der Nähe. Nicht als etwas, das man einmal im Leben besucht, sondern als ein Stück der Stadt, das einfach da war, nah, präsent. Und vielleicht gerade deswegen merkt man als Kind nicht sofort, was man vor sich hat.
+<break time="0.8s"/>
+
+Dann wächst du. Du lernst. Du kehrst an dieselben Orte zurück. Und du verstehst etwas, das die Art, wie du diese Steine betrachtest, vollständig verändert.
+<break time="1.2s"/>
+
+Heute nennen wir sie Bari Vecchia.
+<break time="1s"/>
+
+<prosody rate="85%" pitch="+4%">Jahrhundertelang war das hier aber <emphasis level="strong">ganz</emphasis> Bari.</prosody>
+<break time="2s"/>
+
+Bevor du in die Gassen hineingehst, bleib vor dem Kastell der Staufer stehen.
+<break time="0.5s"/>
+
+Sieh es dir gut an.
+<break time="1s"/>
+
+Es ist massiv, fast streng. Es wirkt nicht einladend. Es wirkt, als wäre es dazu gemacht, standzuhalten.
+<break time="1s"/>
+
+Wir nennen es Kastell der Staufer, weil Friedrich II. es grundlegend umbaute und ihm einige der markantesten Spuren hinterließ: den kaiserlichen Adler am Portal, die Bögen, die Kapitelle, die Räumlichkeiten, die die Festung auch zu einem Repräsentationsort machten.
+<break time="0.8s"/>
+
+Aber das Kastell war schon früher entstanden.
+<break time="0.8s"/>
+
+Und das Wichtigste, was man verstehen muss, ist: Es wurde nicht nur gebaut, um Bari zu verteidigen.
+<break time="0.8s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">Es diente auch dazu, die Stadt zu kontrollieren.</emphasis></prosody>
+<break time="1.5s"/>
+
+Im Mittelalter war diese Stadt schwer zu regieren. Sie war reich, stolz, voller Handel, gewohnt, Beziehungen zu verschiedenen Welten zu haben. Sie hatte Langobarden, Sarazenen, Byzantiner gekannt. Sie hatte mit dem Blick aufs Meer gelebt, aber sich nicht leicht vor denen gebeugt, die sie zu beherrschen versuchten.
+<break time="0.8s"/>
+
+Als die Normannen kamen, leistete Bari Widerstand.
+<break time="1s"/>
+
+Und das Kastell wurde genau hier platziert, am Rand der alten Stadt, zwischen dem Festland und dem Meer.
+<break time="0.8s"/>
+
+Nah genug, um sie zu schützen,
+<break time="0.5s"/>
+
+groß genug, um ihr in Erinnerung zu rufen, wer das Sagen hatte.
+<break time="1.5s"/>
+
+Versuche dir vorzustellen, wie es auf die Bewohner des Borgo gewirkt haben muss.
+<break time="0.8s"/>
+
+Keine schöne Sehenswürdigkeit zum Fotografieren,
+<break time="0.5s"/>
+
+keine mittelalterliche Kulisse.
+<break time="0.5s"/>
+
+Eine gewaltige Präsenz, von Türmen umgeben, von einem Graben umringt, gebunden an die Macht derer, die regierten.
+<break time="1s"/>
+
+Das Kastell gehörte nicht wirklich den Baresern.
+<break time="0.8s"/>
+
+<prosody rate="88%" pitch="+3%">Es war etwas, das die Baresen <emphasis level="strong">auf sich lastete</emphasis>.</prosody>
+<break time="1.2s"/>
+
+Eine Festung, die neben ihrer Stadt errichtet wurde — aber auch gegen ihre Freiheit.
+<break time="1s"/>
+
+Später sollten Isabella von Aragon und Bona Sforza es in eine fürstliche Residenz verwandeln, offen für Höfe, Künstler und bedeutende Persönlichkeiten. Aber unter dieser Eleganz blieb dasselbe Gefühl bestehen: Diese Türme gehörten nicht zum Alltagsleben der Gassen.
+<break time="0.8s"/>
+
+Sie beobachteten es von oben.
+<break time="1.5s"/>
+
+Dreh dich nun zu Bari Vecchia um.
+<break time="0.8s"/>
+
+Hinter diesen engen Straßen steckt nicht nur ein altes Viertel.
+<break time="0.5s"/>
+
+Hier liegt eine Stadt, die sich jahrhundertelang gegen das Meer, gegen Eroberer und manchmal auch gegen jene verteidigen musste, die behaupteten, sie regieren zu wollen.
+<break time="1.2s"/>
+
+Jetzt fangen wir an, hineinzugehen.
+<break time="0.8s"/>
+
+Geh Richtung Strada delle Crociate.
+<break time="0.8s"/>
+
+Hab keine Eile.
+<break time="1s"/>
+
+Diese Geschichte beginnt nicht mit einem Foto.
+<break time="0.5s"/>
+
+<prosody rate="85%">Sie beginnt mit einer Stadt, die sich hinter ihren Mauern eingeschlossen hatte.</prosody>

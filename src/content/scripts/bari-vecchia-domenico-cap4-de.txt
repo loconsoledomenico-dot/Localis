@@ -1,0 +1,124 @@
+Geh jetzt auf der Stadtmauer entlang und lass das Meer neben dir.
+<break time="1s"/>
+
+Das ist einer der schönsten Spaziergänge in Bari.
+<break time="0.8s"/>
+
+Aber um ihn wirklich zu verstehen, musst du gedanklich etwas entfernen: die moderne Straße, die heute unter den Mauern verläuft.
+<break time="0.8s"/>
+
+Stell dir vor, sie existiert nicht.
+<break time="1s"/>
+
+Stell dir vor, das Gestein der Stadt endet fast direkt im Wasser.
+<break time="1s"/>
+
+<prosody rate="88%">Keine Autos,
+<break time="0.4s"/>
+kein Asphaltband,
+<break time="0.4s"/>
+kein bequemer Abstand zwischen dem Borgo und dem Meer.
+<break time="0.8s"/>
+Nur die Mauer.
+<break time="0.6s"/>
+Darunter das Mittelmeer.
+<break time="0.6s"/>
+Dahinter die ganze Stadt.</prosody>
+<break time="2s"/>
+
+Heute betrachten wir das Meer und denken an seine Schönheit.
+<break time="0.8s"/>
+
+Für das alte Bari war das Meer viel mehr.
+<break time="0.8s"/>
+
+Es war die wichtigste Straße.
+<break time="0.8s"/>
+
+<prosody rate="88%">Von dort kamen das Getreide, die Waren, das Geld, die Nachrichten, die Pilger.
+<break time="0.5s"/>
+Von dort konnten auch Räuber, Soldaten, Epidemien, Stürme und der Tod kommen.</prosody>
+<break time="1s"/>
+
+Das Meer gab den Lebensunterhalt.
+<break time="0.5s"/>
+
+Aber es war nie vollkommen harmlos.
+<break time="1.5s"/>
+
+Deshalb war die Stadt von Mauern geschützt.
+<break time="0.5s"/>
+
+Sie waren keine romantische Kulisse.
+<break time="0.5s"/>
+
+Sie waren die Grenze zwischen dem, was zur Stadt gehörte, und dem, was sie plötzlich bedrohen konnte.
+<break time="1.5s"/>
+
+Schau auf das Fortino di Sant'Antonio.
+<break time="0.8s"/>
+
+Heute ist es ein Ort, wo Menschen spazieren, das Panorama betrachten, bei Veranstaltungen verweilen und Fotos machen.
+<break time="0.8s"/>
+
+Aber seine Lage erklärt sofort seine Funktion: Von hier aus musste man das Meer beobachten, das Nähern von Booten kontrollieren, einen verletzlichen Punkt der Stadt verteidigen.
+<break time="1s"/>
+
+Bari war auf fast seinem gesamten Umfang exponiert.
+<break time="0.8s"/>
+
+Eine Halbinsel kann wunderschön sein.
+<break time="0.5s"/>
+
+Aber in Kriegszeiten ist sie auch schwer zu schützen.
+<break time="1.5s"/>
+
+Versuch, an die Menschen zu denken, die in den Häusern hinter dir lebten.
+<break time="0.8s"/>
+
+Ein Kind, das in diesen Gassen aufwuchs, lernte früh, dass das Meer nah war.
+<break time="1s"/>
+
+<prosody rate="88%">Es spürte es am Geruch,
+<break time="0.4s"/>
+am Wind,
+<break time="0.4s"/>
+in der Stimme der Männer, die vom Hafen zurückgekehrt waren,
+<break time="0.4s"/>
+in der plötzlichen Stille, wenn ein Boot zu spät zurückkehrte,
+<break time="0.4s"/>
+in den Waren, die auf den Märkten auftauchten,
+<break time="0.4s"/>
+in den fremden Worten, die in den Dialekt einsickerten,
+<break time="0.4s"/>
+in der Furcht, unerwünschte Segel am Horizont auftauchen zu sehen.</prosody>
+<break time="1.5s"/>
+
+Das geht oft verloren, wenn man Bari Vecchia nur flüchtig besucht.
+<break time="0.8s"/>
+
+Das Meer war nicht die Kulisse der Stadt.
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Es war eine Präsenz in ihrem Leben.</emphasis></prosody>
+<break time="1.5s"/>
+
+Und noch heute, wenn man genau hinhört, ist diese Beziehung nicht verschwunden.
+<break time="0.8s"/>
+
+Bari lebt noch immer dem Wasser zugewandt.
+<break time="0.5s"/>
+
+Der moderne Hafen hat sich verändert. Die Schiffe haben sich verändert. Die Mauern dienen nicht mehr zur Verteidigung.
+<break time="0.8s"/>
+
+Aber die Geste ist dieselbe geblieben: hierher kommen, innehalten, das Meer betrachten und sich fragen, was dahinter liegt.
+<break time="1.5s"/>
+
+Geh jetzt weiter entlang der Mauer Richtung Santa Scolastica und dem Bereich von Santa Maria del Buon Consiglio.
+<break time="0.5s"/>
+
+Dort werden wir entdecken, dass Bari Vecchia nicht nur eine mittelalterliche Stadt ist.
+<break time="0.5s"/>
+
+<prosody rate="85%">Unter diesen Steinen steckt viel mehr.</prosody>

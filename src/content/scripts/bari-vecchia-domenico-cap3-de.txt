@@ -1,0 +1,102 @@
+Bleib jetzt in der Nähe der Basilika San Nicola stehen.
+<break time="0.8s"/>
+
+Schau sie an, ohne sofort hineinzugehen.
+<break time="1s"/>
+
+Ihr helles Gestein, ihre Strenge, ihre Kraft sind nicht nur Ausdruck eines Architekturstils.
+<break time="0.8s"/>
+
+Diese Basilika entspringt einem gewaltigen Ehrgeiz.
+<break time="0.8s"/>
+
+<prosody rate="88%">Einen Heiligen zu beherbergen, der fähig war, das Schicksal einer Stadt zu verändern.</prosody>
+<break time="1.5s"/>
+
+Vor der Ankunft der Reliquien des Heiligen Nikolaus war Bari schon bedeutend.
+<break time="0.5s"/>
+
+Es war eine große byzantinische Stadt gewesen, mit dem Orient verbunden, Sitz der kaiserlichen Macht in Süditalien. Hier zirkulierten Händler, Beamte, Soldaten, Mönche, Geld, Sprachen und verschiedene Riten.
+<break time="1s"/>
+
+In diesem Bereich befand sich der Komplex des Katapan, des Vertreters des Byzantinischen Reiches. Stell dir eine Stadt vor, in der der Orient kein exotisches Wort war, sondern eine alltägliche Präsenz: in den Händeln, den Kirchen, den heiligen Bildern, den Riten, sogar in der Art, das Meer zu betrachten.
+<break time="1.2s"/>
+
+Dann, im Jahr 1087, geschah etwas, das alles verändern sollte.
+<break time="1s"/>
+
+Zweiundsechzig Baresi-Matrosen brachen Richtung Myra auf, in der heutigen Türkei, und kehrten zurück, die Reliquien des Heiligen Nikolaus mit sich tragend.
+<break time="1s"/>
+
+Die Details dieser Reise werden wir in der Führung über die Basilika erzählen.
+<break time="0.5s"/>
+
+Hier möchte ich dir vermitteln, was das für Bari bedeutete.
+<break time="1.2s"/>
+
+<prosody pitch="+2%">Bis zu diesem Moment war diese Stadt vor allem ein Ort, den man <emphasis level="moderate">durchquerte</emphasis>.</prosody>
+<break time="0.8s"/>
+
+<prosody rate="85%" pitch="+4%">Nach dem Heiligen Nikolaus wurde sie ein Ort, zu dem man <emphasis level="strong">hinkam</emphasis>.</prosody>
+<break time="2s"/>
+
+Pilger aus fernen Ländern begannen hierher zu kommen, um am Grab des Heiligen zu beten.
+<break time="0.8s"/>
+
+Und wenn Pilger kommen, verändert sich die ganze Stadt.
+<break time="1s"/>
+
+<prosody rate="90%">Man braucht Gastfreundschaft, Essen, Märkte, Routen, Schutz, Kirchen, Krankenhäuser, Orte zum Verweilen.
+<break time="0.8s"/>
+Der Handel verändert sich,
+<break time="0.4s"/>
+die Messen verändern sich,
+<break time="0.4s"/>
+das Ansehen verändert sich,
+<break time="0.4s"/>
+sogar das Bild, das eine Stadt von sich selbst hat, verändert sich.</prosody>
+<break time="1.2s"/>
+
+Bari war nicht mehr nur die Stadt, die sich dem Orient zugewandt hatte.
+<break time="0.5s"/>
+
+<prosody pitch="+3%">Es war der Ort geworden, an dem der Orient gekommen war zu <emphasis level="strong">leben</emphasis>.</prosody>
+<break time="1.5s"/>
+
+Und noch heute spürst du das.
+<break time="0.8s"/>
+
+In der Krypta der Basilika beten Katholiken und Orthodoxe.
+<break time="0.5s"/>
+
+Menschen aus verschiedenen Traditionen kommen vor denselben Heiligen.
+<break time="0.8s"/>
+
+Das ist keine moderne Konstruktion für Touristen.
+<break time="0.5s"/>
+
+Es ist die Fortsetzung einer alten Geschichte: Bari war schon immer eine Stadt, die zwischen verschiedenen Welten stand.
+<break time="1.5s"/>
+
+Wenn ich San Nicola betrachte, sehe ich als Baresi nicht nur den Stadtpatron.
+<break time="0.8s"/>
+
+Ich sehe den Grund, warum Bari gelernt hat, weit über seine Grenzen hinaus bekannt zu sein.
+<break time="0.5s"/>
+
+Ich sehe den Punkt, an dem die Stadt, anstatt nur aufs Meer zu schauen und auf die Ankommenden zu warten, selbst ein Reiseziel wurde.
+<break time="1.5s"/>
+
+Lass jetzt die Basilika hinter dir und geh Richtung Stadtmauer.
+<break time="0.5s"/>
+
+Gleich wirst du das Meer sehen.
+<break time="0.8s"/>
+
+Und es ist wichtig, es von dort zu tun.
+<break time="0.8s"/>
+
+Denn Bari Vecchia ist keine Stadt, die sich dem Meer angenähert hat.
+<break time="0.5s"/>
+
+<prosody rate="85%">Es ist eine Stadt, die sich jahrhundertelang <emphasis level="moderate">darauf gestützt</emphasis> hat.</prosody>
