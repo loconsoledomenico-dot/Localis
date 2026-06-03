@@ -31,6 +31,7 @@ const SITE = 'https://localis.guide';
 const canonical = `${SITE}${currentPath}`;
 const ogLocale = lang === 'en' ? 'en_US' : lang === 'de' ? 'de_DE' : 'it_IT';
 const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale !== ogLocale);
+const partnerSlugFromPath = currentPath.match(/^\/p\/([a-z0-9][a-z0-9-]{2,40})\/?$/i)?.[1] ?? '';
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -67,6 +68,46 @@ const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale
     href="https://fonts.bunny.net/css?family=spectral:300,300i,400,400i,500,500i,600,600i|schibsted-grotesk:400,500,600,700&display=swap"
     rel="stylesheet"
   />
+  <script is:inline define:vars={{ currentPath, lang, partnerSlugFromPath }}>
+    (function() {
+      try {
+        const maxAge = 30 * 24 * 60 * 60;
+        const params = new URLSearchParams(window.location.search);
+        const queryPartner = params.get('p');
+        const partner = /^[a-z0-9][a-z0-9-]{2,40}$/i.test(queryPartner || '')
+          ? queryPartner
+          : partnerSlugFromPath;
+
+        if (partner) {
+          document.cookie = `lg_partner=${partner}; path=/; max-age=${maxAge}; SameSite=Lax`;
+          localStorage.setItem('lg_partner', partner);
+          localStorage.setItem('lg_partner_ts', String(Date.now()));
+          window.localisPartnerId = partner;
+          window.localisPartnerLanding = {
+            partner_id: partner,
+            path: currentPath,
+            lang,
+            source: partnerSlugFromPath ? 'partner_landing' : 'partner_query',
+          };
+          return;
+        }
+
+        const cookieVal = document.cookie.split('; ').find((c) => c.startsWith('lg_partner='));
+        if (cookieVal) {
+          window.localisPartnerId = decodeURIComponent(cookieVal.split('=')[1] || '');
+          return;
+        }
+
+        const ls = localStorage.getItem('lg_partner');
+        const lsTs = parseInt(localStorage.getItem('lg_partner_ts') || '0', 10);
+        const expired = Date.now() - lsTs > 30 * 24 * 60 * 60 * 1000;
+        if (ls && !expired) {
+          document.cookie = `lg_partner=${ls}; path=/; max-age=${maxAge}; SameSite=Lax`;
+          window.localisPartnerId = ls;
+        }
+      } catch (e) {}
+    })();
+  </script>
   <Analytics />
   <StructuredData data={organizationLD()} />
 </head>
@@ -86,35 +127,12 @@ const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale
   <script is:inline define:vars={{ currentPath, lang }}>
     (function() {
       try {
-        const params = new URLSearchParams(window.location.search);
-        const p = params.get('p');
-        if (p && /^[a-z0-9][a-z0-9-]{2,40}$/i.test(p)) {
-          const cookieVal = document.cookie.split('; ').find(c => c.startsWith('lg_partner='));
-          if (!cookieVal) {
-            document.cookie = `lg_partner=${p}; path=/; max-age=${30*24*60*60}; SameSite=Lax`;
-          }
-          localStorage.setItem('lg_partner', p);
-          localStorage.setItem('lg_partner_ts', String(Date.now()));
-
-          const trackKey = `qr_landing_viewed:${p}:${currentPath}:${lang}`;
+        const landing = window.localisPartnerLanding;
+        if (landing?.partner_id) {
+          const trackKey = `qr_landing_viewed:${landing.partner_id}:${currentPath}:${lang}`;
           if (!sessionStorage.getItem(trackKey) && typeof window.localisTrack === 'function') {
             sessionStorage.setItem(trackKey, '1');
-            window.localisTrack('qr_landing_viewed', {
-              partner_id: p,
-              path: currentPath,
-              lang,
-              source: 'partner_qr',
-            });
-          }
-        }
-
-        const ls = localStorage.getItem('lg_partner');
-        const lsTs = parseInt(localStorage.getItem('lg_partner_ts') || '0', 10);
-        const expired = Date.now() - lsTs > 30*24*60*60*1000;
-        if (ls && !expired) {
-          const cookieExists = document.cookie.split('; ').some(c => c.startsWith('lg_partner='));
-          if (!cookieExists) {
-            document.cookie = `lg_partner=${ls}; path=/; max-age=${30*24*60*60}; SameSite=Lax`;
+            window.localisTrack('qr_landing_viewed', landing);
           }
         }
       } catch (e) {}

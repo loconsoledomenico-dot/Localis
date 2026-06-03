@@ -13,6 +13,13 @@ declare global {
     };
     __posthog_initialized?: boolean;
     __SV?: number;
+    localisPartnerId?: string;
+    localisPartnerLanding?: {
+      partner_id: string;
+      path: string;
+      lang: string;
+      source: string;
+    };
     dataLayer?: unknown[];
     localisTrack?: (name: string, params?: Record<string, string | number | boolean>) => void;
   }

@@ -29,7 +29,9 @@ const isProd = import.meta.env.PROD;
           try {
             const params = new URLSearchParams(window.location.search);
             const p = params.get('p');
-            if (p && /^[a-z0-9][a-z0-9-]{2,40}$/i.test(p)) {
+            if (window.localisPartnerId) {
+              _partnerId = window.localisPartnerId;
+            } else if (p && /^[a-z0-9][a-z0-9-]{2,40}$/i.test(p)) {
               _partnerId = p;
             } else {
               const ck = document.cookie.split('; ').find((c) => c.startsWith('lg_partner='));
