@@ -15,13 +15,15 @@ const embedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&l
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${lat.toFixed(5)},${lng.toFixed(5)}`;
 const appleHref = `https://maps.apple.com/?ll=${lat.toFixed(5)},${lng.toFixed(5)}&q=${lat.toFixed(5)},${lng.toFixed(5)}`;
 
-const heading = lang === 'it' ? 'Dove parte il racconto' : 'Where the story starts';
+const heading = lang === 'it' ? 'Dove parte il racconto' : lang === 'de' ? 'Wo die Erzählung beginnt' : 'Where the story starts';
 const note = lang === 'it'
   ? "Punto di partenza consigliato. Apri in Maps per farti guidare fin qui — poi premi play."
-  : 'Suggested starting point. Open in Maps to get directions — then press play.';
-const openGoogle = lang === 'it' ? 'Apri in Google Maps' : 'Open in Google Maps';
-const openApple = lang === 'it' ? 'Apri in Apple Maps' : 'Open in Apple Maps';
-const iframeTitle = lang === 'it' ? 'Mappa punto di partenza' : 'Starting point map';
+  : lang === 'de'
+    ? 'Empfohlener Startpunkt. Öffne die Karte für die Wegbeschreibung und starte danach die Wiedergabe.'
+    : 'Suggested starting point. Open in Maps to get directions — then press play.';
+const openGoogle = lang === 'it' ? 'Apri in Google Maps' : lang === 'de' ? 'In Google Maps öffnen' : 'Open in Google Maps';
+const openApple = lang === 'it' ? 'Apri in Apple Maps' : lang === 'de' ? 'In Apple Karten öffnen' : 'Open in Apple Maps';
+const iframeTitle = lang === 'it' ? 'Mappa punto di partenza' : lang === 'de' ? 'Karte Startpunkt' : 'Starting point map';
 ---
 <section class="start-map">
   <h2 class="font-display text-3xl text-ink mb-sm">{heading}</h2>

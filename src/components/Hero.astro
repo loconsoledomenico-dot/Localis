@@ -24,7 +24,7 @@ const lede1 = lang === "de"
 const lede2 = lang === "de"
   ? `Keine App erforderlich: Waehle eine Erzaehlung, hoere die kostenlose Vorschau und entdecke, was dieser Ort wirklich bedeutet.`
   : lang === "it"
-  ? `Nessuna app: scegli una guida, ascolta l'anteprima gratuita e porta con te cio che il luogo significa davvero.`
+  ? `Nessuna app: scegli una guida, ascolta l'anteprima gratuita e porta con te ciò che il luogo significa davvero.`
   : `No app required: choose a story, listen to the free preview and take away what the place truly means.`;
 
 const ctaPrimary = lang === "de" ? "1 Minute kostenlos anhoeren" : lang === "it" ? "Ascolta 1 minuto gratis" : "Listen to a free 1-minute preview";
@@ -88,40 +88,18 @@ const altText = lang === 'de'
 
     <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm flex-wrap">
       <a
-        href={ctaPrimaryHref}
-        class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
-      >
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-        {ctaPrimary}
-      </a>
-      <a
         href={ctaSecondaryHref}
-        class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-md font-semibold text-sm border border-ink/40 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px] backdrop-blur-sm"
+        class="inline-flex items-center justify-center gap-xs px-lg py-md rounded-md font-semibold text-sm bg-ink text-surface hover:bg-ink/90 transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px]"
       >
         {ctaSecondary}
       </a>
     </div>
     {/* Cruise note: demoted below main CTAs, never at same visual level */}
-    <p class="hero-cruise-note mt-md text-xs text-ink-muted max-w-[42ch] m-0">
-      {lang === 'it' && <><a href="/crocieristi" class="underline underline-offset-4 hover:text-accent transition-colors">Sei in crociera?</a> Pacchetto dedicato per chi ha poche ore a terra.</>}
-      {lang === 'en' && <><a href="/en/cruise" class="underline underline-offset-4 hover:text-accent transition-colors">On a cruise?</a> Dedicated package for short stopovers.</>}
-      {lang === 'de' && <><a href="/de/kreuzfahrt" class="underline underline-offset-4 hover:text-accent transition-colors">Auf Kreuzfahrt?</a> Spezielles Paket für kurze Landgänge.</>}
+    <p class="hero-cruise-note mt-md text-sm text-ink max-w-[46ch] m-0 leading-snug">
+      {lang === 'it' && <><a href="/crocieristi" class="font-semibold underline underline-offset-4 hover:text-accent transition-colors">Sei in crociera?</a>{' '}2 audioguide brevi dal Terminal Crociere, per chi ha 4–5 ore a terra.</>}
+      {lang === 'en' && <><a href="/en/cruise" class="font-semibold underline underline-offset-4 hover:text-accent transition-colors">On a cruise?</a>{' '}2 short audio guides from the cruise terminal, for travellers with 4–5 hours ashore.</>}
+      {lang === 'de' && <><a href="/de/kreuzfahrt" class="font-semibold underline underline-offset-4 hover:text-accent transition-colors">Auf Kreuzfahrt?</a>{' '}2 kurze Audioguides ab dem Kreuzfahrtterminal, für 4–5 Stunden Landgang.</>}
     </p>
-    {lang === 'it' && (
-      <p class="hero-cruise-note mt-sm text-xs text-ink-muted max-w-[36ch] m-0">
-        Per chi ha solo 4 o 5 ore a terra: 2 audioguide brevi, a piedi dal Terminal Crociere.
-      </p>
-    )}
-    {lang === 'en' && (
-      <p class="hero-cruise-note mt-sm text-xs text-ink-muted max-w-[36ch] m-0">
-        Built for travellers with only 4 to 5 hours ashore: 2 short audio guides, on foot from the cruise terminal.
-      </p>
-    )}
-    {lang === 'de' && (
-      <p class="hero-cruise-note mt-sm text-xs text-ink-muted max-w-[36ch] m-0">
-        Fuer Reisende mit nur 4 bis 5 Stunden an Land: 2 kurze Audioguides, zu Fuss ab dem Kreuzfahrtterminal.
-      </p>
-    )}
 
     <div class="hero-offer mt-lg" aria-label={lang === 'de' ? 'Schnellueberblick zum Angebot' : lang === 'it' ? 'Panoramica rapida dell offerta' : 'Quick offer summary'}>
       <div class="hero-offer-grid">
