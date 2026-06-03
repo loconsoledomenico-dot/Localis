@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import Layout from '../../../components/Layout.astro';
 import HeroAudioSample from '../../../components/HeroAudioSample.astro';
@@ -138,26 +138,33 @@ function langs(g: typeof guides[number]) {
   </section>
 
   {/* ── PACK ── */}
-  <section class="bg-surface-elev border-t border-border py-3xl" aria-label="Alle sechs Bari-Erzählungen">
-    <div class="max-w-narrow mx-auto px-md text-center">
-      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-sm">
-        Alle sechs Bari-Erzählungen
+  <section class="bg-surface-elev border-t border-border py-3xl" aria-label="Bari-Erzählungen kaufen">
+    <div class="max-w-wrap mx-auto px-md">
+      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-xl text-center">
+        Wähle, wie viele Erzählungen du möchtest
       </h2>
-      <p class="font-body text-base text-ink-muted mb-xl max-w-[44ch] mx-auto">
-        Das vollständige Bild der Stadt, von Anfang bis Ende.
-      </p>
-      <PriceCard
-        product="bari-completa"
-        lang="de"
-        primary={true}
-        features={[
-          'Alle 6 Bari-Erzählungen',
-          'Altstadt, San Nicola, Hafen, Essen, Theater, Untergrund',
-          'Unbegrenzter Zugang, für immer',
-          'Italienisch und Englisch (Deutsch auf Bari Altstadt)',
-          '1-Klick-Rückerstattung innerhalb von 24 Stunden',
-        ]}
-      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[52rem] mx-auto">
+        <PriceCard
+          product="tris"
+          lang="de"
+          features={[
+            '3 Guides nach Wahl aus allen Destinationen',
+            'Spart 2,98 EUR gegenüber Einzelkauf',
+            'Dauerhafter Zugriff',
+          ]}
+        />
+        <PriceCard
+          product="bari-completa"
+          lang="de"
+          primary={true}
+          features={[
+            'Alle 6 Bari-Erzählungen',
+            'Altstadt, San Nicola, Hafen, Essen, Theater, Untergrund',
+            'Dauerhafter Zugriff',
+            'Italienisch und Englisch (Deutsch auf Bari Altstadt)',
+          ]}
+        />
+      </div>
     </div>
   </section>
 

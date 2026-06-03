@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import HeroAudioSample from '../../components/HeroAudioSample.astro';
@@ -146,26 +146,33 @@ const lang = 'it';
   </section>
 
   {/* ── PACK ── */}
-  <section class="bg-surface-elev border-t border-border py-3xl" aria-label="Acquista tutte le guide di Bari">
-    <div class="max-w-narrow mx-auto px-md text-center">
-      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-sm">
-        Tutte e sei le guide di Bari
+  <section class="bg-surface-elev border-t border-border py-3xl" aria-label="Acquista le guide di Bari">
+    <div class="max-w-wrap mx-auto px-md">
+      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-xl text-center">
+        Scegli quante guide ti servono
       </h2>
-      <p class="font-body text-base text-ink-muted mb-xl max-w-[44ch] mx-auto">
-        Un racconto completo sulla città, dall'inizio alla fine.
-      </p>
-      <PriceCard
-        product="bari-completa"
-        lang="it"
-        primary={true}
-        features={[
-          'Tutte e 6 le guide di Bari',
-          'Bari Vecchia, San Nicola, Porto, Cibo, Teatri, Sotterranea',
-          'Accesso illimitato, per sempre',
-          'Italiano e inglese (tedesco su Bari Vecchia)',
-          'Rimborso 1-click entro 24h',
-        ]}
-      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[52rem] mx-auto">
+        <PriceCard
+          product="tris"
+          lang="it"
+          features={[
+            '3 guide a tua scelta tra tutte le destinazioni',
+            'Risparmi 2,98 EUR rispetto all\'acquisto singolo',
+            'Accesso illimitato, per sempre',
+          ]}
+        />
+        <PriceCard
+          product="bari-completa"
+          lang="it"
+          primary={true}
+          features={[
+            'Tutte e 6 le guide di Bari',
+            'Bari Vecchia, San Nicola, Porto, Cibo, Teatri, Sotterranea',
+            'Accesso illimitato, per sempre',
+            'Italiano e inglese (tedesco su Bari Vecchia)',
+          ]}
+        />
+      </div>
     </div>
   </section>
 

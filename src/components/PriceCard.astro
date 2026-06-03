@@ -56,22 +56,22 @@ const description = descriptionOverride ?? (
           : '3 guides of your choice across all zones.')
     : product === 'bari-completa'
       ? (lang === 'it'
-          ? 'Tutte le 6 guide di Bari. Sei voci, sei itinerari.'
+          ? 'Tutte le 6 guide di Bari. Sei racconti, sei itinerari.'
           : lang === 'de'
-            ? 'Alle 6 Audioerzählungen aus Bari. Sechs Stimmen, sechs Perspektiven.'
-            : 'All 6 Bari guides. Six voices, six routes.')
+            ? 'Alle 6 Audioerzählungen aus Bari. Sechs Erzählungen, sechs Perspektiven.'
+            : 'All 6 Bari guides. Six stories, six routes.')
       : product === 'valle-completa'
         ? (lang === 'it'
-            ? "Tutte le 6 guide della Valle d'Itria. Sei voci, sei luoghi."
+            ? "Tutte le 6 guide della Valle d'Itria. Sei racconti, sei luoghi."
             : lang === 'de'
-              ? "Alle 6 Audioerzählungen aus dem Valle d'Itria. Sechs Stimmen, sechs Orte."
-              : "All 6 Valle d'Itria guides. Six voices, six places.")
+              ? "Alle 6 Audioerzählungen aus dem Valle d'Itria. Sechs Erzählungen, sechs Orte."
+              : "All 6 Valle d'Itria guides. Six stories, six places.")
         : product === 'gargano-completa'
           ? (lang === 'it'
-              ? 'Tutte le 6 guide del Gargano. Sei voci, sei paesaggi.'
+              ? 'Tutte le 6 guide del Gargano. Sei racconti, sei paesaggi.'
               : lang === 'de'
-                ? 'Alle 6 Audioerzählungen aus dem Gargano. Sechs Stimmen, sechs Landschaften.'
-                : 'All 6 Gargano guides. Six voices, six landscapes.')
+                ? 'Alle 6 Audioerzählungen aus dem Gargano. Sechs Erzählungen, sechs Landschaften.'
+                : 'All 6 Gargano guides. Six stories, six landscapes.')
       : product === 'crociera'
         ? (lang === 'it'
             ? 'Bari Vecchia + Il Meglio di Bari. Per chi ha 3 ore.'
@@ -111,7 +111,7 @@ const isTris = product === 'tris';
   <header>
     {primary && (
       <p class="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-xs">
-        {lang === 'it' ? 'Più scelto' : lang === 'de' ? 'Am beliebtesten' : 'Most popular'}
+        {lang === 'it' ? 'COLLEZIONE COMPLETA' : lang === 'de' ? 'KOMPLETTE SAMMLUNG' : 'COMPLETE COLLECTION'}
       </p>
     )}
     <h3 class="font-display text-2xl text-ink leading-tight">{title}</h3>

@@ -1,4 +1,4 @@
----
+﻿---
 export const prerender = true;
 import Layout from '../../../components/Layout.astro';
 import HeroAudioSample from '../../../components/HeroAudioSample.astro';
@@ -138,26 +138,33 @@ function langs(g: typeof guides[number]) {
   </section>
 
   {/* ── PACK ── */}
-  <section class="bg-surface-elev border-t border-border py-3xl" aria-label="All six Bari stories">
-    <div class="max-w-narrow mx-auto px-md text-center">
-      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-sm">
-        All six Bari stories
+  <section class="bg-surface-elev border-t border-border py-3xl" aria-label="Choose your Bari bundle">
+    <div class="max-w-wrap mx-auto px-md">
+      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-xl text-center">
+        Choose how many stories you need
       </h2>
-      <p class="font-body text-base text-ink-muted mb-xl max-w-[44ch] mx-auto">
-        The complete picture of the city, from beginning to end.
-      </p>
-      <PriceCard
-        product="bari-completa"
-        lang="en"
-        primary={true}
-        features={[
-          'All 6 Bari stories',
-          'Old Town, San Nicola, Port, Food, Theatres, Underground',
-          'Unlimited access, forever',
-          'Italian and English (German on Bari Old Town)',
-          '1-click refund within 24h',
-        ]}
-      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[52rem] mx-auto">
+        <PriceCard
+          product="tris"
+          lang="en"
+          features={[
+            '3 guides of your choice across all destinations',
+            'Save EUR 2.98 vs single purchase',
+            'Unlimited access, forever',
+          ]}
+        />
+        <PriceCard
+          product="bari-completa"
+          lang="en"
+          primary={true}
+          features={[
+            'All 6 Bari stories',
+            'Old Town, San Nicola, Port, Food, Theatres, Underground',
+            'Unlimited access, forever',
+            'Italian and English (German on Bari Old Town)',
+          ]}
+        />
+      </div>
     </div>
   </section>
 
