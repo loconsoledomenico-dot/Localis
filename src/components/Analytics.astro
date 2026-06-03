@@ -43,6 +43,34 @@ const isProd = import.meta.env.PROD;
             }
           } catch (e) {}
 
+          // Resolve UTM params: fresh from URL → persist to sessionStorage; else restore from session.
+          let _utm = {};
+          try {
+            const _usp = new URLSearchParams(window.location.search);
+            const _utmSrc = _usp.get('utm_source');
+            const _utmMed = _usp.get('utm_medium');
+            const _utmCmp = _usp.get('utm_campaign');
+            const _utmCnt = _usp.get('utm_content');
+            if (_utmSrc || _utmMed) {
+              _utm = {
+                utm_source: _utmSrc || undefined,
+                utm_medium: _utmMed || undefined,
+                utm_campaign: _utmCmp || undefined,
+                utm_content: _utmCnt || undefined,
+              };
+              // Strip undefined keys
+              Object.keys(_utm).forEach((k) => _utm[k] === undefined && delete _utm[k]);
+              try { sessionStorage.setItem('localis_utm', JSON.stringify(_utm)); } catch (e) {}
+            } else {
+              try {
+                const _saved = sessionStorage.getItem('localis_utm');
+                if (_saved) _utm = JSON.parse(_saved);
+              } catch (e) {}
+            }
+            // Expose for landing pages that need to fire qr_landing_view inline.
+            window.localisUtm = _utm;
+          } catch (e) {}
+
           // Called by CookieBanner after consent, or on page load if consent already given.
           window.localisGA4Init = function () {
             if (window._ga4Loaded) return;
@@ -102,6 +130,10 @@ const isProd = import.meta.env.PROD;
               params = params || {};
               if (!params.partner_id) params.partner_id = pid;
               if (isInternalTraffic && !params.traffic_type) params.traffic_type = 'internal';
+              // Attach UTM attribution to every event (for QR → purchase funnel tracking).
+              if (_utm && Object.keys(_utm).length) {
+                Object.keys(_utm).forEach((k) => { if (!params[k]) params[k] = _utm[k]; });
+              }
               try { if (typeof window.gtag === 'function') window.gtag('event', name, params); } catch (e) {}
               try { if (window.posthog && typeof window.posthog.capture === 'function') window.posthog.capture(name, params); } catch (e) {}
               try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
@@ -112,6 +144,9 @@ const isProd = import.meta.env.PROD;
           window.localisTrack = window.localisTrack || function (name, params) {
             params = params || {};
             if (!params.partner_id) params.partner_id = _partnerId || '(direct)';
+            if (_utm && Object.keys(_utm).length) {
+              Object.keys(_utm).forEach((k) => { if (!params[k]) params[k] = _utm[k]; });
+            }
             try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
           };
         </script>

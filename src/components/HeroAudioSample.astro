@@ -4,9 +4,11 @@ import { type Lang } from '../lib/i18n';
 export interface Props {
   lang: Lang;
   src?: string;
+  guideSlug?: string;
 }
 
-const { lang, src = '/audio/trailers/hero-sample.mp3' } = Astro.props;
+const { lang, src = '/audio/trailers/hero-sample.mp3', guideSlug } = Astro.props;
+const slug = guideSlug || src.split('/').pop()?.replace(/\.mp3$/i, '') || 'unknown';
 
 const label = lang === 'de'
   ? 'Hörprobe · 1 Min · gratis'
@@ -18,7 +20,7 @@ const playLabel = lang === 'de' ? 'Abspielen' : lang === 'it' ? 'Play' : 'Play';
 const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Pause';
 ---
 
-<div class="hero-sample" data-src={src}>
+<div class="hero-sample" data-src={src} data-slug={slug} data-lang={lang}>
   <button
     class="hero-sample-btn"
     aria-label={playLabel}
@@ -51,12 +53,22 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
 
     let audio: HTMLAudioElement | null = null;
 
+    const guideSlug = el.dataset.slug || 'unknown';
+    const guideLang = el.dataset.lang || 'it';
+    let _started = false;
+    let _10sFired = false;
+
     btn.addEventListener('click', () => {
       if (!audio) {
         audio = new Audio(src);
         audio.addEventListener('timeupdate', () => {
-          if (audio!.duration) {
-            bar.style.width = `${(audio!.currentTime / audio!.duration) * 100}%`;
+          if (!audio!.duration) return;
+          bar.style.width = `${(audio!.currentTime / audio!.duration) * 100}%`;
+          if (!_10sFired && audio!.currentTime >= 10) {
+            _10sFired = true;
+            if (typeof window.localisTrack === 'function') {
+              window.localisTrack('preview_10s', { guide_slug: guideSlug, language: guideLang, source: 'hero' });
+            }
           }
         });
         audio.addEventListener('ended', () => {
@@ -64,16 +76,19 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
           iconPlay.style.display = '';
           iconPause.style.display = 'none';
           btn.setAttribute('aria-label', btn.dataset.playLabel!);
+          if (typeof window.localisTrack === 'function') {
+            window.localisTrack('preview_complete', { guide_slug: guideSlug, language: guideLang, source: 'hero' });
+          }
         });
       }
 
       if (audio.paused) {
         audio.play().then(() => {
-          if (typeof window.localisTrack === 'function') {
-            window.localisTrack('audio_preview_played', {
-              audio_type: 'hero_sample',
-              audio_src: src,
-            });
+          if (!_started) {
+            _started = true;
+            if (typeof window.localisTrack === 'function') {
+              window.localisTrack('preview_start', { guide_slug: guideSlug, language: guideLang, source: 'hero', page: window.location.pathname });
+            }
           }
           iconPlay.style.display = 'none';
           iconPause.style.display = '';

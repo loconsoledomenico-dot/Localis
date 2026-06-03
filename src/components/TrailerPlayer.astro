@@ -5,13 +5,15 @@ export interface Props {
   src: string;
   label?: string;
   lang: Lang;
+  guideSlug?: string;
 }
 
-const { src, label, lang } = Astro.props;
+const { src, label, lang, guideSlug } = Astro.props;
+const slugDerived = guideSlug || src.split('/').pop()?.replace(/\.mp3$/i, '') || 'unknown';
 const playLabel = lang === 'it' ? 'Riproduci anteprima' : lang === 'de' ? 'Hörprobe abspielen' : 'Play preview';
 const progressLabel = lang === 'it' ? 'Avanzamento trailer' : lang === 'de' ? 'Fortschritt der Hörprobe' : 'Trailer progress';
 ---
-<div class="trailer-player" data-src={src}>
+<div class="trailer-player" data-src={src} data-slug={slugDerived} data-lang={lang}>
   <div class="trailer-row">
     <button
       type="button"
@@ -173,6 +175,11 @@ const progressLabel = lang === 'it' ? 'Avanzamento trailer' : lang === 'de' ? 'F
     const cur = player.querySelector<HTMLElement>('.trailer-current')!;
     const dur = player.querySelector<HTMLElement>('.trailer-duration')!;
 
+    const guideSlug = player.dataset.slug || 'unknown';
+    const guideLang = player.dataset.lang || 'it';
+    let _started = false;
+    let _10sFired = false;
+
     audio.addEventListener('loadedmetadata', () => {
       dur.textContent = fmtTime(audio.duration);
     });
@@ -182,11 +189,20 @@ const progressLabel = lang === 'it' ? 'Avanzamento trailer' : lang === 'de' ? 'F
       const pct = (audio.currentTime / audio.duration) * 100;
       fill.style.width = `${pct}%`;
       cur.textContent = fmtTime(audio.currentTime);
+      if (!_10sFired && audio.currentTime >= 10) {
+        _10sFired = true;
+        if (typeof window.localisTrack === 'function') {
+          window.localisTrack('preview_10s', { guide_slug: guideSlug, language: guideLang, source: 'guide_page' });
+        }
+      }
     });
 
     audio.addEventListener('ended', () => {
       iconPlay.classList.remove('hidden');
       iconPause.classList.add('hidden');
+      if (typeof window.localisTrack === 'function') {
+        window.localisTrack('preview_complete', { guide_slug: guideSlug, language: guideLang, source: 'guide_page' });
+      }
     });
 
     toggle.addEventListener('click', () => {
@@ -200,11 +216,11 @@ const progressLabel = lang === 'it' ? 'Avanzamento trailer' : lang === 'de' ? 'F
           }
         });
         audio.play();
-        const guideName = player.dataset.src?.split('/').pop()?.replace('.mp3', '') || 'unknown';
-        if (typeof window.localisTrack === 'function') {
-          window.localisTrack('preview_played', { guide: guideName });
-        } else if (typeof window.plausible === 'function') {
-          window.plausible('Trailer Played', { props: { guide: guideName } });
+        if (!_started) {
+          _started = true;
+          if (typeof window.localisTrack === 'function') {
+            window.localisTrack('preview_start', { guide_slug: guideSlug, language: guideLang, source: 'guide_page', page: window.location.pathname });
+          }
         }
         iconPlay.classList.add('hidden');
         iconPause.classList.remove('hidden');
