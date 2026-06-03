@@ -1,4 +1,4 @@
----
+﻿---
 import { type Lang } from '../lib/i18n';
 
 export interface Author {
@@ -11,6 +11,7 @@ export interface Author {
   /** Bio breve (2-3 righe). Se vuoto: render placeholder. */
   bioIt?: string;
   bioEn?: string;
+  bioDe?: string;
   /** Iniziali per il fallback (es. "F.M."). Auto-derivate se manca. */
   initials?: string;
   /** Path foto B/W 3:4. Se vuoto: render silhouette tipografica. */
@@ -28,13 +29,13 @@ export interface Props {
 const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola VI - Gli autori' : lang === 'de' ? 'Tafel VI - Die Autoren' : 'Plate VI - The authors';
-const heading1 = lang === 'it' ? 'Cinque autori reali, una voce narrativa.' : lang === 'de' ? 'Sechs Autoren aus Bari.' : 'Six authors from Bari.';
-const heading2 = lang === 'it' ? 'Sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Stimmen, sechs Guides, ein Bari.' : 'Six voices, six guides, one Bari.';
+const heading1 = lang === 'it' ? 'Cinque autori reali, una voce narrativa.' : lang === 'de' ? 'Fünf reale Autoren, ein narratives Porträt.' : 'Five real authors, one narrative portrait.';
+const heading2 = lang === 'it' ? 'Sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Guides, ein Bari.' : 'Six guides, one Bari.';
 const intro = lang === 'it'
   ? 'Le guide di Bari nascono da esperienze reali e ricerca Localis. Quando parla una persona reale, la presentiamo come tale. Quando il racconto usa una voce narrativa, lo dichiariamo con la stessa chiarezza.'
   : lang === 'de'
-    ? 'Keine lizenzierten Stadtfuehrer, kein Wikipedia-Copy-and-paste. Stimmen, die aus gelebter Erfahrung, Recherche und redaktioneller Arbeit entstehen. Jeder Guide hat eine Stimme: Name, Gesicht, Geschichte.'
-    : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, face, story.';
+    ? 'Die Bari-Guides verbinden gelebte Erfahrung mit der Recherche von Localis. Wenn eine reale Person spricht, kennzeichnen wir sie als solche. Wenn eine Erzählung ein narratives Porträt nutzt, machen wir dies ebenso klar kenntlich.'
+    : 'The Bari guides combine lived experience and Localis research. When a real person speaks, we say so. When a story uses a narrative portrait, we declare it with the same clarity.';
 const draftBadge = lang === 'it' ? 'Profilo in arrivo' : lang === 'de' ? 'Profil folgt' : 'Profile coming';
 const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : lang === 'de' ? 'Portraet folgt' : 'Portrait coming';
 
@@ -50,6 +51,7 @@ const authors: Author[] = [
     photo: '/images/authors/domenico-loconsole.png',
     bioIt: 'Barese, cresciuto nel quartiere Libertà, a pochi passi dal borgo antico. Fondatore di Localis, racconta Bari Vecchia attraverso la sua storia, le sue pietre e il legame profondo che questo luogo conserva con l\'identità della città.',
     bioEn: 'From Bari, raised in the Libertà neighbourhood, a few steps from the old town. Founder of Localis, he tells the story of Bari Vecchia through its history, its stones, and the deep bond this place holds with the identity of the city.',
+    bioDe: 'In Bari geboren und im Viertel Libertà aufgewachsen, nur wenige Schritte von der Altstadt entfernt. Als Gründer von Localis erzählt Domenico Bari Vecchia durch ihre Geschichte, ihre Steine und die tiefe Verbindung, die dieser Ort bis heute mit der Identität der Stadt bewahrt.',
   },
   {
     guideTitle: 'Tre Teatri',
@@ -57,8 +59,9 @@ const authors: Author[] = [
     name: 'Filippo Bellomo',
     initials: 'F.B.',
     photo: '/images/authors/filippo-headshot.jpg',
-    bioIt: 'Quarant\'anni alla Camera di Commercio di Bari, dove lo conoscevano tutti. Padre di due figli, nonno di quattro nipoti. Murat per lui non è solo un quartiere — sono quarant\'anni di colleghi, caffè al banco, riunioni finite in pizzeria.',
-    bioEn: 'Forty years at the Bari Chamber of Commerce, where everyone knew his name. Father of two, grandfather of four. Murat isn\'t just a neighbourhood for him — it\'s forty years of colleagues, counter-bar coffees, meetings that ended in pizzerias.',
+    bioIt: 'Architetto, innamorato del liberty barese. Studia da anni i tre teatri che hanno trasformato Bari in città europea — il Petruzzelli, il Margherita, il Piccinni. Li racconta come se ci avesse vissuto dentro.',
+    bioEn: 'Architect, in love with Bari Liberty style. He has spent years studying the three theatres that turned Bari into a European city — the Petruzzelli, the Margherita, the Piccinni. He talks about them as if he had lived inside them.',
+    bioDe: 'Architekt, verliebt in den Liberty-Stil von Bari. Er studiert seit Jahren die drei Theater, die Bari zur europäischen Stadt gemacht haben — Petruzzelli, Margherita, Piccinni.',
   },
   {
     guideTitle: 'San Nicola',
@@ -66,8 +69,9 @@ const authors: Author[] = [
     name: 'Nonno Nicola',
     initials: 'N.N.',
     photo: '/images/authors/nonno-nicola.jpg',
-    bioIt: 'Ottantatré anni, cresciuto a Libertà nel dopoguerra — quartiere operaio, mercato, biciclette appoggiate ai muri. San Nicola è il santo che vedeva passare in processione da bambino, prima ancora di sapere cosa volesse dire "protettore".',
-    bioEn: 'Eighty-three years old, raised in Libertà in the post-war years — working-class quarter, market, bicycles leaning on walls. San Nicola is the saint he saw in procession as a child, before he even knew what "protector" meant.',
+    bioIt: 'Ottant\'anni, devoto di San Nicola da quando ne ha memoria. Ha visto sessant\'anni di processioni, conosce ogni cappella della Basilica, ogni reliquia, ogni leggenda.',
+    bioEn: 'Eighty years old, devoted to San Nicola for as long as he can remember. He has seen sixty years of processions, knows every chapel in the Basilica, every relic, every legend. He talks about the saint like a family member.',
+    bioDe: 'Achtzig Jahre alt, ein treuer Verehrer des heiligen Nikolaus. Er hat sechzig Jahre Prozessionen erlebt und kennt jede Kapelle der Basilika, jede Reliquie, jede Legende.',
   },
   {
     guideTitle: 'Il Meglio di Bari',
@@ -77,6 +81,7 @@ const authors: Author[] = [
     photo: '/images/authors/rachele-grande.jpg',
     bioIt: 'Barese, scherzosa, mai a tavola da sola. La voce dietro la guida sul cibo: focaccia, polpo, orecchiette, caffè. Ti porta dove mangia chi ci vive — non dove dice TripAdvisor.',
     bioEn: 'From Bari, playful, never eats alone. The voice behind the food guide: focaccia, octopus, orecchiette, coffee. She takes you where locals actually eat — not where TripAdvisor sends you.',
+    bioDe: 'Aus Bari, herzlich, nie allein am Tisch. Die Stimme hinter dem Food-Guide: Focaccia, Tintenfisch, Orecchiette, Kaffee. Sie führt Sie dorthin, wo Einheimische wirklich essen — nicht dorthin, wo TripAdvisor Sie hinschickt.',
   },
   {
     guideTitle: 'Porto di Bari',
@@ -86,6 +91,7 @@ const authors: Author[] = [
     photo: '/images/authors/luigi-loconsole.jpg',
     bioIt: 'Cinquantaquattro anni. Troppi passati in mare per contarli. Conosce il Porto dentro, fuori, sopra e sotto — e le feste che il lungomare ricorda meno di lui.',
     bioEn: 'Fifty-four. Too many years on the water to count. He knows the Port inside, outside, above and below — and the festivals the lungomare remembers worse than he does.',
+    bioDe: 'Vierundfünfzig Jahre. Zu viele davon auf dem Wasser, um sie zu zählen. Er kennt den Hafen von innen, außen, oben und unten — und die Feste, die der Lungomare weniger gut erinnert als er.',
   },
   {
     guideTitle: 'Bari Sotterranea',
@@ -94,8 +100,9 @@ const authors: Author[] = [
     initials: 'R.P.',
     photo: '/images/authors/rosa-perpetua.jpg',
     composite: true,
-    bioIt: 'Cinquant\'anni di servizio nella Basilica di San Nicola — a pulire, riordinare, ascoltare. Adesso in pensione, ma le pietre della cripta sa ancora ricordarle a memoria. Una pulita per volta.',
-    bioEn: 'Fifty years of service in the Basilica of San Nicola — cleaning, tidying, listening. Now retired, but she can still recall every stone of the crypt by heart. One wipe at a time.',
+    bioIt: 'Attraverso Rosa, Localis accompagna l\'ascoltatore nel sottosuolo di Bari, tra cripte, pietra e stratificazioni della città antica.',
+    bioEn: 'Through Rosa, Localis leads the listener beneath Bari, among crypts, stone and the layered remains of the ancient city.',
+    bioDe: 'Durch Rosa führt Localis die Zuhörenden in den Untergrund von Bari: zu Krypten, Stein und den historischen Schichten der alten Stadt.',
   },
 ];
 
@@ -120,7 +127,7 @@ function bioFor(a: Author): string {
     return a.bioIt ?? draftIt;
   }
   if (lang === 'de') {
-    return a.bioEn ?? draftDe;
+    return a.bioDe ?? draftDe;
   }
   return a.bioEn ?? draftEn;
 }

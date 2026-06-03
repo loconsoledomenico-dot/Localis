@@ -1,4 +1,4 @@
----
+﻿---
 import type { CollectionEntry } from 'astro:content';
 import type { Lang } from '../lib/i18n';
 import { formatDuration } from '../lib/format';
@@ -15,31 +15,31 @@ const chapterCount = guide.chapters.length;
 
 const copy = lang === 'it'
   ? {
-      heading: 'Che cos’è questa audioguida',
-      intro: 'Non ti guida da una tappa all’altra e non sostituisce una mappa: è un racconto del luogo, con storia, contesto e memoria locale. Puoi ascoltarlo sul posto, la sera sul divano prima di partire o dopo il viaggio.',
+      heading: 'Come ascoltarla',
+      intro: 'Puoi ascoltare questo racconto liberamente oppure, se indicato, partire dal punto consigliato e attraversare il luogo mentre la storia procede. Localis non è una navigazione turn-by-turn: per orientarti usa la mappa del telefono.',
       items: [
         { label: 'Durata', value: `${durationLabel}, ${chapterCount} capitoli` },
-        { label: 'Formato', value: 'Link permanente via email, senza app e senza account' },
-        { label: 'Ideale per', value: 'Capire meglio un luogo prima, durante o dopo il viaggio' },
+        { label: 'Accesso', value: 'Dopo l\'acquisto ricevi subito il link. Ascolta in streaming oppure salva offline durante la visita.' },
+        { label: 'Lingue', value: 'Indicate in ogni racconto' },
       ],
     }
   : lang === 'de'
     ? {
-        heading: 'Was dieser Audioguide ist',
-        intro: 'Er führt dich nicht von Station zu Station und ersetzt keine Karte: Er ist ein erzählter Zugang zu einem Ort, mit Geschichte, Kontext und lokaler Erinnerung. Du kannst ihn vor Ort hören, am Abend auf dem Sofa vor der Reise oder danach.',
+        heading: 'So hoerst du die Erzaehlung',
+        intro: 'Du kannst sie frei anhoeren oder, falls angegeben, am empfohlenen Startpunkt beginnen und den Ort durchqueren, waehrend sich die Geschichte entfaltet. Localis ist keine Turn-by-Turn-Navigation: Nutze die Karte deines Telefons zur Orientierung.',
         items: [
           { label: 'Dauer', value: `${durationLabel}, ${chapterCount} Kapitel` },
-          { label: 'Format', value: 'Dauerhafter Link per E-Mail, ohne App und ohne Konto' },
-          { label: 'Ideal für', value: 'Einen Ort vor, während oder nach der Reise besser zu verstehen' },
+          { label: 'Zugang', value: 'Nach dem Kauf erhaeltst du sofort den Link. Du kannst sie streamen oder fuer das Offline-Hoeren speichern.' },
+          { label: 'Sprachen', value: 'Bei jeder Erzaehlung angegeben' },
         ],
       }
     : {
-        heading: 'How to use this audio guide',
-        intro: 'It works as a self-guided walking tour: open it on your phone, walk at your own pace, and listen on location. It also works before or after the trip.',
+        heading: 'How to listen',
+        intro: "You can listen freely, or, where indicated, begin from the suggested starting point and walk through the place as the story unfolds. Localis is not turn-by-turn navigation: use your phone map to find your way.",
         items: [
           { label: 'Runtime', value: `${durationLabel}, ${chapterCount} chapters` },
-          { label: 'Format', value: 'Permanent email link, no app and no account' },
-          { label: 'Best for', value: 'A self-guided walk, travel prep, or listening again after the visit' },
+          { label: 'Access', value: 'After purchase, you receive an immediate link. Stream it or save it for offline listening during your visit.' },
+          { label: 'Languages', value: 'Shown for each story' },
         ],
       };
 ---
