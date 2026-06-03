@@ -1,4 +1,4 @@
----
+﻿---
 import { type Lang } from '../lib/i18n';
 import LangPills from './LangPills.astro';
 import HeroAudioSample from './HeroAudioSample.astro';
@@ -13,22 +13,24 @@ const { lang, currentPath = '/' } = Astro.props;
 const masthead_l = lang === 'de' ? 'Ausgabe 01 — Apulien' : lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
 const masthead_r = lang === 'de' ? 'Veröffentlichte Audioguides · Apulien' : lang === 'it' ? 'Guide pubblicate · Puglia' : 'Published guides · Puglia';
 
-const heading1a = lang === 'de' ? 'Narrative Audioguides, um Apulien besser zu verstehen — auch schon vor der Reise.' : lang === 'it' ? 'Audioguide narrative per capire la Puglia, anche prima di partire.' : 'Self-guided audio tours of Puglia, right on your phone.';
-const heading1b = '';
+const heading1a = lang === 'de' ? 'Sehen ist einfach.' : lang === 'it' ? 'Vedere è facile.' : 'Seeing is easy.';
+const heading1b = lang === 'de' ? 'Verstehen ist etwas anderes.' : lang === 'it' ? "Capire è un'altra cosa." : 'Understanding is another story.';
 
-const lede1 = lang === 'de'
-  ? 'Geschichten über Orte, Geschichte und lokale Erinnerung — mit überprüfbaren Quellen.'
-  : lang === 'it'
-  ? 'Bari, Valle d’Itria, Gargano: racconti dei luoghi, tra storia, memoria e fonti verificabili.'
-  : 'Bari, Valle d’Itria and Gargano: routes, true stories and verifiable sources.';
-const lede2 = lang === 'de'
-  ? 'Keine App, kein Konto: Link öffnen, Play drücken, zuhören.'
-  : lang === 'it'
-  ? 'Niente app, niente account: compri, apri il link, premi play.'
-  : 'No app, no account: buy, open the link, press play.';
+const lede1 = lang === "de"
+  ? `Dokumentierte Audioerzaehlungen ueber Bari, das Itria-Tal und den Gargano — vor Ort oder schon vor der Reise.`
+  : lang === "it"
+  ? `Racconti audio documentati per ascoltare Bari, la Valle d'Itria e il Gargano sul posto o prima di partire.`
+  : `Documented audio stories for experiencing Bari, the Itria Valley and Gargano on site or before you travel.`;
+const lede2 = lang === "de"
+  ? `Keine App erforderlich: Waehle eine Erzaehlung, hoere die kostenlose Vorschau und entdecke, was dieser Ort wirklich bedeutet.`
+  : lang === "it"
+  ? `Nessuna app: scegli una guida, ascolta l'anteprima gratuita e porta con te cio che il luogo significa davvero.`
+  : `No app required: choose a story, listen to the free preview and take away what the place truly means.`;
 
-const ctaPrimary = lang === 'de' ? 'Guide auswählen' : lang === 'it' ? 'Scegli la tua audioguida' : 'Choose your audio guide';
-const ctaPrimaryHref = lang === 'de' ? '/de/guide' : lang === 'it' ? '/guide' : '/en/guide';
+const ctaPrimary = lang === "de" ? "1 Minute kostenlos anhoeren" : lang === "it" ? "Ascolta 1 minuto gratis" : "Listen to a free 1-minute preview";
+const ctaPrimaryHref = lang === "de" ? "/de/bari/" : lang === "it" ? "/bari/" : "/en/bari/";
+const ctaSecondary = lang === "de" ? "Erzaehlungen entdecken" : lang === "it" ? "Scopri le guide" : "Explore the stories";
+const ctaSecondaryHref = lang === "de" ? "/de/guide" : lang === "it" ? "/guide" : "/en/guide";
 
 const quickPrice = lang === 'de' ? 'Ab 4,99 EUR' : lang === 'it' ? 'Da 4,99 EUR' : 'From EUR 4.99';
 const quickBundle = lang === 'de' ? 'Pacchetti da 3, 6 o tutte le 18 guide' : lang === 'it' ? 'Pack da 3, 6 o tutte e 18 le guide' : 'Bundles of 3, 6, or all 18 guides';
@@ -92,31 +94,19 @@ const altText = lang === 'de'
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
         {ctaPrimary}
       </a>
-      {lang === 'it' && (
-        <a
-          href="/crocieristi"
-          class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-full font-semibold text-xs border border-ink/30 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[40px] backdrop-blur-sm"
-        >
-          ⚓ Sei in crociera? Pacchetto dedicato
-        </a>
-      )}
-      {lang === 'en' && (
-        <a
-          href="/en/cruise"
-          class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-full font-semibold text-xs border border-ink/30 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[40px] backdrop-blur-sm"
-        >
-          ⚓ On a cruise? Dedicated package
-        </a>
-      )}
-      {lang === 'de' && (
-        <a
-          href="/de/kreuzfahrt"
-          class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-full font-semibold text-xs border border-ink/30 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[40px] backdrop-blur-sm"
-        >
-          ⚓ Auf Kreuzfahrt? Spezielles Paket
-        </a>
-      )}
+      <a
+        href={ctaSecondaryHref}
+        class="inline-flex items-center justify-center gap-xs px-md py-sm rounded-md font-semibold text-sm border border-ink/40 text-ink bg-surface/80 hover:bg-surface transition-[background-color,transform] duration-fast hover:-translate-y-[1px] active:translate-y-0 no-underline min-h-[48px] backdrop-blur-sm"
+      >
+        {ctaSecondary}
+      </a>
     </div>
+    {/* Cruise note: demoted below main CTAs, never at same visual level */}
+    <p class="hero-cruise-note mt-md text-xs text-ink-muted max-w-[42ch] m-0">
+      {lang === 'it' && <><a href="/crocieristi" class="underline underline-offset-4 hover:text-accent transition-colors">Sei in crociera?</a> Pacchetto dedicato per chi ha poche ore a terra.</>}
+      {lang === 'en' && <><a href="/en/cruise" class="underline underline-offset-4 hover:text-accent transition-colors">On a cruise?</a> Dedicated package for short stopovers.</>}
+      {lang === 'de' && <><a href="/de/kreuzfahrt" class="underline underline-offset-4 hover:text-accent transition-colors">Auf Kreuzfahrt?</a> Spezielles Paket für kurze Landgänge.</>}
+    </p>
     {lang === 'it' && (
       <p class="hero-cruise-note mt-sm text-xs text-ink-muted max-w-[36ch] m-0">
         Per chi ha solo 4 o 5 ore a terra: 2 audioguide brevi, a piedi dal Terminal Crociere.
