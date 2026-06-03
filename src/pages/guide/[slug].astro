@@ -86,7 +86,7 @@ ld.push(productLD({
   language: 'it',
 }));
 ---
-<Layout title={`${data.title_it} · Localis`} description={data.seo.description_it} lang="it" ogImage={`/og/og-${data.slug}.jpg`}>
+<Layout title={`Audioguida ${data.title_it} | Localis`} description={data.seo.description_it} lang="it" ogImage={`/og/og-${data.slug}.jpg`}>
   <StructuredData data={ld} />
   {(() => { const dest = CITY_DEST[data.city]; return dest ? <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: dest.label, href: dest.href }, { label: data.title_it }]} /> : <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: data.title_it }]} />; })()}
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">

@@ -76,3 +76,19 @@
   to = "https://localis.guide/:splat"
   status = 301
   force = true
+
+# InfoPoint landing: noindex via headers (destinata al QR, non al ranking)
+[[headers]]
+  for = "/p/infopoint-bari/"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/en/p/infopoint-bari/"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/de/p/infopoint-bari/"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
