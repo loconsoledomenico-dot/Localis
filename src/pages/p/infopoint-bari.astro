@@ -1,0 +1,254 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import HeroAudioSample from '../../components/HeroAudioSample.astro';
+import PriceCard from '../../components/PriceCard.astro';
+import { getCollection } from 'astro:content';
+
+const BARI_SLUGS = [
+  'bari-vecchia',
+  'san-nicola',
+  'il-meglio-di-bari',
+  'porto-bari',
+  'tre-teatri',
+  'bari-sotterranea',
+] as const;
+
+const allGuides = await getCollection('guides');
+const guides = BARI_SLUGS
+  .map((s) => allGuides.find((g) => g.data.slug === s))
+  .filter(Boolean);
+
+// Hook approvati dal brief Fase 2 §5.7
+const hooks: Record<string, string> = {
+  'bari-vecchia':      'Oggi la chiamiamo città vecchia. Per secoli era tutta Bari.',
+  'san-nicola':        'Il viaggio che trasformò Bari in una meta del mondo cristiano.',
+  'il-meglio-di-bari': 'Focaccia, polpo, orecchiette e caffè: il cibo come modo di stare insieme.',
+  'porto-bari':        'Il mare come strada, confine e destino della città.',
+  'tre-teatri':        'Quando Bari volle diventare una città europea.',
+  'bari-sotterranea':  'Cripte, cisterne e pietra: la città che continua sotto i tuoi passi.',
+};
+
+function fmtMin(seconds: number) {
+  return Math.round(seconds / 60);
+}
+
+// Lingue audio reali: bari-vecchia ha DE, le altre no (nessuna duration_seconds_de)
+function langs(g: typeof guides[number]) {
+  if (!g) return 'IT · EN';
+  const d = g.data as any;
+  return d.duration_seconds_de ? 'IT · EN · DE' : 'IT · EN';
+}
+
+const lang = 'it';
+---
+
+<Layout
+  title="6 Racconti Audio di Bari | Localis — InfoPoint"
+  description="Bari Vecchia, San Nicola, il porto, il cibo, i teatri e la città sotterranea: sei racconti audio da ascoltare mentre cammini. Nessuna app. Da €4,99."
+  lang="it"
+  langUrlsOverride={{ it: '/p/infopoint-bari/', en: '/en/p/infopoint-bari/', de: '/de/p/infopoint-bari/' }}
+>
+
+  <!-- TODO Commit G: aggiungere noindex a Layout oppure via netlify.toml per questa route -->
+
+  {/* ── HERO ── */}
+  <section class="infopoint-hero relative overflow-hidden bg-surface">
+    <img
+      src="/images/covers/bari-vecchia.jpg"
+      alt="Vicoli di Bari Vecchia"
+      class="absolute inset-0 w-full h-full object-cover object-center saturate-90"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-surface/90 via-surface/65 to-surface/10 pointer-events-none" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          6 RACCONTI AUDIO DI BARI
+        </span>
+      </div>
+
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
+        Bari è davanti a te.<br />
+        <em class="font-light not-italic text-accent">Capirla è un'altra cosa.</em>
+      </h1>
+
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
+        Bari Vecchia, San Nicola, il porto, il cibo, i teatri e la città sotterranea: sei racconti audio da ascoltare mentre cammini. Nessuna app.
+      </p>
+
+      <div class="mt-lg">
+        <HeroAudioSample
+          lang="it"
+          src="/audio/trailers/bari/bari-vecchia.mp3"
+          guideSlug="bari-vecchia"
+        />
+        <p class="font-body text-xs text-ink-subtle mt-sm max-w-[46ch]">
+          Lingue indicate in ogni racconto · Ascolta in streaming oppure salva offline dopo l'acquisto
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ── 6 GUIDE CARD ── */}
+  <section class="bg-surface py-3xl lg:py-4xl" aria-label="Le sei guide di Bari">
+    <div class="max-w-wrap mx-auto px-md">
+
+      <div class="mb-2xl">
+        <div class="flex items-center gap-sm mb-md">
+          <span class="block w-7 h-px bg-accent"></span>
+          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-ink-subtle">
+            Scegli il tuo racconto
+          </span>
+        </div>
+        <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.6rem)] leading-tight tracking-[-0.01em] max-w-[28ch]">
+          Sei modi di capire la stessa città.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-xl gap-y-2xl">
+        {guides.map((g) => {
+          if (!g) return null;
+          const d = g.data as any;
+          const slug: string = d.slug;
+          const title: string = d.title_it;
+          const hook = hooks[slug] || '';
+          const min = fmtMin(d.duration_seconds);
+          const price = ((d.price_cents ?? 499) / 100).toFixed(2).replace('.', ',');
+          const langLabel = langs(g);
+
+          return (
+            <article class="guide-card border-t border-border pt-md flex flex-col gap-sm">
+              <div class="flex items-start justify-between gap-sm">
+                <h3 class="font-display font-light text-ink text-[1.15rem] leading-snug">{title}</h3>
+              </div>
+              <p class="font-body text-sm text-ink-muted leading-relaxed max-w-[38ch]">{hook}</p>
+              <div class="flex flex-wrap gap-xs mt-auto pt-sm">
+                <span class="meta-pill">{min} min</span>
+                <span class="meta-pill">{langLabel}</span>
+                <span class="meta-pill font-semibold text-accent">€{price}</span>
+              </div>
+              <a
+                href={`/guide/${slug}/`}
+                class="inline-flex items-center justify-center gap-xs px-md py-sm bg-accent text-white rounded font-semibold text-sm hover:bg-accent/90 transition-colors min-h-[44px] mt-xs"
+              >
+                Ascolta l'anteprima
+              </a>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  {/* ── PACK ── */}
+  <section class="bg-surface-elev border-t border-border py-3xl" aria-label="Acquista tutte le guide di Bari">
+    <div class="max-w-narrow mx-auto px-md text-center">
+      <h2 class="font-display font-light text-ink text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight tracking-[-0.01em] mb-sm">
+        Tutte e sei le guide di Bari
+      </h2>
+      <p class="font-body text-base text-ink-muted mb-xl max-w-[44ch] mx-auto">
+        Un racconto completo sulla città, dall'inizio alla fine.
+      </p>
+      <PriceCard
+        product="bari-completa"
+        lang="it"
+        primary={true}
+        features={[
+          'Tutte e 6 le guide di Bari',
+          'Bari Vecchia, San Nicola, Porto, Cibo, Teatri, Sotterranea',
+          'Accesso illimitato, per sempre',
+          'Italiano e inglese (tedesco su Bari Vecchia)',
+          'Rimborso 1-click entro 24h',
+        ]}
+      />
+    </div>
+  </section>
+
+  {/* ── PROVE DI FIDUCIA ── */}
+  <section class="bg-surface border-t border-border py-2xl">
+    <div class="max-w-narrow mx-auto px-md flex flex-col sm:flex-row gap-xl items-start sm:items-center justify-between">
+      <p class="font-body text-sm text-ink-muted leading-relaxed max-w-[42ch]">
+        Racconti costruiti attraverso ricerca e fonti Localis.<br />
+        Autori reali e ritratti narrativi sono dichiarati in ogni guida.
+      </p>
+      <div class="flex gap-md flex-shrink-0">
+        <a href="/metodo/" class="font-body text-sm font-semibold text-ink underline underline-offset-4 hover:text-accent transition-colors">
+          Scopri il metodo
+        </a>
+        <a href="/fonti/" class="font-body text-sm font-semibold text-ink underline underline-offset-4 hover:text-accent transition-colors">
+          Consulta le fonti
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ── TRACKING: landing_view + qr_landing_view ── */}
+  <script is:inline>
+    (function () {
+      try {
+        var lang = 'it';
+        var path = window.location.pathname;
+        var utm = {};
+        try { utm = JSON.parse(sessionStorage.getItem('localis_utm') || '{}'); } catch (e) {}
+
+        function track(name, params) {
+          if (typeof window.localisTrack === 'function') {
+            window.localisTrack(name, params);
+          } else {
+            // Plausible fallback pre-consent
+            try { window.plausible && window.plausible(name, { props: params }); } catch (e) {}
+          }
+        }
+
+        track('landing_view', {
+          page: path,
+          language: lang,
+          source: utm.utm_source || '(direct)',
+          campaign: utm.utm_campaign || '',
+        });
+
+        if (utm.utm_medium === 'qr') {
+          track('qr_landing_view', {
+            partner_id: utm.utm_source || '(direct)',
+            placement: utm.utm_content || '',
+            campaign: utm.utm_campaign || '',
+            language: lang,
+          });
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+</Layout>
+
+<style>
+  .infopoint-hero {
+    min-height: clamp(480px, 72vh, 760px);
+    display: flex;
+    align-items: center;
+  }
+
+  .meta-pill {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-ink-subtle);
+    background: var(--color-surface-elev);
+    border: 1px solid var(--color-border);
+    padding: 3px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .guide-card {
+    min-height: 260px;
+  }
+</style>
