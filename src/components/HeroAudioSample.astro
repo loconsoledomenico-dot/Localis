@@ -9,10 +9,10 @@ export interface Props {
 const { lang, src = '/audio/trailers/hero-sample.mp3' } = Astro.props;
 
 const label = lang === 'de'
-  ? 'Hörprobe · 30 Sek · gratis'
+  ? 'Hörprobe · 1 Min · gratis'
   : lang === 'it'
-    ? 'Ascolta un assaggio · 30 sec · gratis'
-    : 'Listen to a sample · 30 sec · free';
+    ? 'Ascolta un assaggio · 1 min · gratis'
+    : 'Listen to a sample · 1 min · free';
 
 const playLabel = lang === 'de' ? 'Abspielen' : lang === 'it' ? 'Play' : 'Play';
 const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Pause';
