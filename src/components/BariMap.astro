@@ -11,10 +11,10 @@ const eyebrow = lang === 'it' ? 'Tavola IV — I luoghi' : lang === 'de' ? 'Tafe
 const heading1 = lang === 'it' ? 'Le storie del centro.' : lang === 'de' ? 'Geschichten aus dem Zentrum.' : 'The stories of the centre.';
 const heading2 = lang === 'it' ? 'Un itinerario alla volta.' : lang === 'de' ? 'Eine Erzählung nach der anderen.' : 'One route at a time.';
 const intro = lang === 'it'
-  ? 'Sei voci baresi. Dalla città di pietra al porto, dai teatri ai sotterranei: ogni itinerario è firmato da chi quei posti li ha vissuti da bambino. Tocca un riquadro per ascoltare.'
+  ? 'Sei racconti tra città vecchia, porto, teatri e sotterranei: cinque nati dal contributo di persone reali coinvolte nel progetto, uno costruito come ritratto narrativo dichiarato. Tocca un riquadro per ascoltare.'
   : lang === 'de'
-  ? 'Sechs Stimmen aus Bari. Von der steinernen Altstadt bis zum Hafen, von den Theatern bis in den Untergrund: Jede Audioerzählung stammt von jemandem, der diese Orte seit der Kindheit kennt. Tippe auf eine Karte, um mehr zu erfahren.'
-  : 'Six Bari voices. From the stone old town to the port, from the theatres to the underground city: every route is signed by someone who lived those places as a child. Tap a tile to listen.';
+  ? 'Sechs Erzählungen über Altstadt, Hafen, Theater und den Untergrund von Bari: fünf entstanden mit dem Beitrag realer am Projekt beteiligter Personen, eine ist ein klar gekennzeichnetes narratives Porträt. Tippe auf eine Karte, um mehr zu erfahren.'
+  : 'Six stories across the old town, the port, theatres and underground Bari: five shaped with the contribution of real people involved in the project, one created as a clearly declared narrative portrait. Tap a tile to listen.';
 
 interface Place {
   slug: string;
@@ -34,7 +34,7 @@ const places: Place[] = lang === 'it'
       {
         slug: 'bari-vecchia',
         title: 'Bari Vecchia — Dentro la Città',
-        duration: '21 min',
+        duration: '32 min',
         quartiere: 'Borgo Antico',
         startsAt: 'Strada delle Crociate',
         cover: '/images/covers/bari-vecchia.jpg',
@@ -84,7 +84,7 @@ const places: Place[] = lang === 'it'
       {
         slug: 'bari-sotterranea',
         title: 'Bari Sotterranea — Quello che sta sotto',
-        duration: '25 min',
+        duration: '26 min',
         quartiere: 'Borgo Antico',
         startsAt: 'Basilica di San Nicola',
         cover: '/images/covers/bari-sotterranea-v2.jpg',
@@ -97,7 +97,7 @@ const places: Place[] = lang === 'it'
       {
         slug: 'bari-vecchia',
         title: 'Bari Vecchia — In der Altstadt',
-        duration: '21 min',
+        duration: '33 min',
         quartiere: 'Altstadt',
         startsAt: 'Strada delle Crociate',
         cover: '/images/covers/bari-vecchia.jpg',
@@ -147,7 +147,7 @@ const places: Place[] = lang === 'it'
       {
         slug: 'bari-sotterranea',
         title: 'Bari unter der Erde — Was darunter liegt',
-        duration: '25 min',
+        duration: '26 min',
         quartiere: 'Altstadt',
         startsAt: 'Basilika San Nicola',
         cover: '/images/covers/bari-sotterranea-v2.jpg',
@@ -159,7 +159,7 @@ const places: Place[] = lang === 'it'
       {
         slug: 'bari-vecchia',
         title: 'Old Bari — Inside the City',
-        duration: '21 min',
+        duration: '31 min',
         quartiere: 'Old town',
         startsAt: 'Strada delle Crociate',
         cover: '/images/covers/bari-vecchia.jpg',
@@ -209,7 +209,7 @@ const places: Place[] = lang === 'it'
       {
         slug: 'bari-sotterranea',
         title: 'Underground Bari — What Lies Beneath',
-        duration: '25 min',
+        duration: '26 min',
         quartiere: 'Old town',
         startsAt: 'Basilica di San Nicola',
         cover: '/images/covers/bari-sotterranea-v2.jpg',

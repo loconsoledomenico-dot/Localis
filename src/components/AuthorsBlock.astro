@@ -29,13 +29,13 @@ export interface Props {
 const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola VI - Gli autori' : lang === 'de' ? 'Tafel VI - Die Autoren' : 'Plate VI - The authors';
-const heading1 = lang === 'it' ? 'Cinque autori reali, una voce narrativa.' : lang === 'de' ? 'Fünf reale Autoren, ein narratives Porträt.' : 'Five real authors, one narrative portrait.';
-const heading2 = lang === 'it' ? 'Sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Guides, ein Bari.' : 'Six guides, one Bari.';
+const heading1 = lang === 'it' ? 'Cinque persone reali coinvolte nel progetto, un ritratto narrativo dichiarato.' : lang === 'de' ? 'Fünf reale Personen am Projekt beteiligt, ein klar gekennzeichnetes narratives Porträt.' : 'Five real people involved in the project, one declared narrative portrait.';
+const heading2 = lang === 'it' ? 'Sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Erzählungen, ein Bari.' : 'Six stories, one Bari.';
 const intro = lang === 'it'
-  ? 'Le guide di Bari nascono da esperienze reali e ricerca Localis. Quando parla una persona reale, la presentiamo come tale. Quando il racconto usa una voce narrativa, lo dichiariamo con la stessa chiarezza.'
+  ? 'Le guide di Bari nascono dal contributo di persone reali coinvolte nel progetto e dalla ricerca Localis. Una guida utilizza un ritratto narrativo dichiarato. Tutte le narrazioni audio sono generate con ElevenLabs: le persone, la ricerca e la responsabilità editoriale restano reali; la voce ascoltata è sintetica.'
   : lang === 'de'
-    ? 'Die Bari-Guides verbinden gelebte Erfahrung mit der Recherche von Localis. Wenn eine reale Person spricht, kennzeichnen wir sie als solche. Wenn eine Erzählung ein narratives Porträt nutzt, machen wir dies ebenso klar kenntlich.'
-    : 'The Bari guides combine lived experience and Localis research. When a real person speaks, we say so. When a story uses a narrative portrait, we declare it with the same clarity.';
+    ? 'Die Bari-Erzählungen entstehen aus der Recherche von Localis und dem Beitrag realer Personen, die am Projekt beteiligt sind. Eine Erzählung verwendet ein klar gekennzeichnetes narratives Porträt. Sämtliche Audiostimmen werden mit ElevenLabs erzeugt: Die Menschen, die Recherche und die redaktionelle Verantwortung sind real; die hörbare Stimme ist synthetisch.'
+    : 'The Bari stories grow from Localis research and the contribution of real people involved in the project. One story uses a clearly declared narrative portrait. All audio narration is generated with ElevenLabs: the people, research and editorial responsibility are real; the voice you hear is synthetic.';
 const draftBadge = lang === 'it' ? 'Profilo in arrivo' : lang === 'de' ? 'Profil folgt' : 'Profile coming';
 const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : lang === 'de' ? 'Portraet folgt' : 'Portrait coming';
 
@@ -79,9 +79,9 @@ const authors: Author[] = [
     name: 'Rachele Grande',
     initials: 'R.G.',
     photo: '/images/authors/rachele-grande.jpg',
-    bioIt: 'Barese, scherzosa, mai a tavola da sola. La voce dietro la guida sul cibo: focaccia, polpo, orecchiette, caffè. Ti porta dove mangia chi ci vive — non dove dice TripAdvisor.',
-    bioEn: 'From Bari, playful, never eats alone. The voice behind the food guide: focaccia, octopus, orecchiette, coffee. She takes you where locals actually eat — not where TripAdvisor sends you.',
-    bioDe: 'Aus Bari, herzlich, nie allein am Tisch. Die Stimme hinter dem Food-Guide: Focaccia, Tintenfisch, Orecchiette, Kaffee. Sie führt Sie dorthin, wo Einheimische wirklich essen — nicht dorthin, wo TripAdvisor Sie hinschickt.',
+    bioIt: 'Barese, scherzosa, mai a tavola da sola. Racconta il cibo di Bari come gesto quotidiano, tra focaccia, polpo, orecchiette e caffè.',
+    bioEn: 'From Bari, playful, never eats alone. She tells the story of Bari food as everyday gesture: focaccia, octopus, orecchiette, coffee.',
+    bioDe: 'Aus Bari, herzlich, nie allein am Tisch. Sie erzählt das Essen in Bari als alltägliche Geste: Focaccia, Tintenfisch, Orecchiette, Kaffee.',
   },
   {
     guideTitle: 'Porto di Bari',
@@ -141,10 +141,10 @@ function photoNoteFor(a: Author): string {
         : 'Narrative portrait. Created from Localis research and sources.';
   }
   return lang === 'it'
-    ? 'Persona reale. Ritratto dell\'autore.'
+    ? 'Persona reale coinvolta nel progetto Localis.'
     : lang === 'de'
-      ? 'Reale Person. Autorenportraet.'
-      : 'Real person. Author portrait.';
+      ? 'Reale Person, am Projekt Localis beteiligt.'
+      : 'Real person involved in the Localis project.';
 }
 
 function photoTitleFor(a: Author): string {

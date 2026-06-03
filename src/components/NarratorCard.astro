@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { name, photo, bio, lang } = Astro.props;
-const eyebrow = lang === 'it' ? 'Voce di questa guida' : 'Voice of this guide';
+const eyebrow = lang === 'it' ? 'Dietro questo racconto' : lang === 'de' ? 'Hinter dieser Erzählung' : 'Behind this story';
 const realNarrators = new Set(['Domenico', 'Domenico Loconsole', 'Filippo', 'Filippo Bellomo', 'Nonno Nicola', 'Rachele Grande', 'Luigi', 'Luigi Loconsole']);
 const isComposite = !realNarrators.has(name);
 const photoNote = isComposite
@@ -19,10 +19,10 @@ const photoNote = isComposite
       ? 'Narratives Porträt. Auf Grundlage der Recherchen und Quellen von Localis gestaltet.'
       : 'Narrative portrait. Created from Localis research and sources.'
   : lang === 'it'
-    ? 'Persona reale. Ritratto dell\'autore.'
+    ? 'Persona reale coinvolta nel progetto Localis.'
     : lang === 'de'
-      ? 'Reale Person. Autorenporträt.'
-      : 'Real person. Author portrait.';
+      ? 'Reale Person, am Projekt Localis beteiligt.'
+      : 'Real person involved in the Localis project.';
 const photoTitle = isComposite
   ? lang === 'it'
     ? `${name}: ritratto narrativo costruito su ricerca e fonti Localis.`
@@ -30,10 +30,10 @@ const photoTitle = isComposite
       ? `${name}: narratives Porträt auf Grundlage der Recherchen und Quellen von Localis.`
       : `${name}: narrative portrait created from Localis research and sources.`
   : lang === 'it'
-    ? `${name}: persona reale e voce della guida.`
+    ? `${name}: persona reale coinvolta nel progetto Localis.`
     : lang === 'de'
-      ? `${name}: reale Person und Stimme des Guides.`
-      : `${name}: real person and voice of the guide.`;
+      ? `${name}: reale Person, am Projekt Localis beteiligt.`
+      : `${name}: real person involved in the Localis project.`;
 ---
 <aside class="narrator-card">
   <span class="narrator-eyebrow">{eyebrow}</span>
