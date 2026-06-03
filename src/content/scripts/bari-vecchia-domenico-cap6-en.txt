@@ -1,0 +1,124 @@
+Now stop near the Cathedral of San Sabino.
+<break time="1s"/>
+
+Many visitors come to Bari for San Nicola, and that's understandable.
+<break time="0.8s"/>
+
+But before the Basilica, before the arrival of the saint from Myra, Bari already had its own religious center and its own Christian history.
+<break time="0.5s"/>
+
+The Cathedral dedicated to San Sabino is part of this older memory.
+<break time="1s"/>
+
+Look at it.
+<break time="1.2s"/>
+
+Here too, the pale stone, the arches, the austere forms of Apulian Romanesque speak of a city that needed no excessive ornamentation to express its strength.
+<break time="1.2s"/>
+
+But what is hard to imagine today is how many churches there were inside ancient Bari.
+<break time="0.8s"/>
+
+The sources speak of dozens of religious buildings.
+<break time="1s"/>
+
+<prosody rate="88%">Large churches,
+<break time="0.4s"/>
+small churches,
+<break time="0.4s"/>
+monasteries,
+<break time="0.4s"/>
+chapels,
+<break time="0.4s"/>
+places of worship linked to families, guilds, and different communities.</prosody>
+<break time="1.2s"/>
+
+If we could see Bari at the height of the Middle Ages, we would probably feel as though we were inside a city clad in sacred stone.
+<break time="0.5s"/>
+
+A continuous weaving of houses and bell towers, alleyways and altars, courtyards and processions.
+<break time="1.5s"/>
+
+But don't picture a silent city, forever immersed in prayer.
+<break time="0.8s"/>
+
+Religion was mixed into daily life.
+<break time="1s"/>
+
+<prosody rate="88%">Around the churches, people met,
+<break time="0.4s"/>
+documents were signed,
+<break time="0.4s"/>
+promises were made,
+<break time="0.4s"/>
+weddings were celebrated,
+<break time="0.4s"/>
+the dead were escorted,
+<break time="0.4s"/>
+protection was sought from illness,
+<break time="0.4s"/>
+help was asked for when the sea didn't bring a man back, or when a family had nothing left to live on.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">In Bari, the sacred was not outside of life.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">It was inside it.</emphasis></prosody>
+<break time="1.5s"/>
+
+Inside the Cathedral is also one of the most significant images of Bari's connection to the East: the Odegitria, the Madonna who points the way.
+<break time="0.8s"/>
+
+Her very name comes from a Byzantine tradition.
+<break time="0.8s"/>
+
+And it's hard not to think that this city, accustomed for centuries to looking toward the far shore of the sea, recognized in that image something deeply its own.
+<break time="1.2s"/>
+
+<prosody rate="88%">Bari was Latin and Greek,
+<break time="0.4s"/>
+Western and Eastern,
+<break time="0.4s"/>
+tied to Rome, yet crossed for centuries by influences arriving from the other side of the Adriatic and the Mediterranean.</prosody>
+<break time="1s"/>
+
+San Nicola would make this connection even more visible.
+<break time="0.5s"/>
+
+But he didn't invent it.
+<break time="0.5s"/>
+
+The city already carried it within.
+<break time="1.5s"/>
+
+So when you walk between the Cathedral and the Basilica, you're not simply passing from one beautiful church to another.
+<break time="0.8s"/>
+
+You're moving between two souls of the city.
+<break time="1.2s"/>
+
+San Sabino tells the story of the oldest Bari — the episcopal seat, the continuity of its history.
+<break time="0.5s"/>
+
+San Nicola tells the story of the Bari that, thanks to the saint who arrived by sea, became a universal destination for pilgrims.
+<break time="1s"/>
+
+Between the two, in the alleyways, the real city continues to live.
+<break time="0.5s"/>
+
+The one made of families, workshops, words, bread, open doors, and people who never needed to separate faith from their daily routine.
+<break time="1.5s"/>
+
+Now head toward Piazza Mercantile.
+<break time="0.8s"/>
+
+There we'll see a different Bari.
+<break time="0.5s"/>
+
+Not the one of the saint,
+<break time="0.4s"/>
+
+not the one of the walls.
+<break time="0.5s"/>
+
+<prosody rate="88%">But the one of trade, of the market, and of public shame.</prosody>

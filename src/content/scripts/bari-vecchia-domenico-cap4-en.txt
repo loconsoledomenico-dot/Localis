@@ -1,0 +1,124 @@
+Now walk along the city wall, with the sea beside you.
+<break time="1s"/>
+
+This is one of the most beautiful walks in Bari.
+<break time="0.8s"/>
+
+But to truly understand it, you need to mentally remove something: the modern road that runs below the walls today.
+<break time="0.8s"/>
+
+Imagine it doesn't exist.
+<break time="1s"/>
+
+Imagine the city's stone ending almost directly in the water.
+<break time="1s"/>
+
+<prosody rate="88%">No cars,
+<break time="0.4s"/>
+no asphalt strip,
+<break time="0.4s"/>
+no comfortable distance between the borough and the sea.
+<break time="0.8s"/>
+Just the wall.
+<break time="0.6s"/>
+Below, the Mediterranean.
+<break time="0.6s"/>
+Behind, the whole city.</prosody>
+<break time="2s"/>
+
+Today we look at the sea and think of beauty.
+<break time="0.8s"/>
+
+For ancient Bari, the sea was much more.
+<break time="0.8s"/>
+
+It was the main road.
+<break time="0.8s"/>
+
+<prosody rate="88%">From there came grain, goods, money, news, pilgrims.
+<break time="0.5s"/>
+From there could also come raiders, soldiers, disease, storms, and death.</prosody>
+<break time="1s"/>
+
+The sea gave life.
+<break time="0.5s"/>
+
+But it was never completely innocent.
+<break time="1.5s"/>
+
+That is why the city was protected by walls.
+<break time="0.5s"/>
+
+They were not a romantic frame.
+<break time="0.5s"/>
+
+They were the boundary between what belonged to the city and what might suddenly threaten it.
+<break time="1.5s"/>
+
+Look at the Fortino di Sant'Antonio.
+<break time="0.8s"/>
+
+Today it's a place where people stroll, take in the view, stop during events, and take photographs.
+<break time="0.8s"/>
+
+But its position immediately explains its purpose: from here you had to watch the sea, monitor approaching vessels, and defend a vulnerable point in the city.
+<break time="1s"/>
+
+Bari was exposed along almost its entire perimeter.
+<break time="0.8s"/>
+
+A peninsula can be beautiful.
+<break time="0.5s"/>
+
+But in wartime, it is also very hard to protect.
+<break time="1.5s"/>
+
+Try to think about the people who lived in the houses behind you.
+<break time="0.8s"/>
+
+A child growing up in these alleyways learned early that the sea was close.
+<break time="1s"/>
+
+<prosody rate="88%">They felt it in the smell,
+<break time="0.4s"/>
+in the wind,
+<break time="0.4s"/>
+in the voices of men returning from the port,
+<break time="0.4s"/>
+in the sudden silence when a boat was slow to come back,
+<break time="0.4s"/>
+in the goods that appeared in the markets,
+<break time="0.4s"/>
+in foreign words that crept into the dialect,
+<break time="0.4s"/>
+in the fear of seeing unwanted sails appear on the horizon.</prosody>
+<break time="1.5s"/>
+
+This is something that often gets lost when visiting Old Bari quickly.
+<break time="0.8s"/>
+
+The sea was not the city's backdrop.
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">It was a presence woven into its life.</emphasis></prosody>
+<break time="1.5s"/>
+
+And even today, if you listen closely, that relationship hasn't disappeared.
+<break time="0.8s"/>
+
+Bari continues to live turned toward the water.
+<break time="0.5s"/>
+
+The modern port has changed. The ships have changed. The walls no longer serve as defense.
+<break time="0.8s"/>
+
+But the gesture has stayed the same: come here, stop, look at the sea, and wonder what lies beyond.
+<break time="1.5s"/>
+
+Now continue along the wall toward Santa Scolastica and the area of Santa Maria del Buon Consiglio.
+<break time="0.5s"/>
+
+There we'll discover that Old Bari is not just a medieval city.
+<break time="0.5s"/>
+
+<prosody rate="85%">Beneath these stones, there is much more.</prosody>

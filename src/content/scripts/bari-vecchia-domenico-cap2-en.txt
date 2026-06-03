@@ -1,0 +1,157 @@
+Now you're inside the borough.
+<break time="0.8s"/>
+
+Notice how everything changes in just a few meters.
+<break time="1s"/>
+
+Outside you had the castle, open space, the feeling of a great military structure.
+<break time="0.8s"/>
+
+Here, the city closes in.
+<break time="1s"/>
+
+The streets grow narrower. The houses draw closer. The windows seem almost face to face with each other. Life, even today, seems to pass from inside the home to the street without any real separation.
+<break time="1s"/>
+
+This is one of the things you need to understand about Old Bari.
+<break time="0.5s"/>
+
+It was not built to be walked through comfortably.
+<break time="0.5s"/>
+
+It was built to hold people together, to protect them, to use every inch of space inside the walls.
+<break time="1s"/>
+
+Because outside the walls, for centuries, there was no Bari as you know it today.
+<break time="0.5s"/>
+
+No wide boulevards. No Murat Quarter. No Libertà neighborhood where I grew up. No modern city spreading inward.
+<break time="0.8s"/>
+
+There was this peninsula.
+<break time="1s"/>
+
+And inside this peninsula, <emphasis level="moderate">everything</emphasis> had to fit.
+<break time="1.2s"/>
+
+<prosody rate="88%">The houses,
+<break time="0.4s"/>
+the workshops,
+<break time="0.4s"/>
+the churches,
+<break time="0.4s"/>
+the ovens,
+<break time="0.4s"/>
+the cisterns,
+<break time="0.4s"/>
+the markets,
+<break time="0.4s"/>
+the halls of power,
+<break time="0.4s"/>
+the monasteries,
+<break time="0.4s"/>
+the poor families and the noble ones,
+<break time="0.4s"/>
+the soldiers,
+<break time="0.4s"/>
+the children,
+<break time="0.4s"/>
+the pilgrims,
+<break time="0.4s"/>
+the sailors,
+<break time="0.4s"/>
+the living and the dead.</prosody>
+<break time="1.5s"/>
+
+Today a visitor walks these alleyways and might think: what an atmosphere.
+<break time="0.5s"/>
+
+And it's true. The atmosphere is real.
+<break time="0.8s"/>
+
+But for the people who lived here, this closeness was not a picturesque effect.
+<break time="0.5s"/>
+
+It was daily life.
+<break time="1s"/>
+
+If a family was cooking, the smell drifted into the street.
+<break time="0.4s"/>
+
+If someone was arguing, everyone heard it.
+<break time="0.4s"/>
+
+If a child was born, if an elder died, if news arrived from the port, the whole city knew immediately.
+<break time="1s"/>
+
+This was not a city made for solitude.
+<break time="0.5s"/>
+
+<prosody rate="88%" pitch="+3%">It was a city where other people's lives hit you <emphasis level="strong">all at once</emphasis>.</prosody>
+<break time="1.5s"/>
+
+Strada delle Crociate already carries in its name one of the great directions of Bari's history: passage.
+<break time="1s"/>
+
+<prosody rate="88%">Men arriving,
+<break time="0.4s"/>
+men departing,
+<break time="0.4s"/>
+pilgrims headed to the Holy Land,
+<break time="0.4s"/>
+knights,
+<break time="0.4s"/>
+merchants,
+<break time="0.4s"/>
+people who had crossed all of Europe and, having arrived here, were looking for a ship, a blessing, a bed, a meal, or simply the chance to set off again.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">For a long time, Bari was this: <emphasis level="strong">a threshold</emphasis>.</prosody>
+<break time="0.8s"/>
+
+Not just a city facing the sea.
+<break time="0.5s"/>
+
+A place where people changed direction.
+<break time="1s"/>
+
+<prosody rate="88%">From land to ship,
+<break time="0.4s"/>
+from West to East,
+<break time="0.4s"/>
+from journey to prayer,
+<break time="0.4s"/>
+from fear to the hope of having finally arrived.</prosody>
+<break time="1.5s"/>
+
+As you walk, look at the walls.
+<break time="0.8s"/>
+
+Don't look only for the important monument.
+<break time="0.5s"/>
+
+Notice the low doorways, the corners, the worn stones, the sudden open spaces.
+<break time="0.8s"/>
+
+In a city like this, even the simplest path told a story: where a family lived, where a small church opened, where animals passed, where water was collected, where bread was sold.
+<break time="1s"/>
+
+Old Bari is not understood from above.
+<break time="0.5s"/>
+
+It is understood by letting its alleyways close in around you.
+<break time="1.5s"/>
+
+Now continue toward the Basilica of San Nicola.
+<break time="0.5s"/>
+
+We won't tell the full story of the saint here — that deserves its own guide.
+<break time="0.8s"/>
+
+But to understand Old Bari, we need to understand what happened when Nicola arrived.
+<break time="0.8s"/>
+
+Because from that moment, this city was no longer just an important port.
+<break time="0.5s"/>
+
+<prosody rate="85%">It became a <emphasis level="moderate">destination</emphasis>.</prosody>

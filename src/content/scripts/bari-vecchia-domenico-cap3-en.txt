@@ -1,0 +1,102 @@
+Now stop near the Basilica of San Nicola.
+<break time="0.8s"/>
+
+Look at it without going inside just yet.
+<break time="1s"/>
+
+Its pale stone, its severity, its strength are not merely an expression of architectural style.
+<break time="0.8s"/>
+
+This basilica was born from an enormous ambition.
+<break time="0.8s"/>
+
+<prosody rate="88%">To house a saint capable of changing the destiny of an entire city.</prosody>
+<break time="1.5s"/>
+
+Before the relics of San Nicola arrived, Bari was already important.
+<break time="0.5s"/>
+
+It had been a great Byzantine city, connected to the East, the seat of imperial power in southern Italy. Here merchants, officials, soldiers, monks, money, languages, and different rites all circulated.
+<break time="1s"/>
+
+In this area stood the complex of the Catapan, the representative of the Byzantine Empire. Imagine a city where the East was not an exotic word but an everyday presence: in trade, in churches, in sacred images, in rituals, even in the way people looked at the sea.
+<break time="1.2s"/>
+
+Then, in 1087, something happened that would change everything.
+<break time="1s"/>
+
+Sixty-two Barian sailors sailed to Myra, in present-day Turkey, and returned carrying the relics of San Nicola.
+<break time="1s"/>
+
+The details of that journey will be told in the guide dedicated to the Basilica.
+<break time="0.5s"/>
+
+What I want you to understand here is what it meant for Bari.
+<break time="1.2s"/>
+
+<prosody pitch="+2%">Until that moment, this city was above all a place you <emphasis level="moderate">passed through</emphasis>.</prosody>
+<break time="0.8s"/>
+
+<prosody rate="85%" pitch="+4%">After San Nicola, it became a place people <emphasis level="strong">came to</emphasis>.</prosody>
+<break time="2s"/>
+
+Pilgrims from distant lands began arriving here to pray at the tomb of the saint.
+<break time="0.8s"/>
+
+And when pilgrims arrive, the whole city changes.
+<break time="1s"/>
+
+<prosody rate="90%">It needs hospitality, food, markets, routes, protection, churches, hospitals, places to stop.
+<break time="0.8s"/>
+Trade changes,
+<break time="0.4s"/>
+fairs change,
+<break time="0.4s"/>
+prestige changes,
+<break time="0.4s"/>
+even the image a city holds of itself changes.</prosody>
+<break time="1.2s"/>
+
+Bari was no longer just the city reaching toward the East.
+<break time="0.5s"/>
+
+<prosody pitch="+3%">It had become the place where the East had come to <emphasis level="strong">live</emphasis>.</prosody>
+<break time="1.5s"/>
+
+And you can still feel this today.
+<break time="0.8s"/>
+
+In the crypt of the Basilica, Catholics and Orthodox Christians pray together.
+<break time="0.5s"/>
+
+People from different traditions arrive before the same saint.
+<break time="0.8s"/>
+
+This is not a modern construction designed for tourists.
+<break time="0.5s"/>
+
+It is the continuation of an ancient story: Bari has always been a city placed between different worlds.
+<break time="1.5s"/>
+
+When I look at San Nicola as a Barian, I don't just see the patron saint of the city.
+<break time="0.8s"/>
+
+I see the reason why Bari learned to be known far beyond its borders.
+<break time="0.5s"/>
+
+I see the moment when the city, instead of only watching the sea and waiting for who might arrive, became a destination in itself.
+<break time="1.5s"/>
+
+Now leave the Basilica behind and head toward the city wall.
+<break time="0.5s"/>
+
+Soon you'll see the sea.
+<break time="0.8s"/>
+
+And it matters to see it from there.
+<break time="0.8s"/>
+
+Because Old Bari is not a city that gradually approached the sea.
+<break time="0.5s"/>
+
+<prosody rate="85%">It is a city that for centuries was <emphasis level="moderate">leaning right against it</emphasis>.</prosody>

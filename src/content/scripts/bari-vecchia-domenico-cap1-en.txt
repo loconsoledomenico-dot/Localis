@@ -1,0 +1,103 @@
+<prosody rate="90%">My name is Domenico.</prosody>
+<break time="1.5s"/>
+
+I was born in Bari, and I grew up in the Libertà neighborhood — just a few steps from this ancient city.
+<break time="0.8s"/>
+
+Old Bari was always right there. Not as somewhere to visit once in a lifetime, but as a piece of the city that was simply there, close, present. And perhaps for that very reason, when you're young, you don't immediately realize what you have in front of you.
+<break time="0.8s"/>
+
+Then you grow up. You study. You come back to the same places. And you understand something that completely changes the way you look at these stones.
+<break time="1.2s"/>
+
+Today we call it Old Bari.
+<break time="1s"/>
+
+<prosody rate="85%" pitch="+4%">For centuries, this <emphasis level="strong">was</emphasis> Bari. All of it.</prosody>
+<break time="2s"/>
+
+Before you step into the alleyways, stop in front of the Swabian Castle.
+<break time="0.5s"/>
+
+Look at it carefully.
+<break time="1s"/>
+
+It's massive, almost severe. It doesn't seem built to welcome. It seems built to resist.
+<break time="1s"/>
+
+We call it the Swabian Castle because Frederick II transformed it profoundly and left some of its most recognizable marks: the imperial eagle above the portal, the arches, the capitals, the chambers that turned the fortress into a place of representation as well.
+<break time="0.8s"/>
+
+But the castle was born before him.
+<break time="0.8s"/>
+
+And the most important thing to understand is that it was not built solely to defend Bari.
+<break time="0.8s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">It was built to control it.</emphasis></prosody>
+<break time="1.5s"/>
+
+In the Middle Ages, this city was difficult to govern. It was wealthy, proud, full of commerce, accustomed to dealing with many different worlds. It had known Lombards, Saracens, and Byzantines. It had always looked toward the sea, but it didn't easily bow its head before those who tried to dominate it.
+<break time="0.8s"/>
+
+When the Normans arrived, Bari resisted.
+<break time="1s"/>
+
+And the castle was placed right here, at the edge of the ancient city, between the mainland and the sea.
+<break time="0.8s"/>
+
+Close enough to protect it,
+<break time="0.5s"/>
+
+large enough to remind it who was in charge.
+<break time="1.5s"/>
+
+Try to imagine how it must have appeared to the people of the borough.
+<break time="0.8s"/>
+
+Not a beautiful attraction to photograph,
+<break time="0.5s"/>
+
+not a medieval backdrop.
+<break time="0.5s"/>
+
+An enormous presence, sealed by towers, surrounded by a moat, bound to the power of whoever ruled.
+<break time="1s"/>
+
+The castle was not truly "of the Barians."
+<break time="0.8s"/>
+
+<prosody rate="88%" pitch="+3%">It was something the Barians <emphasis level="strong">were made to carry</emphasis>.</prosody>
+<break time="1.2s"/>
+
+A fortress built beside their city — but also against their freedom.
+<break time="1s"/>
+
+Later, Isabella of Aragon and Bona Sforza would transform it into a princely residence, open to courts, artists, and important figures. But beneath that elegance, the same feeling would remain: these towers did not belong to daily life in the alleyways.
+<break time="0.8s"/>
+
+They watched from above.
+<break time="1.5s"/>
+
+Now turn toward Old Bari.
+<break time="0.8s"/>
+
+Behind those narrow streets, there is not just an ancient neighborhood.
+<break time="0.5s"/>
+
+There is a city that for centuries had to defend itself from the sea, from conquerors, and sometimes from the very people who claimed to govern it.
+<break time="1.2s"/>
+
+Now let's begin to step inside.
+<break time="0.8s"/>
+
+Head toward Strada delle Crociate.
+<break time="0.8s"/>
+
+Don't rush.
+<break time="1s"/>
+
+This story doesn't begin with a photograph.
+<break time="0.5s"/>
+
+<prosody rate="85%">It begins with a city locked inside its walls.</prosody>

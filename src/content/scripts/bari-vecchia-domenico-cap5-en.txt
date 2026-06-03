@@ -1,0 +1,147 @@
+Now you're in the oldest and most sea-facing part of the borough.
+<break time="0.8s"/>
+
+Around here, Bari seems to reach its natural edge.
+<break time="0.8s"/>
+
+The city ends.
+<break time="0.5s"/>
+
+In front, the water remains.
+<break time="1s"/>
+
+But beneath your feet, the city keeps going back in time.
+<break time="0.5s"/>
+
+<prosody rate="85%">Much further back.</prosody>
+<break time="1.5s"/>
+
+Bari doesn't have a great amphitheater in the middle of the street.
+<break time="0.5s"/>
+
+It doesn't have an ancient temple dominating the square that everyone photographs.
+<break time="0.8s"/>
+
+Here, antiquity is less obvious.
+<break time="0.5s"/>
+
+It's hidden.
+<break time="0.8s"/>
+
+<prosody rate="88%">It lies beneath a church,
+<break time="0.4s"/>
+inside a monastery,
+<break time="0.4s"/>
+under a paving stone,
+<break time="0.4s"/>
+among fragments of walls, tombs, objects, the remains of dwellings and foundations upon which, over the centuries, people kept on building.</prosody>
+<break time="1.2s"/>
+
+This is one of the truest qualities of Old Bari: it hasn't completely erased what came before.
+<break time="0.5s"/>
+
+<emphasis level="moderate">It built on top of it.</emphasis>
+<break time="1.5s"/>
+
+In the area of Santa Scolastica and Santa Maria del Buon Consiglio, traces of a very long history emerge.
+<break time="1s"/>
+
+<prosody rate="88%">First, the presence of the earliest inhabitants of this peninsula,
+<break time="0.4s"/>
+then the Greek and Roman world,
+<break time="0.4s"/>
+then the medieval churches,
+<break time="0.4s"/>
+then the monasteries,
+<break time="0.4s"/>
+then the city, as it changed, continuing to reuse the same space.</prosody>
+<break time="1.2s"/>
+
+In other places, history is displayed in an orderly, almost didactic way.
+<break time="0.5s"/>
+
+Not here.
+<break time="0.8s"/>
+
+Here, history overlaps.
+<break time="1s"/>
+
+One floor laid on top of another,
+<break time="0.4s"/>
+
+a wall rising where one already stood,
+<break time="0.4s"/>
+
+a church preserving beneath it the trace of an earlier place,
+<break time="0.4s"/>
+
+a square you walk across without realizing that below, a piece of the city you can no longer see is resting.
+<break time="1.5s"/>
+
+But I want to tell you something less monumental — and much more human.
+<break time="1s"/>
+
+Bari was surrounded by the sea.
+<break time="0.5s"/>
+
+<prosody rate="88%">And yet, it was thirsty.</prosody>
+<break time="1.2s"/>
+
+Salt water was everywhere, but clean drinking water was precious.
+<break time="0.8s"/>
+
+For centuries, the life of the ancient city also depended on cisterns — private and public — where rainwater was collected.
+<break time="1s"/>
+
+Think about what that meant.
+<break time="0.8s"/>
+
+Today we turn on a tap without a second thought.
+<break time="0.5s"/>
+
+Back then, a season with little rain could become a problem for everyone.
+<break time="1s"/>
+
+Water was not an invisible service.
+<break time="0.5s"/>
+
+It was a daily concern,
+<break time="0.4s"/>
+
+something to preserve, protect, share.
+<break time="1.2s"/>
+
+In this area, near the Buon Consiglio, there is memory of a cistern intended for the poor — built so that those without resources could still drink.
+<break time="1s"/>
+
+<prosody rate="88%">That detail always moves me.</prosody>
+<break time="1s"/>
+
+We are used to looking for great history in kings, emperors, wars, and basilicas.
+<break time="0.8s"/>
+
+<prosody pitch="+3%">But a city also reveals itself in a simpler gesture: someone deciding that water should not be denied to those who need it.</prosody>
+<break time="1.5s"/>
+
+Look at this place once more.
+<break time="0.8s"/>
+
+In front of you, the sea,
+<break time="0.4s"/>
+
+beneath you, centuries of Bari,
+<break time="0.5s"/>
+
+and in between, among the great stories and the great stones, the concrete life of people who had to find, every day, water, food, shelter, and a way to carry on.
+<break time="1.5s"/>
+
+Now we'll slowly make our way back into the heart of the borough, toward the Cathedral.
+<break time="0.5s"/>
+
+Because Old Bari was not just a city surrounded by walls.
+<break time="0.5s"/>
+
+It was also a city covered in churches.
+<break time="0.5s"/>
+
+<prosody rate="88%">A city where faith, power, and daily life were often just steps apart.</prosody>

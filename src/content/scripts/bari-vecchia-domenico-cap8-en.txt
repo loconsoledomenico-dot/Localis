@@ -1,0 +1,221 @@
+Now walk without hurrying.
+<break time="1s"/>
+
+If you see an open door, don't stare intrusively — but try to sense how thin the line between home and street has always been here.
+<break time="1.2s"/>
+
+In many cities, the historic center has become a stage set.
+<break time="0.5s"/>
+
+Beautiful to look at, but cut off from real life.
+<break time="1s"/>
+
+Old Bari, despite all its changes, still holds something different.
+<break time="1s"/>
+
+Here, life still spills outside.
+<break time="1.2s"/>
+
+<prosody rate="88%">A chair in front of a door,
+<break time="0.4s"/>
+a voice calling someone,
+<break time="0.4s"/>
+laundry hung out to dry,
+<break time="0.4s"/>
+a smell of cooking,
+<break time="0.4s"/>
+a conversation caught in passing,
+<break time="0.4s"/>
+a child running,
+<break time="0.4s"/>
+a woman watching.</prosody>
+<break time="1.2s"/>
+
+And you realize that the ancient city is not only the one you find in books.
+<break time="0.5s"/>
+
+It's also the one that continues to inhabit these spaces.
+<break time="1.5s"/>
+
+When I was young, growing up in Libertà, Old Bari didn't have the cleaned-up, much-visited image it partly has today.
+<break time="0.8s"/>
+
+It was close, but it belonged to a different world from tourist walks.
+<break time="0.5s"/>
+
+It was a place whose strength was known, but so were its difficulties.
+<break time="1.2s"/>
+
+Then the city changed.
+<break time="0.5s"/>
+
+More visitors arrived,
+<break time="0.4s"/>
+
+bars, itineraries, photographs, new attention.
+<break time="0.8s"/>
+
+And it's right that Bari should be seen.
+<break time="0.8s"/>
+
+But the risk is that it gets seen only at the surface.
+<break time="0.5s"/>
+
+That someone goes home remembering the orecchiette made in the street, the Basilica, the outdoor tables, and a photograph between the alleyways — without ever really understanding the city they walked through.
+<break time="1.2s"/>
+
+That's why we created Localis.
+<break time="0.5s"/>
+
+Not to take beauty away from the visit.
+<break time="0.5s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">To add depth to it.</emphasis></prosody>
+<break time="2s"/>
+
+And one of the deepest things Bari preserves is its dialect.
+<break time="0.8s"/>
+
+You don't need to understand all of it to sense how much it tells you about the city.
+<break time="0.8s"/>
+
+Inside the Barian words, centuries of encounters and dominations have passed.
+<break time="1s"/>
+
+<prosody rate="88%">Greek,
+<break time="0.4s"/>
+Latin,
+<break time="0.4s"/>
+the Byzantine world,
+<break time="0.4s"/>
+Arab presences,
+<break time="0.4s"/>
+the Normans,
+<break time="0.4s"/>
+the Spanish,
+<break time="0.4s"/>
+the trade of the port,
+<break time="0.4s"/>
+the voices carried by men who arrived from the sea and men who set sail from Bari.</prosody>
+<break time="1.2s"/>
+
+A city doesn't preserve its history only in its walls.
+<break time="0.5s"/>
+
+It preserves it also in how it speaks.
+<break time="1s"/>
+
+<prosody rate="88%">In a word worn down by time,
+<break time="0.4s"/>
+in an expression still in use without anyone knowing where it came from,
+<break time="0.4s"/>
+in a way of joking,
+<break time="0.4s"/>
+in an insult,
+<break time="0.4s"/>
+in a phrase tied to San Nicola,
+<break time="0.4s"/>
+in a memory of the sea, the market, fear, or hunger.</prosody>
+<break time="1.5s"/>
+
+Think of the lion you just saw in Piazza Mercantile.
+<break time="0.5s"/>
+
+Its function is gone.
+<break time="0.5s"/>
+
+But a dialect phrase has kept carrying its memory.
+<break time="1s"/>
+
+Think of San Nicola.
+<break time="0.5s"/>
+
+His Basilica is not just a building — the saint enters common sayings, the festival, homes, the way Bari speaks of itself.
+<break time="1s"/>
+
+Think of the sea.
+<break time="0.5s"/>
+
+For centuries it brought dangers and riches, and even today the Barian lives with that particular feeling of having an open road toward somewhere else just in front of them.
+<break time="2s"/>
+
+<prosody rate="85%">Perhaps, by now, Old Bari is beginning to look different to you.</prosody>
+<break time="1s"/>
+
+No longer just a tangle of beautiful alleyways to photograph.
+<break time="0.5s"/>
+
+<prosody rate="88%">But an entire city compressed into a small space.</prosody>
+<break time="1.2s"/>
+
+<prosody rate="85%">A city that defended itself with walls,
+<break time="0.4s"/>
+that mistrusted its own castle,
+<break time="0.4s"/>
+that quenched its thirst with rain,
+<break time="0.4s"/>
+that prayed in dozens of churches,
+<break time="0.4s"/>
+that looked toward Constantinople,
+<break time="0.4s"/>
+that with San Nicola became a destination for the Christian world,
+<break time="0.4s"/>
+that traded in the square,
+<break time="0.4s"/>
+that exposed debtors to the lion,
+<break time="0.4s"/>
+that continues to hold its history in its words, its doors, and its daily gestures.</prosody>
+<break time="2s"/>
+
+When you leave these alleyways, modern Bari will be there in front of you.
+<break time="0.5s"/>
+
+<prosody rate="88%">Wide streets,
+<break time="0.4s"/>
+shops,
+<break time="0.4s"/>
+traffic,
+<break time="0.4s"/>
+open squares.</prosody>
+<break time="0.5s"/>
+
+The city that over the centuries broke through the walls and grew inward, all the way to the neighborhoods where we grew up.
+<break time="1.2s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">But everything began here.</emphasis></prosody>
+<break time="1s"/>
+
+On this narrow peninsula between the castle and the sea,
+<break time="0.5s"/>
+
+between San Sabino and San Nicola,
+<break time="0.5s"/>
+
+between the salt water that surrounded the city and the rain that let its people live,
+<break time="0.5s"/>
+
+between the fear of who arrived by sea and the need to welcome them.
+<break time="2.5s"/>
+
+<prosody rate="85%">My name is Domenico.</prosody>
+<break time="1s"/>
+
+I grew up not far from here, in the Libertà neighborhood.
+<break time="1s"/>
+
+And today, telling you about Old Bari, I didn't just want to point you toward what to see.
+<break time="1s"/>
+
+I wanted you, as you leave these alleyways, to carry one simple thing with you.
+<break time="1.5s"/>
+
+Today we call it Old Bari.
+<break time="0.8s"/>
+
+But this was not the old part of Bari.
+<break time="0.8s"/>
+
+<prosody rate="82%" pitch="+5%"><emphasis level="strong">This was Bari.</emphasis></prosody>
+<break time="1s"/>
+
+<prosody rate="85%">Everything else would come after.</prosody>

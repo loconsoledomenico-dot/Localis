@@ -1,0 +1,139 @@
+Now stop in Piazza Mercantile.
+<break time="0.8s"/>
+
+Look at the square as it is today.
+<break time="1s"/>
+
+<prosody rate="90%">Tables outside,
+<break time="0.4s"/>
+people strolling,
+<break time="0.4s"/>
+someone having a coffee,
+<break time="0.4s"/>
+someone sitting and watching.</prosody>
+<break time="1s"/>
+
+It's one of the most pleasant spots in Old Bari.
+<break time="1s"/>
+
+But if we could go back through the centuries, we'd see it through different eyes.
+<break time="1s"/>
+
+This square was the <emphasis level="moderate">practical</emphasis> heart of the city.
+<break time="0.8s"/>
+
+This was where trade happened,
+<break time="0.4s"/>
+
+where merchants, craftsmen, citizens, and outsiders met,
+<break time="0.4s"/>
+
+where money, goods, news, and everyday problems all passed through.
+<break time="1s"/>
+
+The name "Mercantile" says it plainly: Bari was not only a city of saints and pilgrims.
+<break time="0.8s"/>
+
+<prosody rate="88%">It was a city that worked,
+<break time="0.4s"/>
+that bought,
+<break time="0.4s"/>
+that sold,
+<break time="0.4s"/>
+that argued,
+<break time="0.4s"/>
+that demanded payment of debts.</prosody>
+<break time="1.5s"/>
+
+Now find the column with the stone lion.
+<break time="0.8s"/>
+
+Today many people photograph it without really knowing what it represents.
+<break time="1s"/>
+
+The lion was not there simply to decorate the square.
+<break time="0.8s"/>
+
+To that column, those who had failed to pay their debts were publicly displayed.
+<break time="1s"/>
+
+The punishment was not only financial.
+<break time="0.5s"/>
+
+<emphasis level="moderate">It was shame.</emphasis>
+<break time="1.2s"/>
+
+<prosody rate="88%">Being shown before the whole city,
+<break time="0.4s"/>
+being recognized by neighbors,
+<break time="0.4s"/>
+watching a private failure become a public spectacle.</prosody>
+<break time="1.2s"/>
+
+In the Barian dialect, a very blunt memory of that practice has survived — an expression referring to those who were sent to show their backside to the lion.
+<break time="0.8s"/>
+
+It might sound like a folk joke.
+<break time="0.5s"/>
+
+In reality it's a fragment of history that survived in the language, long after the original reason was nearly forgotten.
+<break time="1.5s"/>
+
+This square captures the character of Bari well.
+<break time="0.8s"/>
+
+A devout city, certainly.
+<break time="0.5s"/>
+
+But also concrete,
+<break time="0.4s"/>
+
+practical,
+<break time="0.4s"/>
+
+accustomed to commerce.
+<break time="0.8s"/>
+
+Capable of welcoming pilgrims from all over the world at the tomb of San Nicola, and just a few meters away, of exposing debtors to public judgment.
+<break time="1s"/>
+
+<prosody pitch="+3%">The ancient city was not a peaceful postcard.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">It was alive.</emphasis></prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+2%">And precisely because it was alive, it was also hard.</prosody>
+<break time="1.5s"/>
+
+There's something else I like to think about when I pass through here.
+<break time="0.8s"/>
+
+Squares change their function, but they rarely stop being the place where a city recognizes itself.
+<break time="1s"/>
+
+Back then, people came here to sell, buy, judge, hear news.
+<break time="0.5s"/>
+
+Today they come to meet, eat, have a drink, spend an evening.
+<break time="0.8s"/>
+
+The habits have changed.
+<break time="0.5s"/>
+
+But the square keeps doing the same work: keeping people close.
+<break time="1.5s"/>
+
+Now, before the final part, step back into the alleyways.
+<break time="0.5s"/>
+
+Don't look for a perfect direction.
+<break time="0.5s"/>
+
+Let the streets guide you.
+<break time="1s"/>
+
+The last thing I want you to hear is not a monument.
+<break time="0.5s"/>
+
+<prosody rate="85%">It's the voice of the city.</prosody>
