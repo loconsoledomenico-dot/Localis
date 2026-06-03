@@ -47,7 +47,7 @@ export function renderAccessEmailEn(data: AccessEmailData): { subject: string; h
       <li>Open the link above on your phone</li>
       <li>Tap play. Walk. Listen.</li>
       <li>The link is yours forever — replay anytime</li>
-      <li>Works offline after the first play</li>
+      <li>Stream it anytime or save it offline with one tap from the guide page</li>
     </ol>
 
     <p style="font-size: 14px; line-height: 1.6; color: #5A6477; margin: 0 0 16px 0;">
@@ -78,7 +78,7 @@ How it works:
 1. Open the link above on your phone
 2. Tap play. Walk. Listen.
 3. The link is yours forever — replay anytime
-4. Works offline after the first play
+4. Stream it anytime or save it offline with one tap from the guide page
 
 Save it in your browser bookmarks.
 If you change phones, reopen the same link.

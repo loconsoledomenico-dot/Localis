@@ -47,7 +47,7 @@ export function renderAccessEmailIt(data: AccessEmailData): { subject: string; h
       <li>Apri il link sopra dal tuo telefono</li>
       <li>Clicca play. Cammina. Ascolta.</li>
       <li>Il link è tuo per sempre — riascoltala quando vuoi</li>
-      <li>Funziona anche offline dopo il primo play</li>
+      <li>Ascolta in streaming o salvala offline con un tap dalla pagina della guida</li>
     </ol>
 
     <p style="font-size: 14px; line-height: 1.6; color: #5A6477; margin: 0 0 16px 0;">
@@ -78,7 +78,7 @@ Come funziona:
 1. Apri il link sopra dal tuo telefono
 2. Clicca play. Cammina. Ascolta.
 3. Il link è tuo per sempre — riascoltala quando vuoi
-4. Funziona anche offline dopo il primo play
+4. Ascolta in streaming o salvala offline con un tap dalla pagina della guida
 
 Salvalo nei preferiti del browser.
 Se cambi telefono, riapri lo stesso link.

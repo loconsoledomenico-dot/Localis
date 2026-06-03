@@ -47,7 +47,7 @@ export function renderAccessEmailDe(data: AccessEmailData): { subject: string; h
       <li>Öffne den Link oben auf deinem Smartphone</li>
       <li>Tippe auf Play und höre dann, wenn es für dich passt.</li>
       <li>Der Link gehört dir dauerhaft und kann jederzeit erneut genutzt werden</li>
-      <li>Nach dem ersten Abspielen funktioniert der Guide offline</li>
+      <li>Per Stream hören oder mit einem Tap auf der Guide-Seite für offline speichern</li>
     </ol>
 
     <p style="font-size: 14px; line-height: 1.6; color: #5A6477; margin: 0 0 16px 0;">
@@ -78,7 +78,7 @@ So funktioniert es:
 1. Öffne den Link oben auf deinem Smartphone
 2. Tippe auf Play und höre dann, wenn es für dich passt.
 3. Der Link gehört dir dauerhaft und kann jederzeit erneut genutzt werden
-4. Nach dem ersten Abspielen funktioniert der Guide offline
+4. Per Stream hören oder mit einem Tap auf der Guide-Seite für offline speichern
 
 Speichere den Link in deinen Browser-Lesezeichen.
 Wenn du das Smartphone wechselst, öffne denselben Link erneut.

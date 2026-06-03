@@ -12,6 +12,8 @@ export interface Props {
 
 const { guide, token, lang } = Astro.props;
 const durationSeconds = guideDurationSeconds(guide, lang);
+// Estimated file size: 128 kbps mono = 16 KB/s
+const estimatedMB = Math.round(durationSeconds * 16000 / 1024 / 1024);
 
 const labels = {
   it: {
@@ -23,10 +25,12 @@ const labels = {
     chapters: 'Capitoli',
     progress: 'Avanzamento audio',
     loading: 'Caricamento...',
-    offline_ready: 'Disponibile offline ✓',
-    offline_caching: 'Salvataggio per offline...',
     error: 'Impossibile caricare l\'audio.',
     retry: 'Riprova',
+    save_offline: `Salva per ascoltare offline · circa ${estimatedMB} MB`,
+    downloading: 'Download',
+    offline_ready: '✓ Disponibile offline',
+    interrupted: 'Download interrotto — riprendi',
   },
   en: {
     play: 'Play',
@@ -37,10 +41,12 @@ const labels = {
     chapters: 'Chapters',
     progress: 'Audio progress',
     loading: 'Loading...',
-    offline_ready: 'Available offline ✓',
-    offline_caching: 'Saving for offline...',
     error: 'Could not load audio.',
     retry: 'Retry',
+    save_offline: `Save for offline listening · about ${estimatedMB} MB`,
+    downloading: 'Downloading',
+    offline_ready: '✓ Available offline',
+    interrupted: 'Download interrupted — retry',
   },
   de: {
     play: 'Abspielen',
@@ -50,11 +56,13 @@ const labels = {
     speed: 'Geschwindigkeit',
     chapters: 'Kapitel',
     loading: 'Laden...',
-    offline_ready: 'Offline verfügbar ✓',
-    offline_caching: 'Für Offline hören gespeichert...',
     error: 'Audio konnte nicht geladen werden.',
     retry: 'Erneut versuchen',
     progress: 'Audio-Fortschritt',
+    save_offline: `Für offline speichern · ca. ${estimatedMB} MB`,
+    downloading: 'Herunterladen',
+    offline_ready: '✓ Offline verfügbar',
+    interrupted: 'Download unterbrochen — wiederholen',
   },
 }[lang];
 ---
@@ -67,8 +75,10 @@ const labels = {
   data-guide-title={guideTitle(guide, lang)}
   data-guide-subtitle={guideSubtitle(guide, lang)}
   data-guide-cover={guide.cover}
-  data-offline-ready={labels.offline_ready}
-  data-offline-caching={labels.offline_caching}
+  data-label-save={labels.save_offline}
+  data-label-downloading={labels.downloading}
+  data-label-ready={labels.offline_ready}
+  data-label-interrupted={labels.interrupted}
 >
   <div class="p-md flex items-center gap-md">
     <button
@@ -136,8 +146,44 @@ const labels = {
     </ol>
   </details>
 
-  <div class="ap-status px-md py-xs border-t border-border text-xs text-ink-subtle hidden">
-    <span class="ap-status-text"></span>
+  <!-- Offline save section -->
+  <div class="ap-offline border-t border-border px-md py-sm">
+    <!-- idle: show save button -->
+    <button
+      type="button"
+      class="ap-offline-btn flex items-center gap-xs text-sm text-ink-muted hover:text-ink transition-colors duration-fast"
+    >
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span class="ap-offline-label">{labels.save_offline}</span>
+    </button>
+
+    <!-- downloading: progress bar + percentage -->
+    <div class="ap-offline-downloading hidden">
+      <div class="flex items-center justify-between mb-xs">
+        <span class="text-xs text-ink-subtle ap-offline-pct-label">{labels.downloading} 0%</span>
+      </div>
+      <div class="h-1 bg-ink/10 rounded-full overflow-hidden">
+        <div class="ap-offline-fill h-full bg-accent rounded-full transition-[width] duration-200" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- done -->
+    <p class="ap-offline-done hidden text-sm text-ink-subtle">{labels.offline_ready}</p>
+
+    <!-- interrupted -->
+    <button
+      type="button"
+      class="ap-offline-interrupted hidden flex items-center gap-xs text-sm text-error hover:text-error/80 transition-colors duration-fast"
+    >
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <span>{labels.interrupted}</span>
+    </button>
   </div>
 
   <div class="ap-error px-md py-md border-t border-error/30 bg-error/5 text-sm text-error hidden">
@@ -149,6 +195,8 @@ const labels = {
 </div>
 
 <script>
+  type OfflineState = 'idle' | 'downloading' | 'done' | 'interrupted';
+
   type Player = {
     el: HTMLElement;
     audio: HTMLAudioElement;
@@ -164,10 +212,15 @@ const labels = {
     cur: HTMLElement;
     dur: HTMLElement;
     chapters: NodeListOf<HTMLButtonElement>;
-    status: HTMLElement;
-    statusText: HTMLElement;
     error: HTMLElement;
     retry: HTMLButtonElement;
+    offlineBtn: HTMLButtonElement;
+    offlineLabel: HTMLElement;
+    offlineDownloading: HTMLElement;
+    offlinePctLabel: HTMLElement;
+    offlineFill: HTMLElement;
+    offlineDone: HTMLElement;
+    offlineInterrupted: HTMLButtonElement;
     slug: string;
     token: string;
     lang: 'it' | 'en' | 'de';
@@ -175,11 +228,45 @@ const labels = {
     subtitle: string;
     cover: string;
     audioUrl?: string;
+    offlineState: OfflineState;
     startedTracked?: boolean;
     fullPlayedTracked?: boolean;
   };
 
   const SPEEDS = [1, 1.25, 1.5, 2, 0.85];
+
+  // Global SW message handler — routes messages to the right player
+  const players: Player[] = [];
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      const data = event.data;
+      if (!data?.slug || !data?.lang) return;
+      const p = players.find((p) => p.slug === data.slug && p.lang === data.lang);
+      if (!p) return;
+
+      if (data.type === 'OFFLINE_STATUS') {
+        setOfflineState(p, data.available ? 'done' : 'idle');
+      } else if (data.type === 'OFFLINE_PROGRESS') {
+        setOfflineState(p, 'downloading');
+        const pct = data.percent as number;
+        p.offlinePctLabel.textContent = `${p.el.dataset.labelDownloading} ${pct}%`;
+        p.offlineFill.style.width = `${pct}%`;
+      } else if (data.type === 'OFFLINE_DONE') {
+        setOfflineState(p, 'done');
+      } else if (data.type === 'OFFLINE_ERROR') {
+        setOfflineState(p, 'interrupted');
+      }
+    });
+  }
+
+  function setOfflineState(p: Player, state: OfflineState): void {
+    p.offlineState = state;
+    p.offlineBtn.classList.toggle('hidden', state !== 'idle');
+    p.offlineDownloading.classList.toggle('hidden', state !== 'downloading');
+    p.offlineDone.classList.toggle('hidden', state !== 'done');
+    p.offlineInterrupted.classList.toggle('hidden', state !== 'interrupted');
+  }
 
   function fmtTime(s: number): string {
     const m = Math.floor(s / 60);
@@ -195,15 +282,6 @@ const labels = {
     }
     const data = await res.json();
     return data.url;
-  }
-
-  function showStatus(p: Player, text: string): void {
-    p.status.classList.remove('hidden');
-    p.statusText.textContent = text;
-  }
-
-  function hideStatus(p: Player): void {
-    p.status.classList.add('hidden');
   }
 
   function showError(p: Player, text?: string): void {
@@ -250,25 +328,15 @@ const labels = {
         title: p.title,
         artist: p.subtitle,
         album: 'Localis',
-        artwork: [
-          {
-            src: new URL(p.cover, window.location.origin).href,
-          },
-        ],
+        artwork: [{ src: new URL(p.cover, window.location.origin).href }],
       });
     }
 
     const bindAction = (action: MediaSessionAction, handler: MediaSessionActionHandler | null): void => {
-      try {
-        navigator.mediaSession.setActionHandler(action, handler);
-      } catch {
-        // Ignore browsers with partial MediaSession support.
-      }
+      try { navigator.mediaSession.setActionHandler(action, handler); } catch { /* ignore */ }
     };
 
-    bindAction('play', () => {
-      void play(p);
-    });
+    bindAction('play', () => { void play(p); });
     bindAction('pause', () => pause(p));
     bindAction('seekbackward', (details) => {
       const skip = details.seekOffset ?? 15;
@@ -302,20 +370,9 @@ const labels = {
       setPlayingState(p, true);
       if (!p.startedTracked && typeof window.localisTrack === 'function') {
         p.startedTracked = true;
-        window.localisTrack('guide_audio_started', {
-          guide: p.slug,
-          lang: p.lang,
-        });
+        window.localisTrack('guide_audio_started', { guide: p.slug, lang: p.lang });
       }
-      if (navigator.serviceWorker?.controller) {
-        navigator.serviceWorker.controller.postMessage({
-          type: 'PRECACHE_AUDIO',
-          url: p.audioUrl,
-          guide: p.slug,
-        });
-        showStatus(p, p.el.dataset.offlineCaching || '');
-      }
-    } catch (err) {
+    } catch {
       showError(p);
     }
   }
@@ -323,6 +380,34 @@ const labels = {
   function pause(p: Player): void {
     p.audio.pause();
     setPlayingState(p, false);
+  }
+
+  async function saveOffline(p: Player): Promise<void> {
+    if (!navigator.serviceWorker?.controller) return;
+
+    // Need the signed URL — fetch it if not yet available
+    if (!p.audioUrl) {
+      setOfflineState(p, 'downloading');
+      p.offlinePctLabel.textContent = `${p.el.dataset.labelDownloading} …`;
+      try {
+        p.audioUrl = await fetchAudioUrl(p.slug, p.token, p.lang);
+        p.audio.src = p.audioUrl;
+      } catch {
+        setOfflineState(p, 'interrupted');
+        return;
+      }
+    }
+
+    setOfflineState(p, 'downloading');
+    p.offlinePctLabel.textContent = `${p.el.dataset.labelDownloading} 0%`;
+    p.offlineFill.style.width = '0%';
+
+    navigator.serviceWorker.controller.postMessage({
+      type: 'SAVE_OFFLINE',
+      url: p.audioUrl,
+      slug: p.slug,
+      lang: p.lang,
+    });
   }
 
   function initPlayer(el: HTMLElement): void {
@@ -341,17 +426,34 @@ const labels = {
       cur: el.querySelector<HTMLElement>('.ap-current')!,
       dur: el.querySelector<HTMLElement>('.ap-duration')!,
       chapters: el.querySelectorAll<HTMLButtonElement>('.ap-chapter'),
-      status: el.querySelector<HTMLElement>('.ap-status')!,
-      statusText: el.querySelector<HTMLElement>('.ap-status-text')!,
       error: el.querySelector<HTMLElement>('.ap-error')!,
       retry: el.querySelector<HTMLButtonElement>('.ap-retry')!,
+      offlineBtn: el.querySelector<HTMLButtonElement>('.ap-offline-btn')!,
+      offlineLabel: el.querySelector<HTMLElement>('.ap-offline-label')!,
+      offlineDownloading: el.querySelector<HTMLElement>('.ap-offline-downloading')!,
+      offlinePctLabel: el.querySelector<HTMLElement>('.ap-offline-pct-label')!,
+      offlineFill: el.querySelector<HTMLElement>('.ap-offline-fill')!,
+      offlineDone: el.querySelector<HTMLElement>('.ap-offline-done')!,
+      offlineInterrupted: el.querySelector<HTMLButtonElement>('.ap-offline-interrupted')!,
       slug: el.dataset.guideSlug!,
       token: el.dataset.token!,
       lang: (el.dataset.lang === 'en' ? 'en' : el.dataset.lang === 'de' ? 'de' : 'it') as 'it' | 'en' | 'de',
       title: el.dataset.guideTitle || el.dataset.guideSlug || 'Localis',
       subtitle: el.dataset.guideSubtitle || 'Localis',
       cover: el.dataset.guideCover || '/og-default.jpg',
+      offlineState: 'idle',
     };
+
+    players.push(p);
+
+    // Check offline status on load
+    if (navigator.serviceWorker?.controller) {
+      navigator.serviceWorker.controller.postMessage({
+        type: 'GET_OFFLINE_STATUS',
+        slug: p.slug,
+        lang: p.lang,
+      });
+    }
 
     p.audio.addEventListener('loadedmetadata', () => {
       p.dur.textContent = fmtTime(p.audio.duration);
@@ -367,10 +469,7 @@ const labels = {
       if (pct > 80 && !p.fullPlayedTracked) {
         p.fullPlayedTracked = true;
         if (typeof window.localisTrack === 'function') {
-          window.localisTrack('guide_audio_80_percent', {
-            guide: p.slug,
-            lang: p.lang,
-          });
+          window.localisTrack('guide_audio_80_percent', { guide: p.slug, lang: p.lang });
         }
         if (typeof window.plausible === 'function') {
           window.plausible('Audio Played Full', { props: { guide: p.slug } });
@@ -382,16 +481,12 @@ const labels = {
       updateMediaSessionPosition(p);
       setPlayingState(p, false);
     });
-    p.audio.addEventListener('canplaythrough', () => {
-      hideStatus(p);
-      showStatus(p, p.el.dataset.offlineReady || '');
-      setTimeout(() => hideStatus(p), 3000);
-    });
+
     p.audio.addEventListener('error', () => showError(p));
 
     p.toggle.addEventListener('click', () => {
       hideError(p);
-      if (p.audio.paused) play(p);
+      if (p.audio.paused) void play(p);
       else pause(p);
     });
 
@@ -399,7 +494,7 @@ const labels = {
       hideError(p);
       delete p.audioUrl;
       p.audio.removeAttribute('src');
-      play(p);
+      void play(p);
     });
 
     p.rewind.addEventListener('click', () => {
@@ -445,7 +540,7 @@ const labels = {
       ch.addEventListener('click', () => {
         const time = parseFloat(ch.dataset.time || '0');
         if (!p.audio.src) {
-          play(p).then(() => {
+          void play(p).then(() => {
             const onCanPlay = () => {
               p.audio.currentTime = time;
               p.audio.removeEventListener('canplay', onCanPlay);
@@ -458,6 +553,9 @@ const labels = {
         }
       });
     });
+
+    p.offlineBtn.addEventListener('click', () => void saveOffline(p));
+    p.offlineInterrupted.addEventListener('click', () => void saveOffline(p));
   }
 
   document.querySelectorAll<HTMLElement>('.audio-player').forEach(initPlayer);
