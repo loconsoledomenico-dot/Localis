@@ -240,6 +240,7 @@ async function handleSaveOffline(data, source) {
     }
 
     const total = parseInt(response.headers.get('Content-Length') || '0', 10);
+    const hasSize = total > 0;
     const reader = response.body.getReader();
     const chunks = [];
     let received = 0;
@@ -251,7 +252,7 @@ async function handleSaveOffline(data, source) {
       chunks.push(value);
       received += value.byteLength;
 
-      if (total > 0) {
+      if (hasSize) {
         const pct = Math.floor((received / total) * 100);
         if (pct !== lastPct) {
           lastPct = pct;

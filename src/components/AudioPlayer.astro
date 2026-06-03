@@ -164,7 +164,7 @@ const labels = {
     <!-- downloading: progress bar + percentage -->
     <div class="ap-offline-downloading hidden">
       <div class="flex items-center justify-between mb-xs">
-        <span class="text-xs text-ink-subtle ap-offline-pct-label">{labels.downloading} 0%</span>
+        <span class="text-xs text-ink-subtle ap-offline-pct-label">{labels.downloading}…</span>
       </div>
       <div class="h-1 bg-ink/10 rounded-full overflow-hidden">
         <div class="ap-offline-fill h-full bg-accent rounded-full transition-[width] duration-200" style="width: 0%"></div>
@@ -250,6 +250,7 @@ const labels = {
       } else if (data.type === 'OFFLINE_PROGRESS') {
         setOfflineState(p, 'downloading');
         const pct = data.percent as number;
+        // percent is only sent when Content-Length is known — always real bytes
         p.offlinePctLabel.textContent = `${p.el.dataset.labelDownloading} ${pct}%`;
         p.offlineFill.style.width = `${pct}%`;
       } else if (data.type === 'OFFLINE_DONE') {
