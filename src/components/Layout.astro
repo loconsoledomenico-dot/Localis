@@ -88,6 +88,8 @@ const partnerSlugFromPath = currentPath.match(/^\/p\/([a-z0-9][a-z0-9-]{2,40})\/
             path: currentPath,
             lang,
             source: partnerSlugFromPath ? 'partner_landing' : 'partner_query',
+            qr_path: partnerSlugFromPath ? `/p/${partner}` : currentPath,
+            qr_url: partnerSlugFromPath ? `https://localis.guide/p/${partner}` : window.location.href,
           };
           return;
         }

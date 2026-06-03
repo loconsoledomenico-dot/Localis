@@ -19,8 +19,11 @@ declare global {
       path: string;
       lang: string;
       source: string;
+      qr_path?: string;
+      qr_url?: string;
     };
     dataLayer?: unknown[];
+    localisUtm?: Record<string, string>;
     localisTrack?: (name: string, params?: Record<string, string | number | boolean>) => void;
   }
 }

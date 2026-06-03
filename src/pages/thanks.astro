@@ -75,6 +75,7 @@ const allGuides = await getCollection('guides');
 let lang = normalizeLang(Astro.url.searchParams.get('lang'));
 let hasConfirmedPayment = false;
 let fallbackBuyerEmail: string | null = null;
+let purchaseParams: Record<string, string | number | boolean> = {};
 
 let model = buildThanksPageModel({
   lang,
@@ -98,6 +99,17 @@ if (sessionId) {
 
     lang = normalizeLang(meta.lang ?? Astro.url.searchParams.get('lang'));
     hasConfirmedPayment = session.payment_status === 'paid';
+    purchaseParams = {
+      session: session.id,
+      product: meta.product || '',
+      guide_slugs: guideSlugs.join(','),
+      guide_count: guideSlugs.length,
+      partner_id: meta.partner_id || '(direct)',
+      lang,
+      value: (session.amount_total || 0) / 100,
+      currency: (session.currency || 'eur').toUpperCase(),
+      source: 'stripe_success',
+    };
 
     const matchedGuides = guideSlugs
       .map((slug) => allGuides.find((guide) => guide.data.slug === slug))
@@ -214,10 +226,11 @@ const pageTitle = success ? model.pageTitle : fallbackHeading;
     </footer>
   </main>
 
-  <script is:inline define:vars={{ sessionId, success }}>
+  <script is:inline define:vars={{ sessionId, success, purchaseParams }}>
     if (success) {
-      const params = { session: sessionId || 'unknown' };
+      const params = purchaseParams || { session: sessionId || 'unknown' };
       if (typeof window.localisTrack === 'function') {
+        window.localisTrack('purchase', params);
         window.localisTrack('purchase_completed', params);
       } else if (typeof window.plausible === 'function') {
         window.plausible('Checkout Completed', { props: params });

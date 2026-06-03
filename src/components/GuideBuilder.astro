@@ -400,6 +400,14 @@ const ZONE_ORDER = [
       ? `statt ${fmt(fullPriceCents, lang)} zahlst du ${fmt(discountedPriceCents, lang)}`
       : `instead of ${fmt(fullPriceCents, lang)} you pay ${fmt(discountedPriceCents, lang)}`;
 
+  const checkoutValueCents = (product: string, count: number) => {
+    if (product === 'single') return SINGLE_CENTS;
+    if (product === 'tris') return PACK_3_CENTS;
+    if (product === 'sestina') return PACK_6_CENTS;
+    if (product === 'puglia-completa') return PUGLIA_COMPLETA_CENTS;
+    return SINGLE_CENTS * count;
+  };
+
   const getZoneState = () => {
     const zones = new Set(
       [...selected]
@@ -629,12 +637,17 @@ const ZONE_ORDER = [
 
     try {
       if (typeof (window as unknown as { localisTrack?: Function }).localisTrack === 'function') {
-        (window as unknown as { localisTrack: Function }).localisTrack('checkout_started', {
+        const params = {
           product,
           guide_count: n,
           guide_slugs: slugsArray.join(','),
           lang,
-        });
+          value: checkoutValueCents(product, n) / 100,
+          currency: 'EUR',
+          source: 'guide_builder',
+        };
+        (window as unknown as { localisTrack: Function }).localisTrack('begin_checkout', params);
+        (window as unknown as { localisTrack: Function }).localisTrack('checkout_started', params);
       }
       submitCheckoutRedirect({
         product,

@@ -71,6 +71,25 @@ const isProd = import.meta.env.PROD;
             window.localisUtm = _utm;
           } catch (e) {}
 
+          function attachAttribution(params) {
+            if (_utm && Object.keys(_utm).length) {
+              Object.keys(_utm).forEach((k) => { if (!params[k]) params[k] = _utm[k]; });
+            }
+            try {
+              const landing = window.localisPartnerLanding;
+              if (landing?.partner_id) {
+                if (!params.qr_source) params.qr_source = landing.source || 'partner_landing';
+                if (!params.qr_path) params.qr_path = landing.qr_path || landing.path || '';
+                if (!params.qr_url) params.qr_url = landing.qr_url || window.location.href;
+              } else if (window.localisPartnerId && window.localisPartnerId !== '(direct)') {
+                if (!params.qr_source) params.qr_source = 'partner_cookie';
+                if (!params.qr_path) params.qr_path = `/p/${window.localisPartnerId}`;
+                if (!params.qr_url) params.qr_url = `https://localis.guide/p/${window.localisPartnerId}`;
+              }
+            } catch (e) {}
+            return params;
+          }
+
           // Called by CookieBanner after consent, or on page load if consent already given.
           window.localisGA4Init = function () {
             if (window._ga4Loaded) return;
@@ -131,9 +150,7 @@ const isProd = import.meta.env.PROD;
               if (!params.partner_id) params.partner_id = pid;
               if (isInternalTraffic && !params.traffic_type) params.traffic_type = 'internal';
               // Attach UTM attribution to every event (for QR → purchase funnel tracking).
-              if (_utm && Object.keys(_utm).length) {
-                Object.keys(_utm).forEach((k) => { if (!params[k]) params[k] = _utm[k]; });
-              }
+              attachAttribution(params);
               try { if (typeof window.gtag === 'function') window.gtag('event', name, params); } catch (e) {}
               try { if (window.posthog && typeof window.posthog.capture === 'function') window.posthog.capture(name, params); } catch (e) {}
               try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
@@ -144,9 +161,8 @@ const isProd = import.meta.env.PROD;
           window.localisTrack = window.localisTrack || function (name, params) {
             params = params || {};
             if (!params.partner_id) params.partner_id = _partnerId || '(direct)';
-            if (_utm && Object.keys(_utm).length) {
-              Object.keys(_utm).forEach((k) => { if (!params[k]) params[k] = _utm[k]; });
-            }
+            attachAttribution(params);
+
             try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
           };
         </script>
