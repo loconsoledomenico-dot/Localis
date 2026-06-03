@@ -1,6 +1,5 @@
-const CACHE_VERSION = 'v2';
-const AUDIO_CACHE = `localis-audio-${CACHE_VERSION}`;
-const STATIC_CACHE = `localis-static-${CACHE_VERSION}`;
+const AUDIO_CACHE = 'localis-audio-v2';  // keep v2: preserves user-saved audio on SW update
+const STATIC_CACHE = 'localis-static-v3';
 const OFFLINE_INDEX_KEY = 'localis::offline-index';
 
 self.addEventListener('install', (event) => {
@@ -30,6 +29,18 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
+  // Synthetic local audio endpoint — serves cached guide audio with Range support
+  if (url.pathname.startsWith('/sw-audio/')) {
+    event.respondWith(handleSwAudio(url.pathname, event.request));
+    return;
+  }
+
+  // /api/audio-url: network-first; if offline and audio is cached, return synthetic local URL
+  if (url.pathname === '/api/audio-url' && event.request.method === 'GET') {
+    event.respondWith(handleAudioUrlApi(event.request, url));
+    return;
+  }
+
   // Guide audio on R2 — serve from cache if saved offline, else stream from network
   if (url.hostname.endsWith('.r2.cloudflarestorage.com')) {
     event.respondWith(handleGuideAudio(event.request));
@@ -39,6 +50,12 @@ self.addEventListener('fetch', (event) => {
   // Trailers — cache automatically on first fetch (small files)
   if (url.pathname.startsWith('/audio/trailers/')) {
     event.respondWith(handleTrailerAudio(event.request));
+    return;
+  }
+
+  // Access pages — cache HTML on first load so they open offline
+  if (event.request.mode === 'navigate' && url.pathname.startsWith('/access/')) {
+    event.respondWith(handleAccessPage(event.request));
     return;
   }
 
@@ -70,8 +87,78 @@ self.addEventListener('fetch', (event) => {
   }
 });
 
-// Guide audio: serve from offline cache (keyed by pathname) with Range support.
-// Never caches automatically — only via explicit SAVE_OFFLINE message.
+// Cache access/[token] HTML on first load; serve from cache when offline
+async function handleAccessPage(request) {
+  const cache = await caches.open(STATIC_CACHE);
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      cache.put(request, response.clone()).catch(() => {});
+    }
+    return response;
+  } catch {
+    const cached = await cache.match(request);
+    if (cached) return cached;
+    return caches.match('/offline.html');
+  }
+}
+
+// /api/audio-url: try network; if offline, check if audio is saved and return synthetic URL
+async function handleAudioUrlApi(request, url) {
+  try {
+    return await fetch(request);
+  } catch {
+    // Offline — check if this guide has cached audio
+    const slug = url.searchParams.get('guide');
+    const lang = url.searchParams.get('lang') || 'it';
+    if (!slug) {
+      return new Response(JSON.stringify({ error: 'offline' }), {
+        status: 503, headers: { 'Content-Type': 'application/json' },
+      });
+    }
+    const index = await getOfflineIndex();
+    if (index[`${slug}::${lang}`]) {
+      return new Response(
+        JSON.stringify({ url: `/sw-audio/${slug}/${lang}`, expires_in: 999999 }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } },
+      );
+    }
+    return new Response(
+      JSON.stringify({ error: 'Audio non disponibile offline. Salva la guida prima di partire.' }),
+      { status: 503, headers: { 'Content-Type': 'application/json' } },
+    );
+  }
+}
+
+// Serve /sw-audio/{slug}/{lang} from the offline cache with Range support
+async function handleSwAudio(pathname, request) {
+  // pathname: /sw-audio/bari-vecchia/it
+  const parts = pathname.replace('/sw-audio/', '').split('/');
+  const slug = parts[0];
+  const lang = parts[1];
+  if (!slug || !lang) {
+    return new Response('Not found', { status: 404 });
+  }
+
+  const index = await getOfflineIndex();
+  const entry = index[`${slug}::${lang}`];
+  if (!entry?.pathname) {
+    return new Response('Audio non salvato offline', { status: 404 });
+  }
+
+  const cache = await caches.open(AUDIO_CACHE);
+  const cacheKey = new Request(`localis::audio-path::${entry.pathname}`);
+  const cached = await cache.match(cacheKey);
+  if (!cached) {
+    return new Response('Audio non trovato in cache', { status: 404 });
+  }
+
+  const rangeHeader = request ? request.headers.get('Range') : null;
+  if (rangeHeader) return serveRange(cached, rangeHeader);
+  return cached.clone();
+}
+
+// Guide audio on R2 — serves from cache (Range-aware) if saved, else streams from network
 async function handleGuideAudio(request) {
   const url = new URL(request.url);
   const cacheKey = new Request(`localis::audio-path::${url.pathname}`);
@@ -81,13 +168,10 @@ async function handleGuideAudio(request) {
 
   if (cached) {
     const rangeHeader = request.headers.get('Range');
-    if (rangeHeader) {
-      return serveRange(cached, rangeHeader);
-    }
+    if (rangeHeader) return serveRange(cached, rangeHeader);
     return cached.clone();
   }
 
-  // Not saved offline — stream from network
   try {
     return await fetch(request);
   } catch {
@@ -130,10 +214,7 @@ async function serveRange(cachedResponse, rangeHeader) {
 
   const match = rangeHeader.match(/bytes=(\d+)-(\d*)/);
   if (!match) {
-    return new Response(null, {
-      status: 416,
-      headers: { 'Content-Range': `bytes */${total}` },
-    });
+    return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${total}` } });
   }
 
   const start = parseInt(match[1], 10);
@@ -141,15 +222,10 @@ async function serveRange(cachedResponse, rangeHeader) {
   const clampedEnd = Math.min(end, total - 1);
 
   if (start > clampedEnd || start >= total) {
-    return new Response(null, {
-      status: 416,
-      headers: { 'Content-Range': `bytes */${total}` },
-    });
+    return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${total}` } });
   }
 
-  const slice = buffer.slice(start, clampedEnd + 1);
-
-  return new Response(slice, {
+  return new Response(buffer.slice(start, clampedEnd + 1), {
     status: 206,
     headers: {
       'Content-Type': 'audio/mpeg',
@@ -160,7 +236,8 @@ async function serveRange(cachedResponse, rangeHeader) {
   });
 }
 
-// Offline index: maps "slug::lang" → { pathname, savedAt, size }
+// --- Offline index ---
+
 async function getOfflineIndex() {
   const cache = await caches.open(AUDIO_CACHE);
   const res = await cache.match(new Request(OFFLINE_INDEX_KEY));
@@ -172,42 +249,24 @@ async function saveOfflineIndex(index) {
   const cache = await caches.open(AUDIO_CACHE);
   await cache.put(
     new Request(OFFLINE_INDEX_KEY),
-    new Response(JSON.stringify(index), {
-      headers: { 'Content-Type': 'application/json' },
-    }),
+    new Response(JSON.stringify(index), { headers: { 'Content-Type': 'application/json' } }),
   );
 }
 
+// --- Message handlers ---
+
 self.addEventListener('message', (event) => {
   const { data, source } = event;
-
-  if (data?.type === 'SAVE_OFFLINE') {
-    handleSaveOffline(data, source);
-    return;
-  }
-
-  if (data?.type === 'GET_OFFLINE_STATUS') {
-    handleGetStatus(data, source);
-    return;
-  }
-
-  if (data?.type === 'DELETE_OFFLINE') {
-    handleDeleteOffline(data, source);
-    return;
-  }
+  if (data?.type === 'SAVE_OFFLINE')     { handleSaveOffline(data, source); return; }
+  if (data?.type === 'GET_OFFLINE_STATUS') { handleGetStatus(data, source); return; }
+  if (data?.type === 'DELETE_OFFLINE')  { handleDeleteOffline(data, source); return; }
 });
 
 async function handleGetStatus(data, source) {
   const { slug, lang } = data;
   const index = await getOfflineIndex();
   const entry = index[`${slug}::${lang}`];
-  source.postMessage({
-    type: 'OFFLINE_STATUS',
-    slug,
-    lang,
-    available: Boolean(entry),
-    size: entry?.size || 0,
-  });
+  source.postMessage({ type: 'OFFLINE_STATUS', slug, lang, available: Boolean(entry), size: entry?.size || 0 });
 }
 
 async function handleDeleteOffline(data, source) {
@@ -225,17 +284,10 @@ async function handleDeleteOffline(data, source) {
 
 async function handleSaveOffline(data, source) {
   const { url, slug, lang } = data;
-
   try {
     const response = await fetch(url, { cache: 'no-store' });
-
     if (!response.ok || !response.body) {
-      source.postMessage({
-        type: 'OFFLINE_ERROR',
-        slug,
-        lang,
-        message: `HTTP ${response.status}`,
-      });
+      source.postMessage({ type: 'OFFLINE_ERROR', slug, lang, message: `HTTP ${response.status}` });
       return;
     }
 
@@ -251,7 +303,6 @@ async function handleSaveOffline(data, source) {
       if (done) break;
       chunks.push(value);
       received += value.byteLength;
-
       if (hasSize) {
         const pct = Math.floor((received / total) * 100);
         if (pct !== lastPct) {
@@ -261,29 +312,19 @@ async function handleSaveOffline(data, source) {
       }
     }
 
-    // Assemble
     const full = new Uint8Array(received);
     let offset = 0;
-    for (const chunk of chunks) {
-      full.set(chunk, offset);
-      offset += chunk.byteLength;
-    }
+    for (const chunk of chunks) { full.set(chunk, offset); offset += chunk.byteLength; }
 
-    // Store keyed by R2 pathname (stable for same user+guide+lang)
     const pathname = new URL(url).pathname;
-    const cacheKey = new Request(`localis::audio-path::${pathname}`);
-    const audioResponse = new Response(full.buffer, {
-      headers: {
-        'Content-Type': 'audio/mpeg',
-        'Content-Length': String(received),
-        'Accept-Ranges': 'bytes',
-      },
-    });
-
     const cache = await caches.open(AUDIO_CACHE);
-    await cache.put(cacheKey, audioResponse);
+    await cache.put(
+      new Request(`localis::audio-path::${pathname}`),
+      new Response(full.buffer, {
+        headers: { 'Content-Type': 'audio/mpeg', 'Content-Length': String(received), 'Accept-Ranges': 'bytes' },
+      }),
+    );
 
-    // Update index
     const index = await getOfflineIndex();
     index[`${slug}::${lang}`] = { pathname, savedAt: Date.now(), size: received };
     await saveOfflineIndex(index);
@@ -291,9 +332,7 @@ async function handleSaveOffline(data, source) {
     source.postMessage({ type: 'OFFLINE_DONE', slug, lang, size: received });
   } catch (err) {
     source.postMessage({
-      type: 'OFFLINE_ERROR',
-      slug,
-      lang,
+      type: 'OFFLINE_ERROR', slug, lang,
       message: err instanceof Error ? err.message : 'Download fallito',
     });
   }
