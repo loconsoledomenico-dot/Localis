@@ -28,10 +28,10 @@ export interface Props {
 const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola VI - Gli autori' : lang === 'de' ? 'Tafel VI - Die Autoren' : 'Plate VI - The authors';
-const heading1 = lang === 'it' ? 'Sei autori baresi.' : lang === 'de' ? 'Sechs Autoren aus Bari.' : 'Six authors from Bari.';
-const heading2 = lang === 'it' ? 'Sei voci, sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Stimmen, sechs Guides, ein Bari.' : 'Six voices, six guides, one Bari.';
+const heading1 = lang === 'it' ? 'Cinque autori reali, una voce narrativa.' : lang === 'de' ? 'Sechs Autoren aus Bari.' : 'Six authors from Bari.';
+const heading2 = lang === 'it' ? 'Sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Stimmen, sechs Guides, ein Bari.' : 'Six voices, six guides, one Bari.';
 const intro = lang === 'it'
-  ? 'Non guide certificate, non copia-incolla Wikipedia. Autori che quei vicoli li hanno vissuti, hanno mangiato in quei panifici, hanno visto cambiare quei mercati. Ogni guida e firmata: nome, volto, storia.'
+  ? 'Le guide di Bari nascono da esperienze reali e ricerca Localis. Quando parla una persona reale, la presentiamo come tale. Quando il racconto usa una voce narrativa, lo dichiariamo con la stessa chiarezza.'
   : lang === 'de'
     ? 'Keine lizenzierten Stadtfuehrer, kein Wikipedia-Copy-and-paste. Stimmen, die aus gelebter Erfahrung, Recherche und redaktioneller Arbeit entstehen. Jeder Guide hat eine Stimme: Name, Gesicht, Geschichte.'
     : 'Not licensed guides, not Wikipedia copy-paste. Authors who lived those alleys, ate in those bakeries, watched those markets change. Each guide is signed: name, face, story.';
@@ -128,10 +128,10 @@ function bioFor(a: Author): string {
 function photoNoteFor(a: Author): string {
   if (a.composite) {
     return lang === 'it'
-      ? 'Voce editoriale composita. Ritratto evocativo.'
+      ? 'Ritratto narrativo. Costruito su ricerca e fonti Localis.'
       : lang === 'de'
-        ? 'Zusammengesetzte redaktionelle Stimme. Sinnbildliches Portraet.'
-        : 'Composite editorial voice. Evocative portrait.';
+        ? 'Narratives Porträt. Auf Grundlage der Recherchen und Quellen von Localis gestaltet.'
+        : 'Narrative portrait. Created from Localis research and sources.';
   }
   return lang === 'it'
     ? 'Persona reale. Ritratto dell\'autore.'
@@ -143,10 +143,10 @@ function photoNoteFor(a: Author): string {
 function photoTitleFor(a: Author): string {
   if (a.composite) {
     return lang === 'it'
-      ? `${a.name}: personaggio editoriale composito costruito da ricerca, fonti e raccolta sul campo. Ritratto evocativo.`
+      ? `${a.name}: ritratto narrativo costruito su ricerca e fonti Localis.`
       : lang === 'de'
-        ? `${a.name}: zusammengesetzte redaktionelle Figur aus Recherche, Quellen und Material vor Ort. Sinnbildliches Portraet.`
-        : `${a.name}: composite editorial character built from research, sources and field material. Evocative portrait.`;
+        ? `${a.name}: narratives Porträt auf Grundlage der Recherchen und Quellen von Localis.`
+        : `${a.name}: narrative portrait created from Localis research and sources.`;
   }
   return lang === 'it'
     ? `${a.name}: persona reale e autore della guida ${a.guideTitle}.`

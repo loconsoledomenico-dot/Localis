@@ -14,10 +14,10 @@ const realNarrators = new Set(['Domenico', 'Domenico Loconsole', 'Filippo', 'Fil
 const isComposite = !realNarrators.has(name);
 const photoNote = isComposite
   ? lang === 'it'
-    ? 'Voce editoriale composita. Ritratto evocativo.'
+    ? 'Ritratto narrativo. Costruito su ricerca e fonti Localis.'
     : lang === 'de'
-      ? 'Zusammengesetzte redaktionelle Stimme. Sinnbildliches Porträt.'
-      : 'Composite editorial voice. Evocative portrait.'
+      ? 'Narratives Porträt. Auf Grundlage der Recherchen und Quellen von Localis gestaltet.'
+      : 'Narrative portrait. Created from Localis research and sources.'
   : lang === 'it'
     ? 'Persona reale. Ritratto dell\'autore.'
     : lang === 'de'
@@ -25,10 +25,10 @@ const photoNote = isComposite
       : 'Real person. Author portrait.';
 const photoTitle = isComposite
   ? lang === 'it'
-    ? `${name}: personaggio editoriale composito costruito da ricerca, fonti e raccolta sul campo. Ritratto evocativo.`
+    ? `${name}: ritratto narrativo costruito su ricerca e fonti Localis.`
     : lang === 'de'
-      ? `${name}: zusammengesetzte redaktionelle Figur aus Recherche, Quellen und Material vor Ort. Sinnbildliches Porträt.`
-      : `${name}: composite editorial character built from research, sources and field material. Evocative portrait.`
+      ? `${name}: narratives Porträt auf Grundlage der Recherchen und Quellen von Localis.`
+      : `${name}: narrative portrait created from Localis research and sources.`
   : lang === 'it'
     ? `${name}: persona reale e voce della guida.`
     : lang === 'de'
