@@ -68,5 +68,11 @@ marketing/outreach/credentials/*.json
 marketing/outreach/.env
 marketing/exports/
 
+# Google service-account credentials
+private/*.json
+private/*service-account*.json
+private/*google*.json
+private/*ga4*.json
+
 # Local sandbox app data
 .sandbox-appdata/

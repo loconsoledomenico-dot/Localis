@@ -286,7 +286,7 @@ export const prerender = true;
       const name = params.get('name') || '';
 
       const qrUrl = p
-        ? `https://localis.guide/?p=${encodeURIComponent(p)}`
+        ? `https://localis.guide/p/${encodeURIComponent(p)}`
         : 'https://localis.guide/';
 
       const qrImg = document.querySelector('[data-qr-img]');

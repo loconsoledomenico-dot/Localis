@@ -29,7 +29,7 @@ import qrcode
 from qrcode.constants import ERROR_CORRECT_H
 
 SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9-]{2,40}$")
-BASE_URL = "https://localis.guide/?p={slug}"
+BASE_URL = "https://localis.guide/p/{slug}"
 INK = "#1C1510"
 CREAM = "#FAF7F2"
 OUT_DIR = Path(__file__).resolve().parent.parent / "marketing" / "qr-codes"
@@ -40,6 +40,7 @@ def main() -> int:
     ap.add_argument("slug", help="Partner slug, e.g. 'london-bar'")
     ap.add_argument("--size", type=int, default=20, help="Box pixel size (default 20 → ~900px image)")
     ap.add_argument("--border", type=int, default=4, help="Quiet zone modules (default 4)")
+    ap.add_argument("--format", choices=("png", "svg"), default="png", help="Output format (default png)")
     args = ap.parse_args()
 
     slug = args.slug.strip().lower()
@@ -51,12 +52,20 @@ def main() -> int:
     qr = qrcode.QRCode(error_correction=ERROR_CORRECT_H, box_size=args.size, border=args.border)
     qr.add_data(url)
     qr.make(fit=True)
-    img = qr.make_image(fill_color=INK, back_color=CREAM)
+    if args.format == "svg":
+        from qrcode.image.svg import SvgPathImage
+
+        img = qr.make_image(image_factory=SvgPathImage, fill_color=INK, back_color=CREAM)
+    else:
+        img = qr.make_image(fill_color=INK, back_color=CREAM)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    out = OUT_DIR / f"{slug}.png"
+    out = OUT_DIR / f"{slug}.{args.format}"
     img.save(out)
-    print(f"Saved: {out} ({img.size[0]}x{img.size[1]} px) -> {url}")
+    if hasattr(img, "size"):
+        print(f"Saved: {out} ({img.size[0]}x{img.size[1]} px) -> {url}")
+    else:
+        print(f"Saved: {out} ({args.format}) -> {url}")
     return 0
 
 
