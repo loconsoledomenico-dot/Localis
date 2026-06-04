@@ -1,0 +1,103 @@
+<prosody rate="90%">Io sono Domenico.</prosody>
+<break time="1.5s"/>
+
+Sono barese e sono cresciuto al quartiere Libertà, a pochi passi da questa città antica.
+<break time="0.8s"/>
+
+Bari Vecchia l'ho sempre avuta accanto. Non come qualcosa da visitare una volta nella vita, ma come un pezzo della città che era lì, vicino, presente. E forse proprio per questo, da ragazzi, non ci si rende conto subito di cosa si ha davanti.
+<break time="0.8s"/>
+
+Poi cresci. Studi. Torni negli stessi posti. E capisci una cosa che cambia completamente il modo di guardare queste pietre.
+<break time="1.2s"/>
+
+Oggi la chiamiamo Bari Vecchia.
+<break time="1s"/>
+
+<prosody rate="85%" pitch="+4%">Per secoli, invece, questa era <emphasis level="strong">tutta</emphasis> Bari.</prosody>
+<break time="2s"/>
+
+Prima di entrare nei vicoli, fermati davanti al Castello Svevo.
+<break time="0.5s"/>
+
+Guardalo bene.
+<break time="1s"/>
+
+È massiccio, quasi severo. Non sembra fatto per accogliere. Sembra fatto per resistere.
+<break time="1s"/>
+
+Noi lo chiamiamo Castello Svevo perché Federico II lo trasformò profondamente e gli lasciò alcuni dei segni più riconoscibili: l'aquila imperiale sul portale, gli archi, i capitelli, gli ambienti che resero la fortezza anche un luogo di rappresentanza.
+<break time="0.8s"/>
+
+Ma il castello era nato prima.
+<break time="0.8s"/>
+
+E la cosa più importante da capire è che non venne costruito soltanto per difendere Bari.
+<break time="0.8s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">Serviva anche a controllarla.</emphasis></prosody>
+<break time="1.5s"/>
+
+Nel Medioevo, questa città era difficile da comandare. Era ricca, orgogliosa, piena di commerci, abituata ad avere rapporti con mondi diversi. Aveva conosciuto Longobardi, Saraceni, Bizantini. Aveva vissuto guardando il mare, ma senza chinare facilmente la testa davanti a chi cercava di dominarla.
+<break time="0.8s"/>
+
+Quando arrivarono i Normanni, Bari resistette.
+<break time="1s"/>
+
+E il castello venne collocato proprio qui, al margine della città antica, tra la terraferma e il mare.
+<break time="0.8s"/>
+
+Abbastanza vicino per proteggerla,
+<break time="0.5s"/>
+
+abbastanza grande per ricordarle chi comandava.
+<break time="1.5s"/>
+
+Prova a immaginare come doveva apparire agli abitanti del borgo.
+<break time="0.8s"/>
+
+Non una bella attrazione da fotografare,
+<break time="0.5s"/>
+
+non una scenografia medievale.
+<break time="0.5s"/>
+
+Una presenza enorme, chiusa da torri, circondata dal fossato, legata al potere di chi governava.
+<break time="1s"/>
+
+Il castello non era davvero "dei baresi".
+<break time="0.8s"/>
+
+<prosody rate="88%" pitch="+3%">Era qualcosa che i baresi <emphasis level="strong">avevano addosso</emphasis>.</prosody>
+<break time="1.2s"/>
+
+Una fortezza costruita accanto alla loro città, ma anche contro la loro libertà.
+<break time="1s"/>
+
+Più tardi, Isabella d'Aragona e Bona Sforza lo avrebbero trasformato in una residenza principesca, aperta a corti, artisti e personaggi importanti. Ma sotto quell'eleganza sarebbe rimasta la stessa sensazione: queste torri non appartenevano alla vita quotidiana dei vicoli.
+<break time="0.8s"/>
+
+La osservavano dall'alto.
+<break time="1.5s"/>
+
+Adesso voltati verso Bari Vecchia.
+<break time="0.8s"/>
+
+Dietro quelle strade strette non c'è soltanto un quartiere antico.
+<break time="0.5s"/>
+
+C'è una città che per secoli ha dovuto difendersi dal mare, dai conquistatori e, qualche volta, anche da chi diceva di volerla governare.
+<break time="1.2s"/>
+
+Ora cominciamo a entrarci.
+<break time="0.8s"/>
+
+Dirigiti verso Strada delle Crociate.
+<break time="0.8s"/>
+
+Non avere fretta.
+<break time="1s"/>
+
+Questa storia non comincia con una fotografia.
+<break time="0.5s"/>
+
+<prosody rate="85%">Comincia con una città chiusa dentro le sue mura.</prosody>

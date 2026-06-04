@@ -1,0 +1,363 @@
+## AUDIO-SKRIPT — HAFEN VON BARI-GUIDE
+LOCALIS — HAFEN VON BARI · vollständige Überarbeitung
+Multi-voice: Valerio (warme Erzählstimme) · Brando (dramatische Stimme) für intensive Kapitel.
+=====================================
+EINFÜHRUNG
+-------------
+voice: valerio
+
+Das hier ist kein Hafen. <break time="1.0s"/> Es ist eine Schwelle. <break time="1.2s"/>
+
+Schaut geradeaus. <break time="0.5s"/> Das Wasser, das ihr seht, kommt aus Albanien. <break time="0.4s"/> Von hier nach Durrës, in einer geraden Linie, ungefähr hundert Seemeilen. <break time="0.4s"/> Enger als das ist die Adria nirgendwo sonst. <break time="0.8s"/>
+
+Mit der Fähre heute neun Stunden. <break time="0.5s"/> Dasselbe Meer. <break time="0.4s"/> Nur, größere Schiffe. <break time="1.2s"/>
+
+Deshalb hat Bari seit jeher nach Osten geschaut. <break time="0.5s"/> Nicht nach Rom. <break time="0.4s"/> Nach Konstantinopel, nach Jerusalem, nach Durrës, nach Antiochia. <break time="0.6s"/> Alles, was für diese Stadt gezählt hat, ist von hier angekommen oder abgefahren. <break time="1.2s"/>
+
+Und hier — genau auf dem Kai, wo ihr steht — ist alles passiert. <break time="0.8s"/>
+
+Von diesen Steinen sind Kreuzritter aufgebrochen, die nie nach Hause zurückgekehrt sind. <break time="0.4s"/> Sarazenen sind mit dem Schwert in der Hand gelandet, und in wenigen Tagen gehörte Bari ihnen. <break time="0.4s"/> Friedrich II. kehrte hierher zurück, nachdem er Jerusalem erobert hatte, ohne ein Schwert zu ziehen. <break time="0.5s"/> An einem Regenabend im dreiundvierzig ließ eine Bombardierung etwas explodieren, das so geheim war, dass es die Weltmedizin veränderte. <break time="0.5s"/> Und an einem Märznachmittag einundneunzig stiegen zwanzigtausend Menschen — zwanzigtausend — in acht Stunden von einem einzigen Schiff ab. <break time="1.5s"/>
+
+Alles hier. <break time="0.4s"/> In wenigen hundert Metern Kai. <break time="1.0s"/>
+
+In den nächsten zwanzig Minuten nehme ich euch mit in die Geschichte, die euch kein Reiseführer erzählt. <break time="0.5s"/> Nur Dinge, die wirklich passiert sind. <break time="0.4s"/> Nur Dinge, die ihr nachprüfen könnt. <break time="0.6s"/> Bereit. <break time="0.5s"/> Es geht los.
+
+
+=====================================
+SARAZENEN - DAS EMIRAT VON BARI
+-------------
+voice: valerio
+
+Jahr achthundertsiebenundvierzig. <break time="0.6s"/>
+
+Hier, wo ihr steht, landet eine Gruppe Araber. <break time="0.4s"/> An ihrer Spitze steht ein Anführer namens Khalfun. <break time="0.4s"/> In wenigen Wochen nehmen sie die Stadt ein. <break time="0.5s"/> Ohne große Schlachten. <break time="0.4s"/> Fast ohne dass jemand es bemerkt. <break time="1.0s"/>
+
+Und für vierundzwanzig Jahre — vierundzwanzig — ist Bari ein Emirat. <break time="0.5s"/> Muslimisch. <break time="0.4s"/> Das einzige auf dem italienischen Festland zusammen mit Tarent. <break time="0.6s"/> Eine Insel des Islam, eingequetscht zwischen Byzanz im Süden und den Langobarden im Norden. <break time="1.0s"/>
+
+Drei Emire lösen einander ab. <break time="0.5s"/> Den letzten müsst ihr euch merken. <break time="0.5s"/> Er heißt Sawdan. <break time="1.0s"/>
+
+Und dieser Sawdan ist nicht das, was ihr denkt. <break time="0.6s"/>
+
+Arabische und byzantinische Quellen beschreiben ihn als gebildeten Gouverneur. <break time="0.4s"/> Er empfängt christliche Diplomaten, unterhält Briefwechsel mit den Höfen von Byzanz und der Franken. <break time="0.4s"/> Er lässt eine große Moschee in der Mitte der Stadt bauen. <break time="0.5s"/> Er unterhält einen aktiven Hof mit Schreibern und Gelehrten. <break time="0.4s"/> In Bari. <break time="0.4s"/> Im Jahr achthundertfünfzig. <break time="1.0s"/>
+
+Und unter ihm war dieser Hafen hier — keine tote Anlegestelle. <break time="0.4s"/> Er war ein Knotenpunkt. <break time="0.5s"/> Die Schiffe fuhren nach Damaskus ab. <break time="0.4s"/> Nach Ägypten. <break time="0.4s"/> Nach Andalusien. <break time="0.4s"/> Sie luden Getreide, Öl, Gewürze. <break time="0.5s"/> Und ja — auch Sklaven. <break time="0.4s"/> Ich erzähle euch kein Märchen. <break time="1.2s"/>
+
+Dann kommt achthunderteinundsiebzig. <break time="0.8s"/>
+
+Und hier passiert etwas, das in der Geschichte etwa einmal alle fünfhundert Jahre vorkommt. <break time="0.5s"/> Drei verschiedene Heere einigen sich. <break time="0.5s"/> Ludwig II., Kaiser der Franken. <break time="0.4s"/> Basileios I., Kaiser von Byzanz. <break time="0.4s"/> Adelchis, Fürst von Benevent. <break time="0.8s"/>
+
+Denkt mal kurz nach. <break time="0.5s"/> Wann haben sich je ein westlicher Kaiser, ein östlicher und ein langobardischer Fürst auf irgendetwas geeinigt? <break time="0.6s"/> Nie. <break time="0.5s"/> Außer für Bari. <break time="1.2s"/>
+
+Vier Jahre Belagerung. <break time="0.5s"/> Die Stadt fällt im Februar. <break time="0.4s"/> Sawdan endet in Ketten, man bringt ihn nach Frankreich, und dort stirbt er. <break time="0.5s"/> Ohne seinen Hafen je wiederzusehen. <break time="1.0s"/>
+
+Das Emirat endet. <break time="0.5s"/> Aber diese vierundzwanzig Jahre haben für immer Spuren hinterlassen. <break time="0.4s"/> Arabische Wörter im barischen Dialekt — versucht sie auf dem Markt zu hören, sie sind noch da. <break time="0.4s"/> Fangmethoden. <break time="0.4s"/> Handelsrouten. <break time="0.5s"/> Und diese Idee — Bari als Tor zum Orient — hat sich nie mehr verändert. <break time="1.5s"/>
+
+
+=====================================
+DIE KREUZRITTER, DIE NICHT ZURÜCKKEHRTEN
+-------------
+voice: brando
+
+November, sechzehnhundert— nein, November, tausendneunundneunzig. <break time="1.0s"/>
+
+Von diesem Kai bricht eine Flotte auf. <break time="0.5s"/> Dreißig Schiffe. <break time="0.4s"/> Fünfhundert normannische Ritter, in voller Rüstung. <break time="0.4s"/> Fünftausend Fußsoldaten. <break time="0.6s"/>
+
+Versucht, euch sie vorzustellen. <break time="0.5s"/> Zwanzigjährige Jungs, zum größten Teil Bauern, die bis wenige Wochen zuvor noch nie das Meer gesehen hatten. <break time="0.5s"/> Sie sind tagelang gelaufen, um nach Bari zu kommen. <break time="0.4s"/> Jetzt stehen sie hier. <break time="0.4s"/> Und sie gehen an Bord. <break time="1.0s"/>
+
+Ihr Anführer ist Bohemund von Tarent. <break time="0.5s"/> Sohn von Robert Guiskard. <break time="0.4s"/> Normanne. <break time="0.4s"/> Brutal. <break time="0.4s"/> Ehrgeizig bis auf die Knochen. <break time="0.8s"/>
+
+Ziel: Konstantinopel. <break time="0.4s"/> Dann Antiochia. <break time="0.4s"/> Dann Jerusalem. <break time="0.5s"/> Es ist der erste Kreuzzug. <break time="1.2s"/>
+
+Bohemund kehrt hier, in Bari, nicht mehr zurück. <break time="0.5s"/> Er erobert Antiochia, wird dort Fürst, stirbt in Apulien, aber begraben wird er in Canosa. <break time="1.0s"/>
+
+Und jene fünftausend Fußsoldaten? <break time="0.8s"/>
+
+Die meisten kehren ebenfalls nicht zurück. <break time="0.6s"/> Krankheiten. <break time="0.4s"/> Schlachten. <break time="0.4s"/> Hunger. <break time="0.4s"/> Durst, mitten in der syrischen Wüste, unter einer Sonne, die sie sich in Bari nie vorgestellt hatten. <break time="0.6s"/> Sie landen in einem Massengrab in Anatolien, ohne ein Kreuz darüber. <break time="0.4s"/> Ohne einen Namen. <break time="0.5s"/> Ohne dass jemand hier in Apulien je wusste, wo sie geblieben waren. <break time="1.5s"/>
+
+Mütter, Frauen, Verlobte. <break time="0.4s"/> Jahrelang warteten sie auf eine Rückkehr, die nie kommen würde. <break time="0.6s"/> Sie taten es hier, auf dem Kai. <break time="0.5s"/> Den Horizont im Blick. <break time="0.4s"/> Wie man es in Häfen tut. <break time="1.2s"/>
+
+In den dreißig Jahren danach wird dieser Hafen zum Kreuzfahrer-Hub des Mezzogiorno. <break time="0.5s"/> Wichtiger als Genua. <break time="0.4s"/> Wichtiger als Pisa. <break time="0.5s"/> Pilger, Soldaten, Händler, Prediger, Fanatiker. <break time="0.4s"/> Alle kommen hier durch. <break time="0.5s"/> Alle schauen auf dasselbe Wasser, bevor sie auslaufen. <break time="1.0s"/>
+
+Und dann, im Jahr zwölfhundertachtundzwanzig, kommt Friedrich II. an die Reihe. <break time="0.5s"/> Er bricht von Brindisi zum Sechsten Kreuzzug auf. <break time="0.4s"/> Er wird auch bei seiner Rückkehr im Jahr darauf in Brindisi landen. <break time="0.5s"/> Aber durch Bari, durch diesen Hafen, wird er während seiner gesamten Regierungszeit wiederholt durchkommen. <break time="0.4s"/> Das Castello, das ihr hinter euch seht, ließ er erweitern — im Jahr zwölfhundertdreiunddreißig. <break time="1.0s"/>
+
+Er war vom Papst exkommuniziert aufgebrochen. <break time="0.5s"/> Er kehrt mit einem Vertrag in der Tasche zurück. <break time="0.4s"/> Jerusalem — christlich. <break time="0.4s"/> Ohne ein gezogenes Schwert. <break time="0.4s"/> Ohne einen Toten. <break time="1.0s"/>
+
+Wie er das geschafft hat, erzähle ich euch jetzt. <break time="1.0s"/>
+
+
+=====================================
+FRIEDRICH II. - STUPOR MUNDI
+-------------
+voice: valerio
+
+Friedrich der Zweite von Schwaben. <break time="0.6s"/>
+
+Geboren im Jahr elfhundertdreiundneunzig in Jesi, in einem Zelt, auf dem Marktplatz des Dorfes, weil seine Mutter — Konstanze von Altavilla, Normannin — wollte, dass alle sahen, dass sie wirklich selbst entband. <break time="0.5s"/> Um zu verhindern, dass man sagen würde, das Kind sei ausgetauscht worden. <break time="0.4s"/> Sie war eine vierzigjährige Frau in einer Zeit, in der mit vierzig zu gebären einen Skandal bedeutete. <break time="1.0s"/>
+
+Dieses Kind ist bei seiner Geburt bereits König von Sizilien. <break time="0.5s"/> Mit drei Jahren verliert es den Vater. <break time="0.5s"/> Mit vier steht es bereits im Mittelpunkt aller Verschwörungen Europas. <break time="0.6s"/> Mit fünfundzwanzig, Kaiser des Heiligen Römischen Reiches. <break time="1.0s"/>
+
+Man nennt ihn Stupor Mundi. <break time="0.4s"/> "Jener, der die Welt staunen lässt". <break time="0.4s"/> Und sie glaubten wirklich daran. <break time="1.0s"/>
+
+Hört diese Liste — sie ist belegt. <break time="0.5s"/> Er spricht sechs Sprachen. <break time="0.4s"/> Deutsch, Latein, Italienisch, Französisch, Griechisch, Arabisch. <break time="0.4s"/> Er schreibt einen Falknereitraktat, der — hört gut hin — bis heute das Referenzhandbuch ist, achthundert Jahre später. <break time="0.5s"/> Er züchtet Kamele, Löwen, Geparden, Strauße. <break time="0.4s"/> An seinem Hof — hier in Apulien — hat er den schottischen Astrologen Michael Scotus und den jüdischen Übersetzer Jakob Anatoli. <break time="0.4s"/> Muslimische Philosophen schicken ihm Abhandlungen auf Arabisch. <break time="0.5s"/> Im dreizehnten Jahrhundert. <break time="0.4s"/> Während im Rest Europas für weit weniger jemand auf dem Scheiterhaufen endete. <break time="1.2s"/>
+
+Der Papst hasst ihn. <break time="0.5s"/> Er exkommuniziert ihn zweimal. <break time="0.4s"/> Das erste Mal — hört euch das an — weil er nicht zum Kreuzzug aufbrechen will. <break time="0.5s"/> Das zweite Mal, als er schließlich aufbricht, weil er als Exkommunizierter gegangen ist. <break time="0.5s"/> Im Grunde: exkommuniziert wenn er nicht geht, exkommuniziert wenn er geht. <break time="0.4s"/> Ein Leben, eben. <break time="1.2s"/>
+
+Zwölfhundertachtundzwanzig. <break time="0.5s"/> Friedrich schifft sich Richtung Heiliges Land ein. <break time="0.4s"/> Und hier liegt der Geniestreich. <break time="0.6s"/>
+
+Er bringt keine Kampftruppe mit. <break time="0.5s"/> Er bringt Diplomaten. <break time="0.4s"/> Übersetzer. <break time="0.4s"/> Geschenke — darunter ein goldener Pfau und arabische Pferde, die in den Chroniken dokumentiert sind. <break time="0.5s"/> Und er verhandelt auf Arabisch, er persönlich, mit dem Sultan von Ägypten. <break time="0.4s"/> Dieser heißt Al-Kamil. <break time="0.4s"/> Er ist der Neffe Saladins. <break time="0.6s"/> Die Quellen berichten von Geschenkeaustausch, Briefen und wissenschaftlichen Fragen zwischen den beiden Höfen. <break time="1.0s"/>
+
+Das Ergebnis? <break time="0.5s"/> Vertrag von Jaffa. <break time="0.4s"/> Zehn Jahre Frieden. <break time="0.4s"/> Jerusalem an die Christen. <break time="0.4s"/> Bethlehem an die Christen. <break time="0.4s"/> Nazareth an die Christen. <break time="0.5s"/> Ohne eine einzige Schlacht. <break time="0.4s"/> Ohne einen Toten. <break time="0.6s"/> Friedrich geht zur Grabeskirche und — da ihn der Papst exkommuniziert hatte und kein Bischof ihn krönen konnte — setzt er sich die Krone selbst auf den Kopf. <break time="0.5s"/> König von Jerusalem. <break time="0.4s"/> Selbstinvestitur. <break time="0.4s"/> Nie zuvor passiert, nie danach wieder passiert. <break time="1.2s"/>
+
+Der Papst ist wütend. <break time="0.4s"/> Er erklärt den Vertrag für nichtig. <break time="0.5s"/> Friedrich geht. <break time="1.0s"/>
+
+Juni zwölfhundertneunundzwanzig. <break time="0.4s"/> Er landet in Brindisi. <break time="0.5s"/> Bari wird eine seiner beliebtesten apulischen Residenzen. <break time="0.4s"/> Im Jahr zwölfhundertdreiunddreißig lässt er das Castello Svevo neu gründen und erweitern — das, das ihr hinter euch seht, ja, genau das. <break time="0.4s"/> Von hier und den anderen apulischen Burgen aus regiert er noch zwanzig Jahre lang die halbe Mittelmeerregion. <break time="1.2s"/>
+
+Er stirbt im Jahr zwölfhundertfünfzig. <break time="0.4s"/> Ohne ihn bricht das Haus der Staufer in glatt zwanzig Jahren zusammen. <break time="0.6s"/> Aber das Castello, den Hafen, und die Idee von Bari als Brücke zwischen Abendland und Islam — die hat er dorthin gesetzt. <break time="0.5s"/> Und sie ist geblieben. <break time="1.5s"/>
+
+
+=====================================
+ZWEITER DEZEMBER 1943
+-------------
+voice: brando
+
+Zweiter Dezember, neunzehnhundertdreiundvierzig. <break time="1.2s"/>
+
+Es ist ungefähr halb acht abends. <break time="0.5s"/> Die alliierten Schiffe auf der Reede, insgesamt etwa dreißig, sind beleuchtet. <break time="0.4s"/> Scheinwerfer an Deck. <break time="0.4s"/> Bari wurde vor zwei Monaten befreit. <break time="0.4s"/> Die Flugabwehr ist auf niedrige Alarmbereitschaft gestellt. <break time="0.8s"/>
+
+Von den Schiffen werden Kisten mit Lebensmitteln, Munition, Treibstoff, Medikamenten entladen. <break time="0.4s"/> Alles, was gebraucht wird, um den Italienfeldzug am Laufen zu halten, läuft hier durch. <break time="0.5s"/> Am Kai Militärs, barische Hafenarbeiter, britische Offiziere, amerikanische Matrosen. <break time="1.0s"/>
+
+Gegen zwanzig Uhr, vom Himmel, ein Licht. <break time="0.5s"/>
+
+Hundertfünf Bomber. <break time="0.4s"/> Deutsche. <break time="0.4s"/> Junkers Ju 88. <break time="0.5s"/> Sie fliegen tief. <break time="0.4s"/> Sie werfen ab. <break time="1.0s"/>
+
+In zwanzig Minuten ist es vorbei. <break time="0.8s"/>
+
+Achtundzwanzig Schiffe versenkt oder schwer beschädigt. <break time="0.4s"/> Tausend tote Militärs. <break time="0.4s"/> Mindestens weitere tausend barische Zivilisten, in den folgenden Stunden und Tagen. <break time="0.5s"/> Die alliierten Zeitungen werden es, wenn sie schließlich darüber berichten, "das kleine Pearl Harbor" nennen. <break time="1.2s"/>
+
+Aber die eigentliche Katastrophe — die, die alles verändert — ist nicht die Bombardierung. <break time="0.8s"/>
+
+Da ist ein amerikanisches Schiff, mitten im Hafen. <break time="0.5s"/> Es heißt SS John Harvey. <break time="0.4s"/> Ein Liberty Ship wie viele andere. <break time="0.4s"/> Außer dass in seinen Laderäumen — geschlossen, versiegelt, anonym — zweitausend Bomben liegen. <break time="0.5s"/> Typ M47A1. <break time="0.4s"/> Siebzig Pfund jede. <break time="0.5s"/> Geheime Fracht. <break time="1.0s"/>
+
+Wißt ihr, was darin ist? <break time="0.6s"/>
+
+Yperit. <break time="0.5s"/> Senfgas. <break time="0.4s"/> Das, was bei Ypern im Ersten Weltkrieg Zehntausende von Soldaten geblendet und getötet hatte. <break time="0.5s"/> Durch die Genfer Konvention verboten. <break time="0.4s"/> Offiziell nie mehr verwendet. <break time="0.6s"/> Roosevelt hat es im Geheimen nach Bari geschickt, als Vergeltungsmaßnahme — falls Hitler chemische Waffen eingesetzt hätte. <break time="0.4s"/> In Bari weiß niemand davon. <break time="0.5s"/> Weder die Ärzte. <break time="0.4s"/> Noch die italienischen Offiziere. <break time="0.4s"/> Noch, natürlich, die Zivilbevölkerung. <break time="1.2s"/>
+
+Die John Harvey explodiert. <break time="0.5s"/>
+
+Das Gas vermischt sich mit dem brennenden Treibstoff, der auf dem Wasser des Hafens treibt. <break time="0.4s"/> Eine Giftwolke steigt über die Stadt auf. <break time="0.5s"/> Die verwundeten Matrosen werden aus dem Meer gefischt. <break time="0.5s"/> Bedeckt mit Öl und Yperit. <break time="0.4s"/> In die Feldlazarette gebracht. <break time="1.0s"/>
+
+Die Ärzte tun, was sie können. <break time="0.5s"/> Sie waschen sie. <break time="0.4s"/> Legen sie unter Decken. <break time="0.4s"/> Wärmen sie auf. <break time="0.6s"/> Alles Dinge, die bei einer Yperit-Verbrennung genau falsch sind. <break time="0.5s"/> Nach zwölf Stunden beginnen die ersten zu sterben. <break time="0.4s"/> Haut, die sich ablöst. <break time="0.4s"/> Zerstörte Lungen. <break time="0.4s"/> Augen, für immer erblindet. <break time="0.8s"/>
+
+Sechshundertachtundzwanzig Offiziere. <break time="0.4s"/> Dreiundachtzig direkte Tote. <break time="0.4s"/> Und eine Zahl barischer Zivilisten, die nie mit absoluter Genauigkeit erfasst wurde. <break time="0.5s"/> Ganze Familien, in Vierteln nahe dem Hafen, in der Nacht der Giftwolke ausgesetzt. <break time="1.0s"/>
+
+Eisenhower erfährt es Tage später. <break time="0.5s"/> Churchill ordnet Stillschweigen an. <break time="0.4s"/> Dokumente — als geheim eingestuft. <break time="0.4s"/> Keine Pressekonferenzen. <break time="0.5s"/> Die offizielle Version lautet, die Wolke sei "Treibstoffdampf" gewesen. <break time="0.4s"/> Fast vierzig Jahre lang existierte das Yperit in Bari offiziell nie. <break time="1.2s"/>
+
+Die amerikanischen Dokumente wurden neunzehnhundertneunundfünfzig freigegeben. <break time="0.4s"/> Die britischen, neunzehnhundertachtundachtzig. <break time="0.6s"/> Vor wenigen Jahrzehnten. <break time="1.0s"/>
+
+Aber hört zu. <break time="0.6s"/> Da ist eine Sache, die die Bombardierung von Bari der Welt hinterlassen hat. <break time="0.8s"/>
+
+Ein amerikanischer Arzt. <break time="0.4s"/> Er heißt Stewart Alexander. <break time="0.4s"/> Man schickt ihn hierher, um herauszufinden, was zum Teufel passiert ist. <break time="0.5s"/> Er untersucht die Leichen. <break time="0.4s"/> Vergleicht Autopsien. <break time="0.4s"/> Er bemerkt etwas Seltsames — das Yperit zerstört auf eine spezifische Weise die Zellen des Knochenmarks und die weißen Blutkörperchen. <break time="0.6s"/> Die Zellen, die sich schnell teilen. <break time="0.4s"/> Er schreibt einen Bericht. <break time="1.0s"/>
+
+Dieser Bericht landet sechs Jahre später in den Händen zweier Forscher in Yale. <break time="0.4s"/> Er wird die Grundlage der ersten Chemotherapie. <break time="0.5s"/> Sie heißt Mechlorethamin. <break time="0.4s"/> Stickstofflost. <break time="0.4s"/> Das erste Krebsmedikament der Geschichte. <break time="1.2s"/>
+
+Aus der Katastrophe von Bari entsteht eine Methode, Krebs zu behandeln. <break time="0.6s"/> Aus dreiundachtzig Gasetoten — Millionen gerettete Leben in den folgenden Jahrzehnten. <break time="1.0s"/>
+
+Wenige wissen es in der Stadt. <break time="0.5s"/> Sehr wenige in der Welt. <break time="0.6s"/> Jetzt auch ihr. <break time="1.5s"/>
+
+
+=====================================
+N'DERRE A LA LANZE
+-------------
+voice: valerio
+
+Geht ein paar Schritte weiter. <break time="0.5s"/> Richtung alter Hafen. <break time="0.8s"/>
+
+Was ihr gleich sehen werdet, heißt N'derre a la lanze. <break time="0.5s"/> Auf Barisch: "Boden der Lanzen". <break time="0.4s"/> Die Lanzen sind keine Waffen — es sind die kleinen Boote, die Holzboote, mit einem einzigen Motor. <break time="1.0s"/>
+
+Hier verkaufen die Fischer den Fisch direkt von ihrem Holzboot. <break time="0.5s"/> Ohne Zwischenhändler. <break time="0.4s"/> Ohne überdachten Markt. <break time="0.4s"/> Ohne Quittung. <break time="0.5s"/> Wie es vor vierhundert Jahren war. <break time="0.4s"/> Exakt dieselbe Szene. <break time="0.6s"/> Auch ohne Kassenbons, ja. <break time="1.2s"/>
+
+Jeden Tag, ab sechs Uhr morgens. <break time="0.4s"/> Auch sonntags. <break time="0.5s"/> Kein Smartphone, kein Stand, kein Schaufenster. <break time="0.4s"/> Nur Holzkisten, Eis und Meer. <break time="1.0s"/>
+
+Und hier müsst ihr etwas sehen, das die Reise wert ist. <break time="0.8s"/>
+
+Es heißt "arricciatura del polpo" — das Aufwickeln des Oktopus. <break time="0.5s"/> Vier Bewegungen. <break time="0.6s"/>
+
+Eins — schlag den Oktopus gegen den Felsen. <break time="0.5s"/> Zehn, zwölf Mal. <break time="0.4s"/> Um das Fleisch zu erweichen. <break time="0.4s"/> Ohne das würdest du Gummi kauen. <break time="0.5s"/> Zwei — dreht ihn zwischen den Händen. <break time="0.4s"/> Drei — klatscht ihn gegen die niedrige Mauer. <break time="0.4s"/> Und vier — ihr kräuselt die Tentakel mit einer rotierenden Bewegung. <break time="0.5s"/> Eine Art Tornado im Miniaturformat. <break time="1.0s"/>
+
+Gesamtzeit: vierzig Sekunden. <break time="0.4s"/> Ungefähr. <break time="0.5s"/> Ohne auf die Uhr zu schauen. <break time="1.0s"/>
+
+Und niemand hat es je in ein Handbuch geschrieben. <break time="0.5s"/> Man lernt es, indem man dem Vater zuschaut. <break time="0.4s"/> Oder dem Großvater. <break time="0.4s"/> Eine Technik, die nur mündlich weitergegeben wird. <break time="0.6s"/> Versucht es zu googeln — es gibt nichts. <break time="1.2s"/>
+
+Und hier — macht euch bereit — isst man den Oktopus roh. <break time="0.5s"/> In drei Stücke geschnitten, mit einem Spritzer Zitrone. <break time="0.4s"/> Punkt. <break time="0.4s"/> Man zahlt den Fischpreis, setzt sich auf die niedrige Mauer, isst mit dem Meer vor Augen. <break time="0.6s"/> Eine der wenigen italienischen Städte, wo dieses Ding noch auf dem Platz passiert, unter freiem Himmel, vor allen. <break time="0.4s"/> Ohne Restaurant. <break time="0.4s"/> Ohne Speisekarte. <break time="0.4s"/> Ohne Reservierung. <break time="1.0s"/>
+
+Dasselbe gilt für Seeigel, "allievi" (Sardellenbrut), kleine Tintenfische, rohe Meeresfrüchte. <break time="0.5s"/> Man kauft, setzt sich, isst. <break time="0.4s"/> Fünf, sechs Euro pro Portion. <break time="0.6s"/> Das Sushi, das Japan nicht weiß, dass es hat. <break time="1.5s"/>
+
+
+=====================================
+DER FISCH, DER DIE STADT RETTETE
+-------------
+voice: valerio
+
+Nachkriegszeit. <break time="0.5s"/> Bari ist in schlechter Verfassung. <break time="0.4s"/> Die Bomben des Dreiundvierzigers, natürlich. <break time="0.4s"/> Aber vor allem der Hunger. <break time="0.5s"/> Der echte, der, den man in einem gewissen Alter nicht vergisst. <break time="1.0s"/>
+
+In der Stadt sind Fleisch in jenen Jahren ein Luxus. <break time="0.5s"/> Das Huhn kommt sonntags, wenn es gut läuft. <break time="0.4s"/> Für den Rest — Fisch. <break time="0.4s"/> Immer Fisch. <break time="0.8s"/>
+
+Aber kein edler Fisch, wohlgemerkt. <break time="0.5s"/> Kein Wolfsbarsch, keine Goldbrasse. <break time="0.4s"/> Das kostet. <break time="0.5s"/> Armer Fisch. <break time="0.4s"/> Sardellen, Sardinen, Makrelen, Bonito. <break time="0.4s"/> Was die Holzboote ohne weit zu fahren heraufzogen. <break time="0.4s"/> Das, was fast nichts kostete, weil es so viel davon gab. <break time="1.0s"/>
+
+Und aus dieser Notwendigkeit — aus diesem Hunger — entstehen die Gerichte, die heute Identität sind. <break time="0.6s"/> Die, die man euch auftischt, wenn ihr ins Restaurant geht und sagt "ich will typisch essen". <break time="1.2s"/>
+
+Die Tiella mit Reis, Kartoffeln und Miesmuscheln. <break time="0.5s"/> Eine Terrakottaschale. <break time="0.4s"/> Abwechselnde Schichten. <break time="0.4s"/> Im Ofen eine, zwei Stunden. <break time="0.6s"/> Es kostete wenig. <break time="0.4s"/> Es sättigte stark. <break time="0.4s"/> Es hielt drei Tage. <break time="0.5s"/> Heute steht es auf allen Speisekarten der Restaurants im Zentrum für fünfzehn Euro. <break time="0.4s"/> Vor siebzig Jahren war es das Abendessen der Armen. <break time="1.0s"/>
+
+Die gebratenen Miesmuscheln, auf der Straße in gelben Papiertüten verkauft. <break time="0.4s"/> Die kleinen Sardellenklöße. <break time="0.4s"/> Das Brotsuppe mit Seeigeln. <break time="0.5s"/> Die Orecchiette mit Stängelkohl und fünf in Öl aufgelösten Sardellen. <break time="1.2s"/>
+
+Es gibt einen alten barischen Spruch, so alt wie die Stadt. <break time="0.5s"/> "Cì téne u mare nan po murì de fame". <break time="0.4s"/> "Wer das Meer vor sich hat, stirbt nicht vor Hunger". <break time="0.6s"/>
+
+Bari hat das Meer immer vor sich gehabt. <break time="0.5s"/> Und deshalb — auch in den schlimmsten zwanzig Jahren des zwanzigsten Jahrhunderts, auch während des schlimmsten Hungers — ist man hier nicht gestorben wie anderswo im Süden. <break time="0.6s"/> Man aß schlecht. <break time="0.4s"/> Man aß wenig. <break time="0.4s"/> Aber man aß. <break time="1.5s"/>
+
+
+=====================================
+VLORA - ACHTER MÄRZ 1991
+-------------
+voice: brando
+
+Siebter März, neunzehnhunderteinundneunzig. <break time="1.0s"/>
+
+In Albanien herrscht totales Chaos. <break time="0.5s"/> Das kommunistische Regime, nach fünfundvierzig Jahren, bricht zusammen. <break time="0.4s"/> Hoxha ist seit sechs Jahren tot. <break time="0.4s"/> Sein Nachfolger Ramiz Alia hat in den vorangegangenen Monaten das Einparteiensystem abgeschafft. <break time="0.5s"/> Im März einundneunzig ist die Diktatur formell beendet. <break time="0.4s"/> Machtvakuum. <break time="0.4s"/> Echter Hunger. <break time="0.4s"/> Panik auf den Straßen. <break time="1.0s"/>
+
+Im Hafen von Durrës liegt ein Frachtschiff. <break time="0.5s"/> Es heißt Vlora. <break time="0.4s"/> Es ist aus Kuba mit einer Zuckerladung zurückgekehrt. <break time="0.5s"/> Kapitän: Halim Milaqi. <break time="0.4s"/> Seemann von Beruf. <break time="1.0s"/>
+
+An jenem Nachmittag stürmen in wenigen Minuten zwanzigtausend Menschen den Kai. <break time="0.6s"/> Sie entern die Vlora mit Gewalt. <break time="0.4s"/> Sie drängen sich aufs Deck. <break time="0.4s"/> In die Laderäume. <break time="0.4s"/> In den Maschinenraum. <break time="0.4s"/> Auf die Brücken. <break time="0.4s"/> Auf die Rettungsboote. <break time="0.5s"/> Sie klammern sich an Taue, Poller, Kräne. <break time="0.5s"/> Das Schiff ist dafür ausgelegt, dreitausend Tonnen Zucker zu transportieren. <break time="0.4s"/> Jetzt hat es zwanzigtausend Menschen an Bord. <break time="1.2s"/>
+
+Milaqi versucht, die Abfahrt zu verweigern — das überlastete Schiff ist gefährlich. <break time="0.5s"/> Er wird mit einer Waffe bedroht und zur Abfahrt gezwungen. <break time="0.4s"/> Das wird er selbst in Interviews erzählen, die in den folgenden Monaten veröffentlicht werden. <break time="0.4s"/> Das von den Passagieren gebrüllte Ziel ist einfach. <break time="0.4s"/> Italien. <break time="0.8s"/>
+
+Er steuert Brindisi an. <break time="0.5s"/> Brindisi lässt ihn nicht einlaufen. <break time="0.4s"/> Man leitet ihn nach Bari um. <break time="1.0s"/>
+
+Achter März. <break time="0.4s"/> Vierzehn Uhr nachmittags. <break time="0.4s"/> Die Vlora läuft in diesen Hafen ein. <break time="0.4s"/> Auf diesem Wasser hier, vor euch. <break time="1.0s"/>
+
+Die, die am Kai stehen — Fischer, Wachsoldaten, Baresen, die von Balkonen schauen — sehen zuerst den Umriss eines großen Schiffes. <break time="0.4s"/> Dann bemerken sie etwas Seltsames — das Schiff scheint von einer dunklen Haut bedeckt zu sein, die sich bewegt. <break time="0.5s"/> Von weitem sieht es aus wie Erdöl. <break time="0.4s"/> Von nah sind es Menschen. <break time="0.5s"/> Tausende, an jede Oberfläche geklammert. <break time="0.5s"/> Auf den Containerdächern. <break time="0.4s"/> Auf den Kränen. <break time="0.4s"/> In Trauben auf den Leitern. <break time="1.0s"/>
+
+Kinder. <break time="0.4s"/> Frauen. <break time="0.4s"/> Alte. <break time="0.4s"/> Sehr junge Männer, allein, mit einer Plastiktüte statt eines Koffers. <break time="0.6s"/> Fast niemand spricht Italienisch. <break time="1.2s"/>
+
+Es braucht Stunden, um alle abzuladen. <break time="0.5s"/> Sie steigen an Strickleitern herab. <break time="0.4s"/> Andere springen direkt ins Wasser. <break time="0.5s"/> Es werden mehrere Ertrunkene gezählt, nie mit absoluter Präzision. <break time="1.0s"/>
+
+In acht Stunden nimmt eine Stadt mit dreihundertzwanzigtausend Einwohnern zwanzigtausend Menschen mehr auf. <break time="0.5s"/> Sechs Prozent der lokalen Bevölkerung. <break time="0.4s"/> An einem einzigen Tag. <break time="0.4s"/> Um euch einen Vergleich zu geben — es ist, als ob in Bari morgen, an einem Nachmittag, zwanzigtausend ungeplante Menschen anlanden würden. <break time="0.4s"/> Ohne Vorankündigung. <break time="0.4s"/> Ohne Dokumente. <break time="0.4s"/> Ohne dass jemand wüsste, wie er damit umgehen soll. <break time="1.2s"/>
+
+Der Bürgermeister von Bari in diesem Moment ist Enrico Dalfino. <break time="0.4s"/> Christdemokrat. <break time="0.4s"/> Achtundfünfzig Jahre alt. <break time="0.5s"/> Er entscheidet sofort. <break time="0.4s"/> Wir nehmen auf. <break time="0.5s"/> Er öffnet die Schulen. <break time="0.4s"/> Die Turnhallen. <break time="0.4s"/> Den Hafen selbst. <break time="0.4s"/> Er koordiniert die Verteilung von Lebensmitteln und Decken. <break time="0.5s"/> Hunderte von Baresen erscheinen aus eigener Initiative und bringen, was sie haben. <break time="0.5s"/> Eine ganze Stadt organisiert sich in wenigen Stunden. <break time="0.4s"/> Die in den folgenden Jahren gesammelten Zeugnisse sind in diesem Punkt einstimmig. <break time="1.2s"/>
+
+Aber in Rom entscheidet man an jenem Nachmittag anders. <break time="1.5s"/>
+
+
+=====================================
+DAS STADION DELLA VITTORIA
+-------------
+voice: brando
+
+Rom entscheidet: konzentrieren. <break time="0.8s"/>
+
+Alle zwanzigtausend werden — unter Bewachung — ins Stadion della Vittoria verlegt. <break time="0.4s"/> Wenige Kilometer von hier. <break time="0.4s"/> Keine ausreichenden Toiletten. <break time="0.4s"/> Kein fließendes Wasser. <break time="0.4s"/> Keine organisierte Verpflegung. <break time="0.4s"/> Keine Dolmetscher. <break time="1.0s"/>
+
+Die Tore werden von außen geschlossen. <break time="0.5s"/> Drinnen — zwanzigtausend Menschen in einem Stadion. <break time="0.4s"/> Im Freien. <break time="0.4s"/> Tagelang. <break time="1.2s"/>
+
+Die Baresen sehen von draußen. <break time="0.5s"/> Sie sehen die Kinder, die sich an die Gitter klammern. <break time="0.4s"/> Die Frauen, die mit Gesten nach Wasser fragen. <break time="0.5s"/> Und sie beginnen. <break time="0.6s"/>
+
+Sie beginnen, von oben aus den Rängen Essen und Wasser hineinzuwerfen. <break time="0.4s"/> Decken. <break time="0.4s"/> Brot. <break time="0.5s"/> Tagelang, bis zur Rückführung. <break time="0.8s"/>
+
+Die Fotos jener Tage sind öffentlich, in Agenturen archiviert. <break time="0.4s"/> Sucht sie. <break time="0.4s"/> Bari, Stadion della Vittoria, März einundneunzig. <break time="0.4s"/> Sie sind dort. <break time="1.2s"/>
+
+Wenige Tage Stillstand. <break time="0.5s"/> Ohne Plan. <break time="0.5s"/> Dann kommt der Befehl. <break time="0.4s"/> Andreotti, Ministerpräsident. <break time="0.4s"/> Entscheidet: Rückführung. <break time="0.4s"/> Zwangsweise. <break time="1.0s"/>
+
+Die C-130-Flugzeuge der Sechsundvierzigsten Luftbrigade starten von Pisa. <break time="0.4s"/> Sie landen in Bari Palese. <break time="0.4s"/> Sie laden die Flüchtlinge ein. <break time="0.4s"/> Sie bringen sie zurück nach Tirana. <break time="0.5s"/> Fast alle. <break time="0.4s"/> Ein kleiner Teil — die, denen es gelingt, vor der Einschiffung zu fliehen — bleibt illegal in Italien. <break time="0.5s"/> Sie verstecken sich in den Häusern der Baresen, die sie aufgenommen hatten. <break time="0.5s"/> Sie werden die erste Generation der albanischen Gemeinschaft in Bari. <break time="1.2s"/>
+
+Italien entdeckt in jenen drei Tagen, dass es keine Migrationspolitik hat. <break time="0.5s"/> Bari entdeckt in jenen drei Tagen, dass es der erste Hafen Europas vor einer massiven humanitären Notlage ist. <break time="0.5s"/> Dreißig Jahre vor Lampedusa. <break time="1.0s"/>
+
+Dalfino, der Bürgermeister, wird von einem Teil der nationalen Presse für die Entscheidung zur Aufnahme kritisiert. <break time="0.5s"/> Er stirbt drei Jahre später. <break time="0.5s"/> Dreißig Jahre nach den Ereignissen, im Jahr zweitausendeinundzwanzig, wird ihm hier am Hafen eine Gedenktafel gewidmet. <break time="0.4s"/> Der "Spazio Memoria Vlora". <break time="0.4s"/> Geht vorbei, bevor ihr geht. <break time="1.0s"/>
+
+Kapitän Milaqi starb im Jahr zweitausendzwölf in Durrës. <break time="1.5s"/>
+
+
+=====================================
+DIE MAUER, DIE ES NICHT GAB
+-------------
+voice: valerio
+
+Kurz nach dem Stadion della Vittoria schließt Italien. <break time="1.0s"/>
+
+Dekret. <break time="0.4s"/> Kriegsmarine. <break time="0.4s"/> Patrouillboote in der Adria. <break time="0.4s"/> Die Botschaft ist klar: Es kommt niemand mehr rein. <break time="0.5s"/> Zum ersten Mal seit dem Krieg wird der Meeresarm zwischen Bari und Albanien zu einer militarisierten Grenze. <break time="1.2s"/>
+
+Aber in Rom hatte man eine Sache nicht verstanden. <break time="0.8s"/>
+
+Bari hat Albanien nie als Grenze betrachtet. <break time="0.4s"/> Für Bari ist Albanien das gegenüberliegende Ufer. <break time="0.5s"/> Jahrtausende von Handel, Fischfang, Reisen, Verwandtschaften. <break time="0.4s"/> Vor dem Zweiten Weltkrieg handelten die barischen Fischer regelmäßig an den albanischen und dalmatinischen Küsten. <break time="0.5s"/> Das war keine Grenze. <break time="0.4s"/> Das war die Nachbarschaft. <break time="1.0s"/>
+
+Und während die Regierung schloss — die Handelsverbindungen liefen weiter. <break time="0.5s"/> Die Universitäten von Bari schrieben hunderte albanische Studenten ein. <break time="0.4s"/> In den frühen Zweitausenderjahren wird die albanische Gemeinschaft in Bari eine der größten Italiens. <break time="0.5s"/> Die zweite Generation spricht besser Barisch als Italienisch. <break time="0.4s"/> Das sage ich nicht um schön dazustehen — es stimmt. <break time="0.4s"/> Geht zum Markt im Libertà-Viertel, hört zu, und ihr werdet es verstehen. <break time="1.2s"/>
+
+Diese Mauer hat es nie wirklich gegeben. <break time="0.5s"/> Es war eine Papiermauer. <break time="0.4s"/> Bürokratisch. <break time="0.4s"/> In Eile aufgestellt. <break time="0.5s"/> Das Meer hat sie trotzdem durchquert. <break time="0.4s"/> Wie immer. <break time="1.0s"/>
+
+Wenn ihr heute Albanisch auf dem Markt, im Café, in den Läden des Zentrums hört — das ist normal. <break time="0.4s"/> Es gehört zum Geräusch der Stadt. <break time="0.4s"/> Wie der barische Dialekt. <break time="0.4s"/> Wie das Italienische. <break time="0.4s"/> Wie das Englisch der Touristen, und das Deutsche der Rentner. <break time="0.5s"/> Bari ist so. <break time="0.4s"/> Seit jeher. <break time="1.5s"/>
+
+
+=====================================
+TEATRO MARGHERITA
+-------------
+voice: valerio
+
+Vor euch, am Meer, steht ein weißes Gebäude. <break time="0.5s"/> Jugendstil. <break time="0.4s"/> Auf dem Wasser gebaut. <break time="0.4s"/> Auf Stelzen. <break time="0.6s"/>
+
+Es heißt Teatro Margherita. <break time="0.6s"/>
+
+Baujahr: neunzehnhundertvierzehn. <break time="0.5s"/> Und es gibt einen sehr barischen, sehr schönen Grund, warum es auf dem Meer gebaut wurde statt auf dem Festland wie alle normalen Theater. <break time="1.0s"/>
+
+Ende des neunzehnten Jahrhunderts war das Haupttheater von Bari das Petruzzelli. <break time="0.4s"/> Es wurde von einer mächtigen Familie verwaltet — den Petruzzelli eben — die es geschafft hatte, der Gemeinde ein Exklusivrecht abzutrotzen. <break time="0.4s"/> Ein Exklusivrecht der Art: Kein anderes Theater darf auf dem Stadtgelände von Bari gebaut werden. <break time="0.4s"/> Per Gesetz. <break time="0.5s"/> Für fünfzig Jahre. <break time="1.2s"/>
+
+Ein konkurrierender Unternehmer — er heißt Gennaro Trizio — will ein neues Theater bauen. <break time="0.5s"/> Er geht zur Gemeinde, legt die Pläne vor. <break time="0.4s"/> Man sagt ihm: das geht nicht, es gibt die Beschränkung. <break time="0.5s"/> Er denkt eine Woche darüber nach. <break time="0.4s"/> Kehrt zur Gemeinde zurück. <break time="0.5s"/> Fragt: Darf ich auf dem Meer bauen? <break time="0.6s"/>
+
+Die Beamten schauen sich an. <break time="0.5s"/> Die Beschränkung sagt "Stadtgelände". <break time="0.4s"/> Das Meer ist kein Boden. <break time="0.4s"/> Das Meer ist Meeresdomäne. <break time="0.4s"/> Andere Zuständigkeit. <break time="0.5s"/> Sie schicken den Antrag ans Ministerium. <break time="0.4s"/> Antwort: technisch gesehen, ja. <break time="1.0s"/>
+
+Und deshalb baut Trizio das Margherita auf Stelzen. <break time="0.5s"/> Buchstäblich. <break time="0.4s"/> Auf dem Wasser des Hafens, außerhalb des Gemeindedomäne. <break time="0.5s"/> Die Petruzzelli protestieren. <break time="0.4s"/> Gehen vor Gericht. <break time="0.4s"/> Sie verlieren. <break time="0.4s"/> Trizio eröffnet vierzehn als Kino. <break time="0.4s"/> In den folgenden Jahren wird es zum Varietétheater, dann zur multifunktionalen Halle. <break time="0.5s"/> In den Siebzigern schließt es. <break time="0.4s"/> Bleibt jahrzehntelang verlassen — Möwen, Rost, zerbrochene Scheiben. <break time="0.4s"/> Eine Jugendstilkathedrale mitten im Hafen. <break time="1.0s"/>
+
+Es öffnet wieder im Jahr zweitausendeinundzwanzig. <break time="0.4s"/> Restauriert. <break time="0.4s"/> Heute befindet sich drinnen ein Ausstellungsraum für zeitgenössische Kunst. <break time="0.4s"/> Die zehn Minuten eurer Zeit sind es wert, auch nur um die Innenstruktur zu sehen. <break time="1.2s"/>
+
+Aber was ihr von hier, von diesem Gebäude, mitnehmen müsst, ist die barische Lektion. <break time="0.5s"/> Die, die man in Rom — wieder einmal — nicht verstand. <break time="0.6s"/>
+
+Wenn eine Regel euch blockiert — sucht den Millimeter außerhalb der Regel. <break time="0.5s"/> Und baut dort. <break time="0.4s"/> Auf dem Meer, wenn man euch "nicht auf dem Land" sagt. <break time="0.4s"/> Auf Stelzen, wenn man euch "nicht auf dem Boden" sagt. <break time="0.6s"/> Bari ist so seit viertausend Jahren gebaut worden. <break time="0.4s"/> Immer. <break time="1.5s"/>
+
+
+=====================================
+BARI - DURRËS HEUTE
+-------------
+voice: valerio
+
+Ungefähr hundert Seemeilen. <break time="0.4s"/> Neun Stunden mit der Fähre. <break time="0.4s"/> Mehrere Abfahrten täglich, das ganze Jahr. <break time="0.6s"/>
+
+Jeden Tag fährt von dem Kai vor euch ein Schiff nach Durrës ab. <break time="0.5s"/> Lastwagen voller Haushaltsgeräte werden geladen — die in Italien ansässigen Albaner schicken sie an Verwandte. <break time="0.4s"/> Reisebusse mit Universitätsstudenten — die Universität von Bari ist eines der historisch am häufigsten gewählten Ziele albanischer Studenten. <break time="0.4s"/> Italo-albanische Familien der zweiten Generation, die zu Ostern zu den Großeltern fahren. <break time="0.4s"/> Italienische Touristen, die heute Albanien zu deutlich niedrigeren Kosten als Apulien entdecken. <break time="1.2s"/>
+
+Und in demselben Meeresarm — schließt kurz die Augen — schifften sich vor dreitausend Jahren bereits Griechen und Illyrer, die Waren zwischen den beiden Ufern tauschten. <break time="0.5s"/> Vor tausend Jahren sind von hier die Kreuzritter aufgebrochen. <break time="0.5s"/> Zwischen neunzehnhundertsechsundvierzig und neunzehnhundertachtundvierzig war Bari der wichtigste italienische Hafen für den jüdischen Exodus nach Palästina. <break time="0.4s"/> Tausende von Überlebenden der Shoah kamen hier durch. <break time="0.5s"/> In den Jahren der italienischen Besatzung Albaniens, zwischen neunzehnhundertneununddreißig und neunzehnhundertdreiundvierzig, arbeiteten dort regelmäßig italienische Arbeiter und Techniker. <break time="0.4s"/> In umgekehrter Richtung, ja. <break time="1.0s"/>
+
+Fünfunddreißig Jahre her, die Vlora. <break time="1.0s"/>
+
+Dasselbe Meer. <break time="0.4s"/> Dieselbe Entfernung. <break time="0.4s"/> Richtungen, die sich je nach Jahrzehnt ändern. <break time="0.6s"/> Wer aufbricht ist wer ankommt, wer ankommt ist wer aufbricht. <break time="0.5s"/> Es kommt auf den Wind an. <break time="1.2s"/>
+
+Der Hafen hat nie aufgehört zu funktionieren. <break time="0.5s"/> Er funktioniert heute wie zu Zeiten von Friedrich II. <break time="0.4s"/> Nur dass die Schiffe größer sind, die Routen ein Computer berechnet, und die Passagiere mit dem Smartphone in der Hand und Ohrstöpseln im Ohr an Bord gehen. <break time="0.4s"/> Wie ihr jetzt. <break time="0.5s"/> Wahrscheinlich. <break time="1.0s"/>
+
+Aber der Meeresarm ist derselbe. <break time="0.5s"/> Die Richtung, wieder einmal, ist nach Osten. <break time="1.5s"/>
+
+
+=====================================
+ABSCHLUSS
+-------------
+voice: valerio
+
+Jetzt, bevor ihr die Ohrstöpsel herausnehmt und weitermacht, haltet einen Moment inne. <break time="0.8s"/>
+
+Schaut aufs Wasser. <break time="0.5s"/> Das, das ihr da vorne seht, jenseits des Kais. <break time="0.4s"/> Es scheint still. <break time="0.4s"/> Es ist es nicht. <break time="1.0s"/>
+
+Die Adria ist kein Meer. <break time="0.5s"/> Sie ist eine Straße. <break time="1.2s"/>
+
+Befahren in beide Richtungen. <break time="0.5s"/> Von denen, die etwas suchten. <break time="0.4s"/> Von denen, die flohen. <break time="0.4s"/> Von denen, die handelten. <break time="0.4s"/> Von denen, die beteten. <break time="0.4s"/> Von denen, die eroberten. <break time="0.4s"/> Von denen, die besiegt zurückkehrten. <break time="0.4s"/> Von denen, die nie zurückkehrten. <break time="1.0s"/>
+
+Sarazenen. <break time="0.4s"/> Kreuzritter. <break time="0.4s"/> Kaiser. <break time="0.4s"/> Händler. <break time="0.4s"/> Soldaten. <break time="0.4s"/> Fischer. <break time="0.4s"/> Flüchtlinge. <break time="0.4s"/> Touristen. <break time="0.5s"/> Alle — alle — sind hier durchgekommen. <break time="0.4s"/> Alle haben diesen selben Kai gesehen, von einer dieser beiden Richtungen. <break time="1.2s"/>
+
+Der Hafen von Bari ist kein Ort. <break time="0.5s"/> Er ist ein Durchgangspunkt. <break time="0.4s"/> Eine Schwelle, die offen bleibt. <break time="0.5s"/> Auch wenn Europa schließt. <break time="0.4s"/> Auch wenn die Karten "Grenze" sagen. <break time="0.4s"/> Auch wenn man in Rom anders entscheidet. <break time="1.0s"/>
+
+Er wird es weiterhin sein. <break time="0.5s"/> Morgen. <break time="0.4s"/> In hundert Jahren. <break time="0.4s"/> In fünfhundert. <break time="1.2s"/>
+
+Der Rest — liegt drinnen.

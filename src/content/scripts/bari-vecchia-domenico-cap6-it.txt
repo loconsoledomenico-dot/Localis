@@ -1,0 +1,124 @@
+Ora fermati nei pressi della Cattedrale di San Sabino.
+<break time="1s"/>
+
+Molti visitatori arrivano a Bari per San Nicola, ed è comprensibile.
+<break time="0.8s"/>
+
+Ma prima della Basilica, prima dell'arrivo del santo da Myra, Bari aveva già il suo centro religioso e la sua storia cristiana.
+<break time="0.5s"/>
+
+La Cattedrale dedicata a San Sabino è parte di questa memoria più antica.
+<break time="1s"/>
+
+Guardala.
+<break time="1.2s"/>
+
+Anche qui la pietra chiara, gli archi, le forme severe del Romanico pugliese raccontano una città che non aveva bisogno di ornamenti eccessivi per esprimere la propria forza.
+<break time="1.2s"/>
+
+Ma la cosa che oggi facciamo fatica a immaginare è quante chiese ci fossero dentro Bari antica.
+<break time="0.8s"/>
+
+Le fonti parlano di decine di edifici religiosi.
+<break time="1s"/>
+
+<prosody rate="88%">Chiese grandi,
+<break time="0.4s"/>
+chiese piccole,
+<break time="0.4s"/>
+monasteri,
+<break time="0.4s"/>
+cappelle,
+<break time="0.4s"/>
+luoghi di culto legati a famiglie, corporazioni, comunità differenti.</prosody>
+<break time="1.2s"/>
+
+Se potessimo vedere Bari nel pieno Medioevo, probabilmente avremmo la sensazione di una città rivestita di pietra sacra.
+<break time="0.5s"/>
+
+Un intreccio continuo di case e campanili, vicoli e altari, corti e processioni.
+<break time="1.5s"/>
+
+Non devi immaginare però una città silenziosa, eternamente raccolta in preghiera.
+<break time="0.8s"/>
+
+La religione era mescolata alla vita concreta.
+<break time="1s"/>
+
+<prosody rate="88%">Intorno alle chiese si incontravano persone,
+<break time="0.4s"/>
+si firmavano atti,
+<break time="0.4s"/>
+si facevano promesse,
+<break time="0.4s"/>
+si celebravano matrimoni,
+<break time="0.4s"/>
+si accompagnavano i morti,
+<break time="0.4s"/>
+si chiedeva protezione dalle malattie,
+<break time="0.4s"/>
+si cercava aiuto quando il mare non restituiva un uomo o quando una famiglia non aveva abbastanza per vivere.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">A Bari il sacro non stava fuori dalla vita.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Ci stava dentro.</emphasis></prosody>
+<break time="1.5s"/>
+
+Nella Cattedrale è conservata anche una delle immagini più significative del legame di Bari con l'Oriente: l'Odegitria, la Madonna che indica la via.
+<break time="0.8s"/>
+
+Il suo stesso nome viene da una tradizione bizantina.
+<break time="0.8s"/>
+
+Ed è difficile non pensare che questa città, abituata da secoli a guardare verso l'altra sponda del mare, abbia riconosciuto in quell'immagine qualcosa di profondamente proprio.
+<break time="1.2s"/>
+
+<prosody rate="88%">Bari era latina e greca,
+<break time="0.4s"/>
+occidentale e orientale,
+<break time="0.4s"/>
+legata a Roma, ma attraversata per secoli da influenze che arrivavano dall'altra parte dell'Adriatico e del Mediterraneo.</prosody>
+<break time="1s"/>
+
+San Nicola renderà questo legame ancora più evidente.
+<break time="0.5s"/>
+
+Ma non lo inventerà.
+<break time="0.5s"/>
+
+La città lo portava già dentro di sé.
+<break time="1.5s"/>
+
+Quando cammini tra la Cattedrale e la Basilica, quindi, non stai semplicemente passando da una bella chiesa all'altra.
+<break time="0.8s"/>
+
+Stai attraversando due anime della città.
+<break time="1.2s"/>
+
+San Sabino racconta la Bari più antica, la sede episcopale, la continuità della sua storia.
+<break time="0.5s"/>
+
+San Nicola racconta la Bari che, grazie al santo arrivato dal mare, diventa meta universale di pellegrini.
+<break time="1s"/>
+
+Tra le due, nei vicoli, continua a vivere la città vera.
+<break time="0.5s"/>
+
+Quella fatta di famiglie, botteghe, parole, pane, porte aperte e gente che non ha mai avuto bisogno di separare nettamente la fede dalla giornata.
+<break time="1.5s"/>
+
+Ora dirigiti verso Piazza Mercantile.
+<break time="0.8s"/>
+
+Lì vedremo un'altra Bari.
+<break time="0.5s"/>
+
+Non quella del santo,
+<break time="0.4s"/>
+
+non quella delle mura.
+<break time="0.5s"/>
+
+<prosody rate="88%">Ma quella degli affari, del mercato e della vergogna pubblica.</prosody>

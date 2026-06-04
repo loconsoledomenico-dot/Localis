@@ -1,0 +1,147 @@
+Ora sei nella parte più antica e più protesa verso il mare del borgo.
+<break time="0.8s"/>
+
+Da queste parti Bari sembra quasi arrivare alla sua estremità naturale.
+<break time="0.8s"/>
+
+La città finisce.
+<break time="0.5s"/>
+
+Davanti rimane l'acqua.
+<break time="1s"/>
+
+Ma sotto i tuoi piedi, invece, la città continua ad andare indietro nel tempo.
+<break time="0.5s"/>
+
+<prosody rate="85%">Molto indietro.</prosody>
+<break time="1.5s"/>
+
+Bari non ha un grande anfiteatro in mezzo alla strada.
+<break time="0.5s"/>
+
+Non ha un tempio antico che domina la piazza e che tutti fotografano.
+<break time="0.8s"/>
+
+Qui l'antichità è meno evidente.
+<break time="0.5s"/>
+
+È nascosta.
+<break time="0.8s"/>
+
+<prosody rate="88%">Sta sotto una chiesa,
+<break time="0.4s"/>
+dentro un monastero,
+<break time="0.4s"/>
+sotto una pavimentazione,
+<break time="0.4s"/>
+tra frammenti di mura, tombe, oggetti, resti di abitazioni e fondazioni su cui nei secoli si è continuato a costruire.</prosody>
+<break time="1.2s"/>
+
+Questo è uno dei tratti più veri di Bari Vecchia: non ha cancellato completamente ciò che c'era prima.
+<break time="0.5s"/>
+
+<emphasis level="moderate">Ci ha abitato sopra.</emphasis>
+<break time="1.5s"/>
+
+Nell'area di Santa Scolastica e di Santa Maria del Buon Consiglio emergono le tracce di una storia lunghissima.
+<break time="1s"/>
+
+<prosody rate="88%">Prima la presenza degli abitanti più antichi di questa penisola,
+<break time="0.4s"/>
+poi il mondo greco e romano,
+<break time="0.4s"/>
+poi le chiese medievali,
+<break time="0.4s"/>
+poi i monasteri,
+<break time="0.4s"/>
+poi la città che, mentre cambiava, continuava a riusare lo stesso spazio.</prosody>
+<break time="1.2s"/>
+
+In altri luoghi la storia è esposta in modo ordinato, quasi didattico.
+<break time="0.5s"/>
+
+Qui no.
+<break time="0.8s"/>
+
+Qui la storia si accavalla.
+<break time="1s"/>
+
+È un pavimento sopra un altro pavimento,
+<break time="0.4s"/>
+
+un muro che nasce dove ne esisteva già uno,
+<break time="0.4s"/>
+
+una chiesa che conserva sotto di sé la traccia di un luogo precedente,
+<break time="0.4s"/>
+
+una piazza in cui cammini senza renderti conto che, sotto, riposa un pezzo della città che non vedi più.
+<break time="1.5s"/>
+
+Ma voglio raccontarti una cosa meno monumentale e molto più umana.
+<break time="1s"/>
+
+Bari era circondata dal mare.
+<break time="0.5s"/>
+
+<prosody rate="88%">Eppure aveva sete.</prosody>
+<break time="1.2s"/>
+
+L'acqua salata era ovunque, ma l'acqua buona da bere era preziosa.
+<break time="0.8s"/>
+
+Per secoli la vita della città antica dipese anche dalle cisterne, private o pubbliche, in cui si raccoglieva l'acqua piovana.
+<break time="1s"/>
+
+Pensa a cosa significava.
+<break time="0.8s"/>
+
+Oggi apriamo un rubinetto senza pensarci.
+<break time="0.5s"/>
+
+Allora una stagione con poca pioggia poteva diventare un problema per tutti.
+<break time="1s"/>
+
+L'acqua non era un servizio invisibile.
+<break time="0.5s"/>
+
+Era una preoccupazione quotidiana,
+<break time="0.4s"/>
+
+qualcosa da conservare, proteggere, dividere.
+<break time="1.2s"/>
+
+In quest'area, vicino al Buon Consiglio, rimane memoria di una cisterna destinata alla povera gente, costruita perché chi non aveva risorse potesse comunque bere.
+<break time="1s"/>
+
+<prosody rate="88%">Mi colpisce sempre questo particolare.</prosody>
+<break time="1s"/>
+
+Siamo abituati a cercare la grande storia nei re, negli imperatori, nelle guerre, nelle basiliche.
+<break time="0.8s"/>
+
+<prosody pitch="+3%">Ma una città si riconosce anche in un gesto più semplice: qualcuno che decide che l'acqua non debba essere negata a chi ne ha bisogno.</prosody>
+<break time="1.5s"/>
+
+Guarda ancora questo luogo.
+<break time="0.8s"/>
+
+Davanti hai il mare,
+<break time="0.4s"/>
+
+sotto di te ci sono secoli di Bari,
+<break time="0.5s"/>
+
+e in mezzo, tra le grandi storie e le grandi pietre, c'è la vita concreta di persone che dovevano trovare ogni giorno acqua, cibo, riparo e un modo per andare avanti.
+<break time="1.5s"/>
+
+Adesso rientreremo lentamente verso l'interno del borgo, in direzione della Cattedrale.
+<break time="0.5s"/>
+
+Perché Bari Vecchia non era soltanto una città circondata dalle mura.
+<break time="0.5s"/>
+
+Era anche una città coperta di chiese.
+<break time="0.5s"/>
+
+<prosody rate="88%">Una città in cui la fede, il potere e la vita quotidiana stavano spesso a pochi passi l'uno dall'altra.</prosody>

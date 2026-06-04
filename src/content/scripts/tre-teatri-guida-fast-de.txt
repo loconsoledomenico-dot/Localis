@@ -1,0 +1,365 @@
+## AUDIO-SKRIPT — DIE DREI THEATER VON BARI-GUIDE
+LOCALIS — DIE DREI THEATER · vollständige Überarbeitung „intensiver"
+Multi-Voice: Hauptstimme (warmer Erzähler) · dramatische Stimme (Spannung) für intensive Kapitel.
+=====================================
+EINFÜHRUNG
+-------------
+voice: dante
+
+Drei Theater. <break time="0.5s"/> Auf einem halben Quadratkilometer. <break time="1.0s"/>
+
+Das Piccinni — erbaut im Jahr achtzehnhundertvierundfünfzig. <break time="0.4s"/> Das Petruzzelli — erbaut im Jahr neunzehnhundertdrei. <break time="0.4s"/> Das Margherita — erbaut im Jahr neunzehnhundertvier­zehn. <break time="0.6s"/>
+
+Sechzig Jahre Abstand zwischen dem ersten und dem letzten. <break time="0.4s"/> Fünfhundert Meter zu Fuß von einem zum anderen. <break time="1.0s"/>
+
+Und hier stellt sich eine Frage. <break time="0.6s"/>
+
+Warum hat Bari, eine süditalienische Stadt, mitten im neunzehnten Jahrhundert, beschlossen, sich gleich drei Operntheater zu bauen? <break time="0.5s"/> Zu einer Zeit, als viele europäische Hauptstädte von Theatern dieser Größenordnung nur eines besaßen? <break time="1.0s"/>
+
+Nicht weil der König es befahl. <break time="0.4s"/> Nicht um Mailand nachzueifern. <break time="0.4s"/> Nicht um Paris nachzueifern. <break time="0.6s"/>
+
+Das war eine Entscheidung des städtischen Handelsbürgertums. <break time="0.4s"/> Reeder, Ölhändler, Getreideexporteure, Anwälte. <break time="0.4s"/> Leute mit dem Geld des Hafens. <break time="0.4s"/> Leute, die sich irgendwann eine klare Sache in den Kopf gesetzt haben. <break time="0.6s"/>
+
+Kultur war hier Verteidigung. <break time="0.4s"/> Verteidigung gegen die Vorstellung, dass man im Mezzogiorno automatisch nicht zählt. <break time="0.4s"/> Verteidigung gegen den Provinzialismus. <break time="0.5s"/> Und sie haben aus eigener Tasche bezahlt. <break time="1.2s"/>
+
+In den nächsten zwanzig Minuten erzähle ich euch die Geschichte von drei Gebäuden. <break time="0.5s"/> Und hinter diesen drei Gebäuden — die Geschichte derer, die sie wollten. <break time="0.4s"/> Derer, die sie gebaut haben. <break time="0.4s"/> Derer, die eines davon in einer Oktobernacht des Jahres neunzehnhunderteinundneunzig niedergebrannt haben. <break time="0.5s"/> Und derer, die es achtzehn Jahre später wieder aufgebaut haben, mit Riccardo Muti am Pult. <break time="1.5s"/>
+
+Wir beginnen im Viertel Murat. <break time="0.4s"/> Bereit. <break time="0.4s"/> Los geht's.
+
+
+=====================================
+KAP. 1 — MURAT — DAS NEUE VIERTEL
+-------------
+voice: dante
+
+Achtzehnhundertdreizehn. <break time="0.8s"/>
+
+In Neapel regiert Gioacchino Murat. <break time="0.4s"/> Schwager von Napoleon. <break time="0.4s"/> Verheiratet mit dessen Schwester Carolina. <break time="0.5s"/> Ein von außen eingesetzter König. <break time="0.4s"/> Aber anders als andere französische oder spanische Herrscher kümmert er sich ernsthaft um Süditalien. <break time="1.0s"/>
+
+Mai achtzehnhundertdreizehn. <break time="0.4s"/> Murat unterzeichnet ein königliches Dekret. <break time="0.5s"/> Bari bekommt ein neues Viertel. <break time="0.4s"/> Südlich der Halbinsel von Bari Vecchia. <break time="0.4s"/> Von Grund auf neu gebaut, auf damals sumpfigem Gelände. <break time="1.0s"/>
+
+Bari Vecchia ist in jenem Moment überfüllt. <break time="0.4s"/> Enge Gassen. <break time="0.4s"/> Überbevölkerung. <break time="0.4s"/> Kein Platz für eine moderne Stadt. <break time="0.5s"/> Eine Stadt von Kaufleuten, die im Mittelmeer exportieren, braucht andere Straßen. <break time="0.4s"/> Gerade Straßen. <break time="0.4s"/> Breite Straßen. <break time="0.4s"/> Straßen für Karren und Kutschen. <break time="1.0s"/>
+
+Beauftragter Architekt — Mariano Tafuri. <break time="0.5s"/> Stil: regelmäßiges, vollkommen orthogonales Raster. <break time="0.4s"/> Lange Decumani, kurze Cardines. <break time="0.4s"/> Napoleonische Rationalität. <break time="0.5s"/> Das genaue Gegenteil von Bari Vecchia, das byzantinisch und labyrinthisch war. <break time="1.0s"/>
+
+Die Arbeiten beginnen bereits achtzehnhundertvierzehn. <break time="0.4s"/> Langsam, aber sie beginnen. <break time="0.5s"/>
+
+Und im Oktober achtzehnhundertfünfzehn wird Gioacchino Murat — jener, der das Dekret unterzeichnet hatte — in Kalabrien erschossen. <break time="0.4s"/> Bourbon-Restauration. <break time="0.4s"/> Eine Epoche geht zu Ende. <break time="0.6s"/>
+
+Aber das Viertel wächst weiter. <break time="0.4s"/> Unter den Bourbonen. <break time="0.4s"/> Unter dem vereinten Italien. <break time="0.4s"/> In der Belle Époque. <break time="0.5s"/> Fast ein Jahrhundert lang. <break time="1.0s"/>
+
+Man nennt es „Borgo Murattiano". <break time="0.4s"/> Dann einfach „Murat". <break time="1.2s"/>
+
+Und hier, in seinen Palazzi des neunzehnten Jahrhunderts, entsteht etwas, das es in Bari noch nicht gab. <break time="0.5s"/>
+
+Ein städtisches Handelsbürgertum. <break time="0.4s"/> Reeder, Kaufleute, Anwälte, Notare, Bankiers. <break time="0.5s"/> Familien, deren Namen heute noch auf den Marmortafeln der Portale der Via Sparano und Via Putignani zu lesen sind. <break time="0.4s"/> Familien, die ihr Geld im Hafen gemacht haben und es nun ausgeben wollen. <break time="1.0s"/>
+
+Leute mit Geld. <break time="0.4s"/> Leute, die sich wie Mailand fühlen wollen. <break time="0.4s"/> Oder wie Paris. <break time="1.5s"/>
+
+
+=====================================
+KAP. 2 — PICCINNI 1854 — DAS ERSTE
+-------------
+voice: dante
+
+Niccolò Piccinni. <break time="0.6s"/>
+
+Geboren in Bari im Jahr siebzehnhundertachtundzwanzig. <break time="0.4s"/> Eine Musikerfamilie. <break time="0.4s"/> Mit vierzehn Jahren wird er ans Conservatorio di Sant'Onofrio in Neapel geschickt. <break time="0.4s"/> Nach Bari kehrt er nie zurück. <break time="0.6s"/>
+
+In Neapel fällt er sofort auf. <break time="0.4s"/> In Rom triumphiert er. <break time="0.4s"/> Mit dreißig Jahren ist er einer der meistgefragten Opernkomponisten Italiens. <break time="0.5s"/> Rund hundert Opern in seiner Karriere — komische, ernste, Intermezzi, Tragödien. <break time="0.4s"/> Die genaue Zahl ist unter Musikwissenschaftlern umstritten. <break time="0.4s"/> Auf jeden Fall sehr viele. <break time="1.0s"/>
+
+Im Jahr siebzehnhundertsechsundsiebzig lädt ihn Marie Antoinette nach Paris ein. <break time="0.4s"/> Sie ist erst seit zwei Jahren Königin von Frankreich. <break time="0.4s"/> Sie ernennt ihn zum offiziellen Hofkomponisten. <break time="0.5s"/>
+
+Und dann geschieht etwas, das uns heute lächerlich erscheint und damals den Pariser Adel aufwühlte. <break time="0.8s"/>
+
+Piccinni gerät in einen historischen Rivalitätskampf mit einem anderen Komponisten — Christoph Willibald Gluck. <break time="0.4s"/> Deutsch. <break time="0.4s"/> Stil: schlicht, klassisch, streng. <break time="0.5s"/> Piccinni dagegen — italienisch, melodisch, reich an Verzierungen. <break time="0.5s"/> Zwei gegensätzliche Schulen. <break time="0.6s"/>
+
+Der Hof spaltet sich in Lager. <break time="0.4s"/> Piccinnisten gegen Gluckisten. <break time="0.4s"/> Marquis und Herzöge verfassen Pamphlete gegeneinander. <break time="0.4s"/> Zehn Jahre lang streitet man darüber, welche Oper mehr wert ist. <break time="0.4s"/> Denkt daran. <break time="0.4s"/> Ein Kulturkrieg, am Hof von Versailles, um einen Komponisten, der in Bari geboren wurde. <break time="1.2s"/>
+
+Piccinni stirbt in Paris im Jahr achtzehnhundert. <break time="0.4s"/> Er hinterlässt Familie, Schüler, eine tiefe Spur in der europäischen Musik. <break time="0.5s"/> Bari, das er mit vierzehn Jahren verlassen hatte und wohin er nie zurückgekehrt war, beansprucht ihn für sich. <break time="0.4s"/> So wie nur Bari das kann. <break time="0.4s"/> Wir haben ihn genommen, wir behalten ihn. <break time="1.0s"/>
+
+Fünfzig Jahre nach seinem Tod beschließt das Barenser Bürgertum — das neue, aus dem Murat — ein richtiges Operntheater zu bauen. <break time="0.4s"/> Kein kleines Theater. <break time="0.4s"/> Ein Theater wie in einer Hauptstadt. <break time="0.5s"/> Sie widmen es ihm. <break time="1.0s"/>
+
+Bauarbeiten von achtzehnhundertvierzig bis achtzehnhundertvierundfünfzig. <break time="0.4s"/> Vierzehn Jahre Baustelle. <break time="0.6s"/>
+
+Vierter Oktober achtzehnhundertvierundfünfzig. <break time="0.4s"/> Eröffnung des Teatro Piccinni. <break time="0.4s"/> Auf dem Spielplan — „Poliuto" von Gaetano Donizetti. <break time="0.4s"/> Lyrische Tragödie in drei Akten. <break time="0.5s"/> Siebenhundert Plätze, alle besetzt. <break time="0.4s"/> Galakostüme. <break time="0.4s"/> Damen mit langen Handschuhen. <break time="0.4s"/> Herren im Frack. <break time="0.5s"/>
+
+Bari hat endlich sein Theater. <break time="0.4s"/> Das Bürgertum von Murat — das zwanzig Jahre zuvor noch kaum existierte — macht sich nun sichtbar. <break time="1.5s"/>
+
+
+=====================================
+KAP. 3 — DAS BÜRGERTUM, DAS DIE OPER WOLLTE
+-------------
+voice: dante
+
+Machen wir uns eine Sache klar. <break time="0.8s"/>
+
+Im neunzehnten Jahrhundert war ein Opernhaus in der Stadt keine bloße Kulturfrage. <break time="0.4s"/> Es war eine politische Aussage. <break time="0.5s"/>
+
+Es war das Sagen — an die Regierung in Neapel, an die Kaufleute in Genua, an die Botschaften in Paris und Wien — seht her. <break time="0.4s"/> Wir sind eine Stadt. <break time="0.4s"/> Kein Dorf. <break time="0.4s"/> Kein beliebiger Hafen. <break time="0.4s"/> Wir sind wie Mailand. <break time="0.4s"/> Wie Neapel. <break time="0.4s"/> Wie Paris. <break time="0.5s"/> Wir zählen. <break time="1.2s"/>
+
+Und in Bari gab es in jenen Jahren die Voraussetzungen dafür. <break time="0.6s"/>
+
+Der Hafen wuchs. <break time="0.4s"/> Apulisches Öl wurde ins gesamte östliche Mittelmeer exportiert. <break time="0.4s"/> Das Getreide kam vom Subapennin und fuhr von hier nach Triest, Marseille, Konstantinopel, Odessa. <break time="0.5s"/> Die Schiffe fuhren unter der Flagge der Reederfamilien. <break time="0.4s"/> Und die Reederfamilien waren Familien, deren Namen auf den Marmortafeln der Portale zu lesen waren. <break time="1.0s"/>
+
+Die Petruzzelli. <break time="0.4s"/> Reeder. <break time="0.4s"/> Sie werden noch eine Rolle spielen. <break time="0.5s"/> Ihr werdet sehen. <break time="0.6s"/>
+
+Aber auch viele andere kaufmännische und berufliche Familien. <break time="0.4s"/> Namen, die man heute noch, wenn man durch die Via Sparano oder die Via Putignani geht, auf den Marmortafeln der Portale liest. <break time="0.4s"/> Banken, Notariate, Wohnpalazzi. <break time="1.0s"/>
+
+Dieses Bürgertum zahlt von achtzehnhundertfünfzig bis achtzehnhundertneunzig für seine Logen im Piccinni so, wie man in Mailand für Logen in der Scala bezahlt. <break time="0.4s"/> Die Loge ist nicht nur ein Sitzplatz. <break time="0.4s"/> Sie ist eine gesellschaftliche Investition. <break time="0.4s"/> Eine Visitenkarte. <break time="0.4s"/> Ein Zeichen: ich bin da. <break time="0.4s"/> Ich zähle. <break time="0.4s"/> Ich kann es mir leisten. <break time="1.2s"/>
+
+In jenen Jahren beginnt man, es „das Mailand des Südens" zu nennen. <break time="0.5s"/> Eine Übertreibung, selbstverständlich. <break time="0.4s"/> Mailand war etwas anderes. <break time="0.4s"/> Aber der Sinn war dieser — es gab einen kulturellen Ehrgeiz, der im gesamten Mezzogiorno nur in Bari so explizit war. <break time="1.0s"/>
+
+Und dasselbe Bürgertum wollte am Ende des Jahrhunderts mehr. <break time="0.6s"/>
+
+Das Piccinni mit seinen siebenhundert Plätzen begann ihm klein zu erscheinen. <break time="0.4s"/> Alt. <break time="0.4s"/> Nicht mehr auf der Höhe. <break time="0.5s"/> Es wollte ein größeres Theater. <break time="0.4s"/> Ein moderneres. <break time="0.4s"/> Ein würdigeres für eine Stadt, die sich nun als etwas Besonderes betrachtete. <break time="1.5s"/>
+
+
+=====================================
+KAP. 4 — DIE BRÜDER PETRUZZELLI
+-------------
+voice: dante
+
+Achtzehnhundertfünfundneunzig. <break time="0.6s"/>
+
+Die Gemeinde Bari leitet ein Verwaltungsverfahren ein. <break time="0.4s"/> Ziel — ein neues Politeama zu bauen. <break time="0.4s"/> Größer als das Piccinni. <break time="0.4s"/> Moderner. <break time="0.4s"/> In der Lage, internationale Oper in großem Stil aufzunehmen. <break time="0.6s"/>
+
+Konzession. <break time="0.4s"/> Kein klassischer Ausschreibungswettbewerb — eine Konzession an einen privaten Träger, der es auf eigene Kosten baut. <break time="0.5s"/> Die Gemeinde stellt das Grundstück. <break time="0.4s"/> Der Private stellt das Geld und übernimmt die Betriebsführung für fünfzig Jahre. <break time="1.0s"/>
+
+Den Zuschlag erhält die Familie Petruzzelli. <break time="0.5s"/> Barenser Reeder. <break time="0.4s"/> Eine der reichsten Familien der Stadt. <break time="0.4s"/> Familienoberhäupter — die Brüder Onofrio und Antonio. <break time="0.4s"/> Dazu weiteres Familienkapital. <break time="1.0s"/>
+
+Die Petruzzelli besitzen eine Flotte. <break time="0.4s"/> Handelsschiffe, die auf der Adria, dem Tyrrhenischen Meer und dem östlichen Mittelmeer unterwegs sind. <break time="0.4s"/> Sie transportieren Öl. <break time="0.4s"/> Getreide. <break time="0.4s"/> Salz. <break time="0.4s"/> Apulische Agrarprodukte. <break time="0.5s"/> In den vergangenen dreißig Jahren haben sie Vermögen gemacht. <break time="0.4s"/> Jetzt wollen sie ein bleibendes Zeichen in der Stadt setzen. <break time="1.2s"/>
+
+Ihr Vorhaben ist ehrgeizig bis an die Grenze des Waghalsigen. <break time="0.8s"/>
+
+Zweitausendzweihundert Plätze. <break time="0.4s"/> Um eine Vorstellung zu geben — das San Carlo in Neapel hatte damals etwa achtzehnhundert Plätze. <break time="0.4s"/> Die Scala in Mailand genau zweitausend. <break time="0.5s"/> Das Petruzzelli wird mehr haben als beide. <break time="0.4s"/> Es wird das drittgrößte Politeama Italiens nach Fassungsvermögen sein. <break time="1.0s"/>
+
+Eine Holzkuppel für perfekte Akustik — eine sehr wichtige technische Entscheidung, dazu kommen wir noch. <break time="0.4s"/> Eklektisch-Jugendstil-Stil. <break time="0.4s"/> Fünf Rangetagen. <break time="0.4s"/> Aufwändige Dekorationen. <break time="0.5s"/> Das Theater muss so imposant sein wie das Selbstbewusstsein des Bürgertums, das es bezahlt. <break time="1.0s"/>
+
+Der Vertrag mit der Gemeinde enthält eine Klausel, die sich, wie ihr sehen werdet, als entscheidend erweisen wird. <break time="0.5s"/> Für fünfzehn Jahre nach Fertigstellung des Petruzzelli darf kein anderes öffentliches oder privates Theater auf städtischem Grund in Bari errichtet werden. <break time="0.4s"/> Fünfzehn Jahre lang gehört die Oper in Bari ihnen. <break time="0.5s"/> Ihnen. <break time="0.4s"/> Ihnen. <break time="0.4s"/> Ihnen. <break time="1.5s"/>
+
+
+=====================================
+KAP. 5 — DAS PETRUZZELLI — DER BAU
+-------------
+voice: dante
+
+Die Arbeiten beginnen achtzehnhundertachtundneunzig. <break time="0.5s"/>
+
+Architekt — Angelo Messeni Cicciomessere. <break time="0.4s"/> Barenser, lokal ausgebildet. <break time="0.4s"/> Kein berühmter Name von auswärts. <break time="0.4s"/> Die Barenser wollen, dass ihr Theater von Barensern gebaut wird. <break time="0.4s"/> Eine politische Entscheidung, noch vor einer fachlichen. <break time="1.0s"/>
+
+Eklektischer Stil mit Jugendstil-Anklängen. <break time="0.4s"/> Neoklassizistische Fassade mit Bögen, Säulen, allegorischen Statuen. <break time="0.5s"/> Hufeisenförmiger Innenraum nach dem Vorbild des San Carlo. <break time="0.4s"/> Fünf übereinander liegende Rangetagen. <break time="0.4s"/> Dekorationen aus Stuck und Gips. <break time="0.4s"/> Vergoldungen. <break time="0.4s"/> Rote Samtstoffe auf den Brüstungen. <break time="0.6s"/>
+
+Und im Zentrum die Kuppel. <break time="0.6s"/>
+
+Eine Holzkuppel. <break time="0.4s"/> Nicht aus Beton, nicht aus Stein. <break time="0.4s"/> Aus Holz. <break time="0.5s"/> Eine bewusste technische Entscheidung — Holz hat akustische Eigenschaften, die jedem anderen Material überlegen sind. <break time="0.4s"/> Alle großen italienischen Theater mit legendärer Akustik haben Kuppeln oder Zwischendecken aus Holz. <break time="0.4s"/> Das Petruzzelli will mithalten. <break time="0.8s"/>
+
+Fünf Jahre Baustelle. <break time="0.6s"/>
+
+Vierzehnter Februar neunzehnhundertdrei. <break time="0.5s"/> Eröffnung. <break time="0.6s"/>
+
+Auf dem Spielplan — „Gli Ugonotti" von Giacomo Meyerbeer. <break time="0.4s"/> Große französische Oper von achtzehnhundertsechsunddreißig. <break time="0.4s"/> Vier Stunden Vorstellung. <break time="0.4s"/> Das Massaker der Bartholomäusnacht, angesiedelt im sechzehnten Jahrhundert. <break time="0.5s"/>
+
+Publikum in Galakostümen. <break time="0.4s"/> Kutschen in langer Reihe auf dem Corso Cavour. <break time="0.4s"/> Das Barenser Bürgertum in vollständiger Besetzung. <break time="0.4s"/> Dazu Gäste aus Neapel, Rom, Mailand. <break time="0.5s"/> Die Chroniken der Epoche, in sämtlichen Lokalzeitungen, nennen den Abend „unvergesslich". <break time="1.2s"/>
+
+Von diesem Tag an wird das Petruzzelli das Theater von Bari. <break time="0.4s"/> Das Piccinni bleibt. <break time="0.4s"/> Es spielt weiter. <break time="0.4s"/> Aber für die große internationale Oper — jene, über die die nationale Presse berichtet — geht man ins Petruzzelli. <break time="0.5s"/> Das Barenser Bürgertum wechselt die Loge. <break time="0.4s"/> Vom Piccinni ins neue Juwel. <break time="1.0s"/>
+
+Die Petruzzelli — noch vor zwanzig Jahren Reeder — sind nun Oligarchen der städtischen Kultur. <break time="0.4s"/> Für die nächsten fünfzig Jahre gehört ihnen das Theater. <break time="0.4s"/> Im Vertrag. <break time="0.4s"/> Per Gesetz. <break time="1.5s"/>
+
+
+=====================================
+KAP. 6 — DAS MONOPOL
+-------------
+voice: dante
+
+Kehren wir jetzt zu jener Klausel zurück. <break time="0.8s"/>
+
+Im Vertrag mit der Gemeinde von achtzehnhundertsiebenundneunzig stand es schwarz auf weiß. <break time="0.4s"/> Für fünfzehn Jahre nach Fertigstellung des Petruzzelli — kein anderes öffentliches oder privates Theater darf auf städtischem Grund in Bari errichtet werden. <break time="1.0s"/>
+
+Praktisch gesprochen — ein Monopol. <break time="0.5s"/>
+
+Ins Barenser übersetzt — alle anderen sollen stillhalten. <break time="0.4s"/> Die Oper machen ab heute wir. <break time="1.0s"/>
+
+Fünfzehn Jahre lang. <break time="0.5s"/>
+
+Die Preise für die Logen im Petruzzelli legen die Petruzzelli fest. <break time="0.4s"/> Die eingeladenen Kompanien wählen die Petruzzelli aus. <break time="0.4s"/> Den Opernkalender verwalten die Petruzzelli. <break time="0.5s"/> Das Piccinni lebt weiter, gewiss, aber für kleinere Produktionen. <break time="0.4s"/> Ballette. <break time="0.4s"/> Varieté. <break time="0.4s"/> Gastspielkompanien. <break time="0.5s"/> Die großen Stimmen, der Applaus vor geschlossenem Vorhang, die Galaabende — das alles liegt in ihren Händen. <break time="1.2s"/>
+
+Die kleineren Bürgerfamilien — jene, die sich im Piccinni noch eine Loge leisten konnten — bleiben im Petruzzelli außen vor. <break time="0.4s"/> Die Preise sind höher. <break time="0.4s"/> Die Plätze sind wenige. <break time="0.4s"/> Die besten werden für die ganze Spielzeit an die großen Namen verkauft. <break time="1.0s"/>
+
+Und in einer Stadt von Reedern und Kaufleuten, die seit fünfzig Jahren gelernt hat, im Rampenlicht zu stehen — wer will sich schon anstellen lassen? <break time="0.6s"/> Niemand. <break time="1.0s"/>
+
+Und jetzt tritt eine Figur auf die Bühne. <break time="0.8s"/>
+
+Er heißt Antonio Trizio. <break time="0.5s"/> Unternehmer. <break time="0.4s"/> Kapitalist. <break time="0.4s"/> Erklärter Konkurrent der Petruzzelli. <break time="0.4s"/> Auch er Barenser Bürger. <break time="0.4s"/> Auch er mit dem Geld des Hafens. <break time="0.5s"/> Und auch er — ich will mein eigenes Theater. <break time="0.4s"/> Ich will das Monopol brechen. <break time="1.0s"/>
+
+Aber die Beschränkung ist da. <break time="0.4s"/> Städtischer Grund — verboten. <break time="0.5s"/>
+
+Und Trizio stellt sich eine Frage. <break time="0.4s"/> Eine Barenser Frage. <break time="0.5s"/>
+
+Was, wenn ich nicht auf städtischem Grund bauen würde? <break time="1.5s"/>
+
+
+=====================================
+KAP. 7 — MARGHERITA — DIE LIST AM MEER
+-------------
+voice: dante
+
+Neunzehnhundertzehn. <break time="0.5s"/> Trizio legt der Gemeinde Bari das Projekt vor. <break time="0.8s"/>
+
+Er will ein neues Theater bauen. <break time="0.4s"/> Jugendstil. <break time="0.4s"/> Öffentlich, zugänglich, modern. <break time="0.6s"/>
+
+Standort? <break time="0.4s"/> Am Meer. <break time="0.4s"/> Wörtlich genommen. <break time="0.5s"/> Auf Pfahlgründungen, in das Wasser des Hafens eingerammt. <break time="0.4s"/> Seeverwaltungsdomäne. <break time="0.4s"/> Also Staatsgelände, kein städtisches Grundstück. <break time="0.6s"/>
+
+Der Kniff ist präzise. <break time="0.4s"/> Der Petruzzelli-Vertrag verbietet neue Theater auf „städtischem Grund". <break time="0.4s"/> Das Wasser des Hafens ist kein Boden. <break time="0.4s"/> Punkt. <break time="1.0s"/>
+
+Die Petruzzelli merken es. <break time="0.4s"/> Sie protestieren. <break time="0.4s"/> Sie ziehen vor Gericht. <break time="0.5s"/> Sie behaupten, der Geist des Vertrags verbiete jedes Theater in Bari, auf dem Meer oder an Land. <break time="0.4s"/> Geist, sagen sie. <break time="0.4s"/> Nicht Buchstabe. <break time="0.8s"/>
+
+Trizio verteidigt sich mit dem Buchstaben. <break time="0.4s"/> Der Vertrag sagt „städtischer Grund". <break time="0.4s"/> Das Wasser ist keiner. <break time="0.4s"/> Punkt. <break time="0.5s"/>
+
+Die Petruzzelli verlieren den Prozess. <break time="0.4s"/> Das Urteil ist eindeutig. <break time="0.4s"/> Worte zählen. <break time="0.4s"/> Trizio darf bauen. <break time="1.0s"/>
+
+Und er baut. <break time="0.6s"/>
+
+Auf Pfählen. <break time="0.4s"/> Buchstäblich über dem Wasser des Hafens. <break time="0.4s"/> Reiner Jugendstil. <break time="0.4s"/> Weiße Fassade mit Bögen und eleganten Fenstern. <break time="0.5s"/> Drei Stockwerke. <break time="0.4s"/> Es wirkt wie eine Kathedrale aus Spitze, auf dem Meer gelegen. <break time="1.0s"/>
+
+Neunzehnhundertvier­zehn. <break time="0.4s"/> Das Teatro Margherita eröffnet. <break time="0.5s"/> Zunächst als Kino. <break time="0.4s"/> Dann als Varietétheater, Tanzsaal, Mehrzweckbetrieb. <break time="0.4s"/> Es bedroht die große Oper des Petruzzelli nicht direkt — es ist nicht dieser Typ von Theater. <break time="1.0s"/>
+
+Aber symbolisch ist es ein überaus wichtiger Sieg. <break time="0.6s"/>
+
+Er bedeutet: In Bari, wenn eine Regel dich blockiert, suchst du den Millimeter außerhalb der Regel. <break time="0.4s"/> Und baust dort. <break time="0.5s"/>
+
+Auf dem Meer, wenn man dir sagt „nicht auf dem Land". <break time="0.4s"/> Auf Pfählen, wenn man dir sagt „nicht auf dem Boden". <break time="0.6s"/>
+
+Das ist eine Kunst, die man in Bari seit viertausend Jahren kennt. <break time="0.4s"/> Diese Lektion erzählen die Barenser heute noch mit einem gewissen Stolz. <break time="1.5s"/>
+
+
+=====================================
+KAP. 8 — ACHTUNDACHTZIG JAHRE RUHM
+-------------
+voice: dante
+
+Von neunzehnhundertdrei bis neunzehnhunderteinundneunzig. <break time="0.5s"/> Achtundachtzig Spielzeiten des Petruzzelli. <break time="1.0s"/>
+
+Versucht euch die Liste vorzustellen. <break time="0.6s"/>
+
+Enrico Caruso. <break time="0.4s"/> Tito Schipa. <break time="0.4s"/> Beniamino Gigli. <break time="0.4s"/> Mario Del Monaco. <break time="0.5s"/> Dann neuere Namen — Luciano Pavarotti. <break time="0.4s"/> Plácido Domingo. <break time="0.4s"/> José Carreras. <break time="0.5s"/> Die drei Tenöre. <break time="0.4s"/> Alle auf dieser Bühne. <break time="1.0s"/>
+
+Sopranistinnen. <break time="0.4s"/> Maria Callas — zweimal. <break time="0.4s"/> Renata Tebaldi. <break time="0.4s"/> Mirella Freni. <break time="1.0s"/>
+
+Dirigenten. <break time="0.4s"/> Arturo Toscanini. <break time="0.4s"/> Herbert von Karajan. <break time="0.4s"/> Riccardo Muti. <break time="0.5s"/> Derselbe Muti, der — wie ich gleich zeigen werde — am Ende dieser Geschichte eine wichtige Rolle spielt. <break time="0.4s"/> Er kommt wieder. <break time="1.2s"/>
+
+Achtundachtzig Jahre lang ist Bari eine feste Station der italienischen Opernrundreise. <break time="0.4s"/> Die Operntruppen, die von Mailand, Neapel, Rom in den Süden aufbrechen, machen hier halt. <break time="0.5s"/> Das Barenser Publikum ist kompetent. <break time="0.4s"/> Anspruchsvoll. <break time="0.4s"/> In der Lage, eine Sopranistin in Schwierigkeiten auszupfeifen oder einen Tenor zweiter Reihe zu bejubeln, wenn er es verdient. <break time="0.4s"/> Es vergibt nicht. <break time="0.4s"/> Und die großen Sänger wussten das. <break time="1.0s"/>
+
+Und neben der Oper auch das Varieté. <break time="0.4s"/> Totò bringt hier in den vierziger Jahren seine Vorstellungen. <break time="0.4s"/> Mario Lanza singt hier in den frühen fünfziger Jahren. <break time="0.4s"/> In den sechziger Jahren treten auf der Bühne des Petruzzelli Domenico Modugno, Mina, Tony Renis und die großen Stimmen der italienischen Unterhaltungsmusik auf. <break time="0.8s"/>
+
+Das Petruzzelli ist das kulturelle Zentrum der Stadt. <break time="0.4s"/> Achtundachtzig Jahre lang. <break time="0.5s"/>
+
+Dann beschließt jemand in einer Oktobernacht neunzehnhunderteinundneunzig, es zu schließen. <break time="0.5s"/> Mit Feuer. <break time="1.5s"/>
+
+
+=====================================
+KAP. 9 — SIEBENUNDZWANZIGSTER OKTOBER 1991
+-------------
+voice: manuela
+
+Nacht zwischen dem sechsundzwanzigsten und dem siebenundzwanzigsten Oktober, neunzehnhunderteinundneunzig. <break time="1.0s"/>
+
+Späte Stunden. <break time="0.4s"/> Bari schläft. <break time="0.5s"/>
+
+Im Innern des Petruzzelli — seit Stunden leer, geschlossen, nur die Sicherheitsbeleuchtung an — legt jemand Feuer. <break time="1.0s"/>
+
+Der Brand entfacht sich auf der Bühne. <break time="0.5s"/>
+
+Er breitet sich schnell aus. <break time="0.4s"/> Zuerst auf die Holzkulissen. <break time="0.4s"/> Dann auf die Vorhänge. <break time="0.4s"/> Auf die Bühnenvorhänge. <break time="0.4s"/> Auf die Kostüme, die im Magazin hinter der Bühne gelagert sind. <break time="0.6s"/>
+
+Und dann steigt er auf. <break time="0.4s"/> Zur Decke hin. <break time="0.4s"/> Zu jener Holzkuppel hin, die siebenundachtzig Jahre zuvor gewählt worden war, weil sie perfekte Akustik hatte. <break time="0.5s"/> Perfekte Akustik. <break time="0.4s"/> Perfekte Verbrennung. <break time="1.2s"/>
+
+Die Feuerwehr trifft in den Nachtstunden ein. <break time="0.4s"/> Sie kämpft. <break time="0.4s"/> Stundenlang. <break time="0.4s"/> Vergeblich. <break time="1.0s"/>
+
+Gegen Morgen bricht die Kuppel ein. <break time="0.6s"/>
+
+Alles Innere ist verloren. <break time="0.4s"/> Die fünf Rangetagen. <break time="0.4s"/> Die Sessel in rotem Samt. <break time="0.4s"/> Die Stuckdekorationen. <break time="0.4s"/> Die Bühnenbilder dreier Generationen von Kompanien. <break time="0.4s"/> Das Magazin mit den Kostümen. <break time="0.4s"/> Die historische Musikbibliothek. <break time="0.4s"/> Die Archive. <break time="0.4s"/> Alles. <break time="0.5s"/> Alles verbrennt. <break time="1.2s"/>
+
+Als das Licht anbricht, bleibt vom Petruzzelli nur die äußere Hülle. <break time="0.4s"/> Die Steinmauern. <break time="0.4s"/> Die neoklassizistische Fassade mit den Säulen und Statuen. <break time="0.5s"/> Für den Rest — ein rauchendes Loch mitten im Murat. <break time="0.4s"/> Ein totes Theater. <break time="1.0s"/>
+
+Die Staatsanwaltschaft leitet sofort eine Untersuchung ein. <break time="0.5s"/>
+
+Ergebnis nach Jahren — vorsätzliche Brandstiftung. <break time="0.4s"/> Absichtlich gelegt. <break time="0.4s"/> Hinter dem Feuer, nach Ansicht der Ermittler, ein Interessenkonflikt um die Theaterverwaltung. <break time="0.4s"/> Aufträge. <break time="0.4s"/> Bestechungsgelder. <break time="0.4s"/> Lokale Clans auf der Suche nach Positionen. <break time="0.5s"/> In den folgenden Jahren kamen Verhaftungen, Verurteilungen, Urteile. <break time="1.2s"/>
+
+Aber in jener Oktobernacht einundneunzig, in jenem rauchenden Loch, gibt es noch keinen Richter. <break time="0.4s"/> Nur Trümmer. <break time="0.5s"/> Und eine ganze Stadt, die bei Tagesanbruch das Haus verlässt und hinschaut. <break time="0.4s"/> Ohne ein Wort zu sagen. <break time="1.0s"/>
+
+Das Symboltheater von Bari, achtundachtzig Jahre Ruhm, zerstört. <break time="0.4s"/> Nicht von einem Krieg. <break time="0.4s"/> Nicht von einem Erdbeben. <break time="0.4s"/> Von jemandem, der jemand anderen dafür bezahlt hat, es anzuzünden. <break time="1.5s"/>
+
+
+=====================================
+KAP. 10 — DIE ACHTZEHN JAHRE DES LEERSTANDS
+-------------
+voice: manuela
+
+Von neunzehnhunderteinundneunzig bis zweitausendneun. <break time="0.4s"/> Achtzehn Jahre. <break time="1.0s"/>
+
+In jenen achtzehn Jahren verspricht jedes Jahr jemand, es wieder aufzubauen. <break time="0.5s"/>
+
+Bürgermeister, die einander ablösen. <break time="0.4s"/> Kulturminister, die zu offiziellen Besuchen eintreffen. <break time="0.4s"/> Regionspräsidenten, die Absichtserklärungen unterzeichnen. <break time="0.4s"/> Die Familie Petruzzelli — Eigentümerin des Theaters — die Sanierungspläne ankündigt. <break time="0.5s"/> Alle versprechen. <break time="0.4s"/> Niemand handelt. <break time="1.0s"/>
+
+Und der Grund ist ein unglaublicher Rechtsstreit. <break time="0.6s"/>
+
+Das Petruzzelli war Privateigentum der Familie. <break time="0.4s"/> Aber es war ein Theater von öffentlichem Interesse — gebaut mit einem besonderen Vertrag mit der Gemeinde, mit einer Dienstbarkeitsfunktion für die Kulturversorgung der Stadt. <break time="0.5s"/> Wer zahlt nach dem Brand den Wiederaufbau? <break time="0.4s"/> Die Familie, die keine angemessene Instandhaltung geleistet hatte? <break time="0.4s"/> Der Staat? <break time="0.4s"/> Die Gemeinde? <break time="0.4s"/> Die Region? <break time="0.4s"/> Die Versicherung, die strittige Klauseln hatte? <break time="1.2s"/>
+
+Zivilklagen. <break time="0.4s"/> Verwaltungsklagen. <break time="0.4s"/> Rekurse an den Staatsrat. <break time="0.4s"/> Kassationsurteile. <break time="0.5s"/> Gutachten. <break time="0.4s"/> Gegengutachten. <break time="0.4s"/> Alles blockiert für Jahre. <break time="0.4s"/> Anwälte, die reich werden. <break time="0.4s"/> Bari, das ohne Theater bleibt. <break time="1.0s"/>
+
+Inzwischen ändert sich die Opernspielzeit der Stadt. <break time="0.5s"/> Die großen Kompanien hören auf, vorbeizukommen. <break time="0.4s"/> Jene drei Tenöre, die davon träumten, im Petruzzelli aufzutreten — Pavarotti, Domingo, Carreras — gehen woanders hin. <break time="0.5s"/> Die Opernspielzeit findet in Sporthallen statt. <break time="0.4s"/> In Kirchen. <break time="0.4s"/> In improvisierten Räumen. <break time="0.4s"/> Kleineres Publikum. <break time="0.4s"/> Schlechte Akustik. <break time="0.4s"/> Kompanien zweiter Klasse. <break time="1.2s"/>
+
+Eine Stadt mit dreihundertzwanzigtausend Einwohnern ohne echtes Theater. <break time="0.4s"/> Achtzehn Jahre lang. <break time="0.5s"/> Denkt daran. <break time="0.6s"/>
+
+In den frühen zweitausender Jahren kommen endlich die endgültigen Urteile. <break time="0.4s"/> Das Petruzzelli gelangt unter öffentliche Kontrolle. <break time="0.4s"/> Der Staat finanziert den Wiederaufbau. <break time="0.5s"/> Die Arbeiten beginnen zweitausenddrei. <break time="0.4s"/> Sechs Jahre Baustelle. <break time="0.4s"/> Restauratoren. <break time="0.4s"/> Akustikingenieure. <break time="0.4s"/> Sanierungsarchitekten. <break time="0.4s"/> Alle arbeiten daran, ein für tot erklärtes Gebäude wieder zum Leben zu erwecken. <break time="1.2s"/>
+
+Und dann, am vierten Dezember zweitausendneun, öffnet das Petruzzelli wieder. <break time="1.5s"/>
+
+
+=====================================
+KAP. 11 — VIERTER DEZEMBER 2009 — DIE WIEDERGEBURT
+-------------
+voice: dante
+
+Vierter Dezember zweitausendneun. <break time="0.6s"/>
+
+Die Piazza Petruzzelli ist voll. <break time="0.4s"/> Tausende von Menschen auf der Straße. <break time="0.4s"/> Riesige Bildschirme aufgestellt für jene, die keinen Einlass bekommen haben. <break time="0.4s"/> Nationale Fernsehübertragung live. <break time="0.5s"/> Übertragungswagen. <break time="0.4s"/> Journalisten aus ganz Italien. <break time="1.0s"/>
+
+Im Innern des Theaters — endlich wiedereröffnet, im Originalstil restauriert, mit der originalgetreu nachgebauten Holzkuppel — Publikum in Galakostümen. <break time="0.4s"/> Dieselben Kostüme wie das Barenser Bürgertum von neunzehnhundertdrei. <break time="0.4s"/> Hundertsechs Jahre danach. <break time="1.2s"/>
+
+Riccardo Muti besteigt das Podium. <break time="0.6s"/>
+
+Er ist fast siebzig Jahre alt. <break time="0.4s"/> Als junger Mann hatte er hier dirigiert, in diesem selben Saal, in den siebziger Jahren. <break time="0.4s"/> Jetzt kehrt er zurück, um ihn wieder zu eröffnen. <break time="1.0s"/>
+
+Auf dem Programm — eine Hommage an Verdi. <break time="0.4s"/> Chor und Orchester. <break time="0.4s"/> Symbolische Stücke, eines für eines ausgewählt. <break time="0.5s"/> Irgendwann setzt das „Va, pensiero" ein, der Chor der gefangenen Hebräer aus dem Nabucco. <break time="0.4s"/> Jenes, das sagt: „Va, pensiero, sull'ali dorate, va, ti posa sui clivi, sui colli, ove olezzano tepide e molli l'aure dolci del suolo natal". <break time="0.6s"/> Chor der Verbannten, die von der Heimkehr träumen. <break time="0.5s"/> Gesungen in einem Theater, das nach achtzehn Jahren Abwesenheit heimgekehrt ist. <break time="0.5s"/> Bari in Bari. <break time="1.2s"/>
+
+Das Innere wurde identisch zum Original wiederhergestellt. <break time="0.4s"/> Holzkuppel, denn die Akustik ist jene. <break time="0.4s"/> Fünf Rangetagen. <break time="0.4s"/> Hufeisen. <break time="0.4s"/> Roter Samt, Vergoldungen, Stuck. <break time="0.5s"/> Als das Publikum das erste Mal eintrat — hört gut zu — applaudierte es drei volle Minuten lang. <break time="0.4s"/> Vor der ersten Note. <break time="0.4s"/> Drei Minuten Applaus allein dafür, wieder dort drin zu sein. <break time="1.5s"/>
+
+Von zweitausendneun bis heute hat das Petruzzelli seinen Betrieb wieder aufgenommen. <break time="0.4s"/> Feste Opernspielzeit. <break time="0.4s"/> Sinfoniekonzerte. <break time="0.4s"/> Ballett. <break time="0.4s"/> Zeitgenössische Oper. <break time="0.5s"/> Caruso ist nicht mehr, natürlich. <break time="0.4s"/> Maria Callas auch nicht. <break time="0.4s"/> Aber Bari hat wieder ein Theater. <break time="0.4s"/> Ein echtes Theater. <break time="1.5s"/>
+
+
+=====================================
+ABSCHLUSS
+-------------
+voice: dante
+
+Drei Theater. <break time="0.5s"/> Auf einem halben Quadratkilometer. <break time="1.0s"/>
+
+Das Piccinni, erbaut achtzehnhundertvierundfünfzig, ist noch hier. <break time="0.4s"/> Es funktioniert. <break time="0.4s"/> Hauptsächlich Schauspiel. <break time="0.4s"/> Kleiner, intimer. <break time="0.4s"/> Siebenhundert Plätze, wie damals. <break time="1.0s"/>
+
+Das Petruzzelli, erbaut neunzehnhundertdrei, durch vorsätzliche Brandstiftung neunzehnhunderteinundneunzig zerstört, zweitausendneun wiederhergestellt, ist wieder hier. <break time="0.4s"/> Zweitausendzweihundert Plätze. <break time="0.4s"/> Holzkuppel. <break time="0.4s"/> Internationale Opernspielzeit. <break time="1.0s"/>
+
+Das Margherita, neunzehnhundertvier­zehn auf Pfählen über dem Meer erbaut, um ein Monopol zu umgehen, schloss in den siebziger Jahren. <break time="0.4s"/> Fast fünfzig Jahre lang verlassen. <break time="0.4s"/> Restauriert und in den frühen zwanziger Jahren des zweitausendsten Jahrhunderts als Museum für zeitgenössische Kunst wiedereröffnet. <break time="1.0s"/>
+
+Alle drei noch hier. <break time="0.5s"/> Alle drei überlebt. <break time="1.2s"/>
+
+Und der Grund ist ein einziger. <break time="0.8s"/>
+
+Das Barenser Bürgertum hat einmal geglaubt, dass Kultur Verteidigung sei. <break time="0.4s"/> Identitäre Verteidigung. <break time="0.5s"/> Verteidigung gegen den Provinzialismus. <break time="0.4s"/> Verteidigung gegen die Vorstellung, dass man, wenn man in Bari ist, automatisch nicht zählt. <break time="1.0s"/>
+
+Es hat eigenes Geld eingesetzt. <break time="0.4s"/> Es hat seine Würde eingefordert. <break time="0.4s"/> Es hat drei Gebäude errichtet, um der Welt zu sagen — wir, hier, zählen. <break time="1.0s"/>
+
+Und wenn ihr jetzt zwischen den drei Theatern umherwandert, wisst: ihr durchquert ein Versprechen, das sich eine Stadt vor hundertsiebzig Jahren selbst gegeben hat. <break time="0.5s"/> Ein Versprechen, das — trotz vorsätzlicher Brandstiftung, achtzehn Jahren Rechtsstreit und einer Wiedereröffnung mit Riccardo Muti — gehalten wurde. <break time="0.4s"/> Dreimal. <break time="1.5s"/>
+
+Der Rest liegt drinnen.

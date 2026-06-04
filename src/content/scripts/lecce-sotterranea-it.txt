@@ -1,0 +1,248 @@
+LOCALIS — LECCE SOTTERRANEA
+Guida narrativa — versione IT
+Voce: Mimmo, 55 anni, idraulico
+Modello: eleven_multilingual_v2
+=====================================
+
+
+=====================================
+CAP. 1 — INTRO: IL MESTIERE CHE VA SOTTO
+-------------
+voice: dante
+
+Io faccio l'idraulico. <break time="1.0s"/>
+
+Da trent'anni. <break time="0.8s"/> Tubi, scarichi, fogne, pozzi artesiani. <break time="0.6s"/> Il tipo di lavoro che la gente chiama solo quando qualcosa va storto. <break time="1.0s"/>
+
+Mi chiamo Mimmo. <break time="0.6s"/> Cinquantacinque anni. <break time="0.5s"/> Ho aperto più buche nel centro storico di Lecce di qualsiasi altro essere umano vivente. <break time="0.8s"/> E in ognuna di quelle buche ho trovato qualcosa che non mi aspettavo. <break time="1.2s"/>
+
+Lecce è una città a strati. <break time="0.6s"/> Quello che vedete voi — il barocco, le facciate, la pietra gialla — è l'ultimo strato. <break time="0.8s"/> Il più recente. <break time="0.5s"/> Sotto c'è tutto il resto. <break time="1.2s"/>
+
+Io conosco questa città dalla parte che non si vede. <break time="0.6s"/> Non da sopra, con la macchina fotografica e il cappello da turista. <break time="0.5s"/> Da sotto. <break time="0.5s"/> Con la lampada frontale e le ginocchia nel fango. <break time="1.5s"/>
+
+Quello che vi racconto oggi non lo trovate sulle guide. <break time="0.6s"/> Lo so perché quando scendo, <break time="0.4s"/> non ci trovo mai nessun turista. <break time="1.0s"/>
+
+Solo io. <break time="0.5s"/> Il silenzio. <break time="0.4s"/> E duemilasettecento anni di città. <break time="1.5s"/>
+
+
+=====================================
+CAP. 2 — LA PRIMA VOLTA: VIA AUGUSTO IMPERATORE, 2004
+-------------
+voice: dante
+
+Vi racconto la prima volta. <break time="1.0s"/>
+
+Era il 2004. <break time="0.6s"/> Intervento di emergenza in via Augusto Imperatore — uno scarico otturato al piano terra di un palazzo nobiliare. <break time="0.5s"/> Roba di routine. <break time="0.8s"/> Apro il pavimento, scendo con la pala. <break time="0.6s"/> E lì sotto, a meno di un metro di profondità, trovo un pavimento. <break time="1.0s"/>
+
+Non il pavimento del palazzo. <break time="0.5s"/> Un altro pavimento. <break time="0.5s"/> Più antico. <break time="0.5s"/> Fatto di piccole tessere bianche e nere, disposte in un disegno geometrico. <break time="1.2s"/>
+
+Chiamo il proprietario. <break time="0.5s"/> Gli dico: guarda. <break time="0.8s"/> Lui dice: metti tutto a posto com'era. <break time="0.6s"/> Il bagno non funziona e ho ospiti domani. <break time="1.2s"/>
+
+Chiamo la Soprintendenza. <break time="0.5s"/> Arrivano tre giorni dopo. <break time="0.5s"/> Confermano: pavimento romano, probabilmente I-II secolo dopo Cristo. <break time="0.8s"/> Il palazzo barocco del Seicento era stato costruito sopra una domus romana. <break time="0.5s"/> Senza nemmeno togliere il pavimento di prima. <break time="0.5s"/> Ci avevano messo sopra le fondamenta e basta. <break time="1.2s"/>
+
+Il proprietario era seccato. <break time="0.5s"/> Io ero sbalordito. <break time="1.2s"/>
+
+Da quel giorno ho cominciato a guardare il sottosuolo con occhi diversi. <break time="0.6s"/> Non è terra. <break time="0.5s"/> È archivio. <break time="1.5s"/>
+
+
+=====================================
+CAP. 3 — IL FIUME CHE NON ESISTE
+-------------
+voice: dante
+
+Sotto Lecce scorre un fiume. <break time="1.2s"/>
+
+Non lo sapete, vero? <break time="0.8s"/> Quasi nessuno lo sa. <break time="1.0s"/>
+
+Si chiama Idume. <break time="0.8s"/> Nasce dalla zona dell'Acquatina, <break time="0.4s"/> attraversa il centro storico a pochi metri dal suolo, <break time="0.5s"/> e sfocia nel Mar Adriatico a Torre Chianca. <break time="0.6s"/> Sette chilometri. <break time="0.5s"/> Mille litri al secondo di portata. <break time="1.0s"/>
+
+Mille litri al secondo. <break time="0.5s"/> Sotto i vostri piedi. <break time="0.5s"/> Adesso. <break time="1.5s"/>
+
+Il nome viene da Idumeneo. <break time="0.6s"/> Secondo la leggenda, Idumeneo era il re di Creta che tornava dalla guerra di Troia — <break time="0.5s"/> quello che aveva promesso a Poseidone di sacrificare la prima cosa che avrebbe incontrato sbarcando, <break time="0.5s"/> e aveva trovato suo figlio. <break time="0.8s"/> Dopo quella storia, lo scacciarono da Creta. <break time="0.5s"/> Secondo la leggenda, fondò Lecce. <break time="0.5s"/> E il fiume prese il suo nome. <break time="1.2s"/>
+
+Io ho lavorato su impianti di scarico in tre punti del centro storico <break time="0.5s"/> dove si sente il rumore dell'acqua sotto. <break time="0.6s"/> Non è umidità. <break time="0.5s"/> Non è una perdita. <break time="0.5s"/> È il fiume. <break time="0.8s"/> Scorre lì sotto come ha sempre fatto, <break time="0.5s"/> mentre sopra costruivano Messapi, romani, normanni, baroni spagnoli. <break time="1.2s"/>
+
+C'è una storia che raccontano i vecchi del centro. <break time="0.8s"/> Nel 1952, il figlio di un militare di stanza al Castello cadde in un pozzo nel cortile interno. <break time="0.6s"/> Il pozzo era collegato all'Idume. <break time="0.5s"/> Il bambino sparì. <break time="0.5s"/> Non fu mai trovato. <break time="1.2s"/>
+
+Ancora oggi, dicono, di notte nel castello si sente piangere. <break time="1.0s"/>
+
+Io non ci credo alle storie di fantasmi. <break time="0.5s"/> Ma quando lavoro sotto il castello, <break time="0.5s"/> cerco sempre di finire prima che faccia buio. <break time="1.5s"/>
+
+
+=====================================
+CAP. 4 — L'ANFITEATRO CHE NON SI VEDE
+-------------
+voice: dante
+
+Siete in Piazza Sant'Oronzo. <break time="1.0s"/>
+
+Quello scavo al centro — quello che sembra una vasca incassata nella piazza — è un anfiteatro romano. <break time="0.6s"/> Costruito in età augustea, intorno al cambio dell'era. <break time="0.5s"/> Rimaneggiato un secolo dopo, sotto l'imperatore Adriano. <break time="1.0s"/>
+
+Le dimensioni originali: centoduetrenta per ottantatré metri. <break time="0.6s"/> L'arena: cinquantatré per trentaquattro. <break time="0.6s"/> Capienza stimata: tra dodicimila e quattordicimila persone. <break time="1.0s"/>
+
+Ma quella che vedete è solo un terzo della struttura originale. <break time="0.8s"/>
+
+Il resto è ancora sotto. <break time="0.6s"/> Sotto i bar. <break time="0.4s"/> Sotto i negozi. <break time="0.4s"/> Sotto il marciapiede dove adesso camminate. <break time="1.2s"/>
+
+Fu scoperto nel 1900 — <break time="0.5s"/> stavano demolendo l'Isola del Governatore per costruire il palazzo della Banca d'Italia. <break time="0.6s"/> Un operaio picconò e sentì il vuoto sotto. <break time="0.5s"/> Si fermarono. <break time="0.5s"/> Chiamarono Cosimo De Giorgi, il Regio Ispettore ai Monumenti. <break time="0.6s"/> Arrivò, scese, e capì subito cosa era. <break time="1.0s"/>
+
+Poi impiegarono vent'anni a scavarlo. <break time="0.8s"/> Nel frattempo la Banca d'Italia fu costruita lo stesso — <break time="0.5s"/> solo spostata di qualche metro. <break time="0.5s"/> Il Novecento non aspettava nessuno. <break time="1.2s"/>
+
+Io ho lavorato negli anni Novanta su un palazzo a due isolati da qui. <break time="0.5s"/> Mentre facevo i tubi, ho trovato gradini. <break time="0.5s"/> Gradini di pietra leccese, consumati al centro. <break time="0.8s"/> Ho chiamato la Soprintendenza. <break time="0.5s"/> Arrivarono. <break time="0.5s"/> Dissero: probabilmente erano parte delle gradinate esterne dell'anfiteatro. <break time="1.0s"/>
+
+Gradini dove duemila anni fa la gente si sedeva ad aspettare lo spettacolo. <break time="0.5s"/> Sotto un appartamento di tre vani. <break time="0.5s"/> Affittato a trecentocinquanta euro al mese. <break time="1.5s"/>
+
+
+=====================================
+CAP. 5 — IL TEATRO CHE NESSUNO CERCA
+-------------
+voice: dante
+
+L'anfiteatro lo conosce quasi tutti. <break time="0.8s"/> Il teatro, quasi nessuno. <break time="1.2s"/>
+
+È in via Arte della Cartapesta — <break time="0.5s"/> quasi nascosto tra i palazzi, <break time="0.5s"/> coperto da una tettoia moderna che sembra un parcheggio. <break time="0.8s"/> Ma sotto c'è un teatro romano augusteo. <break time="0.5s"/> Stesso periodo dell'anfiteatro. <break time="0.5s"/> Stesso imperatore. <break time="1.0s"/>
+
+I Romani costruirono anfiteatro, teatro e foro tutti nello stesso settore della città, <break time="0.5s"/> nello stesso periodo. <break time="0.6s"/> Una trasformazione urbanistica che prese una città messapica <break time="0.4s"/> e la rifece da capo come città romana. <break time="1.2s"/>
+
+Del teatro si vede la scena — <break time="0.5s"/> le colonne, il basamento, alcuni frammenti della cavea. <break time="0.5s"/> Era capace di contenere circa cinquemila persone. <break time="0.8s"/> Ci si rappresentavano le commedie di Plauto e Terenzio. <break time="0.5s"/> Si recitava in latino. <break time="0.6s"/> In questa stessa piazza dove adesso c'è un bar con i tavolini fuori e il caffè leccese col ghiaccio. <break time="1.5s"/>
+
+Una cosa che trovo sempre strana, quando ci lavoro vicino: <break time="0.5s"/> il teatro è aperto al cielo. <break time="0.5s"/> Non è al chiuso come un museo. <break time="0.5s"/> Ci passa il vento. <break time="0.4s"/> Ci cade la pioggia. <break time="0.8s"/> I gatti si siedono sulle colonne. <break time="1.0s"/>
+
+È come se non fosse mai finita la vita, lì dentro. <break time="0.5s"/> Solo che il pubblico è cambiato. <break time="1.5s"/>
+
+
+=====================================
+CAP. 6 — LE MURA CHE HANNO DUEMILACINQUECENTO ANNI
+-------------
+voice: dante
+
+Prima dei Romani c'erano i Messapi. <break time="1.0s"/>
+
+Erano qui prima di Roma. <break time="0.6s"/> Un popolo che veniva probabilmente dall'Illiria — <break time="0.5s"/> dall'altra parte dell'Adriatico — <break time="0.5s"/> e si era insediato nel Salento secoli prima che arrivassero le legioni. <break time="1.0s"/>
+
+Alla fine del IV secolo avanti Cristo costruirono le mura di Lecce. <break time="0.6s"/> Tre chilometri di perimetro. <break time="0.5s"/> Cinque metri di spessore. <break time="0.5s"/> Blocchi enormi di pietra calcarea, senza malta — <break time="0.5s"/> solo il peso e la precisione dei tagli a tenere tutto su. <break time="1.2s"/>
+
+Quelle mura avevano duemiladuecento anni quando i Romani ci costruirono sopra le loro. <break time="0.8s"/> Avevano già quattromila anni quando i Normanni ci costruirono sopra le loro. <break time="0.6s"/> E ancora sopra ci costruirono gli Aragonesi, nel Quattrocento. <break time="1.0s"/>
+
+Un tratto di mura messapiche è visibile nel Parco Belloluogo — <break time="0.5s"/> fuori dai bastioni rinascimentali. <break time="0.6s"/> Ci puoi andare adesso, a piedi. <break time="0.5s"/> Sono lì, quei blocchi enormi, nell'erba. <break time="0.8s"/> Senza cartelli esplicativi. <break time="0.5s"/> Senza biglietto d'ingresso. <break time="0.5s"/> Senza nessuno intorno. <break time="1.2s"/>
+
+Una volta ci portai mio figlio, aveva otto anni. <break time="0.5s"/> Gli dissi: metti la mano su questa pietra. <break time="0.8s"/> Gli dissi: questa pietra è stata posata da qualcuno duemilasettecento anni fa. <break time="0.6s"/> Lui mi chiese: papà, ma allora dove abita adesso? <break time="1.5s"/>
+
+Avevo otto anni anch'io in quel momento. <break time="1.5s"/>
+
+
+=====================================
+CAP. 7 — LUCIANO E IL TUBO ROTTO
+-------------
+voice: dante
+
+Adesso vi racconto la storia più bella di tutta la Lecce sotterranea. <break time="1.0s"/>
+
+E non è storia antica. <break time="0.5s"/> È del 2001. <break time="1.2s"/>
+
+Luciano Faggiano voleva aprire un ristorante in via Ascanio Grandi. <break time="0.6s"/> Aveva trovato un locale al piano terra. <break time="0.5s"/> Bello, spazioso. <break time="0.6s"/> Ma c'era un problema: il bagno non scaricava. <break time="1.0s"/>
+
+Chiamò un idraulico — <break time="0.5s"/> non me, per la cronaca. <break time="0.8s"/> L'idraulico disse: il tubo è rotto sotto il pavimento, bisogna aprire. <break time="0.6s"/> Luciano disse: aprite. <break time="1.2s"/>
+
+Aprirono. <break time="0.5s"/> Trovarono una cripta medievale. <break time="1.2s"/>
+
+Chiamarono la Soprintendenza. <break time="0.5s"/> La Soprintendenza disse: non potete toccare niente, ci vuole un permesso. <break time="0.8s"/> Nel frattempo Luciano, con i suoi due figli maschi — <break time="0.5s"/> che avevano rispettivamente sedici e diciassette anni — <break time="0.5s"/> continuò a scavare. <break time="0.5s"/> Piano piano. <break time="0.5s"/> Ogni giorno. <break time="1.0s"/>
+
+Sette anni di scavi. <break time="0.8s"/> Con la supervisione della Soprintendenza, alla fine. <break time="0.5s"/> Trecentomila euro spesi di tasca propria. <break time="0.6s"/> E quello che trovarono sotto il locale da ristorante <break time="0.5s"/> era una stratificazione completa di tutta la storia di Lecce: <break time="1.2s"/>
+
+Pavimento di una casa messapica. <break time="0.4s"/> Sopra, un granaio romano. <break time="0.4s"/> Sopra, una cappella francescana del Trecento con affreschi. <break time="0.4s"/> Sopra, un cunicolo dei Templari. <break time="0.4s"/> Sopra, la cantina del palazzo barocco. <break time="0.4s"/> Sopra, il locale dove Luciano voleva mettere i tavoli. <break time="1.5s"/>
+
+Trecentomila euro. <break time="0.6s"/> Sette anni. <break time="0.5s"/> Il ristorante non aprì mai. <break time="0.8s"/>
+
+Aprì un museo. <break time="0.8s"/> Il Museo Faggiano. <break time="0.5s"/> Adesso lo visitano cinquantamila persone all'anno. <break time="1.2s"/>
+
+Quando lo incontro in giro per Lecce — <break time="0.5s"/> ci conoscono, ci siamo parlati — <break time="0.5s"/> gli chiedo ancora: ti pesa? <break time="0.8s"/> Lui dice: mi pesa solo che il bagno non scaricava. <break time="0.5s"/> Tutto il resto è stato un regalo. <break time="1.5s"/>
+
+
+=====================================
+CAP. 8 — I TEMPLARI SOTTO LA CITTÀ
+-------------
+voice: dante
+
+I cunicoli che Luciano trovò non erano solo nascosti sotto casa sua. <break time="1.0s"/>
+
+Erano collegati. <break time="1.2s"/>
+
+I Templari — l'ordine militare religioso che gestiva i pellegrinaggi in Terra Santa — <break time="0.5s"/> erano a Lecce nel XII secolo. <break time="0.6s"/> Avevano una chiesa: Santa Maria del Tempio. <break time="0.8s"/> E sotto, una rete di cunicoli che collegava la chiesa a punti strategici della città. <break time="1.0s"/>
+
+Vie di fuga. <break time="0.6s"/> Non è fantasia da romanzo. <break time="0.5s"/> I Templari le costruivano ovunque avessero una sede — <break time="0.5s"/> perché erano un ordine militare, <break time="0.5s"/> e le vie di fuga fanno parte del progetto militare. <break time="1.0s"/>
+
+Questi cunicoli vennero usati ancora nel 1480. <break time="0.5s"/> Quando i Turchi presero Otranto — <break time="0.5s"/> e di quello vi racconto in un'altra guida — <break time="0.5s"/> Lecce era in allarme. <break time="0.5s"/> La gente usò i sotterranei per nascondersi, <break time="0.5s"/> per far passare viveri, <break time="0.5s"/> per muoversi senza essere visti. <break time="1.2s"/>
+
+Io ho lavorato una volta su un cantiere in via Federico d'Aragona. <break time="0.5s"/> Stava facendo un rifacimento di fondamenta. <break time="0.5s"/> A tre metri di profondità trovammo un cunicolo — <break time="0.5s"/> largo quanto le spalle di un uomo, <break time="0.4s"/> rivestito di pietra leccese, <break time="0.4s"/> con il soffitto arcuato. <break time="0.8s"/> Chiamai la Soprintendenza. <break time="0.5s"/> Dissero: è probabilmente un tratto della rete templare. <break time="0.5s"/> Ci misero i sigilli. <break time="0.5s"/> Il cantiere aspettò tre mesi. <break time="1.0s"/>
+
+Il proprietario era furioso. <break time="0.5s"/> Io avevo voglia di strisciare dentro e vedere dove andava. <break time="1.2s"/>
+
+Non l'ho fatto. <break time="0.5s"/> Ma ci penso ancora. <break time="1.5s"/>
+
+
+=====================================
+CAP. 9 — IL CASTELLO E MARIA D'ENGHIEN
+-------------
+voice: dante
+
+Il Castello di Carlo V — <break time="0.5s"/> quello con le torri a stella che vedete all'ingresso del centro storico. <break time="1.0s"/>
+
+Sotto il castello c'è il collegamento con l'Idume. <break time="0.6s"/> È documentato. <break time="0.5s"/> Il pozzo nel cortile interno scende fino alla falda acquifera. <break time="1.0s"/>
+
+Ma c'è una storia che mi raccontò una signora anziana del centro, <break time="0.5s"/> anni fa, <break time="0.5s"/> quando andai a riparare un lavandino in via del Castello. <break time="1.0s"/>
+
+Si chiamava Carmela. <break time="0.5s"/> Ottantadue anni. <break time="0.5s"/> Abitava nello stesso appartamento da quando era nata. <break time="0.6s"/> Mi disse: sai che qui di notte si sente piangere? <break time="1.0s"/>
+
+Le dissi che era probabilmente il vento nei cunicoli sotto il castello. <break time="0.8s"/> Lei mi guardò in un modo che non dimentico. <break time="0.6s"/> Disse: quello non è vento. <break time="0.5s"/> È Maria. <break time="1.5s"/>
+
+Maria d'Enghien era la contessa di Lecce. <break time="0.6s"/> Morì il 9 maggio del 1446. <break time="0.5s"/> Fu sepolta nel monastero di Santa Croce — <break time="0.5s"/> non la basilica che vedete adesso, un monastero più antico, <break time="0.4s"/> che fu poi demolito per fare spazio alle nuove mura del castello. <break time="1.0s"/>
+
+Le loro ossa, dicono, non furono mai spostate. <break time="0.6s"/> Sono ancora lì, sotto le mura. <break time="1.2s"/>
+
+Io non so cosa si sente di notte al castello. <break time="0.5s"/> Di giorno ci ho lavorato tre volte. <break time="0.5s"/> Non ho sentito niente. <break time="0.5s"/> Ma non vado mai da solo. <break time="1.0s"/>
+
+Non per paura. <break time="0.5s"/> Per precauzione. <break time="1.5s"/>
+
+
+=====================================
+CAP. 10 — QUELLO CHE CAMMINATE ADESSO
+-------------
+voice: dante
+
+Quando camminate per il centro storico di Lecce, <break time="0.6s"/> state camminando su almeno quattro città diverse. <break time="1.2s"/>
+
+La città messapica: IV-III secolo avanti Cristo. <break time="0.4s"/> Mura, case, strade. <break time="0.8s"/>
+La città romana: I secolo avanti Cristo — II secolo dopo Cristo. <break time="0.4s"/> Foro, anfiteatro, teatro, terme. <break time="0.8s"/>
+La città medievale: Normanni, Svevi, Angioini. <break time="0.4s"/> Chiese, castelli, monasteri. <break time="0.8s"/>
+La città barocca: Seicento spagnolo. <break time="0.4s"/> Palazzi, facciate, la pietra scolpita. <break time="1.2s"/>
+
+E sotto tutte queste, ancora più in basso, <break time="0.5s"/> le tracce dell'insediamento preistorico. <break time="0.5s"/> Età del bronzo. <break time="0.5s"/> Tremila anni prima dei Messapi. <break time="1.2s"/>
+
+Ogni volta che in centro aprono una buca — <break time="0.5s"/> per un tubo, per un cavo, per le fondamenta — <break time="0.5s"/> trovano qualcosa. <break time="0.8s"/> Non sempre. <break time="0.5s"/> Ma spesso abbastanza che i costruttori ci mettono in preventivo il ritardo. <break time="0.8s"/> "Rischio Soprintendenza", lo chiamano. <break time="0.5s"/> Come un'assicurazione sul lavoro. <break time="1.2s"/>
+
+Io ci ho fatto la carriera, su questo rischio. <break time="0.5s"/> Ogni buca è un'incognita. <break time="0.5s"/> Ogni tubo rotto può nascondere un'altra storia. <break time="1.0s"/>
+
+Trentatré anni di mestiere <break time="0.4s"/> e ancora, quando scendo, <break time="0.4s"/> sento sempre una specie di eccitazione. <break time="0.6s"/> Come la mattina di quando ero bambino e aprivo i regali. <break time="0.8s"/> Non sai mai cosa trovi. <break time="1.5s"/>
+
+
+=====================================
+CAP. 11 — CHIUSURA: COSA PORTARSI A CASA
+-------------
+voice: dante
+
+Prima di lasciarvi, una cosa pratica. <break time="1.0s"/>
+
+Se volete vedere la Lecce sotterranea con i vostri occhi — <break time="0.5s"/> non solo sentirla sotto i piedi — <break time="0.5s"/> ci sono tre posti che consiglio. <break time="1.0s"/>
+
+Il Museo Faggiano, in via Ascanio Grandi. <break time="0.5s"/> La storia di Luciano, i sette strati, i cunicoli. <break time="0.6s"/> Entrate e lasciate perdere il cellulare. <break time="0.5s"/> Guardate i muri. <break time="0.5s"/> Ogni strato è un'epoca diversa e si vede. <break time="1.2s"/>
+
+L'anfiteatro romano in Piazza Sant'Oronzo. <break time="0.5s"/> Scendete fino all'arena se potete. <break time="0.5s"/> Toccate la pietra. <break time="0.5s"/> Pensate che chi ha costruito questo posto ha usato la stessa pietra leccese che vedete sulle facciate barocche. <break time="0.6s"/> È la stessa pietra. <break time="0.5s"/> Duemila anni separati dalla stessa materia. <break time="1.2s"/>
+
+Il Parco Belloluogo, fuori dai bastioni. <break time="0.5s"/> Ci si va a piedi dal centro, venti minuti. <break time="0.5s"/> Le mura messapiche sono lì, nell'erba, senza biglietto. <break time="0.6s"/> Mettete la mano sulla pietra. <break time="0.5s"/> Come ho detto a mio figlio. <break time="1.5s"/>
+
+Io lavoro ancora. <break time="0.6s"/> Ancora apro buche. <break time="0.5s"/> Ancora trovo cose. <break time="0.8s"/> L'ultima volta, sei mesi fa, ho trovato una moneta romana in una buca in via Palmieri. <break time="0.6s"/> L'ho tenuta in mano per qualche secondo. <break time="0.5s"/> L'ho data alla Soprintendenza. <break time="0.8s"/> Come sempre. <break time="1.2s"/>
+
+Ma quei secondi, ogni volta, <break time="0.4s"/> valgono trent'anni di lavoro. <break time="1.5s"/>
+
+Lecce è bella da sopra. <break time="0.5s"/> Però la vera Lecce è sotto. <break time="0.5s"/> E non finisce mai.

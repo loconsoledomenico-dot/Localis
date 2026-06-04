@@ -1,0 +1,124 @@
+Ora cammina sulla muraglia, lasciando il mare accanto a te.
+<break time="1s"/>
+
+Questa è una delle passeggiate più belle di Bari.
+<break time="0.8s"/>
+
+Ma per capirla davvero devi togliere mentalmente qualcosa: la strada moderna che oggi passa sotto le mura.
+<break time="0.8s"/>
+
+Immagina che non esista.
+<break time="1s"/>
+
+Immagina la pietra della città che finisce quasi direttamente nell'acqua.
+<break time="1s"/>
+
+<prosody rate="88%">Niente automobili,
+<break time="0.4s"/>
+niente nastro d'asfalto,
+<break time="0.4s"/>
+niente distanza comoda tra il borgo e il mare.
+<break time="0.8s"/>
+Solo il muro.
+<break time="0.6s"/>
+Sotto, il Mediterraneo.
+<break time="0.6s"/>
+Dietro, tutta la città.</prosody>
+<break time="2s"/>
+
+Oggi guardiamo il mare e pensiamo alla bellezza.
+<break time="0.8s"/>
+
+Per Bari antica il mare era molto di più.
+<break time="0.8s"/>
+
+Era la strada principale.
+<break time="0.8s"/>
+
+<prosody rate="88%">Da lì arrivavano il grano, le merci, il denaro, le notizie, i pellegrini.
+<break time="0.5s"/>
+Da lì potevano arrivare anche predoni, soldati, epidemie, tempeste e morte.</prosody>
+<break time="1s"/>
+
+Il mare dava da vivere.
+<break time="0.5s"/>
+
+Ma non era mai completamente innocente.
+<break time="1.5s"/>
+
+Per questo la città era difesa dalle mura.
+<break time="0.5s"/>
+
+Non erano una cornice romantica.
+<break time="0.5s"/>
+
+Erano il confine tra ciò che apparteneva alla città e ciò che poteva improvvisamente minacciarla.
+<break time="1.5s"/>
+
+Guarda il Fortino di Sant'Antonio.
+<break time="0.8s"/>
+
+Oggi è un luogo dove le persone passeggiano, guardano il panorama, si fermano durante gli eventi e fanno fotografie.
+<break time="0.8s"/>
+
+Ma la sua posizione spiega subito la sua funzione: da qui bisognava osservare il mare, controllare l'avvicinarsi delle imbarcazioni, difendere un punto fragile della città.
+<break time="1s"/>
+
+Bari era esposta per quasi tutto il suo perimetro.
+<break time="0.8s"/>
+
+Una penisola può essere bellissima.
+<break time="0.5s"/>
+
+Ma in tempo di guerra è anche difficile da proteggere.
+<break time="1.5s"/>
+
+Prova a pensare alle persone che vivevano nelle case alle tue spalle.
+<break time="0.8s"/>
+
+Un bambino che cresceva in questi vicoli imparava presto che il mare era vicino.
+<break time="1s"/>
+
+<prosody rate="88%">Lo sentiva nell'odore,
+<break time="0.4s"/>
+nel vento,
+<break time="0.4s"/>
+nella voce degli uomini tornati dal porto,
+<break time="0.4s"/>
+nel silenzio improvviso quando una barca tardava a rientrare,
+<break time="0.4s"/>
+nelle merci che comparivano nei mercati,
+<break time="0.4s"/>
+nelle parole straniere che entravano nel dialetto,
+<break time="0.4s"/>
+nel timore di vedere comparire vele non desiderate all'orizzonte.</prosody>
+<break time="1.5s"/>
+
+Questa è una cosa che spesso si perde quando si visita Bari Vecchia velocemente.
+<break time="0.8s"/>
+
+Il mare non era il panorama della città.
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Era una presenza dentro la sua vita.</emphasis></prosody>
+<break time="1.5s"/>
+
+E ancora oggi, se ascolti bene, questa relazione non è scomparsa.
+<break time="0.8s"/>
+
+Bari continua a vivere girata verso l'acqua.
+<break time="0.5s"/>
+
+Il porto moderno è cambiato. Le navi sono cambiate. Le mura non servono più a difendersi.
+<break time="0.8s"/>
+
+Ma il gesto è rimasto lo stesso: arrivare qui, fermarsi, guardare il mare e chiedersi cosa ci sia oltre.
+<break time="1.5s"/>
+
+Prosegui ora lungo la muraglia verso Santa Scolastica e l'area di Santa Maria del Buon Consiglio.
+<break time="0.5s"/>
+
+Lì scopriremo che Bari Vecchia non è soltanto una città medievale.
+<break time="0.5s"/>
+
+<prosody rate="85%">Sotto queste pietre c'è molto di più.</prosody>

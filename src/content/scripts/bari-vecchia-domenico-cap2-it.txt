@@ -1,0 +1,157 @@
+Adesso sei dentro il borgo.
+<break time="0.8s"/>
+
+Guarda quanto cambia tutto nel giro di pochi metri.
+<break time="1s"/>
+
+Fuori avevi il castello, lo spazio aperto, la sensazione di una grande costruzione militare.
+<break time="0.8s"/>
+
+Qui, invece, la città si stringe.
+<break time="1s"/>
+
+Le strade diventano più strette. Le case si avvicinano. Le finestre sembrano stare quasi una davanti all'altra. La vita, anche oggi, sembra poter passare dalla porta di casa alla strada senza una vera separazione.
+<break time="1s"/>
+
+Questa è una delle cose che devi capire di Bari Vecchia.
+<break time="0.5s"/>
+
+Non è nata per essere attraversata comodamente.
+<break time="0.5s"/>
+
+È nata per stare insieme, per proteggersi, per usare ogni palmo di spazio dentro le mura.
+<break time="1s"/>
+
+Perché fuori dalle mura, per secoli, non c'era la Bari che conosci oggi.
+<break time="0.5s"/>
+
+Non c'erano i grandi viali. Non c'era il quartiere murattiano. Non c'era il Libertà dove sono cresciuto io. Non c'era la città moderna allargata verso l'interno.
+<break time="0.8s"/>
+
+C'era questa penisola.
+<break time="1s"/>
+
+E dentro questa penisola doveva starci <emphasis level="moderate">tutto</emphasis>.
+<break time="1.2s"/>
+
+<prosody rate="88%">Le case,
+<break time="0.4s"/>
+le botteghe,
+<break time="0.4s"/>
+le chiese,
+<break time="0.4s"/>
+i forni,
+<break time="0.4s"/>
+le cisterne,
+<break time="0.4s"/>
+i mercati,
+<break time="0.4s"/>
+i palazzi del potere,
+<break time="0.4s"/>
+i monasteri,
+<break time="0.4s"/>
+le famiglie povere e quelle nobili,
+<break time="0.4s"/>
+i soldati,
+<break time="0.4s"/>
+i bambini,
+<break time="0.4s"/>
+i pellegrini,
+<break time="0.4s"/>
+i marinai,
+<break time="0.4s"/>
+i vivi e i morti.</prosody>
+<break time="1.5s"/>
+
+Oggi un turista cammina in questi vicoli e può pensare: che atmosfera.
+<break time="0.5s"/>
+
+Ed è vero. L'atmosfera c'è.
+<break time="0.8s"/>
+
+Ma per chi viveva qui, questa vicinanza non era un effetto pittoresco.
+<break time="0.5s"/>
+
+Era la vita quotidiana.
+<break time="1s"/>
+
+Se una famiglia cucinava, l'odore passava nella strada.
+<break time="0.4s"/>
+
+Se qualcuno litigava, lo sentivano tutti.
+<break time="0.4s"/>
+
+Se nasceva un bambino, se moriva un anziano, se arrivava una notizia dal porto, la città lo sapeva subito.
+<break time="1s"/>
+
+Questa non era una città fatta per stare soli.
+<break time="0.5s"/>
+
+<prosody rate="88%" pitch="+3%">Era una città in cui la vita degli altri ti arrivava <emphasis level="strong">addosso</emphasis>.</prosody>
+<break time="1.5s"/>
+
+Strada delle Crociate porta già nel nome una delle grandi direzioni della storia di Bari: il passaggio.
+<break time="1s"/>
+
+<prosody rate="88%">Uomini che arrivavano,
+<break time="0.4s"/>
+uomini che partivano,
+<break time="0.4s"/>
+pellegrini diretti ai luoghi santi,
+<break time="0.4s"/>
+cavalieri,
+<break time="0.4s"/>
+mercanti,
+<break time="0.4s"/>
+gente che aveva attraversato l'Europa e che, arrivata qui, cercava una nave, una benedizione, un letto, del cibo, oppure semplicemente la possibilità di ripartire.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">Bari è stata a lungo questo: <emphasis level="strong">una soglia</emphasis>.</prosody>
+<break time="0.8s"/>
+
+Non soltanto una città affacciata sul mare.
+<break time="0.5s"/>
+
+Un punto in cui le persone cambiavano direzione.
+<break time="1s"/>
+
+<prosody rate="88%">Dalla terra alla nave,
+<break time="0.4s"/>
+dall'Occidente all'Oriente,
+<break time="0.4s"/>
+dal viaggio alla preghiera,
+<break time="0.4s"/>
+dalla paura alla speranza di essere finalmente arrivati.</prosody>
+<break time="1.5s"/>
+
+Mentre cammini, guarda le pareti.
+<break time="0.8s"/>
+
+Non cercare soltanto il monumento importante.
+<break time="0.5s"/>
+
+Osserva le porte basse, gli angoli, le pietre consumate, gli slarghi improvvisi.
+<break time="0.8s"/>
+
+In una città come questa anche il percorso più semplice raccontava qualcosa: dove abitava una famiglia, dove si apriva una piccola chiesa, dove passavano gli animali, dove veniva raccolta l'acqua, dove si vendeva il pane.
+<break time="1s"/>
+
+Bari Vecchia non si capisce guardandola dall'alto.
+<break time="0.5s"/>
+
+Si capisce lasciandosi stringere un po' dai suoi vicoli.
+<break time="1.5s"/>
+
+Ora continua in direzione della Basilica di San Nicola.
+<break time="0.5s"/>
+
+Non entreremo nel racconto completo del santo: quello merita una storia a parte.
+<break time="0.8s"/>
+
+Ma per capire Bari Vecchia dobbiamo capire cosa accadde quando Nicola arrivò qui.
+<break time="0.8s"/>
+
+Perché da quel momento questa città non fu più soltanto un porto importante.
+<break time="0.5s"/>
+
+<prosody rate="85%">Diventò una <emphasis level="moderate">meta</emphasis>.</prosody>

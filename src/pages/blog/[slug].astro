@@ -1,0 +1,275 @@
+---
+/**
+ * Pagina articolo blog — versione italiana (default locale, nessun prefisso).
+ * URL: localis.guide/blog/[slug]/
+ *
+ * Per aggiungere un articolo: crea src/content/blog/[slug].mdx con lang: it.
+ * La pagina legge tutti i campi dal frontmatter e genera SEO, JSON-LD,
+ * hreflang e il box CTA automaticamente.
+ */
+export const prerender = true;
+
+import { getCollection, render } from 'astro:content';
+import Layout from '../../components/Layout.astro';
+import BlogCtaBox from '../../components/BlogCtaBox.astro';
+import StructuredData from '../../components/StructuredData.astro';
+
+// ── Percorsi statici ──────────────────────────────────────────────────────
+export async function getStaticPaths() {
+  const articles = await getCollection('blog', (e) =>
+    e.data.lang === 'it' && e.data.status === 'published'
+  );
+  return articles.map((article) => ({
+    params: { slug: article.data.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const d = article.data;
+
+const SITE = 'https://localis.guide';
+
+// ── hreflang: slug diversi per lingua → override manuale ─────────────────
+const langUrlsOverride = {
+  it: `/blog/${d.slug}/`,
+  en: `/en/blog/${d.slug_en}/`,
+  de: d.slug_de ? `/de/blog/${d.slug_de}/` : `/blog/${d.slug}/`,
+};
+
+// ── Articoli correlati ────────────────────────────────────────────────────
+const allIt = await getCollection('blog', (e) => e.data.lang === 'it' && e.data.status === 'published');
+const related = allIt.filter((a) => d.related.includes(a.data.slug)).slice(0, 3);
+
+// ── JSON-LD: Article + BreadcrumbList ─────────────────────────────────────
+const articleLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  image: `${SITE}${d.cover}`,
+  datePublished: d.published_at.toISOString().split('T')[0],
+  ...(d.updated_at && { dateModified: d.updated_at.toISOString().split('T')[0] }),
+  inLanguage: 'it-IT',
+  author: {
+    '@type': 'Organization',
+    name: 'Localis',
+    url: SITE,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Localis',
+    url: SITE,
+    logo: { '@type': 'ImageObject', url: `${SITE}/favicon.svg` },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}/blog/${d.slug}/` },
+};
+
+const breadcrumbLD = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',      item: SITE },
+    { '@type': 'ListItem', position: 2, name: d.zone_label, item: `${SITE}${d.zone_href}` },
+    { '@type': 'ListItem', position: 3, name: 'Blog',      item: `${SITE}/blog/` },
+    { '@type': 'ListItem', position: 4, name: d.title,     item: `${SITE}/blog/${d.slug}/` },
+  ],
+};
+---
+
+<Layout
+  title={`${d.title} · Localis`}
+  description={d.description}
+  lang="it"
+  ogImage={d.cover}
+  ogType="article"
+  langUrlsOverride={langUrlsOverride}
+>
+  <StructuredData data={articleLD} />
+  <StructuredData data={breadcrumbLD} />
+
+  <!-- ── Breadcrumb ──────────────────────────────────────────────────── -->
+  <nav aria-label="Breadcrumb" class="max-w-narrow mx-auto px-md pt-lg">
+    <ol class="flex items-center gap-xs text-sm text-ink-subtle flex-wrap">
+      <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-subtle/50">›</li>
+      <li><a href={d.zone_href} class="hover:text-ink transition-colors">{d.zone_label}</a></li>
+      <li aria-hidden="true" class="text-ink-subtle/50">›</li>
+      <li><a href="/blog/" class="hover:text-ink transition-colors">Blog</a></li>
+      <li aria-hidden="true" class="text-ink-subtle/50">›</li>
+      <li aria-current="page" class="text-ink-muted truncate max-w-[18ch]">{d.title}</li>
+    </ol>
+  </nav>
+
+  <!-- ── Hero / intestazione articolo ───────────────────────────────── -->
+  <header class="max-w-narrow mx-auto px-md pt-xl pb-lg">
+    <p class="text-xs font-semibold tracking-[0.20em] uppercase text-accent mb-sm">
+      {d.zone_label} · Approfondimento storico
+    </p>
+    <!-- H1 unico — generato dalla page, non duplicare nel corpo MDX -->
+    <h1 class="font-display text-4xl text-ink leading-tight mb-md">{d.title}</h1>
+    <p class="text-lg text-ink-muted leading-relaxed">{d.description}</p>
+    <p class="text-sm text-ink-subtle mt-md">
+      Pubblicato il
+      <time datetime={d.published_at.toISOString().split('T')[0]}>
+        {d.published_at.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })}
+      </time>
+      {d.updated_at && (
+        <> · Aggiornato il <time datetime={d.updated_at.toISOString().split('T')[0]}>
+          {d.updated_at.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </time></>
+      )}
+    </p>
+  </header>
+
+  <!-- ── Immagine copertina ──────────────────────────────────────────── -->
+  <div class="max-w-narrow mx-auto px-md mb-xl">
+    <img
+      src={d.cover}
+      alt={d.cover_alt}
+      width={d.cover_width}
+      height={d.cover_height}
+      loading="eager"
+      decoding="async"
+      class="w-full rounded-lg object-cover"
+      style={`aspect-ratio: ${d.cover_width}/${d.cover_height}`}
+    />
+  </div>
+
+  <!-- ── Box CTA — dopo l'intro, prima del corpo ─────────────────────── -->
+  <div class="max-w-narrow mx-auto px-md">
+    <BlogCtaBox
+      lang="it"
+      guideSlug={d.guide_slug}
+      guideTitle={d.guide_title}
+      guideProduct={d.guide_product}
+      guidePriceLabel={d.guide_price_label}
+    />
+  </div>
+
+  <!-- ── Corpo articolo ─────────────────────────────────────────────── -->
+  <article class="max-w-narrow mx-auto px-md prose-blog">
+    <Content />
+  </article>
+
+  <!-- ── Box CTA finale ─────────────────────────────────────────────── -->
+  <div class="max-w-narrow mx-auto px-md">
+    <BlogCtaBox
+      lang="it"
+      guideSlug={d.guide_slug}
+      guideTitle={d.guide_title}
+      guideProduct={d.guide_product}
+      guidePriceLabel={d.guide_price_label}
+    />
+  </div>
+
+  <!-- ── Articoli correlati ──────────────────────────────────────────── -->
+  {related.length > 0 && (
+    <section class="max-w-narrow mx-auto px-md py-2xl border-t border-border mt-xl">
+      <h2 class="font-display text-2xl text-ink mb-lg">Leggi anche</h2>
+      <ul class="grid sm:grid-cols-2 gap-md" role="list">
+        {related.map((rel) => (
+          <li>
+            <a
+              href={`/blog/${rel.data.slug}/`}
+              class="group flex flex-col gap-xs p-md rounded-lg border border-border hover:border-accent/40 hover:bg-surface-elev transition-colors no-underline"
+            >
+              <span class="text-xs font-semibold tracking-[0.16em] uppercase text-accent">{rel.data.zone_label}</span>
+              <span class="font-display text-lg text-ink leading-snug group-hover:text-accent/90 transition-colors">
+                {rel.data.title}
+              </span>
+              <span class="text-sm text-ink-muted line-clamp-2">{rel.data.description}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <!-- ── Link alla guida a pagamento (link interno testuale) ────────── -->
+  <aside class="max-w-narrow mx-auto px-md pb-3xl">
+    <p class="text-sm text-ink-muted">
+      Stai pianificando una visita?
+      <a href={`/guide/${d.guide_slug}/`} class="text-link hover:text-link-pressed underline underline-offset-2">
+        Scopri la guida audio di {d.guide_title}
+      </a>
+      — trenta minuti di narrazione originale, disponibile offline.
+    </p>
+  </aside>
+</Layout>
+
+<style>
+  /* ── Prosa articolo — stile editoriale ────────────────────────────── */
+  .prose-blog {
+    color: var(--color-ink-muted);
+    line-height: 1.75;
+    font-size: var(--text-base);
+  }
+
+  .prose-blog :global(p) {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .prose-blog :global(h2) {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-ink);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.25;
+  }
+
+  .prose-blog :global(h3) {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-ink);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+  }
+
+  .prose-blog :global(strong) {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
+  .prose-blog :global(em) {
+    font-style: italic;
+  }
+
+  .prose-blog :global(a) {
+    color: var(--color-link);
+    text-underline-offset: 3px;
+  }
+
+  .prose-blog :global(a:hover) {
+    color: var(--color-link-pressed);
+  }
+
+  .prose-blog :global(img) {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin-block: var(--spacing-xl);
+  }
+
+  .prose-blog :global(blockquote) {
+    border-left: 3px solid var(--color-accent);
+    padding-left: var(--spacing-lg);
+    margin-left: 0;
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+  }
+
+  .prose-blog :global(ul),
+  .prose-blog :global(ol) {
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .prose-blog :global(li) {
+    margin-bottom: var(--spacing-xs);
+  }
+</style>

@@ -1,0 +1,213 @@
+LOCALIS — LECCE: LA CARTAPESTA E GLI ARTIGIANI
+Guida narrativa — versione IT
+Voce: Tonino, 50 anni, barista nel centro storico
+Modello: eleven_multilingual_v2
+=====================================
+
+
+=====================================
+CAP. 1 — INTRO: IL BAR DI FRONTE AL LABORATORIO
+-------------
+voice: antonio
+
+Faccio il barista da venticinque anni. <break time="0.8s"/> Stesso bar. <break time="0.5s"/> Stessa via. <break time="0.5s"/> Centro storico di Lecce. <break time="1.0s"/>
+
+Mi chiamo Tonino. <break time="0.6s"/> Cinquant'anni. <break time="0.5s"/> Ho aperto la mattina alle sei e mezza e chiuso la notte. <break time="0.5s"/> Tutti i giorni. <break time="0.5s"/> Per venticinque anni. <break time="1.0s"/>
+
+Di fronte al mio bar c'è un laboratorio di cartapesta. <break time="0.6s"/> Uno dei più antichi ancora aperti in città. <break time="0.8s"/> Il titolare si chiama Franco. <break time="0.5s"/> Ogni mattina alle sette meno dieci entra da me per il caffè. <break time="0.5s"/> Macchiato, senza zucchero. <break time="0.5s"/> Da venticinque anni. <break time="1.2s"/>
+
+Ho visto entrare nel suo laboratorio turisti di quaranta paesi. <break time="0.5s"/> Li ho visti uscire con gli occhi diversi. <break time="0.8s"/> Non con un souvenir in mano — <break time="0.5s"/> alcuni sì, qualche Madonna o un San Nicola — <break time="0.5s"/> ma con un'espressione diversa. <break time="0.5s"/> Come quando capisci qualcosa che non sapevi di dover capire. <break time="1.2s"/>
+
+Ho sentito migliaia di conversazioni al bar, in venticinque anni. <break time="0.5s"/> Quelle dopo una visita al laboratorio di Franco <break time="0.5s"/> erano sempre le più interessanti. <break time="1.5s"/>
+
+Quello che vi racconto è quello che ho sentito. <break time="0.5s"/> E quello che ho visto. <break time="0.5s"/> Dal lato sbagliato della strada. <break time="1.5s"/>
+
+
+=====================================
+CAP. 2 — COS'È LA CARTAPESTA LECCESE: QUELLO CHE NON SEMBRA
+-------------
+voice: antonio
+
+Prima cosa che dovete capire: <break time="0.8s"/> la cartapesta leccese non è quella dei bambini che fanno i lavoretti a scuola. <break time="1.2s"/>
+
+Quella roba lì, leggera e colorata, che si rompe se la guardi storto — <break time="0.5s"/> non c'entra niente. <break time="1.0s"/>
+
+La cartapesta leccese è statuaria sacra. <break time="0.6s"/> Madonne, santi, Cristi. <break time="0.5s"/> Opere che riempiono le chiese di campagna del Salento da tre secoli. <break time="0.6s"/> Oggetti che la gente ha comprato per la chiesa del paese <break time="0.4s"/> perché non si poteva permettere il marmo o il bronzo. <break time="0.8s"/> E che da fuori, <break time="0.4s"/> a un metro di distanza, <break time="0.4s"/> non riconosci come cartapesta. <break time="1.2s"/>
+
+La tecnica è antica. <break time="0.6s"/> Arrivò a Lecce da Napoli tra il Seicento e il Settecento. <break time="0.5s"/> I napoletani erano maestri di questo mestiere. <break time="0.6s"/> Venivano giù nel Salento su commissione di preti e nobili — <break time="0.5s"/> arredare una chiesa in cartapesta costava un decimo del marmo, <break time="0.5s"/> e il risultato era quasi identico. <break time="1.2s"/>
+
+I leccesi impararono e migliorarono. <break time="0.8s"/>
+
+Ci sono due tecniche fondamentali. <break time="0.8s"/> La prima: si prepara una pasta di carta strappata a mano — <break time="0.4s"/> non tagliata, strappata, <break time="0.5s"/> perché le fibre strappate si attaccano meglio — <break time="0.4s"/> si impasta con colla di farina, <break time="0.5s"/> e si spreme dentro uno stampo di gesso. <break time="0.5s"/> Si lascia asciugare giorni. <break time="0.5s"/> Si stacca. <break time="0.5s"/> Si rifinisce a mano. <break time="1.0s"/>
+
+La seconda: si fa uno scheletro di fil di ferro, <break time="0.4s"/> ci si avvolge attorno la lana di legno — <break time="0.4s"/> quei trucioli fini che vedete negli imballaggi — <break time="0.5s"/> e sopra si modella l'impasto di carta. <break time="0.5s"/> Le teste, le mani e i piedi si fanno separati in terracotta, <break time="0.4s"/> poi si attaccano. <break time="1.2s"/>
+
+Sopra tutto questo, <break time="0.5s"/> uno strato di gesso finissimo. <break time="0.5s"/> Poi la pittura. <break time="0.5s"/> Poi le velature. <break time="0.5s"/> Poi i dettagli. <break time="0.6s"/>
+
+Da un foglio di giornale a una Madonna che sembra di marmo: <break time="0.5s"/> tre settimane di lavoro. <break time="0.5s"/> Per i pezzi grandi, tre mesi. <break time="1.5s"/>
+
+
+=====================================
+CAP. 3 — MESCIU PIETRU DE LI CRISTI
+-------------
+voice: antonio
+
+Il primo grande maestro cartapestaio di Lecce si chiamava Pietro Surgente. <break time="0.8s"/> Nato nel 1742. <break time="0.5s"/> Morto nel 1827. <break time="0.6s"/> Ottantacinque anni. <break time="1.0s"/>
+
+Lo chiamavano Mesciu Pietru de li Cristi. <break time="0.6s"/> In dialetto: Maestro Pietro dei Cristi. <break time="0.8s"/> Perché faceva soprattutto Crocifissi. <break time="0.5s"/> Ne ha fatti così tanti che hanno smesso di contarli. <break time="1.0s"/>
+
+Ogni chiesa di campagna del Salento che ha un Crocifisso antico in cartapesta — <break time="0.5s"/> e ce ne sono centinaia — <break time="0.5s"/> potrebbe essere suo. <break time="0.5s"/> Non si sa esattamente quanti. <break time="0.5s"/> Non li firmava tutti. <break time="0.8s"/> Non era necessario. <break time="0.5s"/> Il Crocifisso era per la chiesa, <break time="0.5s"/> non per lui. <break time="1.2s"/>
+
+Franco — quello del laboratorio di fronte al mio bar — <break time="0.5s"/> ha una storia che racconta ogni volta che gli chiedono delle origini della cartapesta. <break time="0.8s"/>
+
+Dice che una volta, restaurando un Crocifisso di Surgente in una chiesa di un paese vicino Lecce, <break time="0.5s"/> dentro la struttura di fil di ferro ha trovato uno straccio. <break time="0.6s"/> Uno straccio vero. <break time="0.5s"/> Di lana. <break time="0.5s"/> Vecchio di duecento anni. <break time="0.5s"/> Probabilmente un pezzo di vestito usato come riempitivo. <break time="1.0s"/>
+
+Dice: qualcuno si è tolto qualcosa di dosso per mettercelo dentro. <break time="0.5s"/> Non sappiamo chi era. <break time="0.5s"/> Non sappiamo perché. <break time="0.8s"/> Ma è lì da duecento anni, <break time="0.4s"/> dentro il Crocifisso. <break time="0.5s"/> Adesso è di nuovo dentro, <break time="0.4s"/> dopo il restauro. <break time="1.2s"/>
+
+È il tipo di storia che si racconta alle sette di mattina davanti a un caffè macchiato. <break time="1.5s"/>
+
+
+=====================================
+CAP. 4 — IL SOFFITTO CHE SEMBRA MARMO
+-------------
+voice: antonio
+
+C'è una cosa che vi sfido a indovinare. <break time="1.0s"/>
+
+Nella Chiesa di Santa Chiara, in piazza Vittorio Emanuele II, <break time="0.5s"/> c'è un controsoffitto a cassettoni. <break time="0.6s"/> Bianco, con decorazioni, sembra stucco o pietra. <break time="1.0s"/>
+
+È cartapesta. <break time="1.2s"/>
+
+Tutto. <break time="0.6s"/> Ogni pannello, ogni decorazione, ogni cornice. <break time="0.5s"/> Fu montato nel 1738. <break time="0.5s"/> Fatto in laboratorio a pezzi separati, <break time="0.4s"/> portato in chiesa, <break time="0.4s"/> assemblato in loco. <break time="0.5s"/> Come un puzzle di carta che imita la pietra. <break time="1.2s"/>
+
+Quasi nessuno lo sa. <break time="0.8s"/> I turisti entrano nella chiesa, <break time="0.5s"/> guardano il soffitto, <break time="0.5s"/> pensano che sia come tutti gli altri soffitti di chiese barocche. <break time="0.5s"/> Pietra, calce, lavorazione muraria. <break time="0.8s"/>
+
+L'anno scorso un architetto tedesco è entrato al bar dopo aver visitato Santa Chiara. <break time="0.5s"/> Non parlava italiano. <break time="0.5s"/> Parlava inglese. <break time="0.5s"/> Mi ha fatto capire a gesti: <break time="0.4s"/> quel soffitto è straordinario, <break time="0.4s"/> con quale tecnica è stato fatto? <break time="0.8s"/>
+
+Cartapesta, gli ho detto. <break time="0.6s"/> Paper mâché. <break time="0.8s"/>
+
+Mi ha guardato come se gli avessi detto una cosa impossibile. <break time="0.5s"/> Poi è uscito, <break time="0.5s"/> è tornato in chiesa. <break time="0.5s"/> È rientrato al bar venti minuti dopo. <break time="0.5s"/> Mi ha chiesto un altro caffè. <break time="0.5s"/> Non ha detto una parola. <break time="1.2s"/>
+
+Alcune cose colpiscono e basta. <break time="1.5s"/>
+
+
+=====================================
+CAP. 5 — I MAESTRI CHE RESTANO
+-------------
+voice: antonio
+
+Quanti maestri cartapestai lavorano ancora a Lecce? <break time="1.0s"/>
+
+Franco dice: una ventina. <break time="0.5s"/> Forse meno. <break time="1.0s"/>
+
+Non venti laboratori. <break time="0.5s"/> Venti persone. <break time="0.5s"/> In tutta la città. <break time="1.0s"/>
+
+Negli anni Settanta erano molti di più. <break time="0.6s"/> Ogni via del centro aveva almeno un laboratorio. <break time="0.5s"/> I figli imparavano dai padri. <break time="0.5s"/> I nipoti dai nonni. <break time="0.8s"/> Era un mestiere come tanti altri — <break time="0.5s"/> non facevi il dottore o l'avvocato, <break time="0.4s"/> facevi il cartapestaio. <break time="1.0s"/>
+
+Poi è cambiato. <break time="0.8s"/>
+
+I figli non hanno voluto imparare. <break time="0.5s"/> Tre, quattro anni di apprendistato per fare una Madonna — <break time="0.5s"/> quando puoi prendere un computer e guadagnare di più. <break time="0.8s"/> Non è colpa loro. <break time="0.5s"/> Il mondo è andato in un'altra direzione. <break time="1.2s"/>
+
+Quello che è rimasto è strano, però. <break time="0.8s"/>
+
+I pochi che continuano, <break time="0.5s"/> quasi tutti hanno una storia uguale: <break time="0.5s"/> a un certo punto della vita si sono seduti vicino al nonno o al padre, <break time="0.5s"/> hanno guardato le mani che lavoravano, <break time="0.4s"/> e non sono più riusciti ad andarsene. <break time="1.0s"/>
+
+Franco mi ha detto una volta: <break time="0.6s"/> io ho fatto tre anni all'università. <break time="0.5s"/> Economia. <break time="0.5s"/> Poi un'estate sono stato in laboratorio con mio padre. <break time="0.5s"/> Settembre non sono tornato all'università. <break time="0.6s"/> Mia madre ha pianto una settimana. <break time="0.5s"/> Adesso capisce. <break time="1.2s"/>
+
+Il turismo degli ultimi anni ha aiutato. <break time="0.5s"/> La gente entra, compra, porta via. <break time="0.5s"/> Ma Franco dice sempre: <break time="0.5s"/> il turismo fa vivere il laboratorio, <break time="0.4s"/> non fa vivere l'arte. <break time="0.5s"/> Sono due cose diverse. <break time="1.5s"/>
+
+
+=====================================
+CAP. 6 — QUELLO CHE SI COMPRA E QUELLO CHE NON SI COMPRA
+-------------
+voice: antonio
+
+Al mio bar passano turisti tutto il giorno. <break time="0.8s"/>
+
+Molti portano una statuetta di cartapesta. <break time="0.5s"/> Una Madonna, un San Nicola, una Natività. <break time="0.6s"/> Comprata dal laboratorio di fronte o altrove. <break time="1.0s"/>
+
+E molti portano anche roba di plastica, fatta in Cina, <break time="0.5s"/> con scritto sopra "Lecce" e "made in Italy". <break time="1.2s"/>
+
+Non lo dico per fare il moralista. <break time="0.5s"/> Lo dico perché c'è una differenza enorme tra le due cose — <break time="0.5s"/> e non è solo di qualità. <break time="0.5s"/> È di cosa state comprando. <break time="1.0s"/>
+
+La cartapesta artigianale di un maestro leccese è fatta a mano, <break time="0.4s"/> in questo quartiere, <break time="0.4s"/> con le stesse tecniche di tre secoli fa. <break time="0.5s"/> Non è un oggetto. <break time="0.5s"/> È un pezzo di un mestiere che sta scomparendo. <break time="1.0s"/>
+
+Come si riconosce la cartapesta vera? <break time="0.8s"/>
+
+Il peso. <break time="0.5s"/> La cartapesta vera è leggera — <break time="0.5s"/> più leggera di quello che sembra. <break time="0.6s"/> La plastica cinese pesa. <break time="0.8s"/>
+
+Le imperfezioni. <break time="0.5s"/> Un oggetto fatto a mano ha sempre piccole irregolarità — <break time="0.5s"/> una pennellata non perfettamente liscia, <break time="0.4s"/> una piega nella superficie. <break time="0.5s"/> Quello fatto a macchina è identico al pezzo accanto. <break time="1.0s"/>
+
+Il retro. <break time="0.5s"/> Guardate il retro dell'oggetto. <break time="0.5s"/> La cartapesta vera ha il retro che racconta il processo — <break time="0.4s"/> le giunture, i segni dello stampo, <break time="0.4s"/> a volte la carta che si vede sotto la pittura. <break time="0.8s"/>
+
+Entrate nei laboratori aperti. <break time="0.5s"/> Non è imbarazzante guardare senza comprare. <break time="0.5s"/> Franco dice sempre: il mio laboratorio è aperto perché la gente veda come si fa. <break time="0.5s"/> Se poi comprano, meglio. <break time="0.5s"/> Se non comprano, hanno visto ugualmente. <break time="1.5s"/>
+
+
+=====================================
+CAP. 7 — IL MUSEO E LE ALTRE ARTI
+-------------
+voice: antonio
+
+La cartapesta non è l'unica cosa che Lecce fa bene. <break time="1.0s"/>
+
+Nel Castello di Carlo V — <break time="0.5s"/> quello con le torri a stella all'ingresso del centro storico — <break time="0.5s"/> c'è il Museo della Cartapesta. <break time="0.6s"/> Aperto dal 2009. <break time="0.5s"/> Dentro c'è la ricostruzione di un'antica bottega artigiana — <break time="0.5s"/> gli strumenti, i materiali, i processi. <break time="0.5s"/> E le opere dei maestri storici. <break time="0.6s"/> Vale una mezz'ora. <break time="1.0s"/>
+
+Ma fuori dal museo, <break time="0.5s"/> nel centro storico, <break time="0.5s"/> troverete anche altro. <break time="1.0s"/>
+
+I laboratori di pietra leccese — <break time="0.5s"/> scultori e restauratori che lavorano lo stesso materiale delle facciate barocche. <break time="0.6s"/> Li riconosci dal rumore dello scalpello e dalla polvere bianca sulle scarpe. <break time="1.0s"/>
+
+I ricamatori di seta — <break time="0.5s"/> una tradizione femminile del Salento, <break time="0.4s"/> sopravvissuta a stento, <break time="0.4s"/> che si fa ancora in qualche laboratorio del centro. <break time="1.0s"/>
+
+I ceramisti — <break time="0.5s"/> la ceramica non è la specialità di Lecce come lo è di Grottaglie, <break time="0.5s"/> ma nel centro storico trovate artigiani che lavorano con tecniche locali. <break time="1.0s"/>
+
+Il filo comune di tutte queste arti è la pietra. <break time="0.6s"/> La pietra leccese ha insegnato a tutti gli artigiani di questa città <break time="0.5s"/> che la materia si lavora con pazienza, <break time="0.5s"/> che i dettagli contano, <break time="0.5s"/> che quello che fai resterà dopo di te. <break time="1.2s"/>
+
+La cartapesta è fatta di carta. <break time="0.5s"/> Ma è stata formata dalla stessa cultura della pietra. <break time="1.5s"/>
+
+
+=====================================
+CAP. 8 — LA FESTA PATRONALE: QUANDO TUTTO TORNA IN STRADA
+-------------
+voice: antonio
+
+Il momento in cui tutta questa arte torna viva — <break time="0.5s"/> davvero viva, <break time="0.5s"/> non da museo — <break time="0.5s"/> è la Festa di Sant'Oronzo. <break time="1.0s"/>
+
+Il 26 agosto. <break time="0.5s"/> Ogni anno. <break time="0.8s"/>
+
+Le statue escono dalle chiese. <break time="0.5s"/> I santi di cartapesta che normalmente stanno fermi negli altari <break time="0.4s"/> vengono portati in processione per le strade. <break time="0.6s"/> In spalla. <break time="0.5s"/> Di notte. <break time="0.5s"/> Con le candele. <break time="1.0s"/>
+
+La processione del 26 agosto è una delle cose che mi fa capire perché sono rimasto a Lecce. <break time="0.8s"/>
+
+Io ho quarant'anni di storia di Lecce in faccia. <break time="0.5s"/> Ho visto questa città cambiare — <break time="0.5s"/> i locali che aprono e chiudono, <break time="0.5s"/> i prezzi che salgono, <break time="0.5s"/> i turisti che arrivano sempre più numerosi. <break time="0.8s"/> Ma la processione del 26 agosto non cambia. <break time="0.5s"/> È sempre uguale. <break time="1.0s"/>
+
+Le stesse famiglie che portano gli stessi santi da decenni. <break time="0.5s"/> Gli stessi bambini con le candele in mano. <break time="0.5s"/> Gli stessi anziani che guardano dalla finestra. <break time="1.0s"/>
+
+E le stesse statue di cartapesta — <break time="0.5s"/> alcune fatte da Mesciu Pietru de li Cristi duecento anni fa — <break time="0.4s"/> che escono di nuovo nella notte. <break time="1.2s"/>
+
+Il laboratorio di Franco quella notte è chiuso. <break time="0.5s"/> Lui è in strada. <break time="0.5s"/> Come tutti. <break time="1.5s"/>
+
+
+=====================================
+CAP. 9 — CHIUSURA: IL CAFFE' DELLE SETTE
+-------------
+voice: antonio
+
+Vi dico come finisce ogni mattina al mio bar. <break time="1.0s"/>
+
+Franco entra alle sette meno dieci. <break time="0.5s"/> Macchiato, senza zucchero. <break time="0.5s"/> Si appoggia al bancone. <break time="0.5s"/> Non parla subito. <break time="0.6s"/> Beve il caffè. <break time="1.0s"/>
+
+Poi guarda fuori dalla porta. <break time="0.5s"/> Verso il laboratorio. <break time="0.5s"/> Verso la via ancora quasi deserta. <break time="0.5s"/> Verso Lecce che si sta svegliando. <break time="1.0s"/>
+
+A volte dice una cosa. <break time="0.5s"/> A volte non dice niente. <break time="0.5s"/> Poggia il bicchierino. <break time="0.4s"/> Mi dice a dopo. <break time="0.5s"/> Attraversa la strada. <break time="0.5s"/> Apre il laboratorio. <break time="1.0s"/>
+
+Venticinque anni di questo rituale. <break time="0.8s"/>
+
+Io non so fare la cartapesta. <break time="0.5s"/> Non so niente di stucco, stampi, colla di farina. <break time="0.5s"/> So fare il caffè. <break time="0.5s"/> So stare in piedi dodici ore. <break time="0.5s"/> So sentire le conversazioni. <break time="1.0s"/>
+
+Ma ogni mattina che guardo Franco attraversare la strada <break time="0.5s"/> mi sembra di capire perché Lecce è quello che è. <break time="0.8s"/>
+
+Non è la pietra gialla. <break time="0.5s"/> Non è il barocco. <break time="0.5s"/> Non sono le chiese. <break time="0.8s"/>
+
+È la gente che si alza ogni mattina <break time="0.5s"/> e fa quello che sa fare. <break time="0.5s"/> Come lo faceva il padre. <break time="0.5s"/> Come lo faceva il nonno. <break time="0.5s"/> Non perché è obbligata. <break time="0.5s"/> Perché non sa fare altro. <break time="0.5s"/> E non vuole sapere. <break time="1.5s"/>
+
+Buona giornata a Lecce.

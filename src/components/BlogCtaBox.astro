@@ -1,0 +1,172 @@
+---
+/**
+ * BlogCtaBox — Box CTA "Ascolta la guida completa"
+ *
+ * Riusa lo stesso meccanismo checkout di PriceCard (.checkout-btn +
+ * data-product + data-guide-slug). Lo script checkout è incluso qui
+ * per essere autonomo; se PriceCard è già nella stessa pagina il
+ * listener verrà registrato due volte sugli stessi elementi — nessun
+ * problema, addEventListener è idempotente per funzioni diverse.
+ */
+import type { Lang } from '../lib/i18n';
+
+export interface Props {
+  lang: Lang;
+  guideSlug: string;
+  guideTitle: string;
+  guideProduct?: 'single' | 'bari-completa' | 'valle-completa' | 'gargano-completa' | 'tris' | 'crociera';
+  guidePriceLabel?: string;
+}
+
+const {
+  lang,
+  guideSlug,
+  guideTitle,
+  guideProduct = 'single',
+  guidePriceLabel = '€4,99',
+} = Astro.props;
+
+// Testi localizzati del box CTA
+const t = {
+  eyebrow: lang === 'it' ? 'Audioguida narrativa' : lang === 'de' ? 'Audio-Reiseführer' : 'Audio guide',
+  heading:
+    lang === 'it' ? `Ascolta la guida completa su ${guideTitle}` :
+    lang === 'de' ? `Höre den vollständigen Guide zu ${guideTitle}` :
+    `Listen to the full guide: ${guideTitle}`,
+  free:
+    lang === 'it' ? 'Trailer gratuito incluso' :
+    lang === 'de' ? 'Kostenloser Trailer inklusive' :
+    'Free trailer included',
+  body:
+    lang === 'it'
+      ? 'Narrazione originale scritta da chi conosce questi luoghi da una vita. Ascolti dove vuoi, anche offline.'
+      : lang === 'de'
+      ? 'Originale Erzählung von jemandem, der diese Orte sein Leben lang kennt. Hören Sie, wo Sie möchten — auch offline.'
+      : 'Original narration written by someone who has known these places for a lifetime. Listen anywhere, even offline.',
+  cta:
+    lang === 'it' ? `Acquista la guida · ${guidePriceLabel}` :
+    lang === 'de' ? `Guide kaufen · ${guidePriceLabel}` :
+    `Buy the guide · ${guidePriceLabel}`,
+  loading:
+    lang === 'it' ? 'Apertura pagamento…' :
+    lang === 'de' ? 'Checkout wird geöffnet…' :
+    'Opening checkout…',
+  error:
+    lang === 'it' ? 'Impossibile aprire il pagamento. Riprova tra un istante.' :
+    lang === 'de' ? 'Checkout konnte nicht geöffnet werden. Bitte versuche es gleich erneut.' :
+    'Could not open checkout. Please try again in a moment.',
+};
+---
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     Box CTA — compare dopo l'intro e in fondo all'articolo.
+     Modifica `guideSlug`, `guideTitle`, `guidePriceLabel` nel frontmatter
+     dell'articolo per collegarlo alla guida giusta.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<aside
+  class="blog-cta-box my-2xl rounded-lg border border-accent/30 bg-accent/5 p-lg flex flex-col sm:flex-row gap-lg items-start"
+  aria-label={t.heading}
+>
+  <!-- Icona cuffie -->
+  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent/15 flex items-center justify-center" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
+      <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+      <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+    </svg>
+  </div>
+
+  <div class="flex flex-col gap-sm flex-1">
+    <!-- Eyebrow + badge "gratis" -->
+    <div class="flex items-center gap-sm flex-wrap">
+      <span class="text-xs font-semibold tracking-[0.18em] uppercase text-accent">{t.eyebrow}</span>
+      <!-- La parola "gratis" deve essere ben visibile — requisito del brief -->
+      <span class="text-xs font-semibold bg-accent text-white px-sm py-[2px] rounded-full uppercase tracking-wide">
+        {lang === 'it' ? 'Trailer gratis' : lang === 'de' ? 'Gratis-Trailer' : 'Free trailer'}
+      </span>
+    </div>
+
+    <h2 class="font-display text-xl text-ink leading-snug">{t.heading}</h2>
+    <p class="text-sm text-ink-muted">{t.body}</p>
+
+    <!-- Pulsante checkout — stessa meccanica di PriceCard -->
+    <button
+      type="button"
+      class="checkout-btn blog-checkout-btn mt-xs self-start inline-flex items-center gap-xs px-lg py-sm bg-accent text-white rounded-md font-semibold text-sm hover:bg-accent/90 transition-colors duration-fast min-h-[44px]"
+      data-product={guideProduct}
+      data-guide-slug={guideProduct === 'single' ? guideSlug : ''}
+      data-lang={lang}
+    >
+      {t.cta}
+    </button>
+  </div>
+</aside>
+
+<script>
+  // Checkout script locale — rimane in sync con PriceCard.astro
+  document.querySelectorAll<HTMLButtonElement>('.blog-checkout-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const product  = btn.dataset.product;
+      const guideSlug = btn.dataset.guideSlug || undefined;
+      const lang     = btn.dataset.lang || 'it';
+      if (!product) return;
+
+      btn.disabled = true;
+      const orig = btn.textContent;
+      btn.textContent =
+        lang === 'it' ? 'Apertura pagamento…' :
+        lang === 'de' ? 'Checkout wird geöffnet…' :
+        'Opening checkout…';
+
+      const BARI_SLUGS    = ['bari-vecchia','san-nicola','tre-teatri','il-meglio-di-bari','porto-bari','bari-sotterranea'];
+      const VALLE_SLUGS   = ['alberobello','locorotondo','martina-franca','cisternino','ostuni','fasano'];
+      const GARGANO_SLUGS = ['gargano-vieste','gargano-tremiti','gargano-nord','gargano-paesi','gargano-sacro','gargano-saline'];
+      const PRODUCT_PRICE_CENTS: Record<string, number> = {
+        single: 499,
+        'bari-completa': 1999,
+        'valle-completa': 1999,
+        'gargano-completa': 1999,
+      };
+
+      const payload: Record<string, unknown> = { product, lang };
+      if (product === 'single')           { payload.guideSlug = guideSlug; payload.selectedSlugs = guideSlug ? [guideSlug] : []; }
+      else if (product === 'bari-completa')    payload.selectedSlugs = BARI_SLUGS;
+      else if (product === 'valle-completa')   payload.selectedSlugs = VALLE_SLUGS;
+      else if (product === 'gargano-completa') payload.selectedSlugs = GARGANO_SLUGS;
+
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error(`checkout ${res.status}`);
+        const data = await res.json();
+        if (!data.url) throw new Error('no url');
+        if (typeof window.localisTrack === 'function') {
+          const selectedSlugs = Array.isArray(payload.selectedSlugs) ? payload.selectedSlugs as string[] : [];
+          const params = {
+            product,
+            guide: guideSlug ?? product,
+            guide_slugs: selectedSlugs.join(','),
+            guide_count: selectedSlugs.length || (guideSlug ? 1 : 0),
+            lang,
+            value: (PRODUCT_PRICE_CENTS[product] || 0) / 100,
+            currency: 'EUR',
+            source: 'blog',
+          };
+          window.localisTrack('begin_checkout', params);
+          window.localisTrack('checkout_started', params);
+        }
+        window.location.assign(data.url);
+      } catch {
+        btn.disabled = false;
+        btn.textContent = orig;
+        alert(
+          lang === 'it' ? 'Impossibile aprire il pagamento. Riprova tra un istante.' :
+          lang === 'de' ? 'Checkout konnte nicht geöffnet werden. Bitte versuche es gleich erneut.' :
+          'Could not open checkout. Please try again in a moment.'
+        );
+      }
+    });
+  });
+</script>

@@ -7,7 +7,7 @@ export interface Props {
   guideSlug?: string;
 }
 
-const { lang, src = '/audio/trailers/hero-sample.mp3', guideSlug } = Astro.props;
+const { lang, src = '/audio/trailers/home-trailer-it.mp3', guideSlug } = Astro.props;
 const slug = guideSlug || src.split('/').pop()?.replace(/\.mp3$/i, '') || 'unknown';
 
 const label = lang === 'de'

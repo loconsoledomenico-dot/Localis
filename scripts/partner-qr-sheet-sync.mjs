@@ -12,6 +12,7 @@ const dailySheet = 'Daily';
 const generalSheet = 'Generale';
 const productsSheet = 'Prodotti';
 const totalsSheet = 'Totals';
+const todaySummarySheet = 'Oggi - chiaro';
 const startDate = process.env.GA4_START_DATE || '30daysAgo';
 const endDate = process.env.GA4_END_DATE || 'yesterday';
 
@@ -220,12 +221,12 @@ function buildDailyValues(records) {
     'Citta',
     'Tipo',
     'Persone del giorno',
-    'Visite del giorno',
+    'Sessioni attribuite del giorno',
     'Pagine viste del giorno',
     ...eventColumns.map(([, label]) => label),
     'Azioni totali del giorno',
     'Persone vs giorno prima',
-    'Visite vs giorno prima',
+    'Sessioni vs giorno prima',
     'Azioni vs giorno prima',
   ];
 
@@ -283,12 +284,12 @@ function buildGeneralValues(records) {
     'Data',
     'Partner con dati',
     'Persone del giorno',
-    'Visite del giorno',
+    'Sessioni attribuite del giorno',
     'Pagine viste del giorno',
     ...eventColumns.map(([, label]) => label),
     'Azioni totali del giorno',
     'Persone vs giorno prima',
-    'Visite vs giorno prima',
+    'Sessioni vs giorno prima',
     'Azioni vs giorno prima',
   ];
 
@@ -344,13 +345,15 @@ function buildTotalsValues(records, partners) {
   }
 
   return [[
+    'Nota: "Sessioni attribuite" include anche ritorni e visite successive entro 30 giorni se il partner resta nel cookie. "Aperture da QR" conta solo le aperture della landing partner tracciate con evento qr_landing_viewed.',
+  ], [
     'Codice partner',
     'Partner',
     'Citta',
     'Tipo',
     'Giorni con dati',
     'Persone totali',
-    'Visite totali',
+    'Sessioni attribuite totali',
     'Pagine viste totali',
     ...eventColumns.map(([, label]) => `${label} totali`),
     'Azioni totali',
@@ -372,6 +375,72 @@ function buildTotalsValues(records, partners) {
     ])];
 }
 
+function buildTodaySummaryValues(records) {
+  if (!records.length) {
+    return [[
+      'Oggi e successo questo',
+    ], [
+      'Nessun dato disponibile nel range selezionato.',
+    ]];
+  }
+
+  const latestDate = records.reduce((max, record) => (record.date > max ? record.date : max), records[0].date);
+  const activeRecords = records
+    .filter((record) => record.date === latestDate)
+    .filter((record) => {
+      const eventTotal = eventColumns.reduce((sum, [eventName]) => sum + (record.events[eventName] || 0), 0);
+      return record.activeUsers > 0 || record.sessions > 0 || record.pageViews > 0 || eventTotal > 0 || record.totalEvents > 0;
+    })
+    .sort((a, b) => b.totalEvents - a.totalEvents || b.sessions - a.sessions || a.partnerId.localeCompare(b.partnerId));
+
+  const values = [[
+    `Oggi e successo questo (${latestDate})`,
+  ]];
+
+  if (!activeRecords.length) {
+    values.push([
+      'Nessun partner ha avuto attivita nellultima giornata disponibile.',
+    ]);
+    return values;
+  }
+
+  values.push([
+    'Data',
+    'Codice partner',
+    'Partner',
+    'Citta',
+    'Tipo',
+    'Persone',
+    'Sessioni attribuite',
+    'Pagine viste',
+    'Azioni totali',
+    'Eventi di oggi',
+  ]);
+
+  for (const record of activeRecords) {
+    const eventSummary = eventColumns
+      .map(([eventName, label]) => [label, record.events[eventName] || 0])
+      .filter(([, count]) => count > 0)
+      .map(([label, count]) => `${label}: ${count}`)
+      .join(', ');
+
+    values.push([
+      record.date,
+      record.partnerId,
+      record.partnerName,
+      record.city,
+      record.type,
+      record.activeUsers,
+      record.sessions,
+      record.pageViews,
+      record.totalEvents,
+      eventSummary || 'Nessun evento tracciato, ma il partner risulta attivo.',
+    ]);
+  }
+
+  return values;
+}
+
 async function loadSpreadsheetId(sheets) {
   if (process.env.PARTNER_QR_SPREADSHEET_ID) return process.env.PARTNER_QR_SPREADSHEET_ID;
   try {
@@ -387,6 +456,7 @@ async function loadSpreadsheetId(sheets) {
         { properties: { title: generalSheet } },
         { properties: { title: productsSheet } },
         { properties: { title: totalsSheet } },
+        { properties: { title: todaySummarySheet } },
       ],
     },
   });
@@ -403,7 +473,7 @@ async function ensureSheets(sheets, spreadsheetId) {
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const existing = new Map(spreadsheet.data.sheets.map((sheet) => [sheet.properties.title, sheet.properties.sheetId]));
   const requests = [];
-  for (const title of [dailySheet, generalSheet, productsSheet, totalsSheet]) {
+  for (const title of [dailySheet, generalSheet, productsSheet, totalsSheet, todaySummarySheet]) {
     if (!existing.has(title)) requests.push({ addSheet: { properties: { title } } });
   }
   if (requests.length) await sheets.spreadsheets.batchUpdate({ spreadsheetId, requestBody: { requests } });
@@ -421,25 +491,31 @@ async function writeSheet(sheets, spreadsheetId, sheetName, values) {
   });
 }
 
-async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, generalColumnCount, productsColumnCount, totalsColumnCount) {
+async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, generalColumnCount, productsColumnCount, totalsColumnCount, todaySummaryColumnCount) {
   const dailyId = sheetIds.get(dailySheet);
   const generalId = sheetIds.get(generalSheet);
   const productsId = sheetIds.get(productsSheet);
   const totalsId = sheetIds.get(totalsSheet);
+  const todaySummaryId = sheetIds.get(todaySummarySheet);
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const requests = [
     { repeatCell: { range: { sheetId: dailyId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: generalId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: productsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
-    { repeatCell: { range: { sheetId: totalsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: totalsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 11 }, backgroundColor: { red: 0.99, green: 0.95, blue: 0.8 }, verticalAlignment: 'MIDDLE', wrapStrategy: 'WRAP' } }, fields: 'userEnteredFormat(textFormat,backgroundColor,verticalAlignment,wrapStrategy)' } },
+    { repeatCell: { range: { sheetId: totalsId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: todaySummaryId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 12 }, backgroundColor: { red: 0.99, green: 0.95, blue: 0.8 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: todaySummaryId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { updateSheetProperties: { properties: { sheetId: dailyId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: generalId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: productsId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
-    { updateSheetProperties: { properties: { sheetId: totalsId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
+    { updateSheetProperties: { properties: { sheetId: totalsId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
+    { updateSheetProperties: { properties: { sheetId: todaySummaryId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
     { autoResizeDimensions: { dimensions: { sheetId: dailyId, dimension: 'COLUMNS', startIndex: 0, endIndex: dailyColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: generalId, dimension: 'COLUMNS', startIndex: 0, endIndex: generalColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: productsId, dimension: 'COLUMNS', startIndex: 0, endIndex: productsColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: totalsId, dimension: 'COLUMNS', startIndex: 0, endIndex: totalsColumnCount } } },
+    { autoResizeDimensions: { dimensions: { sheetId: todaySummaryId, dimension: 'COLUMNS', startIndex: 0, endIndex: todaySummaryColumnCount } } },
   ];
 
   for (const sheet of spreadsheet.data.sheets || []) {
@@ -496,6 +572,7 @@ async function main() {
   const generalValues = buildGeneralValues(records);
   const productValues = await collectProductRows(auth, partners);
   const totalsValues = buildTotalsValues(records, partners);
+  const todaySummaryValues = buildTodaySummaryValues(records);
   const spreadsheetId = await loadSpreadsheetId(sheets);
   const sheetIds = await ensureSheets(sheets, spreadsheetId);
 
@@ -503,7 +580,8 @@ async function main() {
   await writeSheet(sheets, spreadsheetId, generalSheet, generalValues);
   await writeSheet(sheets, spreadsheetId, productsSheet, productValues);
   await writeSheet(sheets, spreadsheetId, totalsSheet, totalsValues);
-  await formatSheets(sheets, spreadsheetId, sheetIds, dailyValues[0].length, generalValues[0].length, productValues[0].length, totalsValues[0].length);
+  await writeSheet(sheets, spreadsheetId, todaySummarySheet, todaySummaryValues);
+  await formatSheets(sheets, spreadsheetId, sheetIds, dailyValues[0].length, generalValues[0].length, productValues[0].length, totalsValues[0].length, Math.max(...todaySummaryValues.map((row) => row.length)));
 
   const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}`;
   await fs.writeFile(statePath, JSON.stringify({

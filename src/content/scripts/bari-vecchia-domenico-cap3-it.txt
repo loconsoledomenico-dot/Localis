@@ -1,0 +1,102 @@
+Ora fermati nei pressi della Basilica di San Nicola.
+<break time="0.8s"/>
+
+Guardala senza entrare subito.
+<break time="1s"/>
+
+La sua pietra chiara, la sua severità, la sua forza non sono soltanto espressione di uno stile architettonico.
+<break time="0.8s"/>
+
+Questa basilica nasce da un'ambizione enorme.
+<break time="0.8s"/>
+
+<prosody rate="88%">Custodire un santo capace di cambiare il destino di una città.</prosody>
+<break time="1.5s"/>
+
+Prima dell'arrivo delle reliquie di San Nicola, Bari era già importante.
+<break time="0.5s"/>
+
+Era stata una grande città bizantina, collegata all'Oriente, sede del potere imperiale nell'Italia meridionale. Qui circolavano mercanti, funzionari, soldati, monaci, denaro, lingue e riti diversi.
+<break time="1s"/>
+
+In questa zona sorgeva il complesso del Catapano, il rappresentante dell'impero bizantino. Immagina una città in cui l'Oriente non era una parola esotica, ma una presenza quotidiana: nei commerci, nelle chiese, nelle immagini sacre, nei riti, perfino nel modo di guardare il mare.
+<break time="1.2s"/>
+
+Poi, nel 1087, accadde qualcosa che avrebbe cambiato tutto.
+<break time="1s"/>
+
+Sessantadue marinai baresi partirono verso Myra, nell'attuale Turchia, e tornarono portando con sé le reliquie di San Nicola.
+<break time="1s"/>
+
+I dettagli di quel viaggio li racconteremo nella guida dedicata alla Basilica.
+<break time="0.5s"/>
+
+Qui mi interessa farti capire cosa significò per Bari.
+<break time="1.2s"/>
+
+<prosody pitch="+2%">Fino a quel momento, questa città era soprattutto un luogo da cui si <emphasis level="moderate">passava</emphasis>.</prosody>
+<break time="0.8s"/>
+
+<prosody rate="85%" pitch="+4%">Dopo San Nicola, divenne un luogo verso cui si <emphasis level="strong">veniva</emphasis>.</prosody>
+<break time="2s"/>
+
+Pellegrini da terre lontane iniziarono ad arrivare qui per pregare sulla tomba del santo.
+<break time="0.8s"/>
+
+E quando arrivano i pellegrini, cambia l'intera città.
+<break time="1s"/>
+
+<prosody rate="90%">Servono ospitalità, cibo, mercati, percorsi, protezione, chiese, ospedali, luoghi in cui fermarsi.
+<break time="0.8s"/>
+Cambiano i traffici,
+<break time="0.4s"/>
+cambiano le fiere,
+<break time="0.4s"/>
+cambia il prestigio,
+<break time="0.4s"/>
+cambia perfino l'immagine che una città ha di sé.</prosody>
+<break time="1.2s"/>
+
+Bari non era più soltanto la città protesa verso Oriente.
+<break time="0.5s"/>
+
+<prosody pitch="+3%">Era diventata il luogo in cui l'Oriente era venuto a <emphasis level="strong">vivere</emphasis>.</prosody>
+<break time="1.5s"/>
+
+E ancora oggi questo lo senti.
+<break time="0.8s"/>
+
+Nella cripta della Basilica pregano cattolici e ortodossi.
+<break time="0.5s"/>
+
+Persone che appartengono a tradizioni diverse arrivano davanti allo stesso santo.
+<break time="0.8s"/>
+
+Non è una costruzione moderna fatta per i turisti.
+<break time="0.5s"/>
+
+È la continuazione di una storia antica: Bari è sempre stata una città posta tra mondi differenti.
+<break time="1.5s"/>
+
+Quando io guardo San Nicola, da barese, non vedo soltanto il patrono della città.
+<break time="0.8s"/>
+
+Vedo il motivo per cui Bari ha imparato a essere conosciuta molto oltre i suoi confini.
+<break time="0.5s"/>
+
+Vedo il punto in cui la città, invece di guardare soltanto il mare aspettando chi arrivava, è diventata essa stessa una destinazione.
+<break time="1.5s"/>
+
+Ora lascia la Basilica alle tue spalle e dirigiti verso la muraglia.
+<break time="0.5s"/>
+
+Tra poco vedrai il mare.
+<break time="0.8s"/>
+
+Ed è importante farlo da lì.
+<break time="0.8s"/>
+
+Perché Bari Vecchia non è una città che si è avvicinata al mare.
+<break time="0.5s"/>
+
+<prosody rate="85%">È una città che per secoli ci è stata <emphasis level="moderate">appoggiata sopra</emphasis>.</prosody>

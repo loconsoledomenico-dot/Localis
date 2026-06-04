@@ -1,0 +1,141 @@
+LOCALIS — NARDÒ E LA COSTA IONICA
+Guida narrativa — versione IT
+Voce: Gianluca, 57 anni, veterinario di campagna
+Modello: eleven_multilingual_v2
+=====================================
+
+
+=====================================
+CAP. 1 — INTRO: IL VETERINARIO CHE GIRA I MASSERI
+-------------
+voice: luca
+
+Faccio il veterinario di campagna da venticinque anni. <break time="0.8s"/>
+
+Non il veterinario dei gatti in città. <break time="0.5s"/> Quello dei cavalli, delle capre, dei maiali, delle mucche. <break time="0.6s"/> Quello che ti chiama alle tre di notte perché un asino non sta bene. <break time="1.0s"/>
+
+Mi chiamo Gianluca. <break time="0.6s"/> Cinquantasette anni. <break time="0.5s"/> Ogni mattina parto da Nardò <break time="0.5s"/> e giro i masseri dell'entroterra salentino. <break time="0.5s"/> Masserie, ovili, allevamenti. <break time="0.6s"/> Torno nel tardo pomeriggio. <break time="0.5s"/> A volte la sera. <break time="0.5s"/> A volte la notte. <break time="1.0s"/>
+
+Ho percorso ogni strada, ogni tratturo, ogni carrareccia <break time="0.5s"/> tra Nardò, Galatone, Galatina, Seclì, Aradeo. <break time="0.5s"/> Conosco la campagna del Salento meglio di chiunque altro. <break time="1.0s"/>
+
+Ma quello che vi racconto oggi non è la campagna. <break time="0.5s"/> È quello che trovo ai due lati della mia giornata — <break time="0.5s"/> la mattina quando parto, la città. <break time="0.4s"/> Il pomeriggio quando torno, il mare. <break time="1.0s"/>
+
+Nardò e la costa ionica. <break time="0.5s"/> Due cose che sembrano distanti. <break time="0.5s"/> Che sono a dieci minuti di macchina. <break time="1.5s"/>
+
+
+=====================================
+CAP. 2 — NARDÒ: LA SECONDA LECCE
+-------------
+voice: luca
+
+Nardò ha duemilasettecento anni. <break time="0.8s"/> I Messapi erano qui già nel settimo, ottavo secolo avanti Cristo. <break time="0.5s"/> Poi i Romani. <break time="0.4s"/> Poi i Bizantini. <break time="0.4s"/> Poi i Normanni. <break time="0.4s"/> Poi gli Aragonesi. <break time="1.0s"/>
+
+La storia di Nardò assomiglia a quella di tutto il Salento. <break time="0.6s"/> Strati sopra strati sopra strati. <break time="1.0s"/>
+
+Ma c'è una cosa che distingue Nardò da altri paesi. <break time="0.8s"/>
+
+La piazza. <break time="0.8s"/>
+
+Piazza Salandra è il centro storico barocco di Nardò — <break time="0.5s"/> archi, balconi, logge, portali scolpiti. <break time="0.5s"/> Trenta chiese sparpagliate nel territorio comunale. <break time="0.5s"/> Un centro storico compatto, ben conservato, <break time="0.5s"/> con quasi nessun turista rispetto a Lecce. <break time="1.0s"/>
+
+Perché quasi nessun turista? <break time="0.8s"/>
+
+Perché il mare è a dieci minuti. <break time="0.5s"/> Chi viene nel Salento, se deve scegliere tra visitare un centro storico barocco <break time="0.5s"/> e andare alla spiaggia di Santa Maria al Bagno, <break time="0.5s"/> spesso sceglie la spiaggia. <break time="1.0s"/>
+
+Non è una colpa. <break time="0.5s"/> È la logica del caldo. <break time="0.5s"/> Ma vuol dire che Nardò si gira quasi in solitudine. <break time="0.5s"/> E questo, per me, è un vantaggio. <break time="1.5s"/>
+
+
+=====================================
+CAP. 3 — IL MIRACOLO DEL CROCIFISSO
+-------------
+voice: luca
+
+C'è una storia del 1255 che racconto ogni volta che porto qualcuno in piazza. <break time="1.0s"/>
+
+Arrivarono i Saraceni. <break time="0.6s"/> Attaccarono la città. <break time="0.5s"/> Decisero di compiere un atto simbolico per terrorizzare i cristiani: <break time="0.5s"/> bruciare il crocifisso della chiesa principale in piazza. <break time="1.0s"/>
+
+Mentre lo portavano fuori dalla chiesa, <break time="0.5s"/> il crocifisso urtò lo stipite della porta. <break time="0.5s"/> Un dito si staccò. <break time="0.5s"/> Sgorgò sangue. <break time="1.2s"/>
+
+I Saraceni si terrorizzarono. <break time="0.5s"/> Abbandonarono l'impresa. <break time="0.5s"/> Se ne andarono. <break time="1.0s"/>
+
+Il crocifisso è ancora nella chiesa. <break time="0.6s"/> Il dito è ancora al suo posto — <break time="0.5s"/> riattaccato dopo i fatti, <break time="0.5s"/> si vede il segno della rottura. <break time="1.0s"/>
+
+Io non so cosa credere di questa storia. <break time="0.5s"/> La razionalità del veterinario mi dice che il sangue non si può spiegare così. <break time="0.8s"/> Ma la parte di me che gira la campagna del Salento da venticinque anni — <break time="0.5s"/> che ha visto cose che non si spiegano con la veterinaria — <break time="0.5s"/> quella parte non si pronuncia. <break time="1.5s"/>
+
+
+=====================================
+CAP. 4 — LE QUATTRO COLONNE
+-------------
+voice: luca
+
+Una delle cose che faccio ogni tanto, <break time="0.5s"/> quando finisco il giro dei masseri un po' prima, <break time="0.5s"/> è scendere a Santa Maria al Bagno. <break time="1.0s"/>
+
+È una delle marine di Nardò — <break time="0.5s"/> una baia piccola, <break time="0.4s"/> con acqua calma, <break time="0.4s"/> sassi bianchi sul fondo. <break time="0.6s"/> Ci vado da solo, in settembre, quando la stagione è finita. <break time="1.0s"/>
+
+Lì, sul lungomare, ci sono le Quattro Colonne. <break time="0.6s"/>
+
+Quattro colonne secentesche, <break time="0.5s"/> disposte simmetricamente a qualche metro dalla riva. <break time="0.5s"/> Identiche. <break time="0.5s"/> In pietra leccese. <break time="1.0s"/>
+
+Sono quello che resta di una struttura difensiva costruita nel XVII secolo <break time="0.5s"/> per avvistare le navi dei pirati saraceni. <break time="0.5s"/> Quattro torri di avvistamento, probabilmente collegate da mura. <break time="0.5s"/> Il mare ha mangiato il resto. <break time="0.5s"/> Le colonne sono rimaste. <break time="1.0s"/>
+
+La prima volta che le vidi, stavo tornando da una fattoria. <break time="0.5s"/> Era un martedì di ottobre, tramonto. <break time="0.5s"/> Mi fermai senza motivo preciso. <break time="0.5s"/> Scesi dalla macchina. <break time="0.5s"/> Le guardai contro il cielo rosso. <break time="1.0s"/>
+
+Rimasi lì venti minuti. <break time="0.5s"/> Non so perché. <break time="0.5s"/> Certe cose chiedono solo di essere guardate. <break time="1.5s"/>
+
+
+=====================================
+CAP. 5 — PORTO SELVAGGIO
+-------------
+voice: luca
+
+La riserva naturale di Porto Selvaggio. <break time="1.0s"/>
+
+È il motivo per cui resto a Nardò. <break time="1.2s"/>
+
+Non scherzo. <break time="0.5s"/> Quando ero giovane avevo l'opportunità di trasferirmi. <break time="0.5s"/> Un'offerta di lavoro a Bari. <break time="0.5s"/> Buona. <break time="0.5s"/> Ma significava non avere più Porto Selvaggio a dieci minuti di casa. <break time="1.0s"/>
+
+Porto Selvaggio è una baia nella riserva naturale — <break time="0.5s"/> pineta fino alla riva, <break time="0.4s"/> nessuna struttura balneare, <break time="0.4s"/> nessun ombrellone, <break time="0.4s"/> nessun bar. <break time="0.5s"/> Solo le rocce, la pineta e l'acqua. <break time="1.0s"/>
+
+L'acqua nello Ionio qui è verde e trasparente. <break time="0.5s"/> Fondale di posidonia. <break time="0.5s"/> Ricci. <break time="0.4s"/> Polpi. <break time="0.4s"/> Qualche cernia sotto le rocce. <break time="1.0s"/>
+
+Ci vado la mattina presto d'estate, <break time="0.5s"/> prima del giro delle fattorie. <break time="0.5s"/> Mezz'ora di nuoto. <break time="0.5s"/> Poi si parte. <break time="0.8s"/>
+
+Nessuno. <break time="0.5s"/> Solo io e il mare. <break time="0.5s"/> E qualche granchio sulle rocce. <break time="1.5s"/>
+
+
+=====================================
+CAP. 6 — LA COSTA: DA SANTA MARIA AL BAGNO A SANT'ISIDORO
+-------------
+voice: luca
+
+La costa ionica di Nardò è ventidue chilometri. <break time="0.8s"/>
+
+Non ventidue chilometri di spiaggia bianca continua come in Salento adriatico. <break time="0.5s"/> Ventidue chilometri di alternanza — <break time="0.5s"/> baia di sabbia, <break time="0.4s"/> scogliera di roccia, <break time="0.4s"/> baia di sabbia ancora. <break time="0.8s"/>
+
+Santa Maria al Bagno: <break time="0.5s"/> acqua bassa e calda, <break time="0.4s"/> fondale sabbioso, <break time="0.4s"/> famiglie con bambini. <break time="1.0s"/>
+
+Santa Caterina: <break time="0.5s"/> il porto dei pescatori, <break time="0.4s"/> i ristoranti sul mare, <break time="0.4s"/> la frisella con il polpo. <break time="1.0s"/>
+
+Sant'Isidoro: <break time="0.5s"/> la baia più piccola, <break time="0.4s"/> la meno affollata, <break time="0.4s"/> le acque più limpide. <break time="0.5s"/> Poco pubblicizzata. <break time="0.5s"/> La preferisco. <break time="1.2s"/>
+
+Il veterinario che gira le fattorie di giorno <break time="0.5s"/> la sera vuole il silenzio. <break time="0.5s"/> Sant'Isidoro ha il silenzio. <break time="1.5s"/>
+
+
+=====================================
+CAP. 7 — CHIUSURA: IL SALENTO CHE NON CERCA ATTENZIONE
+-------------
+voice: luca
+
+Vi dico cosa penso di Nardò. <break time="1.0s"/>
+
+È il posto più onesto del Salento. <break time="1.2s"/>
+
+Non si è vestita per i turisti. <break time="0.5s"/> Non ha fatto il lifting al centro storico per sembrare più bella. <break time="0.5s"/> Non ha trasformato ogni palazzo in un B&B. <break time="1.0s"/>
+
+Ci vive gente vera. <break time="0.5s"/> Ci sono i negozi del quotidiano — <break time="0.4s"/> il ferramenta, il macellaio, la farmacia con le persone anziane in fila. <break time="0.5s"/> Ci sono le scuole, gli uffici, il traffico delle otto di mattina. <break time="0.8s"/>
+
+E a dieci minuti c'è uno dei mari più belli d'Italia. <break time="0.5s"/> E a dieci minuti c'è la campagna con gli oliveti centenari. <break time="0.5s"/> E nel centro storico c'è il barocco salentino che nessuno fotografa perché non sa che c'è. <break time="1.0s"/>
+
+Il Salento che non cerca attenzione. <break time="0.5s"/> Che non fa niente per piacere. <break time="0.5s"/> E che quindi piace davvero. <break time="1.5s"/>
+
+Venite a Nardò. <break time="0.5s"/> Non ci troverete la folla. <break time="0.5s"/> È questo il punto.

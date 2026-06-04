@@ -1,0 +1,221 @@
+Adesso cammina senza fretta.
+<break time="1s"/>
+
+Se vedi una porta aperta, non fissarla con invadenza, ma prova a percepire quanto qui il confine tra casa e strada sia sempre stato sottile.
+<break time="1.2s"/>
+
+In molte città il centro storico è diventato una scenografia.
+<break time="0.5s"/>
+
+Bello da vedere, ma separato dalla vita vera.
+<break time="1s"/>
+
+Bari Vecchia, nonostante tutti i cambiamenti, conserva ancora qualcosa di diverso.
+<break time="1s"/>
+
+Qui la vita ogni tanto esce fuori.
+<break time="1.2s"/>
+
+<prosody rate="88%">Una sedia davanti alla porta,
+<break time="0.4s"/>
+una voce che chiama qualcuno,
+<break time="0.4s"/>
+un panno steso,
+<break time="0.4s"/>
+un profumo di cucina,
+<break time="0.4s"/>
+una conversazione sentita passando,
+<break time="0.4s"/>
+un bambino che corre,
+<break time="0.4s"/>
+una signora che osserva.</prosody>
+<break time="1.2s"/>
+
+E ti rendi conto che la città antica non è soltanto quella che trovi nei libri.
+<break time="0.5s"/>
+
+È anche quella che continua ad abitare questi spazi.
+<break time="1.5s"/>
+
+Quando ero ragazzo, crescendo al Libertà, Bari Vecchia non aveva l'immagine ripulita e visitata che ha in parte oggi.
+<break time="0.8s"/>
+
+Era vicina, ma apparteneva a un mondo diverso da quello delle passeggiate turistiche.
+<break time="0.5s"/>
+
+Era un luogo di cui si conosceva la forza, ma anche le difficoltà.
+<break time="1.2s"/>
+
+Poi la città è cambiata.
+<break time="0.5s"/>
+
+Sono arrivati più visitatori,
+<break time="0.4s"/>
+
+sono arrivati locali, percorsi, fotografie, nuove attenzioni.
+<break time="0.8s"/>
+
+Ed è giusto che Bari venga vista.
+<break time="0.8s"/>
+
+Ma il rischio è che venga vista soltanto in superficie.
+<break time="0.5s"/>
+
+Che una persona torni a casa ricordando le orecchiette preparate in strada, la Basilica, i tavolini e una fotografia tra i vicoli, senza aver capito davvero la città che ha attraversato.
+<break time="1.2s"/>
+
+Per questo abbiamo creato Localis.
+<break time="0.5s"/>
+
+Non per togliere bellezza alla visita.
+<break time="0.5s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">Per aggiungerle profondità.</emphasis></prosody>
+<break time="2s"/>
+
+E una delle cose più profonde che Bari conserva è il suo dialetto.
+<break time="0.8s"/>
+
+Non serve capirlo tutto per intuire quanto racconti della città.
+<break time="0.8s"/>
+
+Dentro le parole baresi sono passati secoli di incontri e dominazioni.
+<break time="1s"/>
+
+<prosody rate="88%">Il greco,
+<break time="0.4s"/>
+il latino,
+<break time="0.4s"/>
+il mondo bizantino,
+<break time="0.4s"/>
+le presenze arabe,
+<break time="0.4s"/>
+i Normanni,
+<break time="0.4s"/>
+gli Spagnoli,
+<break time="0.4s"/>
+i commerci del porto,
+<break time="0.4s"/>
+le voci portate da uomini che arrivavano dal mare e da uomini che da Bari partivano.</prosody>
+<break time="1.2s"/>
+
+Una città non conserva la propria storia soltanto nei muri.
+<break time="0.5s"/>
+
+La conserva anche in come parla.
+<break time="1s"/>
+
+<prosody rate="88%">In una parola deformata dal tempo,
+<break time="0.4s"/>
+in un'espressione che si continua a usare senza sapere da dove venga,
+<break time="0.4s"/>
+in un modo di scherzare,
+<break time="0.4s"/>
+in un insulto,
+<break time="0.4s"/>
+in una frase legata a San Nicola,
+<break time="0.4s"/>
+in una memoria del mare, del mercato, della paura o della fame.</prosody>
+<break time="1.5s"/>
+
+Pensa al leone che hai appena visto in Piazza Mercantile.
+<break time="0.5s"/>
+
+La sua funzione è scomparsa.
+<break time="0.5s"/>
+
+Ma una frase dialettale ha continuato a portarne il ricordo.
+<break time="1s"/>
+
+Pensa a San Nicola.
+<break time="0.5s"/>
+
+La sua Basilica non è soltanto un edificio: il santo entra nei modi di dire, nella festa, nelle case, nel modo in cui Bari parla di se stessa.
+<break time="1s"/>
+
+Pensa al mare.
+<break time="0.5s"/>
+
+Per secoli ha portato pericoli e ricchezze, e ancora oggi il barese vive con quella sensazione particolare di avere davanti una via aperta verso altrove.
+<break time="2s"/>
+
+<prosody rate="85%">Forse, a questo punto, Bari Vecchia comincia ad apparirti diversa.</prosody>
+<break time="1s"/>
+
+Non più soltanto come un intreccio di vicoli belli da fotografare.
+<break time="0.5s"/>
+
+<prosody rate="88%">Ma come una città intera compressa in uno spazio piccolo.</prosody>
+<break time="1.2s"/>
+
+<prosody rate="85%">Una città che si difendeva con le mura,
+<break time="0.4s"/>
+che diffidava del suo castello,
+<break time="0.4s"/>
+che si dissetava con la pioggia,
+<break time="0.4s"/>
+che pregava in decine di chiese,
+<break time="0.4s"/>
+che guardava verso Costantinopoli,
+<break time="0.4s"/>
+che con San Nicola diventò meta del mondo cristiano,
+<break time="0.4s"/>
+che commerciava in piazza,
+<break time="0.4s"/>
+che esponeva i debitori al leone,
+<break time="0.4s"/>
+che continua a conservare la propria storia nelle parole, nelle porte e nei gesti quotidiani.</prosody>
+<break time="2s"/>
+
+Quando uscirai da questi vicoli, davanti a te tornerà la Bari moderna.
+<break time="0.5s"/>
+
+<prosody rate="88%">Le strade larghe,
+<break time="0.4s"/>
+i negozi,
+<break time="0.4s"/>
+il traffico,
+<break time="0.4s"/>
+le piazze aperte.</prosody>
+<break time="0.5s"/>
+
+La città che nei secoli ha superato le mura ed è cresciuta verso l'interno, fino ai quartieri in cui siamo cresciuti anche noi.
+<break time="1.2s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Ma tutto è cominciato qui.</emphasis></prosody>
+<break time="1s"/>
+
+In questa penisola stretta tra il castello e il mare,
+<break time="0.5s"/>
+
+tra San Sabino e San Nicola,
+<break time="0.5s"/>
+
+tra l'acqua salata che circondava la città e l'acqua piovana che permetteva alla gente di viverci,
+<break time="0.5s"/>
+
+tra la paura di chi arrivava dal mare e il bisogno di accoglierlo.
+<break time="2.5s"/>
+
+<prosody rate="85%">Io sono Domenico.</prosody>
+<break time="1s"/>
+
+Sono cresciuto poco distante da qui, al quartiere Libertà.
+<break time="1s"/>
+
+E oggi, raccontandoti Bari Vecchia, non volevo semplicemente indicarti cosa vedere.
+<break time="1s"/>
+
+Volevo che, uscendo da questi vicoli, tu potessi portarti dietro una cosa semplice.
+<break time="1.5s"/>
+
+Oggi la chiamiamo Bari Vecchia.
+<break time="0.8s"/>
+
+Ma questa non era la parte antica di Bari.
+<break time="0.8s"/>
+
+<prosody rate="82%" pitch="+5%"><emphasis level="strong">Questa era Bari.</emphasis></prosody>
+<break time="1s"/>
+
+<prosody rate="85%">Tutto il resto sarebbe venuto dopo.</prosody>

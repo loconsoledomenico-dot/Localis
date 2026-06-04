@@ -1,0 +1,139 @@
+Ora fermati in Piazza Mercantile.
+<break time="0.8s"/>
+
+Guarda la piazza così com'è oggi.
+<break time="1s"/>
+
+<prosody rate="90%">Tavolini,
+<break time="0.4s"/>
+persone che passeggiano,
+<break time="0.4s"/>
+qualcuno che prende un caffè,
+<break time="0.4s"/>
+qualcuno che si siede e osserva.</prosody>
+<break time="1s"/>
+
+È uno dei luoghi più piacevoli di Bari Vecchia.
+<break time="1s"/>
+
+Ma se potessimo tornare indietro nei secoli, la vedremmo con altri occhi.
+<break time="1s"/>
+
+Questa piazza era il cuore <emphasis level="moderate">pratico</emphasis> della città.
+<break time="0.8s"/>
+
+Qui si commerciava,
+<break time="0.4s"/>
+
+qui si incontravano mercanti, artigiani, cittadini, forestieri,
+<break time="0.4s"/>
+
+qui passavano il denaro, le merci, le notizie e i problemi quotidiani.
+<break time="1s"/>
+
+Il nome "Mercantile" dice esattamente questo: Bari non era soltanto una città di santi e pellegrini.
+<break time="0.8s"/>
+
+<prosody rate="88%">Era una città che lavorava,
+<break time="0.4s"/>
+che comprava,
+<break time="0.4s"/>
+che vendeva,
+<break time="0.4s"/>
+che litigava,
+<break time="0.4s"/>
+che pretendeva il pagamento dei debiti.</prosody>
+<break time="1.5s"/>
+
+Ora cerca la colonna con il leone di pietra.
+<break time="0.8s"/>
+
+Oggi molte persone la fotografano senza sapere davvero cosa rappresenti.
+<break time="1s"/>
+
+Il leone non era lì soltanto per decorare la piazza.
+<break time="0.8s"/>
+
+A quella colonna venivano esposti pubblicamente coloro che non erano riusciti a pagare i propri debiti.
+<break time="1s"/>
+
+La pena non era soltanto economica.
+<break time="0.5s"/>
+
+<emphasis level="moderate">Era la vergogna.</emphasis>
+<break time="1.2s"/>
+
+<prosody rate="88%">Essere mostrati davanti alla città,
+<break time="0.4s"/>
+essere riconosciuti dai vicini,
+<break time="0.4s"/>
+vedere trasformato un fallimento privato in uno spettacolo pubblico.</prosody>
+<break time="1.2s"/>
+
+Nel dialetto barese è rimasta una memoria molto cruda di quella pratica: l'espressione che richiamava chi veniva mandato a mostrare il sedere al leone.
+<break time="0.8s"/>
+
+Può sembrare una battuta popolare.
+<break time="0.5s"/>
+
+In realtà è un frammento di storia sopravvissuto nella lingua, molto dopo che il motivo originario era quasi dimenticato.
+<break time="1.5s"/>
+
+Questa piazza racconta bene il carattere di Bari.
+<break time="0.8s"/>
+
+Una città devota, certamente.
+<break time="0.5s"/>
+
+Ma anche concreta,
+<break time="0.4s"/>
+
+pratica,
+<break time="0.4s"/>
+
+abituata al commercio.
+<break time="0.8s"/>
+
+Capace di accogliere pellegrini da tutto il mondo davanti alla tomba di San Nicola, e pochi metri più in là di esporre al giudizio pubblico chi non aveva rispettato un debito.
+<break time="1s"/>
+
+<prosody pitch="+3%">La città antica non era una cartolina pacificata.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Era viva.</emphasis></prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+2%">E proprio perché era viva, era anche dura.</prosody>
+<break time="1.5s"/>
+
+C'è un'altra cosa che mi piace pensare quando passo di qui.
+<break time="0.8s"/>
+
+Le piazze cambiano funzione, ma raramente smettono di essere il luogo in cui la città si riconosce.
+<break time="1s"/>
+
+Allora qui si veniva per vendere, comprare, giudicare, ascoltare notizie.
+<break time="0.5s"/>
+
+Oggi ci si viene per incontrarsi, mangiare, bere qualcosa, attraversare la serata.
+<break time="0.8s"/>
+
+Sono cambiate le abitudini.
+<break time="0.5s"/>
+
+Ma la piazza continua a fare lo stesso lavoro: tenere le persone vicine.
+<break time="1.5s"/>
+
+Adesso, prima della parte finale, entra di nuovo nei vicoli.
+<break time="0.5s"/>
+
+Non cercare una direzione perfetta.
+<break time="0.5s"/>
+
+Lasciati accompagnare dalle strade.
+<break time="1s"/>
+
+L'ultima cosa che voglio farti ascoltare non è un monumento.
+<break time="0.5s"/>
+
+<prosody rate="85%">È la voce della città.</prosody>

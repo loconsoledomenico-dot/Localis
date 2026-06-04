@@ -1,0 +1,197 @@
+LOCALIS — LECCE: LA LECCE VIVA
+Guida narrativa — versione IT
+Voce: Enzo, 48 anni, portinaio universitario
+Modello: eleven_multilingual_v2
+=====================================
+
+
+=====================================
+CAP. 1 — INTRO: IL PORTINAIO CHE HA VISTO TUTTO
+-------------
+voice: luca
+
+Mi chiamo Enzo. <break time="0.8s"/> Ho quarantotto anni. <break time="0.6s"/> Faccio il portinaio alla Facoltà di Lettere da vent'anni. <break time="1.0s"/>
+
+Portinaio universitario — <break time="0.5s"/> nella realtà significa: arrivo alle sette, <break time="0.4s"/> apro il portone, <break time="0.4s"/> firmo le entrate, <break time="0.4s"/> rispondo a mille domande, <break time="0.4s"/> chiudo alle venti. <break time="0.8s"/> In mezzo, guardo passare il mondo. <break time="1.2s"/>
+
+Nella mia facoltà ci sono tremila studenti. <break time="0.6s"/> L'Università del Salento ne ha ventisettamila. <break time="0.5s"/> Sono il secondo ateneo di Puglia. <break time="0.5s"/> E la maggior parte di questi ventisettamila <break time="0.4s"/> non sono di Lecce. <break time="0.6s"/> Vengono dal resto della Puglia, <break time="0.4s"/> dalla Calabria, <break time="0.4s"/> dalla Basilicata. <break time="0.4s"/> Qualcuno dalla Campania. <break time="0.5s"/> Arrivano a Lecce a diciotto anni, <break time="0.4s"/> affittano una stanza, <break time="0.4s"/> cominciano a vivere qui. <break time="1.0s"/>
+
+E io li vedo. <break time="0.5s"/> Tutti. <break time="0.5s"/> Dal primo giorno. <break time="1.2s"/>
+
+Li vedo arrivare a settembre con i genitori e le valigie grosse. <break time="0.5s"/> Li vedo a gennaio durante gli esami — <break time="0.5s"/> il colore della faccia dice già come è andata. <break time="0.8s"/> Li vedo laureati, in estate, con la fascia e i fiori, <break time="0.5s"/> che fotografano il cortile della facoltà. <break time="0.5s"/> Li vedo tornare anni dopo, <break time="0.4s"/> con i figli piccoli, <break time="0.4s"/> a mostrare dov'era la loro aula. <break time="1.2s"/>
+
+Io sono il confine tra la Lecce antica e la Lecce viva. <break time="0.5s"/> Il portone che apro ogni mattina <break time="0.4s"/> separa una città barocca del Seicento <break time="0.4s"/> da una città universitaria del Ventunesimo secolo. <break time="1.5s"/>
+
+Vi racconto quella viva. <break time="1.5s"/>
+
+
+=====================================
+CAP. 2 — L'UNIVERSITÀ NEL BAROCCO: COME FUNZIONA
+-------------
+voice: luca
+
+L'Università del Salento è nata nel 1955. <break time="0.8s"/> Il primo giorno di lezioni fu il 22 novembre 1955. <break time="0.5s"/> Settantasette studenti iscritti. <break time="1.0s"/>
+
+Adesso ne ha ventisettamila. <break time="0.6s"/> In settant'anni. <break time="1.0s"/>
+
+La cosa strana di questa università — <break time="0.5s"/> e lo dico con affetto, ci lavoro da vent'anni — <break time="0.5s"/> è che le facoltà sono sparse per la città. <break time="0.5s"/> Non c'è un campus isolato. <break time="0.5s"/> Ci sono edifici in mezzo al centro storico, <break time="0.4s"/> vicino alle chiese barocche, <break time="0.4s"/> dentro palazzi nobiliari restaurati. <break time="1.0s"/>
+
+La facoltà dove lavoro io era un convento. <break time="0.5s"/> Gli studenti mangiano al bar nello stesso cortile dove i monaci pregavano. <break time="0.5s"/> Le aule hanno i soffitti a volta. <break time="0.5s"/> I corridoi profumano di pietra vecchia. <break time="1.0s"/>
+
+Questo crea una cosa particolare: <break time="0.5s"/> non c'è separazione netta tra la città antica e quella giovane. <break time="0.5s"/> Sono sovrapposte. <break time="0.8s"/> Uno studente di Filologia Romanza fa la pausa caffè <break time="0.4s"/> sotto lo stesso arco dove passavano i frati nel Settecento. <break time="0.5s"/> Non ci pensa — <break time="0.4s"/> è solo dove si fuma e si guarda il telefono. <break time="0.5s"/> Ma è lì. <break time="1.2s"/>
+
+Io ci penso ogni mattina quando apro il portone. <break time="0.5s"/> Ogni mattina, da vent'anni. <break time="1.5s"/>
+
+
+=====================================
+CAP. 3 — SETTEMBRE E GENNAIO: LE DUE FACCE DEGLI STUDENTI
+-------------
+voice: luca
+
+Ci sono due momenti dell'anno in cui il centro storico cambia completamente. <break time="1.0s"/>
+
+Settembre. <break time="0.5s"/> E gennaio. <break time="1.2s"/>
+
+Settembre è quando arrivano. <break time="0.6s"/> I primi giorni di ottobre, il centro è pieno di facce nuove. <break time="0.5s"/> Ragazzi che guardano le mappe sul telefono, <break time="0.4s"/> chiedono dov'è il supermercato, <break time="0.4s"/> cercano casa. <break time="0.8s"/> Le trattorie si riempiono. <break time="0.5s"/> I bar fanno più lavoro. <break time="0.5s"/> I proprietari di appartamenti nel centro storico incassano. <break time="1.0s"/>
+
+C'è uno che viene ogni anno al portone a chiedere: <break time="0.5s"/> scusa, hai un contatto di qualcuno che affitta? <break time="0.5s"/> Gli dico sempre: non ne ho. <break time="0.5s"/> Ma so già come va a finire. <break time="0.5s"/> Prima o poi trovano. <break time="0.5s"/> Lecce non lascia senza casa nessuno. <break time="1.2s"/>
+
+Gennaio è quando studiano. <break time="0.6s"/> O almeno, quando non dormono. <break time="0.8s"/>
+
+Io arrivo alle sette. <break time="0.5s"/> Nei giorni di esame, ci sono già studenti fuori dal portone alle sei e mezza. <break time="0.5s"/> Alcuni hanno dormito lì. <break time="0.5s"/> Non scherzano. <break time="0.6s"/> Con i libri in mano, <break time="0.4s"/> gli occhi rossi, <break time="0.4s"/> il caffè in un bicchierino di plastica. <break time="1.0s"/>
+
+Uno studente una volta mi disse: sai qual è la differenza tra studiare a Lecce e studiare a Milano? <break time="0.8s"/> A Milano guardi fuori dalla finestra e vedi cemento. <break time="0.5s"/> Qui guardi fuori e vedi una chiesa barocca del Seicento. <break time="0.5s"/> Non so se aiuta a studiare. <break time="0.5s"/> Ma ti ricorda perché vale la pena farlo. <break time="1.5s"/>
+
+
+=====================================
+CAP. 4 — LA PASSEGGIATA: IL RITO CHE NON MUORE
+-------------
+voice: luca
+
+Ogni sera, dalle diciotto alle venti, <break time="0.5s"/> il Corso Vittorio Emanuele II diventa una cosa diversa. <break time="1.0s"/>
+
+Si chiama la passeggiata. <break time="0.8s"/> O il corso. <break time="0.5s"/> Dipende da chi ne parla. <break time="1.0s"/>
+
+Non è una camminata. <break time="0.6s"/> Non è shopping. <break time="0.6s"/> Non è turismo. <break time="0.8s"/>
+
+È il momento in cui Lecce si guarda. <break time="1.0s"/>
+
+Si esce, ci si veste — <break time="0.5s"/> non in modo formale, <break time="0.4s"/> ma con cura. <break time="0.5s"/> Si cammina lentamente sul Corso. <break time="0.5s"/> Si salutano le persone che si conoscono. <break time="0.4s"/> Si aggiornano le cose del paese. <break time="0.5s"/> Si vede chi c'è, <break time="0.4s"/> chi non c'è, <break time="0.4s"/> chi è tornato, <break time="0.4s"/> chi se ne è andato. <break time="1.0s"/>
+
+È il social network di prima di Internet. <break time="0.5s"/> Funzionava allora. <break time="0.5s"/> Funziona ancora. <break time="1.0s"/>
+
+Io faccio la passeggiata da quando avevo quindici anni. <break time="0.5s"/> Mia moglie l'ho conosciuta sulla passeggiata. <break time="0.5s"/> Mia figlia fa la passeggiata adesso. <break time="0.5s"/> Stessa via. <break time="0.5s"/> Stesso orario. <break time="1.0s"/>
+
+Quello che è cambiato è che adesso ci sono anche i turisti. <break time="0.6s"/> Mescolati ai leccesi. <break time="0.5s"/> I turisti camminano un po' più veloci, <break time="0.4s"/> guardano le facciate, <break time="0.4s"/> si fermano per le foto. <break time="0.6s"/> I leccesi camminano lentamente, <break time="0.4s"/> guardano le persone, <break time="0.4s"/> non si fermano. <break time="0.8s"/>
+
+Riconosci subito chi è di qui e chi non lo è. <break time="0.5s"/> Non dall'abbigliamento. <break time="0.5s"/> Dal ritmo. <break time="1.5s"/>
+
+
+=====================================
+CAP. 5 — PIAZZETTA SANTA CHIARA: IL CUORE DI NOTTE
+-------------
+voice: luca
+
+Dopo la passeggiata viene la sera. <break time="1.0s"/>
+
+E la sera a Lecce, il posto è Piazzetta Santa Chiara. <break time="1.0s"/>
+
+Non è una piazza grande. <break time="0.5s"/> È una piazzetta — <break time="0.4s"/> quattro bar con i tavoli fuori, <break time="0.4s"/> la chiesa alle spalle, <break time="0.4s"/> qualche vicolo che ci si apre intorno. <break time="0.8s"/> Ma da giugno a settembre, ogni sera, <break time="0.5s"/> ci stanno duecento persone. <break time="0.5s"/> Studenti, turisti, leccesi, qualcuno di fuori. <break time="0.5s"/> Tutti insieme. <break time="1.0s"/>
+
+Il Caffè Letterario è lì vicino. <break time="0.5s"/> Fa concerti, presentazioni di libri, DJ set. <break time="0.5s"/> Non è un locale normale. <break time="0.5s"/> È un posto dove la cultura entra dentro un aperitivo. <break time="0.8s"/>
+
+Mia figlia ci va. <break time="0.5s"/> Diciannove anni. <break time="0.5s"/> Quando le chiedo cosa succede, mi dice: papà, non lo capisci. <break time="0.5s"/> E forse ha ragione. <break time="1.0s"/>
+
+Ma ho un vantaggio su di lei: <break time="0.6s"/> so quello che c'era prima. <break time="0.8s"/>
+
+Venticinque anni fa, quella piazzetta era quasi deserta. <break time="0.5s"/> Un bar solo. <break time="0.4s"/> Ci andavano i vecchi del quartiere a giocare a carte. <break time="0.6s"/> La trasformazione è stata lenta — <break time="0.4s"/> un bar apre, <break time="0.4s"/> poi un altro, <break time="0.4s"/> poi i tavolini fuori, <break time="0.4s"/> poi la musica. <break time="0.8s"/>
+
+Chi ha trasformato quella piazzetta non erano i turisti. <break time="0.5s"/> Erano gli studenti universitari. <break time="0.5s"/> Quelli che affittavano nel centro storico <break time="0.4s"/> e avevano bisogno di un posto dove stare la sera. <break time="0.5s"/> Senza spendere troppo. <break time="0.5s"/> Vicino a casa. <break time="1.2s"/>
+
+L'università ha cambiato Lecce più di qualsiasi altro fattore. <break time="0.5s"/> Più del turismo. <break time="0.5s"/> Più dei fondi europei. <break time="0.5s"/> Più di tutto. <break time="1.5s"/>
+
+
+=====================================
+CAP. 6 — D'ESTATE TUTTI SCENDONO AL MARE
+-------------
+voice: luca
+
+C'è una cosa che i turisti non capiscono di Lecce. <break time="1.0s"/>
+
+D'estate, la città si svuota di giorno. <break time="1.0s"/>
+
+Non di turisti — <break time="0.5s"/> quelli arrivano. <break time="0.5s"/> Di leccesi. <break time="1.0s"/>
+
+Chi può, scende al mare. <break time="0.6s"/> Gallipoli a quaranta chilometri. <break time="0.4s"/> Otranto a cinquantacinque. <break time="0.4s"/> Le spiagge di Torre dell'Orso, di San Cataldo, di Porto Cesareo. <break time="0.8s"/> Il mattino si parte. <break time="0.5s"/> Il pomeriggio si torna. <break time="0.5s"/> La sera si sta in città. <break time="1.0s"/>
+
+Questo è il ritmo estivo del Salento — <break time="0.5s"/> il mare è vicino ma non ci si vive. <break time="0.5s"/> Si va e si torna. <break time="0.5s"/> La città è la base. <break time="1.0s"/>
+
+Io d'estate mi sveglio e guardo fuori dalla finestra — <break time="0.5s"/> se c'è il cielo bianco, <break time="0.4s"/> il maestrale ha smesso, <break time="0.4s"/> non c'è vento, <break time="0.5s"/> e faccio i conti nella testa. <break time="0.8s"/> Ho il turno? <break time="0.4s"/> Sì, ho il turno. <break time="0.5s"/> Ma finisce alle diciassette. <break time="0.5s"/> Faccio in tempo ad andare a San Cataldo e tornare per cena. <break time="1.0s"/>
+
+Trent'anni che faccio questo calcolo. <break time="0.5s"/> Mai cambiato. <break time="1.5s"/>
+
+
+=====================================
+CAP. 7 — IL SETTEMBRE VUOTO: QUANDO LECCE TORNA A SÉ STESSA
+-------------
+voice: luca
+
+La cosa più bella di Lecce non succede d'estate. <break time="1.0s"/>
+
+Succede a settembre. <break time="1.0s"/>
+
+Dopo Ferragosto, i turisti cominciano a diminuire. <break time="0.5s"/> Dopo il 20, sono quasi tutti andati. <break time="0.5s"/> I leccesi tornano in città. <break time="0.5s"/> Gli studenti non sono ancora arrivati. <break time="0.5s"/> La città è di nuovo nostra. <break time="1.2s"/>
+
+In questo periodo — <break time="0.5s"/> due, tre settimane al massimo — <break time="0.5s"/> Lecce ha una qualità dell'aria che non ha in nessun altro momento dell'anno. <break time="1.0s"/>
+
+Il caldo è ancora caldo, <break time="0.4s"/> ma non brutale. <break time="0.5s"/> La luce del pomeriggio sulle facciate barocche è la più bella dell'anno — <break time="0.5s"/> un arancio dorato che dura un'ora prima del tramonto. <break time="0.8s"/> Le piazze sono mezze piene — <break time="0.4s"/> la gente ci sta, <break time="0.4s"/> ma non si accalca. <break time="0.5s"/> I ristoranti trovano un tavolo. <break time="0.5s"/> I bar non hanno la coda. <break time="1.0s"/>
+
+Mia moglie dice che settembre è il mese in cui Lecce respira. <break time="0.6s"/> Tutto l'anno accumula gente, rumore, caos. <break time="0.5s"/> E settembre espira. <break time="1.0s"/>
+
+Se potete scegliere quando venire — <break time="0.5s"/> e lo dico senza interesse personale, <break time="0.5s"/> anzi, vorrei che restasse un segreto — <break time="0.5s"/> venite a settembre. <break time="0.5s"/> Troverete una città diversa. <break time="0.5s"/> Più vera. <break time="0.5s"/> Più lenta. <break time="0.5s"/> Più sua. <break time="1.5s"/>
+
+
+=====================================
+CAP. 8 — I RAGAZZI CHE RESTANO E QUELLI CHE VANNO
+-------------
+voice: luca
+
+Vent'anni di portineria universitaria mi hanno insegnato una cosa. <break time="1.0s"/>
+
+I ragazzi che si laureano a Lecce si dividono in due categorie: <break time="0.5s"/> quelli che se ne vanno e quelli che restano. <break time="1.0s"/>
+
+Quelli che se ne vanno — <break time="0.5s"/> e sono tanti, <break time="0.4s"/> troppi — <break time="0.5s"/> vanno a Milano, a Bologna, a Torino. <break time="0.5s"/> Qualcuno all'estero. <break time="0.5s"/> Trovano lavoro nel loro campo. <break time="0.5s"/> E Lecce perde un medico, un ingegnere, un ricercatore. <break time="0.8s"/>
+
+Si chiama fuga dei cervelli. <break time="0.5s"/> Lo sanno tutti. <break time="0.5s"/> E nessuno ha ancora trovato come fermarlo. <break time="1.2s"/>
+
+Quelli che restano, invece — <break time="0.5s"/> e li vedo tornare ogni tanto a trovare un professore, <break time="0.4s"/> o semplicemente a passare davanti alla facoltà — <break time="0.5s"/> hanno tutti la stessa espressione. <break time="0.6s"/> Un misto tra nostalgia e sollievo. <break time="0.5s"/> Come se avessero capito qualcosa che i partiti non capiscono: <break time="0.5s"/> che questa città ha una qualità della vita che non si misura con lo stipendio. <break time="1.0s"/>
+
+Uno studente di alcuni anni fa — <break time="0.5s"/> di Bergamo, venuto a Lecce per Lettere Classiche — <break time="0.5s"/> si è laureato, <break time="0.5s"/> ha trovato lavoro a Roma, <break time="0.5s"/> e dopo due anni è tornato. <break time="0.5s"/> Fa il traduttore da remoto. <break time="0.5s"/> Abita in centro storico. <break time="0.5s"/> Paga meno di affitto che a Roma e vive meglio. <break time="1.0s"/>
+
+Mi disse una volta, al portone: <break time="0.5s"/> sai cosa mi mancava, a Roma? <break time="0.8s"/> Non il sole. <break time="0.4s"/> Non il cibo. <break time="0.5s"/> Mi mancava poter camminare a piedi alle undici di sera <break time="0.4s"/> tra le chiese barocche <break time="0.4s"/> con cinquanta euro in tasca <break time="0.4s"/> e non avere paura. <break time="1.2s"/>
+
+Non sapevo cosa rispondere. <break time="0.5s"/> Poi ho pensato: <break time="0.5s"/> hai ragione. <break time="0.5s"/> È proprio così. <break time="1.5s"/>
+
+
+=====================================
+CAP. 9 — CHIUSURA: IL PORTONE DELLE VENTI
+-------------
+voice: luca
+
+Ogni sera alle venti chiudo il portone della facoltà. <break time="1.0s"/>
+
+Tiro il catenaccio. <break time="0.5s"/> Controllo le luci. <break time="0.5s"/> Esco. <break time="1.0s"/>
+
+Davanti a me c'è una via del centro storico. <break time="0.5s"/> Pietra leccese. <break time="0.5s"/> Facciate del Seicento. <break time="0.5s"/> Qualche turista con la guida. <break time="0.5s"/> Qualche studente con il telefono. <break time="0.5s"/> Qualche leccese che torna a casa. <break time="1.0s"/>
+
+Vent'anni che chiudo questo portone. <break time="0.6s"/> Vent'anni che vedo questa via. <break time="0.8s"/>
+
+Non mi stanca. <break time="1.2s"/>
+
+Non perché sono abituato. <break time="0.6s"/> Perché è sempre leggermente diversa. <break time="0.5s"/> La luce cambia. <break time="0.4s"/> Le persone cambiano. <break time="0.4s"/> Le stagioni cambiano. <break time="0.5s"/> Il barocco resta. <break time="1.0s"/>
+
+Lecce è strana in questo senso. <break time="0.6s"/> Ha duemilasettecento anni di storia <break time="0.4s"/> e una piazzetta che diventa il posto più vivo del Salento ogni estate. <break time="0.5s"/> Ha chiese del Seicento e studenti universitari che le usano come sfondo per i selfie. <break time="0.5s"/> Ha la passeggiata del Corso che funziona ancora come nel 1950. <break time="0.5s"/> Ha il caffè leccese che nessuno ha mai cambiato. <break time="1.0s"/>
+
+Non è una contraddizione. <break time="0.6s"/> È come funziona una città viva. <break time="0.5s"/> Le cose cambiano sopra. <break time="0.4s"/> Le cose restano sotto. <break time="1.5s"/>
+
+Stessa logica del sottosuolo. <break time="0.5s"/> Solo un piano più in alto.

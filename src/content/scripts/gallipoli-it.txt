@@ -1,0 +1,157 @@
+LOCALIS — GALLIPOLI
+Guida narrativa — versione IT
+Voce: Cosimo, 55 anni, gelataio sull'isola
+Modello: eleven_multilingual_v2
+=====================================
+
+
+=====================================
+CAP. 1 — INTRO: L'ISOLA CHE NON SA CHE È UN'ISOLA
+-------------
+voice: antonio
+
+Sono nato sull'isola. <break time="1.0s"/>
+
+Non sull'isola in senso metaforico. <break time="0.5s"/> Sull'isola vera. <break time="0.5s"/> Il centro storico di Gallipoli è un'isola — <break time="0.5s"/> un'isola vera, di calcare, <break time="0.5s"/> collegata alla terraferma da un ponte. <break time="1.0s"/>
+
+Mi chiamo Cosimo. <break time="0.6s"/> Cinquantacinque anni. <break time="0.5s"/> Faccio il gelataio sull'isola da quando ne avevo ventidue. <break time="0.6s"/> Mio padre aveva la gelateria. <break time="0.4s"/> Io ho preso la gelateria. <break time="0.5s"/> Mio figlio non vuole la gelateria — <break time="0.4s"/> ma questa è un'altra storia. <break time="1.2s"/>
+
+Apro a marzo. <break time="0.5s"/> Chiudo a novembre. <break time="0.5s"/> Tre mesi all'anno la gente arriva da tutta Italia per passare davanti alla mia gelateria. <break time="0.5s"/> In estate ci sono giorni che servo seicento coni. <break time="0.5s"/> In ottobre torno a servire i soliti dieci del quartiere. <break time="1.0s"/>
+
+Ho visto Gallipoli da tutti i lati possibili. <break time="0.5s"/> Da fuori non si capisce niente. <break time="0.5s"/> Si vede una cosa bella e ci si ferma. <break time="1.0s"/>
+
+Da dentro, da dove sto io — <break time="0.5s"/> è diverso. <break time="0.5s"/> È più complicato. <break time="0.5s"/> È più bello. <break time="1.5s"/>
+
+
+=====================================
+CAP. 2 — KALE POLIS: LA CITTÀ BELLA
+-------------
+voice: antonio
+
+Il nome Gallipoli viene dal greco. <break time="0.8s"/> Kale polis. <break time="0.6s"/> Città bella. <break time="1.2s"/>
+
+Non è una cosa che i greci dicevano a caso. <break time="0.5s"/> Quando i greci nominavano una città, <break time="0.5s"/> di solito il nome descriveva qualcosa. <break time="0.5s"/> Kale polis era bella. <break time="0.5s"/> I Messapi la chiamavano Anxa. <break time="0.5s"/> I Romani la chiamarono Gallipoli dal greco. <break time="0.5s"/> E il nome è rimasto. <break time="1.2s"/>
+
+Il centro storico è su un'isola di calcare, <break time="0.5s"/> piatta, <break time="0.5s"/> bassa sul mare. <break time="0.6s"/> Intorno ai quattrocentocinquanta metri per duecentocinquanta, più o meno. <break time="0.5s"/> La circonferenza intera si cammina in venti minuti. <break time="1.0s"/>
+
+Il ponte che collega l'isola alla terraferma fu costruito intorno al 1600. <break time="0.6s"/> Prima c'era un ponte di barche, instabile, <break time="0.4s"/> che si smontava quando arrivavano i pirati. <break time="0.5s"/> Il nuovo ponte era fisso, in muratura. <break time="0.5s"/> Risolse il problema dei pirati. <break time="0.5s"/> Creò il problema del traffico estivo. <break time="0.5s"/> Ma quello nel 1600 non potevano prevederlo. <break time="1.5s"/>
+
+Io passo quel ponte ogni mattina alle sette. <break time="0.5s"/> D'agosto non passo — <break time="0.5s"/> d'agosto dormo sull'isola. <break time="0.5s"/> Non c'è tempo per andare e tornare. <break time="0.5s"/> Quando finisce agosto, <break time="0.5s"/> la prima cosa che faccio è passare il ponte e non tornare per una settimana. <break time="1.5s"/>
+
+
+=====================================
+CAP. 3 — LA FONTANA GRECA
+-------------
+voice: antonio
+
+Vicino al ponte, sul lato del centro storico, <break time="0.5s"/> c'è la Fontana Greca. <break time="1.0s"/>
+
+È considerata da molti la fontana più antica d'Italia. <break time="0.6s"/> Le sue origini risalgono probabilmente al terzo secolo avanti Cristo — <break time="0.5s"/> periodo greco. <break time="0.5s"/> Sebbene le opinioni degli studiosi su questa datazione siano discordanti, <break time="0.5s"/> e quelle che vedete adesso siano le strutture rifatte nel tempo, <break time="0.5s"/> il luogo stesso ha una continuità d'uso di oltre duemila anni. <break time="1.2s"/>
+
+Ci sono sette pannelli con bassorilievi. <break time="0.5s"/> Miti greci. <break time="0.5s"/> Nereidi, divinità marine, figure classiche. <break time="0.6s"/>
+
+Quando ero bambino, <break time="0.5s"/> mio padre mi portava lì la mattina prima di aprire la gelateria. <break time="0.5s"/> Mi diceva: guarda bene. <break time="0.5s"/> Queste figure hanno più anni del ponte. <break time="0.5s"/> Più anni della chiesa. <break time="0.4s"/> Più anni di quasi tutto quello che vedi. <break time="1.0s"/>
+
+Io non capivo cosa intendeva. <break time="0.5s"/> Ero troppo piccolo. <break time="0.8s"/>
+
+Adesso ho cinquantacinque anni e lo porto mio figlio — <break time="0.5s"/> quello che non vuole la gelateria — <break time="0.5s"/> e gli dico la stessa cosa. <break time="0.6s"/> Non lo capisce ancora. <break time="0.5s"/> Un giorno capirà. <break time="1.5s"/>
+
+
+=====================================
+CAP. 4 — L'OLIO CHE ILLUMINAVA PARIGI
+-------------
+voice: antonio
+
+C'è una cosa di Gallipoli che quasi nessun turista sa. <break time="1.0s"/>
+
+E che cambia completamente il modo di vedere questo porto. <break time="1.2s"/>
+
+Dal XVI al XIX secolo, <break time="0.5s"/> Gallipoli era il più grande mercato europeo di olio lampante. <break time="1.0s"/>
+
+Olio lampante — <break time="0.5s"/> olio d'oliva di bassa qualità, <break time="0.5s"/> non adatto a mangiare, <break time="0.5s"/> ma ottimo per bruciare nelle lampade. <break time="0.8s"/> Prima dell'elettricità, <break time="0.4s"/> le città europee si illuminavano con questo olio. <break time="0.5s"/> I lampioni di Parigi. <break time="0.4s"/> Le lanterne di Londra. <break time="0.4s"/> I candelabri di Vienna e Berlino. <break time="0.8s"/> Bruciavano olio di Gallipoli. <break time="1.2s"/>
+
+Le navi partivano da questo porto <break time="0.4s"/> cariche di barili verso Genova, Venezia, Napoli, <break time="0.4s"/> e da lì verso il resto d'Europa. <break time="0.6s"/> In città c'erano seicento bottai — <break time="0.5s"/> seicento persone il cui unico lavoro era costruire barili per l'olio. <break time="0.5s"/> Seicento, in una città piccola su un'isola. <break time="1.2s"/>
+
+Questo porto che adesso è pieno di turisti che mangiano il gelato <break time="0.5s"/> era uno dei porti commerciali più importanti del Mediterraneo. <break time="1.0s"/>
+
+La ricchezza di quei secoli si vede ancora. <break time="0.5s"/> I palazzi del centro storico sono grandi. <break time="0.5s"/> Le chiese sono ben fatte. <break time="0.5s"/> C'era gente qui che aveva i soldi per costruire bene. <break time="1.2s"/>
+
+L'olio finì. <break time="0.5s"/> Arrivò il petrolio. <break time="0.4s"/> Poi arrivò l'elettricità. <break time="0.5s"/> Nessuno aveva più bisogno del lampante di Gallipoli. <break time="0.8s"/>
+
+Al porto rimasero i pescatori. <break time="0.5s"/> E poi, un giorno, i turisti. <break time="1.5s"/>
+
+
+=====================================
+CAP. 5 — IL MERCATO DEL PESCE
+-------------
+voice: antonio
+
+Se volete vedere Gallipoli vera — <break time="0.5s"/> non quella di agosto con i turisti — <break time="0.5s"/> andate al mercato del pesce. <break time="0.6s"/> La mattina presto. <break time="0.5s"/> Prima delle otto. <break time="1.0s"/>
+
+Il mercato è sul lungomare, <break time="0.5s"/> sotto un tetto aperto. <break time="0.5s"/> I pescatori scaricano dalla notte. <break time="0.5s"/> Alle sei le casse sono già piene. <break time="0.5s"/> Sgombri, seppie, polpi, scorfani. <break time="0.5s"/> Ricci di mare tagliati al momento. <break time="0.5s"/> Cozze. <break time="0.5s"/> Vongole. <break time="1.0s"/>
+
+Il profumo non è per stomaci deboli. <break time="0.6s"/> È il profumo del mare vero, <break time="0.4s"/> non del mare delle cartoline. <break time="0.5s"/> Sale, iodio, pesce fresco. <break time="1.0s"/>
+
+Io vado al mercato ogni giovedì mattina. <break time="0.5s"/> Compro per casa. <break time="0.5s"/> Non perché devo — <break time="0.4s"/> potrei comprare al supermercato come fanno tutti. <break time="0.5s"/> Ma al supermercato non ci sono i pescatori che ti dicono: <break time="0.5s"/> questo l'ho preso stanotte a tre miglia da qui. <break time="0.5s"/> Prova questo. <break time="1.0s"/>
+
+C'è un pescatore, Ciccio, <break time="0.5s"/> che porta un tipo di pesce di scoglio piccolo che non ha neanche un nome ufficiale. <break time="0.5s"/> In dialetto lo chiamano "pesce ragnetto". <break time="0.5s"/> È buono fritto, in pastella leggera. <break time="0.5s"/> Non si trova da nessun'altra parte. <break time="0.5s"/> Non si trova nei ristoranti. <break time="0.5s"/> Si trova al banco di Ciccio il giovedì mattina. <break time="1.2s"/>
+
+Queste cose non le trovi su Google. <break time="0.5s"/> Le trovi stando in un posto. <break time="1.5s"/>
+
+
+=====================================
+CAP. 6 — IL CASTELLO E LE MURA
+-------------
+voice: antonio
+
+Il Castello Angioino, sul lato ovest dell'isola, <break time="0.5s"/> fu costruito nel 1300. <break time="0.6s"/> Poi fu ampliato. <break time="0.5s"/> Poi fu cambiato di nuovo. <break time="0.5s"/> Ogni dominazione che passava da Gallipoli <break time="0.5s"/> ci metteva una mano. <break time="1.0s"/>
+
+È ancora lì, con le torri cilindriche, <break time="0.5s"/> a fare da confine tra il porto dei pescatori e il centro storico. <break time="1.0s"/>
+
+Le mura che circondano l'isola sono basse, <break time="0.5s"/> costruite direttamente sul calcare della riva. <break time="0.5s"/> Camminate fuori dal centro storico sul bordo dell'isola — <break time="0.5s"/> c'è un percorso pedonale — <break time="0.5s"/> e capite la forma della cosa. <break time="0.5s"/> Un'isola piccola, piatta, circondata dall'acqua. <break time="0.5s"/> Difesa solo dalle mura e dal mare. <break time="1.2s"/>
+
+Il mare Ionio qui è diverso dall'Adriatico di Otranto. <break time="0.6s"/> È più calmo, più caldo d'estate. <break time="0.5s"/> Le spiagge sono di sabbia bianca fine, <break time="0.4s"/> non di roccia. <break time="0.5s"/> Le cale sono riparate dal vento. <break time="1.0s"/>
+
+La gente del Salento adriatico viene a fare le vacanze qui. <break time="0.5s"/> La gente del Salento ionico va a fare le vacanze ad Otranto. <break time="0.5s"/> Ognuno vuole quello che non ha. <break time="1.5s"/>
+
+
+=====================================
+CAP. 7 — L'ESTATE E L'INVERNO: DUE CITTÀ DIVERSE
+-------------
+voice: antonio
+
+Vi dico una cosa onesta. <break time="1.0s"/>
+
+L'estate che vivete voi, in agosto, <break time="0.5s"/> non è Gallipoli. <break time="1.2s"/>
+
+Agosto a Gallipoli sono cinquantamila persone su un'isola che ne contiene cinquemila. <break time="0.6s"/> È musica fino alle quattro di notte. <break time="0.5s"/> Sono code al bar. <break time="0.4s"/> Prezzi triplicati. <break time="0.5s"/> Motorini dappertutto. <break time="0.5s"/> E un caldo che il mare non riesce a smorzare. <break time="1.0s"/>
+
+Non è brutto. <break time="0.5s"/> È una festa enorme che dura tre mesi. <break time="0.5s"/> E io dalla festa campo. <break time="0.8s"/>
+
+Ma la vera Gallipoli è quella di novembre. <break time="0.8s"/>
+
+Il porto quasi deserto. <break time="0.5s"/> I vicoli del centro storico con poca gente. <break time="0.5s"/> Il vento del Mediterraneo che arriva dalla Grecia. <break time="0.5s"/> Il mare scuro, con le onde piccole. <break time="0.5s"/> La fontana greca senza nessuno intorno. <break time="1.0s"/>
+
+Quella è la Gallipoli di sempre. <break time="0.5s"/> Quella che era qui prima dei turisti. <break time="0.5s"/> Quella che sarà qui dopo. <break time="1.2s"/>
+
+Venite ad agosto se volete divertirvi. <break time="0.5s"/> Venite a ottobre se volete capire. <break time="1.5s"/>
+
+
+=====================================
+CAP. 8 — CHIUSURA: IL GELATO CHE CHIUDE L'ISOLA
+-------------
+voice: antonio
+
+Il primo novembre chiudo la gelateria. <break time="1.0s"/>
+
+Non è una data scelta a caso. <break time="0.5s"/> È la data in cui mio padre chiudeva. <break time="0.5s"/> E il padre di mio padre. <break time="0.5s"/> Fine della stagione. <break time="0.5s"/> Fine dell'anno. <break time="1.0s"/>
+
+Pulisco le vaschette. <break time="0.4s"/> Smonto le vetrine. <break time="0.4s"/> Chiudo le persiane. <break time="0.5s"/> Attraverso il ponte. <break time="1.0s"/>
+
+Per cinque mesi l'isola è di chi ci abita. <break time="0.6s"/> Poca gente. <break time="0.5s"/> I pescatori, i vecchi del quartiere, <break time="0.4s"/> le famiglie che non se ne sono mai andate. <break time="0.8s"/>
+
+E il 15 marzo, o giù di lì, <break time="0.5s"/> quando la luce comincia a cambiare — <break time="0.5s"/> non ancora estate, <break time="0.4s"/> ma non più inverno — <break time="0.5s"/> rimonto le vetrine, <break time="0.4s"/> preparo i gusti, <break time="0.4s"/> riapro. <break time="1.0s"/>
+
+Kale Polis. <break time="0.5s"/> La città bella. <break time="0.5s"/> Bella tutto l'anno. <break time="0.5s"/> Anche quando non ci siete. <break time="1.5s"/>
+
+Soprattutto quando non ci siete.

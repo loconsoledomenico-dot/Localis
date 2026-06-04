@@ -1,0 +1,129 @@
+LOCALIS — MAGLIE E L'ENTROTERRA
+Guida narrativa — versione IT
+Voce: Rocco, 54 anni, postino
+Modello: eleven_multilingual_v2
+=====================================
+
+
+=====================================
+CAP. 1 — INTRO: IL POSTINO CHE CONOSCE DIECI PAESI
+-------------
+voice: marco
+
+Faccio il postino da ventiquattro anni. <break time="0.8s"/>
+
+Il mio giro comprende Maglie e dieci paesi intorno. <break time="0.6s"/> Ogni mattina. <break time="0.5s"/> Sei giorni su sette. <break time="1.0s"/>
+
+Mi chiamo Rocco. <break time="0.6s"/> Cinquantaquattro anni. <break time="0.5s"/> Magliese doc. <break time="1.0s"/>
+
+Ho consegnato lettere di nascita e di morte. <break time="0.5s"/> Bollette che qualcuno non poteva pagare. <break time="0.5s"/> Lettere dall'estero per i figli emigrati — <break time="0.5s"/> quelle le riconosci dalla busta, <break time="0.4s"/> dal francobollo straniero. <break time="0.5s"/> Il destinatario è sempre un anziano che aspetta notizie da qualcuno lontano. <break time="1.0s"/>
+
+In ventiquattro anni ho bussato a ogni porta di questo territorio. <break time="0.5s"/> So chi vive dove. <break time="0.5s"/> So i nomi dei cani. <break time="0.4s"/> So dove c'è il fico selvatico nell'angolo del muro <break time="0.4s"/> che a settembre fa i fichi bianchi più buoni del mondo. <break time="1.2s"/>
+
+Il postino conosce il territorio meglio del sindaco. <break time="0.5s"/> Il sindaco conosce le piazze. <break time="0.5s"/> Il postino conosce i cortili. <break time="1.5s"/>
+
+
+=====================================
+CAP. 2 — MAGLIE: IL MERCATO DELL'ENTROTERRA
+-------------
+voice: marco
+
+Maglie non è una città turistica. <break time="0.8s"/>
+
+Non ha il mare vicino. <break time="0.5s"/> Non ha il barocco di Lecce. <break time="0.5s"/> Non ha le grotte di Castro. <break time="0.5s"/> Non ha il promontorio di Leuca. <break time="1.0s"/>
+
+Ha il mercato. <break time="1.0s"/>
+
+Ogni martedì, in piazza Aldo Moro — <break time="0.5s"/> si chiama così, ci arrivo tra un minuto — <break time="0.5s"/> si tiene uno dei mercati più grandi del Salento. <break time="0.8s"/> Abiti, scarpe, verdura, formaggi, carne, spezie, utensili. <break time="0.5s"/> Gente da tutta la provincia. <break time="0.5s"/> I contadini che portano le loro cose. <break time="0.5s"/> I bancarellari che girano di mercato in mercato. <break time="1.0s"/>
+
+Io il martedì arrivo tardi al giro. <break time="0.5s"/> Non perché sono pigro. <break time="0.5s"/> Perché il traffico del mercato blocca tre vie. <break time="0.8s"/>
+
+Ma mi fermo sempre dieci minuti. <break time="0.5s"/> Prendo qualcosa. <break time="0.5s"/> Parlo con qualcuno. <break time="0.5s"/> È il momento in cui l'entroterra si incontra. <break time="0.5s"/> Gente che non si vede da una settimana. <break time="0.5s"/> Aggiornamenti. <break time="0.5s"/> Notizie. <break time="1.0s"/>
+
+Non è il mercato del turista. <break time="0.5s"/> È il mercato degli abitanti. <break time="1.5s"/>
+
+
+=====================================
+CAP. 3 — ALDO MORO: MAGLIESE
+-------------
+voice: marco
+
+Aldo Moro è nato a Maglie. <break time="1.0s"/>
+
+Il 23 settembre 1916. <break time="0.6s"/> In una casa del centro storico che adesso è museo — <break time="0.5s"/> la Casa Museo Aldo Moro, visitabile. <break time="1.0s"/>
+
+Suo padre si chiamava Renato ed era ispettore scolastico. <break time="0.5s"/> Sua madre Fida era insegnante. <break time="0.5s"/> Aldo era il secondogenito. <break time="0.8s"/>
+
+Rimase a Maglie fino a undici anni. <break time="0.5s"/> Poi la famiglia si spostò a Taranto. <break time="0.5s"/> Poi lui andò a Bari per l'università. <break time="0.5s"/> Poi Roma. <break time="0.5s"/> Poi la politica. <break time="0.5s"/> Poi la storia. <break time="1.0s"/>
+
+Ma è partito da qui. <break time="0.8s"/> Da queste strade, da questo mercato, <break time="0.5s"/> da questo modo particolare che ha la gente del Salento <break time="0.5s"/> di fare le cose senza fretta e senza eccessi. <break time="1.2s"/>
+
+Io passo davanti alla sua casa quasi ogni mattina. <break time="0.5s"/> C'è la targa. <break time="0.5s"/> Non mi sono mai fermato a lungo. <break time="0.5s"/> È strano pensare che qualcuno di così importante <break time="0.4s"/> ha cominciato qui, <break time="0.4s"/> in una via come tante, <break time="0.4s"/> con i piedi in questo stesso selciato. <break time="1.5s"/>
+
+
+=====================================
+CAP. 4 — I PAESI CHE NON SAI CHE ESISTONO
+-------------
+voice: marco
+
+Nel mio giro ci sono paesi che la maggior parte degli italiani non sa che esistono. <break time="1.0s"/>
+
+Specchia. <break time="0.5s"/> Tricase. <break time="0.5s"/> Presicce-Acquarica. <break time="0.5s"/> Seclì. <break time="0.5s"/> Scorrano. <break time="0.5s"/> Cutrofiano. <break time="1.0s"/>
+
+Ognuno di questi paesi ha una piazza barocca, <break time="0.4s"/> una chiesa del Seicento, <break time="0.4s"/> un palazzo nobiliare con le finestre scolpite. <break time="0.5s"/> Nessuno con la folla di Lecce. <break time="0.5s"/> Nessuno con i bus turistici parcheggiati davanti. <break time="0.5s"/> Nessuno con i ristoranti per turisti. <break time="1.0s"/>
+
+Solo la gente che ci abita. <break time="0.5s"/> Il bar con il calcio in televisione. <break time="0.4s"/> L'anziano sul gradino. <break time="0.4s"/> Il bambino che gioca in mezzo alla piazza. <break time="1.0s"/>
+
+Specchia è il paese che prediligo. <break time="0.6s"/> Non per un motivo preciso. <break time="0.5s"/> Forse perché il centro storico è compatto, tutto di pietra, <break time="0.4s"/> senza un edificio moderno dentro. <break time="0.5s"/> Si entra e sembra che il tempo si sia fermato al Seicento. <break time="0.5s"/> Non per i turisti. <break time="0.5s"/> Per caso. <break time="1.5s"/>
+
+
+=====================================
+CAP. 5 — IL NEGROAMARO E L'OLIO
+-------------
+voice: marco
+
+Il Salento produce due cose che il mondo compra. <break time="0.8s"/>
+
+L'olio e il vino. <break time="1.0s"/>
+
+L'olio extravergine del Salento — <break time="0.5s"/> dai cultivar Ogliarola e Cellina di Nardò — <break time="0.5s"/> è tra i migliori della Puglia. <break time="0.5s"/> Gli oliveti vecchi del territorio hanno alberi che hanno cinquecento, seicento anni. <break time="0.5s"/> Tronchi storti e grandi come case. <break time="1.0s"/>
+
+Io ci passo davanti ogni mattina in alcuni tratti del mio giro. <break time="0.5s"/> Il paesaggio della campagna salentina sono questi oliveti — <break time="0.5s"/> distese piatte, grigio-verde, <break time="0.4s"/> con il sole che filtra tra i rami. <break time="0.8s"/>
+
+Il Negroamaro è il vitigno del Salento. <break time="0.5s"/> Un nome che dice tutto: <break time="0.5s"/> "negro" dal colore scuro dell'uva, <break time="0.4s"/> "amaro" dal carattere del vino. <break time="0.8s"/> È un vino che non assomiglia a niente del nord. <break time="0.5s"/> Pieno. <break time="0.4s"/> Caldo. <break time="0.4s"/> Con un retrogusto che rimane. <break time="1.0s"/>
+
+Ci sono cantine nell'entroterra che fanno Negroamaro da generazioni. <break time="0.5s"/> Non famose fuori dalla regione. <break time="0.5s"/> Ma buone. <break time="0.5s"/> Cercatele nei paesi. <break time="0.5s"/> Chiedete al bar dove vendono il vino sfuso locale. <break time="0.5s"/> Non vi deluderanno. <break time="1.5s"/>
+
+
+=====================================
+CAP. 6 — I DOLMEN E LA PREISTORIA
+-------------
+voice: marco
+
+Nel mio giro, vicino a un paese che non nomino perché non voglio che arrivino le guide turistiche, <break time="0.5s"/> c'è un dolmen. <break time="1.0s"/>
+
+Un dolmen — <break time="0.5s"/> uno di quei monumenti preistorici fatti di grandi lastre di pietra, <break time="0.4s"/> una verticale come gambe, <break time="0.4s"/> una orizzontale come tetto. <break time="0.8s"/> Probabilmente una tomba. <break time="0.5s"/> Età del bronzo, forse neolitico. <break time="1.0s"/>
+
+Sta in un campo privato. <break time="0.5s"/> Il proprietario lo sa. <break time="0.5s"/> Non ci fa niente. <break time="0.5s"/> Lo lascia stare. <break time="0.5s"/> Gli animali ci pascolano intorno. <break time="1.0s"/>
+
+Il Salento è pieno di queste cose. <break time="0.5s"/> Non tutte censite. <break time="0.4s"/> Non tutte protette. <break time="0.5s"/> Alcune già usate come materiale da costruzione dai contadini del Novecento — <break time="0.5s"/> prendevano le lastre dei dolmen per fare i muri a secco. <break time="0.5s"/> Non per cattiveria. <break time="0.5s"/> Perché non sapevano cosa era. <break time="1.2s"/>
+
+Il Salento ha la memoria corta e la storia lunga. <break time="0.5s"/> È una combinazione difficile. <break time="0.5s"/> Ma affascinante. <break time="1.5s"/>
+
+
+=====================================
+CAP. 7 — CHIUSURA: LA LETTERA CHE NON ARRIVA
+-------------
+voice: marco
+
+Ogni tanto — <break time="0.5s"/> raramente, ma succede — <break time="0.5s"/> ho una lettera senza destinatario chiaro. <break time="0.5s"/> Un indirizzo incompleto. <break time="0.4s"/> Un nome troppo comune. <break time="1.0s"/>
+
+Allora giro. <break time="0.5s"/> Chiedo. <break time="0.5s"/> Busso a porte che non busserei normalmente. <break time="1.0s"/>
+
+E in quei momenti, <break time="0.5s"/> mi accorgo di quanto conosco questo territorio. <break time="0.5s"/> Posso descrivere una via di Specchia <break time="0.4s"/> dove ho consegnato una raccomandata nel 2008. <break time="0.5s"/> Posso dire in quale paese c'è una famiglia con quel cognome insolito. <break time="0.5s"/> Posso trovare il destinatario. <break time="1.0s"/>
+
+Non è onniscienza. <break time="0.5s"/> È il risultato di vent'anni di presenza. <break time="0.8s"/>
+
+Quello che voglio dire è questo: <break time="0.6s"/> l'entroterra del Salento non si capisce in una visita. <break time="0.5s"/> Si capisce tornando. <break time="0.5s"/> Fermandosi anche dove sembra che non ci sia niente. <break time="0.5s"/> Chiedendo. <break time="0.5s"/> Aspettando. <break time="1.0s"/>
+
+È fatto per chi ha pazienza. <break time="0.5s"/> Come tutte le cose vere. <break time="1.5s"/>
