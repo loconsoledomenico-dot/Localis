@@ -17,26 +17,15 @@ const heading1a = lang === 'de' ? 'Sehen ist einfach.' : lang === 'it' ? 'Vedere
 const heading1b = lang === 'de' ? 'Verstehen ist etwas anderes.' : lang === 'it' ? "Capire è un'altra cosa." : 'Understanding is another story.';
 
 const lede1 = lang === "de"
-  ? `Dokumentierte Audioerzaehlungen ueber Bari, das Itria-Tal und den Gargano — vor Ort oder schon vor der Reise.`
+  ? `Dokumentierte Audioerzählungen, um Bari und Apulien während des Besuchs wirklich zu verstehen. Keine App.`
   : lang === "it"
-  ? `Racconti audio documentati per ascoltare Bari, la Valle d'Itria e il Gargano sul posto o prima di partire.`
-  : `Documented audio stories for experiencing Bari, the Itria Valley and Gargano on site or before you travel.`;
-const lede2 = lang === "de"
-  ? `Keine App erforderlich: Waehle eine Erzaehlung, hoere die kostenlose Vorschau und entdecke, was dieser Ort wirklich bedeutet.`
-  : lang === "it"
-  ? `Nessuna app: scegli una guida, ascolta l'anteprima gratuita e porta con te ciò che il luogo significa davvero.`
-  : `No app required: choose a story, listen to the free preview and take away what the place truly means.`;
+  ? `Racconti audio documentati per capire Bari e la Puglia mentre le visiti. Nessuna app.`
+  : `Documented audio stories to understand Bari and Puglia as you visit. No app needed.`;
 
 const ctaPrimary = lang === "de" ? "1 Minute kostenlos anhoeren" : lang === "it" ? "Ascolta 1 minuto gratis" : "Listen to a free 1-minute preview";
 const ctaPrimaryHref = lang === "de" ? "/de/bari/" : lang === "it" ? "/bari/" : "/en/bari/";
 const ctaSecondary = lang === "de" ? "Erzaehlungen entdecken" : lang === "it" ? "Scopri le guide" : "Explore the stories";
 const ctaSecondaryHref = lang === "de" ? "/de/guide" : lang === "it" ? "/guide" : "/en/guide";
-
-const quickPrice = lang === 'de' ? 'Ab 4,99 EUR' : lang === 'it' ? 'Da 4,99 EUR' : 'From EUR 4.99';
-const quickBundle = lang === 'de' ? 'Pacchetti da 3, 6 o tutte le 18 guide' : lang === 'it' ? 'Pack da 3, 6 o tutte e 18 le guide' : 'Bundles of 3, 6, or all 18 guides';
-const quickAccess = lang === 'de' ? 'Link sofort. Streaming oder offline speichern nach dem Kauf.' : lang === 'it' ? 'Link immediato. Ascolta in streaming o salva offline dopo l\'acquisto.' : 'Instant link. Stream now or save offline after purchase.';
-const quickPricingLabel = lang === 'de' ? 'Preise ansehen' : lang === 'it' ? 'Vedi prezzi' : 'See pricing';
-const quickHowLabel = lang === 'de' ? 'Come funziona' : lang === 'it' ? 'Come funziona' : 'How it works';
 
 const altText = lang === 'de'
   ? 'Eine junge Frau mit Kopfhörern auf Baris Lungomare bei Sonnenuntergang'
@@ -80,8 +69,7 @@ const altText = lang === 'de'
     </h1>
 
     <p class="hero-lede mt-md font-display italic text-ink text-[clamp(1.05rem,1.8vw,1.35rem)] leading-snug max-w-[42ch]">
-      <span class="block">{lede1}</span>
-      <span class="block">{lede2}</span>
+      {lede1}
     </p>
 
     <HeroAudioSample lang={lang} src={lang === 'en' ? '/audio/trailers/hero-sample-en.mp3' : '/audio/trailers/hero-sample.mp3'} />
@@ -93,34 +81,6 @@ const altText = lang === 'de'
       >
         {ctaSecondary}
       </a>
-    </div>
-    {/* Cruise note: demoted below main CTAs, never at same visual level */}
-    <p class="hero-cruise-note mt-md text-sm text-ink max-w-[46ch] m-0 leading-snug">
-      {lang === 'it' && <><a href="/crocieristi" class="font-semibold underline underline-offset-4 hover:text-accent transition-colors">Sei in crociera?</a>{' '}2 audioguide brevi dal Terminal Crociere, per chi ha 4–5 ore a terra.</>}
-      {lang === 'en' && <><a href="/en/cruise" class="font-semibold underline underline-offset-4 hover:text-accent transition-colors">On a cruise?</a>{' '}2 short audio guides from the cruise terminal, for travellers with 4–5 hours ashore.</>}
-      {lang === 'de' && <><a href="/de/kreuzfahrt" class="font-semibold underline underline-offset-4 hover:text-accent transition-colors">Auf Kreuzfahrt?</a>{' '}2 kurze Audioguides ab dem Kreuzfahrtterminal, für 4–5 Stunden Landgang.</>}
-    </p>
-
-    <div class="hero-offer mt-lg" aria-label={lang === 'de' ? 'Schnellueberblick zum Angebot' : lang === 'it' ? 'Panoramica rapida dell offerta' : 'Quick offer summary'}>
-      <div class="hero-offer-grid">
-        <p class="hero-offer-item">
-          <span class="hero-offer-kicker">{lang === 'de' ? 'Catalogo' : lang === 'it' ? 'Catalogo' : 'Catalog'}</span>
-          <span class="hero-offer-value">18 guide</span>
-        </p>
-        <p class="hero-offer-item">
-          <span class="hero-offer-kicker">{lang === 'de' ? 'Prezzo' : lang === 'it' ? 'Prezzo' : 'Pricing'}</span>
-          <span class="hero-offer-value">{quickPrice}</span>
-        </p>
-        <p class="hero-offer-item">
-          <span class="hero-offer-kicker">{lang === 'de' ? 'Accesso' : lang === 'it' ? 'Accesso' : 'Access'}</span>
-          <span class="hero-offer-value">{quickAccess}</span>
-        </p>
-      </div>
-      <p class="hero-offer-summary">{quickBundle}</p>
-      <div class="hero-offer-links">
-        <a href="#prezzi" class="hero-offer-link">{quickPricingLabel}</a>
-        <a href="#come-funziona" class="hero-offer-link">{quickHowLabel}</a>
-      </div>
     </div>
 
   </div>
@@ -249,66 +209,6 @@ const altText = lang === 'de'
   .hero-lede     { animation-delay: 0.75s; }
   :global(.hero-sample) { animation-delay: 0.9s; }
   .hero-actions  { animation-delay: 1.05s; }
-  .hero-offer {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.15s forwards;
-    background: oklch(from var(--color-surface) l c h / 0.72);
-    border: 1px solid oklch(from var(--color-border) l c h / 0.82);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-md);
-    max-width: 42rem;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 20px 36px -26px oklch(20% 0.025 240 / 0.35);
-  }
-  .hero-offer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--spacing-sm);
-  }
-  .hero-offer-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    margin: 0;
-  }
-  .hero-offer-kicker {
-    font-size: 0.66rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-ink-subtle);
-  }
-  .hero-offer-value {
-    font-size: 0.95rem;
-    line-height: 1.35;
-    color: var(--color-ink);
-    text-wrap: balance;
-  }
-  .hero-offer-summary {
-    margin-top: var(--spacing-sm);
-    font-size: 0.85rem;
-    line-height: 1.45;
-    color: var(--color-ink-muted);
-  }
-  .hero-offer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-sm);
-  }
-  .hero-offer-link {
-    color: var(--color-ink);
-    font-size: 0.83rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 1px solid oklch(from var(--color-ink) l c h / 0.28);
-    padding-bottom: 2px;
-  }
-  .hero-offer-link:hover {
-    color: var(--color-link-pressed);
-    border-bottom-color: oklch(from var(--color-link-pressed) l c h / 0.4);
-  }
 
   @keyframes ruleDraw { to { transform: scaleX(1); } }
   @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
@@ -334,16 +234,6 @@ const altText = lang === 'de'
       margin-top: var(--spacing-xl);
       gap: var(--spacing-md);
     }
-    .hero-offer {
-      margin-top: var(--spacing-xl);
-      animation-delay: 0.65s;
-    }
-    .hero-offer-grid {
-      grid-template-columns: 1fr;
-    }
-    .hero-offer-links {
-      gap: var(--spacing-sm);
-    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -352,8 +242,7 @@ const altText = lang === 'de'
     .hero-h1 > span,
     .hero-lede,
     :global(.hero-sample),
-    .hero-actions,
-    .hero-offer {
+    .hero-actions {
       animation: none;
       transform: none;
       opacity: 1;
