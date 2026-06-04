@@ -8,13 +8,13 @@ export interface Props {
 const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : lang === 'de' ? 'Tafel IV — Die Reiseziele' : 'Plate IV — The destinations';
-const heading1 = lang === 'it' ? 'Scegli dove andare.' : lang === 'de' ? 'Wähle, wohin du hören willst.' : 'Choose your destination.';
-const heading2 = lang === 'it' ? 'Ogni zona, una voce diversa.' : lang === 'de' ? 'Jede Gegend hat ihre eigene Stimme.' : 'Every zone, a different voice.';
+const heading1 = lang === 'it' ? 'Scegli la tua prossima storia.' : lang === 'de' ? 'Wähle deine nächste Geschichte.' : 'Choose your next story.';
+const heading2 = lang === 'it' ? 'Ogni zona, un testo che ti porta dentro.' : lang === 'de' ? 'Jede Gegend, ein Text, der dich hineinzieht.' : 'Every area, a text that pulls you in.';
 const intro = lang === 'it'
-  ? 'Non un catalogo turistico. Una collezione di voci: ogni destinazione ha i suoi autori, le sue storie, il suo suono.'
+  ? 'Basta cataloghi turistici senz\'anima. Qui ogni destinazione diventa un testo da ricordare: storie reali quando dichiarate, fonti, dettagli locali e scrittura Localis pensata per farti entrare nel luogo prima ancora di partire.'
   : lang === 'de'
-  ? 'Kein touristischer Katalog, sondern eine Sammlung von Stimmen: Jedes Reiseziel hat seine eigenen Erzähler, seine eigenen Geschichten und seinen eigenen Klang.'
-  : 'Not a tourist catalogue. A collection of voices: every destination has its own authors, its own stories, its own sound.';
+  ? 'Keine seelenlosen Reisekataloge. Hier wird jedes Reiseziel zu einem Text, der bleibt: echte Geschichten, wenn sie als solche gekennzeichnet sind, Quellen, lokale Details und Localis-Schreiben, das dich in den Ort hineinzieht, bevor du aufbrichst.'
+  : 'Forget soulless tourist catalogues. Here, every destination becomes a text worth remembering: real stories when declared, sources, local details and Localis writing built to pull you into the place before you even leave.';
 
 interface Destination {
   slug: string;
