@@ -22,7 +22,7 @@ export function computeWatermarkKey(email: string, slug: string, lang: Lang): st
  * Source audio key for a given guide+language.
  */
 export function sourceAudioKey(slug: string, lang: Lang): string {
-  return `guides/${slug}/full-${lang}.mp3`;
+  return `guides/${slug}/${slug}-${lang}.mp3`;
 }
 
 /**
