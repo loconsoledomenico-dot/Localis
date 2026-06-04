@@ -175,8 +175,10 @@ const ariaLabel = `${finalLabel} · ${price}`;
     }
 
     cta.addEventListener('click', () => {
-      const win = window as WithPlausible;
-      if (typeof win.plausible === 'function') {
+      const win = window as WithPlausible & { localisTrack?: (name: string, params?: Record<string, string | number | boolean>) => void };
+      if (typeof win.localisTrack === 'function') {
+        win.localisTrack('mobile_sticky_cta_click');
+      } else if (typeof win.plausible === 'function') {
         win.plausible('Mobile Sticky CTA Click');
       }
     });

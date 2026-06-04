@@ -136,15 +136,23 @@ const guides: GuideEntry[] = [
       object-position: center center;
       filter: saturate(0.92) contrast(1.04);
     }
+    .gargano-hero .text-ink,
+    .gargano-hero h1 {
+      color: oklch(12% 0.005 240) !important;
+    }
+    .gargano-hero .text-ink-muted,
+    .gargano-hero p {
+      color: oklch(22% 0.008 240 / 0.9) !important;
+    }
     .gargano-hero-scrim {
       position: absolute;
       inset: 0;
       background: linear-gradient(
         to right,
-        oklch(from var(--color-surface) l c h / 0.88) 0%,
-        oklch(from var(--color-surface) l c h / 0.65) 35%,
-        oklch(from var(--color-surface) l c h / 0.18) 70%,
-        oklch(from var(--color-surface) l c h / 0) 100%
+        oklch(from var(--color-surface) l c h / 0.96) 0%,
+        oklch(from var(--color-surface) l c h / 0.85) 35%,
+        oklch(from var(--color-surface) l c h / 0.45) 62%,
+        oklch(from var(--color-surface) l c h / 0) 85%
       );
       pointer-events: none;
     }
@@ -152,9 +160,9 @@ const guides: GuideEntry[] = [
       .gargano-hero-scrim {
         background: linear-gradient(
           to bottom,
-          oklch(from var(--color-surface) l c h / 0.92) 0%,
-          oklch(from var(--color-surface) l c h / 0.72) 60%,
-          oklch(from var(--color-surface) l c h / 0.5) 100%
+          oklch(from var(--color-surface) l c h / 0.78) 0%,
+          oklch(from var(--color-surface) l c h / 0.58) 60%,
+          oklch(from var(--color-surface) l c h / 0.35) 100%
         );
       }
     }
