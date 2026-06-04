@@ -13,6 +13,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
+    "sheet:auth": "node scripts/google-oauth.mjs",
+    "sheet:sync": "node scripts/partner-qr-sheet-sync.mjs",
     "test": "vitest --configLoader runner run",
     "test:watch": "vitest --configLoader runner",
     "test:e2e": "playwright test"
@@ -35,6 +37,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "@types/jsonwebtoken": "^9.0.10",
     "@vitest/ui": "^4.1.7",
+    "googleapis": "^173.0.0",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.7"
