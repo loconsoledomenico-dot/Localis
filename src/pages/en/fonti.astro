@@ -7,11 +7,23 @@ const sources = (await getCollection('sources')).sort((a, b) =>
   a.data.guide_title_en.localeCompare(b.data.guide_title_en),
 );
 
+type SourceRef = {
+  author?: string;
+  title: string;
+  publisher?: string;
+  year?: number;
+  url?: string;
+};
+
+type ChapterWithSources = {
+  facts: Array<{ sources: SourceRef[] }>;
+};
+
 function formatDate(d: Date): string {
   return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-function formatSource(s: { author?: string; title: string; publisher?: string; year?: number; }): string {
+function formatSource(s: SourceRef): string {
   const parts: string[] = [];
   if (s.author) parts.push(s.author);
   parts.push(s.title);
@@ -20,6 +32,22 @@ function formatSource(s: { author?: string; title: string; publisher?: string; y
   if (s.year) tail.push(String(s.year));
   if (tail.length) parts.push(tail.join(', '));
   return parts.join(' · ');
+}
+
+function sourceKey(s: SourceRef): string {
+  return [s.author ?? '', s.title, s.publisher ?? '', s.year ?? '', s.url ?? ''].join('|');
+}
+
+function uniqueChapterSources(chapter: ChapterWithSources): SourceRef[] {
+  const byKey = new Map<string, SourceRef>();
+
+  for (const fact of chapter.facts) {
+    for (const source of fact.sources) {
+      byKey.set(sourceKey(source), source);
+    }
+  }
+
+  return [...byKey.values()];
 }
 ---
 <Layout
@@ -55,17 +83,38 @@ function formatSource(s: { author?: string; title: string; publisher?: string; y
           {entry.data.research_note_en ?? 'For this guide, we cross-checked historical texts, archives, and on-site verification to avoid simplified tourist storytelling.'}
         </p>
 
-        {entry.data.chapters.map((chapter) => (
-          <article class="mb-xl rounded-lg border border-border/80 bg-surface p-md">
-            <h3 class="font-display text-xl text-ink mb-xs">{chapter.title_en ?? 'Chapter'}</h3>
-            <p class="text-sm text-ink mb-sm">{chapter.framing_en ?? 'What this chapter substantiates:'}</p>
+        {entry.data.chapters.map((chapter) => {
+          const translatedFacts = chapter.facts.filter((fact) => fact.claim_en);
+          const chapterSources = uniqueChapterSources(chapter);
 
-            {chapter.facts.some((fact) => fact.claim_en) ? (
-              chapter.facts.filter((fact) => fact.claim_en).map((fact) => (
-                <div class="mb-md">
-                  <p class="text-sm italic text-ink-muted mb-xs">{fact.claim_en}</p>
+          return (
+            <article class="mb-xl rounded-lg border border-border/80 bg-surface p-md">
+              <h3 class="font-display text-xl text-ink mb-xs">{chapter.title_en ?? 'Chapter'}</h3>
+              <p class="text-sm text-ink mb-sm">{chapter.framing_en ?? 'What this chapter substantiates:'}</p>
+
+              {translatedFacts.length > 0 ? (
+                translatedFacts.map((fact) => (
+                  <div class="mb-md">
+                    <p class="text-sm italic text-ink-muted mb-xs">{fact.claim_en}</p>
+                    <ul class="list-disc pl-lg space-y-2xs">
+                      {fact.sources.map((source) => (
+                        <li class="text-sm text-ink-muted leading-snug">
+                          {source.url
+                            ? <a href={source.url} target="_blank" rel="noopener noreferrer">{formatSource(source)}</a>
+                            : formatSource(source)}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <p class="text-sm text-ink-muted mb-md">
+                    The detailed source claims for this chapter are still being translated. The sources used are already listed in full.
+                  </p>
+                  <h4 class="text-xs font-semibold tracking-[0.18em] uppercase text-ink-subtle mb-xs">Sources for this chapter</h4>
                   <ul class="list-disc pl-lg space-y-2xs">
-                    {fact.sources.map((source) => (
+                    {chapterSources.map((source) => (
                       <li class="text-sm text-ink-muted leading-snug">
                         {source.url
                           ? <a href={source.url} target="_blank" rel="noopener noreferrer">{formatSource(source)}</a>
@@ -73,15 +122,11 @@ function formatSource(s: { author?: string; title: string; publisher?: string; y
                       </li>
                     ))}
                   </ul>
-                </div>
-              ))
-            ) : (
-              <p class="text-sm text-ink-muted mb-0">
-                The detailed source claims for this chapter are being translated. The bibliography is already available below through the cited sources.
-              </p>
-            )}
-          </article>
-        ))}
+                </>
+              )}
+            </article>
+          );
+        })}
       </section>
     ))}
   </article>
