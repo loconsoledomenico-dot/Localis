@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  NODE_OPTIONS = "--max-old-space-size=4096"
   NPM_FLAGS = "--no-frozen-lockfile"
   # The Netlify secrets scanner trips on the *name* of these env vars
   # appearing in source/docs (process.env.X references, .env.example,
