@@ -57,23 +57,29 @@ function formatSource(s: { author?: string; title: string; publisher?: string; y
 
         {entry.data.chapters.map((chapter) => (
           <article class="mb-xl rounded-lg border border-border/80 bg-surface p-md">
-            <h3 class="font-display text-xl text-ink mb-xs">{chapter.title_de ?? chapter.title_en ?? chapter.title_it}</h3>
+            <h3 class="font-display text-xl text-ink mb-xs">{chapter.title_de ?? chapter.title_en ?? 'Kapitel'}</h3>
             <p class="text-sm text-ink mb-sm">{chapter.framing_de ?? chapter.framing_en ?? 'Was dieses Kapitel belegt:'}</p>
 
-            {chapter.facts.map((fact) => (
-              <div class="mb-md">
-                <p class="text-sm italic text-ink-muted mb-xs">{fact.claim_de ?? fact.claim_en ?? fact.claim_it}</p>
-                <ul class="list-disc pl-lg space-y-2xs">
-                  {fact.sources.map((source) => (
-                    <li class="text-sm text-ink-muted leading-snug">
-                      {source.url
-                        ? <a href={source.url} target="_blank" rel="noopener noreferrer">{formatSource(source)}</a>
-                        : formatSource(source)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {chapter.facts.some((fact) => fact.claim_de ?? fact.claim_en) ? (
+              chapter.facts.filter((fact) => fact.claim_de ?? fact.claim_en).map((fact) => (
+                <div class="mb-md">
+                  <p class="text-sm italic text-ink-muted mb-xs">{fact.claim_de ?? fact.claim_en}</p>
+                  <ul class="list-disc pl-lg space-y-2xs">
+                    {fact.sources.map((source) => (
+                      <li class="text-sm text-ink-muted leading-snug">
+                        {source.url
+                          ? <a href={source.url} target="_blank" rel="noopener noreferrer">{formatSource(source)}</a>
+                          : formatSource(source)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <p class="text-sm text-ink-muted mb-0">
+                Die detaillierten Quellen-Claims für dieses Kapitel werden übersetzt. Die Bibliografie ist über die unten genannten Quellen bereits verfügbar.
+              </p>
+            )}
           </article>
         ))}
       </section>

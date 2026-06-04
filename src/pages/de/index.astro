@@ -33,19 +33,39 @@ import StepsBlock from '../../components/StepsBlock.astro';
   <StatsBlock lang="de" />
 
   <FeatureBlock
-    eyebrow="Geschichten · Autoren"
-    heading="Jede Stimme hat einen Namen."
-    body="Unsere Guides werden von echten Einheimischen erzählt — Leuten, die dort geboren wurden und aufgewachsen sind. Keine Schauspieler, keine Skripte von Reiseagenturen."
+    eyebrow="Recherche · Methode — Tafel III"
+    heading="In Apulien geschrieben."
+    italicEnding="Mit überprüfbaren Quellen."
+    body="Jede Guide entsteht aus Recherche und redaktioneller Prüfung: historische Quellen, institutionelle Quellen und, wo sie wirklich gesammelt wurde, lokale Erinnerung. Auf der Seite Quellen veröffentlichen wir die Referenzen, aus denen die Erzählungen gebaut sind."
+    bullets={[
+      'Akademische Quellen · Treccani, DBI, Houben, Abulafia, Cioffari',
+      "Veröffentlichte Guides · Bari, Valle d'Itria, Gargano",
+      'Italienisch, Englisch, Deutsch · separat geschrieben, nie automatisch übersetzt',
+      'Nachprüfbar · jede belegte Aussage auf /de/fonti, Kapitel für Kapitel',
+    ]}
     imageSrc="/images/covers/fonti-ricerca.jpg"
-    imageAlt="Recherche-Schreibtisch mit Notizen und Büchern über Bari"
-    bullets={[]}
-    ctaLabel="Guides entdecken"
-    ctaHref="/de/guide"
+    imageAlt="Recherche-Schreibtisch: Bücher zur Geschichte Baris, offenes Notizbuch, historische Postkarten, Karte und Zeitungsausschnitt über die Reliquien des heiligen Nikolaus"
+    caption="Der Schreibtisch vor der Stimme. Bücher, Notizen, Postkarten, Ausschnitte — jedes Kapitel beginnt hier."
+    ctaLabel="Unsere Methode"
+    ctaHref="/de/methode"
+    imageSide="left"
+    tiltDeg={-1.5}
   />
 
-  <DestinationsBlock lang="de" />
+  <section class="manifesto-section bg-surface-elev border-y border-border">
+    <div class="max-w-narrow mx-auto px-md py-xl lg:py-2xl">
+      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-md">
+        — Manifest —
+      </p>
 
-  <StepsBlock lang="de" ctaHref="/de/guide/bari-vecchia" />
+      <blockquote class="manifesto-quote font-display italic text-ink leading-[1.2] text-[clamp(1.3rem,3vw,1.9rem)] m-0 max-w-[32ch] mx-auto text-center">
+        Normale Audioguides sagen dir,&nbsp;was.<br />
+        Unsere sagen dir,&nbsp;warum.
+      </blockquote>
+    </div>
+  </section>
+
+  <DestinationsBlock lang="de" />
 
   <section class="bg-surface" id="preise">
     <div class="max-w-wrap mx-auto px-md py-2xl text-center">
@@ -65,4 +85,47 @@ import StepsBlock from '../../components/StepsBlock.astro';
       </div>
     </div>
   </section>
+
+  <FeatureBlock
+    eyebrow="Werkzeug — Tafel V"
+    heading="Öffnet sich mit einem Link."
+    italicEnding="Hören, wo du willst. Keine App."
+    body="Du kaufst mit E-Mail und Karte. Danach bekommst du einen dauerhaften Link: öffnen, Play drücken, hören. Auf der Straße beim Gehen, auf dem Sofa vor der Reise oder im Zug zurück. Das sind Erzählungen, keine Museums-Audios, die nur beschreiben, was vor dir steht — sie bringen dich nach Bari hinein, auch wenn du noch nicht dort bist."
+    bullets={[
+      'Freies Hören · vor Ort, vorher, danach, überall',
+      'Magic Link per E-Mail · kein Passwort, kein Konto',
+      'Dauerhafter Link · die Guide gehört dir, immer wieder hörbar',
+    ]}
+    imageSrc="/images/covers/nave-crociera.jpg"
+    imageAlt="Kreuzfahrtgäste gehen in Bari vor der MSC Splendida von Bord; im Hintergrund Hafenpromenade und helles Sonnenlicht"
+    caption="Bari, Kreuzfahrthafen. Auch mit wenigen Stunden an Land kann die Erzählung beginnen, bevor man die Stadt wirklich durchquert."
+    ctaLabel="Route für Kreuzfahrtgäste entdecken"
+    ctaHref="/de/kreuzfahrt"
+    imageSide="right"
+    tiltDeg={1.5}
+    mobileAspect="3 / 2"
+    framedImage
+  />
+
+  <StepsBlock lang="de" ctaHref="/de/guide/bari-vecchia" />
 </Layout>
+
+<style>
+  .manifesto-quote {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: manifestoIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+  }
+
+  @keyframes manifestoIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .manifesto-quote {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
