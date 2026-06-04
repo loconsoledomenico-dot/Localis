@@ -72,7 +72,7 @@ const altText = lang === 'de'
       {lede1}
     </p>
 
-    <HeroAudioSample lang={lang} src={lang === 'en' ? '/audio/trailers/hero-sample-en.mp3' : '/audio/trailers/hero-sample.mp3'} />
+    <HeroAudioSample lang={lang} src={lang === 'en' ? '/audio/trailers/hero-sample-en.mp3' : lang === 'de' ? '/audio/trailers/hero-sample-de.mp3' : '/audio/trailers/hero-sample.mp3'} />
 
     <div class="hero-actions mt-lg flex flex-col sm:flex-row gap-sm flex-wrap">
       <a
