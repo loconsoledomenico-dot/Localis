@@ -13,10 +13,22 @@ const { guide, lang } = Astro.props;
 const durationLabel = formatDuration(guideDurationSeconds(guide, lang));
 const chapterCount = guide.chapters.length;
 
+const defaultIntro = lang === 'it'
+  ? 'Ascoltala liberamente mentre cammini, oppure parti dal punto consigliato e segui le tappe. Localis non è una navigazione turn-by-turn: ti dà contesto, storia e sguardo sul luogo.'
+  : lang === 'de'
+    ? 'Du kannst sie frei anhoeren oder, falls angegeben, am empfohlenen Startpunkt beginnen und den Ort durchqueren, waehrend sich die Geschichte entfaltet. Localis ist keine Turn-by-Turn-Navigation: Nutze die Karte deines Telefons zur Orientierung.'
+    : "You can listen freely, or, where indicated, begin from the suggested starting point and walk through the place as the story unfolds. Localis is not turn-by-turn navigation: use your phone map to find your way.";
+
+const introOverride = lang === 'it'
+  ? guide.use_case_intro_it
+  : lang === 'de'
+    ? (guide.use_case_intro_de ?? guide.use_case_intro_en)
+    : guide.use_case_intro_en;
+
 const copy = lang === 'it'
   ? {
       heading: 'Come ascoltarla',
-      intro: 'Ascoltala liberamente mentre cammini, oppure parti dal punto consigliato e segui le tappe. Localis non è una navigazione turn-by-turn: ti dà contesto, storia e sguardo sul luogo.',
+      intro: introOverride ?? defaultIntro,
       items: [
         { label: 'Durata', value: `${durationLabel} · ${chapterCount} capitoli audio` },
         { label: 'Accesso', value: 'Dopo l\'acquisto ricevi subito il link. Ascolta in streaming oppure salva offline prima di iniziare.' },
@@ -26,7 +38,7 @@ const copy = lang === 'it'
   : lang === 'de'
     ? {
         heading: 'So hoerst du die Erzaehlung',
-        intro: 'Du kannst sie frei anhoeren oder, falls angegeben, am empfohlenen Startpunkt beginnen und den Ort durchqueren, waehrend sich die Geschichte entfaltet. Localis ist keine Turn-by-Turn-Navigation: Nutze die Karte deines Telefons zur Orientierung.',
+        intro: introOverride ?? defaultIntro,
         items: [
           { label: 'Dauer', value: `${durationLabel}, ${chapterCount} Kapitel` },
           { label: 'Zugang', value: 'Nach dem Kauf erhaeltst du sofort den Link. Du kannst sie streamen oder fuer das Offline-Hoeren speichern.' },
@@ -35,10 +47,10 @@ const copy = lang === 'it'
       }
     : {
         heading: 'How to listen',
-        intro: "You can listen freely, or, where indicated, begin from the suggested starting point and walk through the place as the story unfolds. Localis is not turn-by-turn navigation: use your phone map to find your way.",
+        intro: introOverride ?? defaultIntro,
         items: [
           { label: 'Runtime', value: `${durationLabel}, ${chapterCount} chapters` },
-          { label: 'Access', value: 'After purchase, you receive an immediate link. Stream it or save it for offline listening during your visit.' },
+          { label: 'Access', value: 'After purchase, you receive an immediate link. Stream it or save it for offline listening before you begin.' },
           { label: 'Languages', value: 'Shown for each story' },
         ],
       };
