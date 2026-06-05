@@ -24,6 +24,7 @@ interface Place {
   startsAt: string;
   cover: string;
   alt: string;
+  objectPosition?: string;
   /** Prezzo singolo della guida (es. "€4,99") — vuoto sul placeholder */
   price?: string;
   draft?: boolean;
@@ -49,6 +50,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Basilica di San Nicola',
         cover: '/images/covers/san-nicola-cripta.jpg',
         alt: 'Cripta della Basilica di San Nicola a Bari, con colonne e arcate illuminate',
+        objectPosition: '72% center',
         price: '€4,99',
       },
       {
@@ -112,6 +114,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Basilika San Nicola',
         cover: '/images/covers/san-nicola-cripta.jpg',
         alt: 'Krypta der Basilika San Nicola in Bari mit beleuchteten Säulen und Bögen',
+        objectPosition: '72% center',
         price: '4,99 €',
       },
       {
@@ -174,6 +177,7 @@ const places: Place[] = lang === 'it'
         startsAt: 'Basilica di San Nicola',
         cover: '/images/covers/san-nicola-cripta.jpg',
         alt: 'Crypt of the Basilica of San Nicola in Bari, with illuminated columns and arches',
+        objectPosition: '72% center',
         price: '€4.99',
       },
       {
@@ -264,6 +268,7 @@ const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' :
                     src={p.cover}
                     alt={p.alt}
                     class="place-img"
+                    style={p.objectPosition ? `object-position: ${p.objectPosition}` : undefined}
                     loading="lazy"
                     decoding="async"
                   />
