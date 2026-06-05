@@ -29,13 +29,13 @@ export interface Props {
 const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola VI - Gli autori' : lang === 'de' ? 'Tafel VI - Die Autoren' : 'Plate VI - The authors';
-const heading1 = lang === 'it' ? 'Cinque autori con storie di vita vera, un ritratto narrativo dichiarato.' : lang === 'de' ? 'Fünf Autorinnen und Autoren mit echten Lebensgeschichten, ein klar gekennzeichnetes narratives Porträt.' : 'Five authors with real life stories, one declared narrative portrait.';
+const heading1 = lang === 'it' ? 'Le persone dietro i racconti.' : lang === 'de' ? 'Die Menschen hinter den Erzählungen.' : 'The people behind the stories.';
 const heading2 = lang === 'it' ? 'Sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Erzählungen, ein Bari.' : 'Six stories, one Bari.';
 const intro = lang === 'it'
-  ? 'Le guide di Bari si fondano sulle storie di vita vera degli autori e sulla ricerca Localis: esperienze reali, memoria locale, dettagli che non trovi in un catalogo. Una guida utilizza un ritratto narrativo dichiarato. L\'audio è generato con ElevenLabs; i testi, le storie dichiarate, le fonti e la responsabilità editoriale restano reali.'
+  ? 'Le guide di Bari nascono da ricerca, fonti consultabili e memoria locale quando disponibile. Ogni racconto ha una prospettiva dichiarata, ma la narrazione audio è generata con ElevenLabs.'
   : lang === 'de'
-    ? 'Die Bari-Erzählungen beruhen auf den echten Lebensgeschichten der Autorinnen und Autoren und auf der Recherche von Localis: reale Erfahrungen, lokale Erinnerung und Details, die in keinem Katalog stehen. Eine Erzählung verwendet ein klar gekennzeichnetes narratives Porträt. Das Audio wird mit ElevenLabs erzeugt; Texte, gekennzeichnete Geschichten, Quellen und redaktionelle Verantwortung bleiben real.'
-    : 'The Bari stories are built on the authors\' real life stories and Localis research: lived experience, local memory and details you will not find in a catalogue. One story uses a clearly declared narrative portrait. The audio is generated with ElevenLabs; the texts, declared stories, sources and editorial responsibility remain real.';
+    ? 'Die Bari-Guides entstehen aus Recherche, einsehbaren Quellen und lokaler Erinnerung, wenn verfügbar. Jede Erzählung hat eine erklärte Perspektive, aber die Audionarration wird mit ElevenLabs generiert.'
+    : 'The Bari guides are built from research, consultable sources and local memory when available. Every story has a declared perspective, but the audio narration is generated with ElevenLabs.';
 const draftBadge = lang === 'it' ? 'Profilo in arrivo' : lang === 'de' ? 'Profil folgt' : 'Profile coming';
 const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : lang === 'de' ? 'Portraet folgt' : 'Portrait coming';
 
