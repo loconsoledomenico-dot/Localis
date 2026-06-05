@@ -8,7 +8,7 @@ export interface Props {
 const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : lang === 'de' ? 'Tafel IV — Die Reiseziele' : 'Plate IV — The destinations';
-const heading1 = lang === 'it' ? 'Scegli la tua prossima storia.' : lang === 'de' ? 'Wähle deine nächste Geschichte.' : 'Choose your next story.';
+const heading1 = lang === 'it' ? 'Scegli la tua zona.' : lang === 'de' ? 'Wähle deine Region.' : 'Choose your area.';
 const heading2 = lang === 'it' ? 'Ogni zona, un testo che ti porta dentro.' : lang === 'de' ? 'Jede Gegend, ein Text, der dich hineinzieht.' : 'Every area, a text that pulls you in.';
 const intro = lang === 'it'
   ? 'Basta cataloghi turistici senz\'anima. Qui ogni destinazione diventa un testo da ricordare: storie reali quando dichiarate, fonti, dettagli locali e scrittura Localis pensata per farti entrare nel luogo prima ancora di partire.'
@@ -33,7 +33,7 @@ const destinations: Destination[] = lang === 'it'
         slug: 'bari',
         href: '/bari',
         name: 'Bari',
-        tagline: 'La città che non ti aspetti.',
+        tagline: 'Sei racconti per capire la città.',
         guidesLabel: '6 guide',
         cover: '/images/covers/bari-landing-v2.jpg',
         alt: 'Vicolo del Borgo Antico di Bari con colonne romane e palazzi storici',
@@ -63,7 +63,7 @@ const destinations: Destination[] = lang === 'it'
         slug: 'bari',
         href: '/de/bari',
         name: 'Bari',
-        tagline: 'Die Stadt, die du so nicht erwartest.',
+        tagline: 'Sechs Erzählungen, um die Stadt zu verstehen.',
         guidesLabel: '6 Erzählungen',
         cover: '/images/covers/bari-landing-v2.jpg',
         alt: 'Gasse in der Altstadt von Bari mit antiken römischen Säulen',
@@ -92,7 +92,7 @@ const destinations: Destination[] = lang === 'it'
         slug: 'bari',
         href: '/en/bari',
         name: 'Bari',
-        tagline: "The city you didn't expect.",
+        tagline: 'Six stories to understand the city.',
         guidesLabel: '6 guides live',
         cover: '/images/covers/bari-landing-v2.jpg',
         alt: "Lane of Bari's Old Town with ancient Roman columns",

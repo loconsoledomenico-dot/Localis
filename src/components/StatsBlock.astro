@@ -11,24 +11,27 @@ const eyebrow = lang === 'it' ? 'Tavola II — Come funziona' : lang === 'de' ? 
 
 const items = lang === 'it'
   ? [
-      { value: '~30 min',          label: 'per guida',            tail: 'ascolto comodo, senza fretta' },
-      { value: 'Senza app',        label: 'niente da installare', tail: 'un link, premi play, ascolti' },
-      { value: 'Rimborso 1-click', label: 'entro 24h',            tail: 'scrivi una riga, soldi indietro senza domande' },
-      { value: '€4,99',            label: 'una guida',            tail: 'o bundle da €11,99 / €19,99' },
+      { value: '~30 min',   label: 'per guida',            tail: 'ascolto comodo, senza fretta' },
+      { value: 'Senza app', label: 'niente da installare', tail: 'un link, premi play, ascolti' },
+      { value: '€4,99',     label: 'una guida',            tail: 'o bundle da €11,99 / €19,99' },
     ]
   : lang === 'de'
   ? [
-      { value: '~30 Min.',        label: 'pro Erzählung',       tail: 'in Ruhe hören, ohne Eile' },
-      { value: 'Keine App',       label: 'nichts zu installieren', tail: 'Link öffnen, Play drücken, zuhören' },
-      { value: 'Rückerstattung mit 1 Klick', label: 'innerhalb von 24h', tail: 'eine Nachricht genügt, Geld zurück' },
-      { value: '4,99 €',          label: 'eine Erzählung',      tail: 'oder Bundle für 11,99 € / 19,99 €' },
+      { value: '~30 Min.',  label: 'pro Erzählung',          tail: 'in Ruhe hören, ohne Eile' },
+      { value: 'Keine App', label: 'nichts zu installieren', tail: 'Link öffnen, Play drücken, zuhören' },
+      { value: '4,99 €',    label: 'eine Erzählung',         tail: 'oder Bundle für 11,99 € / 19,99 €' },
     ]
   : [
-      { value: '~30 min',          label: 'per guide',            tail: 'comfortable listen, no rush' },
-      { value: 'No app',           label: 'nothing to install',   tail: 'a link, press play, listen' },
-      { value: '1-click refund',   label: 'within 24h',           tail: 'one line to us, money back, no questions' },
-      { value: '€4.99',            label: 'one guide',            tail: 'or bundle €11.99 / €19.99' },
+      { value: '~30 min', label: 'per guide',           tail: 'comfortable listen, no rush' },
+      { value: 'No app',  label: 'nothing to install',  tail: 'a link, press play, listen' },
+      { value: '€4.99',   label: 'one guide',           tail: 'or bundle €11.99 / €19.99' },
     ];
+
+const refundNote = lang === 'it'
+  ? 'Rimborso semplice — scrivi a hello@localis.guide, soldi indietro senza domande.'
+  : lang === 'de'
+  ? 'Einfache Rückerstattung — schreib an hello@localis.guide, Geld zurück ohne Fragen.'
+  : 'Simple refund — write to hello@localis.guide, money back, no questions.';
 ---
 <section class="stats bg-surface-elev border-y border-border">
   <div class="max-w-wrap mx-auto px-md sm:px-lg py-xl lg:py-2xl">
@@ -41,7 +44,7 @@ const items = lang === 'it'
       <span class="block w-7 h-px bg-accent"></span>
     </div>
 
-    <dl class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-md lg:gap-lg m-0 p-0">
+    <dl class="stats-grid grid grid-cols-3 gap-md lg:gap-lg m-0 p-0">
       {items.map((s, i) => (
         <div class="stat-cell text-center" style={`--idx:${i}`}>
           <dt class="sr-only">{s.label} — {s.tail}</dt>
@@ -59,6 +62,10 @@ const items = lang === 'it'
         </div>
       ))}
     </dl>
+
+    <p class="text-center font-body text-[0.72rem] text-ink-subtle mt-lg leading-relaxed">
+      {refundNote}
+    </p>
   </div>
 </section>
 
