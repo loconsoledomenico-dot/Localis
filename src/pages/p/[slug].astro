@@ -17,15 +17,59 @@ export async function getStaticPaths() {
     }));
 }
 
+type AreaKey = 'bari' | 'valle' | 'gargano';
+
+const AREA_CITY_MAP: Record<AreaKey, Set<string>> = {
+  bari: new Set(['bari', 'polignano']),
+  valle: new Set(['alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano']),
+  gargano: new Set(['gargano', 'vieste', 'rodi-garganico', 'peschici', 'vico-del-gargano', 'manfredonia', 'isole-tremiti']),
+};
+
+function resolveArea(city: string): AreaKey {
+  for (const [area, cities] of Object.entries(AREA_CITY_MAP) as [AreaKey, Set<string>][]) {
+    if (cities.has(city)) return area;
+  }
+  return 'bari';
+}
+
 const { partner } = Astro.props;
+const area = resolveArea(partner.data.city);
 
 const guides = (await getCollection('guides'))
-  .filter((g) => g.data.city === 'bari' && g.data.status === 'live')
+  .filter((g) => AREA_CITY_MAP[area].has(g.data.city) && g.data.status === 'live')
   .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
+
+const primaryGuideSlug = guides[0]?.data.slug ?? 'bari-vecchia';
+const bundleProduct =
+  area === 'gargano' ? 'gargano-completa'
+  : area === 'valle' ? 'valle-completa'
+  : 'bari-completa';
+
+const bundleFeatures =
+  area === 'gargano'
+    ? [
+        'Tutte le 6 guide del Gargano',
+        '~3h 20min di racconto · 6 paesaggi diversi',
+        'Risparmi EUR 9,95 vs guide singole',
+        'Accesso illimitato · Senza app',
+      ]
+    : area === 'valle'
+      ? [
+          "Tutte le 6 guide della Valle d'Itria",
+          '~3h 20min di racconto · 6 luoghi diversi',
+          'Risparmi EUR 9,95 vs guide singole',
+          'Accesso illimitato · Senza app',
+        ]
+      : [
+          'Tutte le 6 guide di Bari',
+          '~2h 20min di racconto · 6 voci diverse',
+          'Risparmi EUR 9,95 vs guide singole',
+          'Accesso illimitato · Senza app',
+        ];
 
 const welcomeIt =
   partner.data.custom_landing_copy_it ||
-  `Benvenuto. Goditi la Puglia come la racconterebbe chi ci vive — direttamente dalla tua stanza al ${partner.data.display_name}.`;
+  `Benvenuto. Goditi la Puglia come la racconterebbe chi ci vive, direttamente dalla tua stanza al ${partner.data.display_name}.`;
 ---
 <Layout
   title={`Localis · benvenuto da ${partner.data.display_name}`}
@@ -36,7 +80,7 @@ const welcomeIt =
     <div class="max-w-wrap mx-auto px-md py-2xl text-center">
       <Eyebrow class="justify-center mb-md">In collaborazione con {partner.data.display_name}</Eyebrow>
       <h1 class="font-display text-4xl text-ink leading-tight mb-md max-w-prose mx-auto">
-        Ascolta la Puglia come una storia. <em class="text-accent">Mentre sei lì.</em>
+        Ascolta la Puglia come una storia. <em class="text-accent">Mentre sei li.</em>
       </h1>
       <p class="text-lg text-ink-muted max-w-prose mx-auto">{welcomeIt}</p>
     </div>
@@ -56,7 +100,7 @@ const welcomeIt =
     <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[44rem] mx-auto">
       <PriceCard
         product="single"
-        guideSlug="bari-vecchia"
+        guideSlug={primaryGuideSlug}
         lang="it"
         features={[
           '1 guida a scelta',
@@ -66,15 +110,10 @@ const welcomeIt =
         ]}
       />
       <PriceCard
-        product="bari-completa"
+        product={bundleProduct}
         lang="it"
         primary
-        features={[
-          'Tutte le 6 guide di Bari',
-          '~2h 20min di racconto · 6 voci diverse',
-          'Risparmi €9,95 vs guide singole',
-          'Accesso illimitato · Senza app',
-        ]}
+        features={bundleFeatures}
       />
     </div>
   </section>

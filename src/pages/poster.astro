@@ -345,16 +345,33 @@ export const prerender = true;
       const p = params.get('p') || '';
       const name = params.get('name') || '';
       const targetOverride = params.get('target');
+      const campaign = params.get('campaign') || '';
+      const content = params.get('content') || 'poster';
 
       // QR target URL — preferisce /p/<slug> se partner attivo, altrimenti homepage
-      let qrUrl;
-      if (targetOverride) {
-        qrUrl = targetOverride;
-      } else if (p) {
-        qrUrl = `https://localis.guide/p/${encodeURIComponent(p)}`;
-      } else {
-        qrUrl = 'https://localis.guide/';
+      function buildQrUrl() {
+        let url;
+        try {
+          url = new URL(
+            targetOverride || (p
+              ? `https://localis.guide/p/${encodeURIComponent(p)}/`
+              : 'https://localis.guide/')
+          );
+        } catch (e) {
+          url = new URL('https://localis.guide/');
+        }
+
+        if (p) {
+          if (!url.searchParams.get('utm_source')) url.searchParams.set('utm_source', p);
+          if (!url.searchParams.get('utm_medium')) url.searchParams.set('utm_medium', 'qr');
+          if (campaign && !url.searchParams.get('utm_campaign')) url.searchParams.set('utm_campaign', campaign);
+          if (content && !url.searchParams.get('utm_content')) url.searchParams.set('utm_content', content);
+        }
+
+        return url.toString();
       }
+
+      const qrUrl = buildQrUrl();
 
       const qrImg = document.querySelector('[data-qr-img]');
       const qrParams = new URLSearchParams({

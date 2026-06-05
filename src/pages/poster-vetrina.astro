@@ -284,10 +284,27 @@ export const prerender = true;
       const params = new URLSearchParams(window.location.search);
       const p = params.get('p') || '';
       const name = params.get('name') || '';
+      const campaign = params.get('campaign') || '';
+      const content = params.get('content') || 'vetrina';
 
-      const qrUrl = p
-        ? `https://localis.guide/p/${encodeURIComponent(p)}`
-        : 'https://localis.guide/';
+      function buildQrUrl() {
+        const url = new URL(
+          p
+            ? `https://localis.guide/p/${encodeURIComponent(p)}/`
+            : 'https://localis.guide/'
+        );
+
+        if (p) {
+          url.searchParams.set('utm_source', p);
+          url.searchParams.set('utm_medium', 'qr');
+          if (campaign) url.searchParams.set('utm_campaign', campaign);
+          if (content) url.searchParams.set('utm_content', content);
+        }
+
+        return url.toString();
+      }
+
+      const qrUrl = buildQrUrl();
 
       const qrImg = document.querySelector('[data-qr-img]');
       const qrParams = new URLSearchParams({
