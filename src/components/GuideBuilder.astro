@@ -50,17 +50,17 @@ const ZONE_ORDER = [
     <div class="text-center mb-2xl">
       <h2 class="font-display font-light text-[clamp(1.8rem,4vw,3rem)] text-ink leading-tight">
         {lang === 'it'
-          ? 'Scegli le tue storie.'
+          ? 'Crea il tuo pacchetto.'
           : lang === 'de'
-            ? 'Wähle deine Geschichten.'
-            : 'Choose your stories.'}
+            ? 'Stell dein Paket zusammen.'
+            : 'Build your package.'}
       </h2>
       <p class="font-body text-ink-muted text-base mt-sm max-w-[42ch] mx-auto">
         {lang === 'it'
-          ? 'Crea il tuo itinerario ideale. Lo sconto si applica automaticamente nel carrello.'
+          ? 'Scegli almeno 3 guide. Il prezzo si aggiorna automaticamente.'
           : lang === 'de'
-            ? 'Stell dir deine ideale Route zusammen. Der Rabatt wird automatisch im Warenkorb angewendet.'
-            : 'Build your ideal itinerary. The discount applies automatically in the cart.'}
+            ? 'Wähle mindestens 3 Guides. Der Preis wird automatisch aktualisiert.'
+            : 'Choose at least 3 guides. The price updates automatically.'}
       </p>
       <p class="builder-header-meta font-body text-sm text-ink-subtle mt-sm max-w-[48ch] mx-auto">
         {lang === 'it'
@@ -123,7 +123,7 @@ const ZONE_ORDER = [
           disabled
           data-lang={lang}
         >
-          {lang === 'it' ? 'Seleziona almeno una guida' : lang === 'de' ? 'Wähle mindestens einen Guide aus' : 'Select at least one guide'}
+          {lang === 'it' ? 'Seleziona almeno 3 guide' : lang === 'de' ? 'Wähle mindestens 3 Guides' : 'Select at least 3 guides'}
         </button>
       </div>
       <p id="builder-upsell" class="builder-upsell" aria-hidden="true"></p>
@@ -446,7 +446,7 @@ const ZONE_ORDER = [
     if (n === 0) {
       statusText.textContent = it ? 'Nessuna guida selezionata' : de ? 'Noch keine Guides ausgewählt' : 'No guides selected';
       btn.disabled = true;
-      btn.textContent = it ? 'Seleziona almeno una guida' : de ? 'Wähle mindestens einen Guide aus' : 'Select at least one guide';
+      btn.textContent = it ? 'Seleziona almeno 3 guide' : de ? 'Wähle mindestens 3 Guides' : 'Select at least 3 guides';
       upsell.textContent = '';
       return;
     }
