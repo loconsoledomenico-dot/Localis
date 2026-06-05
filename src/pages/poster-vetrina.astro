@@ -290,11 +290,12 @@ export const prerender = true;
       function buildQrUrl() {
         const url = new URL(
           p
-            ? `https://localis.guide/p/${encodeURIComponent(p)}/`
+            ? 'https://localis.guide/'
             : 'https://localis.guide/'
         );
 
         if (p) {
+          url.searchParams.set('p', p);
           url.searchParams.set('utm_source', p);
           url.searchParams.set('utm_medium', 'qr');
           if (campaign) url.searchParams.set('utm_campaign', campaign);

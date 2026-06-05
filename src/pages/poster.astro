@@ -354,7 +354,7 @@ export const prerender = true;
         try {
           url = new URL(
             targetOverride || (p
-              ? `https://localis.guide/p/${encodeURIComponent(p)}/`
+              ? 'https://localis.guide/'
               : 'https://localis.guide/')
           );
         } catch (e) {
@@ -362,6 +362,7 @@ export const prerender = true;
         }
 
         if (p) {
+          if (!url.searchParams.get('p')) url.searchParams.set('p', p);
           if (!url.searchParams.get('utm_source')) url.searchParams.set('utm_source', p);
           if (!url.searchParams.get('utm_medium')) url.searchParams.set('utm_medium', 'qr');
           if (campaign && !url.searchParams.get('utm_campaign')) url.searchParams.set('utm_campaign', campaign);
