@@ -8,13 +8,13 @@ export interface Props {
 const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola IV — I luoghi' : lang === 'de' ? 'Tafel IV — Die Orte' : 'Plate IV — The places';
-const heading1 = lang === 'it' ? 'Le storie del centro.' : lang === 'de' ? 'Geschichten aus dem Zentrum.' : 'The stories of the centre.';
-const heading2 = lang === 'it' ? 'Un itinerario alla volta.' : lang === 'de' ? 'Eine Erzählung nach der anderen.' : 'One route at a time.';
+const heading1 = lang === 'it' ? 'Sei racconti per capire Bari.' : lang === 'de' ? 'Sechs Erzählungen, um Bari zu verstehen.' : 'Six stories to understand Bari.';
+const heading2 = lang === 'it' ? 'Sei luoghi, una sola città da capire.' : lang === 'de' ? 'Sechs Orte, eine Stadt zum Entdecken.' : 'Six places, one city to discover.';
 const intro = lang === 'it'
-  ? 'Sei racconti tra città vecchia, porto, teatri e sotterranei: cinque fondati sulle storie di vita vera degli autori, uno costruito come ritratto narrativo dichiarato. Tocca un riquadro per ascoltare.'
+  ? 'Sei racconti audio per entrare nella storia viva della città: il borgo antico, San Nicola, il cibo, il porto, i teatri e ciò che resta sotto le strade.'
   : lang === 'de'
-  ? 'Sechs Erzählungen über Altstadt, Hafen, Theater und den Untergrund von Bari: fünf beruhen auf den echten Lebensgeschichten der Autorinnen und Autoren, eine ist ein klar gekennzeichnetes narratives Porträt. Tippe auf eine Karte, um mehr zu erfahren.'
-  : 'Six stories across the old town, the port, theatres and underground Bari: five built on the authors\' real life stories, one created as a clearly declared narrative portrait. Tap a tile to listen.';
+  ? 'Sechs Audioerzählungen, um in die lebendige Geschichte der Stadt einzutauchen: die Altstadt, San Nicola, das Essen, der Hafen, die Theater und was unter den Strassen liegt.'
+  : 'Six audio stories to enter the living history of the city: the old town, San Nicola, food, the port, the theatres and what remains beneath the streets.';
 
 interface Place {
   slug: string;
@@ -53,7 +53,7 @@ const places: Place[] = lang === 'it'
       },
       {
         slug: 'il-meglio-di-bari',
-        title: 'Il Meglio di Bari — Mangia Prima di Capire',
+        title: 'Bari a tavola — Cibo, mare e vicoli',
         duration: '29 min',
         quartiere: 'Borgo Antico',
         startsAt: 'Strada Arco Basso',
@@ -116,7 +116,7 @@ const places: Place[] = lang === 'it'
       },
       {
         slug: 'il-meglio-di-bari',
-        title: 'Das Beste von Bari — Erst essen, dann verstehen',
+        title: 'Bari bei Tisch — Essen, Meer und Gassen',
         duration: '29 min',
         quartiere: 'Altstadt',
         startsAt: 'Strada Arco Basso',
@@ -178,7 +178,7 @@ const places: Place[] = lang === 'it'
       },
       {
         slug: 'il-meglio-di-bari',
-        title: 'The Best of Bari — Eat Before You Think',
+        title: 'Bari at the table — Food, sea and alleyways',
         duration: '29 min',
         quartiere: 'Old town',
         startsAt: 'Strada Arco Basso',
