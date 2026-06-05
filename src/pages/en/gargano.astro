@@ -23,7 +23,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-vieste',
     title: 'Vieste — The City on the Cliff',
-    subtitle: 'Pizzomunno, white cliffs, hidden coves, Pugnochiuso.',
+    subtitle: 'Cliffs, legends and white stone: the city that looks out to sea from above.',
     places: 'Vieste · Pugnochiuso · trabucchi · sea caves',
     narrator: 'Rossella, third generation beach club',
     cover: '/images/covers/gargano-vieste.jpg',
@@ -33,7 +33,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-nord',
     title: 'The Silent Gargano — Villages, Trabucchi and Coast',
-    subtitle: 'Lesina, Rodi Garganico, Peschici. From the trabucco you see everything.',
+    subtitle: 'Secluded villages, trabucchi and slow roads along the coast.',
     places: 'Lesina · Rodi Garganico · Peschici · trabucchi · Lake Lesina',
     narrator: 'Ferdinando, fourth generation trabucco',
     cover: '/images/covers/gargano-nord.jpg',
@@ -43,7 +43,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-sacro',
     title: 'The Sacred Mountain — Forest, Faith and Pilgrims',
-    subtitle: 'The forest, the grotto, the convent. A route medieval pilgrims knew well.',
+    subtitle: 'The forest, the grotto, the convent: the pilgrims\' path on the sacred mountain.',
     places: 'Foresta Umbra · Monte Sant\'Angelo · San Giovanni Rotondo · Padre Pio',
     narrator: "Fra' Salvatore, thirty years at the Sanctuary",
     cover: '/images/covers/gargano-sacro.jpg',
@@ -53,7 +53,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-tremiti',
     title: 'The Tremiti Islands — The Forgotten Archipelago',
-    subtitle: 'San Domino, San Nicola, sea caves. Lucio Dalla came back every year.',
+    subtitle: 'Islands, abbeys and deep sea: the Gargano that continues beyond the coast.',
     places: 'San Domino · San Nicola · sea caves · Benedictine abbey · marine park',
     narrator: 'Tonino, San Domino boatman',
     cover: '/images/covers/gargano-tremiti.jpg',
@@ -63,7 +63,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-paesi',
     title: 'The Villages of Gargano — White Stone and Alleys',
-    subtitle: "The Gargano you can't reach with your GPS set to the beach.",
+    subtitle: 'Stone, alleys and inland villages: the Gargano far from the beaches.',
     places: 'Vico del Gargano · Ischitella · Carpino · Lake Varano',
     narrator: 'Stefano, park ranger for thirty years',
     cover: '/images/covers/gargano-paesi.jpg',
@@ -73,7 +73,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-saline',
     title: 'The Margherita Salt Flats — Salt and Flamingos',
-    subtitle: "Italy's largest salt works. The city buried under the sand.",
+    subtitle: 'Salt, water and flamingos: the landscape where Gargano meets the plain.',
     places: 'Margherita di Savoia salt flats · Manfredonia · Siponto · flamingos',
     narrator: "Antonello, thirty years at the salt works",
     cover: '/images/covers/gargano-saline.jpg',
@@ -172,7 +172,7 @@ const guides: GuideEntry[] = [
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
-      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Six voices · six places · one promontory</p>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Six stories · six places · one promontory</p>
       <span class="block h-px flex-1 bg-border"></span>
     </div>
   </section>
@@ -209,9 +209,10 @@ const guides: GuideEntry[] = [
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <div class="flex items-center justify-center gap-sm mb-2xl">
         <span class="block w-7 h-px bg-accent"></span>
-        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">The voices of Gargano</span>
+        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">The perspectives of Gargano</span>
         <span class="block w-7 h-px bg-accent"></span>
       </div>
+      <p class="font-body text-sm text-ink-muted text-center max-w-[52ch] mx-auto mb-2xl">Narrative portraits built on research, sources and local memory.</p>
       <ul class="narr-grid list-none p-0 m-0">
         {[
           { name: 'Rossella', photo: '/images/authors/rossella-vieste-jun26.jpg', role: 'Third generation beach club, Vieste', bio: "Fifty-four. Her family has run the same beach club since her grandfather's time. She has watched this coastline change more in sixty years than in the six hundred before.", guide: 'Vieste', href: '/en/guide/gargano-vieste' },
@@ -295,7 +296,7 @@ const guides: GuideEntry[] = [
   {/* PRICING */}
   <section id="prezzi" class="bg-surface-elev border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <SectionDivider label="Take what you need" />
+      <SectionDivider label="Choose how to listen to Gargano." />
       <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
         <PriceCard
           product="single"
@@ -322,7 +323,7 @@ const guides: GuideEntry[] = [
           lang="en"
           primary
           titleOverride="Pack 6 Guides (Complete Area)"
-          descriptionOverride="All 6 Gargano guides. Six voices, six landscapes."
+          descriptionOverride="All 6 Gargano guides. Six stories, six landscapes."
           ctaOverride="Get Pack 6 Guides"
           features={[
             'All 6 Gargano guides',

@@ -23,7 +23,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-vieste',
     title: 'Vieste — La Città sul Promontorio',
-    subtitle: 'Pizzomunno, le falesie bianche, le calette, Pugnochiuso.',
+    subtitle: 'Falesie, leggende e pietra bianca: la città che guarda il mare dall\'alto.',
     places: 'Vieste · Pugnochiuso · trabucchi · grotte marine',
     narrator: 'Rossella, voce narrativa della costa di Vieste',
     cover: '/images/covers/gargano-vieste.jpg',
@@ -33,7 +33,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-nord',
     title: 'Il Gargano del Silenzio — Borghi, Trabucchi e Costa',
-    subtitle: 'Lesina, Rodi Garganico, Peschici. Dal trabucco si vede tutto.',
+    subtitle: 'Borghi appartati, trabucchi e strade lente lungo la costa.',
     places: 'Lesina · Rodi Garganico · Peschici · trabucchi · lago di Lesina',
     narrator: 'Ferdinando, voce narrativa dei trabucchi',
     cover: '/images/covers/gargano-nord.jpg',
@@ -43,7 +43,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-sacro',
     title: 'Il Sacro Monte — Foresta, Fede e Pellegrini',
-    subtitle: 'La foresta, la grotta, il convento. Un percorso che i pellegrini medievali conoscevano bene.',
+    subtitle: 'La foresta, la grotta, il convento: il cammino dei pellegrini sul monte sacro.',
     places: 'Foresta Umbra · Monte Sant\'Angelo · San Giovanni Rotondo · Padre Pio',
     narrator: "Fra' Salvatore, trent'anni al Santuario",
     cover: '/images/covers/gargano-sacro.jpg',
@@ -53,7 +53,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-tremiti',
     title: "Le Tremiti — L'Arcipelago Dimenticato",
-    subtitle: 'San Domino, San Nicola, le grotte marine. Un arcipelago che chi lo vede non dimentica.',
+    subtitle: 'Isole, abbazie e mare profondo: il Gargano che continua oltre la costa.',
     places: 'San Domino · San Nicola · grotte marine · abbazia benedettina · parco marino',
     narrator: 'Tonino, barcaiolo di San Domino',
     cover: '/images/covers/gargano-tremiti.jpg',
@@ -63,7 +63,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-paesi',
     title: 'I Paesi del Gargano — Pietra Bianca e Vicoli',
-    subtitle: "Il Gargano che non si raggiunge con il navigatore impostato sul mare.",
+    subtitle: 'Pietra, vicoli e paesi interni: il Gargano lontano dalle spiagge.',
     places: 'Vico del Gargano · Ischitella · Carpino · lago di Varano',
     narrator: 'Stefano, guardiaparco da trent\'anni',
     cover: '/images/covers/gargano-paesi.jpg',
@@ -73,7 +73,7 @@ const guides: GuideEntry[] = [
   {
     slug: 'gargano-saline',
     title: 'Le Saline di Margherita — Sale e Fenicotteri',
-    subtitle: 'Le saline più grandi d\'Italia. La città abbandonata sotto la sabbia.',
+    subtitle: 'Sale, acqua e fenicotteri: il paesaggio dove il Gargano incontra la pianura.',
     places: 'Saline di Margherita di Savoia · Manfredonia · Siponto · fenicotteri',
     narrator: "Antonello, trent'anni alle saline",
     cover: '/images/covers/gargano-saline.jpg',
@@ -112,10 +112,10 @@ const guides: GuideEntry[] = [
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[22ch]">
-        Il Gargano raccontato costa per costa.
+        Il Gargano, tra mare, foresta e fede.
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Sei racconti audio tra mare, foresta, paesi interni e isole.
+        Sei racconti audio tra mare, foresta, paesi interni e isole. Nessuna app.
       </p>
       <HeroAudioSample lang="it" src="/audio/trailers/gargano/gargano-vieste-trailer-it.mp3" />
     </div>
@@ -172,7 +172,7 @@ const guides: GuideEntry[] = [
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
       <span class="block h-px flex-1 bg-border"></span>
-      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei voci · sei luoghi · un promontorio</p>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Sei racconti · sei luoghi · un promontorio</p>
       <span class="block h-px flex-1 bg-border"></span>
     </div>
   </section>
@@ -209,9 +209,10 @@ const guides: GuideEntry[] = [
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <div class="flex items-center justify-center gap-sm mb-2xl">
         <span class="block w-7 h-px bg-accent"></span>
-        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">Le voci del Gargano</span>
+        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">Le prospettive del Gargano</span>
         <span class="block w-7 h-px bg-accent"></span>
       </div>
+      <p class="font-body text-sm text-ink-muted text-center max-w-[52ch] mx-auto mb-2xl">Ritratti narrativi costruiti su ricerca, fonti e memoria dei luoghi.</p>
       <ul class="narr-grid list-none p-0 m-0">
         {[
           { name: 'Rossella', photo: '/images/authors/rossella-vieste-jun26.jpg', role: 'Voce narrativa della costa di Vieste', bio: 'Cinquantaquattro anni. La famiglia gestisce lo stesso lido dai tempi di suo nonno. Ha visto questa costa cambiare più in sessant\'anni che nei seicento precedenti.', guide: 'Vieste', href: '/guide/gargano-vieste' },
@@ -295,7 +296,7 @@ const guides: GuideEntry[] = [
   {/* PRICING */}
   <section id="prezzi" class="bg-surface-elev border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
-      <SectionDivider label="Prendi quella che ti serve" />
+      <SectionDivider label="Scegli come ascoltare il Gargano." />
       <div class="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-[68rem] mx-auto">
         <PriceCard
           product="single"
@@ -322,7 +323,7 @@ const guides: GuideEntry[] = [
           lang="it"
           primary
           titleOverride="Pack 6 Guide (Intera Zona)"
-          descriptionOverride="Tutte le 6 guide del Gargano. Sei voci, sei territori."
+          descriptionOverride="Tutte le 6 guide del Gargano. Sei racconti, sei luoghi."
           ctaOverride="Acquista Pack 6 Guide"
           features={[
             'Tutte le 6 guide del Gargano',
