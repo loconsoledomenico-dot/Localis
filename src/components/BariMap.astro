@@ -224,6 +224,39 @@ const places: Place[] = lang === 'it'
 
 const guidePathPrefix = lang === 'it' ? '/guide/' : lang === 'de' ? '/de/guide/' : '/en/guide/';
 const startsLabel = lang === 'it' ? 'Parte da' : lang === 'de' ? 'Beginnt bei' : 'Starts at';
+const subtitleBySlug: Record<string, Record<Lang, string>> = {
+  'bari-vecchia': {
+    it: 'Vicoli, corti e memoria: il borgo antico oltre la cartolina.',
+    en: 'Lanes, courtyards and memory: the old town beyond the postcard.',
+    de: 'Gassen, Hoefe und Erinnerung: die Altstadt jenseits der Postkarte.',
+  },
+  'san-nicola': {
+    it: 'La basilica, la cripta e il santo che tiene insieme la citta.',
+    en: 'The basilica, the crypt and the saint that holds the city together.',
+    de: 'Die Basilika, die Krypta und der Heilige, der die Stadt verbindet.',
+  },
+  'il-meglio-di-bari': {
+    it: 'Dal mare ai vicoli: il cibo come modo di stare insieme.',
+    en: 'From the sea to the alleyways: food as a way of being together.',
+    de: 'Vom Meer bis in die Gassen: Essen als Art des Zusammenlebens.',
+  },
+  'porto-bari': {
+    it: 'Il mare, le partenze e gli arrivi che hanno costruito Bari.',
+    en: 'The sea, departures and arrivals that shaped Bari.',
+    de: 'Das Meer, die Aufbrueche und Ankuenfte, die Bari gepraegt haben.',
+  },
+  'tre-teatri': {
+    it: 'Piccinni, Petruzzelli e Margherita: la citta vista dal palco.',
+    en: 'Piccinni, Petruzzelli and Margherita: the city seen from the stage.',
+    de: 'Piccinni, Petruzzelli und Margherita: die Stadt von der Buehne aus.',
+  },
+  'bari-sotterranea': {
+    it: 'Sotto le strade: pietre, cripte e tracce della citta nascosta.',
+    en: 'Beneath the streets: stones, crypts and traces of the hidden city.',
+    de: 'Unter den Strassen: Steine, Krypten und Spuren der verborgenen Stadt.',
+  },
+};
+const placeSubtitle = (slug: string) => subtitleBySlug[slug]?.[lang] ?? '';
 const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' : 'Coming';
 ---
 <section id="guide" class="places-section bg-surface scroll-mt-lg">
@@ -298,10 +331,7 @@ const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' :
                 <h3 class="place-title font-display text-ink leading-[1.2] m-0">
                   <span class="font-light">{p.title}</span>
                 </h3>
-                <p class="place-starts m-0">
-                  <span class="place-starts-label">{startsLabel}</span>
-                  <em class="place-starts-where">{p.startsAt}</em>
-                </p>
+                <p class="place-sub font-body text-sm text-ink-muted m-0">{placeSubtitle(p.slug)}</p>
               </div>
             </a>
           </li>
@@ -323,6 +353,7 @@ const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' :
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+    height: 100%;
     text-decoration: none;
     color: inherit;
     border-top: 1px solid var(--color-ink);
@@ -343,7 +374,7 @@ const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' :
   .place-photo {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    height: clamp(16rem, 24vw, 21rem);
     background: var(--color-surface-elev);
     overflow: hidden;
     border-radius: var(--radius-md);
@@ -357,12 +388,6 @@ const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' :
     object-fit: cover;
     display: block;
     filter: saturate(0.94) contrast(1.04);
-    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .place-card:hover .place-img,
-  .place-card:focus-visible .place-img {
-    transform: scale(1.03);
   }
 
   /* Empty placeholder for the 6th tile */
@@ -480,34 +505,12 @@ const comingLabel = lang === 'it' ? 'In arrivo' : lang === 'de' ? 'Demnächst' :
   .place-title {
     font-size: clamp(1.1rem, 2.4vw, 1.35rem);
   }
-  .place-starts {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: var(--spacing-xs);
-    font-family: var(--font-body);
-    font-size: 0.8125rem;
-    color: var(--color-ink-muted);
-    line-height: 1.4;
-  }
-  .place-starts-label {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--color-ink-subtle);
-  }
-  .place-starts-where {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 400;
-    font-size: 0.95rem;
-    color: var(--color-accent);
+  .place-sub {
+    line-height: 1.5;
   }
 
   /* Draft cell tones down meta */
-  .is-draft .place-title,
-  .is-draft .place-starts-where {
+  .is-draft .place-title {
     color: var(--color-ink-subtle);
   }
 
