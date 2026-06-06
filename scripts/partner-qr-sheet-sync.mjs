@@ -13,6 +13,7 @@ const generalSheet = 'Generale';
 const productsSheet = 'Prodotti';
 const totalsSheet = 'Totals';
 const todaySummarySheet = 'Oggi - chiaro';
+const landingOnlySheet = 'Landing - campagne';
 const startDate = process.env.GA4_START_DATE || '30daysAgo';
 const endDate = process.env.GA4_END_DATE || 'yesterday';
 
@@ -62,10 +63,32 @@ async function loadPartners() {
         name: data.display_name || data.slug,
         type: data.type || '',
         city: data.city || '',
+        reportingMode: data.reporting_mode || 'physical_qr',
       });
     }
   }
   return partners;
+}
+
+function partitionPartners(partners) {
+  const qrPartners = new Map();
+  const landingOnlyPartners = new Map();
+  for (const [slug, partner] of partners.entries()) {
+    if (partner.reportingMode === 'landing_only') landingOnlyPartners.set(slug, partner);
+    else qrPartners.set(slug, partner);
+  }
+  return { qrPartners, landingOnlyPartners };
+}
+
+function partitionRecords(records, partners) {
+  const qrRecords = [];
+  const landingOnlyRecords = [];
+  for (const record of records) {
+    const reportingMode = partners.get(record.partnerId)?.reportingMode || 'physical_qr';
+    if (reportingMode === 'landing_only') landingOnlyRecords.push(record);
+    else qrRecords.push(record);
+  }
+  return { qrRecords, landingOnlyRecords };
 }
 
 async function runReport(auth, requestBody) {
@@ -441,6 +464,46 @@ function buildTodaySummaryValues(records) {
   return values;
 }
 
+function buildLandingOnlyValues(records) {
+  const values = [[
+    'Nota: questi record sono attribuzioni di landing/campagna e non vengono inclusi nei tab QR-only finche il partner non passa a reporting_mode: physical_qr.',
+  ], [
+    'Data',
+    'Codice attributo',
+    'Partner/Campagna',
+    'Citta',
+    'Tipo',
+    'Persone del giorno',
+    'Sessioni attribuite del giorno',
+    'Pagine viste del giorno',
+    ...eventColumns.map(([, label]) => label),
+    'Azioni totali del giorno',
+  ]];
+
+  for (const record of records) {
+    values.push([
+      record.date,
+      record.partnerId,
+      record.partnerName,
+      record.city,
+      record.type,
+      record.activeUsers,
+      record.sessions,
+      record.pageViews,
+      ...eventColumns.map(([eventName]) => record.events[eventName] || 0),
+      record.totalEvents,
+    ]);
+  }
+
+  if (records.length === 0) {
+    values.push([
+      'Nessun record landing/campagna nel range selezionato.',
+    ]);
+  }
+
+  return values;
+}
+
 async function loadSpreadsheetId(sheets) {
   if (process.env.PARTNER_QR_SPREADSHEET_ID) return process.env.PARTNER_QR_SPREADSHEET_ID;
   try {
@@ -457,6 +520,7 @@ async function loadSpreadsheetId(sheets) {
         { properties: { title: productsSheet } },
         { properties: { title: totalsSheet } },
         { properties: { title: todaySummarySheet } },
+        { properties: { title: landingOnlySheet } },
       ],
     },
   });
@@ -473,7 +537,7 @@ async function ensureSheets(sheets, spreadsheetId) {
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const existing = new Map(spreadsheet.data.sheets.map((sheet) => [sheet.properties.title, sheet.properties.sheetId]));
   const requests = [];
-  for (const title of [dailySheet, generalSheet, productsSheet, totalsSheet, todaySummarySheet]) {
+  for (const title of [dailySheet, generalSheet, productsSheet, totalsSheet, todaySummarySheet, landingOnlySheet]) {
     if (!existing.has(title)) requests.push({ addSheet: { properties: { title } } });
   }
   if (requests.length) await sheets.spreadsheets.batchUpdate({ spreadsheetId, requestBody: { requests } });
@@ -491,17 +555,20 @@ async function writeSheet(sheets, spreadsheetId, sheetName, values) {
   });
 }
 
-async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, generalColumnCount, productsColumnCount, totalsColumnCount, todaySummaryColumnCount) {
+async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, generalColumnCount, productsColumnCount, totalsColumnCount, todaySummaryColumnCount, landingOnlyColumnCount) {
   const dailyId = sheetIds.get(dailySheet);
   const generalId = sheetIds.get(generalSheet);
   const productsId = sheetIds.get(productsSheet);
   const totalsId = sheetIds.get(totalsSheet);
   const todaySummaryId = sheetIds.get(todaySummarySheet);
+  const landingOnlyId = sheetIds.get(landingOnlySheet);
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const requests = [
     { repeatCell: { range: { sheetId: dailyId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: generalId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: productsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: landingOnlyId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 11 }, backgroundColor: { red: 0.95, green: 0.91, blue: 0.8 }, verticalAlignment: 'MIDDLE', wrapStrategy: 'WRAP' } }, fields: 'userEnteredFormat(textFormat,backgroundColor,verticalAlignment,wrapStrategy)' } },
+    { repeatCell: { range: { sheetId: landingOnlyId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: totalsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 11 }, backgroundColor: { red: 0.99, green: 0.95, blue: 0.8 }, verticalAlignment: 'MIDDLE', wrapStrategy: 'WRAP' } }, fields: 'userEnteredFormat(textFormat,backgroundColor,verticalAlignment,wrapStrategy)' } },
     { repeatCell: { range: { sheetId: totalsId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: todaySummaryId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 12 }, backgroundColor: { red: 0.99, green: 0.95, blue: 0.8 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
@@ -509,17 +576,19 @@ async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, g
     { updateSheetProperties: { properties: { sheetId: dailyId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: generalId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: productsId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
+    { updateSheetProperties: { properties: { sheetId: landingOnlyId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: totalsId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: todaySummaryId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
     { autoResizeDimensions: { dimensions: { sheetId: dailyId, dimension: 'COLUMNS', startIndex: 0, endIndex: dailyColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: generalId, dimension: 'COLUMNS', startIndex: 0, endIndex: generalColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: productsId, dimension: 'COLUMNS', startIndex: 0, endIndex: productsColumnCount } } },
+    { autoResizeDimensions: { dimensions: { sheetId: landingOnlyId, dimension: 'COLUMNS', startIndex: 0, endIndex: landingOnlyColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: totalsId, dimension: 'COLUMNS', startIndex: 0, endIndex: totalsColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: todaySummaryId, dimension: 'COLUMNS', startIndex: 0, endIndex: todaySummaryColumnCount } } },
   ];
 
   for (const sheet of spreadsheet.data.sheets || []) {
-    if (![dailyId, generalId].includes(sheet.properties?.sheetId)) continue;
+    if (![dailyId, generalId, landingOnlyId].includes(sheet.properties?.sheetId)) continue;
     const ruleCount = sheet.conditionalFormats?.length || 0;
     for (let index = ruleCount - 1; index >= 0; index -= 1) {
       requests.push({ deleteConditionalFormatRule: { sheetId: sheet.properties.sheetId, index } });
@@ -529,6 +598,7 @@ async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, g
   const deltaColumnsBySheet = [
     { sheetId: dailyId, columns: [dailyColumnCount - 3, dailyColumnCount - 2, dailyColumnCount - 1] },
     { sheetId: generalId, columns: [generalColumnCount - 3, generalColumnCount - 2, generalColumnCount - 1] },
+    { sheetId: landingOnlyId, columns: [landingOnlyColumnCount - 3, landingOnlyColumnCount - 2, landingOnlyColumnCount - 1] },
   ];
 
   for (const { sheetId, columns } of deltaColumnsBySheet) {
@@ -567,12 +637,15 @@ async function main() {
   const auth = await getAuth();
   const sheets = google.sheets({ version: 'v4', auth });
   const partners = await loadPartners();
+  const { qrPartners } = partitionPartners(partners);
   const records = await collectRows(auth, partners);
-  const dailyValues = buildDailyValues(records);
-  const generalValues = buildGeneralValues(records);
-  const productValues = await collectProductRows(auth, partners);
-  const totalsValues = buildTotalsValues(records, partners);
-  const todaySummaryValues = buildTodaySummaryValues(records);
+  const { qrRecords, landingOnlyRecords } = partitionRecords(records, partners);
+  const dailyValues = buildDailyValues(qrRecords);
+  const generalValues = buildGeneralValues(qrRecords);
+  const productValues = await collectProductRows(auth, qrPartners);
+  const totalsValues = buildTotalsValues(qrRecords, qrPartners);
+  const todaySummaryValues = buildTodaySummaryValues(qrRecords);
+  const landingOnlyValues = buildLandingOnlyValues(landingOnlyRecords);
   const spreadsheetId = await loadSpreadsheetId(sheets);
   const sheetIds = await ensureSheets(sheets, spreadsheetId);
 
@@ -581,7 +654,18 @@ async function main() {
   await writeSheet(sheets, spreadsheetId, productsSheet, productValues);
   await writeSheet(sheets, spreadsheetId, totalsSheet, totalsValues);
   await writeSheet(sheets, spreadsheetId, todaySummarySheet, todaySummaryValues);
-  await formatSheets(sheets, spreadsheetId, sheetIds, dailyValues[0].length, generalValues[0].length, productValues[0].length, totalsValues[0].length, Math.max(...todaySummaryValues.map((row) => row.length)));
+  await writeSheet(sheets, spreadsheetId, landingOnlySheet, landingOnlyValues);
+  await formatSheets(
+    sheets,
+    spreadsheetId,
+    sheetIds,
+    dailyValues[0].length,
+    generalValues[0].length,
+    productValues[0].length,
+    totalsValues[1].length,
+    Math.max(...todaySummaryValues.map((row) => row.length)),
+    Math.max(...landingOnlyValues.map((row) => row.length))
+  );
 
   const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}`;
   await fs.writeFile(statePath, JSON.stringify({
@@ -589,9 +673,15 @@ async function main() {
     spreadsheetUrl: url,
     updatedAt: new Date().toISOString(),
     dateRange: { startDate, endDate },
-    records: records.length,
+    records: qrRecords.length,
+    landingOnlyRecords: landingOnlyRecords.length,
   }, null, 2));
-  console.log(JSON.stringify({ spreadsheetId, spreadsheetUrl: url, records: records.length }, null, 2));
+  console.log(JSON.stringify({
+    spreadsheetId,
+    spreadsheetUrl: url,
+    records: qrRecords.length,
+    landingOnlyRecords: landingOnlyRecords.length,
+  }, null, 2));
 }
 
 main().catch((error) => {
