@@ -64,6 +64,12 @@
   force = true
 
 [[redirects]]
+  from = "http://www.localis.guide/*"
+  to = "https://localis.guide/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://www.localis.guide/*"
   to = "https://localis.guide/:splat"
   status = 301
@@ -78,18 +84,63 @@
   status = 301
   force = true
 
-# InfoPoint landing: noindex via headers (destinata al QR, non al ranking)
+# Partner QR landing: noindex via headers (destinate ad attribuzione/QR, non al ranking)
 [[headers]]
-  for = "/p/infopoint-bari/"
+  for = "/p/*"
   [headers.values]
     X-Robots-Tag = "noindex, follow"
 
 [[headers]]
-  for = "/en/p/infopoint-bari/"
+  for = "/en/p/*"
   [headers.values]
     X-Robots-Tag = "noindex, follow"
 
 [[headers]]
-  for = "/de/p/infopoint-bari/"
+  for = "/de/p/*"
   [headers.values]
     X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/poster/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/poster/"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/poster-vetrina/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/poster-vetrina/"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/recover"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/access-invalid"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/thanks"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/404"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

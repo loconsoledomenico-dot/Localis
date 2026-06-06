@@ -73,6 +73,7 @@ private/*.json
 private/*service-account*.json
 private/*google*.json
 private/*ga4*.json
+private/gsc-auth-link.html
 
 # Local sandbox app data
 .sandbox-appdata/

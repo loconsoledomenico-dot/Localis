@@ -9,12 +9,24 @@ import StepsBlock from '../../components/StepsBlock.astro';
 import LangPills from '../../components/LangPills.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import HeroAudioSample from '../../components/HeroAudioSample.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { itemListLD } from '../../lib/seo';
+
+const guideListLD = itemListLD('Bari audio guides', [
+  'https://localis.guide/en/guide/bari-vecchia',
+  'https://localis.guide/en/guide/san-nicola',
+  'https://localis.guide/en/guide/porto-bari',
+  'https://localis.guide/en/guide/bari-tavola',
+  'https://localis.guide/en/guide/tre-teatri',
+  'https://localis.guide/en/guide/bari-sotterranea',
+]);
 ---
 <Layout
   title="Bari Audio Guides | Old Town, Saint Nicholas and Port | Localis"
   description="Six audio stories to understand Bari while you walk: Old Town, Saint Nicholas, food, port, theatres and underground Bari. Free preview."
   lang="en"
 >
+  <StructuredData data={guideListLD} />
 
   <Breadcrumb items={[{ label: 'Home', href: '/en' }, { label: 'Bari' }]} />
 

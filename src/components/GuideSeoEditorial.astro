@@ -1514,11 +1514,11 @@ const entry = copy[slug]?.[lang];
 {entry && (
   <section class="guide-seo-editorial rounded-[28px] border border-sand-3 bg-sand-1/35 px-lg py-xl md:px-xl">
     <div class="localis-seo-content">
-      <h1>{entry.title}</h1>
+      <h2>{entry.title}</h2>
       <p class="subtitle">{entry.subtitle}</p>
       {entry.sections.map((section) => (
         <div class="seo-block">
-          <h2>{section.heading}</h2>
+          <h3>{section.heading}</h3>
           {section.paragraphs.map((paragraph) => (
             <p>{paragraph}</p>
           ))}
@@ -1534,7 +1534,7 @@ const entry = copy[slug]?.[lang];
     gap: 2rem;
   }
 
-  .guide-seo-editorial :global(h1) {
+  .guide-seo-editorial :global(h2) {
     font-family: var(--font-display, inherit);
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.05;
@@ -1558,7 +1558,7 @@ const entry = copy[slug]?.[lang];
     border-top: 1px solid rgb(0 0 0 / 0.08);
   }
 
-  .guide-seo-editorial :global(.seo-block h2) {
+  .guide-seo-editorial :global(.seo-block h3) {
     font-family: var(--font-display, inherit);
     font-size: clamp(1.5rem, 3vw, 2.15rem);
     line-height: 1.15;

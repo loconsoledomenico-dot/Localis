@@ -151,7 +151,7 @@ const fallbackMessage = hasConfirmedPayment ? model.primaryMessage : ui.unconfir
 const footerMessage = success || hasConfirmedPayment ? model.emailMessage : ui.backupMessage;
 const pageTitle = success ? model.pageTitle : fallbackHeading;
 ---
-<Layout title={`${pageTitle} · Localis`} lang={lang}>
+<Layout title={`${pageTitle} · Localis`} lang={lang} robots="noindex,nofollow">
   <main class="max-w-wrap mx-auto px-md py-3xl">
     <header class="max-w-prose mb-2xl">
       <p class="font-display italic text-2xl text-accent mb-md">{ui.eyebrow}</p>

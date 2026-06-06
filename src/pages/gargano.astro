@@ -7,6 +7,8 @@ import StepsBlock from '../components/StepsBlock.astro';
 import LangPills from '../components/LangPills.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroAudioSample from '../components/HeroAudioSample.astro';
+import StructuredData from '../components/StructuredData.astro';
+import { itemListLD } from '../lib/seo';
 
 interface GuideEntry {
   slug: string;
@@ -81,12 +83,18 @@ const guides: GuideEntry[] = [
     price: '€4,99',
   },
 ];
+
+const guideListLD = itemListLD(
+  'Audioguide del Gargano',
+  guides.map((guide) => `https://localis.guide/guide/${guide.slug}`),
+);
 ---
 <Layout
   title="Gargano — Audioguide narrative tra Vieste, Tremiti e Foresta Umbra · Localis"
   description="Sei audioguide narrative del Gargano tra Vieste, Tremiti, Foresta Umbra, borghi interni e saline. Senza app. Da €4,99."
   lang="it"
 >
+  <StructuredData data={guideListLD} />
 
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Gargano' }]} />
 

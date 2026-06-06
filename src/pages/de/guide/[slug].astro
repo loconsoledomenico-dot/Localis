@@ -13,7 +13,7 @@ import GuideFactsCard from '../../../components/GuideFactsCard.astro';
 import GuideSeoEditorial from '../../../components/GuideSeoEditorial.astro';
 import { getCollection } from 'astro:content';
 import { formatDuration } from '../../../lib/format';
-import { audioObjectLD, productLD, touristAttractionLD } from '../../../lib/seo';
+import { audioObjectLD, breadcrumbListLD, productLD, touristAttractionLD } from '../../../lib/seo';
 import { guideAccessibility, guideDescription, guideDurationSeconds, guideNeeds, guideRouteMode, guideStopsCount, guideSubtitle, guideTitle, narratorBio } from '../../../lib/guide-localization';
 
 const CITY_DEST: Record<string, { href: string; label: string }> = {
@@ -41,6 +41,7 @@ export async function getStaticPaths() {
 
 const { guide } = Astro.props;
 const data = guide.data;
+const destination = CITY_DEST[data.city];
 const lang = 'de';
 const durationSeconds = guideDurationSeconds(data, lang);
 const durationLabel = formatDuration(durationSeconds);
@@ -105,15 +106,18 @@ ld.push(productLD({
   priceCents: data.price_cents,
   language: lang,
 }));
+
+ld.push(breadcrumbListLD([
+  { name: 'Start', url: 'https://localis.guide/de/' },
+  ...(destination ? [{ name: destination.label, url: `https://localis.guide${destination.href}` }] : []),
+  { name: title, url: `https://localis.guide/de/guide/${data.slug}/` },
+]));
 ---
 <Layout title={`${title} - Localis`} description={description} lang="de" ogImage={`/og/og-${data.slug}.jpg`}>
   <StructuredData data={ld} />
-  {(() => {
-    const dest = CITY_DEST[data.city];
-    return dest
-      ? <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: dest.label, href: dest.href }, { label: title }]} />
-      : <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: title }]} />;
-  })()}
+  {destination
+    ? <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: destination.label, href: destination.href }, { label: title }]} />
+    : <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: title }]} />}
 
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
     <header class="lg:col-span-2 mb-2xl">

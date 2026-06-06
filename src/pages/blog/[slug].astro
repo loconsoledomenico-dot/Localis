@@ -30,16 +30,21 @@ const { Content } = await render(article);
 const d = article.data;
 
 const SITE = 'https://localis.guide';
+const allPublished = await getCollection('blog', (e) => e.data.status === 'published');
+const hasEnVersion = allPublished.some((e) => e.data.lang === 'en' && e.data.slug === d.slug_en);
+const hasDeVersion = d.slug_de
+  ? allPublished.some((e) => e.data.lang === 'de' && e.data.slug === d.slug_de)
+  : false;
 
 // ── hreflang: slug diversi per lingua → override manuale ─────────────────
 const langUrlsOverride = {
   it: `/blog/${d.slug}/`,
-  en: `/en/blog/${d.slug_en}/`,
-  de: d.slug_de ? `/de/blog/${d.slug_de}/` : `/blog/${d.slug}/`,
+  ...(hasEnVersion && { en: `/en/blog/${d.slug_en}/` }),
+  ...(hasDeVersion && { de: `/de/blog/${d.slug_de}/` }),
 };
 
 // ── Articoli correlati ────────────────────────────────────────────────────
-const allIt = await getCollection('blog', (e) => e.data.lang === 'it' && e.data.status === 'published');
+const allIt = allPublished.filter((e) => e.data.lang === 'it');
 const related = allIt.filter((a) => d.related.includes(a.data.slug)).slice(0, 3);
 
 // ── JSON-LD: Article + BreadcrumbList ─────────────────────────────────────

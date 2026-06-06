@@ -6,9 +6,10 @@ import LangSwitcher from './LangSwitcher.astro';
 export interface Props {
   lang: Lang;
   currentPath: string;
+  langUrlsOverride?: Partial<Record<Lang, string>>;
 }
 
-const { lang, currentPath } = Astro.props;
+const { lang, currentPath, langUrlsOverride } = Astro.props;
 
 const navLinks = [
   { href: localizedHref('/guide', lang), label: lang === 'it' ? 'Guide' : 'Guides' },
@@ -17,7 +18,10 @@ const navLinks = [
   ...(lang === 'it' ? [{ href: '/crocieristi', label: 'Crocieristi' }] : []),
   ...(lang === 'en' ? [{ href: '/en/cruise', label: 'Cruise guests' }] : []),
   ...(lang === 'de' ? [{ href: '/de/kreuzfahrt', label: 'Kreuzfahrtgäste' }] : []),
-  { href: localizedHref('/diventa-partner', lang), label: t('nav.partner', lang) },
+  {
+    href: lang === 'it' ? '/diventa-partner' : lang === 'en' ? '/en/become-a-partner' : '/de/partner-werden',
+    label: t('nav.partner', lang),
+  },
 ];
 ---
 <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border">
@@ -40,12 +44,12 @@ const navLinks = [
           {l.label}
         </a>
       ))}
-      <LangSwitcher lang={lang} currentPath={currentPath} />
+      <LangSwitcher lang={lang} currentPath={currentPath} langUrlsOverride={langUrlsOverride} />
     </nav>
 
     <!-- Mobile: lang switcher + hamburger -->
     <div class="flex sm:hidden items-center gap-sm">
-      <LangSwitcher lang={lang} currentPath={currentPath} />
+      <LangSwitcher lang={lang} currentPath={currentPath} langUrlsOverride={langUrlsOverride} />
       <button
         id="mobile-menu-btn"
         aria-label={lang === 'it' ? 'Apri menu' : lang === 'de' ? 'Menü öffnen' : 'Open menu'}

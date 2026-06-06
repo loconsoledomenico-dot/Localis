@@ -9,12 +9,24 @@ import StepsBlock from '../../components/StepsBlock.astro';
 import LangPills from '../../components/LangPills.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import HeroAudioSample from '../../components/HeroAudioSample.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { itemListLD } from '../../lib/seo';
+
+const guideListLD = itemListLD('Bari Audioguides', [
+  'https://localis.guide/de/guide/bari-vecchia',
+  'https://localis.guide/de/guide/san-nicola',
+  'https://localis.guide/de/guide/porto-bari',
+  'https://localis.guide/de/guide/bari-tavola',
+  'https://localis.guide/de/guide/tre-teatri',
+  'https://localis.guide/de/guide/bari-sotterranea',
+]);
 ---
 <Layout
   title="Bari Audioguides | Altstadt, San Nicola und Hafen | Localis"
   description="Sechs Audioerzählungen, um Bari beim Spaziergang zu verstehen: Altstadt, San Nicola, Hafen, Essen, Theater und Untergrund. Hörprobe gratis."
   lang="de"
 >
+  <StructuredData data={guideListLD} />
 
   <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: 'Bari' }]} />
 

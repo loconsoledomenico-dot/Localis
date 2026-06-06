@@ -16,17 +16,19 @@ export interface Props {
   lang?: Lang;
   ogImage?: string;
   /** Override hreflang quando i slug differiscono tra lingue (es. articoli blog) */
-  langUrlsOverride?: { it: string; en: string; de: string };
+  langUrlsOverride?: Partial<Record<Lang, string>>;
   /** Override og:type (default: 'website') */
   ogType?: string;
+  robots?: string;
 }
 
-const { title, description = '', lang = 'it', ogImage, langUrlsOverride, ogType = 'website' } = Astro.props;
+const { title, description = '', lang = 'it', ogImage, langUrlsOverride, ogType = 'website', robots } = Astro.props;
 const currentPath = Astro.url.pathname;
 const computedLangUrls = langUrlsOverride ?? allLangUrls(currentPath);
 const itUrl = computedLangUrls.it;
-const enUrl = computedLangUrls.en;
-const deUrl = computedLangUrls.de;
+const alternateUrls = (['it', 'en', 'de'] as Lang[])
+  .map((code) => ({ code, href: computedLangUrls[code] }))
+  .filter((alternate): alternate is { code: Lang; href: string } => Boolean(alternate.href));
 const SITE = 'https://localis.guide';
 const canonical = `${SITE}${currentPath}`;
 const ogLocale = lang === 'en' ? 'en_US' : lang === 'de' ? 'de_DE' : 'it_IT';
@@ -40,12 +42,11 @@ const partnerSlugFromPath = currentPath.match(/^\/p\/([a-z0-9][a-z0-9-]{2,40})\/
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FAF7F2" />
   <link rel="canonical" href={canonical} />
-  <link rel="alternate" hreflang="it" href={`${SITE}${itUrl}`} />
-  <link rel="alternate" hreflang="en" href={`${SITE}${enUrl}`} />
-  <link rel="alternate" hreflang="de" href={`${SITE}${deUrl}`} />
-  <link rel="alternate" hreflang="x-default" href={`${SITE}${itUrl}`} />
+  {alternateUrls.map(({ code, href }) => <link rel="alternate" hreflang={code} href={`${SITE}${href}`} />)}
+  {itUrl && <link rel="alternate" hreflang="x-default" href={`${SITE}${itUrl}`} />}
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
+  {robots && <meta name="robots" content={robots} />}
 
   <meta property="og:type" content={ogType} />
   <meta property="og:title" content={title} />
@@ -115,7 +116,7 @@ const partnerSlugFromPath = currentPath.match(/^\/p\/([a-z0-9][a-z0-9-]{2,40})\/
 </head>
 <body class="bg-surface text-ink font-body antialiased min-h-screen flex flex-col">
   <SkipLink lang={lang} />
-  <Header lang={lang} currentPath={currentPath} />
+  <Header lang={lang} currentPath={currentPath} langUrlsOverride={langUrlsOverride} />
 
   <main id="main" class="flex-1">
     <slot />

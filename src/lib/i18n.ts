@@ -59,9 +59,15 @@ export function alternateLangUrl(currentPath: string, currentLang: Lang): string
 
 /** Pages where the slug differs across languages. Key = IT slug (no prefix). */
 const SLUG_MAP: Record<string, { en: string; de: string }> = {
-  '/crocieristi':   { en: '/cruise',      de: '/kreuzfahrt' },
-  '/cruise':        { en: '/cruise',      de: '/kreuzfahrt' },
-  '/kreuzfahrt':    { en: '/cruise',      de: '/kreuzfahrt' },
+  '/metodo':           { en: '/method',           de: '/methode' },
+  '/method':           { en: '/method',           de: '/methode' },
+  '/methode':          { en: '/method',           de: '/methode' },
+  '/crocieristi':      { en: '/cruise',           de: '/kreuzfahrt' },
+  '/cruise':           { en: '/cruise',           de: '/kreuzfahrt' },
+  '/kreuzfahrt':       { en: '/cruise',           de: '/kreuzfahrt' },
+  '/diventa-partner':  { en: '/become-a-partner', de: '/partner-werden' },
+  '/become-a-partner': { en: '/become-a-partner', de: '/partner-werden' },
+  '/partner-werden':   { en: '/become-a-partner', de: '/partner-werden' },
 };
 
 /**
@@ -72,7 +78,13 @@ export function allLangUrls(currentPath: string): Record<Lang, string> {
   const map = SLUG_MAP[stripped];
   if (map) {
     return {
-      it: '/crocieristi',
+      it: stripped === '/method' || stripped === '/methode'
+        ? '/metodo'
+        : stripped === '/cruise' || stripped === '/kreuzfahrt'
+          ? '/crocieristi'
+          : stripped === '/become-a-partner' || stripped === '/partner-werden'
+            ? '/diventa-partner'
+            : stripped,
       en: `/en${map.en}`,
       de: `/de${map.de}`,
     };

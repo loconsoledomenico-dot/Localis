@@ -9,12 +9,24 @@ import StepsBlock from '../components/StepsBlock.astro';
 import LangPills from '../components/LangPills.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroAudioSample from '../components/HeroAudioSample.astro';
+import StructuredData from '../components/StructuredData.astro';
+import { itemListLD } from '../lib/seo';
+
+const guideListLD = itemListLD('Audioguide di Bari', [
+  'https://localis.guide/guide/bari-vecchia',
+  'https://localis.guide/guide/san-nicola',
+  'https://localis.guide/guide/porto-bari',
+  'https://localis.guide/guide/bari-tavola',
+  'https://localis.guide/guide/tre-teatri',
+  'https://localis.guide/guide/bari-sotterranea',
+]);
 ---
 <Layout
   title="Audioguide di Bari | Bari Vecchia, San Nicola e Porto | Localis"
   description="Sei racconti audio per capire Bari mentre la visiti: Bari Vecchia, San Nicola, porto, cibo, teatri e sotterranei. Anteprima gratuita."
   lang="it"
 >
+  <StructuredData data={guideListLD} />
 
   <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Bari' }]} />
 

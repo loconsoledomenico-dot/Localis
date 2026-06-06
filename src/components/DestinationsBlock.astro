@@ -9,12 +9,12 @@ const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : lang === 'de' ? 'Tafel IV — Die Reiseziele' : 'Plate IV — The destinations';
 const heading1 = lang === 'it' ? 'Scegli la tua zona.' : lang === 'de' ? 'Wähle deine Region.' : 'Choose your area.';
-const heading2 = lang === 'it' ? 'Ogni zona, un testo che ti porta dentro.' : lang === 'de' ? 'Jede Gegend, ein Text, der dich hineinzieht.' : 'Every area, a text that pulls you in.';
+const heading2 = lang === 'it' ? 'Bari, Valle d\'Itria e Gargano: racconti audio da ascoltare sul posto, prima di partire o al ritorno.' : lang === 'de' ? 'Bari, Valle d\'Itria und Gargano: Audiogeschichten zum Hören vor Ort, vor der Abreise oder nach der Rückkehr.' : 'Bari, Valle d\'Itria and Gargano: audio stories to listen on the spot, before you leave or after you return.';
 const intro = lang === 'it'
-  ? 'Basta cataloghi turistici senz\'anima. Qui ogni destinazione diventa un testo da ricordare: storie reali quando dichiarate, fonti, dettagli locali e scrittura Localis pensata per farti entrare nel luogo prima ancora di partire.'
+  ? 'Ogni zona raccoglie storie, luoghi e prospettive diverse. Scegli da dove iniziare e ascolta la Puglia con più contesto, senza scaricare app.'
   : lang === 'de'
-  ? 'Keine seelenlosen Reisekataloge. Hier wird jedes Reiseziel zu einem Text, der bleibt: echte Geschichten, wenn sie als solche gekennzeichnet sind, Quellen, lokale Details und Localis-Schreiben, das dich in den Ort hineinzieht, bevor du aufbrichst.'
-  : 'Forget soulless tourist catalogues. Here, every destination becomes a text worth remembering: real stories when declared, sources, local details and Localis writing built to pull you into the place before you even leave.';
+  ? 'Jede Region vereint verschiedene Geschichten, Orte und Perspektiven. Wähle, wo du anfangen möchtest, und erlebe Apulien mit mehr Hintergrund — ohne App-Download.'
+  : 'Every area brings together different stories, places and perspectives. Choose where to start and listen to Puglia with more context — no app to download.';
 
 interface Destination {
   slug: string;

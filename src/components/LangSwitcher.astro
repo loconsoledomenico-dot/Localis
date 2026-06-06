@@ -4,10 +4,11 @@ import { allLangUrls, type Lang, withLangQuery } from '../lib/i18n';
 export interface Props {
   lang: Lang;
   currentPath: string;
+  langUrlsOverride?: Partial<Record<Lang, string>>;
 }
 
-const { lang, currentPath } = Astro.props;
-const urls = allLangUrls(currentPath);
+const { lang, currentPath, langUrlsOverride } = Astro.props;
+const urls = langUrlsOverride ?? allLangUrls(currentPath);
 ---
 <div class="lang-flags" role="navigation" aria-label="Language">
 
@@ -20,7 +21,7 @@ const urls = allLangUrls(currentPath);
         <rect x="2" width="1" height="2" fill="#ce2b37"/>
       </svg>
     </span>
-  ) : (
+  ) : urls.it ? (
     <a href={withLangQuery(urls.it, 'it')} class="lang-flag" hreflang="it" title="Italiano" aria-label="Italiano">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="22" height="15" aria-hidden="true">
         <rect width="1" height="2" fill="#009246"/>
@@ -28,7 +29,7 @@ const urls = allLangUrls(currentPath);
         <rect x="2" width="1" height="2" fill="#ce2b37"/>
       </svg>
     </a>
-  )}
+  ) : null}
 
   {/* 🇬🇧 UK */}
   {lang === 'en' ? (
@@ -41,7 +42,7 @@ const urls = allLangUrls(currentPath);
         <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/>
       </svg>
     </span>
-  ) : (
+  ) : urls.en ? (
     <a href={withLangQuery(urls.en, 'en')} class="lang-flag" hreflang="en" title="English" aria-label="English">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="22" height="15" aria-hidden="true">
         <rect width="60" height="30" fill="#012169"/>
@@ -51,7 +52,7 @@ const urls = allLangUrls(currentPath);
         <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/>
       </svg>
     </a>
-  )}
+  ) : null}
 
   {/* 🇩🇪 Germany */}
   {lang === 'de' ? (
@@ -62,7 +63,7 @@ const urls = allLangUrls(currentPath);
         <rect y="2" width="5" height="1" fill="#FFCE00"/>
       </svg>
     </span>
-  ) : (
+  ) : urls.de ? (
     <a href={withLangQuery(urls.de, 'de')} class="lang-flag" hreflang="de" title="Deutsch" aria-label="Deutsch">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="22" height="15" aria-hidden="true">
         <rect width="5" height="1" fill="#000"/>
@@ -70,7 +71,7 @@ const urls = allLangUrls(currentPath);
         <rect y="2" width="5" height="1" fill="#FFCE00"/>
       </svg>
     </a>
-  )}
+  ) : null}
 
 </div>
 

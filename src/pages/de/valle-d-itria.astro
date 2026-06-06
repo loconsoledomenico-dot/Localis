@@ -6,6 +6,8 @@ import PriceCard from '../../components/PriceCard.astro';
 import LangPills from '../../components/LangPills.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import HeroAudioSample from '../../components/HeroAudioSample.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { itemListLD } from '../../lib/seo';
 
 interface GuideEntry {
   slug: string;
@@ -80,12 +82,18 @@ const guides: GuideEntry[] = [
     price: '€4,99',
   },
 ];
+
+const guideListLD = itemListLD(
+  "Valle d'Itria Audioguides",
+  guides.map((guide) => `https://localis.guide/de/guide/${guide.slug}`),
+);
 ---
 <Layout
   title="Valle d'Itria — Narrative Audioguides · Localis"
   description="Sechs narrative Audioguides aus dem Valle d'Itria: Alberobello, Locorotondo, Martina Franca, Cisternino, Ostuni und Fasano. Erzählt von Einheimischen. Ab 4,99 €."
   lang="de"
 >
+  <StructuredData data={guideListLD} />
 
   <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: "Valle d'Itria" }]} />
 

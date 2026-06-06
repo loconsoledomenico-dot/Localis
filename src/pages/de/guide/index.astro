@@ -2,10 +2,12 @@
 export const prerender = true;
 import Layout from '../../../components/Layout.astro';
 import GuideBuilder from '../../../components/GuideBuilder.astro';
+import StructuredData from '../../../components/StructuredData.astro';
 import { getCollection } from 'astro:content';
 import { guideSubtitle, guideTitle } from '../../../lib/guide-localization';
 import { BARI_GUIDES, GARGANO_GUIDES, VALLE_GUIDES } from '../../../lib/stripe-prices';
 import { localizedHref } from '../../../lib/i18n';
+import { itemListLD } from '../../../lib/seo';
 
 interface GuideEntry {
   slug: string;
@@ -47,6 +49,10 @@ function buildEntries(slugs: readonly string[], area: string): GuideEntry[] {
 const bariGuides = buildEntries(BARI_GUIDES, 'Bari');
 const valleGuides = buildEntries(VALLE_GUIDES, "Valle d'Itria");
 const garganoGuides = buildEntries(GARGANO_GUIDES, 'Gargano');
+const guideListLD = itemListLD(
+  'Localis Audioguides Apulien',
+  [...bariGuides, ...valleGuides, ...garganoGuides].map((guide) => `https://localis.guide/de/guide/${guide.slug}/`),
+);
 ---
 
 <Layout
@@ -54,6 +60,7 @@ const garganoGuides = buildEntries(GARGANO_GUIDES, 'Gargano');
   description="Alle Localis Audioguides für Bari, Valle d'Itria und Gargano. Narrative Audioguides ohne App."
   lang="de"
 >
+  <StructuredData data={guideListLD} />
   <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
 
     <header class="mb-3xl max-w-[52ch]">

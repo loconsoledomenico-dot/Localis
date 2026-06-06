@@ -7,6 +7,8 @@ import StepsBlock from '../../components/StepsBlock.astro';
 import LangPills from '../../components/LangPills.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import HeroAudioSample from '../../components/HeroAudioSample.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { itemListLD } from '../../lib/seo';
 
 interface GuideEntry {
   slug: string;
@@ -81,12 +83,18 @@ const guides: GuideEntry[] = [
     price: '€4,99',
   },
 ];
+
+const guideListLD = itemListLD(
+  'Gargano Audioguides',
+  guides.map((guide) => `https://localis.guide/de/guide/${guide.slug}`),
+);
 ---
 <Layout
   title="Gargano — Narrative Audioguides · Localis"
   description="Sechs narrative Audioguides aus dem Gargano: Vieste, Nordküste, Heiliger Berg, Tremiti, Dörfer und Salinen. Erzählt von Einheimischen. Ab 4,99 €."
   lang="de"
 >
+  <StructuredData data={guideListLD} />
 
   <Breadcrumb items={[{ label: 'Start', href: '/de' }, { label: 'Gargano' }]} />
 

@@ -2,12 +2,38 @@
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { faqPageLD } from '../../lib/seo';
+
+const faqLD = faqPageLD([
+  {
+    question: 'Wie erhalte ich die Guide nach dem Kauf?',
+    answer: 'Direkt nach der Zahlung erhältst du eine E-Mail mit einem dauerhaften Link. Du öffnest ihn auf Smartphone, Tablet oder Computer: keine App und kein Konto.',
+  },
+  {
+    question: 'Brauche ich Internet zum Hören?',
+    answer: 'Zum Streamen brauchst du mobile Daten oder WLAN. Du kannst die Guide vor dem Besuch speichern und offline auf diesem Gerät hören.',
+  },
+  {
+    question: 'Kann ich den Guide offline hören?',
+    answer: 'Ja. Speichere ihn, während du verbunden bist; nach dem Download funktioniert die Guide ohne Verbindung auf diesem Gerät.',
+  },
+  {
+    question: 'Ist die Stimme eine echte Person oder KI?',
+    answer: 'Die Audio-Erzählung wird mit ElevenLabs erzeugt. Texte, Recherche, Quellen und redaktionelle Verantwortung bleiben bei Localis.',
+  },
+  {
+    question: 'Sind die Inhalte überprüft?',
+    answer: 'Ja. Jede belegte Aussage hat eine Quelle: historische Archive, wissenschaftliche Veröffentlichungen und lokale Bibliotheken.',
+  },
+]);
 ---
 <Layout
   title="FAQ · Localis"
   description="Häufige Fragen zu Localis Audioguides: Magic Link, Offline-Hören, Erstattungen, KI-Stimmen und mehr."
   lang="de"
 >
+  <StructuredData data={faqLD} />
   <article class="max-w-narrow mx-auto px-md py-2xl">
     <Eyebrow class="mb-md">Häufige Fragen</Eyebrow>
     <h1 class="font-display text-4xl text-ink mb-lg">FAQ</h1>

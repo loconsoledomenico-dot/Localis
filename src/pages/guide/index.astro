@@ -2,6 +2,8 @@
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import GuideBuilder from '../../components/GuideBuilder.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { itemListLD } from '../../lib/seo';
 
 interface GuideEntry {
   slug: string;
@@ -140,6 +142,20 @@ const valleItria: GuideEntry[] = [
     price: '€4,99',
   },
 ];
+
+const guideListLD = itemListLD(
+  'Audioguide narrative Localis',
+  [
+    ...bariGuides.map((g) => g.slug),
+    ...valleItria.map((g) => g.slug),
+    'gargano-vieste',
+    'gargano-nord',
+    'gargano-sacro',
+    'gargano-tremiti',
+    'gargano-paesi',
+    'gargano-saline',
+  ].map((slug) => `https://localis.guide/guide/${slug}/`),
+);
 ---
 
 <Layout
@@ -147,6 +163,7 @@ const valleItria: GuideEntry[] = [
   description="Tutte le audioguide Localis: 18 racconti audio tra Bari, Valle d'Itria e Gargano, scritti da chi quei luoghi li vive. Da €4,99."
   lang="it"
 >
+  <StructuredData data={guideListLD} />
   <div class="max-w-wrap mx-auto px-md py-2xl lg:py-3xl">
 
     {/* PAGE HEADER */}
