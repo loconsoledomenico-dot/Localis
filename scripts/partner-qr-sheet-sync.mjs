@@ -687,6 +687,14 @@ async function main() {
 main().catch((error) => {
   if (error.code === 'ENOENT' && String(error.path || '').includes('google-oauth-token.json')) {
     console.error('Missing Google OAuth token. Run: node private/google-oauth.mjs');
+  } else if (
+    ['EACCES', 'ECONNREFUSED', 'ENETUNREACH', 'ETIMEDOUT'].includes(error.code) &&
+    String(error.config?.url || '').includes('oauth2.googleapis.com/token')
+  ) {
+    console.error(
+      'Google OAuth token refresh failed because this environment cannot reach oauth2.googleapis.com. ' +
+      'The script is healthy, but it needs outbound HTTPS access to Google APIs.'
+    );
   } else {
     console.error(error.response?.data || error);
   }
