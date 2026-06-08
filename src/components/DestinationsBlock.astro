@@ -9,7 +9,7 @@ const { lang } = Astro.props;
 
 const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : lang === 'de' ? 'Tafel IV — Die Reiseziele' : 'Plate IV — The destinations';
 const heading1 = lang === 'it' ? 'Scegli la tua zona.' : lang === 'de' ? 'Wähle deine Region.' : 'Choose your area.';
-const heading2 = lang === 'it' ? 'Bari, Valle d\'Itria e Gargano: racconti audio da ascoltare sul posto, prima di partire o al ritorno.' : lang === 'de' ? 'Bari, Valle d\'Itria und Gargano: Audiogeschichten zum Hören vor Ort, vor der Abreise oder nach der Rückkehr.' : 'Bari, Valle d\'Itria and Gargano: audio stories to listen on the spot, before you leave or after you return.';
+const heading2 = lang === 'it' ? 'Bari, Valle d\'Itria, Gargano e Matera: racconti audio da ascoltare sul posto, prima di partire o al ritorno.' : lang === 'de' ? 'Bari, Valle d\'Itria, Gargano und Matera: Audiogeschichten zum Hören vor Ort, vor der Abreise oder nach der Rückkehr.' : 'Bari, Valle d\'Itria, Gargano and Matera: audio stories to listen on the spot, before you leave or after you return.';
 const intro = lang === 'it'
   ? 'Ogni zona raccoglie storie, luoghi e prospettive diverse. Scegli da dove iniziare e ascolta la Puglia con più contesto, senza scaricare app.'
   : lang === 'de'
@@ -56,6 +56,15 @@ const destinations: Destination[] = lang === 'it'
         cover: '/images/covers/gargano-landing.jpg',
         alt: 'Gargano, promontorio sul mare Adriatico',
       },
+      {
+        slug: 'matera',
+        href: '/matera',
+        name: 'Matera',
+        tagline: 'I Sassi, la Gravina e il racconto di Rosa.',
+        guidesLabel: '1 guida',
+        cover: '/images/covers/matera-landing.webp',
+        alt: 'Matera, i Sassi visti dall\'alto',
+      },
     ]
   : lang === 'de'
   ? [
@@ -86,6 +95,15 @@ const destinations: Destination[] = lang === 'it'
         cover: '/images/covers/gargano-landing.jpg',
         alt: 'Gargano-Vorgebirge über der Adria',
       },
+      {
+        slug: 'matera',
+        href: '/de/matera',
+        name: 'Matera',
+        tagline: 'Die Sassi, die Gravina und Rosas Erzählung.',
+        guidesLabel: '1 Erzählung',
+        cover: '/images/covers/matera-landing.webp',
+        alt: 'Matera, die Sassi von oben',
+      },
     ]
   : [
       {
@@ -114,6 +132,15 @@ const destinations: Destination[] = lang === 'it'
         guidesLabel: '6 guides live',
         cover: '/images/covers/gargano-landing.jpg',
         alt: 'Gargano promontory over the Adriatic sea',
+      },
+      {
+        slug: 'matera',
+        href: '/en/matera',
+        name: 'Matera',
+        tagline: 'The Sassi, the Gravina and Rosa\'s story.',
+        guidesLabel: '1 guide',
+        cover: '/images/covers/matera-landing.webp',
+        alt: 'Matera, the Sassi seen from above',
       },
     ];
 ---
@@ -187,7 +214,8 @@ const destinations: Destination[] = lang === 'it'
     gap: var(--spacing-lg);
     row-gap: var(--spacing-2xl);
   }
-  @media (min-width: 640px) { .dest-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 640px)  { .dest-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .dest-grid { grid-template-columns: repeat(4, 1fr); } }
 
   .dest-cell {
     opacity: 0;
