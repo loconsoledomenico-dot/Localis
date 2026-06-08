@@ -33,25 +33,28 @@ import HeroAudioSample from '../components/HeroAudioSample.astro';
       <div class="flex items-center gap-sm mb-md mt-lg">
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
-          Destinazione — Matera
+          Audioguida Localis · Matera
         </span>
       </div>
       <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[24ch]">
-        Audioguida di Matera: capire la città scavata nella pietra.
+        Matera non si visita soltanto.<br />
+        <em class="not-italic">Si comprende.</em>
       </h1>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
-        Matera non è un posto che si guarda e basta.<br />
-        È una città scavata nella roccia, modellata da povertà, fede, silenzio, abbandono e rinascita.
+        Un'audioguida per attraversare i Sassi, le case-grotta, la Gravina e la storia di una città scavata nella pietra: poverissima, abbandonata, poi rinata davanti al mondo.
       </p>
 <HeroAudioSample lang="it" src="/audio/trailers/matera/matera-trailer-it.mp3" guideSlug="matera" />
-      <div class="mt-lg">
+      <div class="mt-lg flex flex-col sm:flex-row items-start sm:items-center gap-sm">
         <a
           href="/guide/matera"
           class="inline-flex items-center gap-sm px-lg py-sm font-body font-semibold text-sm text-ink border border-ink rounded-md hover:bg-ink hover:text-surface transition-colors duration-fast no-underline"
         >
-          Acquista l'audioguida di Matera
+          Acquista la guida — €4,99
         </a>
       </div>
+      <p class="font-body text-xs text-ink-subtle mt-md tracking-[0.06em]">
+        1 ora circa · ascolto dal telefono · nessuna app da installare
+      </p>
     </div>
   </section>
 
@@ -111,51 +114,48 @@ import HeroAudioSample from '../components/HeroAudioSample.astro';
     </div>
   </section>
 
-  {/* SECTION 1 — PERCHÉ QUESTA GUIDA */}
+  {/* SECTION 1 — PERCHÉ ASCOLTARLA */}
   <section class="bg-surface border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <div class="prose-matera max-w-[68ch]">
         <div class="flex items-center gap-sm mb-lg">
           <span class="block w-7 h-px bg-accent"></span>
-          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Perché questa guida</span>
+          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Perché ascoltarla</span>
         </div>
-        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
-          Matera può disorientare al primo sguardo.
-        </p>
-        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
-          Case di pietra, chiese rupestri, scalinate, terrazze, burroni, porte aperte sul vuoto, vedute improvvise. Tutto sembra antico, ma senza una storia può restare solo uno sfondo bellissimo.
-        </p>
         <p class="font-body text-base sm:text-lg leading-relaxed text-ink mb-md font-medium">
-          Questa guida ti aiuta a leggere Matera con calma e chiarezza.
+          Matera è bellissima anche senza sapere nulla.<br />
+          Ma senza una storia rischia di restare solo una scenografia.
         </p>
-        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Non come un museo.</p>
-        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Non come una cartolina.</p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
+          Questa guida ti aiuta a leggere quello che hai davanti: le abitazioni scavate nel tufo, le scale, le cisterne, le chiese rupestri, il rapporto con la Gravina, la vita dura nei Sassi e la trasformazione che ha riportato Matera al centro dell'attenzione mondiale.
+        </p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Non è una visita guidata piena di date.</p>
         <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
-          Ma come un luogo vivo, con un passato difficile e un ritorno straordinario alla vita.
+          È un racconto chiaro, umano, pensato per farti camminare con più consapevolezza.
         </p>
       </div>
     </div>
   </section>
 
-  {/* SECTION 2 — COSA SENTIRAI */}
+  {/* SECTION 2 — COSA ASCOLTERAI */}
   <section class="bg-surface-elev border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <div class="flex items-center gap-sm mb-lg">
         <span class="block w-7 h-px bg-accent"></span>
-        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Cosa sentirai</span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Cosa ascolterai</span>
       </div>
       <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xl max-w-[60ch]">
-        Questo percorso audio ti accompagna attraverso l'atmosfera e il significato di Matera:
+        Durante il percorso scoprirai:
       </p>
       <ul class="matera-list list-none p-0 m-0 max-w-[60ch] flex flex-col gap-md">
         {[
-          'I Sassi e la loro struttura antica',
-          'Le case-grotta e la vita che le abitava',
-          'La differenza tra Sasso Caveoso e Sasso Barisano',
-          'Il rapporto tra la città e la Gravina',
-          'Le chiese rupestri e il paesaggio spirituale della Murgia',
-          'Gli anni dell\'abbandono e della vergogna',
-          'Il ritorno di Matera come simbolo culturale del Sud Italia',
+          'perché i Sassi non sono semplicemente "case antiche"',
+          'come si viveva davvero nelle case-grotta',
+          'la differenza tra Sasso Caveoso e Sasso Barisano',
+          'il legame profondo tra Matera e la Gravina',
+          'il ruolo delle chiese rupestri e della Murgia',
+          'perché Matera fu chiamata "vergogna nazionale"',
+          'come una città dimenticata è diventata simbolo culturale del Sud Italia',
         ].map((item) => (
           <li class="flex items-start gap-sm font-body text-base sm:text-lg text-ink-muted leading-relaxed">
             <span class="text-accent flex-shrink-0 mt-1 text-sm">✦</span>
@@ -166,22 +166,22 @@ import HeroAudioSample from '../components/HeroAudioSample.astro';
     </div>
   </section>
 
-  {/* SECTION 3 — PER CHI È */}
+  {/* SECTION 3 — A CHI È PENSATA */}
   <section class="bg-surface border-b border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <div class="prose-matera max-w-[68ch]">
         <div class="flex items-center gap-sm mb-lg">
           <span class="block w-7 h-px bg-accent"></span>
-          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Per chi è</span>
+          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">A chi è pensata</span>
         </div>
         <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
-          Questa guida è pensata per i viaggiatori che non vogliono attraversare Matera di corsa con solo fotografie.
+          Questa audioguida è per chi arriva a Matera e non vuole limitarsi alle fotografie.
         </p>
         <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
-          È per chi vuole capire perché la città ha questo aspetto, perché la gente viveva dentro la roccia, perché i Sassi erano considerati una vergogna nazionale, e come Matera è diventata uno dei posti più affascinanti d'Europa.
+          È per chi vuole camminare, fermarsi, guardare una porta scavata nella roccia, una scala consumata, una casa vuota, e capire che lì dentro non c'è solo bellezza: c'è vita, fatica, memoria, riscatto.
         </p>
         <p class="font-body text-sm text-ink-subtle leading-relaxed italic">
-          Perfetta per una prima visita, una gita di un giorno o una passeggiata lenta nel centro storico.
+          Perfetta se visiti Matera per la prima volta, se hai poche ore a disposizione o se vuoi vivere i Sassi con più profondità.
         </p>
       </div>
     </div>
@@ -194,17 +194,13 @@ import HeroAudioSample from '../components/HeroAudioSample.astro';
         <span class="block w-7 h-px bg-accent"></span>
         <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Come funziona</span>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-xl max-w-[62ch] sm:max-w-none">
-        {[
-          { label: 'Nessun gruppo', body: 'Ascolti solo, con chi vuoi, senza aspettare nessuno.' },
-          { label: 'Nessun orario', body: 'Parti quando ti va. Ti fermi. Riprendi. Ritorni.' },
-          { label: 'Solo il telefono', body: 'Niente app da installare. Ti basta lo smartphone e le cuffie.' },
-        ].map((step) => (
-          <div class="border-t border-border pt-md">
-            <p class="font-display font-light text-ink text-xl mb-xs">{step.label}</p>
-            <p class="font-body text-sm text-ink-muted leading-relaxed">{step.body}</p>
-          </div>
-        ))}
+      <div class="prose-matera max-w-[68ch] mb-xl">
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Nessun gruppo.</p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Nessun orario.</p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">Nessuna app complicata.</p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
+          Ascolti dal tuo telefono, con le cuffie, quando vuoi. Puoi fermarti, riprendere, cambiare strada, sederti davanti a un panorama e continuare il racconto con i tuoi tempi.
+        </p>
       </div>
     </div>
   </section>
@@ -218,14 +214,13 @@ import HeroAudioSample from '../components/HeroAudioSample.astro';
           <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">La promessa di Localis</span>
         </div>
         <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
-          Localis crea audioguide per i viaggiatori che vogliono qualcosa di più di informazioni veloci.
+          Localis non crea audioguide per spuntare monumenti da una lista.
         </p>
-        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Non elenchiamo semplicemente i monumenti.</p>
         <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
-          Ti aiutiamo a capire l'anima di un luogo: la sua gente, la sua memoria, la vita quotidiana e le storie che restano nascoste dietro i muri.
+          Raccontiamo i luoghi attraverso memoria, contesto e vita quotidiana. Ti aiutiamo a capire quello che guardi, senza trasformare la città in una lezione fredda o in una cartolina turistica.
         </p>
         <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
-          Con Matera, questo significa entrare in una città dove pietra, silenzio e vita umana sono connessi da secoli.
+          Con Matera, questo significa entrare in una storia fatta di pietra, silenzio, povertà, dignità e rinascita.
         </p>
       </div>
     </div>
@@ -309,16 +304,19 @@ import HeroAudioSample from '../components/HeroAudioSample.astro';
           primary
           titleOverride="Audioguida di Matera"
           descriptionOverride="I Sassi, la Gravina, le chiese rupestri. Un racconto unico."
-          ctaOverride="Acquista l'audioguida"
+          ctaOverride="Acquista l'audioguida di Matera"
           features={[
-            'Accesso illimitato, per sempre',
-            'Italiano, inglese e tedesco',
-            'Rimborso 1-click entro 24h',
+            'ascolto immediato dal telefono',
+            'racconto completo dei Sassi e della città antica',
+            'percorso libero, senza gruppo',
+            'accesso sempre disponibile dopo l\'acquisto',
           ]}
         />
         <PriceCard
           product="tris"
           lang="it"
+          descriptionOverride="Scegli 3 audioguide e risparmia. Ideale se vuoi scoprire più luoghi della Puglia e del Sud Italia con lo stesso stile: racconti chiari, autentici e ascoltabili dal telefono."
+          ctaOverride="Scegli il Pack 3 Guide"
           features={[
             '3 guide a scelta tra tutte le zone',
             'Accesso illimitato, per sempre',
