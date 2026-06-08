@@ -46,9 +46,10 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   const localizedHomePath = allLangUrls('/')[getPathLang(pathname) ?? 'it'];
   const partnerPathMatch = pathname.match(/^\/(?:(it|en|de)\/)?p\/([a-z0-9][a-z0-9-]{2,40})\/?$/i);
+  const isDedicatedPartnerLanding = /^\/(?:(?:en|de)\/)?p\/infopoint-bari\/?$/i.test(pathname);
   const isQrTraffic = url.searchParams.get('utm_medium') === 'qr';
 
-  if (partnerPathMatch) {
+  if (partnerPathMatch && !isDedicatedPartnerLanding) {
     const partnerSlug = partnerPathMatch[2];
     const redirectUrl = new URL(url);
     redirectUrl.pathname = localizedHomePath;
@@ -57,7 +58,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return context.redirect(redirectUrl.toString(), 302);
   }
 
-  if (isQrTraffic && pathname !== localizedHomePath) {
+  if (isQrTraffic && pathname !== localizedHomePath && !isDedicatedPartnerLanding) {
     const redirectUrl = new URL(url);
     redirectUrl.pathname = localizedHomePath;
     redirectUrl.searchParams.delete('lang');

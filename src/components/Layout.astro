@@ -33,7 +33,7 @@ const SITE = 'https://localis.guide';
 const canonical = `${SITE}${currentPath}`;
 const ogLocale = lang === 'en' ? 'en_US' : lang === 'de' ? 'de_DE' : 'it_IT';
 const alternateOgLocales = ['it_IT', 'en_US', 'de_DE'].filter((locale) => locale !== ogLocale);
-const partnerSlugFromPath = currentPath.match(/^\/p\/([a-z0-9][a-z0-9-]{2,40})\/?$/i)?.[1] ?? '';
+const partnerSlugFromPath = currentPath.match(/^\/(?:(?:en|de)\/)?p\/([a-z0-9][a-z0-9-]{2,40})\/?$/i)?.[1] ?? '';
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -89,8 +89,8 @@ const partnerSlugFromPath = currentPath.match(/^\/p\/([a-z0-9][a-z0-9-]{2,40})\/
             path: currentPath,
             lang,
             source: partnerSlugFromPath ? 'partner_landing' : 'partner_query',
-            qr_path: partnerSlugFromPath ? `/p/${partner}` : currentPath,
-            qr_url: partnerSlugFromPath ? `https://localis.guide/p/${partner}` : window.location.href,
+            qr_path: currentPath,
+            qr_url: partnerSlugFromPath ? `${window.location.origin}${currentPath}` : window.location.href,
           };
           return;
         }
