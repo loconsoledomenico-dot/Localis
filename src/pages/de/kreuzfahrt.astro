@@ -337,41 +337,38 @@ import StartMap from '../../components/StartMap.astro';
 </Layout>
 
 <script>
+  import { createAudioAnalyticsTracker } from '../../lib/audio-analytics';
   import { submitCheckoutRedirect } from '../../lib/checkout-client';
   const lang = 'de';
   const playBtn = document.getElementById('play-trailer-btn') as HTMLButtonElement | null;
   const audio = document.getElementById('trailer-audio') as HTMLAudioElement | null;
   if (playBtn && audio) {
-    let previewStarted = false;
-    let preview10s = false;
+    const tracker = createAudioAnalyticsTracker({
+      audio,
+      guideSlug: 'bari-vecchia',
+      audioAssetId: 'bari-vecchia-cruise-sample-de',
+      language: lang,
+      audioContext: 'cruise',
+      audioType: 'cruise_sample',
+      product: 'crociera',
+    });
     audio.addEventListener('timeupdate', () => {
-      if (!preview10s && audio.currentTime >= 10 && typeof window.localisTrack === 'function') {
-        preview10s = true;
-        window.localisTrack('preview_10s', { product: 'crociera', guide_slug: 'bari-vecchia', lang, source: 'cruise' });
-      }
+      tracker.onTimeUpdate();
     });
     playBtn.addEventListener('click', () => {
       if (audio.paused) {
         audio.play().then(() => {
-          if (typeof window.localisTrack === 'function') {
-            const params = { audio_type: 'cruise_sample', product: 'crociera', guide_slug: 'bari-vecchia', lang, source: 'cruise' };
-            if (!previewStarted) {
-              previewStarted = true;
-              window.localisTrack('preview_start', params);
-            }
-            window.localisTrack('audio_preview_played', params);
-          }
+          tracker.onPlay();
         }).catch(() => {});
         playBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pause';
       } else {
         audio.pause();
+        tracker.onPause();
         playBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"></polygon></svg> 60 Sekunden anhören`;
       }
     });
     audio.addEventListener('ended', () => {
-      if (typeof window.localisTrack === 'function') {
-        window.localisTrack('preview_complete', { product: 'crociera', guide_slug: 'bari-vecchia', lang, source: 'cruise' });
-      }
+      tracker.onEnded();
       playBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"></polygon></svg> 60 Sekunden anhören`;
     });
   }

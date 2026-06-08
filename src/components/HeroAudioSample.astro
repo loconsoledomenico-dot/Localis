@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const { lang, src = '/audio/trailers/home-trailer-it.mp3', guideSlug } = Astro.props;
-const slug = guideSlug || src.split('/').pop()?.replace(/\.mp3$/i, '') || 'unknown';
+const audioAssetId = src.split('/').pop()?.replace(/\.mp3$/i, '') || 'unknown';
 
 const label = lang === 'de'
   ? 'Hörprobe · 1 Min · gratis'
@@ -20,7 +20,7 @@ const playLabel = lang === 'de' ? 'Abspielen' : lang === 'it' ? 'Play' : 'Play';
 const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Pause';
 ---
 
-<div class="hero-sample" data-src={src} data-slug={slug} data-lang={lang}>
+<div class="hero-sample" data-src={src} data-guide-slug={guideSlug ?? ''} data-audio-asset-id={audioAssetId} data-lang={lang}>
   <button
     class="hero-sample-btn"
     aria-label={playLabel}
@@ -44,6 +44,8 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
 </div>
 
 <script>
+  import { createAudioAnalyticsTracker } from '../lib/audio-analytics';
+
   document.querySelectorAll<HTMLElement>('.hero-sample').forEach((el) => {
     const src = el.dataset.src!;
     const btn = el.querySelector<HTMLButtonElement>('.hero-sample-btn')!;
@@ -53,43 +55,38 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
 
     let audio: HTMLAudioElement | null = null;
 
-    const guideSlug = el.dataset.slug || 'unknown';
+    const guideSlug = el.dataset.guideSlug || undefined;
     const guideLang = el.dataset.lang || 'it';
-    let _started = false;
-    let _10sFired = false;
+    const audioAssetId = el.dataset.audioAssetId || src.split('/').pop()?.replace(/\.mp3$/i, '') || 'unknown';
+    let tracker: ReturnType<typeof createAudioAnalyticsTracker> | null = null;
 
     btn.addEventListener('click', () => {
       if (!audio) {
         audio = new Audio(src);
+        tracker = createAudioAnalyticsTracker({
+          audio,
+          guideSlug,
+          audioAssetId,
+          language: guideLang,
+          audioContext: 'hero',
+        });
         audio.addEventListener('timeupdate', () => {
           if (!audio!.duration) return;
           bar.style.width = `${(audio!.currentTime / audio!.duration) * 100}%`;
-          if (!_10sFired && audio!.currentTime >= 10) {
-            _10sFired = true;
-            if (typeof window.localisTrack === 'function') {
-              window.localisTrack('preview_10s', { guide_slug: guideSlug, language: guideLang, source: 'hero' });
-            }
-          }
+          tracker?.onTimeUpdate();
         });
         audio.addEventListener('ended', () => {
           bar.style.width = '0%';
           iconPlay.style.display = '';
           iconPause.style.display = 'none';
           btn.setAttribute('aria-label', btn.dataset.playLabel!);
-          if (typeof window.localisTrack === 'function') {
-            window.localisTrack('preview_complete', { guide_slug: guideSlug, language: guideLang, source: 'hero' });
-          }
+          tracker?.onEnded();
         });
       }
 
       if (audio.paused) {
         audio.play().then(() => {
-          if (!_started) {
-            _started = true;
-            if (typeof window.localisTrack === 'function') {
-              window.localisTrack('preview_start', { guide_slug: guideSlug, language: guideLang, source: 'hero', page: window.location.pathname });
-            }
-          }
+          tracker?.onPlay();
           iconPlay.style.display = 'none';
           iconPause.style.display = '';
           btn.setAttribute('aria-label', btn.dataset.pauseLabel!);
@@ -98,6 +95,7 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
         });
       } else {
         audio.pause();
+        tracker?.onPause();
         iconPlay.style.display = '';
         iconPause.style.display = 'none';
         btn.setAttribute('aria-label', btn.dataset.playLabel!);

@@ -18,6 +18,9 @@ Master ledger dei partner referral. Aggiornare manualmente. Numeri da GA4/PostHo
 | 003 | `paesaggi` | Paesaggi | Centro Bari | Negozio / vetrina | 1 gigante | info@paesaggibari.it | 2026-05-21 | [PNG](qr-codes/paesaggi.png) / [SVG](qr-codes/paesaggi.svg) | Vetrina format. SVG vettoriale per stampa grande. |
 | 004 | `bluemarine-lido-sole` | Residence Bluemarine | Lido del Sole, Via delle Dalie 11, Rodi Garganico | Hotel/residence | 70 stanze | info@bluemarinevillage.it | 2026-05-25 | [PNG](qr-codes/bluemarine-lido-sole.png) | QR in camera / reception. |
 | 005 | `giardino-lido-sole` | Il Giardino | Lido del Sole, Rodi Garganico | Hotel/ristorante | 28 stanze | info@giardino-lidosole.it | 2026-05-25 | [PNG](qr-codes/giardino-lido-sole.png) | QR in camera / reception. |
+| 006 | `infopoint-bari` | InfoPoint Turistico Bari | Piazza del Ferrarese 29, Bari | Info point | 1 desk | info@localis.guide | 2026-06-08 | [PNG](qr-codes/infopoint-bari.png) | QR front desk Bari. |
+| 007 | `casale-madre-ostuni` | Casale Madre | Ostuni | B&B | da definire | info@localis.guide | 2026-06-08 | [PNG](qr-codes/casale-madre-ostuni.png) | QR in camera / reception. |
+| 008 | `mare-in-casa-polignano` | Mare in casa - Dimora Luxury | Polignano a Mare | B&B | da definire | info@localis.guide | 2026-06-08 | [PNG](qr-codes/mare-in-casa-polignano.png) | QR in camera / reception. |
 
 ---
 
@@ -39,6 +42,9 @@ Aggiornare ogni 7 giorni dopo aver verificato GA4/PostHog con dimensione o propr
 | `paesaggi` | 2026-05-21 -> ... | - | - | - | - | - | - | - | Vetrina centro, alto passaggio pedoni |
 | `bluemarine-lido-sole` | 2026-05-25 -> ... | - | - | - | - | - | - | - | Residence Gargano |
 | `giardino-lido-sole` | 2026-05-25 -> ... | - | - | - | - | - | - | - | Hotel/ristorante Gargano |
+| `infopoint-bari` | 2026-06-08 -> ... | - | - | - | - | - | - | - | Info point turistico Bari |
+| `casale-madre-ostuni` | 2026-06-08 -> ... | - | - | - | - | - | - | - | Ostuni |
+| `mare-in-casa-polignano` | 2026-06-08 -> ... | - | - | - | - | - | - | - | Polignano a Mare |
 
 ---
 

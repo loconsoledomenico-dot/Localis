@@ -43,13 +43,25 @@ Regole:
 - Landing partner interna: `https://localis.guide/p/paesaggi/`
 - QR vetrina: `https://localis.guide/?p=paesaggi&utm_source=paesaggi&utm_medium=qr&utm_content=vetrina`
 
+### InfoPoint Turistico Bari
+- Slug: `infopoint-bari`
+- Landing partner interna: `https://localis.guide/p/infopoint-bari/`
+- QR canonico base: `https://localis.guide/?p=infopoint-bari&utm_source=infopoint-bari&utm_medium=qr&utm_content=desk`
+
+### Casale Madre
+- Slug: `casale-madre-ostuni`
+- Landing partner interna: `https://localis.guide/p/casale-madre-ostuni/`
+- QR canonico base: `https://localis.guide/?p=casale-madre-ostuni&utm_source=casale-madre-ostuni&utm_medium=qr&utm_content=camera`
+
+### Mare in casa - Dimora Luxury
+- Slug: `mare-in-casa-polignano`
+- Landing partner interna: `https://localis.guide/p/mare-in-casa-polignano/`
+- QR canonico base: `https://localis.guide/?p=mare-in-casa-polignano&utm_source=mare-in-casa-polignano&utm_medium=qr&utm_content=camera`
+
 ## Da non usare nel report QR-only
 
 ### Template non attivo
 - `example-hotel-bari` è un template con `status: paused`, quindi non va usato per QR reali.
-
-### Partner senza QR reale
-- `infopoint-bari` non deve essere trattato come QR partner reale nei tab QR-only.
 
 ## Check rapido prima di stampare
 
