@@ -1,0 +1,334 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import SectionDivider from '../../components/SectionDivider.astro';
+import PriceCard from '../../components/PriceCard.astro';
+import StepsBlock from '../../components/StepsBlock.astro';
+import LangPills from '../../components/LangPills.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import HeroAudioSample from '../../components/HeroAudioSample.astro';
+---
+<Layout
+  title="Matera Audioguide | Die Sassi erklärt von Localis"
+  description="Erkunde Matera mit einem klaren, eindringlichen Audioguide durch die Sassi, die Höhlenwohnungen, die alten Viertel und die Geschichten hinter einer der unvergesslichsten Städte Süditaliens."
+  lang="de"
+>
+  <Breadcrumb items={[{ label: 'Startseite', href: '/de' }, { label: 'Matera' }]} />
+
+  {/* HERO */}
+  <section class="matera-hero relative overflow-hidden border-b border-border">
+<img
+      src="/images/covers/matera-landing.webp"
+      alt="Matera, die Sassi von oben mit der Gravina-Schlucht im Hintergrund"
+      class="matera-hero-bg"
+      width="1980"
+      height="900"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="matera-hero-scrim" aria-hidden="true"></div>
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl relative z-10">
+      <LangPills lang="de" currentPath={Astro.url.pathname} />
+      <div class="flex items-center gap-sm mb-md mt-lg">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">
+          Destination — Matera
+        </span>
+      </div>
+      <h1 class="font-display font-light text-ink leading-[1.05] tracking-[-0.014em] text-[clamp(2.2rem,5vw,3.6rem)] max-w-[24ch]">
+        Matera Audioguide: die in Stein gehauene Stadt verstehen.
+      </h1>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mt-md max-w-[52ch]">
+        Matera ist kein Ort, den man einfach betrachtet.<br />
+        Es ist eine Stadt, die in den Fels gebaut wurde, geprägt von Armut, Glauben, Stille, Verlassenheit und Wiedergeburt.
+      </p>
+<HeroAudioSample lang="de" src="/audio/trailers/matera/matera-trailer-de.mp3" guideSlug="matera" />
+      <div class="mt-lg">
+        <a
+          href="/de/guide/matera"
+          class="inline-flex items-center gap-sm px-lg py-sm font-body font-semibold text-sm text-ink border border-ink rounded-md hover:bg-ink hover:text-surface transition-colors duration-fast no-underline"
+        >
+          Matera Audioguide kaufen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .matera-hero {
+      min-height: clamp(560px, 78vh, 820px);
+      display: flex;
+      align-items: center;
+    }
+    .matera-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      filter: saturate(0.88) contrast(1.06);
+    }
+    .matera-hero .text-ink,
+    .matera-hero h1 {
+      color: oklch(12% 0.005 240) !important;
+    }
+    .matera-hero .text-ink-muted,
+    .matera-hero p {
+      color: oklch(22% 0.008 240 / 0.9) !important;
+    }
+    .matera-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        oklch(from var(--color-surface) l c h / 0.96) 0%,
+        oklch(from var(--color-surface) l c h / 0.85) 35%,
+        oklch(from var(--color-surface) l c h / 0.45) 62%,
+        oklch(from var(--color-surface) l c h / 0) 85%
+      );
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .matera-hero-scrim {
+        background: linear-gradient(
+          to bottom,
+          oklch(from var(--color-surface) l c h / 0.78) 0%,
+          oklch(from var(--color-surface) l c h / 0.58) 60%,
+          oklch(from var(--color-surface) l c h / 0.35) 100%
+        );
+      }
+    }
+  </style>
+
+  {/* INTERLUDE */}
+  <section class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-xl flex items-center gap-lg">
+      <span class="block h-px flex-1 bg-border"></span>
+      <p class="font-body text-sm text-ink-muted tracking-[0.18em] uppercase shrink-0">Eine Geschichte · eine Stadt · Jahrtausende in Stein</p>
+      <span class="block h-px flex-1 bg-border"></span>
+    </div>
+  </section>
+
+  {/* SECTION 1 — WARUM DIESER GUIDE */}
+  <section class="bg-surface border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="max-w-[68ch]">
+        <div class="flex items-center gap-sm mb-lg">
+          <span class="block w-7 h-px bg-accent"></span>
+          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Warum dieser Guide</span>
+        </div>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
+          Matera kann beim ersten Blick überwältigend sein.
+        </p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
+          Steinhäuser, Höhlenkirchen, Treppen, Terrassen, Schluchten, leere Türöffnungen, plötzliche Ausblicke. Alles wirkt uralt, aber ohne eine Geschichte kann es nur eine schöne Kulisse bleiben.
+        </p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink mb-md font-medium">
+          Dieser Guide hilft dir, Matera langsam und klar zu lesen.
+        </p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Nicht als Museum.</p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Nicht als Postkarte.</p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
+          Sondern als lebendigen Ort, mit einer schwierigen Vergangenheit und einer bemerkenswerten Rückkehr ins Leben.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* SECTION 2 — WAS DU ERLEBEN WIRST */}
+  <section class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center gap-sm mb-lg">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Was du erleben wirst</span>
+      </div>
+      <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xl max-w-[60ch]">
+        Dieser Audiospaziergang führt dich durch die Atmosphäre und die Bedeutung Materas:
+      </p>
+      <ul class="list-none p-0 m-0 max-w-[60ch] flex flex-col gap-md">
+        {[
+          'Die Sassi und ihre jahrtausendealte Struktur',
+          'Die Höhlenhäuser und das Leben, das sie einst füllte',
+          'Der Unterschied zwischen Sasso Caveoso und Sasso Barisano',
+          'Die Beziehung zwischen der Stadt und der Gravina',
+          'Die Felsenkirchen und die spirituelle Landschaft der Murgia',
+          'Die Jahre des Verfalls und der Schande',
+          'Die Wiedergeburt Materas als Kultursymbol Süditaliens',
+        ].map((item) => (
+          <li class="flex items-start gap-sm font-body text-base sm:text-lg text-ink-muted leading-relaxed">
+            <span class="text-accent flex-shrink-0 mt-1 text-sm">✦</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  {/* SECTION 3 — FÜR WEN */}
+  <section class="bg-surface border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="max-w-[68ch]">
+        <div class="flex items-center gap-sm mb-lg">
+          <span class="block w-7 h-px bg-accent"></span>
+          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Für wen ist dieser Guide</span>
+        </div>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
+          Dieser Guide ist für Reisende gemacht, die Matera nicht nur im Schnelldurchgang mit dem Fotoapparat erleben wollen.
+        </p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
+          Er ist für Menschen, die verstehen wollen, warum die Stadt so aussieht wie sie aussieht, warum Menschen im Fels lebten, warum die Sassi einst als nationale Schande galten, und wie Matera zu einem der faszinierendsten Orte Europas wurde.
+        </p>
+        <p class="font-body text-sm text-ink-subtle leading-relaxed italic">
+          Perfekt für einen ersten Besuch, einen Tagesausflug oder einen ruhigen Spaziergang durch das historische Zentrum.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* SECTION 4 — SO FUNKTIONIERT ES */}
+  <section class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center gap-sm mb-lg">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">So funktioniert es</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-xl max-w-[62ch] sm:max-w-none">
+        {[
+          { label: 'Keine Gruppe', body: 'Du hörst allein oder mit wem du willst, ohne auf jemanden warten zu müssen.' },
+          { label: 'Kein fester Zeitplan', body: 'Starte wann du willst. Pause. Weitermachen. Zurückkehren.' },
+          { label: 'Nur dein Handy', body: 'Keine App installieren. Du brauchst nur dein Smartphone und Kopfhörer.' },
+        ].map((step) => (
+          <div class="border-t border-border pt-md">
+            <p class="font-display font-light text-ink text-xl mb-xs">{step.label}</p>
+            <p class="font-body text-sm text-ink-muted leading-relaxed">{step.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* SECTION 5 — DAS LOCALIS-VERSPRECHEN */}
+  <section class="bg-surface border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="max-w-[68ch]">
+        <div class="flex items-center gap-sm mb-lg">
+          <span class="block w-7 h-px bg-accent"></span>
+          <span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-accent">Das Localis-Versprechen</span>
+        </div>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
+          Localis erstellt Audioguides für Reisende, die mehr als schnelle Informationen wollen.
+        </p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-xs">Wir listen nicht einfach Sehenswürdigkeiten auf.</p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted mb-md">
+          Wir helfen dir, die Seele eines Ortes zu verstehen: seine Menschen, seine Erinnerungen, sein Alltagsleben und die Geschichten, die hinter den Mauern verborgen bleiben.
+        </p>
+        <p class="font-body text-base sm:text-lg leading-relaxed text-ink-muted">
+          Mit Matera bedeutet das, in eine Stadt einzutauchen, in der Stein, Stille und menschliches Leben seit Jahrhunderten miteinander verbunden sind.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* NARRATORIN — ROSA */}
+  <section class="bg-surface-elev border-t border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <div class="flex items-center justify-center gap-sm mb-2xl">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-accent">Die Stimme von Matera</span>
+        <span class="block w-7 h-px bg-accent"></span>
+      </div>
+      <div class="max-w-[38rem] mx-auto">
+        <a href="/de/guide/matera" class="narr-solo-card" aria-label="Matera Guide — Stimme von Rosa">
+          <figure class="narr-solo-photo m-0">
+<img
+              src="/images/authors/rosa-matera-jun26.png"
+              alt="Narratives Porträt von Rosa"
+              title="Rosa: Narratives Porträt auf Basis von Recherche und Localis-Quellen."
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <p class="font-body text-[10px] font-semibold tracking-[0.18em] uppercase text-ink-subtle m-0 mt-xs">
+            Narratives Porträt. Auf Basis von Recherche und Localis-Quellen.
+          </p>
+          <div class="mt-md">
+            <p class="font-body text-[10px] font-semibold tracking-[0.22em] uppercase text-accent m-0">Matera</p>
+            <h3 class="font-display font-light text-ink text-[clamp(1.5rem,3vw,1.9rem)] m-0 leading-[1.1]">Rosa</h3>
+            <p class="font-body text-xs text-ink-subtle m-0">Narrative Stimme der Sassi</p>
+            <p class="font-body text-sm text-ink-muted m-0 mt-xs leading-relaxed">
+              Aufgewachsen wenige Schritte von den Sassi entfernt. Sie hat erlebt, wie Matera sich von einem Ort der Schande zur europäischen Kulturhauptstadt gewandelt hat. Sie erzählt die Stadt als jemand, der sie von innen trägt, nicht als jemand, der sie von außen erklärt.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .narr-solo-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      text-decoration: none;
+      color: inherit;
+      border-top: 1px solid var(--color-ink);
+      padding-top: var(--spacing-md);
+      transition: opacity 0.2s;
+    }
+    .narr-solo-card:hover { opacity: 0.82; }
+    .narr-solo-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: 2px; }
+    .narr-solo-photo {
+      width: 100%; aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: var(--color-surface-elev);
+      box-shadow: 0 1px 2px oklch(15% 0.012 240 / 0.06), 0 8px 24px -8px oklch(15% 0.012 240 / 0.14);
+    }
+    .narr-solo-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: grayscale(100%) contrast(1.05) brightness(0.97);
+    }
+    @media (prefers-reduced-motion: reduce) { .narr-solo-card { transition: none; } }
+  </style>
+
+  {/* PRICING */}
+  <section id="preise" class="bg-surface border-t border-border">
+    <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
+      <SectionDivider label="Gehe mit Sinn durch Matera." />
+      <p class="font-body text-sm text-ink-muted text-center max-w-[50ch] mx-auto mb-2xl">
+        Starte mit der Hörprobe, dann höre die ganze Geschichte.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[44rem] mx-auto">
+        <PriceCard
+          product="single"
+          guideSlug="matera"
+          lang="de"
+          primary
+          titleOverride="Matera Audioguide"
+          descriptionOverride="Die Sassi, die Gravina, die Felsenkirchen. Eine vollständige Geschichte."
+          ctaOverride="Audioguide kaufen"
+          features={[
+            'Unbegrenzter Zugang, für immer',
+            'Italienisch, Englisch und Deutsch',
+            '1-Klick-Rückerstattung innerhalb von 24h',
+          ]}
+        />
+        <PriceCard
+          product="tris"
+          lang="de"
+          features={[
+            '3 Guides deiner Wahl aus allen Zonen',
+            'Unbegrenzter Zugang, für immer',
+            '1-Klick-Rückerstattung innerhalb von 24h',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* 3 SCHRITTE */}
+  <StepsBlock lang="de" ctaHref="/de/guide/matera" />
+
+</Layout>

@@ -27,6 +27,7 @@ const CITY_DEST: Record<string, { href: string; label: string }> = {
   fasano: { href: '/en/valle-d-itria', label: "Valle d'Itria" },
   vieste: { href: '/en/gargano', label: 'Gargano' },
   gargano: { href: '/en/gargano', label: 'Gargano' },
+  matera: { href: '/en/matera', label: 'Matera' },
 };
 
 export async function getStaticPaths() {
@@ -48,11 +49,14 @@ const stopsCount = guideStopsCount(data);
 const routeMode = guideRouteMode(data, 'en') ?? 'Self-paced walking route';
 const accessibility = guideAccessibility(data, 'en') ?? 'Historic center with mixed paving. Suitable for most visitors.';
 const needs = guideNeeds(data, 'en') ?? 'Headphones and a charged phone.';
-const zoneBundle = data.city === 'bari' || data.city === 'polignano'
-  ? 'bari-completa'
-  : data.city === 'vieste' || data.city === 'gargano'
-    ? 'gargano-completa'
-    : 'valle-completa';
+const zoneBundle: 'bari-completa' | 'valle-completa' | 'gargano-completa' | null =
+  data.city === 'bari' || data.city === 'polignano'
+    ? 'bari-completa'
+    : data.city === 'vieste' || data.city === 'gargano'
+      ? 'gargano-completa'
+      : data.city === 'matera'
+        ? null
+        : 'valle-completa';
 
 const ld: object[] = [
   audioObjectLD({
@@ -159,16 +163,18 @@ ld.push(breadcrumbListLD([
           'Unlimited access, forever',
         ]}
       />
-      <PriceCard
-        product={zoneBundle}
-        lang="en"
-        primary
-        features={[
-          'All 6 guides in the area',
-          'Save €9.95 vs single guides',
-          'Free updates when new area content drops',
-        ]}
-      />
+      {zoneBundle && (
+        <PriceCard
+          product={zoneBundle}
+          lang="en"
+          primary
+          features={[
+            'All 6 guides in the area',
+            'Save €9.95 vs single guides',
+            'Free updates when new area content drops',
+          ]}
+        />
+      )}
     </aside>
   </article>
 </Layout>

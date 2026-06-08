@@ -27,6 +27,7 @@ const CITY_DEST: Record<string, { href: string; label: string }> = {
   fasano: { href: '/de/valle-d-itria', label: "Valle d'Itria" },
   vieste: { href: '/de/gargano', label: 'Gargano' },
   gargano: { href: '/de/gargano', label: 'Gargano' },
+  matera: { href: '/de/matera', label: 'Matera' },
 };
 
 export async function getStaticPaths() {
@@ -72,14 +73,16 @@ const zoneBundle =
             'Kostenlose Updates bei neuen Inhalten aus dem Gargano',
           ],
         }
-      : {
-          product: 'valle-completa' as const,
-          features: [
-            "Alle 6 Audioerzählungen aus dem Valle d'Itria",
-            'Spare 9,95 € gegenüber Einzelguides',
-            "Kostenlose Updates bei neuen Inhalten aus dem Valle d'Itria",
-          ],
-        };
+      : data.city === 'matera'
+        ? null
+        : {
+            product: 'valle-completa' as const,
+            features: [
+              "Alle 6 Audioerzählungen aus dem Valle d'Itria",
+              'Spare 9,95 € gegenüber Einzelguides',
+              "Kostenlose Updates bei neuen Inhalten aus dem Valle d'Itria",
+            ],
+          };
 
 const ld: object[] = [
   audioObjectLD({
@@ -183,12 +186,14 @@ ld.push(breadcrumbListLD([
           'Unbegrenzter Zugang, dauerhaft',
         ]}
       />
-      <PriceCard
-        product={zoneBundle.product}
-        lang="de"
-        primary
-        features={zoneBundle.features}
-      />
+      {zoneBundle && (
+        <PriceCard
+          product={zoneBundle.product}
+          lang="de"
+          primary
+          features={zoneBundle.features}
+        />
+      )}
     </aside>
   </article>
 </Layout>

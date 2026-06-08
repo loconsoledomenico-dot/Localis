@@ -27,6 +27,7 @@ const CITY_DEST: Record<string, { href: string; label: string }> = {
   fasano: { href: '/valle-d-itria', label: "Valle d'Itria" },
   vieste: { href: '/gargano', label: 'Gargano' },
   gargano: { href: '/gargano', label: 'Gargano' },
+  matera: { href: '/matera', label: 'Matera' },
 };
 
 export async function getStaticPaths() {
@@ -49,11 +50,14 @@ const stopsCount = guideStopsCount(data);
 const routeMode = guideRouteMode(data, 'it') ?? 'Passeggiata urbana libera';
 const accessibility = guideAccessibility(data, 'it') ?? 'Centro storico su pavimentazione mista, adatto alla maggior parte dei visitatori.';
 const needs = guideNeeds(data, 'it') ?? 'Un paio di cuffie e smartphone carico.';
-const zoneBundle = data.city === 'bari' || data.city === 'polignano'
-  ? 'bari-completa'
-  : data.city === 'vieste' || data.city === 'gargano'
-    ? 'gargano-completa'
-    : 'valle-completa';
+const zoneBundle: 'bari-completa' | 'valle-completa' | 'gargano-completa' | null =
+  data.city === 'bari' || data.city === 'polignano'
+    ? 'bari-completa'
+    : data.city === 'vieste' || data.city === 'gargano'
+      ? 'gargano-completa'
+      : data.city === 'matera'
+        ? null
+        : 'valle-completa';
 
 const ld: object[] = [
   audioObjectLD({
@@ -165,16 +169,18 @@ ld.push(breadcrumbListLD([
           'Accesso illimitato, per sempre',
         ]}
       />
-      <PriceCard
-        product={zoneBundle}
-        lang="it"
-        primary
-        features={[
-          'Tutte le 6 guide della zona',
-          'Risparmi €9,95 vs guide singole',
-          'Aggiornamenti gratuiti quando esce nuovo contenuto della zona',
-        ]}
-      />
+      {zoneBundle && (
+        <PriceCard
+          product={zoneBundle}
+          lang="it"
+          primary
+          features={[
+            'Tutte le 6 guide della zona',
+            'Risparmi €9,95 vs guide singole',
+            'Aggiornamenti gratuiti quando esce nuovo contenuto della zona',
+          ]}
+        />
+      )}
     </aside>
   </article>
 </Layout>
