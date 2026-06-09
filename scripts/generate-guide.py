@@ -9,7 +9,7 @@ the script are passed through to ElevenLabs (supported by the
 eleven_multilingual_v2 model).
 
 Usage:
-  python scripts/generate-guide.py <slug> <script_path> [--lang it|en] [--voice luigi|domenico] [--dry-run] [--model eleven_multilingual_v2]
+  python scripts/generate-guide.py <slug> <script_path> [--lang it|en|de] [--voice luigi|domenico] [--dry-run] [--model eleven_multilingual_v2]
 
 Examples:
   python scripts/generate-guide.py bari-vecchia bari-vecchia-guida-completa.txt
@@ -215,7 +215,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Generate Localis audio guide via ElevenLabs.")
     ap.add_argument("slug", help="Guide slug, e.g. bari-vecchia")
     ap.add_argument("script_path", help="Path to source .txt/.md (relative to repo root or absolute)")
-    ap.add_argument("--lang", default="it", choices=["it", "en"])
+    ap.add_argument("--lang", default="it", choices=["it", "en", "de"])
     ap.add_argument("--voice", default="luigi", help="Voice key in .env (luigi|domenico|...)")
     ap.add_argument("--model", default="eleven_multilingual_v2",
                     help="ElevenLabs model id (eleven_multilingual_v2|eleven_turbo_v2_5|eleven_v3)")

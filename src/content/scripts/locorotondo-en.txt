@@ -1,5 +1,5 @@
 LOCOROTONDO — THE ROUND VILLAGE
-Voice: Francesco, 50 years old, owner of Azienda Agricola Eremiti di Locorotondo
+Voice: Francesco, 50 years old, winemaker of the round village
 
 =====
 CH. 1 — INTRO: THE ITRIA VALLEY FROM THE WINDOW
@@ -77,7 +77,7 @@ In a cooperative model, <break time="0.5s"/> the small farmers <break time="0.5s
 
 For decades, <break time="0.5s"/> this was how the majority of Locorotondo DOC reached the market. <break time="0.8s"/> Large volumes, consistent year on year, <break time="0.5s"/> reliable. <break time="0.8s"/> The cooperative model was the backbone of the wine economy here. <break time="1.2s"/>
 
-The alternative is what I do. <break time="0.8s"/> At Eremiti di Locorotondo, <break time="0.5s"/> everything happens on the same property: <break time="0.5s"/> the vineyard, the fermentation, the ageing, the bottling, the selling. <break time="0.8s"/> I control every decision. <break time="0.8s"/> If something goes wrong, <break time="0.5s"/> it's my fault and no one else's. <break time="0.8s"/> If something goes beautifully right, <break time="0.5s"/> that's mine too. <break time="1.2s"/>
+The alternative is what I do. <break time="0.8s"/> I run a small independent farm. <break time="0.8s"/> I won't tell you its name, <break time="0.5s"/> because this isn't advertising: <break time="0.5s"/> we're here to understand the land, <break time="0.5s"/> not to sell bottles. <break time="0.8s"/> Everything happens on the same property: <break time="0.5s"/> the vineyard, the fermentation, the ageing, the bottling, the selling. <break time="0.8s"/> I control every decision. <break time="0.8s"/> If something goes wrong, <break time="0.5s"/> it's my fault and no one else's. <break time="0.8s"/> If something goes beautifully right, <break time="0.5s"/> that's mine too. <break time="1.2s"/>
 
 There's a genuine tension between these two models, <break time="0.5s"/> and I won't pretend there isn't. <break time="0.8s"/> The cooperative gives you volume and market reach. <break time="0.8s"/> The independent producer gives you character, identity, <break time="0.5s"/> the ability to make decisions that don't require a committee vote. <break time="0.8s"/> Which approach makes better wine? <break time="0.8s"/> It depends. <break time="0.8s"/> It always depends. <break time="1.2s"/>
 
@@ -105,7 +105,7 @@ voice: jeff
 
 Now let me tell you about what I do. <break time="1.5s"/>
 
-My farm is called Eremiti di Locorotondo. <break time="0.8s"/> The name means "hermits of Locorotondo." <break time="0.8s"/> I chose it because this land asks for a kind of solitary attention <break time="0.5s"/> — you have to be willing to stand in a vineyard alone at dawn <break time="0.5s"/> and read what the plants are telling you. <break time="0.8s"/> I make wine, olive oil, and something else <break time="0.5s"/> — but let's start with the wine. <break time="1.2s"/>
+As I said, I prefer not to name my farm. <break time="0.8s"/> I make wine, olive oil, and something else <break time="0.5s"/> — but let's start with the wine. <break time="1.2s"/>
 
 The Locorotondo DOC has existed since June 10th, 1969. <break time="0.8s"/> It's one of the oldest recognised white wines in all of Puglia. <break time="0.8s"/> Two grape varieties define it: <break time="0.5s"/> Verdeca and Bianco d'Alessano. <break time="1.2s"/>
 

@@ -9,7 +9,7 @@ Stai salendo. <break time="1.5s"/>
 
 Hai appena lasciato la pianura <break time="0.5s"/> e stai salendo verso Locorotondo. <break time="0.8s"/> Quattrocentodieci metri sul livello del mare <break time="0.5s"/> — non è una montagna, <break time="0.5s"/> ma su questa collina il vento tira sempre, <break time="0.5s"/> e d'estate mentre tutta la Puglia soffoca di caldo, <break time="0.5s"/> qui si sta bene. <break time="1.2s"/>
 
-Guarda giù nella valle mentre sali. <break time="0.8s"/> Trulli sparsi tra gli ulivi, <break time="0.5s"/> vigneti, <break time="0.5s"/> muretti di pietra che dividono i campi in pezzi irregolari. <break time="0.8s"/> Questa è la Valle d Itria <break time="0.5s"/> — una conca naturale dentro la Murgia <break time="0.5s"/> dove per secoli la gente ha coltivato, costruito, vissuto. <break time="1.2s"/>
+Guarda giù nella valle mentre sali. <break time="0.8s"/> Trulli sparsi tra gli ulivi, <break time="0.5s"/> vigneti, <break time="0.5s"/> muretti di pietra che dividono i campi in pezzi irregolari. <break time="0.8s"/> Questa è la Valle d'Ìtria <break time="0.5s"/> — una conca naturale dentro la Murgia <break time="0.5s"/> dove per secoli la gente ha coltivato, costruito, vissuto. <break time="1.2s"/>
 
 Quella linea verde scura che vedi in basso? <break time="0.8s"/> Sono i filari. <break time="0.8s"/> Viti che vanno avanti per chilometri, <break time="0.5s"/> interrotti solo dagli ulivi e dai murettini di pietra calcarea a secco che separano le proprietà. <break time="0.8s"/> Ogni muretto è stato fatto a mano, <break time="0.5s"/> spostando la pietra che usciva dal terreno quando si arava. <break time="0.8s"/> Non è decorazione. <break time="0.5s"/> È il segno di un lavoro che non finiva mai. <break time="1.2s"/>
 
@@ -43,7 +43,7 @@ Non San Francesco, non la Madonna. <break time="0.8s"/> San Giorgio — il guerr
 
 La festa patronale è il 23 giugno, <break time="0.5s"/> la vigilia della festa di San Giorgio. <break time="0.8s"/> Se sei qui quella sera, <break time="0.8s"/> non andare da nessuna parte. <break time="1.2s"/>
 
-I fuochi d'artificio si vedono da tutta la Valle d Itria. <break time="0.8s"/> Martina Franca, Cisternino, Alberobello — <break time="0.5s"/> da ogni collina intorno, quella sera, <break time="0.5s"/> si vedono i colori sopra Locorotondo. <break time="0.8s"/> È uno di quei momenti in cui capisci perché questo posto esiste da mille anni: <break time="0.5s"/> perché ha ancora qualcosa che vale la pena celebrare. <break time="1.2s"/>
+I fuochi d'artificio si vedono da tutta la Valle d'Ìtria. <break time="0.8s"/> Martina Franca, Cisternino, Alberobello — <break time="0.5s"/> da ogni collina intorno, quella sera, <break time="0.5s"/> si vedono i colori sopra Locorotondo. <break time="0.8s"/> È uno di quei momenti in cui capisci perché questo posto esiste da mille anni: <break time="0.5s"/> perché ha ancora qualcosa che vale la pena celebrare. <break time="1.2s"/>
 
 La processione passa per le strade circolari del centro storico. <break time="0.8s"/> Pensa a cosa vuol dire: <break time="0.5s"/> il santo gira letteralmente in tondo attorno al borgo. <break time="0.8s"/> Non va da A a B, <break time="0.5s"/> non attraversa il paese in linea retta. <break time="0.8s"/> Percorre l'anello delle strade <break time="0.5s"/> e torna al punto di partenza. <break time="0.8s"/> Come il paese stesso. <break time="1.5s"/>
 
@@ -87,7 +87,7 @@ La Cantina Sociale di Locorotondo nasce negli anni Trenta del Novecento <break t
 
 Una cooperativa è una forma di solidarietà contadina. <break time="0.8s"/> Non è un'azienda come le altre. <break time="0.8s"/> È il modo in cui la gente piccola <break time="0.5s"/> ha cercato di non scomparire di fronte alle grandi realtà industriali. <break time="1.2s"/>
 
-Io ho fatto una scelta diversa. <break time="0.8s"/> La mia azienda Eremiti di Locorotondo è indipendente. <break time="0.8s"/> Vinificio io, in cantina mia, <break time="0.5s"/> con le mie uve. <break time="0.8s"/> È una scelta che ha un costo: <break time="0.5s"/> devo comprare le attrezzature, <break time="0.5s"/> devo gestire tutto, <break time="0.5s"/> non ho la rete di sicurezza della cooperativa. <break time="1.2s"/>
+Io ho fatto una scelta diversa. <break time="0.8s"/> Ho una piccola azienda agricola indipendente. <break time="0.8s"/> Il nome non te lo dico, <break time="0.5s"/> perché questa non è pubblicità: <break time="0.5s"/> siamo qui per capire il territorio, <break time="0.5s"/> non per vendere bottiglie. <break time="0.8s"/> Vinifico io, in cantina mia, <break time="0.5s"/> con le mie uve. <break time="0.8s"/> È una scelta che ha un costo: <break time="0.5s"/> devo comprare le attrezzature, <break time="0.5s"/> devo gestire tutto, <break time="0.5s"/> non ho la rete di sicurezza della cooperativa. <break time="1.2s"/>
 
 Ma il vantaggio è l'identità. <break time="0.8s"/> Il vino della cooperativa è consistente, buono, affidabile. <break time="0.8s"/> Il vino di un piccolo produttore artigianale <break time="0.5s"/> ha carattere, <break time="0.5s"/> ha i difetti e i pregi di quella specifica vigna, <break time="0.5s"/> di quell'annata precisa, <break time="0.5s"/> di quelle mani. <break time="0.8s"/> Non è meglio o peggio. <break time="0.8s"/> È diverso. <break time="1.2s"/>
 
@@ -119,7 +119,7 @@ voice: custom-locorotondo
 
 Adesso ti parlo di quello che faccio io. <break time="1.5s"/>
 
-La mia azienda si chiama Eremiti di Locorotondo. <break time="0.8s"/> Produco vino, olio e qualcos'altro <break time="0.5s"/> — ma arriviamo al vino prima. <break time="1.2s"/>
+La mia azienda, come ti dicevo, preferisco non nominarla. <break time="0.8s"/> Produco vino, olio e qualcos'altro <break time="0.5s"/> — ma arriviamo al vino prima. <break time="1.2s"/>
 
 Il Locorotondo DOC esiste dal 10 giugno 1969. <break time="0.8s"/> È uno dei bianchi più antichi riconosciuti in Puglia. <break time="0.8s"/> I vitigni sono due: <break time="0.5s"/> la Verdeca e il Bianco d'Alessano. <break time="1.2s"/>
 
@@ -131,7 +131,7 @@ Non è un vino che urla. <break time="0.8s"/> È un vino che parla piano, <break
 
 La vendemmia qui cade solitamente a fine agosto, inizio settembre. <break time="0.8s"/> Dipende dall'annata. <break time="0.8s"/> Un'estate secca e calda anticipa tutto. <break time="0.8s"/> Un'estate con qualche pioggia a luglio sposta la vendemmia di dieci giorni. <break time="0.8s"/> Non ci sono regole fisse. <break time="0.5s"/> La vite decide. <break time="0.8s"/> Il vignaiolo osserva. <break time="1.2s"/>
 
-Io assaggio gli acini ogni giorno nell'ultima settimana prima di raccogliere. <break time="0.8s"/> Non per analisi chimica, <break time="0.5s"/> anche se quella la faccio. <break time="0.8s"/> Ma perché il gusto ti dice cose che il refrettometro non vede. <break time="0.8s"/> Quando l'acino ti dà quella sensazione di rotondità, <break time="0.5s"/> quando l'acidità si è ammorbidita senza perdere la tensione, <break time="0.5s"/> quando la buccia si separa bene dalla polpa — <break time="0.5s"/> lì raccogli. <break time="1.2s"/>
+Io assaggio gli àcini ogni giorno nell'ultima settimana prima di raccogliere. <break time="0.8s"/> Non per analisi chimica, <break time="0.5s"/> anche se quella la faccio. <break time="0.8s"/> Ma perché il gusto ti dice cose che il refrettometro non vede. <break time="0.8s"/> Quando l'àcino ti dà quella sensazione di rotondità, <break time="0.5s"/> quando l'acidità si è ammorbidita senza perdere la tensione, <break time="0.5s"/> quando la buccia si separa bene dalla polpa — <break time="0.5s"/> lì raccogli. <break time="1.2s"/>
 
 Il segreto non è nella cantina moderna, <break time="0.5s"/> nei lieviti selezionati, <break time="0.5s"/> nella tecnologia. <break time="0.8s"/> Il segreto è nella vigna. <break time="0.8s"/> Una vite di Verdeca che ha vent'anni di radici <break time="0.5s"/> nella pietra calcarea di questa collina <break time="0.5s"/> sa cose che nessun manuale di enologia ha scritto. <break time="1.5s"/>
 
@@ -151,7 +151,7 @@ Guardo gli olivi quando voglio sapere da dove viene il vento. <break time="0.8s"
 
 Dalla vigna, quando la giornata è limpida, <break time="0.8s"/> vedo Cisternino su una collina vicina — <break time="0.5s"/> le sue case bianche che si distinguono nette sul verde. <break time="0.8s"/> Più in là, a sud, Martina Franca, <break time="0.5s"/> più grande, più estesa. <break time="0.8s"/> E in certi giorni di estate, quando c'è vento da nord <break time="0.5s"/> e l'aria è pulita, <break time="0.5s"/> si vedono i tetti di Alberobello in lontananza. <break time="0.8s"/> Tre comuni, tre paesi, tutti visibili dalla stessa vigna. <break time="0.8s"/> È un paesaggio che parla di comunità. <break time="1.2s"/>
 
-Giù nella valle ci sono le masserie. <break time="0.8s"/> Le grandi case coloniche della Valle d Itria, <break time="0.5s"/> costruite come fortezze autosufficienti. <break time="0.8s"/> Avevano tutto dentro: <break time="0.5s"/> stalla, magazzino, frantoio, cisterna, cappella. <break time="0.8s"/> Non uscivi dalla masseria per settimane, in certi periodi. <break time="0.8s"/> Non ne avevi bisogno. <break time="1.2s"/>
+Giù nella valle ci sono le masserie. <break time="0.8s"/> Le grandi case coloniche della Valle d'Ìtria, <break time="0.5s"/> costruite come fortezze autosufficienti. <break time="0.8s"/> Avevano tutto dentro: <break time="0.5s"/> stalla, magazzino, frantoio, cisterna, cappella. <break time="0.8s"/> Non uscivi dalla masseria per settimane, in certi periodi. <break time="0.8s"/> Non ne avevi bisogno. <break time="1.2s"/>
 
 Molte ora sono agriturismi. <break time="0.8s"/> Non è un male, intendiamoci. <break time="0.8s"/> Meglio che siano vissute come agriturismi <break time="0.5s"/> che abbandonate. <break time="0.8s"/> Ma la funzione originale era diversa: <break time="0.5s"/> erano il centro organizzativo del territorio rurale. <break time="0.8s"/> La masseria gestiva i contadini locali, <break time="0.5s"/> coordinava le semine e i raccolti, <break time="0.5s"/> era il punto di riferimento per tutto il podere intorno. <break time="1.2s"/>
 
@@ -163,9 +163,9 @@ voice: custom-locorotondo
 
 Due cose che produco e che ti voglio raccontare, <break time="0.5s"/> perché la maggior parte della gente non sa come si fanno davvero. <break time="1.5s"/>
 
-L'olio. <break time="0.8s"/> La Valle d Itria è olivicola da millenni. <break time="0.8s"/> Gli ulivi qui non li piantiamo <break time="0.5s"/> — ci sono già, alcuni hanno centinaia di anni. <break time="0.8s"/> La frangitura delle olive <break time="0.5s"/> — il processo per estrarre l'olio <break time="0.5s"/> — deve essere fatta veloce, <break time="0.5s"/> entro poche ore dalla raccolta, <break time="0.5s"/> per evitare che l'oliva si ossidi <break time="0.5s"/> e l'olio perda qualità. <break time="0.8s"/> Ogni ora che passa tra la raccolta e il frantoio <break time="0.5s"/> è un'ora di acidità in più nell'olio. <break time="0.8s"/> Questo è il motivo per cui l'olio buono costa quanto costa. <break time="1.2s"/>
+L'olio. <break time="0.8s"/> La Valle d'Ìtria è olivicola da millenni. <break time="0.8s"/> Gli ulivi qui non li piantiamo <break time="0.5s"/> — ci sono già, alcuni hanno centinaia di anni. <break time="0.8s"/> La frangitura delle olive <break time="0.5s"/> — il processo per estrarre l'olio <break time="0.5s"/> — deve essere fatta veloce, <break time="0.5s"/> entro poche ore dalla raccolta, <break time="0.5s"/> per evitare che l'oliva si ossidi <break time="0.5s"/> e l'olio perda qualità. <break time="0.8s"/> Ogni ora che passa tra la raccolta e il frantoio <break time="0.5s"/> è un'ora di acidità in più nell'olio. <break time="0.8s"/> Questo è il motivo per cui l'olio buono costa quanto costa. <break time="1.2s"/>
 
-La raccolta delle olive non si fa con le macchine, non qui. <break time="0.8s"/> Non su questi alberi vecchi, <break time="0.5s"/> con le chiome irregolari e i rami contorti. <break time="0.8s"/> Si usano le reti stese sotto, <break time="0.5s"/> i rastrelli per pettinare i rami, <break time="0.5s"/> le mani per gli acini che restano. <break time="0.8s"/> È lento. <break time="0.8s"/> È necessario. <break time="0.8s"/> Una macchina vibrante farebbe cedere la corteccia di un ulivo centenario. <break time="1.2s"/>
+La raccolta delle olive non si fa con le macchine, non qui. <break time="0.8s"/> Non su questi alberi vecchi, <break time="0.5s"/> con le chiome irregolari e i rami contorti. <break time="0.8s"/> Si usano le reti stese sotto, <break time="0.5s"/> i rastrelli per pettinare i rami, <break time="0.5s"/> le mani per le olive che restano. <break time="0.8s"/> È lento. <break time="0.8s"/> È necessario. <break time="0.8s"/> Una macchina vibrante farebbe cedere la corteccia di un ulivo centenario. <break time="1.2s"/>
 
 La lavanda. <break time="0.8s"/> Questo è il prodotto di cui la gente si stupisce di più <break time="0.5s"/> quando lo sente citare. <break time="1.2s"/>
 
@@ -185,7 +185,7 @@ voice: custom-locorotondo
 
 Parliamo di mangiare. <break time="1.2s"/>
 
-Perché a Locorotondo, come in tutta la Valle d Itria, <break time="0.5s"/> il cibo è parte del paesaggio tanto quanto i trulli e le vigne. <break time="0.8s"/> E ci sono cose che devi sapere prima di sederti a tavola. <break time="1.5s"/>
+Perché a Locorotondo, come in tutta la Valle d'Ìtria, <break time="0.5s"/> il cibo è parte del paesaggio tanto quanto i trulli e le vigne. <break time="0.8s"/> E ci sono cose che devi sapere prima di sederti a tavola. <break time="1.5s"/>
 
 Prima cosa: i gnumeridde. <break time="1.2s"/>
 
@@ -215,7 +215,7 @@ Fermati qui un momento. <break time="1.2s"/>
 
 Guarda giù. <break time="1.5s"/>
 
-Tutta la Valle d Itria è sotto di te. <break time="0.8s"/> I trulli di Alberobello a destra, <break time="0.5s"/> Martina Franca a sinistra, <break time="0.5s"/> le masserie sparse tra i campi, <break time="0.5s"/> i filari di viti, <break time="0.5s"/> gli ulivi che non finiscono mai. <break time="1.2s"/>
+Tutta la Valle d'Ìtria è sotto di te. <break time="0.8s"/> I trulli di Alberobello a destra, <break time="0.5s"/> Martina Franca a sinistra, <break time="0.5s"/> le masserie sparse tra i campi, <break time="0.5s"/> i filari di viti, <break time="0.5s"/> gli ulivi che non finiscono mai. <break time="1.2s"/>
 
 Questo è il motivo per cui Locorotondo è stato costruito su questa collina. <break time="0.8s"/> Non per il panorama <break time="0.5s"/> — anche se è bello. <break time="0.8s"/> Per il controllo. <break time="0.8s"/> Da qui vedi tutto quello che si muove nella valle. <break time="0.8s"/> Vedi chi arriva, vedi dove piove, <break time="0.5s"/> vedi dove bruciano i campi. <break time="0.8s"/> Per secoli, questa vista era informazione. <break time="0.8s"/> Era potere. <break time="1.2s"/>
 
@@ -225,7 +225,7 @@ Ma prova a guardarlo come lo guardava qualcuno mille anni fa, <break time="0.5s"
 
 Metti a fuoco i filari di vite là sotto. <break time="0.8s"/> Non sai da qui quanto siano distanti. <break time="0.8s"/> Sembrano vicini, ordinati. <break time="0.8s"/> In realtà ci lavoro io, ci lavorano i miei vicini, <break time="0.5s"/> ci lavora chiunque abbia un pezzo di terra in questa valle. <break time="0.8s"/> Quei filari li ho percorsi a piedi mille volte. <break time="0.5s"/> Ogni vite la conosco. <break time="0.8s"/> Da qui sembrano un disegno. <break time="0.5s"/> Da vicino sono lavoro quotidiano. <break time="1.2s"/>
 
-D'estate la sera, quando il sole scende verso ovest, <break time="0.5s"/> la luce prende i tetti della Valle d Itria dal basso. <break time="0.8s"/> I coni dei trulli diventano oro. <break time="0.8s"/> Le pietre calcari dei muretti brillano. <break time="0.8s"/> È uno di quei momenti in cui capisci perché questa terra <break time="0.5s"/> ha ispirato pittori e fotografi per decenni. <break time="0.8s"/> Non è una questione di tecnica. <break time="0.5s"/> È che la luce qui è diversa. <break time="1.2s"/>
+D'estate la sera, quando il sole scende verso ovest, <break time="0.5s"/> la luce prende i tetti della Valle d'Ìtria dal basso. <break time="0.8s"/> I coni dei trulli diventano oro. <break time="0.8s"/> Le pietre calcari dei muretti brillano. <break time="0.8s"/> È uno di quei momenti in cui capisci perché questa terra <break time="0.5s"/> ha ispirato pittori e fotografi per decenni. <break time="0.8s"/> Non è una questione di tecnica. <break time="0.5s"/> È che la luce qui è diversa. <break time="1.2s"/>
 
 Cambia un po' come lo vedi, no? <break time="1.5s"/>
 
