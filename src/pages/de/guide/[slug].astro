@@ -2,7 +2,7 @@
 export const prerender = true;
 import Layout from '../../../components/Layout.astro';
 import Eyebrow from '../../../components/Eyebrow.astro';
-import PriceCard from '../../../components/PriceCard.astro';
+import GuidePurchaseCards from '../../../components/GuidePurchaseCards.astro';
 import ChapterList from '../../../components/ChapterList.astro';
 import StartMap from '../../../components/StartMap.astro';
 import NarratorCard from '../../../components/NarratorCard.astro';
@@ -83,6 +83,19 @@ const zoneBundle =
               "Kostenlose Updates bei neuen Inhalten aus dem Valle d'Itria",
             ],
           };
+const singleFeatures = [
+  `${data.chapters.length} Kapitel`,
+  `${durationLabel} Laufzeit`,
+  'Audioerzählung zum freien Hören',
+  'Italienisch, Englisch und Deutsch, wo verfügbar',
+  'Dauerhafter Link, immer wieder nutzbar',
+  'Offline nach dem ersten Abspielen',
+];
+const trisFeatures = [
+  '3 Guides frei wählbar',
+  'Spare 2,98 € gegenüber Einzelguides',
+  'Unbegrenzter Zugang, dauerhaft',
+];
 
 const ld: object[] = [
   audioObjectLD({
@@ -129,8 +142,18 @@ ld.push(breadcrumbListLD([
       <p class="font-display italic text-2xl text-ink-muted">{subtitle}</p>
     </header>
 
-    <div class="order-3 lg:order-none flex flex-col gap-lg">
+    <div class="order-2 lg:order-none flex flex-col gap-lg">
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
+
+      <GuidePurchaseCards
+        class="lg:hidden flex flex-col gap-md"
+        guideSlug={data.slug}
+        lang="de"
+        singleFeatures={singleFeatures}
+        trisFeatures={trisFeatures}
+        zoneBundleProduct={zoneBundle?.product}
+        zoneBundleFeatures={zoneBundle?.features}
+      />
 
       <GuideUseCase guide={data} lang={lang} />
       <GuideFactsCard
@@ -163,37 +186,14 @@ ld.push(breadcrumbListLD([
       )}
     </div>
 
-    <aside class="order-2 lg:order-none lg:sticky lg:top-24 flex flex-col gap-md">
-      <PriceCard
-        product="single"
-        guideSlug={data.slug}
-        lang="de"
-        features={[
-          `${data.chapters.length} Kapitel`,
-          `${durationLabel} Laufzeit`,
-          'Audioerzählung zum freien Hören',
-          'Italienisch, Englisch und Deutsch, wo verfügbar',
-          'Dauerhafter Link, immer wieder nutzbar',
-          'Offline nach dem ersten Abspielen',
-        ]}
-      />
-      <PriceCard
-        product="tris"
-        lang="de"
-        features={[
-          '3 Guides frei wählbar',
-          'Spare 2,98 € gegenüber Einzelguides',
-          'Unbegrenzter Zugang, dauerhaft',
-        ]}
-      />
-      {zoneBundle && (
-        <PriceCard
-          product={zoneBundle.product}
-          lang="de"
-          primary
-          features={zoneBundle.features}
-        />
-      )}
-    </aside>
+    <GuidePurchaseCards
+      class="hidden lg:sticky lg:top-24 lg:flex flex-col gap-md"
+      guideSlug={data.slug}
+      lang="de"
+      singleFeatures={singleFeatures}
+      trisFeatures={trisFeatures}
+      zoneBundleProduct={zoneBundle?.product}
+      zoneBundleFeatures={zoneBundle?.features}
+    />
   </article>
 </Layout>

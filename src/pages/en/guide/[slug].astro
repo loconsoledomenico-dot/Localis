@@ -2,7 +2,7 @@
 export const prerender = true;
 import Layout from '../../../components/Layout.astro';
 import Eyebrow from '../../../components/Eyebrow.astro';
-import PriceCard from '../../../components/PriceCard.astro';
+import GuidePurchaseCards from '../../../components/GuidePurchaseCards.astro';
 import ChapterList from '../../../components/ChapterList.astro';
 import StartMap from '../../../components/StartMap.astro';
 import NarratorCard from '../../../components/NarratorCard.astro';
@@ -57,6 +57,24 @@ const zoneBundle: 'bari-completa' | 'valle-completa' | 'gargano-completa' | null
       : data.city === 'matera'
         ? null
         : 'valle-completa';
+const singleFeatures = [
+  `${data.chapters.length} chapters`,
+  `${durationLabel} runtime`,
+  'Self-guided route on your phone',
+  'Italian, English and German where available',
+  'Permanent link, yours forever',
+  'Works offline after first play',
+];
+const trisFeatures = [
+  '3 guides of your choice',
+  'Save €2.98 vs single guides',
+  'Unlimited access, forever',
+];
+const zoneBundleFeatures = [
+  'All 6 guides in the area',
+  'Save €9.95 vs single guides',
+  'Free updates when new area content drops',
+];
 
 const ld: object[] = [
   audioObjectLD({
@@ -106,8 +124,18 @@ ld.push(breadcrumbListLD([
       <p class="font-display italic text-2xl text-ink-muted">{data.subtitle_en}</p>
     </header>
 
-    <div class="order-3 lg:order-none flex flex-col gap-lg">
+    <div class="order-2 lg:order-none flex flex-col gap-lg">
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
+
+      <GuidePurchaseCards
+        class="lg:hidden flex flex-col gap-md"
+        guideSlug={data.slug}
+        lang="en"
+        singleFeatures={singleFeatures}
+        trisFeatures={trisFeatures}
+        zoneBundleProduct={zoneBundle}
+        zoneBundleFeatures={zoneBundleFeatures}
+      />
 
       <GuideUseCase guide={data} lang="en" />
       <GuideFactsCard
@@ -140,41 +168,14 @@ ld.push(breadcrumbListLD([
       )}
     </div>
 
-    <aside class="order-2 lg:order-none lg:sticky lg:top-24 flex flex-col gap-md">
-      <PriceCard
-        product="single"
-        guideSlug={data.slug}
-        lang="en"
-        features={[
-          `${data.chapters.length} chapters`,
-          `${durationLabel} runtime`,
-          'Self-guided route on your phone',
-          'Italian, English and German where available',
-          'Permanent link, yours forever',
-          'Works offline after first play',
-        ]}
-      />
-      <PriceCard
-        product="tris"
-        lang="en"
-        features={[
-          '3 guides of your choice',
-          'Save €2.98 vs single guides',
-          'Unlimited access, forever',
-        ]}
-      />
-      {zoneBundle && (
-        <PriceCard
-          product={zoneBundle}
-          lang="en"
-          primary
-          features={[
-            'All 6 guides in the area',
-            'Save €9.95 vs single guides',
-            'Free updates when new area content drops',
-          ]}
-        />
-      )}
-    </aside>
+    <GuidePurchaseCards
+      class="hidden lg:sticky lg:top-24 lg:flex flex-col gap-md"
+      guideSlug={data.slug}
+      lang="en"
+      singleFeatures={singleFeatures}
+      trisFeatures={trisFeatures}
+      zoneBundleProduct={zoneBundle}
+      zoneBundleFeatures={zoneBundleFeatures}
+    />
   </article>
 </Layout>
