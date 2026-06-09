@@ -177,6 +177,13 @@ const blog = defineCollection({
     // Date
     published_at: z.date(),
     updated_at: z.date().optional(),
+    // Autore e trasparenza editoriale
+    author_name: z.string().optional(),
+    author_role: z.string().optional(),
+    author_photo: z.string().optional(),
+    author_bio: z.string().optional(),
+    author_url: z.string().optional(),
+    editorial_note: z.string().optional(),
     // Guida audio collegata (per il box CTA)
     guide_slug: z.string(),          // es. "bari-vecchia"
     guide_title: z.string(),         // es. "Bari Vecchia — Dentro la Città"

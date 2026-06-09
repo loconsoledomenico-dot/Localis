@@ -57,11 +57,18 @@ const articleLD = {
   datePublished: d.published_at.toISOString().split('T')[0],
   ...(d.updated_at && { dateModified: d.updated_at.toISOString().split('T')[0] }),
   inLanguage: 'it-IT',
-  author: {
-    '@type': 'Organization',
-    name: 'Localis',
-    url: SITE,
-  },
+  author: d.author_name
+    ? {
+        '@type': 'Person',
+        name: d.author_name,
+        url: `${SITE}${d.author_url ?? '/about/'}`,
+        ...(d.author_photo && { image: `${SITE}${d.author_photo}` }),
+      }
+    : {
+        '@type': 'Organization',
+        name: 'Localis',
+        url: SITE,
+      },
   publisher: {
     '@type': 'Organization',
     name: 'Localis',
@@ -126,6 +133,30 @@ const breadcrumbLD = {
         </time></>
       )}
     </p>
+    {d.author_name && (
+      <div class="mt-lg flex items-center gap-md border-t border-border pt-md">
+        {d.author_photo && (
+          <img
+            src={d.author_photo}
+            alt={`Ritratto di ${d.author_name}`}
+            width="56"
+            height="56"
+            loading="eager"
+            decoding="async"
+            class="h-14 w-14 rounded-full object-cover grayscale"
+          />
+        )}
+        <div>
+          <p class="text-sm text-ink">
+            Scritto da{' '}
+            <a href={d.author_url ?? '/about/'} class="text-link hover:text-link-pressed underline underline-offset-2">
+              {d.author_name}
+            </a>
+          </p>
+          {d.author_role && <p class="text-xs text-ink-subtle mt-2xs">{d.author_role}</p>}
+        </div>
+      </div>
+    )}
   </header>
 
   <!-- ── Immagine copertina ──────────────────────────────────────────── -->
@@ -168,6 +199,40 @@ const breadcrumbLD = {
       guidePriceLabel={d.guide_price_label}
     />
   </div>
+
+  {(d.author_name || d.editorial_note) && (
+    <section class="max-w-narrow mx-auto px-md mt-xl">
+      <div class="rounded-lg border border-border bg-surface-elev p-lg flex flex-col sm:flex-row gap-md">
+        {d.author_photo && (
+          <img
+            src={d.author_photo}
+            alt={`Ritratto di ${d.author_name}`}
+            width="80"
+            height="80"
+            loading="lazy"
+            decoding="async"
+            class="h-20 w-20 rounded-full object-cover grayscale flex-shrink-0"
+          />
+        )}
+        <div class="flex flex-col gap-sm">
+          {d.author_name && (
+            <div>
+              <p class="text-xs font-semibold tracking-[0.18em] uppercase text-accent">Autore</p>
+              <h2 class="font-display text-xl text-ink mt-2xs">{d.author_name}</h2>
+              {d.author_role && <p class="text-sm text-ink-subtle mt-2xs">{d.author_role}</p>}
+            </div>
+          )}
+          {d.author_bio && <p class="text-sm text-ink-muted leading-relaxed">{d.author_bio}</p>}
+          {d.editorial_note && (
+            <p class="text-xs text-ink-subtle leading-relaxed border-t border-border pt-sm">
+              <strong class="text-ink-muted">Nota editoriale:</strong> {d.editorial_note}{' '}
+              <a href="/metodo/" class="text-link hover:text-link-pressed underline underline-offset-2">Leggi il metodo Localis</a>.
+            </p>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- ── Articoli correlati ──────────────────────────────────────────── -->
   {related.length > 0 && (
