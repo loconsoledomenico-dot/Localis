@@ -49,10 +49,19 @@ export const GARGANO_GUIDES: readonly string[] = [
   'gargano-saline',
 ] as const;
 
+export const MATERA_GUIDES: readonly string[] = [
+  'matera',
+] as const;
+
 export const ALL_GUIDES: readonly string[] = [
   ...BARI_GUIDES,
   ...VALLE_GUIDES,
   ...GARGANO_GUIDES,
+] as const;
+
+export const PURCHASEABLE_GUIDES: readonly string[] = [
+  ...ALL_GUIDES,
+  ...MATERA_GUIDES,
 ] as const;
 
 export const CROCIERA_GUIDES: readonly string[] = [
@@ -181,7 +190,7 @@ export function validateSelectedSlugs(
   product: ProductSlug,
   selectedSlugs: string[],
 ): void {
-  const validSet = new Set(ALL_GUIDES);
+  const validSet = new Set(PURCHASEABLE_GUIDES);
   for (const s of selectedSlugs) {
     if (!validSet.has(s)) {
       throw new Error(`Unknown guide slug: "${s}"`);

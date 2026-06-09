@@ -272,7 +272,7 @@ const guideListLD = itemListLD(
   <section id="prezzi" class="bg-surface-elev border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <SectionDivider label="Scegli come ascoltare Matera." />
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[44rem] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg max-w-[66rem] mx-auto">
         <PriceCard
           product="single"
           guideSlug="matera"
@@ -294,6 +294,15 @@ const guideListLD = itemListLD(
             '3 guide a scelta tra tutte le zone',
             'Accesso illimitato, per sempre',
             'Rimborso 1-click entro 24h',
+          ]}
+        />
+        <PriceCard
+          product="sestina"
+          lang="it"
+          features={[
+            '6 guide a scelta tra Bari, Valle d’Itria, Gargano e Matera',
+            'Risparmi €9,95 rispetto alle guide singole',
+            'Accesso illimitato, per sempre',
           ]}
         />
       </div>

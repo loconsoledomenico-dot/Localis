@@ -3,7 +3,7 @@ import { formatPrice } from '../lib/format';
 import { type Lang } from '../lib/i18n';
 
 export interface Props {
-  product: 'single' | 'tris' | 'bari-completa' | 'valle-completa' | 'gargano-completa' | 'crociera';
+  product: 'single' | 'tris' | 'sestina' | 'bari-completa' | 'valle-completa' | 'gargano-completa' | 'crociera';
   guideSlug?: string;
   lang: Lang;
   features: string[];
@@ -31,6 +31,7 @@ const isCompleteArea =
 
 const priceCents =
   isCompleteArea ? 1999
+  : product === 'sestina' ? 1999
   : product === 'tris' ? 1199
   : product === 'crociera' ? 799
   : 499;
@@ -40,6 +41,8 @@ const priceLabel = formatPrice(priceCents);
 const title = titleOverride ?? (
   product === 'tris'
     ? (lang === 'it' ? 'Pack 3 Guide' : lang === 'de' ? 'Pack 3' : 'Pack 3 Guides')
+    : product === 'sestina'
+      ? (lang === 'it' ? 'Pack 6 Guide' : lang === 'de' ? 'Pack 6' : 'Pack 6 Guides')
     : isCompleteArea
       ? (lang === 'it' ? 'Pack 6 Guide (Intera Zona)' : lang === 'de' ? 'Pack 6 (Komplette Zone)' : 'Pack 6 Guides (Complete Area)')
       : product === 'crociera'
@@ -54,6 +57,12 @@ const description = descriptionOverride ?? (
         : lang === 'de'
           ? '3 Guides deiner Wahl aus allen Zonen.'
           : '3 guides of your choice across all zones.')
+    : product === 'sestina'
+      ? (lang === 'it'
+          ? '6 guide a tua scelta tra tutte le zone.'
+          : lang === 'de'
+            ? '6 Guides deiner Wahl aus allen Zonen.'
+            : '6 guides of your choice across all zones.')
     : product === 'bari-completa'
       ? (lang === 'it'
           ? 'Tutte le 6 guide di Bari. Sei racconti, sei itinerari.'
@@ -88,13 +97,15 @@ const description = descriptionOverride ?? (
 const unitLabel =
   isCompleteArea
     ? (lang === 'it' ? '/ 6 guide' : lang === 'de' ? '/ 6 Guides' : '/ 6 guides')
+    : product === 'sestina'
+      ? (lang === 'it' ? '/ 6 guide' : lang === 'de' ? '/ 6 Guides' : '/ 6 guides')
     : product === 'tris'
       ? (lang === 'it' ? '/ 3 guide' : lang === 'de' ? '/ 3 Guides' : '/ 3 guides')
       : product === 'crociera'
         ? (lang === 'it' ? '/ 2 guide' : lang === 'de' ? '/ 2 Guides' : '/ 2 guides')
         : (lang === 'it' ? '/ guida' : lang === 'de' ? '/ Guide' : '/ guide');
 
-const ctaLabel = ctaOverride ?? (
+const defaultCtaLabel = ctaOverride ?? (
   product === 'tris'
     ? (lang === 'it' ? 'Scegli Pack 3' : lang === 'de' ? 'Pack 3 wählen' : 'Choose Pack 3')
     : isCompleteArea
@@ -104,8 +115,14 @@ const ctaLabel = ctaOverride ?? (
         : (lang === 'it' ? 'Acquista guida singola' : lang === 'de' ? 'Guide kaufen' : 'Buy single guide')
 );
 
+const ctaLabel = ctaOverride ?? (
+  product === 'sestina'
+    ? (lang === 'it' ? 'Scegli Pack 6' : lang === 'de' ? 'Pack 6 wählen' : 'Choose Pack 6')
+    : defaultCtaLabel
+);
+
 const builderHref = lang === 'en' ? '/en/guide#builder' : lang === 'de' ? '/de/guide#builder' : '/guide#builder';
-const isTris = product === 'tris';
+const isBuilderProduct = product === 'tris' || product === 'sestina';
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
@@ -132,7 +149,7 @@ const isTris = product === 'tris';
     ))}
   </ul>
 
-  {isTris ? (
+  {isBuilderProduct ? (
     <a
       href={builderHref}
       class={`mt-auto w-full px-md py-sm rounded-md font-semibold text-sm text-center transition-colors duration-fast no-underline inline-block ${primary ? 'bg-ink text-surface hover:bg-ink/90' : 'border border-ink text-ink hover:bg-ink hover:text-surface'}`}

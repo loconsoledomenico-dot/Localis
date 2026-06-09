@@ -259,7 +259,7 @@ const guideListLD = itemListLD(
   <section id="pricing" class="bg-surface-elev border-t border-border">
     <div class="max-w-wrap mx-auto px-md py-3xl lg:py-4xl">
       <SectionDivider label="Choose how to listen to Matera." />
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-[44rem] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg max-w-[66rem] mx-auto">
         <PriceCard
           product="single"
           guideSlug="matera"
@@ -281,6 +281,15 @@ const guideListLD = itemListLD(
             '3 guides of your choice across all zones',
             'Unlimited access, forever',
             '1-click refund within 24h',
+          ]}
+        />
+        <PriceCard
+          product="sestina"
+          lang="en"
+          features={[
+            '6 guides of your choice across Bari, Valle d’Itria, Gargano and Matera',
+            'Save €9.95 vs single guides',
+            'Unlimited access, forever',
           ]}
         />
       </div>
