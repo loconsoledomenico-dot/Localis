@@ -26,3 +26,15 @@ export function formatPrice(cents: number, currency: string = '€'): string {
 export function formatDate(date: Date): string {
   return date.toISOString().split('T')[0];
 }
+
+/**
+ * Mask an email for logging so PII never lands in server logs.
+ * "buyer@example.com" -> "b***@example.com"
+ */
+export function maskEmail(email: string): string {
+  const at = email.indexOf('@');
+  if (at <= 0) return '***';
+  const first = email[0];
+  const domain = email.slice(at);
+  return `${first}***${domain}`;
+}

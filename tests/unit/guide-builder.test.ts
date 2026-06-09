@@ -8,8 +8,8 @@ describe('GuideBuilder builder copy', () => {
   it('contains the approved Italian header copy and compact duration metadata', () => {
     const source = readFileSync(guideBuilderPath, 'utf8');
 
-    expect(source).toContain('Scegli le tue storie.');
-    expect(source).toContain('Crea il tuo itinerario ideale. Lo sconto si applica automaticamente nel carrello.');
+    expect(source).toContain('Crea il tuo pacchetto.');
+    expect(source).toContain('Scegli almeno 3 guide. Il prezzo si aggiorna automaticamente.');
     expect(source).toContain('Durata media di ogni guida: 30 minuti | Disponibile in:');
     expect(source).toContain('builder-card-duration');
     expect(source).toContain('durationLabel');

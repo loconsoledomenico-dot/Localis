@@ -1,5 +1,8 @@
 import jwt from 'jsonwebtoken';
 import { createHash } from 'node:crypto';
+import { kvGet, kvSet } from './kv';
+
+const REVOKE_STORE = 'revocations';
 
 export interface AccessTokenPayload {
   email: string;
@@ -33,32 +36,50 @@ export function tokenRevocationHash(token: string): string {
   return createHash('sha256').update(token).digest('hex');
 }
 
-function isRevoked(token: string, decoded: VerifiedTokenPayload): boolean {
-  const revokedTokenHashes = csvEnvSet('JWT_REVOKED_TOKEN_HASHES');
-  if (revokedTokenHashes.has(tokenRevocationHash(token))) return true;
+async function isRevoked(token: string, decoded: VerifiedTokenPayload): Promise<boolean> {
+  // Legacy env-var revocation lists (still honored).
+  if (csvEnvSet('JWT_REVOKED_TOKEN_HASHES').has(tokenRevocationHash(token))) return true;
+  if (csvEnvSet('JWT_REVOKED_SESSION_IDS').has(decoded.stripe_session_id)) return true;
 
-  const revokedSessionIds = csvEnvSet('JWT_REVOKED_SESSION_IDS');
-  return revokedSessionIds.has(decoded.stripe_session_id);
+  // Shared store revocation — revocable at runtime without a redeploy and
+  // without an unbounded env-var list.
+  if (await kvGet(REVOKE_STORE, `token:${tokenRevocationHash(token)}`)) return true;
+  if (await kvGet(REVOKE_STORE, `session:${decoded.stripe_session_id}`)) return true;
+
+  return false;
 }
 
 /**
- * Generate a signed JWT for buyer access. No expiry — token is "permanent" until manually revoked.
+ * Generate a signed JWT for buyer access. No expiry — access is "permanent"
+ * (matches the buyer-facing promise) until explicitly revoked via the store.
  */
 export function generateAccessToken(payload: AccessTokenPayload): string {
   return jwt.sign(payload, getSecret(), { algorithm: 'HS256' });
 }
 
 /**
- * Verify a JWT and return its payload, or null if invalid/corrupted.
+ * Verify a JWT and return its payload, or null if invalid/corrupted/revoked.
  * Never throws — use null check.
  */
-export function verifyAccessToken(token: string | null | undefined): VerifiedTokenPayload | null {
+export async function verifyAccessToken(
+  token: string | null | undefined,
+): Promise<VerifiedTokenPayload | null> {
   if (!token || typeof token !== 'string') return null;
   try {
     const decoded = jwt.verify(token, getSecret()) as VerifiedTokenPayload;
-    if (isRevoked(token, decoded)) return null;
+    if (await isRevoked(token, decoded)) return null;
     return decoded;
   } catch {
     return null;
   }
+}
+
+/** Revoke a single access token at runtime (stored in the shared KV). */
+export async function revokeToken(token: string): Promise<void> {
+  await kvSet(REVOKE_STORE, `token:${tokenRevocationHash(token)}`, '1');
+}
+
+/** Revoke every token issued for a given Stripe session id. */
+export async function revokeSession(sessionId: string): Promise<void> {
+  await kvSet(REVOKE_STORE, `session:${sessionId}`, '1');
 }

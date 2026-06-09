@@ -1,7 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const createSession = vi.fn();
-const getActivePartner = vi.fn();
+// vi.mock factories are hoisted above top-level declarations, so the fns they
+// reference must be created via vi.hoisted (otherwise: "Cannot access ...
+// before initialization").
+const { createSession, getActivePartner } = vi.hoisted(() => ({
+  createSession: vi.fn(),
+  getActivePartner: vi.fn(),
+}));
 
 vi.mock('../../src/lib/stripe', () => ({
   getStripe: () => ({

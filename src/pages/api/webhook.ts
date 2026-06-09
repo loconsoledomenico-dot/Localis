@@ -10,6 +10,8 @@ import type { Lang } from '../../lib/i18n';
 import type Stripe from 'stripe';
 import { guideTitle } from '../../lib/guide-localization';
 import { captureServerEvent, hashDistinctId } from '../../lib/posthog';
+import { grantEntitlement } from '../../lib/entitlements';
+import { maskEmail } from '../../lib/format';
 
 function normalizeLang(value: string | undefined): Lang {
   if (value === 'en' || value === 'de') return value;
@@ -68,6 +70,10 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
     throw new Error(`Session ${session.id} has no guide_slugs in metadata`);
   }
 
+  // Persist entitlement first so /recover is a single indexed lookup
+  // (no Stripe session scan) and survives even if the email send fails.
+  await grantEntitlement(email, guide_slugs, partner_id, session.id);
+
   // Generate magic link
   const token = generateAccessToken({
     email,
@@ -108,7 +114,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
     currency: session.currency ?? 'eur',
   });
 
-  console.log(`[webhook] Sent access email to ${email} for guides ${guide_slugs.join(', ')}`);
+  console.log(`[webhook] Sent access email to ${maskEmail(email)} for guides ${guide_slugs.join(', ')}`);
 
   // Stripe Connect partner attribution log (Milestone E adds full split logic)
   if (partner_id) {

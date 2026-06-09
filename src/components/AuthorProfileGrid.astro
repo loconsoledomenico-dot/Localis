@@ -23,6 +23,7 @@ const { title, profiles } = Astro.props;
             src={profile.photo}
             alt=""
             loading="lazy"
+            decoding="async"
             class="w-full aspect-[4/3] object-cover rounded-md mb-md"
           />
         )}
