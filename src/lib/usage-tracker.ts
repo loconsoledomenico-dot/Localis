@@ -1,11 +1,12 @@
+import { kvGetJSON, kvSetJSON, _resetKvMemory } from './kv';
+
 const LIMIT_PER_MONTH = 50;
+const STORE = 'usage';
 
 interface Counter {
   count: number;
   monthKey: string;
 }
-
-const cache = new Map<string, Counter>();
 
 function currentMonthKey(): string {
   const d = new Date();
@@ -13,18 +14,20 @@ function currentMonthKey(): string {
 }
 
 /**
- * Check if (tokenHash, slug) has remaining quota for current month, and atomically increment.
- * Returns true if request allowed, false if quota exceeded.
+ * Check if (tokenHash, slug) has remaining quota for current month, and
+ * increment. Returns true if request allowed, false if quota exceeded.
  *
- * Phase 0: in-memory only. Cold starts reset counters (acceptable for low-volume launch).
+ * Backed by the shared KV store so the limit holds across serverless
+ * instances and cold starts. Read-modify-write is not fully atomic
+ * (Blobs has no INCR); acceptable at launch volume.
  */
-export function checkAndIncrement(tokenHash: string, slug: string): boolean {
+export async function checkAndIncrement(tokenHash: string, slug: string): Promise<boolean> {
   const key = `${tokenHash}|${slug}`;
   const month = currentMonthKey();
-  const entry = cache.get(key);
+  const entry = await kvGetJSON<Counter>(STORE, key);
 
   if (!entry || entry.monthKey !== month) {
-    cache.set(key, { count: 1, monthKey: month });
+    await kvSetJSON(STORE, key, { count: 1, monthKey: month });
     return true;
   }
 
@@ -32,7 +35,7 @@ export function checkAndIncrement(tokenHash: string, slug: string): boolean {
     return false;
   }
 
-  entry.count++;
+  await kvSetJSON(STORE, key, { count: entry.count + 1, monthKey: month });
   return true;
 }
 
@@ -40,5 +43,5 @@ export function checkAndIncrement(tokenHash: string, slug: string): boolean {
  * Test-only: clear the in-memory cache.
  */
 export function _resetUsageCache(): void {
-  cache.clear();
+  _resetKvMemory();
 }

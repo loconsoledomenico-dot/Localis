@@ -38,7 +38,7 @@ describe('JWT module', () => {
   });
 
   describe('verifyAccessToken', () => {
-    it('round-trips a payload', () => {
+    it('round-trips a payload', async () => {
       const payload: AccessTokenPayload = {
         email: 'buyer@test.com',
         guide_slugs: ['bari-vecchia', 'porto-bari'],
@@ -46,18 +46,18 @@ describe('JWT module', () => {
         partner_id: 'hotel-excelsior-bari',
       };
       const token = generateAccessToken(payload);
-      const verified = verifyAccessToken(token);
+      const verified = await verifyAccessToken(token);
       expect(verified).not.toBeNull();
       expect(verified!.email).toBe('buyer@test.com');
       expect(verified!.guide_slugs).toEqual(['bari-vecchia', 'porto-bari']);
       expect(verified!.partner_id).toBe('hotel-excelsior-bari');
     });
 
-    it('returns null for invalid token', () => {
-      expect(verifyAccessToken('not-a-real-token')).toBeNull();
+    it('returns null for invalid token', async () => {
+      expect(await verifyAccessToken('not-a-real-token')).toBeNull();
     });
 
-    it('returns null for token signed with different secret', () => {
+    it('returns null for token signed with different secret', async () => {
       const token = generateAccessToken({
         email: 'a@b.com',
         guide_slugs: ['x'],
@@ -65,15 +65,15 @@ describe('JWT module', () => {
         partner_id: null,
       });
       vi.stubEnv('JWT_SECRET', 'different-secret-min-32-chars-bbbbbbb');
-      expect(verifyAccessToken(token)).toBeNull();
+      expect(await verifyAccessToken(token)).toBeNull();
     });
 
-    it('returns null for empty/null token', () => {
-      expect(verifyAccessToken('')).toBeNull();
-      expect(verifyAccessToken(null)).toBeNull();
+    it('returns null for empty/null token', async () => {
+      expect(await verifyAccessToken('')).toBeNull();
+      expect(await verifyAccessToken(null)).toBeNull();
     });
 
-    it('includes iat timestamp', () => {
+    it('includes iat timestamp', async () => {
       const before = Math.floor(Date.now() / 1000);
       const token = generateAccessToken({
         email: 'a@b.com',
@@ -81,13 +81,13 @@ describe('JWT module', () => {
         stripe_session_id: 'y',
         partner_id: null,
       });
-      const verified = verifyAccessToken(token);
+      const verified = await verifyAccessToken(token);
       const after = Math.floor(Date.now() / 1000);
       expect(verified!.iat).toBeGreaterThanOrEqual(before);
       expect(verified!.iat).toBeLessThanOrEqual(after);
     });
 
-    it('returns null when the token hash is revoked', () => {
+    it('returns null when the token hash is revoked', async () => {
       const token = generateAccessToken({
         email: 'a@b.com',
         guide_slugs: ['x'],
@@ -97,10 +97,10 @@ describe('JWT module', () => {
 
       vi.stubEnv('JWT_REVOKED_TOKEN_HASHES', tokenRevocationHash(token));
 
-      expect(verifyAccessToken(token)).toBeNull();
+      expect(await verifyAccessToken(token)).toBeNull();
     });
 
-    it('returns null when the Stripe session id is revoked', () => {
+    it('returns null when the Stripe session id is revoked', async () => {
       const token = generateAccessToken({
         email: 'a@b.com',
         guide_slugs: ['x'],
@@ -110,7 +110,7 @@ describe('JWT module', () => {
 
       vi.stubEnv('JWT_REVOKED_SESSION_IDS', 'cs_other, cs_revoked_session');
 
-      expect(verifyAccessToken(token)).toBeNull();
+      expect(await verifyAccessToken(token)).toBeNull();
     });
   });
 });

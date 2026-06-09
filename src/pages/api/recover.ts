@@ -8,25 +8,13 @@ import { renderAccessEmailDe } from '../../lib/emails/access-email-de';
 import { getCollection } from 'astro:content';
 import type Stripe from 'stripe';
 import { hasAllowedOrigin } from '../../lib/request-security';
+import { rateLimit } from '../../lib/rate-limit';
+import { getEntitlement, grantEntitlement } from '../../lib/entitlements';
 import type { Lang } from '../../lib/i18n';
 import { guideTitle } from '../../lib/guide-localization';
 
-// Simple in-memory rate limit (resets on cold start)
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 3;
 const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
-
-function rateLimit(ip: string): boolean {
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-  if (!entry || entry.resetAt < now) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
-    return true;
-  }
-  if (entry.count >= RATE_LIMIT) return false;
-  entry.count++;
-  return true;
-}
 
 export const POST: APIRoute = async ({ request, clientAddress, url }) => {
   if (!hasAllowedOrigin(request, url.origin)) {
@@ -34,7 +22,7 @@ export const POST: APIRoute = async ({ request, clientAddress, url }) => {
   }
 
   const ip = clientAddress || 'unknown';
-  if (!rateLimit(ip)) {
+  if (!(await rateLimit('recover', ip, RATE_LIMIT, RATE_WINDOW_MS))) {
     return jsonError(429, 'Too many requests. Try again in 1 hour.');
   }
 
@@ -52,44 +40,59 @@ export const POST: APIRoute = async ({ request, clientAddress, url }) => {
     return jsonError(400, 'Invalid email');
   }
 
-  // Stripe Checkout does not offer a direct customer_email list filter here,
-  // so paginate instead of only checking the latest 100 sessions.
   const allGuideSlugs: string[] = [];
   let lastSessionId: string | null = null;
   let lastPartnerId: string | null = null;
 
-  try {
-    const stripe = getStripe();
-    let startingAfter: string | undefined;
-    let hasMore = true;
-    let pagesScanned = 0;
+  // Fast path: entitlements written by the webhook on purchase. A single
+  // indexed lookup, no Stripe scan.
+  const stored = await getEntitlement(email);
+  if (stored && stored.guide_slugs.length > 0) {
+    allGuideSlugs.push(...stored.guide_slugs);
+    lastSessionId = stored.last_session_id;
+    lastPartnerId = stored.partner_id;
+  } else {
+    // Fallback for buyers who purchased before the entitlement store existed:
+    // Stripe Checkout has no customer_email list filter, so paginate instead
+    // of only checking the latest 100 sessions, then backfill the store.
+    try {
+      const stripe = getStripe();
+      let startingAfter: string | undefined;
+      let hasMore = true;
+      let pagesScanned = 0;
 
-    while (hasMore && pagesScanned < 20) {
-      const params: Stripe.Checkout.SessionListParams = { limit: 100 };
-      if (startingAfter) params.starting_after = startingAfter;
+      while (hasMore && pagesScanned < 20) {
+        const params: Stripe.Checkout.SessionListParams = { limit: 100 };
+        if (startingAfter) params.starting_after = startingAfter;
 
-      const sessions = await stripe.checkout.sessions.list(params);
-      for (const session of sessions.data) {
-        if (session.payment_status !== 'paid') continue;
-        const sessionEmail = (session.customer_email || session.customer_details?.email || '').toLowerCase();
-        if (sessionEmail !== email) continue;
+        const sessions = await stripe.checkout.sessions.list(params);
+        for (const session of sessions.data) {
+          if (session.payment_status !== 'paid') continue;
+          const sessionEmail = (session.customer_email || session.customer_details?.email || '').toLowerCase();
+          if (sessionEmail !== email) continue;
 
-        const meta = session.metadata || {};
-        const slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
-        for (const s of slugs) {
-          if (!allGuideSlugs.includes(s)) allGuideSlugs.push(s);
+          const meta = session.metadata || {};
+          const slugs = (meta.guide_slugs || '').split(',').filter(Boolean);
+          for (const s of slugs) {
+            if (!allGuideSlugs.includes(s)) allGuideSlugs.push(s);
+          }
+          lastSessionId = session.id;
+          lastPartnerId = meta.partner_id || null;
         }
-        lastSessionId = session.id;
-        lastPartnerId = meta.partner_id || null;
-      }
 
-      hasMore = sessions.has_more;
-      startingAfter = sessions.data.at(-1)?.id;
-      pagesScanned++;
-      if (!startingAfter) break;
+        hasMore = sessions.has_more;
+        startingAfter = sessions.data.at(-1)?.id;
+        pagesScanned++;
+        if (!startingAfter) break;
+      }
+    } catch (err: unknown) {
+      console.error('[recover] Stripe lookup error', err);
     }
-  } catch (err: unknown) {
-    console.error('[recover] Stripe lookup error', err);
+
+    // Migrate legacy buyer into the store so future recoveries skip the scan.
+    if (allGuideSlugs.length > 0) {
+      await grantEntitlement(email, allGuideSlugs, lastPartnerId, lastSessionId || 'recover');
+    }
   }
 
   if (allGuideSlugs.length === 0) {

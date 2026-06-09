@@ -1,31 +1,17 @@
 import type { APIRoute } from 'astro';
 import { sendEmail } from '../../lib/resend';
 import { hasAllowedOrigin } from '../../lib/request-security';
+import { rateLimit } from '../../lib/rate-limit';
 
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 60 * 60 * 1000;
-
-function isAllowed(ip: string): boolean {
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-
-  if (!entry || entry.resetAt < now) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
-    return true;
-  }
-
-  if (entry.count >= RATE_LIMIT) return false;
-  entry.count += 1;
-  return true;
-}
 
 export const POST: APIRoute = async ({ request, clientAddress, url }) => {
   if (!hasAllowedOrigin(request, url.origin)) {
     return jsonResponse({ error: 'Forbidden origin' }, 403);
   }
 
-  if (!isAllowed(clientAddress || 'unknown')) {
+  if (!(await rateLimit('partner-signup', clientAddress || 'unknown', RATE_LIMIT, RATE_WINDOW_MS))) {
     return jsonResponse({ error: 'Too many requests' }, 429);
   }
 

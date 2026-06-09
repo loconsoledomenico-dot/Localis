@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { computeWatermarkKey, normalizeEmail, sourceAudioKey } from '../../src/lib/watermark';
+import { normalizeEmail, sourceAudioKey } from '../../src/lib/watermark';
 
 describe('watermark module', () => {
   describe('normalizeEmail', () => {
@@ -8,47 +8,14 @@ describe('watermark module', () => {
     });
   });
 
-  describe('computeWatermarkKey', () => {
-    it('produces a deterministic R2 key for (email, slug, lang) tuple', () => {
-      const a = computeWatermarkKey('buyer@test.com', 'bari-vecchia', 'it');
-      const b = computeWatermarkKey('buyer@test.com', 'bari-vecchia', 'it');
-      expect(a).toBe(b);
+  describe('sourceAudioKey', () => {
+    it('builds the R2 key from slug and language', () => {
+      expect(sourceAudioKey('bari-vecchia', 'it')).toBe('guides/bari-vecchia/bari-vecchia-it.mp3');
     });
 
-    it('produces different keys for different emails', () => {
-      const a = computeWatermarkKey('a@test.com', 'bari-vecchia', 'it');
-      const b = computeWatermarkKey('b@test.com', 'bari-vecchia', 'it');
-      expect(a).not.toBe(b);
-    });
-
-    it('produces different keys for different slugs', () => {
-      const a = computeWatermarkKey('a@test.com', 'bari-vecchia', 'it');
-      const b = computeWatermarkKey('a@test.com', 'porto-bari', 'it');
-      expect(a).not.toBe(b);
-    });
-
-    it('produces different keys for different languages', () => {
-      const a = computeWatermarkKey('a@test.com', 'bari-vecchia', 'it');
-      const b = computeWatermarkKey('a@test.com', 'bari-vecchia', 'en');
-      expect(a).not.toBe(b);
-    });
-
-    it('supports German audio variants', () => {
-      const key = computeWatermarkKey('a@test.com', 'bari-vecchia', 'de');
-      expect(key).toMatch(/^wm\/[a-f0-9]+\.mp3$/);
-      expect(sourceAudioKey('bari-vecchia', 'de')).toBe('guides/bari-vecchia/full-de.mp3');
-    });
-
-    it('returns key with wm/ prefix and .mp3 suffix', () => {
-      const key = computeWatermarkKey('a@test.com', 'bari-vecchia', 'it');
-      expect(key.startsWith('wm/')).toBe(true);
-      expect(key.endsWith('.mp3')).toBe(true);
-    });
-
-    it('is case-insensitive on email', () => {
-      const a = computeWatermarkKey('Buyer@Test.COM', 'x', 'it');
-      const b = computeWatermarkKey('buyer@test.com', 'x', 'it');
-      expect(a).toBe(b);
+    it('supports English and German variants', () => {
+      expect(sourceAudioKey('bari-vecchia', 'en')).toBe('guides/bari-vecchia/bari-vecchia-en.mp3');
+      expect(sourceAudioKey('bari-vecchia', 'de')).toBe('guides/bari-vecchia/bari-vecchia-de.mp3');
     });
   });
 });

@@ -6,36 +6,36 @@ describe('usage tracker', () => {
     _resetUsageCache();
   });
 
-  it('allows up to monthly limit', () => {
+  it('allows up to monthly limit', async () => {
     const tokenHash = 'token-abc';
     const slug = 'bari-vecchia';
     for (let i = 0; i < 50; i++) {
-      expect(checkAndIncrement(tokenHash, slug)).toBe(true);
+      expect(await checkAndIncrement(tokenHash, slug)).toBe(true);
     }
   });
 
-  it('rejects on the 51st request', () => {
+  it('rejects on the 51st request', async () => {
     const tokenHash = 'token-abc';
     const slug = 'bari-vecchia';
     for (let i = 0; i < 50; i++) {
-      checkAndIncrement(tokenHash, slug);
+      await checkAndIncrement(tokenHash, slug);
     }
-    expect(checkAndIncrement(tokenHash, slug)).toBe(false);
+    expect(await checkAndIncrement(tokenHash, slug)).toBe(false);
   });
 
-  it('tracks separately per (token, slug)', () => {
+  it('tracks separately per (token, slug)', async () => {
     const t = 'token-x';
     for (let i = 0; i < 50; i++) {
-      checkAndIncrement(t, 'bari-vecchia');
+      await checkAndIncrement(t, 'bari-vecchia');
     }
-    expect(checkAndIncrement(t, 'porto-bari')).toBe(true);
-    expect(checkAndIncrement(t, 'bari-vecchia')).toBe(false);
+    expect(await checkAndIncrement(t, 'porto-bari')).toBe(true);
+    expect(await checkAndIncrement(t, 'bari-vecchia')).toBe(false);
   });
 
-  it('tracks separately per token', () => {
+  it('tracks separately per token', async () => {
     for (let i = 0; i < 50; i++) {
-      checkAndIncrement('token-a', 'bari-vecchia');
+      await checkAndIncrement('token-a', 'bari-vecchia');
     }
-    expect(checkAndIncrement('token-b', 'bari-vecchia')).toBe(true);
+    expect(await checkAndIncrement('token-b', 'bari-vecchia')).toBe(true);
   });
 });
