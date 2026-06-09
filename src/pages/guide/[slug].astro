@@ -101,13 +101,13 @@ ld.push(breadcrumbListLD([
   <StructuredData data={ld} />
   {destination ? <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: destination.label, href: destination.href }, { label: data.title_it }]} /> : <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: data.title_it }]} />}
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
-    <header class="lg:col-span-2 mb-2xl">
+    <header class="order-1 lg:order-none lg:col-span-2 mb-2xl">
       <Eyebrow class="mb-md">{`${destinationLabel} · ${durationLabel} · IT/EN/DE`}</Eyebrow>
       <h1 class="font-display text-4xl text-ink leading-tight mb-sm">{data.title_it}</h1>
       <p class="font-display italic text-2xl text-ink-muted">{data.subtitle_it}</p>
     </header>
 
-    <div class="flex flex-col gap-lg">
+    <div class="order-3 lg:order-none flex flex-col gap-lg">
       <img
         src={data.cover}
         alt={`Copertina della guida ${data.title_it}`}
@@ -146,7 +146,7 @@ ld.push(breadcrumbListLD([
       )}
     </div>
 
-    <aside class="lg:sticky lg:top-24 flex flex-col gap-md">
+    <aside class="order-2 lg:order-none lg:sticky lg:top-24 flex flex-col gap-md">
       <PriceCard
         product="single"
         guideSlug={data.slug}
