@@ -9,7 +9,7 @@ describe('layout partner tracking', () => {
 
     expect(source).toContain('qr_landing_viewed');
     expect(source).toContain('sessionStorage.getItem(trackKey)');
-    expect(source).toContain("source: 'partner_qr'");
+    expect(source).toContain("'partner_landing'");
     expect(source).toContain('window.localisTrack');
   });
 });
