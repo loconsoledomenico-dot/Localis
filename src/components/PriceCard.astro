@@ -123,6 +123,13 @@ const ctaLabel = ctaOverride ?? (
 
 const builderHref = lang === 'en' ? '/en/guide#builder' : lang === 'de' ? '/de/guide#builder' : '/guide#builder';
 const isBuilderProduct = product === 'tris' || product === 'sestina';
+
+const trustLine =
+  lang === 'it'
+    ? 'Download immediato, ascolto offline · Soddisfatto o rimborsato'
+    : lang === 'de'
+      ? 'Sofort-Download, offline hörbar · Geld-zurück-Garantie'
+      : 'Instant download, listen offline · Money-back guarantee';
 ---
 <article class={`flex flex-col gap-md p-lg border rounded-lg ${primary ? 'border-accent bg-surface-elev' : 'border-border bg-surface'}`}>
   <header>
@@ -167,6 +174,8 @@ const isBuilderProduct = product === 'tris' || product === 'sestina';
       {ctaLabel} · {priceLabel}
     </button>
   )}
+
+  <p class="text-xs text-ink-muted text-center m-0">✓ {trustLine}</p>
 </article>
 
 <script>

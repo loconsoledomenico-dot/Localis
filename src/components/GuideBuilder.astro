@@ -129,6 +129,13 @@ const ZONE_ORDER = [
         </button>
       </div>
       <p id="builder-upsell" class="builder-upsell" aria-hidden="true"></p>
+      <p class="builder-trust">
+        ✓ {lang === 'it'
+          ? 'Download immediato, ascolto offline · Soddisfatto o rimborsato'
+          : lang === 'de'
+            ? 'Sofort-Download, offline hörbar · Geld-zurück-Garantie'
+            : 'Instant download, listen offline · Money-back guarantee'}
+      </p>
     </div>
   </div>
 </section>
@@ -334,6 +341,14 @@ const ZONE_ORDER = [
     color: oklch(90% 0.01 250 / 0.88);
     font-weight: 500;
     min-height: 1.2em;
+  }
+
+  .builder-trust {
+    max-width: 1280px;
+    margin: var(--spacing-xs) auto 0;
+    padding: 0 var(--spacing-md);
+    font-size: 0.75rem;
+    color: oklch(90% 0.01 250 / 0.7);
   }
 
   @media (max-width: 640px) {
