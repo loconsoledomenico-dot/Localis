@@ -1,5 +1,14 @@
 ---
 import { fetchPartnerSales, groupByPartner, formatEur } from '../../lib/referral';
+import {
+  getPayouts,
+  addPayout,
+  deletePayout,
+  sumPayouts,
+  parseEurToCents,
+  PAYOUT_THRESHOLD_CENTS,
+  type PayoutRecord,
+} from '../../lib/payouts';
 
 const ADMIN_COOKIE = 'lg_admin_referral';
 const ADMIN_TOKEN = import.meta.env.ADMIN_TOKEN;
@@ -20,15 +29,42 @@ if (Astro.request.method === 'POST') {
   const form = await Astro.request.formData();
   const formToken = String(form.get('token') || '');
 
-  if (ADMIN_TOKEN && formToken === ADMIN_TOKEN) {
-    Astro.cookies.set(ADMIN_COOKIE, formToken, {
-      path: '/admin/referral',
-      httpOnly: true,
-      secure: import.meta.env.PROD,
-      sameSite: 'strict',
-      maxAge: 60 * 60 * 8,
-    });
-    return Astro.redirect('/admin/referral', 303);
+  if (formToken) {
+    if (ADMIN_TOKEN && formToken === ADMIN_TOKEN) {
+      Astro.cookies.set(ADMIN_COOKIE, formToken, {
+        path: '/admin/referral',
+        httpOnly: true,
+        secure: import.meta.env.PROD,
+        sameSite: 'strict',
+        maxAge: 60 * 60 * 8,
+      });
+      return Astro.redirect('/admin/referral', 303);
+    }
+  } else {
+    // Azioni payout: richiedono sessione admin già autenticata via cookie
+    const cookieToken = Astro.cookies.get(ADMIN_COOKIE)?.value;
+    if (ADMIN_TOKEN && cookieToken === ADMIN_TOKEN) {
+      const action = String(form.get('action') || '');
+
+      if (action === 'add_payout') {
+        const partnerId = String(form.get('partner_id') || '');
+        const cents = parseEurToCents(String(form.get('amount') || ''));
+        const date = String(form.get('date') || '');
+        const method = String(form.get('method') || 'bonifico');
+        const note = String(form.get('note') || '');
+        if (partnerId && cents && cents > 0 && /^\d{4}-\d{2}-\d{2}$/.test(date)) {
+          await addPayout(partnerId, { date, amount_cents: cents, method, note });
+        }
+        return Astro.redirect('/admin/referral', 303);
+      }
+
+      if (action === 'delete_payout') {
+        const partnerId = String(form.get('partner_id') || '');
+        const payoutId = String(form.get('payout_id') || '');
+        if (partnerId && payoutId) await deletePayout(partnerId, payoutId);
+        return Astro.redirect('/admin/referral', 303);
+      }
+    }
   }
 }
 
@@ -75,6 +111,26 @@ try {
 
 const totalGross = summaries.reduce((s, p) => s + p.gross_total, 0);
 const totalPayout = summaries.reduce((s, p) => s + p.payout_total, 0);
+
+// Pagamenti registrati per partner (saldo = maturato − pagato).
+// NB: il maturato rispetta il filtro ?from=, i pagamenti no — il saldo è
+// affidabile solo nella vista senza filtro.
+const payoutsByPartner = new Map<string, PayoutRecord[]>();
+for (const p of summaries) {
+  payoutsByPartner.set(p.partner_id, await getPayouts(p.partner_id));
+}
+const paidFor = (partnerId: string) => sumPayouts(payoutsByPartner.get(partnerId) ?? []);
+const totalPaid = summaries.reduce((s, p) => s + paidFor(p.partner_id), 0);
+const totalBalance = totalPayout - totalPaid;
+
+const partnerRows = summaries.map((p) => ({
+  ...p,
+  paid: paidFor(p.partner_id),
+  balance: p.payout_total - paidFor(p.partner_id),
+  payouts: payoutsByPartner.get(p.partner_id) ?? [],
+}));
+const todayIso = new Date().toISOString().slice(0, 10);
+
 const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' });
 ---
 <!DOCTYPE html>
@@ -146,6 +202,22 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
     .detail-rows.open { display: table-row-group; }
     .detail-row td { background: #faf5ee; font-size: 12px; padding: 7px 12px; }
 
+    .payout-block { padding: 12px; background: #faf5ee; }
+    .payout-block .badge { margin-left: 6px; }
+    .payout-form { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: .5rem; }
+    .payout-form input, .payout-form select {
+      padding: 5px 8px; border: 1px solid var(--border); border-radius: 4px;
+      font-size: 13px; background: white; font-family: inherit;
+    }
+    .payout-form button {
+      padding: 6px 14px; background: var(--green); color: white; border: none;
+      border-radius: 4px; font-size: 13px; cursor: pointer; font-weight: 600;
+    }
+    .btn-link {
+      background: none; border: none; color: var(--red); font-size: 12px;
+      text-decoration: underline; cursor: pointer; padding: 0; font-family: inherit;
+    }
+
     .error { background: #fde; border: 1px solid #f99; padding: 1rem; border-radius: 6px; color: var(--red); }
     .empty { color: var(--muted); font-style: italic; padding: 1rem 0; }
     .filter-bar { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
@@ -185,8 +257,16 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
       <div class="kpi-value">{formatEur(totalGross)}</div>
     </div>
     <div class="kpi">
-      <div class="kpi-label">Da pagare (25%)</div>
-      <div class="kpi-value" style="color:var(--green)">{formatEur(totalPayout)}</div>
+      <div class="kpi-label">Maturato (25%)</div>
+      <div class="kpi-value">{formatEur(totalPayout)}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Già pagato</div>
+      <div class="kpi-value">{formatEur(totalPaid)}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Saldo da pagare</div>
+      <div class="kpi-value" style="color:var(--green)">{formatEur(totalBalance)}</div>
     </div>
   </div>
 
@@ -210,18 +290,30 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
               <th>Partner</th>
               <th>Vendite</th>
               <th>Revenue lordo</th>
-              <th>Da pagare (25%)</th>
+              <th>Maturato (25%)</th>
+              <th>Pagato</th>
+              <th>Saldo</th>
               <th>Dettaglio</th>
             </tr>
           </thead>
-          {summaries.map((p) => (
+          {partnerRows.map((p) => (
             <>
               <tbody>
                 <tr>
                   <td><span class="tag">{p.partner_id}</span></td>
                   <td>{p.sales_count}</td>
                   <td>{formatEur(p.gross_total)}</td>
-                  <td class="payout">{formatEur(p.payout_total)}</td>
+                  <td>{formatEur(p.payout_total)}</td>
+                  <td>{p.paid > 0 ? formatEur(p.paid) : '—'}</td>
+                  <td class="payout">
+                    {formatEur(p.balance)}
+                    {p.balance > 0 && p.balance < PAYOUT_THRESHOLD_CENTS && (
+                      <span class="badge badge-orange" title={`Sotto soglia ${formatEur(PAYOUT_THRESHOLD_CENTS)}: si accumula`}>accumulo</span>
+                    )}
+                    {p.balance >= PAYOUT_THRESHOLD_CENTS && (
+                      <span class="badge badge-green">da pagare</span>
+                    )}
+                  </td>
                   <td>
                     <span
                       class="detail-toggle"
@@ -234,7 +326,7 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
               </tbody>
               <tbody class="detail-rows" id={`detail-${p.partner_id}`}>
                 <tr class="detail-row">
-                  <td colspan="5" style="padding:0">
+                  <td colspan="7" style="padding:0">
                     <table style="width:100%;border-radius:0;border:none">
                       <thead>
                         <tr style="background:#e8dfcf">
@@ -259,6 +351,61 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
                         ))}
                       </tbody>
                     </table>
+                  </td>
+                </tr>
+                <tr class="detail-row">
+                  <td colspan="7">
+                    <div class="payout-block">
+                      <strong>Pagamenti registrati</strong>
+                      {p.payouts.length === 0
+                        ? <p class="dimmed" style="margin:.4rem 0">Nessun pagamento ancora registrato.</p>
+                        : (
+                          <table style="margin:.5rem 0">
+                            <thead>
+                              <tr style="background:#e8dfcf">
+                                <th>Data</th>
+                                <th>Importo</th>
+                                <th>Metodo</th>
+                                <th>Nota</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {p.payouts.map((pay) => (
+                                <tr class="detail-row">
+                                  <td>{pay.date}</td>
+                                  <td class="payout">{formatEur(pay.amount_cents)}</td>
+                                  <td>{pay.method}</td>
+                                  <td class="dimmed">{pay.note ?? '—'}</td>
+                                  <td>
+                                    <form method="post" style="display:inline" class="payout-delete-form">
+                                      <input type="hidden" name="action" value="delete_payout" />
+                                      <input type="hidden" name="partner_id" value={p.partner_id} />
+                                      <input type="hidden" name="payout_id" value={pay.id} />
+                                      <button type="submit" class="btn-link">annulla</button>
+                                    </form>
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        )
+                      }
+                      <form method="post" class="payout-form">
+                        <input type="hidden" name="action" value="add_payout" />
+                        <input type="hidden" name="partner_id" value={p.partner_id} />
+                        <input type="date" name="date" value={todayIso} required />
+                        <input type="text" name="amount" placeholder="€ 0,00" inputmode="decimal" required style="width:90px" />
+                        <select name="method">
+                          <option value="bonifico">Bonifico</option>
+                          <option value="contanti">Contanti</option>
+                          <option value="compensazione">Compensazione</option>
+                          <option value="altro">Altro</option>
+                        </select>
+                        <input type="text" name="note" placeholder="Nota (opzionale)" style="flex:1;min-width:140px" />
+                        <button type="submit">Registra pagamento</button>
+                      </form>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -311,6 +458,13 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
       if (d) url.searchParams.set('from', d);
       else url.searchParams.delete('from');
       window.location.href = url.toString();
+    });
+
+    // Conferma prima di annullare un pagamento registrato
+    document.querySelectorAll('.payout-delete-form').forEach((f) => {
+      f.addEventListener('submit', (e) => {
+        if (!confirm('Annullare questo pagamento registrato?')) e.preventDefault();
+      });
     });
 
     // Expand/collapse detail rows

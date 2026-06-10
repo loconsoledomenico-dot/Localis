@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { fetchPartnerSales, formatEur } from '../../../lib/referral';
+import { getPayouts, sumPayouts, PAYOUT_THRESHOLD_CENTS } from '../../../lib/payouts';
 
 const { slug } = Astro.params;
 
@@ -34,6 +35,11 @@ const sales = allSales
 const grossTotal = sales.reduce((s, x) => s + x.amount_total, 0);
 const payoutTotal = sales.reduce((s, x) => s + x.payout_due, 0);
 const commissionPct = Math.round((partner.data.commission_rate ?? 0.25) * 100);
+
+// Pagamenti già effettuati → saldo attuale
+const payouts = (await getPayouts(slug!)).sort((a, b) => b.date.localeCompare(a.date));
+const paidTotal = sumPayouts(payouts);
+const balance = payoutTotal - paidTotal;
 
 const generatedAt = new Date().toLocaleDateString('it-IT', {
   day: '2-digit', month: 'long', year: 'numeric', timeZone: 'Europe/Rome',
@@ -326,10 +332,17 @@ const productLabels: Record<string, string> = {
     {payoutTotal > 0 && (
       <div class="payout-box">
         <div>
-          <div class="label">Importo da ricevere</div>
-          <div class="sub">Calcolato su {sales.length} {sales.length === 1 ? 'acquisto' : 'acquisti'} attribuiti al tuo QR code</div>
+          <div class="label">Saldo attuale da ricevere</div>
+          <div class="sub">
+            Quota maturata {formatEur(payoutTotal)}{paidTotal > 0 ? ` · già ricevuto ${formatEur(paidTotal)}` : ''} ·
+            {balance >= PAYOUT_THRESHOLD_CENTS
+              ? ' in pagamento al prossimo ciclo mensile'
+              : balance > 0
+                ? ` si accumula fino a ${formatEur(PAYOUT_THRESHOLD_CENTS)} — nessun importo va perso`
+                : ' tutto saldato — grazie!'}
+          </div>
         </div>
-        <div class="amount">{formatEur(payoutTotal)}</div>
+        <div class="amount">{formatEur(balance)}</div>
       </div>
     )}
 
@@ -366,6 +379,30 @@ const productLabels: Record<string, string> = {
         </table>
       )
     }
+
+    {payouts.length > 0 && (
+      <>
+        <h2 style="margin-top:32px">Pagamenti ricevuti</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Importo</th>
+              <th>Metodo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {payouts.map((pay) => (
+              <tr>
+                <td>{new Date(pay.date).toLocaleDateString('it-IT', { day: '2-digit', month: 'short', year: 'numeric' })}</td>
+                <td class="payout-cell">{formatEur(pay.amount_cents)}</td>
+                <td>{pay.method}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    )}
 
     <!-- Footer -->
     <div class="footer">
