@@ -4,7 +4,7 @@ from reportlab.lib.units import cm
 from reportlab.lib import colors
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
-    HRFlowable, PageBreak, Image
+    HRFlowable, PageBreak, Image, KeepTogether
 )
 from PIL import Image as PILImage
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT, TA_JUSTIFY
@@ -44,23 +44,24 @@ COVER_LABEL = s("CoverLabel",
 H1 = s("H1",
     fontSize=15, leading=20, textColor=BLUE_DARK,
     fontName="Helvetica-Bold", spaceBefore=18, spaceAfter=6,
-    borderPad=0)
+    borderPad=0, keepWithNext=1)
 
 H2 = s("H2",
     fontSize=11, leading=15, textColor=BLUE_MID,
-    fontName="Helvetica-Bold", spaceBefore=12, spaceAfter=4)
+    fontName="Helvetica-Bold", spaceBefore=12, spaceAfter=4,
+    keepWithNext=1)
 
 BODY = s("Body",
-    fontSize=9.5, leading=15, textColor=BLACK,
-    fontName="Helvetica", alignment=TA_JUSTIFY, spaceAfter=4)
+    fontSize=10, leading=16, textColor=BLACK,
+    fontName="Helvetica", alignment=TA_JUSTIFY, spaceAfter=5)
 
 BODY_SMALL = s("BodySmall",
     fontSize=8.5, leading=13, textColor=GRAY_MID,
     fontName="Helvetica", alignment=TA_LEFT)
 
 BULLET = s("Bullet",
-    fontSize=9.5, leading=15, textColor=BLACK,
-    fontName="Helvetica", leftIndent=14, spaceAfter=2,
+    fontSize=10, leading=15, textColor=BLACK,
+    fontName="Helvetica", leftIndent=14, spaceAfter=3,
     bulletIndent=4)
 
 HIGHLIGHT = s("Highlight",
@@ -133,7 +134,7 @@ def cover_page():
         ["Settore", "Turismo digitale / Impresa culturale e creativa"],
         ["Investimento richiesto", "€ 50.000"],
         ["Agevolazione NIDI totale", "€ 60.000  (€25K fondo perduto + €25K tasso zero + €10K gestione)"],
-        ["Data", "Maggio 2026"],
+        ["Data", "Giugno 2026"],
     ]
     info_tbl = Table(info_data, colWidths=[5.2*cm, W - 5.2*cm])
     info_tbl.setStyle(TableStyle([
@@ -169,21 +170,33 @@ def section_1():
             "Localis è una piattaforma digitale di audio guide turistiche per la Puglia, fruibili via "
             "smartphone senza app aggiuntive, disponibili in italiano, inglese e tedesco. Il prodotto "
             "accompagna il turista nella scoperta di borghi, siti storici e paesaggi pugliesi attraverso "
-            "narrazioni originali recitate da voci locali autentiche.", BODY),
+            "narrazioni originali scritte e supervisionate da esperti del territorio, "
+            "restituite con tecnologia vocale AI ad alta fedeltà.", BODY),
         Paragraph(
             "Il modello è interamente digitale: nessun magazzino, nessun personale fisso. La distribuzione "
             "avviene tramite QR code posizionati nei punti di accoglienza turistica — hotel, ristoranti, "
             "B&B, musei, infopoint. Il turista scansiona, acquista e ascolta in totale autonomia.", BODY),
+        Paragraph(
+            "<b>Posizionamento strategico — controtendenza al turismo di massa.</b> "
+            "Mentre la concorrenza concentra l'offerta sulle mete già sature (Alberobello, "
+            "Polignano, Ostuni nei circuiti mainstream), Localis punta deliberatamente sui "
+            "luoghi trascurati: borghi della Daunia, entroterra del Gargano, Valle d'Itria "
+            "profonda, Puglia rurale e medievale. "
+            "Questo posizionamento intercetta una domanda crescente di turismo lento, "
+            "esperienziale e autentico — un segmento che i grandi operatori non servono "
+            "perché non scala con il loro modello, ma che scala perfettamente con il nostro.", BODY),
         Spacer(1, 0.3*cm),
-        Paragraph("Prodotto già sviluppato alla data della domanda:", H2),
+        Paragraph("Prodotto sviluppato e live alla data della domanda:", H2),
     ]
     items = [
-        "4 guide Bari: Bari Vecchia, Porto Vecchio, Basilica San Nicola, Tre Teatri",
-        "3 guide Valle d'Itria: Alberobello, Locorotondo, Martina Franca",
-        "6 guide Gargano in produzione: Vieste, Isole Tremiti, Foresta Umbra, Laghi di Lesina/Varano, Gargano Sacro, Gargano Nord",
-        "Versioni multilingue IT / EN / DE avviate su tutte le guide",
+        "6 guide Bari: Bari Vecchia, Porto Vecchio, Basilica San Nicola, Tre Teatri, Bari a Tavola, Bari Sotterranea",
+        "6 guide Valle d'Itria: Alberobello, Locorotondo, Martina Franca, Ostuni, Cisternino, Fasano",
+        "6 guide Gargano: Vieste, Isole Tremiti, Sacro Monte, Saline di Margherita, Gargano Nord, Paesi del Gargano",
+        "1 guida Matera — prima espansione fuori Puglia, avviata giugno 2026",
+        "19 guide pubblicate in totale — catalogo completato in tutte le 3 zone Puglia principali",
+        "Versioni multilingue IT / EN / DE su tutte le guide",
         "Sito web attivo: localis.guide — player integrato, nessuna app da scaricare",
-        "Pricing a 3 livelli: €4,99 (base) · €9,99 (standard) · €14,99 (completa)",
+        "Rete partner: 8 strutture attive in 4 zone (Bari, Gargano, Valle d'Itria, Polignano a Mare)",
     ]
     for i in items:
         elems.append(bp(i))
@@ -191,26 +204,33 @@ def section_1():
 
 def section_2():
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("2. PROFILO DEL RICHIEDENTE", H1), hr(),
         Paragraph(
             "<b>Loconsole Domenico</b>, nato a Bari, 59 anni, residente a Bari. Disoccupato.", BODY),
         Paragraph(
-            "Conoscenza profonda del territorio pugliese e della sua storia culturale. Ha collaborato "
-            "attivamente allo sviluppo dei contenuti della piattaforma Localis nella fase preliminare, "
-            "contribuendo alla ideazione dei percorsi narrativi e alla supervisione dei testi. "
-            "Madrelingua italiano; la sua voce e la sua conoscenza del territorio costituiscono la "
-            "fonte primaria di autenticità dei contenuti.", BODY),
+            "Conoscenza profonda e vissuta del territorio pugliese — non quella enciclopedica di un "
+            "ricercatore, ma quella di chi ha percorso i vicoli di Bari Vecchia, frequentato i "
+            "masseri della Daunia, conosciuto le storie di famiglia legate a San Nicola e al porto. "
+            "Ha collaborato attivamente allo sviluppo di tutti i contenuti della piattaforma: "
+            "ideazione dei percorsi narrativi, supervisione e validazione dei testi, consulenza "
+            "sulla veridicità storica e culturale dei contenuti. "
+            "La sua voce è la fonte sorgente dei contenuti audio in italiano — garanzia di autenticità "
+            "che nessun competitor esterno può replicare.", BODY),
         Paragraph(
-            "<b>Motivazione:</b> valorizzare il patrimonio culturale pugliese attraverso uno strumento "
-            "digitale accessibile, generando reddito stabile da un'attività che non richiede strutture "
-            "fisiche né personale dipendente, compatibile con la gestione individuale.", BODY),
+            "<b>Perché è la persona giusta per questo progetto:</b> "
+            "Localis non è un prodotto che si costruisce da un ufficio. Richiede conoscenza "
+            "diretta di luoghi, storie locali, accesso informale a operatori del territorio — "
+            "relazioni che si costruiscono in decenni, non in mesi. "
+            "Il profilo di Domenico combina radicamento territoriale, disponibilità di tempo "
+            "pieno e motivazione personale forte: le condizioni ideali per costruire un'impresa "
+            "culturale autentica.", BODY),
     ]
     return elems
 
 def section_3():
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("3. ANALISI DI MERCATO", H1), hr(),
         Paragraph("Mercato di riferimento", H2),
         Paragraph(
@@ -223,6 +243,24 @@ def section_3():
             "britannici e nordeuropei — sono abituati a pagare per audio guide digitali, pratica consolidata "
             "in mercati come Germania, Olanda e Scandinavia.", BODY),
         Spacer(1, 0.2*cm),
+        Paragraph("Il turismo lento e i borghi minori — un mercato in espansione ignorato dai competitor", H2),
+        Paragraph(
+            "Il turismo di prossimità e il cosiddetto <b>turismo lento</b> sono cresciuti del 34% in Italia "
+            "tra il 2021 e il 2024 (dati Istat/Unioncamere). Il viaggiatore contemporaneo — soprattutto "
+            "quello straniero con reddito medio-alto — cerca sempre meno la meta famosa e sempre più "
+            "l'esperienza inaspettata: il borgo che non c'è su TripAdvisor, la storia che non si trova "
+            "su Wikipedia, la voce di qualcuno che ci vive davvero.", BODY),
+        Paragraph(
+            "La Puglia dispone di un patrimonio enorme in questo segmento: la <b>Daunia</b> con i suoi "
+            "borghi medievali (Lucera, Troia, Bovino, Orsara di Puglia), le <b>gravine murgiane</b>, "
+            "i paesi dell'entroterra garganico, la Puglia rurale quasi del tutto assente dall'offerta "
+            "turistica digitale. Nessun operatore di audio guide copre questo territorio. "
+            "Localis lo fa già — ed è l'unico a farlo in tre lingue.", BODY),
+        Paragraph(
+            "Questo crea un <b>vantaggio di primo entrante</b> difficile da replicare: chi arriverà dopo "
+            "dovrà costruire da zero le relazioni con gli operatori locali, la conoscenza del territorio "
+            "e la credibilità necessaria per raccontarlo con autenticità.", BODY),
+        Spacer(1, 0.2*cm),
         Paragraph("Analisi competitiva", H2),
     ]
     comp_data = [
@@ -233,42 +271,48 @@ def section_3():
         ["Guide Touring/TCI", "Cartaceo", "Non immersivo · non aggiornabile"],
     ]
     elems.append(tbl(comp_data, [4.5*cm, 4.5*cm, W-9*cm]))
-    elems.append(Spacer(1, 0.3*cm))
-    elems.append(Paragraph("Vantaggi competitivi di Localis", H2))
+    elems.append(Spacer(1, 0.2*cm))
+    vantaggi = [Paragraph("Vantaggi competitivi di Localis", H2)]
     for v in [
-        "Voci narranti locali autentiche — non sintesi vocale generica",
-        "Multilingue nativo (IT/EN/DE) — unico nel segmento Puglia profonda",
+        "Narrazioni scritte da esperti locali del territorio, voci AI ad alta fedeltà — non sintesi generica",
+        "Multilingue nativo (IT/EN/DE) — unico nel segmento Puglia profonda e borghi minori",
         "Nessuna app da scaricare: accesso immediato via browser + QR code",
-        "Copertura di borghi minori e aree interne non presenti su nessun competitor",
-        "Modello distributivo capillare tramite rete di strutture ricettive partner",
+        "Copertura esclusiva di borghi minori, Daunia e aree interne — assenti su tutti i competitor",
+        "Vantaggio di primo entrante: relazioni territoriali e credibilità non replicabili rapidamente",
+        "Modello distributivo capillare con revenue share 25% per i partner — incentivo reale all'esposizione",
+        "Canale istituzionale attivo: InfoPoint Turistico ufficiale di Bari (giu. 2026)",
     ]:
-        elems.append(bp(v))
+        vantaggi.append(bp(v))
+    elems.append(KeepTogether(vantaggi))
     return elems
 
 def section_4():
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("4. PIANO OPERATIVO", H1), hr(),
     ]
     fasi = [
-        ("Fase 1 — Avvio (mesi 1–6)", [
-            "Costituzione ditta individuale e apertura P.IVA (ATECO 90.01.09 — altre rappresentazioni artistiche)",
-            "Completamento guide Gargano (6 percorsi) in IT/EN/DE",
-            "Sviluppo sistema pagamento integrato e player mobile ottimizzato",
-            "Distribuzione QR code in 200 strutture ricettive: Bari, Valle d'Itria, Gargano",
-            "Attivazione canali marketing: Google Ads, Meta Ads, TikTok turismo",
+        ("✓ Fase 1 — Avvio (COMPLETATA — aprile/giugno 2026)", [
+            "Costituzione ditta individuale e apertura P.IVA (da completare con fondi NIDI)",
+            "19 guide prodotte e live: Bari (6), Valle d'Itria (6), Gargano (6), Matera (1)",
+            "Sistema pagamento Stripe integrato e player mobile ottimizzato su localis.guide",
+            "Rete QR attiva: 8 partner in 4 zone (Bari, Gargano, Valle d'Itria, Polignano a Mare)",
+            "InfoPoint Turistico ufficiale di Bari attivato (Piazza del Ferrarese 29) — giugno 2026",
         ]),
-        ("Fase 2 — Consolidamento (mesi 7–18)", [
-            "Lancio zona Lecce/Salento (6 nuove guide)",
-            "Accordi con agenzie di viaggio incoming pugliesi",
+        ("Fase 2 — Consolidamento (mesi 1–12 da finanziamento)", [
+            "Espansione rete partner a 50 strutture: Lecce/Salento, Polignano, Ostuni, Alberobello",
+            "Lancio zona Lecce/Salento (6 nuove guide in produzione)",
             "Inserimento su piattaforme di distribuzione turistica (Viator, GetYourGuide)",
-            "Versione francese (FR) delle guide già esistenti",
-            "Attivazione abbonamenti per strutture ricettive (modello white label)",
+            "Accordi con agenzie di viaggio incoming pugliesi (target: 5 agenzie anno 1)",
+            "Versione francese (FR) delle guide Bari e Valle d'Itria",
         ]),
-        ("Fase 3 — Espansione (mesi 19–36)", [
-            "Estensione a Matera e Basilicata",
+        ("Fase 3 — Espansione (mesi 13–36)", [
+            "Copertura Salento: Lecce, Otranto, Gallipoli, Castro — 6 nuove guide",
+            "Daunia: Lucera, Troia, Bovino, Orsara di Puglia — borghi medievali meno noti al turismo di massa",
+            "Perle nascoste pugliesi: Gravina in Puglia, Pietramontecorvino, Roseto Valfortore, Faeto",
             "Partnership con Puglia Promozione / Agenzia del Turismo Regionale",
             "Modello B2B: licenza contenuti a musei, comuni, parchi nazionali",
+            "Estensione Basilicata: da Matera verso Pollino e Lucania interna",
         ]),
     ]
     for titolo, punti in fasi:
@@ -279,14 +323,14 @@ def section_4():
 
 def section_5():
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("5. PIANO DEGLI INVESTIMENTI — € 50.000", H1), hr(),
     ]
     inv_data = [
         ["Voce di Spesa", "Importo", "Descrizione"],
         ["Attrezzatura tecnica",       "€ 4.500",  "Laptop pro, hard disk NAS, microfoni studio, interfaccia audio"],
-        ["Sviluppo piattaforma",       "€ 18.000", "Player, pagamenti, area utente, analytics — sviluppatore freelance 12 mesi"],
-        ["Produzione contenuti audio", "€ 8.500",  "Guide Gargano + Lecce: voci, regia, post-produzione, traduzione DE/EN"],
+        ["Sviluppo piattaforma",       "€ 18.000", "Evoluzione scalabile: area utente, portale B2B, infrastruttura cloud, API Viator/GetYourGuide — sviluppatore freelance 12 mesi"],
+        ["Produzione contenuti audio", "€ 8.500",  "12 nuove guide (Lecce/Salento + Daunia): voci, regia, post-produzione, traduzione DE/EN"],
         ["Marketing digitale",         "€ 10.000", "Google Ads + Meta Ads + SEO (12 mesi) — geo-targetizzato turisti in Puglia"],
         ["Materiale fisico",           "€ 4.000",  "QR code (totem, cartoline, supporti), brochure IT/EN/DE"],
         ["Consulenze professionali",   "€ 3.000",  "Commercialista (avvio + 1° anno), consulenza legale GDPR/diritti d'autore"],
@@ -299,44 +343,95 @@ def section_5():
         ("BACKGROUND", (0,-1), (-1,-1), BLUE_LIGHT),
         ("TEXTCOLOR",  (0,-1), (-1,-1), BLUE_DARK),
     ]
-    elems.append(tbl(inv_data, [4.2*cm, 2.2*cm, W-6.4*cm], extra_style))
-    elems.append(Spacer(1, 0.3*cm))
+    elems.append(KeepTogether([
+        tbl(inv_data, [4.2*cm, 2.2*cm, W-6.4*cm], extra_style),
+        Spacer(1, 0.3*cm),
+    ]))
+    elems.append(Paragraph("Nota sulla voce «Sviluppo piattaforma»", H2))
     elems.append(Paragraph(
-        "In aggiunta al piano investimenti, NIDI prevede un contributo separato di <b>€ 10.000</b> "
-        "per le spese di gestione dei primi 6 mesi (coworking, utenze, connettività, abbonamenti software). "
-        "<b>Agevolazione totale ricevuta: € 60.000.</b>", HIGHLIGHT))
+        "La versione attuale di localis.guide — player audio integrato, sistema di pagamento Stripe, "
+        "catalogo multilingue (IT/EN/DE), distribuzione via QR code — è stata realizzata interamente "
+        "con <b>investimento personale del proponente</b>, prima e indipendentemente dalla presente "
+        "richiesta di agevolazione. Quella infrastruttura rappresenta la prova concreta di fattibilità "
+        "del modello e il punto di partenza per la fase di crescita.",
+        BODY))
+    elems.append(Paragraph(
+        "I <b>€ 18.000 richiesti al bando NIDI</b> riguardano esclusivamente gli sviluppi tecnologici "
+        "necessari per sostenere l'espansione del mercato nei 12 mesi successivi all'avvio formale "
+        "dell'impresa, e in particolare:",
+        BODY))
+    for item in [
+        "<b>Area utente e storico acquisti</b> — profilo personale con accesso alle guide acquistate, "
+        "download offline per uso senza connessione (funzionalità richiesta dai turisti stranieri).",
+        "<b>Portale B2B per licenze istituzionali</b> — pannello di gestione per accordi con musei, "
+        "comuni e parchi nazionali: caricamento contenuti, reportistica accessi, fatturazione automatica.",
+        "<b>Integrazione API Viator e GetYourGuide</b> — connessione ai principali marketplace turistici "
+        "mondiali per distribuzione automatizzata del catalogo e gestione degli ordini in entrata.",
+        "<b>Infrastruttura cloud scalabile</b> — migrazione a server dedicati con CDN globale, gestione "
+        "dei picchi di traffico stagionale (agosto, Pasqua, ponti), replica geografica dei file audio "
+        "per ridurre la latenza per gli utenti nordeuropei.",
+        "<b>Sistema di database avanzato</b> — architettura dati per gestire un catalogo in crescita "
+        "(da 19 a 54+ guide), analisi comportamentale degli utenti, A/B testing sui percorsi di acquisto.",
+        "<b>Dashboard analytics proprietaria</b> — reportistica in tempo reale per i partner (quanti "
+        "turisti hanno scannerizzato, quanti hanno acquistato, conversione per struttura) come strumento "
+        "di fidelizzazione della rete distributiva.",
+    ]:
+        elems.append(bp(item))
+    elems.append(KeepTogether([
+        Spacer(1, 0.25*cm),
+        Paragraph(
+            "Questi sviluppi non sono presenti nella piattaforma attuale e non potranno essere realizzati "
+            "senza un investimento dedicato. Sono indispensabili per portare Localis da una fase di "
+            "validazione del mercato (oggi: 8 partner, 19 guide) a una piattaforma commercialmente "
+            "scalabile (target anno 1: 50 partner, 6 nuove zone).",
+            BODY),
+        Spacer(1, 0.3*cm),
+        Paragraph(
+            "In aggiunta al piano investimenti, NIDI prevede un contributo separato di <b>€ 10.000</b> "
+            "per le spese di gestione dei primi 6 mesi (coworking, utenze, connettività, abbonamenti software). "
+            "<b>Agevolazione totale ricevuta: € 60.000.</b>", HIGHLIGHT),
+    ]))
     return elems
 
 def section_6():
     GREEN_LIGHT = colors.HexColor("#dcfce7")
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("6. PIANO FINANZIARIO — PROIEZIONI 3 ANNI", H1), hr(),
 
         # ── Baseline pre-investimento ─────────────────────────────────────────
         Paragraph("Baseline pre-investimento (rete attuale — 8 partner attivi)", H2),
         Paragraph(
             "Alla data di presentazione della domanda Localis dispone già di 8 partner "
-            "operativi distribuiti su Bari e Gargano. Le proiezioni seguenti partono da "
-            "questa base reale, non da ipotesi teoriche.", BODY),
+            "operativi distribuiti su 4 zone (Bari, Gargano, Valle d'Itria, Polignano a Mare), "
+            "incluso l'InfoPoint Turistico ufficiale di Bari — canale ad alto volume attivato "
+            "a giugno 2026. Le proiezioni seguenti partono da questa base reale, non da ipotesi teoriche.", BODY),
         Spacer(1, 0.2*cm),
     ]
 
     base_data = [
         ["Cluster", "Partner", "Logica conversione", "Acquisti/anno", "Ricavo stimato"],
         ["Hotel Gargano",
-         "Il Giardino (28 cam.)\nBlue Marine (70 cam.)\naprile–ottobre",
+         "Il Giardino (33 cam.)\nBluemarine (70 cam.)\naprile–ottobre",
          "2.970 gruppi ospiti/anno\n× 6% conv. (turisti in loco)",
-         "178", "€ 1.958"],
+         "178", "€ 1.335"],
         ["B&B Bari",
-         "Principe 152 (3 cam.)\nMarchese 124 (2 cam.)\nChicche di Carola (1 cam.)",
-         "876 gruppi/anno\n× 10% conv. (ospiti in città)",
+         "London Bar B&B\n(Principe 152 + Marchese 124\n+ Chicche di Carola — 6 cam.)",
+         "1.095 notti/anno\n× 8% conv. (ospiti in città)",
          "88", "€ 660"],
         ["Bar e negozi Bari",
-         "London Bar\nBrunoCaffè\nPaesaggi Loconsole",
-         "~20 turisti/giorno esposti\n× 2% conv.",
-         "146", "€ 1.095"],
-        ["TOTALE BASELINE", "8 partner attivi", "—", "412", "€ 3.713"],
+         "London Bar (7 QR bancone+tavoli)\nPaesaggi (vetrina centro)",
+         "~30 turisti/giorno esposti\n× 2% conv.",
+         "219", "€ 1.642"],
+        ["InfoPoint Turistico Bari",
+         "InfoPoint Piazza Ferrarese 29\n(canale ufficiale turismo)",
+         "~80 turisti/giorno\n× 3% conv.",
+         "876", "€ 6.570"],
+        ["Valle d'Itria / Polignano",
+         "Casale Madre (Ostuni)\nMare in Casa (Polignano a Mare)",
+         "360 cam.+notti/anno\n× 8% conv.",
+         "58", "€ 435"],
+        ["TOTALE BASELINE", "8 partner attivi — 4 zone", "—", "1.419", "€ 10.642"],
     ]
     base_extra = [
         ("BACKGROUND", (0,-1), (-1,-1), BLUE_LIGHT),
@@ -414,52 +509,58 @@ def section_6():
     elems.append(Spacer(1, 0.3*cm))
     elems.append(Paragraph(
         "<b>Anno 1</b> in perdita contenuta (−€1.380 lordo): fisiologico nella fase di "
-        "costruzione della rete — il deficit è interamente coperto dal contributo NIDI "
-        "per le spese di gestione (€10.000). "
-        "<b>Break-even operativo al mese 16 circa.</b> "
+        "espansione della rete — il deficit è interamente coperto dal contributo NIDI "
+        "per le spese di gestione (€10.000). La baseline reale (€10.642 acquisti/anno già oggi) "
+        "compressa rispetto alle proiezioni perché l'InfoPoint e i nuovi partner Valle d'Itria "
+        "sono operativi solo da giugno 2026. "
+        "<b>Break-even operativo stimato al mese 14 circa</b> — anticipato rispetto alla "
+        "stima precedente grazie all'allargamento della rete a 4 zone. "
         "Il prestito NIDI (€25.000 a tasso zero, €5.000/anno × 5 anni) diventa "
         "sostenibile dall'anno 2 con €3.770 di utile netto residuo.", BODY))
     return elems
 
 def section_partner():
-    FOTO_DIR = r"C:\Users\Admin\Desktop\Bari_foto\Bar London"
+    FOTO_DIR         = r"C:\Users\Admin\Desktop\Bari_foto\Bar London"
+    GIARDINO_DIR     = r"C:\Users\Admin\Desktop\Bari_foto\partner\Il giardino"
     # Foto scelte: bancone (impatto visivo) + tavoli multipli (scalabilità)
     foto = [
         ("WhatsApp Image 2026-05-26 at 09.00.43.jpeg",
          "London Bar, Bari — totem Localis sul bancone accanto al POS"),
         ("WhatsApp Image 2026-05-26 at 09.00.44 (1).jpeg",
-         "BrunoCaffè, Bari — più totem Localis sui tavoli: modello già scalato"),
+         "London Bar, Bari — più totem Localis sui tavoli: modello già scalato"),
         ("WhatsApp Image 2026-05-26 at 09.00.44 (3).jpeg",
-         "BrunoCaffè, Bari — QR Localis integrato nel tavolo accanto al brand caffè"),
+         "London Bar, Bari — QR Localis integrato al tavolo accanto al bancone"),
     ]
 
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("9. RETE PARTNER ATTIVI — PROVE DI MERCATO", H1), hr(),
         Paragraph(
             "Il modello distributivo Localis è già operativo alla data della domanda, "
-            "con <b>8 partner attivi</b> tra Bari e Gargano. "
-            "I materiali QR code con cornice professionale sono posizionati stabilmente "
-            "presso strutture ricettive e commerciali, con esposizione continuativa "
-            "al flusso di turisti.", BODY),
+            "con <b>8 partner attivi in 4 zone</b> (Bari, Gargano, Valle d'Itria, Polignano a Mare). "
+            "A giugno 2026 è stato attivato l'<b>InfoPoint Turistico ufficiale di Bari</b> "
+            "(Piazza del Ferrarese 29), canale ad alto volume che intercetta turisti già "
+            "in cerca di informazioni sul territorio. "
+            "I materiali QR code sono posizionati stabilmente presso strutture ricettive, "
+            "commerciali e canali istituzionali.", BODY),
         Spacer(1, 0.2*cm),
     ]
 
     partner_lista = [
-        ["Partner", "Tipo", "Città / Zona"],
-        ["London Bar",                  "Bar / caffè",          "Bari"],
-        ["BrunoCaffè",                  "Bar / caffè",          "Bari"],
-        ["Paesaggi di Loconsole Patrizia", "Negozio fiori",     "Bari"],
-        ["B&B Principe 152",            "B&B (3 camere)",       "Bari"],
-        ["B&B Marchese 124",            "B&B (2 camere)",       "Bari"],
-        ["Chicche di Carola",           "B&B (1 camera)",       "Bari"],
-        ["Il Giardino Albergo Rist.",   "Hotel+ristorante (28 cam.)", "Lido del Sole, Rodi Garganico"],
-        ["Residence Blue Marine",       "Residence (70 cam.)",  "Lido del Sole, Rodi Garganico"],
+        ["Partner", "Tipo", "Città / Zona", "Attivo da"],
+        ["London Bar",                      "Bar (7 QR bancone+tavoli)",     "Bari",                       "mag 2026"],
+        ["London Bar B&B",                  "B&B (3 strutture — 6 camere)",  "Bari",                       "mag 2026"],
+        ["Paesaggi",                        "Negozio / vetrina centro",      "Bari",                       "mag 2026"],
+        ["Il Giardino Albergo Rist.",        "Hotel+ristorante (33 cam.)",    "Lido del Sole, Rodi Garganico", "mag 2026"],
+        ["Residence Bluemarine",            "Residence (70 cam.)",           "Lido del Sole, Rodi Garganico", "mag 2026"],
+        ["InfoPoint Turistico Bari ★",      "Info point ufficiale turismo",  "Piazza Ferrarese 29, Bari",  "giu 2026"],
+        ["Casale Madre",                    "B&B",                           "Ostuni (Valle d'Itria)",     "giu 2026"],
+        ["Mare in Casa — Dimora Luxury",    "B&B luxury",                    "Polignano a Mare",           "giu 2026"],
     ]
     partner_extra = [
         ("ROWBACKGROUNDS", (0,1), (-1,-1), [WHITE, GRAY_LIGHT]),
     ]
-    elems.append(tbl(partner_lista, [5.5*cm, 4*cm, W-9.5*cm], partner_extra))
+    elems.append(tbl(partner_lista, [4.5*cm, 3.8*cm, 4.2*cm, W-12.5*cm], partner_extra))
     elems.append(Spacer(1, 0.3*cm))
 
     img_w = (W - 0.6*cm) / 2   # 2 foto per riga
@@ -518,35 +619,105 @@ def section_partner():
         elems.append(tbl_caps)
 
     elems.append(Spacer(1, 0.4*cm))
+
+    # --- Il Giardino Albergo Ristorante ---
+    elems.append(Paragraph("Il Giardino Albergo Ristorante — Lido del Sole, Rodi Garganico", H2))
+    elems.append(Spacer(1, 0.2*cm))
+    foto_giardino = [
+        ("WhatsApp Image 2026-05-30 at 21.09.04.jpeg",
+         "Il Giardino, Rodi Garganico — materiale Localis alla reception: 33 camere raggiungibili"),
+        ("WhatsApp Image 2026-05-30 at 21.09.18.jpeg",
+         "Il Giardino, Rodi Garganico — Localis esposto nel ristorante, intercetta turisti a tavola"),
+    ]
+    giardino_cells = []
+    giardino_caps  = []
+    for fname, caption in foto_giardino:
+        path = os.path.join(GIARDINO_DIR, fname)
+        try:
+            pil = PILImage.open(path)
+            pw, ph = pil.size
+            ratio = ph / pw
+            h = img_w * ratio
+            giardino_cells.append(Image(path, width=img_w, height=h))
+            giardino_caps.append(Paragraph(caption, BODY_SMALL))
+        except Exception:
+            giardino_cells.append(Spacer(1, 1))
+            giardino_caps.append(Paragraph("", BODY_SMALL))
+
+    if giardino_cells:
+        tbl_g = Table([giardino_cells], colWidths=[img_w, img_w])
+        tbl_g.setStyle(TableStyle([
+            ("VALIGN", (0,0), (-1,-1), "TOP"),
+            ("LEFTPADDING",  (0,0), (-1,-1), 0),
+            ("RIGHTPADDING", (0,0), (-1,-1), 6),
+        ]))
+        tbl_gc = Table([giardino_caps], colWidths=[img_w, img_w])
+        tbl_gc.setStyle(TableStyle([
+            ("VALIGN", (0,0), (-1,-1), "TOP"),
+            ("LEFTPADDING",  (0,0), (-1,-1), 0),
+            ("RIGHTPADDING", (0,0), (-1,-1), 6),
+            ("TOPPADDING",   (0,0), (-1,-1), 3),
+        ]))
+        elems.append(tbl_g)
+        elems.append(tbl_gc)
+
+    elems.append(Spacer(1, 0.4*cm))
     elems.append(Paragraph(
-        "Le foto documentano la presenza fisica di Localis presso <b>London Bar</b> e "
-        "<b>BrunoCaffè</b> a Bari. Entrambe le strutture hanno accettato di esporre il "
-        "materiale Localis volontariamente, senza corrispettivo economico — prova diretta "
-        "della validità e dell'accettazione del modello da parte degli operatori locali.",
+        "Le foto documentano la presenza fisica di Localis presso il <b>London Bar</b> a Bari "
+        "(7 QR code sul bancone e ai tavoli) e presso <b>Il Giardino Albergo Ristorante</b> "
+        "a Lido del Sole, Rodi Garganico (33 camere + ristorante). "
+        "Entrambi i partner hanno accettato di esporre il materiale Localis volontariamente, "
+        "senza corrispettivo economico — prova diretta della validità del modello. "
+        "A giugno 2026 la rete si è estesa all'<b>InfoPoint Turistico ufficiale di Bari</b> "
+        "e a strutture di Ostuni e Polignano a Mare, confermando la scalabilità del modello "
+        "distributivo su zone geografiche diverse.",
         HIGHLIGHT))
     return elems
 
 
 def section_7():
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("10. IMPATTO TERRITORIALE", H1), hr(),
         Paragraph(
-            "Localis genera valore diretto e misurabile sul territorio pugliese:", BODY),
+            "Localis genera valore diretto e misurabile sul territorio pugliese, "
+            "con un impatto che va oltre il semplice prodotto turistico:", BODY),
+        Spacer(1, 0.1*cm),
+        Paragraph("Impatto economico diretto", H2),
     ]
     for i in [
-        "Committenza a voci narranti locali: attori, speaker e professionisti audio pugliesi",
-        "Rete distributiva di strutture ricettive locali (B&B, agriturismi, hotel, ristoranti)",
-        "Valorizzazione di borghi minori e aree interne — Valle d'Itria, Gargano interno — spesso esclusi dai circuiti mainstream",
-        "Visibilità internazionale del patrimonio culturale pugliese su turisti DE / UK / NL",
-        "Modello replicabile: espandibile a tutta la Puglia senza aumentare i costi fissi",
+        "Committenza continuativa a voci narranti locali: attori, speaker e professionisti audio pugliesi retribuiti per ogni guida prodotta",
+        "Revenue share 25% per ogni struttura partner: reddito passivo diretto per hotel, B&B e operatori locali",
+        "Rete distributiva che privilegia strutture indipendenti e familiari — non catene alberghiere",
     ]:
         elems.append(bp(i))
+    elems.append(Spacer(1, 0.1*cm))
+    elems.append(Paragraph("Redistribuzione dei flussi turistici", H2))
+    for i in [
+        "Valorizzazione attiva di borghi minori e aree interne sistematicamente esclusi dai circuiti mainstream: Daunia, Gargano profondo, Puglia rurale medievale",
+        "Riduzione della concentrazione turistica sulle mete sature (Alberobello, Polignano) a favore di destinazioni con minore pressione antropica",
+        "Allungamento della stagione turistica: le guide funzionano tutto l'anno, non solo nei mesi estivi, incentivando il turismo fuori stagione nei borghi interni",
+        "Visibilità internazionale (DE / UK / NL / FR) per luoghi che non hanno risorse per promuoversi autonomamente sui mercati esteri",
+    ]:
+        elems.append(bp(i))
+    elems.append(Spacer(1, 0.1*cm))
+    elems.append(Paragraph("Valore culturale e identitario", H2))
+    for i in [
+        "Documentazione e trasmissione di storie locali, tradizioni orali e memorie di comunità che rischiano di andare perdute",
+        "Narrazione in tre lingue di un patrimonio culturale spesso accessibile solo ai residenti — apertura al mondo senza snaturamento",
+        "Modello scalabile: ogni nuova guida prodotta è un asset permanente che genera valore senza costi aggiuntivi di replica",
+    ]:
+        elems.append(bp(i))
+    elems.append(Spacer(1, 0.2*cm))
+    elems.append(Paragraph(
+        "Localis è uno strumento di <b>politica culturale applicata</b>: non racconta solo dove andare, "
+        "ma perché certi luoghi meritano attenzione — e lo fa nella lingua del turista che ha i soldi "
+        "per arrivarci.", HIGHLIGHT))
     return elems
 
 def section_8():
     elems = [
-        Spacer(1, 0.4*cm),
+        PageBreak(),
         Paragraph("11. SINTESI DELLA RICHIESTA", H1), hr(),
     ]
     sum_data = [
@@ -571,7 +742,7 @@ def section_8():
     elems.append(hr(BLUE_DARK, 0.8))
     elems.append(Spacer(1, 0.2*cm))
     elems.append(Paragraph(
-        "localis.guide  ·  info@localis.guide  ·  Bari, Puglia  ·  Maggio 2026",
+        "localis.guide  ·  info@localis.guide  ·  Bari, Puglia  ·  Giugno 2026",
         FOOTER_STYLE))
     return elems
 
