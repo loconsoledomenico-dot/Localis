@@ -77,3 +77,4 @@ private/gsc-auth-link.html
 
 # Local sandbox app data
 .sandbox-appdata/
+__pycache__/
