@@ -28,9 +28,6 @@ function makeGuideEntry(
       audio_full_key_it: `${slug}-it.mp3`,
       audio_full_key_en: `${slug}-en.mp3`,
       audio_full_key_de: `${slug}-de.mp3`,
-      audio_trailer_path: `/audio/${slug}-it.mp3`,
-      audio_trailer_path_en: `/audio/${slug}-en.mp3`,
-      audio_trailer_path_de: `/audio/${slug}-de.mp3`,
       chapters: [
         {
           title_it: 'Capitolo 1',

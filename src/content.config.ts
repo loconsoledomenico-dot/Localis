@@ -37,9 +37,6 @@ const guides = defineCollection({
     audio_full_key_it: z.string(),
     audio_full_key_en: z.string(),
     audio_full_key_de: z.string().optional(),
-    audio_trailer_path: z.string(),
-    audio_trailer_path_en: z.string().optional(),
-    audio_trailer_path_de: z.string().optional(),
     chapters: z
       .array(
         z.object({
