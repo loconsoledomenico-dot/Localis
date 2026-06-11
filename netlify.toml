@@ -55,18 +55,14 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    # CSP in REPORT-ONLY mode: the browser does NOT block anything, it only
-    # logs would-be violations to the devtools console. Safe to ship to prod.
-    # Watch the console for a few days across the real flows (checkout, audio
-    # playback, maps, analytics); when no legitimate resource is flagged,
-    # rename the header to `Content-Security-Policy` to switch to enforcing.
-    #
-    # Origins enumerated from the codebase:
+    # CSP ENFORCING (promossa da Report-Only il 2026-06-09 dopo console pulita
+    # in produzione). Origins enumerati dal codice:
     #   scripts: inline (26 blocks + define:vars + JSON-LD) → 'unsafe-inline' required;
     #            plausible, GTM, GA4, PostHog. styles: Tailwind inline + Google/Bunny fonts.
     #   media: R2 signed audio + same-origin trailers. frame: OpenStreetMap embed.
     #   checkout is a server-side 303 redirect to Stripe (no Stripe.js) → form-action allows it.
-    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://*.googletagmanager.com https://*.google-analytics.com https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net; font-src 'self' data: https://fonts.gstatic.com https://fonts.bunny.net; img-src 'self' data: https://api.qrserver.com https://*.google-analytics.com https://*.googletagmanager.com https://www.openstreetmap.org https://*.tile.openstreetmap.org; media-src 'self' blob: https://*.r2.cloudflarestorage.com; connect-src 'self' https://plausible.io https://*.google-analytics.com https://*.googletagmanager.com https://*.posthog.com https://*.r2.cloudflarestorage.com; frame-src https://www.openstreetmap.org; object-src 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com; frame-ancestors 'none'"
+    # Rollback: rinomina in Content-Security-Policy-Report-Only (o git revert).
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://*.googletagmanager.com https://*.google-analytics.com https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net; font-src 'self' data: https://fonts.gstatic.com https://fonts.bunny.net; img-src 'self' data: https://api.qrserver.com https://*.google-analytics.com https://*.googletagmanager.com https://www.openstreetmap.org https://*.tile.openstreetmap.org; media-src 'self' blob: https://*.r2.cloudflarestorage.com; connect-src 'self' https://plausible.io https://*.google-analytics.com https://*.googletagmanager.com https://*.posthog.com https://*.r2.cloudflarestorage.com; frame-src https://www.openstreetmap.org; object-src 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com; frame-ancestors 'none'"
 
 # HTTPS + apex enforcement (Phase 0 production hardening)
 [[redirects]]
