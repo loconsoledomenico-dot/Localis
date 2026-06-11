@@ -1,9 +1,8 @@
 import fs from 'node:fs/promises';
 import { google } from 'googleapis';
+import { buildGoogleAccessHelp, getGoogleAuth } from './google-auth.mjs';
 
 const propertyId = process.env.GA4_PROPERTY_ID || '538539129';
-const credentialsPath = new URL('../private/ga4-oauth-client.json', import.meta.url);
-const tokenPath = new URL('../private/google-oauth-token.json', import.meta.url);
 const statePath = new URL('../private/partner-qr-sheet-state.json', import.meta.url);
 const partnerDir = new URL('../src/content/partners/', import.meta.url);
 const spreadsheetTitle = process.env.PARTNER_QR_SHEET_TITLE || 'Localis - Partner QR Daily Report';
@@ -30,14 +29,15 @@ const eventColumns = [
   ['purchase_completed', 'Acquisti legacy'],
 ];
 
-async function getAuth() {
-  const raw = JSON.parse(await fs.readFile(credentialsPath, 'utf8'));
-  const client = raw.installed || raw.web;
-  const redirectUri = 'http://127.0.0.1:3000/oauth2callback';
-  const oauth2Client = new google.auth.OAuth2(client.client_id, client.client_secret, redirectUri);
-  const token = JSON.parse(await fs.readFile(tokenPath, 'utf8'));
-  oauth2Client.setCredentials(token);
-  return oauth2Client;
+let authContext = null;
+
+async function readKnownSpreadsheetId() {
+  try {
+    const state = JSON.parse(await fs.readFile(statePath, 'utf8'));
+    return state.spreadsheetId || '';
+  } catch {
+    return '';
+  }
 }
 
 async function loadPartners() {
@@ -634,7 +634,8 @@ async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, g
 }
 
 async function main() {
-  const auth = await getAuth();
+  authContext = await getGoogleAuth();
+  const auth = authContext.auth;
   const sheets = google.sheets({ version: 'v4', auth });
   const partners = await loadPartners();
   const { qrPartners } = partitionPartners(partners);
@@ -681,12 +682,24 @@ async function main() {
     spreadsheetUrl: url,
     records: qrRecords.length,
     landingOnlyRecords: landingOnlyRecords.length,
+    authMode: authContext.authMode,
   }, null, 2));
 }
 
-main().catch((error) => {
-  if (error.code === 'ENOENT' && String(error.path || '').includes('google-oauth-token.json')) {
-    console.error('Missing Google OAuth token. Run: node private/google-oauth.mjs');
+main().catch(async (error) => {
+  const accessHelp = buildGoogleAccessHelp({
+    propertyId,
+    spreadsheetId: await readKnownSpreadsheetId(),
+    serviceAccountEmail: authContext?.serviceAccountEmail || '',
+  });
+
+  if (
+    error.code === 'ENOENT' &&
+    (String(error.path || '').includes('google-oauth-token.json') || String(error.path || '').includes('ga4-oauth-client.json'))
+  ) {
+    console.error(`Missing Google OAuth credentials. ${accessHelp}`);
+  } else if (error.response?.data?.error === 'invalid_grant' || error.error === 'invalid_grant') {
+    console.error(`Google OAuth refresh token expired or was revoked. ${accessHelp}`);
   } else if (
     ['EACCES', 'ECONNREFUSED', 'ENETUNREACH', 'ETIMEDOUT'].includes(error.code) &&
     String(error.config?.url || '').includes('oauth2.googleapis.com/token')
@@ -695,6 +708,8 @@ main().catch((error) => {
       'Google OAuth token refresh failed because this environment cannot reach oauth2.googleapis.com. ' +
       'The script is healthy, but it needs outbound HTTPS access to Google APIs.'
     );
+  } else if (error.response?.status === 403 && authContext?.authMode === 'service_account') {
+    console.error(`Google service account lacks access. ${accessHelp}`);
   } else {
     console.error(error.response?.data || error);
   }

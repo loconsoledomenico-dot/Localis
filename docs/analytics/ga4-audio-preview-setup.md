@@ -50,6 +50,21 @@ Dopo la registrazione in GA4, nella Data API userai:
 
 Se una custom definition non e registrata, le query Data API falliscono con `INVALID_ARGUMENT`.
 
+## Nota importante sul setup attuale
+
+Nella proprieta GA4 corrente la metrica `Audio duration seconds` risulta esposta in Data API come:
+
+- `customEvent:udio_duration_seconds`
+
+quindi senza la `a` iniziale. Questo indica che la custom metric in GA4 e stata registrata con un nome parametro errato oppure troncato.
+
+Per compatibilita il frontend ora invia entrambi:
+
+- `audio_duration_seconds`
+- `udio_duration_seconds`
+
+e lo script `scripts/ga4-audio-preview-report.mjs` autodiscovera il nome disponibile nei metadata della proprieta.
+
 ## Come verificare
 
 1. Apri il sito in produzione con consenso analytics attivo.

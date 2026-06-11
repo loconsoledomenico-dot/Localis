@@ -82,6 +82,8 @@ export function createAudioAnalyticsTracker(options: AudioTrackerOptions): Audio
       language,
       page_path: pagePath,
       audio_duration_seconds: durationSeconds,
+      // Backward-compatibility for a GA4 custom metric registered with a missing leading "a".
+      udio_duration_seconds: durationSeconds,
       max_position_seconds: maxSeconds,
       listen_percent: durationSeconds > 0 ? Math.min(100, Math.round((maxSeconds / durationSeconds) * 100)) : 0,
       ...extraParams,
