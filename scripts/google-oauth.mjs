@@ -8,6 +8,8 @@ const tokenPath = new URL('../private/google-oauth-token.json', import.meta.url)
 const scopes = [
   'https://www.googleapis.com/auth/analytics.readonly',
   'https://www.googleapis.com/auth/spreadsheets',
+  // drive.file: solo i file creati da quest'app (backup audio su Drive)
+  'https://www.googleapis.com/auth/drive.file',
 ];
 
 async function loadOAuthClient() {
