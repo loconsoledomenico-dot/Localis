@@ -198,10 +198,10 @@ const trustLine =
       const originalText = btn.textContent;
       btn.textContent = lang === 'it' ? 'Apertura pagamento...' : lang === 'de' ? 'Checkout wird geöffnet...' : 'Opening checkout...';
 
-      const BARI_SLUGS = ['bari-vecchia', 'san-nicola', 'tre-teatri', 'il-meglio-di-bari', 'porto-bari', 'bari-sotterranea'];
+      const BARI_SLUGS = ['bari-vecchia', 'san-nicola', 'tre-teatri', 'bari-tavola', 'porto-bari', 'bari-sotterranea'];
       const VALLE_SLUGS = ['alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano'];
       const GARGANO_SLUGS = ['gargano-vieste', 'gargano-tremiti', 'gargano-nord', 'gargano-paesi', 'gargano-sacro', 'gargano-saline'];
-      const CROCIERA_SLUGS = ['bari-vecchia', 'il-meglio-di-bari'];
+      const CROCIERA_SLUGS = ['bari-vecchia', 'bari-tavola'];
       const PRODUCT_PRICE_CENTS: Record<string, number> = {
         single: 499,
         tris: 1199,

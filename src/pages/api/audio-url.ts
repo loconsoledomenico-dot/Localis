@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { createHash } from 'node:crypto';
 import { verifyAccessToken } from '../../lib/jwt';
+import { canonicalGuideSlug } from '../../lib/legacy-slugs';
 import { sourceAudioKey } from '../../lib/watermark';
 import { getSignedDownloadUrl, r2ObjectExists } from '../../lib/r2';
 import { checkAndIncrement } from '../../lib/usage-tracker';
@@ -25,20 +26,24 @@ export const GET: APIRoute = async ({ url }) => {
     return jsonError(401, 'Invalid token');
   }
 
-  if (!decoded.guide_slugs.includes(guide)) {
+  // I token emessi prima della sostituzione di una guida contengono lo slug
+  // vecchio: il confronto avviene sempre sugli slug canonici.
+  const canonicalGuide = canonicalGuideSlug(guide);
+  const owned = new Set(decoded.guide_slugs.map(canonicalGuideSlug));
+  if (!owned.has(canonicalGuide)) {
     return jsonError(403, 'Guide not in your purchase');
   }
 
   // Rate limit
   const tokenHash = createHash('sha256').update(token).digest('hex').slice(0, 16);
-  if (!(await checkAndIncrement(tokenHash, guide))) {
+  if (!(await checkAndIncrement(tokenHash, canonicalGuide))) {
     return jsonError(429, 'Monthly stream limit reached. Contact hello@localis.guide if needed.');
   }
 
   // Confirm the source audio exists, then sign it directly. Access control is
   // enforced by the JWT + the forced 404 on /audio/guides/* (see netlify.toml);
   // the per-buyer copy carried no watermark, so it only doubled R2 storage.
-  const srcKey = sourceAudioKey(guide, lang);
+  const srcKey = sourceAudioKey(canonicalGuide, lang);
   try {
     if (!(await r2ObjectExists(srcKey))) {
       return jsonError(500, 'Audio not yet available');

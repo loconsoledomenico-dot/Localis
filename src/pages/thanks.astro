@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../components/Layout.astro';
 import { buildThanksPageModel } from '../lib/thanks-page';
 import { generateAccessToken } from '../lib/jwt';
+import { canonicalGuideSlugs } from '../lib/legacy-slugs';
 import type { Lang } from '../lib/i18n';
 import { getStripe } from '../lib/stripe';
 
@@ -92,10 +93,12 @@ if (sessionId) {
     const email = session.customer_email || session.customer_details?.email || null;
     fallbackBuyerEmail = email;
     const meta = session.metadata || {};
-    const guideSlugs = (meta.guide_slugs || '')
-      .split(',')
-      .map((slug) => slug.trim())
-      .filter(Boolean);
+    const guideSlugs = canonicalGuideSlugs(
+      (meta.guide_slugs || '')
+        .split(',')
+        .map((slug) => slug.trim())
+        .filter(Boolean),
+    );
 
     lang = normalizeLang(meta.lang ?? Astro.url.searchParams.get('lang'));
     hasConfirmedPayment = session.payment_status === 'paid';

@@ -3,6 +3,7 @@ import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import { verifyAccessToken } from '../../lib/jwt';
+import { canonicalGuideSlugs } from '../../lib/legacy-slugs';
 import { getCollection } from 'astro:content';
 import type { Lang } from '../../lib/i18n';
 import { guideSubtitle, guideTitle } from '../../lib/guide-localization';
@@ -20,7 +21,7 @@ if (!decoded) {
 }
 
 const allGuides = await getCollection('guides');
-const userGuides = decoded.guide_slugs
+const userGuides = canonicalGuideSlugs(decoded.guide_slugs)
   .map((slug) => allGuides.find((g) => g.data.slug === slug))
   .filter((g): g is NonNullable<typeof g> => Boolean(g));
 

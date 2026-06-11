@@ -26,7 +26,7 @@ export const BARI_GUIDES: readonly string[] = [
   'bari-vecchia',
   'san-nicola',
   'tre-teatri',
-  'il-meglio-di-bari',
+  'bari-tavola',
   'porto-bari',
   'bari-sotterranea',
 ] as const;
@@ -66,7 +66,7 @@ export const PURCHASEABLE_GUIDES: readonly string[] = [
 
 export const CROCIERA_GUIDES: readonly string[] = [
   'bari-vecchia',
-  'il-meglio-di-bari',
+  'bari-tavola',
 ] as const;
 
 // ── Pricing constants (in euro cents) ────────────────────────────────────────

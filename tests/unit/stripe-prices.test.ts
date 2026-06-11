@@ -146,7 +146,7 @@ describe('getCheckoutProductForSelection', () => {
 describe('validateSelectedSlugs', () => {
   const bariSlugs = [...BARI_GUIDES];
   const threeSlugs = ['bari-vecchia', 'san-nicola', 'alberobello'];
-  const sixSlugs = ['bari-vecchia', 'san-nicola', 'tre-teatri', 'il-meglio-di-bari', 'porto-bari', 'bari-sotterranea'];
+  const sixSlugs = ['bari-vecchia', 'san-nicola', 'tre-teatri', 'bari-tavola', 'porto-bari', 'bari-sotterranea'];
   const allSlugs = [...ALL_GUIDES];
 
   it('single + 1 valid slug passes', () => {
