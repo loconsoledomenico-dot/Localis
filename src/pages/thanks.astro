@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../components/Layout.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
 import { buildThanksPageModel } from '../lib/thanks-page';
 import { generateAccessToken } from '../lib/jwt';
 import { canonicalGuideSlugs } from '../lib/legacy-slugs';
@@ -77,6 +78,9 @@ let lang = normalizeLang(Astro.url.searchParams.get('lang'));
 let hasConfirmedPayment = false;
 let fallbackBuyerEmail: string | null = null;
 let purchaseParams: Record<string, string | number | boolean> = {};
+// Player inline: dopo il pagamento si ascolta QUI, senza passare dall'email.
+let accessToken: string | null = null;
+let purchasedGuides: typeof allGuides = [];
 
 let model = buildThanksPageModel({
   lang,
@@ -126,6 +130,9 @@ if (sessionId) {
         partner_id: meta.partner_id || null,
       });
 
+      accessToken = token;
+      purchasedGuides = matchedGuides;
+
       model = buildThanksPageModel({
         lang,
         token,
@@ -171,25 +178,25 @@ const pageTitle = success ? model.pageTitle : fallbackHeading;
     </header>
 
     {success ? (
-      <section class="grid gap-lg md:grid-cols-2 xl:grid-cols-3" aria-label={ui.purchasedGuidesLabel}>
-        {model.cards.map((card) => (
+      <section class="flex flex-col gap-xl max-w-[720px]" aria-label={ui.purchasedGuidesLabel}>
+        {model.cards.map((card, i) => (
           <article class="overflow-hidden rounded-xl border border-border bg-surface-elev">
-            <img
-              src={card.cover}
-              alt={card.title}
-              loading="lazy"
-              decoding="async"
-              class="aspect-[4/3] w-full object-cover"
-            />
-            <div class="flex h-full flex-col p-md">
-              <h2 class="font-display text-2xl text-ink mb-xs">{card.title}</h2>
-              <p class="text-sm text-ink-muted leading-relaxed mb-sm">{card.subtitle}</p>
-              <p class="text-xs uppercase tracking-[0.18em] text-ink-subtle mb-md">{card.duration}</p>
-              <a
-                href={card.ctaHref}
-                class="mt-auto inline-flex items-center justify-center rounded-md bg-ink px-lg py-md text-sm font-semibold text-surface transition-colors duration-fast no-underline hover:bg-ink/90"
-              >
-                {model.cardCta}
+            <div class="flex flex-col p-md gap-sm">
+              <h2 class="font-display text-2xl text-ink m-0">{card.title}</h2>
+              <p class="text-sm text-ink-muted leading-relaxed m-0">{card.subtitle}</p>
+              <p class="text-xs uppercase tracking-[0.18em] text-ink-subtle m-0">{card.duration}</p>
+              {accessToken && purchasedGuides[i] ? (
+                <AudioPlayer guide={purchasedGuides[i].data} token={accessToken} lang={lang} />
+              ) : (
+                <a
+                  href={card.ctaHref}
+                  class="inline-flex items-center justify-center rounded-md bg-ink px-lg py-md text-sm font-semibold text-surface transition-colors duration-fast no-underline hover:bg-ink/90"
+                >
+                  {model.cardCta}
+                </a>
+              )}
+              <a href={card.ctaHref} class="text-sm text-link hover:text-link-pressed">
+                {lang === 'it' ? 'La tua pagina d\'ascolto permanente →' : lang === 'de' ? 'Deine dauerhafte Hörseite →' : 'Your permanent listening page →'}
               </a>
             </div>
           </article>
