@@ -380,9 +380,11 @@ export const prerender = true;
       document.querySelector('[data-hook-en]').innerHTML = zone.hookEn;
 
       function buildQrUrl() {
+        // Con partner: landing /p/{slug} (cookie server-side + offerta di zona).
+        // Senza partner: pagina di zona col trailer.
         let url;
         try {
-          url = new URL(targetOverride || ('https://localis.guide' + zone.path));
+          url = new URL(targetOverride || ('https://localis.guide' + (p ? '/p/' + p : zone.path)));
         } catch (e) {
           url = new URL('https://localis.guide/');
         }

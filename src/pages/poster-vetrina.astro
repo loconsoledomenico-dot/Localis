@@ -334,10 +334,10 @@ export const prerender = true;
       document.querySelector('[data-hook-it]').textContent = zone.hookIt;
 
       function buildQrUrl() {
-        const url = new URL('https://localis.guide' + zone.path);
+        // Con partner: landing /p/{slug}. Senza: pagina di zona col trailer.
+        const url = new URL('https://localis.guide' + (p ? '/p/' + p : zone.path));
 
         if (p) {
-          url.searchParams.set('p', p);
           url.searchParams.set('utm_source', p);
           url.searchParams.set('utm_medium', 'qr');
           if (campaign) url.searchParams.set('utm_campaign', campaign);

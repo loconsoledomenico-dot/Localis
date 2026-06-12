@@ -44,25 +44,14 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return context.redirect(redirectUrl.toString(), 302);
   };
 
-  const localizedHomePath = allLangUrls('/')[getPathLang(pathname) ?? 'it'];
+  // I QR partner puntano alla landing /p/{slug} (ripristino 2026-06-12: i
+  // vecchi redirect verso la home disperdevano il traffico). Le landing sono
+  // prerenderizzate, quindi questo set serve solo ai path serviti dalla
+  // function; sul percorso statico il cookie lo mette il client (Layout) e
+  // al checkout c'è comunque il partnerId nel payload.
   const partnerPathMatch = pathname.match(/^\/(?:(it|en|de)\/)?p\/([a-z0-9][a-z0-9-]{2,40})\/?$/i);
-  const isDedicatedPartnerLanding = /^\/(?:(?:en|de)\/)?p\/infopoint-bari\/?$/i.test(pathname);
-  const isQrTraffic = url.searchParams.get('utm_medium') === 'qr';
-
-  if (partnerPathMatch && !isDedicatedPartnerLanding) {
-    const partnerSlug = partnerPathMatch[2];
-    const redirectUrl = new URL(url);
-    redirectUrl.pathname = localizedHomePath;
-    redirectUrl.searchParams.set('p', partnerSlug);
-    redirectUrl.searchParams.delete('lang');
-    return context.redirect(redirectUrl.toString(), 302);
-  }
-
-  if (isQrTraffic && pathname !== localizedHomePath && !isDedicatedPartnerLanding) {
-    const redirectUrl = new URL(url);
-    redirectUrl.pathname = localizedHomePath;
-    redirectUrl.searchParams.delete('lang');
-    return context.redirect(redirectUrl.toString(), 302);
+  if (partnerPathMatch) {
+    context.cookies.set(PARTNER_COOKIE_NAME, partnerPathMatch[2], cookieOptions);
   }
 
   if (isSupportedLang(queryLang)) {
