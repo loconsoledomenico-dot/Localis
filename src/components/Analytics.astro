@@ -160,13 +160,16 @@ const isProd = import.meta.env.PROD;
             };
 
             // qr_scan: primo gradino del funnel partner. Una volta per sessione,
-            // solo quando si arriva con ?p= valido (cioè da un QR).
+            // quando si arriva con ?p= valido oppure direttamente sulla landing
+            // /p/{slug} (i QR nuovi e i vecchi redirezionati atterrano lì).
             try {
               const usp = new URLSearchParams(window.location.search);
               const qp = usp.get('p');
-              if (qp && /^[a-z0-9][a-z0-9-]{2,40}$/i.test(qp) && !sessionStorage.getItem('localis_qr_scan_sent')) {
+              const landingPid = (window.localisPartnerLanding && window.localisPartnerLanding.partner_id) || null;
+              const scanPid = (qp && /^[a-z0-9][a-z0-9-]{2,40}$/i.test(qp)) ? qp : landingPid;
+              if (scanPid && !sessionStorage.getItem('localis_qr_scan_sent')) {
                 sessionStorage.setItem('localis_qr_scan_sent', '1');
-                window.localisTrack('qr_scan', { partner_id: qp, landing_path: window.location.pathname });
+                window.localisTrack('qr_scan', { partner_id: scanPid, landing_path: window.location.pathname });
               }
               // checkout_error: il flusso a redirect torna con ?checkoutError=1
               // quando la creazione della sessione Stripe fallisce.

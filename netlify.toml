@@ -92,6 +92,32 @@
   status = 301
   force = true
 
+# QR stampati col vecchio schema (home?p=slug): portali alla landing partner.
+# La home è statica e il middleware non ci gira: il redirect vive qui.
+[[redirects]]
+  from = "/"
+  to = "/p/:p"
+  status = 302
+  force = true
+  [redirects.query]
+    p = ":p"
+
+[[redirects]]
+  from = "/en/"
+  to = "/p/:p"
+  status = 302
+  force = true
+  [redirects.query]
+    p = ":p"
+
+[[redirects]]
+  from = "/de/"
+  to = "/p/:p"
+  status = 302
+  force = true
+  [redirects.query]
+    p = ":p"
+
 # Partner QR landing: noindex via headers (destinate ad attribuzione/QR, non al ranking)
 [[headers]]
   for = "/p/*"
