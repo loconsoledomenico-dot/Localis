@@ -13,20 +13,22 @@ const productsSheet = 'Prodotti';
 const totalsSheet = 'Totals';
 const todaySummarySheet = 'Oggi - chiaro';
 const landingOnlySheet = 'Landing - campagne';
+const stripeSheet = 'Stripe - Provvigioni';
+const legendSheet = 'Legenda';
 const startDate = process.env.GA4_START_DATE || '30daysAgo';
-const endDate = process.env.GA4_END_DATE || 'yesterday';
+const endDate = process.env.GA4_END_DATE || 'today';
 
+// Tassonomia eventi dal 2026-06-12 (qr_scan e checkout_error esistono da
+// quella data; i nomi legacy duplicati sono usciti dal report — v. Legenda).
 const eventColumns = [
-  ['qr_landing_viewed', 'Aperture da QR'],
+  ['qr_scan', 'Scansioni QR'],
   ['preview_start', 'Anteprime avviate'],
   ['preview_10s', 'Anteprime oltre 10s'],
   ['preview_complete', 'Anteprime completate'],
   ['audio_preview_played', 'Ascolti anteprima'],
-  ['preview_played', 'Altre anteprime'],
   ['begin_checkout', 'Checkout iniziati'],
-  ['checkout_started', 'Checkout legacy'],
-  ['purchase', 'Acquisti'],
-  ['purchase_completed', 'Acquisti legacy'],
+  ['checkout_error', 'Errori checkout'],
+  ['purchase', 'Acquisti (GA4)'],
 ];
 
 let authContext = null;
@@ -368,8 +370,6 @@ function buildTotalsValues(records, partners) {
   }
 
   return [[
-    'Nota: "Sessioni attribuite" include anche ritorni e visite successive entro 30 giorni se il partner resta nel cookie. "Aperture da QR" conta solo le aperture della landing partner tracciate con evento qr_landing_viewed.',
-  ], [
     'Codice partner',
     'Partner',
     'Citta',
@@ -466,8 +466,6 @@ function buildTodaySummaryValues(records) {
 
 function buildLandingOnlyValues(records) {
   const values = [[
-    'Nota: questi record sono attribuzioni di landing/campagna e non vengono inclusi nei tab QR-only finche il partner non passa a reporting_mode: physical_qr.',
-  ], [
     'Data',
     'Codice attributo',
     'Partner/Campagna',
@@ -504,6 +502,113 @@ function buildLandingOnlyValues(records) {
   return values;
 }
 
+function eur(cents) {
+  return `${(cents / 100).toFixed(2).replace('.', ',')} €`;
+}
+
+async function loadStripeKey() {
+  if (process.env.STRIPE_SECRET_KEY) return process.env.STRIPE_SECRET_KEY;
+  try {
+    const envText = await fs.readFile(new URL('../.env', import.meta.url), 'utf8');
+    const m = envText.match(/^STRIPE_SECRET_KEY\s*=\s*"?([^"\r\n]+)"?/m);
+    return m ? m[1].trim() : '';
+  } catch {
+    return '';
+  }
+}
+
+/**
+ * Verità di terra: vendite pagate da Stripe, attribuite via metadata.partner_id,
+ * con provvigione calcolata dal commission_rate fotografato al checkout.
+ * Questo tab è il registro da mostrare ai partner.
+ */
+async function buildStripeValues(partners) {
+  const stripeKey = await loadStripeKey();
+  if (!stripeKey) {
+    return [['Nota'], ['STRIPE_SECRET_KEY non disponibile in questo ambiente: sezione provvigioni saltata.']];
+  }
+
+  const sessions = [];
+  let startingAfter = '';
+  for (let page = 0; page < 20; page += 1) {
+    const params = new URLSearchParams({ limit: '100' });
+    if (startingAfter) params.set('starting_after', startingAfter);
+    const res = await fetch(`https://api.stripe.com/v1/checkout/sessions?${params}`, {
+      headers: { Authorization: `Bearer ${stripeKey}` },
+    });
+    const json = await res.json();
+    if (json.error) return [['Errore Stripe'], [json.error.message]];
+    sessions.push(...(json.data ?? []));
+    if (!json.has_more || !json.data?.length) break;
+    startingAfter = json.data[json.data.length - 1].id;
+  }
+
+  const paid = sessions.filter((s) => s.payment_status === 'paid');
+  const byPartner = new Map();
+  const detail = [];
+  let unattributed = 0;
+  let unattributedGross = 0;
+
+  for (const s of paid) {
+    const pid = s.metadata?.partner_id || '';
+    const gross = s.amount_total || 0;
+    const date = new Date(s.created * 1000).toISOString().slice(0, 10);
+    if (!pid) {
+      unattributed += 1;
+      unattributedGross += gross;
+      continue;
+    }
+    const rate = Number(s.metadata?.partner_commission_rate) || 0.25;
+    const commission = Math.floor(gross * rate);
+    const agg = byPartner.get(pid) ?? { count: 0, gross: 0, commission: 0, last: '' };
+    agg.count += 1;
+    agg.gross += gross;
+    agg.commission += commission;
+    agg.last = date > agg.last ? date : agg.last;
+    byPartner.set(pid, agg);
+    detail.push([
+      date,
+      pid,
+      partners.get(pid)?.name || pid,
+      s.metadata?.product || '',
+      s.metadata?.guide_slugs || '',
+      eur(gross),
+      `${Math.round(rate * 100)}%`,
+      eur(commission),
+    ]);
+  }
+
+  const values = [[
+    'Partner', 'Vendite pagate', 'Incasso lordo', 'Provvigione maturata', 'Ultima vendita',
+  ]];
+  for (const [pid, agg] of [...byPartner.entries()].sort((a, b) => b[1].gross - a[1].gross)) {
+    values.push([partners.get(pid)?.name || pid, agg.count, eur(agg.gross), eur(agg.commission), agg.last]);
+  }
+  if (!byPartner.size) {
+    values.push(['(nessuna vendita attribuita a partner finora)', 0, eur(0), eur(0), '']);
+  }
+  values.push([`Vendite dirette (senza partner): ${unattributed}`, '', eur(unattributedGross), '', '']);
+  values.push([]);
+  values.push(['Data', 'Codice partner', 'Partner', 'Prodotto', 'Guide', 'Importo', '% provv.', 'Provvigione']);
+  for (const row of detail.sort((a, b) => b[0].localeCompare(a[0]))) values.push(row);
+
+  return values;
+}
+
+function buildLegendValues() {
+  return [
+    ['Voce', 'Spiegazione'],
+    ['Scansioni QR (qr_scan)', 'Prima apertura da QR nella sessione: con ?p= nell\'URL o atterrando sulla landing /p/{slug}. Esiste dal 2026-06-12.'],
+    ['Sessioni attribuite', 'Includono anche ritorni e visite successive entro 30 giorni se il partner resta nel cookie.'],
+    ['Errori checkout (checkout_error)', 'Apertura pagamento fallita (redirect con errore o fetch fallita). Esiste dal 2026-06-12.'],
+    ['Acquisti (GA4)', 'Evento purchase dalla pagina di ringraziamento. Per gli euro fa fede il tab Stripe - Provvigioni.'],
+    ['Stripe - Provvigioni', 'Vendite con payment_status=paid da Stripe. La provvigione usa il commission_rate fotografato nei metadata al momento del checkout (default 25%).'],
+    ['Landing - campagne', 'Record con reporting_mode: landing_only — attribuzioni di landing/campagna, esclusi dai tab QR-only.'],
+    ['⚠ Dati prima del 2026-06-12', 'Scansioni e pagine viste risultano 0 e le vendite partner non sono attribuite: il tracciamento è stato riparato quel giorno. Confronti solo da quella data in poi.'],
+    ['Eventi legacy rimossi dal report', 'qr_landing_viewed, preview_played, checkout_started, purchase_completed: duplicati storici, gli eventi continuano a esistere in GA4.'],
+  ];
+}
+
 async function loadSpreadsheetId(sheets) {
   if (process.env.PARTNER_QR_SPREADSHEET_ID) return process.env.PARTNER_QR_SPREADSHEET_ID;
   try {
@@ -537,8 +642,12 @@ async function ensureSheets(sheets, spreadsheetId) {
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const existing = new Map(spreadsheet.data.sheets.map((sheet) => [sheet.properties.title, sheet.properties.sheetId]));
   const requests = [];
-  for (const title of [dailySheet, generalSheet, productsSheet, totalsSheet, todaySummarySheet, landingOnlySheet]) {
+  for (const title of [todaySummarySheet, stripeSheet, dailySheet, generalSheet, totalsSheet, productsSheet, landingOnlySheet, legendSheet]) {
     if (!existing.has(title)) requests.push({ addSheet: { properties: { title } } });
+  }
+  // Consolidamento 2026-06-12: le copie " - esteso" duplicavano i tab base.
+  for (const [title, sheetId] of existing.entries()) {
+    if (/ - esteso$/i.test(title)) requests.push({ deleteSheet: { sheetId } });
   }
   if (requests.length) await sheets.spreadsheets.batchUpdate({ spreadsheetId, requestBody: { requests } });
   const updated = await sheets.spreadsheets.get({ spreadsheetId });
@@ -562,23 +671,28 @@ async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, g
   const totalsId = sheetIds.get(totalsSheet);
   const todaySummaryId = sheetIds.get(todaySummarySheet);
   const landingOnlyId = sheetIds.get(landingOnlySheet);
+  const stripeId = sheetIds.get(stripeSheet);
+  const legendId = sheetIds.get(legendSheet);
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const requests = [
     { repeatCell: { range: { sheetId: dailyId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: generalId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: productsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
-    { repeatCell: { range: { sheetId: landingOnlyId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 11 }, backgroundColor: { red: 0.95, green: 0.91, blue: 0.8 }, verticalAlignment: 'MIDDLE', wrapStrategy: 'WRAP' } }, fields: 'userEnteredFormat(textFormat,backgroundColor,verticalAlignment,wrapStrategy)' } },
-    { repeatCell: { range: { sheetId: landingOnlyId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
-    { repeatCell: { range: { sheetId: totalsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 11 }, backgroundColor: { red: 0.99, green: 0.95, blue: 0.8 }, verticalAlignment: 'MIDDLE', wrapStrategy: 'WRAP' } }, fields: 'userEnteredFormat(textFormat,backgroundColor,verticalAlignment,wrapStrategy)' } },
-    { repeatCell: { range: { sheetId: totalsId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: landingOnlyId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: totalsId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: todaySummaryId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 12 }, backgroundColor: { red: 0.99, green: 0.95, blue: 0.8 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: todaySummaryId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: stripeId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.85, green: 0.94, blue: 0.86 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: legendId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { updateSheetProperties: { properties: { sheetId: dailyId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: generalId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: productsId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
-    { updateSheetProperties: { properties: { sheetId: landingOnlyId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
-    { updateSheetProperties: { properties: { sheetId: totalsId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
+    { updateSheetProperties: { properties: { sheetId: landingOnlyId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
+    { updateSheetProperties: { properties: { sheetId: totalsId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: todaySummaryId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
+    { updateSheetProperties: { properties: { sheetId: stripeId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
+    { autoResizeDimensions: { dimensions: { sheetId: stripeId, dimension: 'COLUMNS', startIndex: 0, endIndex: 8 } } },
+    { autoResizeDimensions: { dimensions: { sheetId: legendId, dimension: 'COLUMNS', startIndex: 0, endIndex: 2 } } },
     { autoResizeDimensions: { dimensions: { sheetId: dailyId, dimension: 'COLUMNS', startIndex: 0, endIndex: dailyColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: generalId, dimension: 'COLUMNS', startIndex: 0, endIndex: generalColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: productsId, dimension: 'COLUMNS', startIndex: 0, endIndex: productsColumnCount } } },
@@ -647,6 +761,8 @@ async function main() {
   const totalsValues = buildTotalsValues(qrRecords, qrPartners);
   const todaySummaryValues = buildTodaySummaryValues(qrRecords);
   const landingOnlyValues = buildLandingOnlyValues(landingOnlyRecords);
+  const stripeValues = await buildStripeValues(partners);
+  const legendValues = buildLegendValues();
   const spreadsheetId = await loadSpreadsheetId(sheets);
   const sheetIds = await ensureSheets(sheets, spreadsheetId);
 
@@ -656,6 +772,8 @@ async function main() {
   await writeSheet(sheets, spreadsheetId, totalsSheet, totalsValues);
   await writeSheet(sheets, spreadsheetId, todaySummarySheet, todaySummaryValues);
   await writeSheet(sheets, spreadsheetId, landingOnlySheet, landingOnlyValues);
+  await writeSheet(sheets, spreadsheetId, stripeSheet, stripeValues);
+  await writeSheet(sheets, spreadsheetId, legendSheet, legendValues);
   await formatSheets(
     sheets,
     spreadsheetId,
@@ -663,7 +781,7 @@ async function main() {
     dailyValues[0].length,
     generalValues[0].length,
     productValues[0].length,
-    totalsValues[1].length,
+    totalsValues[0].length,
     Math.max(...todaySummaryValues.map((row) => row.length)),
     Math.max(...landingOnlyValues.map((row) => row.length))
   );
