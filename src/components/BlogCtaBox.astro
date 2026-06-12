@@ -128,6 +128,10 @@ const t = {
       };
 
       const payload: Record<string, unknown> = { product, lang };
+      try {
+        const pid = window.localisPartnerId || localStorage.getItem('lg_partner');
+        if (pid && pid !== '(direct)') payload.partnerId = pid;
+      } catch (e) {}
       if (product === 'single')           { payload.guideSlug = guideSlug; payload.selectedSlugs = guideSlug ? [guideSlug] : []; }
       else if (product === 'bari-completa')    payload.selectedSlugs = BARI_SLUGS;
       else if (product === 'valle-completa')   payload.selectedSlugs = VALLE_SLUGS;

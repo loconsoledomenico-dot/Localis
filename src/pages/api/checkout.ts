@@ -65,6 +65,7 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     selectedSlugs?: string[];
     guideSlug?: string;
     lang?: string;
+    partnerId?: string;
   };
   try {
     body = await parseCheckoutRequest(request);
@@ -107,7 +108,10 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
       : jsonError(400, err instanceof Error ? err.message : 'Invalid slugs');
   }
 
-  const partner_id_raw = cookies.get('lg_partner')?.value || null;
+  // Cookie oppure payload del client: alcuni browser (Safari restrittivo,
+  // webview degli scanner QR) bloccano i cookie scritti via JS — il payload
+  // fa da paracadute. In entrambi i casi getActivePartner valida lo slug.
+  const partner_id_raw = cookies.get('lg_partner')?.value || body.partnerId || null;
   const siteUrl = (process.env.PUBLIC_SITE_URL || url.origin).replace(/\/$/, '');
 
   let partnerStripeAccount: string | null = null;
@@ -217,6 +221,7 @@ async function parseCheckoutRequest(request: Request): Promise<{
   selectedSlugs?: string[];
   guideSlug?: string;
   lang?: string;
+  partnerId?: string;
 }> {
   const contentType = request.headers.get('content-type') ?? '';
   if (contentType.includes('application/json')) {
@@ -232,6 +237,7 @@ async function parseCheckoutRequest(request: Request): Promise<{
       product: readFormValue(form, 'product'),
       guideSlug: readFormValue(form, 'guideSlug'),
       lang: readFormValue(form, 'lang'),
+      partnerId: readFormValue(form, 'partnerId'),
       selectedSlugs: form.getAll('selectedSlugs').map(String).filter(Boolean),
     };
   }

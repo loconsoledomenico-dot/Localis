@@ -122,6 +122,36 @@ describe('POST /api/checkout', () => {
     expect(sessionParams.payment_intent_data).toBeUndefined();
   });
 
+  // I browser che bloccano i cookie (Safari restrittivo, webview scanner QR)
+  // non mandano lg_partner: il payload del client fa da paracadute.
+  it('attributes the sale from the body partnerId when the cookie is missing', async () => {
+    createSession.mockResolvedValue({ url: 'https://checkout.stripe.com/c/pay/no_cookie' });
+    getActivePartner.mockResolvedValue({
+      data: {
+        slug: 'giardino-lido-sole',
+        stripe_account_id: 'acct_REPLACE_WITH_REAL_CONNECT_ID',
+        commission_rate: 0.25,
+      },
+    });
+
+    const request = new Request('https://localis.guide/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Origin: 'https://localis.guide' },
+      body: JSON.stringify({ product: 'bari-completa', lang: 'it', partnerId: 'giardino-lido-sole' }),
+    });
+
+    await POST({
+      request,
+      cookies: { get: () => undefined },
+      url: new URL(request.url),
+    } as never);
+
+    expect(getActivePartner).toHaveBeenCalledWith('giardino-lido-sole');
+    const sessionParams = createSession.mock.calls[0][0];
+    expect(sessionParams.metadata.partner_id).toBe('giardino-lido-sole');
+    expect(sessionParams.metadata.partner_cookie).toBe('giardino-lido-sole');
+  });
+
   it('adds the Connect transfer only when the partner account is configured', async () => {
     createSession.mockResolvedValue({ url: 'https://checkout.stripe.com/c/pay/connect' });
     getActivePartner.mockResolvedValue({
