@@ -20,8 +20,10 @@ export async function getStaticPaths() {
 type AreaKey = 'bari' | 'valle' | 'gargano';
 
 const AREA_CITY_MAP: Record<AreaKey, Set<string>> = {
-  bari: new Set(['bari', 'polignano']),
-  valle: new Set(['alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano']),
+  bari: new Set(['bari']),
+  // Polignano sta in Valle d'Itria per scelta commerciale (2026-06-13):
+  // a un ospite di Polignano si propongono trulli e borghi, non San Nicola.
+  valle: new Set(['polignano', 'alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano']),
   gargano: new Set(['gargano', 'vieste', 'rodi-garganico', 'peschici', 'vico-del-gargano', 'manfredonia', 'isole-tremiti']),
 };
 
