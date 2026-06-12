@@ -279,7 +279,8 @@ export const prerender = true;
     <h2>Locandina partner A5 — Localis (bilingue IT+EN)</h2>
     <p>
       Personalizza via query string:
-      <code>?p=slug-partner&amp;name=Nome+Partner</code>
+      <code>?p=slug-partner&amp;name=Nome+Partner&amp;zona=bari|gargano|valle-d-itria|matera</code><br/>
+      Il QR atterra sulla pagina di zona (trailer subito ascoltabile).
     </p>
     <p>
       Per stampare: <strong>Ctrl/Cmd+P</strong> → "Salva come PDF" → manda al tipografo
@@ -289,16 +290,16 @@ export const prerender = true;
   </div>
 
   <div class="poster" data-poster>
-    <!-- Headline IT -->
-    <p class="poster-headline-it">
-      Puoi attraversare Bari…<br />
-      <em>oppure capirla davvero.</em>
+    <!-- Headline IT (gancio di zona, iniettato dallo script) -->
+    <p class="poster-headline-it" data-hook-it>
+      San Nicola sta a Bari per un furto.<br />
+      <em>Te lo racconta chi ci vive.</em>
     </p>
 
     <!-- Headline EN -->
-    <p class="poster-headline-en">
-      You can walk through Bari…<br />
-      <em>or actually understand it.</em>
+    <p class="poster-headline-en" data-hook-en>
+      St. Nicholas is in Bari because of a theft.<br />
+      <em>True story, told by a local.</em>
     </p>
 
     <!-- QR with Localis logo overlay -->
@@ -315,18 +316,18 @@ export const prerender = true;
       <span class="poster-instructions-en">Listen while you walk 🎧</span>
     </div>
 
-    <!-- Scan invite bilingue -->
+    <!-- Scan invite bilingue: il gratis comanda -->
     <p class="poster-scan">
-      <span class="flag">🇮🇹 🇬🇧</span> &nbsp; Scansiona e parti &nbsp;·&nbsp; Scan &amp; start
+      <span class="flag">🇮🇹 🇬🇧 🇩🇪</span> &nbsp; Inquadra e ascolta 1 minuto gratis &nbsp;·&nbsp; Scan &amp; listen — first minute free
     </p>
 
     <!-- Micro-claims -->
     <div class="poster-claims">
-      <span>20 min · 20 min</span>
-      <span class="poster-claims-sep">·</span>
       <span>niente app · no app</span>
       <span class="poster-claims-sep">·</span>
-      <span>€4,99</span>
+      <span>niente email · no email</span>
+      <span class="poster-claims-sep">·</span>
+      <span>€4,99 solo se ti conquista · only if it wins you over</span>
     </div>
 
     <!-- Footer -->
@@ -348,16 +349,40 @@ export const prerender = true;
       const targetOverride = params.get('target');
       const campaign = params.get('campaign') || '';
       const content = params.get('content') || 'poster';
+      const zona = params.get('zona') || 'bari';
 
-      // QR target URL — preferisce /p/<slug> se partner attivo, altrimenti homepage
+      // Ganci per zona: fatti verificati dalle guide. Il QR atterra sulla
+      // pagina di zona col trailer, non sulla home.
+      const ZONE = {
+        'bari': {
+          hookIt: 'San Nicola sta a Bari per un furto.<br /><em>Te lo racconta chi ci vive.</em>',
+          hookEn: 'St. Nicholas is in Bari because of a theft.<br /><em>True story, told by a local.</em>',
+          path: '/bari/',
+        },
+        'gargano': {
+          hookIt: 'I trabucchi pescano senza mai uscire in mare.<br /><em>Te lo racconta chi ci è nato.</em>',
+          hookEn: 'The trabucchi fish without ever going to sea.<br /><em>A local tells you how.</em>',
+          path: '/gargano/',
+        },
+        'valle-d-itria': {
+          hookIt: 'Un trullo sta in piedi senza una goccia di malta.<br /><em>Te lo racconta chi ci vive.</em>',
+          hookEn: 'A trullo stands without a single drop of mortar.<br /><em>A local tells you why.</em>',
+          path: '/valle-d-itria/',
+        },
+        'matera': {
+          hookIt: 'Da "vergogna d\'Italia" a patrimonio dell\'umanità.<br /><em>Te lo racconta chi la ama.</em>',
+          hookEn: 'From "the shame of Italy" to World Heritage.<br /><em>Told by someone who loves it.</em>',
+          path: '/matera/',
+        },
+      };
+      const zone = ZONE[zona] || ZONE['bari'];
+      document.querySelector('[data-hook-it]').innerHTML = zone.hookIt;
+      document.querySelector('[data-hook-en]').innerHTML = zone.hookEn;
+
       function buildQrUrl() {
         let url;
         try {
-          url = new URL(
-            targetOverride || (p
-              ? 'https://localis.guide/'
-              : 'https://localis.guide/')
-          );
+          url = new URL(targetOverride || ('https://localis.guide' + zone.path));
         } catch (e) {
           url = new URL('https://localis.guide/');
         }

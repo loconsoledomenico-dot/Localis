@@ -87,4 +87,70 @@ describe('POST /api/checkout', () => {
       url: 'https://checkout.stripe.com/c/pay/json_mode',
     });
   });
+
+  // Regressione 2026-06-11: l'attribuzione finiva nei metadata SOLO se il
+  // partner aveva Stripe Connect configurato — con i placeholder
+  // "acct_REPLACE..." ogni vendita partner risultava senza partner_id.
+  it('attributes the sale to the partner even without a configured Connect account', async () => {
+    createSession.mockResolvedValue({ url: 'https://checkout.stripe.com/c/pay/attributed' });
+    getActivePartner.mockResolvedValue({
+      data: {
+        slug: 'london-bar-bb',
+        stripe_account_id: 'acct_REPLACE_WITH_REAL_CONNECT_ID',
+        commission_rate: 0.25,
+      },
+    });
+
+    const request = new Request('https://localis.guide/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Origin: 'https://localis.guide' },
+      body: JSON.stringify({ product: 'bari-completa', lang: 'it' }),
+    });
+
+    const response = await POST({
+      request,
+      cookies: { get: (name: string) => (name === 'lg_partner' ? { value: 'london-bar-bb' } : undefined) },
+      url: new URL(request.url),
+    } as never);
+
+    expect(response.status).toBe(200);
+    const sessionParams = createSession.mock.calls[0][0];
+    expect(sessionParams.metadata.partner_id).toBe('london-bar-bb');
+    expect(sessionParams.metadata.partner_commission_rate).toBe('0.25');
+    expect(sessionParams.metadata.partner_cookie).toBe('london-bar-bb');
+    // Senza Connect configurato niente transfer automatico (payout manuale).
+    expect(sessionParams.payment_intent_data).toBeUndefined();
+  });
+
+  it('adds the Connect transfer only when the partner account is configured', async () => {
+    createSession.mockResolvedValue({ url: 'https://checkout.stripe.com/c/pay/connect' });
+    getActivePartner.mockResolvedValue({
+      data: {
+        slug: 'infopoint-bari',
+        stripe_account_id: 'acct_1RealConnectAccount',
+        commission_rate: 0.25,
+      },
+    });
+
+    const request = new Request('https://localis.guide/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Origin: 'https://localis.guide' },
+      body: JSON.stringify({ product: 'bari-completa', lang: 'it' }),
+    });
+
+    await POST({
+      request,
+      cookies: { get: (name: string) => (name === 'lg_partner' ? { value: 'infopoint-bari' } : undefined) },
+      url: new URL(request.url),
+    } as never);
+
+    const sessionParams = createSession.mock.calls[0][0];
+    expect(sessionParams.metadata.partner_id).toBe('infopoint-bari');
+    expect(sessionParams.payment_intent_data).toEqual({
+      transfer_data: {
+        destination: 'acct_1RealConnectAccount',
+        amount: Math.floor(1999 * 0.25),
+      },
+    });
+  });
 });

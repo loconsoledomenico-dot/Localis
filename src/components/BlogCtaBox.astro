@@ -158,9 +158,12 @@ const t = {
           window.localisTrack('checkout_started', params);
         }
         window.location.assign(data.url);
-      } catch {
+      } catch (err) {
         btn.disabled = false;
         btn.textContent = orig;
+        if (typeof window.localisTrack === 'function') {
+          window.localisTrack('checkout_error', { source: 'blog', product, reason: err instanceof Error ? err.message : 'unknown' });
+        }
         alert(
           lang === 'it' ? 'Impossibile aprire il pagamento. Riprova tra un istante.' :
           lang === 'de' ? 'Checkout konnte nicht geöffnet werden. Bitte versuche es gleich erneut.' :

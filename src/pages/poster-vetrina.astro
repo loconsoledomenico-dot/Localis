@@ -134,21 +134,24 @@ export const prerender = true;
     .poster-headline {
       font-family: 'Spectral', serif;
       font-weight: 400;
-      font-size: 130pt;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
+      font-size: 54pt;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
       color: var(--ink);
-      margin: 0 0 12mm 0;
+      margin: 0 0 10mm 0;
+      text-align: center;
+      max-width: 330mm;
     }
 
     .poster-tagline {
-      font-family: 'Schibsted Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 18pt;
-      letter-spacing: 0.22em;
+      font-family: 'Spectral', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 20pt;
+      letter-spacing: 0.01em;
       color: var(--accent);
-      margin: 0 0 22mm 0;
-      text-transform: uppercase;
+      margin: 0 0 18mm 0;
+      text-align: center;
     }
 
     .poster-qr-frame {
@@ -183,6 +186,16 @@ export const prerender = true;
       font-style: italic;
       font-weight: 400;
       font-size: 16pt;
+      color: var(--ink-muted);
+      text-align: center;
+      margin: 0 0 14mm 0;
+    }
+
+    .poster-derisk {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 13pt;
+      letter-spacing: 0.06em;
       color: var(--ink-muted);
       text-align: center;
       margin: 0 0 14mm 0;
@@ -223,8 +236,9 @@ export const prerender = true;
   <div class="controls">
     <h2>Localis · Locandina vetrina A2</h2>
     <p>
-      URL: <code>?p=slug-partner&amp;name=Nome+Partner</code><br/>
-      Esempio: <code>/poster-vetrina?p=paesaggi&amp;name=Paesaggi</code>
+      URL: <code>?p=slug-partner&amp;name=Nome+Partner&amp;zona=bari|gargano|valle-d-itria|matera</code><br/>
+      Esempio: <code>/poster-vetrina?p=paesaggi&amp;name=Paesaggi&amp;zona=bari</code><br/>
+      Il QR atterra sulla pagina di zona (trailer subito ascoltabile), non sulla home.
     </p>
     <p>
       Stampa: <strong>Ctrl/Cmd+P</strong> → "Salva come PDF" → A2 portrait, no margini.
@@ -261,16 +275,18 @@ export const prerender = true;
       <rect x="263" y="78" width="14" height="14"/>
     </svg>
 
-    <p class="poster-eyebrow">Discover</p>
-    <h1 class="poster-headline">BARI</h1>
-    <p class="poster-tagline">Walk · Listen · Experience</p>
+    <p class="poster-eyebrow">Localis</p>
+    <h1 class="poster-headline" data-hook-en>St. Nicholas is in Bari because of a theft.<br/>True story.</h1>
+    <p class="poster-tagline" data-hook-it>San Nicola sta a Bari per un furto. Te lo racconta chi ci vive.</p>
 
     <div class="poster-qr-frame">
       <img data-qr-img src="" alt="QR code Localis" />
     </div>
 
-    <p class="poster-cta">Scan the QR code · walk through Bari</p>
-    <p class="poster-cta-it">Scansiona, indossa le cuffie, cammina. Bari ti parla.</p>
+    <p class="poster-cta">Scan &amp; listen — first minute free</p>
+    <p class="poster-cta-it">Inquadra e ascolta: 1 minuto gratis</p>
+
+    <p class="poster-derisk">No app · No email · €4,99 a guide, only if it wins you over</p>
 
     <div class="poster-divider"></div>
 
@@ -287,13 +303,38 @@ export const prerender = true;
       const name = params.get('name') || '';
       const campaign = params.get('campaign') || '';
       const content = params.get('content') || 'vetrina';
+      const zona = params.get('zona') || 'bari';
+
+      // Ganci per zona: un fatto verificato dalle guide, mai un "Discover X".
+      // Il QR atterra sulla pagina di zona, dove il trailer parte subito.
+      const ZONE = {
+        'bari': {
+          hookEn: 'St. Nicholas is in Bari<br/>because of a theft. True story.',
+          hookIt: 'San Nicola sta a Bari per un furto. Te lo racconta chi ci vive.',
+          path: '/bari/',
+        },
+        'gargano': {
+          hookEn: 'The trabucchi have fished for centuries —<br/>without ever going to sea.',
+          hookIt: 'I trabucchi pescano da secoli senza mai uscire in mare. Chi te lo spiega meglio di chi ci è nato?',
+          path: '/gargano/',
+        },
+        'valle-d-itria': {
+          hookEn: 'A trullo stands without<br/>a single drop of mortar.',
+          hookIt: 'Un trullo sta in piedi senza una goccia di malta. Te lo racconta chi ci vive.',
+          path: '/valle-d-itria/',
+        },
+        'matera': {
+          hookEn: 'From "the shame of Italy"<br/>to World Heritage.',
+          hookIt: 'Da "vergogna d\'Italia" a patrimonio dell\'umanità. Te lo racconta chi la ama.',
+          path: '/matera/',
+        },
+      };
+      const zone = ZONE[zona] || ZONE['bari'];
+      document.querySelector('[data-hook-en]').innerHTML = zone.hookEn;
+      document.querySelector('[data-hook-it]').textContent = zone.hookIt;
 
       function buildQrUrl() {
-        const url = new URL(
-          p
-            ? 'https://localis.guide/'
-            : 'https://localis.guide/'
-        );
+        const url = new URL('https://localis.guide' + zone.path);
 
         if (p) {
           url.searchParams.set('p', p);

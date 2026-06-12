@@ -116,13 +116,16 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   if (partner_id_raw) {
     const partner = await getActivePartner(partner_id_raw);
     if (partner) {
+      // L'attribuzione della vendita (metadata -> webhook -> registro payout)
+      // NON dipende da Stripe Connect: i partner sono liquidati manualmente.
+      // Connect, se configurato, aggiunge solo il transfer automatico.
+      resolvedPartnerId = partner.data.slug;
+      partnerCommissionRate = partner.data.commission_rate;
       if (isConfiguredConnectAccount(partner.data.stripe_account_id)) {
         partnerStripeAccount = partner.data.stripe_account_id;
-        resolvedPartnerId = partner.data.slug;
-        partnerCommissionRate = partner.data.commission_rate;
-      } else {
-        console.warn(`[checkout] ignoring unconfigured partner account for slug "${partner.data.slug}"`);
       }
+    } else {
+      console.warn(`[checkout] partner cookie "${partner_id_raw}" non corrisponde a un partner attivo — vendita non attribuita`);
     }
   }
 
@@ -158,7 +161,8 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
 
   const sessionParams: Record<string, unknown> = {
     mode: 'payment',
-    payment_method_types: ['card'],
+    // Niente payment_method_types hardcoded: Stripe mostra i metodi attivi
+    // in dashboard (carta + wallet; PayPal/Klarna attivabili senza deploy).
     line_items: [lineItem],
     customer_creation: 'if_required',
     locale: lang,
@@ -169,6 +173,9 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
       product,
       guide_slugs: guide_slugs.join(','),
       partner_id: resolvedPartnerId ?? '',
+      // Snapshot per il calcolo payout e per la diagnosi di cookie non risolti.
+      partner_commission_rate: resolvedPartnerId ? String(partnerCommissionRate) : '',
+      partner_cookie: partner_id_raw ?? '',
       lang,
     },
     success_url: `${siteUrl}/thanks?session_id={CHECKOUT_SESSION_ID}`,
