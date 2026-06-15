@@ -15,6 +15,13 @@ const year = new Date().getFullYear();
       <p class="font-display text-2xl text-ink mb-2xs">
         Loc<em class="text-accent not-italic">alis</em>
       </p>
+      <p class="font-display italic text-lg text-accent mb-2xs leading-snug">
+        {lang === 'it'
+          ? 'Le guide spiegano. Noi raccontiamo.'
+          : lang === 'de'
+            ? 'Reiseführer erklären. Wir erzählen.'
+            : 'Guides explain. We tell the story.'}
+      </p>
       <p class="font-display italic text-base text-ink-muted mb-sm leading-snug">
         {lang === 'it'
           ? "Racconti audio documentati · Scritti in Puglia · Fonti consultabili"
