@@ -68,6 +68,9 @@ marketing/outreach/credentials/*.json
 marketing/outreach/.env
 marketing/exports/
 
+# Generated QR artifacts (print sheets + PNG, local-only)
+private/qr-batches/
+
 # Google service-account credentials
 private/*.json
 private/*service-account*.json
