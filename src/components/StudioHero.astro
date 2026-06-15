@@ -1,0 +1,180 @@
+---
+import { type Lang } from '../lib/i18n';
+import HeroAudioSample from './HeroAudioSample.astro';
+
+export interface Props {
+  lang: Lang;
+  eyebrow: string;
+  headLight: string;
+  headAccent: string;
+  lede: string;
+  trailerSrc: string;
+  imageAlt: string;
+  credit: string;
+}
+
+const {
+  lang,
+  eyebrow,
+  headLight,
+  headAccent,
+  lede,
+  trailerSrc,
+  imageAlt,
+  credit,
+} = Astro.props;
+---
+<section class="studio-hero" aria-label="Localis Studio">
+  <!-- Full-bleed artwork -->
+  <img
+    src="/images/studio/breakfast-in-the-garden.webp"
+    alt={imageAlt}
+    class="studio-hero-bg"
+    width="1980"
+    height="1372"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  />
+
+  <!-- Cream scrim for text legibility on the left -->
+  <div class="studio-hero-scrim" aria-hidden="true"></div>
+
+  <!-- Content anchored left -->
+  <div class="studio-hero-content">
+    <div class="flex items-center gap-sm mb-lg">
+      <span class="block w-7 h-px bg-accent"></span>
+      <span class="text-xs font-semibold tracking-[0.22em] uppercase text-accent">{eyebrow}</span>
+    </div>
+
+    <h1 class="font-display text-ink leading-[1.02] tracking-[-0.016em] m-0 text-[clamp(2.2rem,5.6vw,4rem)]">
+      <span class="block font-light">{headLight}</span>
+      <span class="block italic text-accent mt-2xs">{headAccent}</span>
+    </h1>
+
+    <p class="mt-md font-body text-ink-muted text-lg leading-relaxed max-w-[48ch]">{lede}</p>
+
+    <div class="mt-xl">
+      <HeroAudioSample lang={lang} src={trailerSrc} />
+    </div>
+  </div>
+
+  <!-- Artwork credit -->
+  <span class="studio-hero-credit">{credit}</span>
+</section>
+
+<style>
+  .studio-hero {
+    --max-w: 1280px;
+    --side-gutter: max(var(--spacing-lg), calc((100vw - var(--max-w)) / 2 + var(--spacing-lg)));
+
+    position: relative;
+    width: 100%;
+    min-height: clamp(560px, 82vh, 880px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .studio-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    z-index: 0;
+    filter: saturate(0.98) contrast(1.02);
+  }
+
+  /* Cream fades left→transparent so the artwork's figures stay clear on the right */
+  .studio-hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      to right,
+      oklch(from var(--color-surface) l c h / 0.97) 0%,
+      oklch(from var(--color-surface) l c h / 0.9) 30%,
+      oklch(from var(--color-surface) l c h / 0.55) 55%,
+      oklch(from var(--color-surface) l c h / 0) 75%
+    );
+  }
+
+  @media (max-width: 900px) {
+    .studio-hero-scrim {
+      background: linear-gradient(
+        to bottom,
+        oklch(from var(--color-surface) l c h / 0.95) 0%,
+        oklch(from var(--color-surface) l c h / 0.8) 48%,
+        oklch(from var(--color-surface) l c h / 0.55) 78%,
+        oklch(from var(--color-surface) l c h / 0.42) 100%
+      );
+    }
+    .studio-hero-bg { object-position: 72% center; }
+  }
+
+  .studio-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-inline-start: var(--side-gutter);
+    padding-inline-end: var(--spacing-lg);
+    padding-block: clamp(var(--spacing-2xl), 6vw, var(--spacing-4xl));
+    width: min(100%, calc(var(--side-gutter) + 600px + var(--spacing-lg)));
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(12px);
+    animation: studioHeroIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+  }
+
+  @media (max-width: 900px) {
+    .studio-hero-content {
+      padding-inline-end: var(--side-gutter);
+      width: 100%;
+    }
+  }
+
+  .studio-hero-credit {
+    position: absolute;
+    z-index: 2;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-surface);
+    background: oklch(15% 0.012 240 / 0.55);
+    padding: 5px 11px;
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    max-width: 80vw;
+  }
+
+  @media (max-width: 900px) {
+    .studio-hero-credit {
+      left: var(--side-gutter);
+      right: auto;
+      bottom: var(--spacing-sm);
+    }
+  }
+
+  @keyframes studioHeroIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .studio-hero-content {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

@@ -2,7 +2,7 @@
 export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
-import HeroAudioSample from '../../components/HeroAudioSample.astro';
+import StudioHero from '../../components/StudioHero.astro';
 
 const mailto = 'mailto:studio@localis.guide?subject=Localis%20Studio%20%E2%80%94%20kostenloses%20Galerie-Pilotprojekt&body=Galerie%3A%20%0AStadt%3A%20%0AKunstwerk%20zum%20Erz%C3%A4hlen%3A%20%0A';
 
@@ -26,56 +26,15 @@ const reasons = [
   lang="de"
 >
   <!-- HERO -->
-  <section class="max-w-wrap mx-auto px-md sm:px-lg pt-2xl pb-xl lg:pt-3xl">
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,44%)] gap-xl lg:gap-2xl items-center">
-      <div class="max-w-narrow">
-      <Eyebrow class="mb-lg">Localis Studio — für Kunstgalerien</Eyebrow>
-      <h1 class="font-display text-ink leading-[1.04] tracking-[-0.014em] text-[clamp(2.2rem,6vw,3.8rem)] mb-lg">
-        <span class="font-light">Jedes Werk hat eine Geschichte.</span>
-        <span class="block italic text-accent mt-2xs">Mit einem QR bekommt sie eine Stimme.</span>
-      </h1>
-      <p class="font-body text-lg text-ink-muted leading-relaxed max-w-[54ch] mb-md">
-        Wir geben deinen Werken in fünf Sprachen eine Stimme. Besucher scannen den QR-Code
-        neben dem Bild und hören, wer der Künstler ist, was das Werk erzählt, warum es zählt —
-        dort, wo ein Experte nicht immer anwesend sein kann.
-      </p>
-      <p class="font-body text-sm text-ink-subtle mb-xl">
-        Text, Stimme und Tonregie von uns. Du wählst die Werke.
-      </p>
-
-      <div class="flex flex-col sm:flex-row sm:items-center gap-md">
-        <a
-          href="#pilot"
-          class="inline-flex items-center justify-center gap-xs px-xl py-md rounded-md font-semibold text-sm bg-ink text-surface hover:-translate-y-[1px] transition-transform duration-fast no-underline min-h-[48px]"
-        >
-          Kostenloses Pilotprojekt anfragen
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <HeroAudioSample lang="de" src="/audio/trailers/studio-denittis-de.mp3" />
-      </div>
-      </div>
-
-      <figure class="m-0">
-        <div class="overflow-hidden rounded-lg border border-border shadow-elev bg-surface-elev">
-          <img
-            src="/images/studio/breakfast-in-the-garden.webp"
-            alt="Giuseppe De Nittis, Frühstück im Garten (1883): seine Frau Léontine und Sohn Jacques am Tisch im Garten"
-            width="1980"
-            height="1372"
-            class="w-full h-auto block"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-        <figcaption class="mt-sm flex items-start gap-sm">
-          <span class="block w-7 h-px bg-border flex-shrink-0 mt-[10px]"></span>
-          <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[40ch]">
-            Giuseppe De Nittis, Frühstück im Garten (1883) · Pinacoteca De Nittis, Barletta
-          </span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+  <StudioHero
+    lang="de"
+    eyebrow="Localis Studio — für Kunstgalerien"
+    headLight="Jedes Werk hat eine Geschichte."
+    headAccent="Mit einem QR bekommt sie eine Stimme."
+    lede="Wir geben deinen Werken in fünf Sprachen eine Stimme. Besucher scannen den QR-Code neben dem Bild und hören, wer der Künstler ist, was das Werk erzählt, warum es zählt — dort, wo ein Experte nicht immer anwesend sein kann."    trailerSrc="/audio/trailers/studio-denittis-de.mp3"
+    imageAlt="Giuseppe De Nittis, Frühstück im Garten (1883): seine Frau Léontine und Sohn Jacques am Tisch im Garten"
+    credit="Giuseppe De Nittis · Frühstück im Garten · 1883"
+  />
 
   <!-- DER PUNKT -->
   <section class="border-t border-border bg-surface-deep">
