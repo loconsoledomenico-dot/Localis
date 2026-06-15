@@ -181,6 +181,8 @@ const blog = defineCollection({
     author_bio: z.string().optional(),
     author_url: z.string().optional(),
     editorial_note: z.string().optional(),
+    // Categoria per eyebrow (es. "Approfondimento storico", "Itinerario", "Guida pratica", "Cibo e tradizioni")
+    category: z.string().default('Approfondimento storico'),
     // Guida audio collegata (per il box CTA)
     guide_slug: z.string(),          // es. "bari-vecchia"
     guide_title: z.string(),         // es. "Bari Vecchia — Dentro la Città"
