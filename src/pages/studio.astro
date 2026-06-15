@@ -1,0 +1,237 @@
+---
+export const prerender = true;
+import Layout from '../components/Layout.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import HeroAudioSample from '../components/HeroAudioSample.astro';
+
+const mailto = 'mailto:studio@localis.guide?subject=Localis%20Studio%20%E2%80%94%20pilota%20gratuito%20galleria&body=Galleria%3A%20%0ACitt%C3%A0%3A%20%0AOpera%20da%20raccontare%3A%20%0A';
+
+const steps = [
+  { n: '1', title: 'Scegli le opere', body: 'Una selezione, una mostra o l’intera collezione. Decidi tu il perimetro.' },
+  { n: '2', title: 'Tu il materiale, noi il racconto', body: 'Ci dai le informazioni su autore e opera — ti diciamo noi cosa serve. Come scriverle e narrarle lo decidiamo noi: copione, voce, regia. In cinque lingue.' },
+  { n: '3', title: 'Il QR accanto all’opera', body: 'Una targhetta essenziale al fianco del quadro. Niente app, niente download.' },
+  { n: '4', title: 'Il visitatore ascolta', body: 'Inquadra il QR e parte il racconto, dal suo telefono. Quando vuole, quante volte vuole.' },
+];
+
+const reasons = [
+  { h: 'Alza il valore percepito', p: 'Un’opera raccontata non è più un quadro su un muro: è una storia che vale di più.' },
+  { h: 'Racconta l’autore quando tu non ci sei', p: 'La voce lavora a sala piena, nei giorni di punta, mentre segui un altro cliente.' },
+  { h: 'Una sola vendita ripaga tutto', p: 'Il collezionista che capisce l’opera è il collezionista che la compra.' },
+  { h: 'Cresce con la galleria', p: 'Cambia la mostra? Cambia la voce. Ogni allestimento è un nuovo racconto.' },
+];
+---
+<Layout
+  title="Localis Studio · audioguide su QR per gallerie d'arte"
+  description="Diamo voce alle tue opere in cinque lingue. Il visitatore inquadra il QR accanto al quadro e ascolta l'autore e l'opera — lì dove un esperto non può essere sempre presente."
+  lang="it"
+>
+  <!-- HERO -->
+  <section class="max-w-wrap mx-auto px-md sm:px-lg pt-2xl pb-xl lg:pt-3xl">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,44%)] gap-xl lg:gap-2xl items-center">
+      <div class="max-w-narrow">
+      <Eyebrow class="mb-lg">Localis Studio — per gallerie d'arte</Eyebrow>
+      <h1 class="font-display text-ink leading-[1.04] tracking-[-0.014em] text-[clamp(2.3rem,6vw,4rem)] mb-lg">
+        <span class="font-light">Ogni opera ha una storia.</span>
+        <span class="block italic text-accent mt-2xs">Con un QR, prende voce.</span>
+      </h1>
+      <p class="font-body text-lg text-ink-muted leading-relaxed max-w-[54ch] mb-md">
+        Diamo voce alle tue opere in cinque lingue. Il visitatore inquadra il QR accanto al quadro
+        e ascolta chi è l'autore, cosa racconta l'opera, perché conta — lì dove un esperto
+        non può essere sempre presente.
+      </p>
+      <p class="font-body text-sm text-ink-subtle mb-xl">
+        Scrittura, voce e regia a cura nostra. Tu scegli le opere.
+      </p>
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-md">
+        <a
+          href="#pilota"
+          class="inline-flex items-center justify-center gap-xs px-xl py-md rounded-md font-semibold text-sm bg-ink text-surface hover:-translate-y-[1px] transition-transform duration-fast no-underline min-h-[48px]"
+        >
+          Richiedi il pilota gratuito
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <HeroAudioSample lang="it" src="/audio/trailers/studio-denittis-it.mp3" />
+      </div>
+      </div>
+
+      <figure class="m-0">
+        <div class="overflow-hidden rounded-lg border border-border shadow-elev bg-surface-elev">
+          <img
+            src="/images/studio/breakfast-in-the-garden.webp"
+            alt="Giuseppe De Nittis, Colazione in giardino (1883): la moglie Léontine e il figlio Jacques a tavola nel giardino di casa"
+            width="1980"
+            height="1372"
+            class="w-full h-auto block"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <figcaption class="mt-sm flex items-start gap-sm">
+          <span class="block w-7 h-px bg-border flex-shrink-0 mt-[10px]"></span>
+          <span class="font-display italic text-[13px] leading-snug text-ink-muted max-w-[40ch]">
+            Giuseppe De Nittis, Colazione in giardino (1883) · Pinacoteca De Nittis, Barletta
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- IL PUNTO -->
+  <section class="border-t border-border bg-surface-deep">
+    <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
+      <Eyebrow class="mb-md">Il punto</Eyebrow>
+      <h2 class="font-display font-light text-ink leading-[1.1] tracking-[-0.012em] text-[clamp(1.7rem,3.6vw,2.6rem)] max-w-[20ch] mb-xl">
+        Le opere parlano. Ma solo a chi sa già ascoltarle.
+      </h2>
+      <p class="font-body text-base sm:text-lg text-ink-muted leading-relaxed max-w-prose mb-2xl">
+        In galleria il visitatore si ferma davanti a un'opera e trova una targhetta: nome, tecnica, anno.
+        Chi conosce l'autore capisce. Tutti gli altri passano oltre. E quando il collezionista arriva
+        dall'estero, la distanza raddoppia.
+      </p>
+      <ul class="grid grid-cols-1 sm:grid-cols-3 gap-lg list-none p-0 m-0">
+        {[
+          { h: 'Nessun esperto per ogni opera', p: 'Non puoi essere accanto a ogni quadro, in ogni momento, con ogni visitatore.' },
+          { h: 'Visitatori da tutto il mondo', p: 'Una targhetta in italiano non parla a chi viene da Berlino, Londra o Parigi.' },
+          { h: 'Il valore resta implicito', p: 'Senza racconto, l’opera vale ciò che sembra. Con il racconto, vale ciò che è.' },
+        ].map((c) => (
+          <li class="border border-border rounded-lg bg-surface p-lg">
+            <h3 class="font-display text-ink text-xl leading-tight mb-xs">{c.h}</h3>
+            <p class="font-body text-sm text-ink-muted leading-snug">{c.p}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA -->
+  <section class="border-t border-border">
+    <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
+      <div class="text-center mb-2xl">
+        <div class="inline-flex items-center gap-sm mb-md">
+          <span class="block w-7 h-px bg-accent"></span>
+          <span class="text-xs font-semibold tracking-[0.22em] uppercase text-accent">Come funziona</span>
+          <span class="block w-7 h-px bg-accent"></span>
+        </div>
+        <h2 class="font-display font-light text-ink leading-[1.1] text-[clamp(1.7rem,3.6vw,2.6rem)]">
+          Dall'opera alla voce, in quattro passi.
+        </h2>
+      </div>
+      <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg lg:gap-xl list-none p-0 m-0">
+        {steps.map((s) => (
+          <li class="flex flex-col">
+            <span class="font-display italic font-light text-accent text-[clamp(2.4rem,5vw,3.2rem)] leading-none mb-sm select-none">{s.n}</span>
+            <h3 class="font-display text-ink text-xl leading-tight mb-xs">{s.title}</h3>
+            <p class="font-body text-sm text-ink-muted leading-snug max-w-[30ch]">{s.body}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- LO STILE -->
+  <section class="border-t border-border">
+    <div class="max-w-narrow mx-auto px-md sm:px-lg py-2xl lg:py-3xl text-center">
+      <Eyebrow class="mb-md justify-center">Come lo raccontiamo</Eyebrow>
+      <p class="font-display font-light text-ink leading-[1.2] text-[clamp(1.5rem,3vw,2.2rem)] mb-lg">
+        Non l'audioguida neutra di un museo.
+        <span class="block italic text-accent mt-2xs">Un racconto scritto per emozionare.</span>
+      </p>
+      <p class="font-body text-base sm:text-lg text-ink-muted leading-relaxed max-w-[52ch] mx-auto">
+        Ogni parola punta a far nascere un'emozione e a legarla all'opera che il visitatore ha
+        davanti. Perché un'emozione attaccata a un quadro è ciò che accende il desiderio di
+        <span class="text-ink font-medium">portarselo a casa</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- CINQUE LINGUE -->
+  <section class="border-t border-border bg-ink text-surface">
+    <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-xl lg:gap-2xl items-center">
+      <div>
+        <div class="flex items-center gap-sm mb-md">
+          <span class="block w-7 h-px bg-accent-soft"></span>
+          <span class="text-xs font-semibold tracking-[0.22em] uppercase text-accent-soft">Cinque lingue</span>
+        </div>
+        <h2 class="font-display font-light leading-[1.08] text-[clamp(1.8rem,4vw,2.8rem)] mb-md">
+          Chi capisce, <span class="italic">compra.</span>
+        </h2>
+        <p class="font-body text-base sm:text-lg leading-relaxed max-w-[52ch] text-surface/85">
+          Italiano, inglese, tedesco, francese, spagnolo. Il tuo collezionista internazionale
+          non legge una targhetta in italiano: ascolta l'opera nella sua lingua. E un'opera
+          compresa è un'opera che si vende.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-sm lg:flex-col">
+        {['Italiano', 'English', 'Deutsch', 'Français', 'Español'].map((l) => (
+          <span class="inline-flex items-center gap-xs border border-surface/25 rounded-full px-md py-xs font-body text-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent-soft"></span>{l}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ CONVIENE -->
+  <section class="border-t border-border">
+    <div class="max-w-wrap mx-auto px-md sm:px-lg py-2xl lg:py-3xl">
+      <Eyebrow class="mb-md">Perché conviene</Eyebrow>
+      <h2 class="font-display font-light text-ink leading-[1.1] text-[clamp(1.7rem,3.6vw,2.6rem)] max-w-[22ch] mb-2xl">
+        Non vendiamo audio. Vendiamo opere che si raccontano da sole.
+      </h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-lg list-none p-0 m-0">
+        {reasons.map((r) => (
+          <li class="flex items-start gap-md border-t border-border pt-lg">
+            <span class="font-display italic font-light text-accent text-2xl leading-none flex-shrink-0 select-none">✻</span>
+            <div>
+              <h3 class="font-display text-ink text-xl leading-tight mb-xs">{r.h}</h3>
+              <p class="font-body text-sm sm:text-base text-ink-muted leading-snug max-w-[46ch]">{r.p}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- CREDIBILITÀ -->
+  <section class="border-t border-border bg-surface-deep">
+    <div class="max-w-narrow mx-auto px-md sm:px-lg py-2xl lg:py-3xl text-center">
+      <Eyebrow class="mb-md justify-center">Lo facciamo già</Eyebrow>
+      <p class="font-display font-light text-ink leading-[1.3] text-[clamp(1.3rem,2.6vw,1.9rem)] mb-lg">
+        Localis dà voce alla Puglia con racconti documentati e voci vere: ricerca, scrittura, regia del suono.
+        Lo stesso mestiere, al servizio della tua galleria.
+      </p>
+      <a href="/" class="font-body text-sm font-semibold text-ink underline underline-offset-4">
+        Scopri le guide Localis →
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA PILOTA -->
+  <section id="pilota" class="border-t border-border">
+    <div class="max-w-narrow mx-auto px-md sm:px-lg py-2xl lg:py-3xl text-center">
+      <div class="inline-flex items-center gap-sm mb-md">
+        <span class="block w-7 h-px bg-accent"></span>
+        <span class="text-xs font-semibold tracking-[0.22em] uppercase text-accent">Il pilota</span>
+        <span class="block w-7 h-px bg-accent"></span>
+      </div>
+      <h2 class="font-display font-light text-ink leading-[1.08] text-[clamp(2rem,4.4vw,3rem)] mb-md">
+        Diamo voce a una tua opera. <span class="italic text-accent">Gratis.</span>
+      </h2>
+      <p class="font-body text-base sm:text-lg text-ink-muted leading-relaxed max-w-[50ch] mx-auto mb-xl">
+        Scegli un'opera della tua galleria. La raccontiamo noi, in italiano e in inglese,
+        con il QR pronto da appendere. Nessun impegno: se ti convince, parliamo del resto.
+      </p>
+      <a
+        href={mailto}
+        class="inline-flex items-center justify-center gap-xs px-xl py-md rounded-md font-semibold text-sm bg-ink text-surface hover:-translate-y-[1px] transition-transform duration-fast no-underline min-h-[48px]"
+      >
+        Richiedi il pilota gratuito
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <p class="font-body text-sm text-ink-subtle mt-md">
+        Oppure scrivici a <a href="mailto:studio@localis.guide" class="text-ink underline underline-offset-4">studio@localis.guide</a>
+      </p>
+    </div>
+  </section>
+</Layout>
