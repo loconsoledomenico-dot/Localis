@@ -25,6 +25,8 @@
     "sheet:sync": "node scripts/partner-qr-sheet-sync.mjs",
     "qr:batch": "node scripts/qr-batch.mjs",
     "qr:assign": "node scripts/qr-assign.mjs",
+    "qr:png": "node scripts/qr-png.mjs",
+    "qr:sheet": "node scripts/qr-tracking-sheet.mjs",
     "test": "vitest --configLoader runner run",
     "test:watch": "vitest --configLoader runner",
     "test:e2e": "playwright test"
