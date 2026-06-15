@@ -42,7 +42,7 @@ load_dotenv(REPO_ROOT / ".env")
 
 def parse_mdx_frontmatter(mdx_path: Path) -> dict:
     """Tiny YAML extractor for the fields we care about (no full YAML parser)."""
-    content = mdx_path.read_text(encoding="utf-8")
+    content = mdx_path.read_text(encoding="utf-8-sig")
     m = re.search(r"^---\n(.*?)\n---", content, re.DOTALL)
     if not m:
         raise SystemExit(f"[ERR] No frontmatter in {mdx_path}")
