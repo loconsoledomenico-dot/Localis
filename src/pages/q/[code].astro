@@ -1,0 +1,61 @@
+---
+export const prerender = true;
+import Layout from '../../components/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+import { getAllCodes, resolveCode } from '../../lib/qr-codes';
+import { getActivePartner } from '../../lib/partners';
+
+export async function getStaticPaths() {
+  const codes = getAllCodes();
+  const paths = [];
+  for (const entry of codes) {
+    const resolved = resolveCode(entry.code);
+    let redirectTo: string | null = null;
+    if (resolved.status === 'assigned' && resolved.partner_slug) {
+      const partner = await getActivePartner(resolved.partner_slug);
+      if (partner) redirectTo = `/p/${resolved.partner_slug}`;
+    }
+    paths.push({ params: { code: entry.code }, props: { redirectTo } });
+  }
+  return paths;
+}
+
+const { redirectTo } = Astro.props as { redirectTo: string | null };
+---
+{redirectTo ? (
+  <html lang="it">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="robots" content="noindex" />
+      <meta http-equiv="refresh" content={`0; url=${redirectTo}`} />
+      <link rel="canonical" href={redirectTo} />
+      <script is:inline define:vars={{ redirectTo }}>location.replace(redirectTo);</script>
+    </head>
+    <body>
+      <p>Reindirizzamento… <a href={redirectTo}>continua qui</a>.</p>
+    </body>
+  </html>
+) : (
+  <Layout
+    title="Benvenuto in Localis"
+    description="Le audioguide narrative della Puglia."
+    lang="it"
+    robots="noindex"
+  >
+    <section class="max-w-wrap mx-auto px-md py-2xl text-center">
+      <Eyebrow class="justify-center mb-md">Benvenuto in Localis</Eyebrow>
+      <h1 class="font-display text-4xl text-ink leading-tight mb-md max-w-prose mx-auto">
+        Le audioguide della Puglia, raccontate da chi ci vive.
+      </h1>
+      <p class="text-lg text-ink-muted max-w-prose mx-auto mb-lg">
+        Scegli una guida e ascolta la storia dei luoghi mentre ci sei.
+      </p>
+      <a
+        href="/guide"
+        class="inline-block rounded-pill bg-accent text-white px-lg py-sm font-medium"
+      >
+        Scopri le guide →
+      </a>
+    </section>
+  </Layout>
+)}
