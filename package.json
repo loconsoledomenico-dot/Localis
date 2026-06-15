@@ -24,6 +24,7 @@
     "sheet:auth": "node scripts/google-oauth.mjs",
     "sheet:sync": "node scripts/partner-qr-sheet-sync.mjs",
     "qr:batch": "node scripts/qr-batch.mjs",
+    "qr:assign": "node scripts/qr-assign.mjs",
     "test": "vitest --configLoader runner run",
     "test:watch": "vitest --configLoader runner",
     "test:e2e": "playwright test"
