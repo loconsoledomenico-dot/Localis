@@ -27,6 +27,7 @@
     "qr:assign": "node scripts/qr-assign.mjs",
     "qr:png": "node scripts/qr-png.mjs",
     "qr:sheet": "node scripts/qr-tracking-sheet.mjs",
+    "gift": "node scripts/gift-access.mjs",
     "test": "vitest --configLoader runner run",
     "test:watch": "vitest --configLoader runner",
     "test:e2e": "playwright test"
