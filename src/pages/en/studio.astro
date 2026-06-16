@@ -3,6 +3,7 @@ export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
 import StudioHero from '../../components/StudioHero.astro';
+import StudioTracking from '../../components/StudioTracking.astro';
 
 const mailto = 'mailto:studio@localis.guide?subject=Localis%20Studio%20%E2%80%94%20free%20gallery%20pilot&body=Gallery%3A%20%0ACity%3A%20%0AArtwork%20to%20narrate%3A%20%0A';
 
@@ -160,7 +161,7 @@ const reasons = [
         Localis gives Puglia a voice through documented storytelling and real voices: research, writing,
         sound direction. The same craft, in service of your gallery.
       </p>
-      <a href="/en/" class="font-body text-sm font-semibold text-ink underline underline-offset-4">
+      <a href="/en/" data-cta="guides" class="font-body text-sm font-semibold text-ink underline underline-offset-4">
         Discover the Localis guides →
       </a>
     </div>
@@ -183,14 +184,17 @@ const reasons = [
       </p>
       <a
         href={mailto}
+        data-cta="pilot"
         class="inline-flex items-center justify-center gap-xs px-xl py-md rounded-md font-semibold text-sm bg-ink text-surface hover:-translate-y-[1px] transition-transform duration-fast no-underline min-h-[48px]"
       >
         Request a free pilot
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
       <p class="font-body text-sm text-ink-subtle mt-md">
-        Or write to us at <a href="mailto:studio@localis.guide" class="text-ink underline underline-offset-4">studio@localis.guide</a>
+        Or write to us at <a href="mailto:studio@localis.guide" data-cta="email" class="text-ink underline underline-offset-4">studio@localis.guide</a>
       </p>
     </div>
   </section>
+
+  <StudioTracking lang="en" />
 </Layout>

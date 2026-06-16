@@ -1,0 +1,54 @@
+---
+// Tracciamento eventi del funnel sulla landing Localis Studio (gallerie d'arte).
+// Usa l'helper universale window.localisTrack (GA4 + PostHog + Plausible), gia'
+// consent-gated in Analytics.astro. Il play del trailer e' tracciato a parte
+// (HeroAudioSample → audio-analytics.ts, evento audio context 'hero').
+//
+// Eventi emessi:
+//   studio_cta_click   { cta: 'pilot' | 'email' | 'guides', lang, page }
+//   studio_pilot_view  { lang, page }   — la sezione "pilota" entra nel viewport
+import { type Lang } from '../lib/i18n';
+export interface Props { lang: Lang; }
+const { lang } = Astro.props;
+---
+<script is:inline define:vars={{ lang }}>
+  (function () {
+    function track(name, params) {
+      params = params || {};
+      params.lang = lang;
+      params.page = location.pathname;
+      try { if (typeof window.localisTrack === 'function') window.localisTrack(name, params); } catch (e) {}
+    }
+
+    function init() {
+      // Click sui CTA marcati con data-cta
+      document.querySelectorAll('[data-cta]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          track('studio_cta_click', { cta: el.getAttribute('data-cta') });
+        });
+      });
+
+      // Engagement: il CTA pilota entra nel viewport (una volta sola).
+      // Osserviamo il pulsante stesso, robusto a id di sezione diversi per lingua.
+      var pilot = document.querySelector('[data-cta="pilot"]');
+      if (pilot && 'IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) {
+              track('studio_pilot_view', {});
+              io.disconnect();
+              break;
+            }
+          }
+        }, { threshold: 0.4 });
+        io.observe(pilot);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
