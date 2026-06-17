@@ -71,28 +71,43 @@ const SLUG_MAP: Record<string, { en: string; de: string }> = {
 };
 
 /**
+ * Append a trailing slash to keep hreflang URLs aligned with the canonical
+ * (Netlify pretty-URLs 301s every path to its trailing-slash form). The root
+ * path stays as-is.
+ */
+function withTrailingSlash(path: string): string {
+  if (path === '/') return path;
+  return path.endsWith('/') ? path : `${path}/`;
+}
+
+/**
  * Returns URLs for all 3 language versions of the current path.
+ * Output URLs carry a trailing slash so they match the page canonical.
  */
 export function allLangUrls(currentPath: string): Record<Lang, string> {
   const stripped = stripLocalePrefix(currentPath).replace(/\/$/, '') || '/';
   const map = SLUG_MAP[stripped];
-  if (map) {
-    return {
-      it: stripped === '/method' || stripped === '/methode'
-        ? '/metodo'
-        : stripped === '/cruise' || stripped === '/kreuzfahrt'
-          ? '/crocieristi'
-          : stripped === '/become-a-partner' || stripped === '/partner-werden'
-            ? '/diventa-partner'
-            : stripped,
-      en: `/en${map.en}`,
-      de: `/de${map.de}`,
-    };
-  }
+  const raw: Record<Lang, string> = map
+    ? {
+        it: stripped === '/method' || stripped === '/methode'
+          ? '/metodo'
+          : stripped === '/cruise' || stripped === '/kreuzfahrt'
+            ? '/crocieristi'
+            : stripped === '/become-a-partner' || stripped === '/partner-werden'
+              ? '/diventa-partner'
+              : stripped,
+        en: `/en${map.en}`,
+        de: `/de${map.de}`,
+      }
+    : {
+        it: localizedHref(stripped, 'it'),
+        en: localizedHref(stripped, 'en'),
+        de: localizedHref(stripped, 'de'),
+      };
   return {
-    it: localizedHref(stripped, 'it'),
-    en: localizedHref(stripped, 'en'),
-    de: localizedHref(stripped, 'de'),
+    it: withTrailingSlash(raw.it),
+    en: withTrailingSlash(raw.en),
+    de: withTrailingSlash(raw.de),
   };
 }
 
