@@ -115,7 +115,7 @@ ld.push(breadcrumbListLD([
   { name: data.title_it, url: `https://localis.guide/guide/${data.slug}/` },
 ]));
 ---
-<Layout title={`Audioguida ${data.title_it} | Localis`} description={data.seo.description_it} lang="it" ogImage={`/og/og-${data.slug}.jpg`}>
+<Layout title={`${data.title_it} · racconto audio | Localis`} description={data.seo.description_it} lang="it" ogImage={`/og/og-${data.slug}.jpg`}>
   <StructuredData data={ld} />
   {destination ? <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: destination.label, href: destination.href }, { label: data.title_it }]} /> : <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: data.title_it }]} />}
   <article class="max-w-wrap mx-auto px-md py-2xl grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-2xl items-start">
