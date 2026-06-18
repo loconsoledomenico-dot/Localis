@@ -57,6 +57,9 @@ export function renderAccessEmailIt(data: AccessEmailData): { subject: string; h
       Domande? Rispondi a questa email — leggiamo tutto.
     </p>
 
+    <p style="font-size: 12px; line-height: 1.6; color: #8A8478; margin: 0 0 16px 0;">
+      Conferma d’ordine: all’acquisto hai chiesto l’esecuzione immediata della guida digitale e preso atto che il diritto di recesso si estingue con lo sblocco dell’audio (art. 59, lett. o, D.Lgs. 206/2005).
+    </p>
     <p style="font-size: 14px; line-height: 1.6; color: #1C1510; margin: 0;">
       Domenico &amp; Luigi · Localis
     </p>
@@ -84,6 +87,8 @@ Salvalo nei preferiti del browser.
 Se cambi telefono, riapri lo stesso link.
 
 Domande? Rispondi a questa email — leggiamo tutto.
+
+Conferma d'ordine: all'acquisto hai chiesto l'esecuzione immediata della guida digitale e preso atto che il diritto di recesso si estingue con lo sblocco dell'audio (art. 59, lett. o, D.Lgs. 206/2005).
 
 Domenico & Luigi · Localis
 hello@localis.guide

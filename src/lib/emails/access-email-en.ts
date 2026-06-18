@@ -57,6 +57,9 @@ export function renderAccessEmailEn(data: AccessEmailData): { subject: string; h
       Questions? Reply to this email — we read everything.
     </p>
 
+    <p style="font-size: 12px; line-height: 1.6; color: #8A8478; margin: 0 0 16px 0;">
+      Order confirmation: at purchase you requested immediate delivery of the digital guide and acknowledged that your right of withdrawal ends once the audio is unlocked (Art. 16(m), Directive 2011/83/EU).
+    </p>
     <p style="font-size: 14px; line-height: 1.6; color: #1C1510; margin: 0;">
       Domenico &amp; Luigi · Localis
     </p>
@@ -84,6 +87,8 @@ Save it in your browser bookmarks.
 If you change phones, reopen the same link.
 
 Questions? Reply to this email — we read everything.
+
+Order confirmation: at purchase you requested immediate delivery of the digital guide and acknowledged that your right of withdrawal ends once the audio is unlocked (Art. 16(m), Directive 2011/83/EU).
 
 Domenico & Luigi · Localis
 hello@localis.guide

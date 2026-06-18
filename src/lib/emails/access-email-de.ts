@@ -57,6 +57,9 @@ export function renderAccessEmailDe(data: AccessEmailData): { subject: string; h
       Fragen? Antworte einfach auf diese E-Mail.
     </p>
 
+    <p style="font-size: 12px; line-height: 1.6; color: #8A8478; margin: 0 0 16px 0;">
+      Bestellbestätigung: Beim Kauf hast du die sofortige Bereitstellung des digitalen Guides verlangt und zur Kenntnis genommen, dass dein Widerrufsrecht mit dem Freischalten des Audios erlischt (Art. 16 m, Richtlinie 2011/83/EU).
+    </p>
     <p style="font-size: 14px; line-height: 1.6; color: #1C1510; margin: 0;">
       Domenico &amp; Luigi - Localis
     </p>
@@ -84,6 +87,8 @@ Speichere den Link in deinen Browser-Lesezeichen.
 Wenn du das Smartphone wechselst, öffne denselben Link erneut.
 
 Fragen? Antworte einfach auf diese E-Mail.
+
+Bestellbestätigung: Beim Kauf hast du die sofortige Bereitstellung des digitalen Guides verlangt und zur Kenntnis genommen, dass dein Widerrufsrecht mit dem Freischalten des Audios erlischt (Art. 16 m, Richtlinie 2011/83/EU).
 
 Domenico & Luigi - Localis
 hello@localis.guide

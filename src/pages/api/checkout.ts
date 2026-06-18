@@ -40,6 +40,17 @@ function normalizeLang(value: string | undefined): Lang {
   return 'it';
 }
 
+// Consenso art. 59 lett. o Cod. Consumo (= art. 16 m dir. 2011/83/UE): per i
+// contenuti digitali senza supporto fisico il recesso si estingue solo se il
+// consumatore (a) chiede l'esecuzione immediata e (b) prende atto della perdita
+// del recesso. Lo agganciamo alla casella ToS già obbligatoria: Stripe registra
+// consent.terms_of_service='accepted' nella sessione = prova su supporto durevole.
+const WAIVER_MESSAGE: Record<Lang, string> = {
+  it: 'Spuntando accetto i Termini, chiedo l’esecuzione immediata della guida digitale e prendo atto che, una volta sbloccato l’audio, perdo il diritto di recesso (art. 59, lett. o, D.Lgs. 206/2005).',
+  en: 'By checking this box I accept the Terms, request immediate delivery of the digital guide, and acknowledge that once the audio is unlocked I lose my right of withdrawal (Art. 16(m), Directive 2011/83/EU).',
+  de: 'Mit dem Häkchen akzeptiere ich die AGB, verlange die sofortige Bereitstellung des digitalen Guides und nehme zur Kenntnis, dass mein Widerrufsrecht mit dem Freischalten des Audios erlischt (Art. 16 m, Richtlinie 2011/83/EU).',
+};
+
 function isConfiguredConnectAccount(accountId: string | null | undefined): accountId is string {
   return typeof accountId === 'string' && !accountId.includes('REPLACE_WITH_REAL_CONNECT_ID');
 }
@@ -172,6 +183,9 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     locale: lang,
     automatic_tax: { enabled: true },
     consent_collection: { terms_of_service: 'required' },
+    custom_text: {
+      terms_of_service_acceptance: { message: WAIVER_MESSAGE[lang] },
+    },
     allow_promotion_codes: true,
     metadata: {
       product,
