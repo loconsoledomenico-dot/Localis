@@ -3,6 +3,7 @@ export const prerender = true;
 import Layout from '../components/Layout.astro';
 import Eyebrow from '../components/Eyebrow.astro';
 import PartnerForm from '../components/PartnerForm.astro';
+import HeroAudioSample from '../components/HeroAudioSample.astro';
 ---
 <Layout
   title="Diventa partner · Localis"
@@ -18,6 +19,11 @@ import PartnerForm from '../components/PartnerForm.astro';
       <p class="text-lg text-ink-muted leading-relaxed max-w-prose mb-2xl">
         <strong class="text-ink font-semibold">Per te è gratis</strong> — nessun canone, nessuna app, niente da gestire. Offri ai tuoi ospiti i racconti audio della Puglia: li ascoltano dal telefono scansionando un QR code, senza scaricare nulla. E su ogni acquisto, il 25% è tuo.
       </p>
+
+      <div class="mb-2xl max-w-narrow">
+        <p class="text-sm font-semibold text-ink mb-sm">Senti com'è — è questo che ascoltano i tuoi ospiti:</p>
+        <HeroAudioSample lang="it" />
+      </div>
 
       <figure class="mb-2xl max-w-narrow w-1/2">
         <img
