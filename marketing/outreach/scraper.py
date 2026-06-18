@@ -1,18 +1,47 @@
 import re
 import datetime
 from firecrawl import FirecrawlApp
+
+try:  # SDK v2 espone ScrapeOptions dal package
+    from firecrawl import ScrapeOptions
+except Exception:  # fallback per layout interni diversi
+    from firecrawl.v2.types import ScrapeOptions
+
 from config import FIRECRAWL_API_KEY, EMAIL_EXCLUDE_PATTERNS
 
 EMAIL_REGEX = re.compile(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}")
 
+# Email spazzatura oltre ai pattern di config (asset, tracking, esempi)
+EMAIL_EXCLUDE_EXTRA = ["sentry", "wixpress", "example.com", ".png", ".jpg", ".jpeg", ".webp", "@2x"]
+
+# Domini aggregatori: non sono il contatto diretto del locale
+AGGREGATORS = (
+    "booking.com", "tripadvisor", "thehotelguru", "expedia", "hotels.com",
+    "airbnb", "trivago", "agoda", "hotel.info", "holidaycheck", "lastminute",
+    "edreams", "kayak", "hotelbb.com", "hotel-bb.com",
+)
+
+# Query per tipo: termini che pescano il locale singolo, non le directory
+TIPO_QUERY = {
+    "bb": "b&b masseria agriturismo {city} Puglia contatti email",
+    "hotel": "hotel {city} Puglia contatti email",
+    "bar": "bar caffe {city} Puglia contatti email",
+    "ristorante": "ristorante {city} Puglia contatti email",
+    "infopoint": "info point turismo {city} Puglia email",
+    "negozio": "negozio prodotti tipici {city} Puglia contatti email",
+}
+
 
 def estrai_email(testo: str) -> list[str]:
-    trovate = EMAIL_REGEX.findall(testo)
+    trovate = EMAIL_REGEX.findall(testo or "")
     risultati = []
     for email in trovate:
-        escludi = any(re.search(p, email) for p in EMAIL_EXCLUDE_PATTERNS)
-        if not escludi:
-            risultati.append(email.lower())
+        el = email.lower()
+        if any(re.search(p, el) for p in EMAIL_EXCLUDE_PATTERNS):
+            continue
+        if any(b in el for b in EMAIL_EXCLUDE_EXTRA):
+            continue
+        risultati.append(el)
     return list(set(risultati))
 
 
@@ -28,32 +57,41 @@ def deduplicazione_per_dominio(emails: list[str]) -> list[str]:
 
 
 def build_query(tipo: str, city: str) -> str:
-    return f'"{tipo}" "{city}" puglia email contatti sito'
+    template = TIPO_QUERY.get(tipo, "{tipo} {city} Puglia contatti email")
+    return template.format(tipo=tipo, city=city)
 
 
-def scrape_candidati(city: str, tipi: list[str]) -> list[dict]:
+def scrape_candidati(city: str, tipi: list[str], limit: int = 8) -> list[dict]:
     app = FirecrawlApp(api_key=FIRECRAWL_API_KEY)
     candidati = []
     id_counter = 1
+    visti_email = set()
 
     for tipo in tipi:
         query = build_query(tipo, city)
         print(f"  Cerco: {query}")
         try:
-            risultati = app.search(query, limit=10)
+            # scrape_options serve a ottenere il markdown della pagina:
+            # senza, la search restituisce solo titolo/url/descrizione (niente email).
+            risposta = app.search(query, limit=limit, scrape_options=ScrapeOptions(formats=["markdown"]))
         except Exception as e:
-            print(f"  Errore Firecrawl: {e}")
+            print(f"  Errore Firecrawl: {type(e).__name__}: {e}")
             continue
 
-        for r in risultati:
-            url = r.get("url", "")
-            markdown = r.get("markdown", "") or r.get("content", "")
-            emails = estrai_email(markdown)
-            emails = deduplicazione_per_dominio(emails)
+        for r in (getattr(risposta, "web", None) or []):
+            url = getattr(r, "url", "") or ""
+            if any(a in url for a in AGGREGATORS):
+                continue
 
-            nome = r.get("title", url)[:80]
+            markdown = getattr(r, "markdown", "") or getattr(r, "description", "") or ""
+            emails = deduplicazione_per_dominio(estrai_email(markdown))
+
+            nome = (getattr(r, "title", "") or url)[:80]
 
             for email in emails:
+                if email in visti_email:
+                    continue
+                visti_email.add(email)
                 candidati.append({
                     "id": str(id_counter),
                     "nome": nome,
