@@ -46,6 +46,20 @@ import Layout from '../../components/Layout.astro';
         </div>
       </div>
 
+      <div class="mt-md">
+        <button
+          id="play-trailer-btn"
+          class="inline-flex items-center gap-xs text-sm font-semibold text-ink hover:text-accent transition-colors duration-fast"
+        >
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="shrink-0">
+            <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+            <polygon points="13,10 23,16 13,22" fill="currentColor"/>
+          </svg>
+          Listen to a 60-second preview
+        </button>
+        <audio id="trailer-audio" src="/audio/trailers/bari/bari-vecchia-trailer-en.mp3" class="hidden" preload="none"></audio>
+      </div>
+
       <div class="flex flex-col sm:flex-row gap-sm mt-lg">
         <button
           id="vesta-checkout-btn"
@@ -239,6 +253,22 @@ import Layout from '../../components/Layout.astro';
 
 <script>
   import { submitCheckoutRedirect } from '../../lib/checkout-client';
+
+  const playBtn = document.getElementById('play-trailer-btn') as HTMLButtonElement | null;
+  const audio = document.getElementById('trailer-audio') as HTMLAudioElement | null;
+  if (playBtn && audio) {
+    const PLAY_HTML = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="shrink-0"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5" opacity="0.3"/><polygon points="13,10 23,16 13,22" fill="currentColor"/></svg> Listen to a 60-second preview`;
+    const PAUSE_HTML = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="shrink-0"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5" opacity="0.3"/><rect x="11" y="10" width="4" height="12" fill="currentColor"/><rect x="17" y="10" width="4" height="12" fill="currentColor"/></svg> Pause`;
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().then(() => { playBtn.innerHTML = PAUSE_HTML; }).catch(() => {});
+      } else {
+        audio.pause();
+        playBtn.innerHTML = PLAY_HTML;
+      }
+    });
+    audio.addEventListener('ended', () => { playBtn.innerHTML = PLAY_HTML; });
+  }
 
   document.querySelectorAll<HTMLButtonElement>('#vesta-checkout-btn, .vesta-cta-btn').forEach((btn) => {
     btn.addEventListener('click', async () => {
