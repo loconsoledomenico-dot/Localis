@@ -4,7 +4,7 @@
 
 =====
 CAP. 1 — INTRO: THE TOWN ON THE RIDGE
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the car, approaching Cisternino)*
 
 You're climbing. <break time="1.5s"/>
@@ -21,7 +21,7 @@ What you find here is the town as it was built — <break time="0.5s"/> and as i
 
 =====
 CAP. 2 — ONE OF ITALY'S MOST BEAUTIFUL VILLAGES
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the car or just parked)*
 
 Cisternino is listed among the Borghi più belli d'Italia — the most beautiful villages in Italy. <break time="1s"/>
@@ -36,7 +36,7 @@ Part of what makes Cisternino special is this: when you step out of the car park
 
 =====
 CAP. 3 — THE HISTORIC CENTRE: LANES, STAIRCASES, FLOWERS
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(on foot, entering the historic centre)*
 
 You're in the historic centre now. <break time="1.2s"/>
@@ -53,7 +53,7 @@ Don't rush. <break time="0.8s"/> This historic centre asks for calm. <break time
 
 =====
 CAP. 4 — THE ORIGINS: MESSAPIANS, TOWER, VILLAGE
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the historic centre, near the tower or the main church)*
 
 Cisternino is old. <break time="1.2s"/>
@@ -70,7 +70,7 @@ My grandfather used to bring me here as a boy and make me touch the stones. <bre
 
 =====
 CAP. 5 — THE FORNELLO PRONTO: A TRADITION UNLIKE ANY OTHER
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(near one of the butcher's shops with a grill)*
 
 Now I need to explain why Cisternino is different from every other town. <break time="1.2s"/>
@@ -91,7 +91,7 @@ When you walk into a butcher's with a grill, the first thing that hits you is th
 
 =====
 CAP. 6 — THE BOMBETTE: INGREDIENTS AND COOKING
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(at the butcher's, in front of the grill)*
 
 The bombette. <break time="1.5s"/>
@@ -112,7 +112,7 @@ Eating two or three is perfectly normal. <break time="0.8s"/> With a bit of brea
 
 =====
 CAP. 7 — THE BUTCHER'S SHOP: MICHELE'S DAY
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(at the butcher's or in the lane outside)*
 
 Want to know how my day works? <break time="1.2s"/>
@@ -131,7 +131,7 @@ This is my work. <break time="0.8s"/> No glamour, no social media. <break time="
 
 =====
 CAP. 8 — THE REGULARS: PORTRAITS OF A TOWN
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(at the butcher's or in the lane)*
 
 Work somewhere for thirty years and you come to know the town through your customers. <break time="1.2s"/>
@@ -148,7 +148,7 @@ That face when they get it — that's the part of the job I like most. <break ti
 
 =====
 CAP. 9 — THE WINE: LOCOROTONDO DOC TERRITORY
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the historic centre, maybe near a wine shop)*
 
 Cisternino doesn't have its own DOC wine designation. <break time="0.8s"/> But it's in the right neighbourhood. <break time="1.2s"/>
@@ -165,7 +165,7 @@ I'm no wine expert — I'm a butcher, not a sommelier. <break time="0.8s"/> But 
 
 =====
 CAP. 10 — THE TRULLETTI: TRULLI THAT PEOPLE STILL LIVE IN
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the historic centre or looking out towards the countryside)*
 
 The territory around Cisternino has trulli. <break time="1.2s"/>
@@ -182,7 +182,7 @@ Something people often ask me: what's it like inside a trullo? <break time="0.8s
 
 =====
 CAP. 11 — FESTIVALS AND THE BUTCHER'S CALENDAR
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the square or in front of the butcher's shop)*
 
 Cisternino has its own calendar of events. <break time="1.2s"/>
@@ -197,7 +197,7 @@ My personal calendar divides the year in two: <break time="0.8s"/> June to Septe
 
 =====
 CAP. 12 — CULTURAL LIFE: EVENTS AND A LIVING TOWN
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the historic centre, near the square)*
 
 Cisternino is not just meat and views. <break time="1.2s"/>
@@ -212,7 +212,7 @@ The Tuesday market is the liveliest moment of the week outside of summer. <break
 
 =====
 CAP. 13 — THE TOWN AT NIGHT
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the square in the evening)*
 
 The thing you don't expect about Cisternino is the night. <break time="1.5s"/>
@@ -227,7 +227,7 @@ My advice: if you can stay until evening, do it. <break time="0.8s"/> Cisternino
 
 =====
 CAP. 14 — THE VALLE D'ITRIA FROM CISTERNINO — THE VIEW
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(at the viewpoint or at the edge of the historic centre)*
 
 Come here at sunset. <break time="1.5s"/>
@@ -246,7 +246,7 @@ The sky here changes fast. <break time="0.8s"/> Especially in September — <bre
 
 =====
 CAP. 15 — WHERE TO EAT: BEYOND THE FORNELLO
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the centre, restaurant area)*
 
 The fornello pronto is the main thing. <break time="0.8s"/> I'm not going to tell you otherwise. <break time="1.2s"/>
@@ -261,7 +261,7 @@ One practical tip: <break time="0.8s"/> don't come to Cisternino expecting to ea
 
 =====
 CAP. 16 — CLOSING: MICHELE'S ADVICE
-voice: custom-cisternino
+voice: custom-cisternino-en
 *(in the square or outside the butcher's shop)*
 
 Right. <break time="1.2s"/>
