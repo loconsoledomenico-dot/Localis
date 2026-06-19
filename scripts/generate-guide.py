@@ -85,6 +85,7 @@ VOICE_MAP: dict[str, str] = {
     "custom-alberobello": "G0q9AYE8QsarSbMtaIEu",  # Concetta — massaia Rione Aia Piccola, Alberobello IT
     "custom-locorotondo": "dQgfccebCEXfELidhNvw",  # Francesco — vignaiolo Locorotondo IT
     "custom-cisternino-en": "17bSMslPF4HPyQrGIXAG",  # Michele EN — macellaio fornello pronto, Cisternino
+    "custom-fasano-en": "NNl6r8mD7vthiJatiJt1",  # Andrea EN — parapendio, Valle d'Itria dall'alto, Fasano
 }
 
 # Cost: ElevenLabs Creator plan = $22/mo for 100k chars. ~$0.00022 per char.

@@ -4,7 +4,7 @@
 
 =====
 CAP. 1 — INTRO: CLIMBING TOWARD SELVA
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(In the car, driving up from Fasano toward Selva di Fasano)*
 
@@ -22,7 +22,7 @@ From that day I never stopped. <break time="0.8s"/> And every time I launch from
 
 =====
 CAP. 2 — FASANO AND SELVA: TWO TOWNS, ONE SOUL
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Still in the car, approaching the village)*
 
@@ -40,7 +40,7 @@ The contrast is what makes this territory interesting. <break time="0.8s"/> Don'
 
 =====
 CAP. 3 — SELVA DI FASANO: THE VILLAGE ON THE PLATEAU
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Arriving in Selva, parking — from here on foot)*
 
@@ -58,7 +58,7 @@ You'll find few signs and few notice boards. <break time="0.8s"/> Selva doesn't 
 
 =====
 CAP. 4 — THE FLIGHT: WHAT ANDREA SEES FROM ABOVE
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(At the belvedere, looking out over the Valle d'Itria)*
 
@@ -78,7 +78,7 @@ And then there are the masserie. <break time="0.8s"/> Those you can see very cle
 
 =====
 CAP. 5 — THE MASSERIE: THE REAL ONES AND THE POSTCARD ONES
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Walking through the village)*
 
@@ -96,7 +96,7 @@ When I fly over the masserie in late October, <break time="0.8s"/> I see the whi
 
 =====
 CAP. 6 — THE HISTORY OF FASANO: A CITY OF PASSAGE AND GATEWAY TO EGNATHIA
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Sitting on a low wall, slower pace — historical chapter)*
 
@@ -114,7 +114,7 @@ A history without great dramas and without great glories. <break time="0.8s"/> A
 
 =====
 CAP. 7 — EGNATHIA: THE CITY THE SEA ALMOST SWALLOWED
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(A pause, sitting on a low wall — historical theme)*
 
@@ -132,7 +132,7 @@ The museum is small but well-kept. <break time="0.8s"/> Messapian pottery with i
 
 =====
 CAP. 8 — THE PARK OF MONUMENTAL OLIVE TREES
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Walking through the lanes, then toward the edges of the village)*
 
@@ -150,7 +150,7 @@ In Puglia it is illegal to fell olive trees, <break time="0.5s"/> and the monume
 
 =====
 CAP. 9 — THERMAL CURRENTS AND THE SKY ABOVE THE VALLEY
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(At the belvedere, standing — technical but accessible tone)*
 
@@ -166,7 +166,7 @@ From up here, on a good August day with active thermals, <break time="0.8s"/> I'
 
 =====
 CAP. 10 — DAWN FROM SELVA: THE BEST MOMENT
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Still at the belvedere — more intimate tone)*
 
@@ -188,7 +188,7 @@ If you can, sleep here the night before and set an alarm. <break time="0.8s"/> Y
 
 =====
 CAP. 11 — THE FOOD: BOMBETTE, DAIRY AND WHAT YOU DON'T EXPECT
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Walking toward the centre of the village)*
 
@@ -206,7 +206,7 @@ Look for the caseifici — small dairy workshops — along the main road heading
 
 =====
 CAP. 12 — THE MASSERIE AS AGRITURISMO: THE PHENOMENON SEEN FROM OUTSIDE
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Sitting on a low wall, reflective tone)*
 
@@ -220,7 +220,7 @@ The masserie I prefer, <break time="0.8s"/> the ones that still feel real to me,
 
 =====
 CAP. 13 — SUNSET: THE MOMENT FOR FLYING
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Back at the belvedere, late afternoon)*
 
@@ -238,7 +238,7 @@ I'll never package this for you as a tourist experience. <break time="0.8s"/> Bu
 
 =====
 CAP. 14 — THE COAST: SAVELLETRI AND THE SEA THAT CHANGES FACE
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Sitting at the belvedere, looking east)*
 
@@ -254,7 +254,7 @@ If you have an extra day, <break time="0.8s"/> give the morning to Egnathia and 
 
 =====
 CAP. 15 — WHAT TO DO: THE PERFECT DAY
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Practical tone, like advice from a friend)*
 
@@ -274,7 +274,7 @@ The next day: Locorotondo, Cisternino, or Alberobello are all less than half an 
 
 =====
 CAP. 16 — CLOSING: ANDREA SAYS GOODBYE FROM THE SKY
-voice: custom-fasano
+voice: custom-fasano-en
 
 *(Warm tone, like a farewell)*
 
