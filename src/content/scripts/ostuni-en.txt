@@ -4,7 +4,7 @@
 
 =====
 CAP. 1 — INTRO: THE WHITE CITY THROUGH THE WINDSHIELD
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(in the car, approaching from the south on the SS16 or the expressway)*
 
@@ -24,7 +24,7 @@ The first time I really understood where I lived — <break time="0.5s"/> and I 
 
 =====
 CAP. 2 — THE ORIGINS: MESSAPI, ROMANS, NORMANS, ARAGONESE
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(still in the car, in the minutes before entering town)*
 
@@ -44,7 +44,7 @@ I did the circuit of these walls hundreds of times on duty. <break time="0.8s"/>
 
 =====
 CAP. 3 — THE CATHEDRAL: PUGLIAN GOTHIC
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(on foot, arriving at Piazza della Libertà or climbing towards the cathedral)*
 
@@ -68,7 +68,7 @@ I walked past this cathedral every morning on duty. <break time="0.8s"/> For twe
 
 =====
 CAP. 4 — THE OLD TOWN: THE WHITE ALLEYWAYS
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(on foot in the alleyways of the old town)*
 
@@ -86,7 +86,7 @@ In summer these streets are packed. <break time="0.8s"/> In August, the narrow s
 
 =====
 CAP. 5 — THE WOMAN OF OSTUNI: DELIA
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(stopping in a small square, or pointing towards the museum)*
 
@@ -110,7 +110,7 @@ I took my niece to see Delia when she was twelve. <break time="0.8s"/> She didn'
 
 =====
 CAP. 6 — A WARDEN'S VIEW: THE SEASONS OF TOURISM
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(walking through the old town, more personal and direct tone)*
 
@@ -128,7 +128,7 @@ Winter is another place entirely. <break time="0.8s"/> Ostuni in winter is almos
 
 =====
 CAP. 7 — THE OIL: OGLIAROLA AND CELLINA DI NARDÒ
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(near an olive press, or at a viewpoint overlooking the olive groves)*
 
@@ -148,7 +148,7 @@ My father had five olive trees on the family plot, <break time="0.5s"/> outside 
 
 =====
 CAP. 8 — THE TUESDAY MARKET, AS SEEN BY THE WARDEN
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(in the square or near the market, lively tone)*
 
@@ -168,7 +168,7 @@ A tip from a retired warden: <break time="0.8s"/> don't drive to the market. <br
 
 =====
 CAP. 9 — WHAT TO EAT: ORECCHIETTE, GRILLED MEAT, FRISELLE
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(sitting at a table, or walking towards somewhere to eat)*
 
@@ -184,7 +184,7 @@ One thing I'll tell you straight: <break time="0.8s"/> avoid restaurants with a 
 
 =====
 CAP. 10 — THE VIEW: THE SEA TWENTY KILOMETRES AWAY
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(at the highest viewpoint in the old town)*
 
@@ -206,7 +206,7 @@ When I had a free moment from my shift, <break time="0.5s"/> I'd come here. <bre
 
 =====
 CAP. 11 — THE JEWISH QUARTER: LA GIUDEA
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(walking towards the north-east part of the old town)*
 
@@ -224,7 +224,7 @@ I'll tell you something: <break time="0.8s"/> this story doesn't get talked abou
 
 =====
 CAP. 12 — THE MASSERIE AROUND: STONE, TRULLI AND WORK
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(at a viewpoint overlooking the countryside, or descending towards the plain)*
 
@@ -240,7 +240,7 @@ I spent many winter mornings patrolling these roads. <break time="0.8s"/> Low fo
 
 =====
 CAP. 13 — THE FEAST OF SANT'ORONZO: THE SEPTEMBER PROCESSION
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(sitting in a small square, narrative tone)*
 
@@ -256,7 +256,7 @@ I kept order during the procession for thirty years. <break time="0.8s"/> It's d
 
 =====
 CAP. 14 — CLOSING: THE WARDEN LETS YOU GO
-voice: custom-ostuni
+voice: custom-ostuni-en
 
 *(heading back to Piazza della Libertà or to the car park)*
 
