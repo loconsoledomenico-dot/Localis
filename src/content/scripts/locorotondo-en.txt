@@ -3,7 +3,7 @@ Voice: Francesco, 50 years old, winemaker of the round village
 
 =====
 CH. 1 — INTRO: THE ITRIA VALLEY FROM THE WINDOW
-voice: jeff
+voice: custom-locorotondo-en
 
 You're climbing. <break time="1.5s"/>
 
@@ -17,7 +17,7 @@ Locorotondo is not Alberobello. <break time="0.8s"/> You won't find the iconic t
 
 =====
 CH. 2 — LOCUS ROTUNDUS: THE VILLAGE THAT GOES ROUND
-voice: jeff
+voice: custom-locorotondo-en
 
 The name says it all: <break time="0.5s"/> Locorotondo. <break time="0.8s"/> From the Latin locus rotundus <break time="0.5s"/> — round place. <break time="1.5s"/>
 
@@ -31,7 +31,7 @@ Walk without a plan for ten minutes. <break time="0.8s"/> Follow the curved stre
 
 =====
 CH. 2B — SAN GIORGIO AND THE PIAZZA
-voice: jeff
+voice: custom-locorotondo-en
 
 Before we move on from the history, <break time="0.5s"/> I want to tell you about the patron saint. <break time="1.2s"/>
 
@@ -49,7 +49,7 @@ The two poles of the circular layout are the two main churches. <break time="0.8
 
 =====
 CH. 3 — THE CUMMERSE: NOT TRULLI
-voice: jeff
+voice: custom-locorotondo-en
 
 Look at the rooftops. <break time="1.5s"/>
 
@@ -67,7 +67,7 @@ When I see a tourist photographing the rooftops of Locorotondo <break time="0.5s
 
 =====
 CH. 3B — THE WINE COOPERATIVE
-voice: jeff
+voice: custom-locorotondo-en
 
 Now <break time="0.5s"/> — since we're talking about local structures <break time="0.5s"/> and how this community organised itself <break time="0.5s"/> — I need to tell you about the Cantina Sociale. <break time="1.2s"/>
 
@@ -87,7 +87,7 @@ And the recognition <break time="0.5s"/> — June the tenth, 1969. <break time="
 
 =====
 CH. 4 — THE WHITE AND THE LIME
-voice: jeff
+voice: custom-locorotondo-en
 
 Now you understand why they call it the white village. <break time="1.5s"/>
 
@@ -101,7 +101,7 @@ People still do it, at least in part. <break time="0.8s"/> Some older residents 
 
 =====
 CH. 5 — THE VINEYARD: VERDECA AND BIANCO D'ALESSANO
-voice: jeff
+voice: custom-locorotondo-en
 
 Now let me tell you about what I do. <break time="1.5s"/>
 
@@ -121,7 +121,7 @@ The secret isn't in a modern winery, <break time="0.5s"/> or selected yeasts bou
 
 =====
 CH. 5B — THE MICROCLIMATE AND THE MASSERIE
-voice: jeff
+voice: custom-locorotondo-en
 
 I want to take a moment and talk about something you can feel <break time="0.5s"/> but might not have words for yet. <break time="1.2s"/>
 
@@ -141,7 +141,7 @@ The other thing about this microclimate: <break time="0.8s"/> the harvest calend
 
 =====
 CH. 6 — THE OLIVE OIL AND THE LAVENDER
-voice: jeff
+voice: custom-locorotondo-en
 
 Two things I produce that I want to tell you about <break time="0.5s"/> because most people have no idea how they're actually made. <break time="1.5s"/>
 
@@ -163,7 +163,7 @@ When you smell lavender and think "beautiful" <break time="0.5s"/> — now you k
 
 =====
 CH. 6B — WHAT TO EAT AND WHERE
-voice: jeff
+voice: custom-locorotondo-en
 
 I get asked this every time someone comes to the farm. <break time="0.8s"/> "Francesco, <break time="0.5s"/> what do we eat?" <break time="1.2s"/>
 
@@ -189,7 +189,7 @@ Avoid the tourist restaurants near the belvedere. <break time="0.8s"/> The viewi
 
 =====
 CH. 7 — THE VIEW: BALCONY OF THE VALLEY
-voice: jeff
+voice: custom-locorotondo-en
 
 Stop here for a moment. <break time="1.2s"/>
 
@@ -209,7 +209,7 @@ Changes how you see it, doesn't it? <break time="1.5s"/>
 
 =====
 CH. 8 — CLOSING: FRANCESCO SAYS GOODBYE
-voice: jeff
+voice: custom-locorotondo-en
 
 So <break time="0.5s"/> — Locorotondo. <break time="1.5s"/>
 
