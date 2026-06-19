@@ -79,9 +79,11 @@
   },
   {
     "code": "AR9PL4",
-    "partner_slug": null,
+    "partner_slug": "tenace-petrol-cagnano",
     "batch": "2026-06-lotto1",
-    "printed_at": "2026-06-15"
+    "printed_at": "2026-06-15",
+    "assigned_at": "2026-06-19",
+    "note": "stazione servizio SS693 Cagnano Varano - 2026-06-19"
   },
   {
     "code": "AZYRXV",
