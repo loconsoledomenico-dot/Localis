@@ -7,9 +7,11 @@
   },
   {
     "code": "B45Q3E",
-    "partner_slug": null,
+    "partner_slug": "masseria-dirupo-noci",
     "batch": "2026-06-lotto1",
-    "printed_at": "2026-06-15"
+    "printed_at": "2026-06-15",
+    "assigned_at": "2026-06-22",
+    "note": "Masseria Dirupo - Noci, attivato 2026-06-22"
   },
   {
     "code": "7YH6B5",
