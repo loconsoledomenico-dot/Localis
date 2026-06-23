@@ -31,7 +31,9 @@ const H = 630;
 
 /** Legge slug + campi rilevanti dal frontmatter YAML di ogni .mdx */
 function parseFrontmatter(src) {
-  const m = src.match(/^---\n([\s\S]*?)\n---/);
+  // Normalizza CRLF→LF: i file salvati su Windows altrimenti non matchano e
+  // verrebbero saltati in silenzio (nessuna OG image generata).
+  const m = src.replace(/\r\n?/g, '\n').match(/^---\n([\s\S]*?)\n---/);
   if (!m) return null;
   const block = m[1];
 

@@ -47,7 +47,9 @@ async function loadPartners() {
   const partners = new Map();
   for (const file of files.filter((f) => f.endsWith('.mdx'))) {
     const full = new URL(file, partnerDir);
-    const text = await fs.readFile(full, 'utf8');
+    // Normalizza i line ending: i file salvati su Windows con CRLF rompevano
+    // il match del frontmatter (richiede \n puro) e il partner spariva dal report.
+    const text = (await fs.readFile(full, 'utf8')).replace(/\r\n?/g, '\n');
     const frontmatter = text.match(/^---\n([\s\S]*?)\n---/);
     if (!frontmatter) continue;
     const data = Object.fromEntries(
