@@ -32,31 +32,9 @@ import StepsBlock from '../../components/StepsBlock.astro';
 
   <StatsBlock lang="de" />
 
-  <FeatureBlock
-    eyebrow="Recherche · Methode — Tafel III"
-    heading="In Apulien geschrieben."
-    italicEnding="Mit überprüfbaren Quellen."
-    body="Jede Guide entsteht aus redaktioneller Recherche: historische Quellen, institutionelle Quellen und, wenn vorhanden, lokale Erinnerung, die vor Ort gesammelt wurde. Auf der Seite Quellen veröffentlichen wir die Referenzen, aus denen die Erzählungen gebaut sind."
-    bullets={[
-      'Akademische Quellen · Treccani, DBI, Houben, Abulafia, Cioffari',
-      "Veröffentlichte Guides · Bari, Valle d'Itria, Gargano",
-      'Italienisch, Englisch und Deutsch · Texte sprachgenau ausgearbeitet',
-      'Nachprüfbar · jede belegte Aussage auf /de/fonti, Kapitel für Kapitel',
-    ]}
-    imageSrc="/images/covers/fonti-ricerca.jpg"
-    imageAlt="Recherche-Schreibtisch: Bücher zur Geschichte Baris, offenes Notizbuch, historische Postkarten, Karte und Zeitungsausschnitt über die Reliquien des heiligen Nikolaus"
-    caption="Der Schreibtisch vor der Stimme. Bücher, Notizen, Postkarten, Ausschnitte — jedes Kapitel beginnt hier."
-    ctaLabel="Unsere Methode"
-    ctaHref="/de/methode"
-    imageSide="left"
-    tiltDeg={-1.5}
-  />
 
   <section class="manifesto-section bg-surface-elev border-y border-border">
     <div class="max-w-narrow mx-auto px-md py-xl lg:py-2xl">
-      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-md">
-        — Manifest —
-      </p>
 
       <blockquote class="manifesto-quote font-display italic text-ink leading-[1.2] text-[clamp(1.3rem,3vw,1.9rem)] m-0 max-w-[32ch] mx-auto text-center">
         Nicht nur Orte zum Ansehen —<br />
@@ -89,7 +67,7 @@ import StepsBlock from '../../components/StepsBlock.astro';
   </section>
 
   <FeatureBlock
-    eyebrow="Werkzeug — Tafel V"
+    eyebrow="Nur wenige Stunden?"
     heading="Nur wenige Stunden in Bari?"
     italicEnding="Hör zwei ausgewählte Erzählungen und versteh die Stadt — ohne Zeit zu verlieren."
     body="Du kaufst mit E-Mail und Karte. Danach bekommst du einen dauerhaften Link: öffnen, Play drücken, hören. Auf der Straße beim Gehen, auf dem Sofa vor der Reise oder im Zug zurück. Das sind Erzählungen, keine Museums-Audios, die nur beschreiben, was vor dir steht — sie bringen dich nach Bari hinein, auch wenn du noch nicht dort bist."
@@ -107,6 +85,26 @@ import StepsBlock from '../../components/StepsBlock.astro';
     tiltDeg={1.5}
     mobileAspect="3 / 2"
     framedImage
+  />
+
+  <FeatureBlock
+    eyebrow="Woher die Geschichten kommen"
+    heading="In Apulien geschrieben."
+    italicEnding="Mit überprüfbaren Quellen."
+    body="Jede Guide entsteht aus redaktioneller Recherche: historische Quellen, institutionelle Quellen und, wenn vorhanden, lokale Erinnerung, die vor Ort gesammelt wurde. Auf der Seite Quellen veröffentlichen wir die Referenzen, aus denen die Erzählungen gebaut sind."
+    bullets={[
+      'Von Menschen geschrieben, die hier leben · Recherche und lokale Erinnerung',
+      "Veröffentlichte Guides · Bari, Valle d'Itria, Gargano",
+      'Italienisch, Englisch und Deutsch · Texte sprachgenau ausgearbeitet',
+      'Nachprüfbar · jede belegte Aussage auf /de/fonti, Kapitel für Kapitel',
+    ]}
+    imageSrc="/images/covers/fonti-ricerca.jpg"
+    imageAlt="Recherche-Schreibtisch: Bücher zur Geschichte Baris, offenes Notizbuch, historische Postkarten, Karte und Zeitungsausschnitt über die Reliquien des heiligen Nikolaus"
+    caption="Der Schreibtisch vor der Stimme. Bücher, Notizen, Postkarten, Ausschnitte — jedes Kapitel beginnt hier."
+    ctaLabel="Unsere Methode"
+    ctaHref="/de/methode"
+    imageSide="left"
+    tiltDeg={-1.5}
   />
 
   <StepsBlock lang="de" ctaHref="/de/guide/bari-vecchia" />

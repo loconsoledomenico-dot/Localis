@@ -32,31 +32,9 @@ import StepsBlock from '../../components/StepsBlock.astro';
 
   <StatsBlock lang="en" />
 
-  <FeatureBlock
-    eyebrow="Research · Method — Plate III"
-    heading="Written in Puglia."
-    italicEnding="With verifiable sources."
-    body="Every guide begins with editorial research: historical sources, institutional sources and, when present, local memory gathered on the ground. On the Sources page we publish the references used to build each story."
-    bullets={[
-      'Academic sources · Treccani, DBI, Houben, Abulafia, Cioffari',
-      "Published guides · Bari, Valle d'Itria, Gargano",
-      'Italian, English and German · each text crafted in its own language',
-      'Fully verifiable · every claim on /en/fonti, chapter by chapter',
-    ]}
-    imageSrc="/images/covers/fonti-ricerca.jpg"
-    imageAlt="Research desk: Bari history books, open notebook with Old Bari notes, vintage postcards of the city, a historical map and the newspaper 'L'Eco di Bari' on San Nicola's relics"
-    caption="The desk before the voice. Books, notes, postcards, clippings — every chapter starts here."
-    ctaLabel="Our method"
-    ctaHref="/en/method"
-    imageSide="left"
-    tiltDeg={-1.5}
-  />
 
   <section class="manifesto-section bg-surface-elev border-y border-border">
     <div class="max-w-narrow mx-auto px-md py-xl lg:py-2xl">
-      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-md">
-        — Manifesto —
-      </p>
 
       <blockquote class="manifesto-quote font-display italic text-ink leading-[1.2] text-[clamp(1.3rem,3vw,1.9rem)] m-0 max-w-[28ch] mx-auto text-center">
         Not just places to see —<br />
@@ -87,7 +65,7 @@ import StepsBlock from '../../components/StepsBlock.astro';
   </section>
 
   <FeatureBlock
-    eyebrow="Tool — Plate V"
+    eyebrow="Only a few hours?"
     heading="Only a few hours in Bari?"
     italicEnding="Listen to two selected stories to understand the city without wasting time."
     body="You pay with email and card. You receive a permanent link: open it whenever you want, press play, listen. On the street while you walk, on the couch before you leave, on the train coming back. These are stories, not museum audio describing what's in front of you — they take you inside Bari, even if you're not there yet."
@@ -105,6 +83,26 @@ import StepsBlock from '../../components/StepsBlock.astro';
     tiltDeg={1.5}
     mobileAspect="3 / 2"
     framedImage
+  />
+
+  <FeatureBlock
+    eyebrow="Where the stories come from"
+    heading="Written in Puglia."
+    italicEnding="With verifiable sources."
+    body="Every guide begins with editorial research: historical sources, institutional sources and, when present, local memory gathered on the ground. On the Sources page we publish the references used to build each story."
+    bullets={[
+      'Written by people who live here · research and local memory',
+      "Published guides · Bari, Valle d'Itria, Gargano",
+      'Italian, English and German · each text crafted in its own language',
+      'Fully verifiable · every claim on /en/fonti, chapter by chapter',
+    ]}
+    imageSrc="/images/covers/fonti-ricerca.jpg"
+    imageAlt="Research desk: Bari history books, open notebook with Old Bari notes, vintage postcards of the city, a historical map and the newspaper 'L'Eco di Bari' on San Nicola's relics"
+    caption="The desk before the voice. Books, notes, postcards, clippings — every chapter starts here."
+    ctaLabel="Our method"
+    ctaHref="/en/method"
+    imageSide="left"
+    tiltDeg={-1.5}
   />
 
   <StepsBlock lang="en" ctaHref="/en/guide/bari-vecchia" />

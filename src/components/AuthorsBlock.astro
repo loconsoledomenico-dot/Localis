@@ -28,7 +28,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola VI - Gli autori' : lang === 'de' ? 'Tafel VI - Die Autoren' : 'Plate VI - The authors';
+const eyebrow = lang === 'it' ? 'Chi racconta' : lang === 'de' ? 'Wer erzählt' : 'Who tells the story';
 const heading1 = lang === 'it' ? 'Le persone dietro i racconti.' : lang === 'de' ? 'Die Menschen hinter den Erzählungen.' : 'The people behind the stories.';
 const heading2 = lang === 'it' ? 'Sei guide, una sola Bari.' : lang === 'de' ? 'Sechs Erzählungen, ein Bari.' : 'Six stories, one Bari.';
 const intro = lang === 'it'
@@ -225,9 +225,6 @@ function photoTitleFor(a: Author): string {
 
               <!-- Meta -->
               <div class="author-meta">
-                <span class="author-ordinal font-body font-semibold text-[10px] tracking-[0.32em] uppercase text-ink-subtle">
-                  Tav. VI · {a.ordinal} {' / '} 06
-                </span>
                 <h3 class="author-name font-display text-ink leading-[1.1] m-0">
                   {isPlaceholderName ? (
                     <span class="text-ink-subtle italic font-light">

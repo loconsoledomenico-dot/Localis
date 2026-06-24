@@ -33,33 +33,10 @@ import DestinationsBlock from '../components/DestinationsBlock.astro';
   {/* STATS — banda sottile, separa l'hero dal resto: 6/0/0/∞ */}
   <StatsBlock lang="it" />
 
-  {/* FEATURE BLOCK — Storie firmate (image left — alterna con Hero che ha foto a destra) */}
-  <FeatureBlock
-    eyebrow="Ricerca · Metodo — Tav. III"
-    heading="Scritte in Puglia."
-    italicEnding="Con fonti verificabili."
-    body="Ogni guida nasce da ricerca editoriale: fonti storiche, fonti istituzionali e, quando presente, memoria locale raccolta sul territorio. Nella pagina Fonti pubblichiamo i riferimenti utilizzati per costruire i racconti."
-    bullets={[
-      "Fonti accademiche · Treccani, DBI, Houben, Abulafia, Cioffari",
-      "Guide pubblicate · Bari, Valle d’Itria, Gargano",
-      "Italiano, inglese e tedesco · testi curati lingua per lingua",
-      "Tutto verificabile · ogni claim su /fonti, capitolo per capitolo",
-    ]}
-    imageSrc="/images/covers/fonti-ricerca.jpg"
-    imageAlt="Scrivania di ricerca: libri di storia barese, taccuino aperto con appunti su Bari Vecchia, cartoline d’epoca della città, mappa storica e quotidiano ‘L’Eco di Bari’ sulle reliquie di San Nicola"
-    caption="La scrivania prima della voce. Libri, appunti, cartoline, ritagli — ogni capitolo nasce da qui."
-    ctaLabel="Il nostro metodo"
-    ctaHref="/metodo"
-    imageSide="left"
-    tiltDeg={-1.5}
-  />
 
   {/* MANIFESTO — slim, pull-quote tra Tav III e Tav IV */}
   <section class="manifesto-section bg-surface-elev border-y border-border">
     <div class="max-w-narrow mx-auto px-md py-xl lg:py-2xl">
-      <p class="text-center text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle mb-md">
-        — Manifesto —
-      </p>
 
       <blockquote class="manifesto-quote font-display italic text-ink leading-[1.2] text-[clamp(1.3rem,3vw,1.9rem)] m-0 max-w-[44ch] mx-auto text-center">
         Non solo luoghi da vedere —<br />
@@ -95,7 +72,7 @@ import DestinationsBlock from '../components/DestinationsBlock.astro';
 
   {/* FEATURE BLOCK — Si apre con un link (post-pricing reassurance) */}
   <FeatureBlock
-    eyebrow="Strumento — Tav. V"
+    eyebrow="Hai poche ore?"
     heading="Poche ore a Bari?"
     italicEnding="Ascolta due racconti selezionati per capire la città senza perdere tempo."
     body="Acquisti con email e carta. Ti arriva un link permanente: lo apri quando vuoi, premi play, ascolti. In strada mentre cammini, sul divano prima di partire, in treno al ritorno. Sono racconti, non audio museali che descrivono ciò che hai davanti — ti portano dentro Bari, anche se non ci sei ancora."
@@ -113,6 +90,27 @@ import DestinationsBlock from '../components/DestinationsBlock.astro';
     tiltDeg={1.5}
     mobileAspect="3 / 2"
     framedImage
+  />
+
+  {/* FEATURE BLOCK — Da dove vengono le storie (rassicurazione, prima della CTA finale) */}
+  <FeatureBlock
+    eyebrow="Da dove vengono le storie"
+    heading="Scritte in Puglia."
+    italicEnding="Con fonti verificabili."
+    body="Ogni guida nasce da ricerca editoriale: fonti storiche, fonti istituzionali e, quando presente, memoria locale raccolta sul territorio. Nella pagina Fonti pubblichiamo i riferimenti utilizzati per costruire i racconti."
+    bullets={[
+      "Scritte da chi la Puglia la vive · ricerca e memoria locale",
+      "Guide pubblicate · Bari, Valle d’Itria, Gargano",
+      "Italiano, inglese e tedesco · testi curati lingua per lingua",
+      "Tutto verificabile · ogni claim su /fonti, capitolo per capitolo",
+    ]}
+    imageSrc="/images/covers/fonti-ricerca.jpg"
+    imageAlt="Scrivania di ricerca: libri di storia barese, taccuino aperto con appunti su Bari Vecchia, cartoline d’epoca della città, mappa storica e quotidiano ‘L’Eco di Bari’ sulle reliquie di San Nicola"
+    caption="La scrivania prima della voce. Libri, appunti, cartoline, ritagli — ogni capitolo nasce da qui."
+    ctaLabel="Il nostro metodo"
+    ctaHref="/metodo"
+    imageSide="left"
+    tiltDeg={-1.5}
   />
 
   {/* 3-PASSI — onboarding chiaro prima della chiusura */}

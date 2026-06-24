@@ -7,7 +7,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola IV — Le destinazioni' : lang === 'de' ? 'Tafel IV — Die Reiseziele' : 'Plate IV — The destinations';
+const eyebrow = lang === 'it' ? 'Le destinazioni' : lang === 'de' ? 'Die Reiseziele' : 'The destinations';
 const heading1 = lang === 'it' ? 'Scegli la tua zona.' : lang === 'de' ? 'Wähle deine Region.' : 'Choose your area.';
 const heading2 = lang === 'it' ? 'Bari, Valle d\'Itria, Gargano e Matera: racconti audio da ascoltare sul posto, prima di partire o al ritorno.' : lang === 'de' ? 'Bari, Valle d\'Itria, Gargano und Matera: Audiogeschichten zum Hören vor Ort, vor der Abreise oder nach der Rückkehr.' : 'Bari, Valle d\'Itria, Gargano and Matera: audio stories to listen on the spot, before you leave or after you return.';
 const intro = lang === 'it'

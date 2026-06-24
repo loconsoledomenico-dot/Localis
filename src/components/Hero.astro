@@ -10,8 +10,6 @@ export interface Props {
 
 const { lang, currentPath = '/' } = Astro.props;
 
-const masthead_l = lang === 'de' ? 'Ausgabe 01 — Apulien' : lang === 'it' ? 'Edizione 01 — Puglia' : 'Edition 01 — Puglia';
-const masthead_r = lang === 'de' ? 'Veröffentlichte Audioguides · Apulien' : lang === 'it' ? 'Guide pubblicate · Puglia' : 'Published guides · Puglia';
 
 const heading1a = lang === 'de' ? 'Apulien, erzählt' : lang === 'it' ? 'La Puglia, raccontata' : 'Puglia, in the words';
 const heading1b = lang === 'de' ? 'von Menschen, die hier leben.' : lang === 'it' ? 'da chi ci vive.' : 'of the people who live here.';
@@ -50,15 +48,6 @@ const altText = lang === 'de'
   <!-- Gradient scrim for text legibility on the left half -->
   <div class="hero-scrim" aria-hidden="true"></div>
 
-  <!-- Masthead strip — sits over the photo at the top -->
-  <div class="hero-masthead">
-    <span class="text-[10px] font-semibold tracking-[0.32em] uppercase text-ink-subtle">
-      {masthead_l}
-    </span>
-    <span class="hidden sm:inline text-[10px] font-semibold tracking-[0.28em] uppercase text-ink-subtle">
-      {masthead_r}
-    </span>
-  </div>
 
   <!-- Content overlay — anchored left -->
   <div class="hero-content">

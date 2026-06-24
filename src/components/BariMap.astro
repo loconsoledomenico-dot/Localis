@@ -7,7 +7,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 
-const eyebrow = lang === 'it' ? 'Tavola IV — I luoghi' : lang === 'de' ? 'Tafel IV — Die Orte' : 'Plate IV — The places';
+const eyebrow = lang === 'it' ? 'I luoghi' : lang === 'de' ? 'Die Orte' : 'The places';
 const heading1 = lang === 'it' ? 'Sei racconti per capire Bari.' : lang === 'de' ? 'Sechs Erzählungen, um Bari zu verstehen.' : 'Six stories to understand Bari.';
 const heading2 = lang === 'it' ? 'Sei luoghi, una sola città da capire.' : lang === 'de' ? 'Sechs Orte, eine Stadt zum Entdecken.' : 'Six places, one city to discover.';
 const intro = lang === 'it'
