@@ -20,8 +20,6 @@ const lede1 = lang === "de"
   ? `Racconti audio documentati per capire Bari e la Puglia mentre le visiti. Nessuna app.`
   : `Documented audio stories to understand Bari and Puglia as you visit. No app needed.`;
 
-const ctaPrimary = lang === "de" ? "1 Minute kostenlos anhoeren" : lang === "it" ? "Ascolta 1 minuto gratis" : "Listen to a free 1-minute preview";
-const ctaPrimaryHref = lang === "de" ? "/de/bari/" : lang === "it" ? "/bari/" : "/en/bari/";
 const ctaSecondary = lang === "de" ? "Erzaehlungen entdecken" : lang === "it" ? "Scopri le guide" : "Explore the stories";
 const ctaSecondaryHref = lang === "de" ? "/de/guide" : lang === "it" ? "/guide" : "/en/guide";
 
@@ -133,30 +131,6 @@ const altText = lang === 'de'
     .hero-bg { object-position: 70% center; }
   }
 
-  .hero-masthead {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--spacing-md);
-    padding-inline: var(--side-gutter);
-    padding-top: var(--spacing-lg);
-    padding-bottom: var(--spacing-sm);
-  }
-  .hero-masthead::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: var(--side-gutter);
-    right: var(--side-gutter);
-    height: 1px;
-    background: oklch(from var(--color-border) l c h / 0.6);
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: ruleDraw 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
-  }
-
   .hero-content {
     position: relative;
     z-index: 2;
@@ -177,10 +151,6 @@ const altText = lang === 'de'
   }
 
   /* === Reveal animations === */
-  .hero-masthead > span {
-    opacity: 0;
-    animation: heroFade 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
-  }
   .hero-h1 > span {
     opacity: 0;
     transform: translateY(14px);
@@ -199,9 +169,7 @@ const altText = lang === 'de'
   :global(.hero-sample) { animation-delay: 0.9s; }
   .hero-actions  { animation-delay: 1.05s; }
 
-  @keyframes ruleDraw { to { transform: scaleX(1); } }
   @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
-  @keyframes heroFade { to { opacity: 1; } }
 
   @media (max-width: 768px) {
     /* animations */
@@ -210,7 +178,6 @@ const altText = lang === 'de'
     .hero-lede { animation-delay: 0.35s; animation-duration: 0.4s; }
     :global(.hero-sample) { animation-delay: 0.45s; animation-duration: 0.4s; }
     .hero-actions { animation-delay: 0.55s; animation-duration: 0.4s; }
-    .hero-masthead > span { animation-delay: 0.3s; }
 
     /* legibility */
     .hero-lede {
@@ -226,8 +193,6 @@ const altText = lang === 'de'
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-masthead::before,
-    .hero-masthead > span,
     .hero-h1 > span,
     .hero-lede,
     :global(.hero-sample),

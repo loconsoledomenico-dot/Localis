@@ -4,8 +4,6 @@ import { type Lang } from '../lib/i18n';
 export interface Author {
   /** Titolo della guida che racconta (es. "Bari Vecchia", "Il Meglio di Bari") */
   guideTitle: string;
-  /** Numero ordinale Tav. VI · 01-06 */
-  ordinal: string;
   /** Nome reale del narratore. Se vuoto: render placeholder. */
   name?: string;
   /** Bio breve (2-3 righe). Se vuoto: render placeholder. */
@@ -44,9 +42,7 @@ const photoSoonLabel = lang === 'it' ? 'Ritratto in arrivo' : lang === 'de' ? 'P
 // `photo` (path /images/authors/<slug>.jpg) e rimuovere `draft: true`.
 const authors: Author[] = [
   {
-    guideTitle: 'Bari Vecchia',
-    ordinal: '01',
-    name: 'Domenico Loconsole',
+    guideTitle: 'Bari Vecchia',    name: 'Domenico Loconsole',
     initials: 'D.L.',
     photo: '/images/authors/domenico-loconsole.png',
     bioIt: 'Barese, cresciuto nel quartiere Libertà, a pochi passi dal borgo antico. Fondatore di Localis, racconta Bari Vecchia attraverso la sua storia, le sue pietre e il legame profondo che questo luogo conserva con l\'identità della città.',
@@ -54,9 +50,7 @@ const authors: Author[] = [
     bioDe: 'In Bari geboren und im Viertel Libertà aufgewachsen, nur wenige Schritte von der Altstadt entfernt. Als Gründer von Localis erzählt Domenico Bari Vecchia durch ihre Geschichte, ihre Steine und die tiefe Verbindung, die dieser Ort bis heute mit der Identität der Stadt bewahrt.',
   },
   {
-    guideTitle: 'Tre Teatri',
-    ordinal: '02',
-    name: 'Filippo Bellomo',
+    guideTitle: 'Tre Teatri',    name: 'Filippo Bellomo',
     initials: 'F.B.',
     photo: '/images/authors/filippo-headshot.jpg',
     bioIt: 'Architetto, innamorato del liberty barese. Studia da anni i tre teatri che hanno trasformato Bari in città europea — il Petruzzelli, il Margherita, il Piccinni. Li racconta come se ci avesse vissuto dentro.',
@@ -64,9 +58,7 @@ const authors: Author[] = [
     bioDe: 'Architekt, verliebt in den Liberty-Stil von Bari. Er studiert seit Jahren die drei Theater, die Bari zur europäischen Stadt gemacht haben — Petruzzelli, Margherita, Piccinni.',
   },
   {
-    guideTitle: 'San Nicola',
-    ordinal: '03',
-    name: 'Nonno Nicola',
+    guideTitle: 'San Nicola',    name: 'Nonno Nicola',
     initials: 'N.N.',
     photo: '/images/authors/nonno-nicola.jpg',
     bioIt: 'Nonno Nicola è cresciuto nel quartiere Libertà, ma la sua memoria familiare nasce nel cuore più antico di Bari: i suoi genitori sono nati e cresciuti a Bari Vecchia, suo padre aveva una storica salumeria in via Ricciotto Canudo, conosciuta come \'da Minguccio\', e il nonno gestiva una saponeria artigianale. In questo racconto porta una Bari fatta di botteghe, vicoli, lavoro e vita quotidiana. Persona reale coinvolta nel progetto Localis. Narrazione audio generata con ElevenLabs.',
@@ -74,9 +66,7 @@ const authors: Author[] = [
     bioDe: 'Nonno Nicola ist im Viertel Libertà aufgewachsen, aber seine Familienerinnerung wurzelt im ältesten Herzen von Bari: Seine Eltern sind in Bari Vecchia geboren und aufgewachsen, sein Vater führte eine historische Delikatesshandlung in der Via Ricciotto Canudo, bekannt als \'da Minguccio\', und sein Großvater betrieb eine handwerkliche Seifenmanufaktur. In dieser Geschichte bringt er ein Bari aus Läden, Gassen, Arbeit und Alltagsleben. Reale Person, die am Localis-Projekt beteiligt ist. Audioerzählung generiert mit ElevenLabs.',
   },
   {
-    guideTitle: 'Il Meglio di Bari',
-    ordinal: '04',
-    name: 'Rachele Grande',
+    guideTitle: 'Il Meglio di Bari',    name: 'Rachele Grande',
     initials: 'R.G.',
     photo: '/images/authors/rachele-grande.jpg',
     bioIt: 'Rachele è la prospettiva narrante del racconto sul cibo di Bari. Dal mare di N\'dèrr\'a la lanze al ricordo dei ricci alla Forcatella, accompagna l\'ascoltatore dentro un rapporto fatto di gesti, memoria e vita quotidiana.',
@@ -84,9 +74,7 @@ const authors: Author[] = [
     bioDe: 'Rachele ist die erzählerische Perspektive der Geschichte über Baris Essen. Vom Meer bei N\'dèrr\'a la lanze bis zur Erinnerung an Seeigel bei Forcatella begleitet sie den Zuhörer in eine von Gesten, Erinnerung und Alltag geprägte Beziehung.',
   },
   {
-    guideTitle: 'Porto di Bari',
-    ordinal: '05',
-    name: 'Luigi Loconsole',
+    guideTitle: 'Porto di Bari',    name: 'Luigi Loconsole',
     initials: 'L.L.',
     photo: '/images/authors/luigi-loconsole.jpg',
     bioIt: 'Cinquantaquattro anni. Troppi passati in mare per contarli. Conosce il Porto dentro, fuori, sopra e sotto — e le feste che il lungomare ricorda meno di lui.',
@@ -94,9 +82,7 @@ const authors: Author[] = [
     bioDe: 'Vierundfünfzig Jahre. Zu viele davon auf dem Wasser, um sie zu zählen. Er kennt den Hafen von innen, außen, oben und unten — und die Feste, die der Lungomare weniger gut erinnert als er.',
   },
   {
-    guideTitle: 'Bari Sotterranea',
-    ordinal: '06',
-    name: 'Rosa "la Perpetua"',
+    guideTitle: 'Bari Sotterranea',    name: 'Rosa "la Perpetua"',
     initials: 'R.P.',
     photo: '/images/authors/rosa-perpetua.jpg',
     composite: true,
@@ -348,10 +334,6 @@ function photoTitleFor(a: Author): string {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-  }
-
-  .author-ordinal {
-    color: var(--color-ink-subtle);
   }
 
   .author-name {
