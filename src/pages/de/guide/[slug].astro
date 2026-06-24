@@ -8,6 +8,7 @@ import StartMap from '../../../components/StartMap.astro';
 import NarratorCard from '../../../components/NarratorCard.astro';
 import StructuredData from '../../../components/StructuredData.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import HeroAudioSample from '../../../components/HeroAudioSample.astro';
 import GuideUseCase from '../../../components/GuideUseCase.astro';
 import GuideFactsCard from '../../../components/GuideFactsCard.astro';
 import GuideSeoEditorial from '../../../components/GuideSeoEditorial.astro';
@@ -42,6 +43,7 @@ export async function getStaticPaths() {
 
 const { guide } = Astro.props;
 const data = guide.data;
+const previewSrc = data.preview_audio_base ? `${data.preview_audio_base}-de.mp3` : null;
 const destination = CITY_DEST[data.city];
 const lang = 'de';
 const durationSeconds = guideDurationSeconds(data, lang);
@@ -144,6 +146,10 @@ ld.push(breadcrumbListLD([
 
     <div class="order-2 lg:order-none flex flex-col gap-lg">
       <img src={data.cover} alt="" class="w-full aspect-[4/3] object-cover rounded-lg" loading="eager" />
+
+      {previewSrc && (
+        <HeroAudioSample lang="de" src={previewSrc} guideSlug={data.slug} context="product" />
+      )}
 
       <GuidePurchaseCards
         class="lg:hidden flex flex-col gap-md"

@@ -15,6 +15,7 @@ import { formatDuration } from '../../lib/format';
 import { guideAccessibility, guideNeeds, guideRouteMode, guideStopsCount } from '../../lib/guide-localization';
 import { audioObjectLD, breadcrumbListLD, touristAttractionLD, productLD } from '../../lib/seo';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import HeroAudioSample from '../../components/HeroAudioSample.astro';
 
 const CITY_DEST: Record<string, { href: string; label: string }> = {
   bari: { href: '/bari', label: 'Bari' },
@@ -42,6 +43,7 @@ export async function getStaticPaths() {
 
 const { guide } = Astro.props;
 const data = guide.data;
+const previewSrc = data.preview_audio_base ? `${data.preview_audio_base}-it.mp3` : null;
 const destinationLabel = CITY_DEST[data.city]?.label ?? data.city;
 const destination = CITY_DEST[data.city];
 
@@ -132,6 +134,10 @@ ld.push(breadcrumbListLD([
         class="w-full aspect-[4/3] object-cover rounded-lg"
         loading="eager"
       />
+
+      {previewSrc && (
+        <HeroAudioSample lang="it" src={previewSrc} guideSlug={data.slug} context="product" />
+      )}
 
       <GuidePurchaseCards
         class="lg:hidden flex flex-col gap-md"

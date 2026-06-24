@@ -5,9 +5,10 @@ export interface Props {
   lang: Lang;
   src?: string;
   guideSlug?: string;
+  context?: string;
 }
 
-const { lang, src = '/audio/trailers/home-trailer-it.mp3', guideSlug } = Astro.props;
+const { lang, src = '/audio/trailers/home-trailer-it.mp3', guideSlug, context = 'hero' } = Astro.props;
 const audioAssetId = src.split('/').pop()?.replace(/\.mp3$/i, '') || 'unknown';
 
 const label = lang === 'de'
@@ -20,7 +21,7 @@ const playLabel = lang === 'de' ? 'Abspielen' : lang === 'it' ? 'Play' : 'Play';
 const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Pause';
 ---
 
-<div class="hero-sample" data-src={src} data-guide-slug={guideSlug ?? ''} data-audio-asset-id={audioAssetId} data-lang={lang}>
+<div class="hero-sample" data-src={src} data-guide-slug={guideSlug ?? ''} data-audio-asset-id={audioAssetId} data-lang={lang} data-audio-context={context}>
   <button
     class="hero-sample-btn"
     aria-label={playLabel}
@@ -68,7 +69,7 @@ const pauseLabel = lang === 'de' ? 'Pausieren' : lang === 'it' ? 'Pausa' : 'Paus
           guideSlug,
           audioAssetId,
           language: guideLang,
-          audioContext: 'hero',
+          audioContext: el.dataset.audioContext || 'hero',
         });
         audio.addEventListener('timeupdate', () => {
           if (!audio!.duration) return;

@@ -37,6 +37,8 @@ const guides = defineCollection({
     audio_full_key_it: z.string(),
     audio_full_key_en: z.string(),
     audio_full_key_de: z.string().optional(),
+    // Base path dell'anteprima audio (senza -{lang}.mp3). Es: /audio/trailers/bari/bari-vecchia-trailer
+    preview_audio_base: z.string().optional(),
     chapters: z
       .array(
         z.object({
