@@ -1,0 +1,17 @@
+BARI A TAVOLA — TRAILER 60s · voce Rachele
+=====================================
+TRAILER
+-------------
+voice: rachele
+
+A Bari il cibo non si mangia. <break time="0.4s"/> Si racconta. <break time="1.0s"/>
+
+Le orecchiette fatte sulla porta di casa, <break time="0.3s"/> con un gesto ripetuto mille volte. <break time="0.6s"/> Il mare mangiato crudo, sulla banchina, a N'dèrr'a la lanze. <break time="0.6s"/> La focaccia, il panzerotto, le sgagliozze che non aspettano il tavolo. <break time="1.0s"/>
+
+La tiella di patate, riso e cozze. <break time="0.4s"/> L'assassina, la pasta che brucia. <break time="0.4s"/> E alla fine, il caffè — <break time="0.3s"/> e quello che resta. <break time="1.2s"/>
+
+Nove tappe, <break time="0.3s"/> dal molo ai vicoli. <break time="0.5s"/> Perché il cibo barese non è una lista. <break time="0.4s"/> È un percorso. <break time="1.0s"/>
+
+Bari a Tavola. <break time="0.6s"/>
+
+Il resto è dentro.
