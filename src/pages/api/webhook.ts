@@ -10,6 +10,7 @@ import type { Lang } from '../../lib/i18n';
 import type Stripe from 'stripe';
 import { guideTitle } from '../../lib/guide-localization';
 import { captureServerEvent, hashDistinctId } from '../../lib/posthog';
+import { sendGa4Purchase } from '../../lib/ga4-mp';
 import { grantEntitlement } from '../../lib/entitlements';
 import { maskEmail } from '../../lib/format';
 
@@ -112,6 +113,21 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session): Promis
     stripe_session_id: session.id,
     revenue_cents: session.amount_total ?? null,
     currency: session.currency ?? 'eur',
+  });
+
+  // GA4 server-side: il `purchase` parte SEMPRE alla conferma del pagamento,
+  // anche se il compratore non torna su /thanks. Deduplicato dal client-side
+  // via transaction_id = session.id. Non-bloccante: errori solo loggati.
+  await sendGa4Purchase({
+    clientId: meta.ga_client_id || null,
+    transactionId: session.id,
+    valueCents: session.amount_total ?? null,
+    currency: session.currency ?? 'eur',
+    guideSlugs: guide_slugs,
+    product,
+    partnerId: partner_id,
+    lang,
+    trafficType: meta.internal === '1' ? 'internal' : undefined,
   });
 
   console.log(`[webhook] Sent access email to ${maskEmail(email)} for guides ${guide_slugs.join(', ')}`);

@@ -77,6 +77,8 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
     guideSlug?: string;
     lang?: string;
     partnerId?: string;
+    gaClientId?: string;
+    internal?: string;
   };
   try {
     body = await parseCheckoutRequest(request);
@@ -195,6 +197,10 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
       partner_commission_rate: resolvedPartnerId ? String(partnerCommissionRate) : '',
       partner_cookie: partner_id_raw ?? '',
       lang,
+      // GA4 client_id per agganciare il purchase server-side alla sessione del
+      // compratore; 'internal'=1 marca gli acquisti di test del founder.
+      ga_client_id: body.gaClientId ?? '',
+      internal: body.internal === '1' ? '1' : '',
     },
     success_url: `${siteUrl}/thanks?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url:  `${siteUrl}${cancelPathFor(lang, product, guide_slugs[0])}`,
@@ -236,6 +242,8 @@ async function parseCheckoutRequest(request: Request): Promise<{
   guideSlug?: string;
   lang?: string;
   partnerId?: string;
+  gaClientId?: string;
+  internal?: string;
 }> {
   const contentType = request.headers.get('content-type') ?? '';
   if (contentType.includes('application/json')) {
@@ -252,6 +260,8 @@ async function parseCheckoutRequest(request: Request): Promise<{
       guideSlug: readFormValue(form, 'guideSlug'),
       lang: readFormValue(form, 'lang'),
       partnerId: readFormValue(form, 'partnerId'),
+      gaClientId: readFormValue(form, 'gaClientId'),
+      internal: readFormValue(form, 'internal'),
       selectedSlugs: form.getAll('selectedSlugs').map(String).filter(Boolean),
     };
   }

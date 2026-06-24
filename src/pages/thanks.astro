@@ -108,6 +108,9 @@ if (sessionId) {
     hasConfirmedPayment = session.payment_status === 'paid';
     purchaseParams = {
       session: session.id,
+      // Stessa chiave del purchase server-side (webhook): GA4 deduplica i
+      // purchase con lo stesso transaction_id → nessun doppio conteggio.
+      transaction_id: session.id,
       product: meta.product || '',
       guide_slugs: guideSlugs.join(','),
       guide_count: guideSlugs.length,

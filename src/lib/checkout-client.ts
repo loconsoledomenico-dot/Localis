@@ -35,6 +35,33 @@ export function resolveClientPartnerId(): string | null {
   return null;
 }
 
+/**
+ * GA4 client_id dal cookie `_ga` ("GA1.1.1234567890.1700000000" → client_id
+ * "1234567890.1700000000"). Lo passiamo al server così il webhook può sparare
+ * il `purchase` server-side AGGANCIATO alla stessa sessione GA del compratore,
+ * anche se questo non torna mai su /thanks. Lettura sincrona: niente gtag('get').
+ */
+export function resolveGaClientId(): string | null {
+  try {
+    const ck = document.cookie.split('; ').find((c) => c.startsWith('_ga='));
+    if (!ck) return null;
+    const raw = decodeURIComponent(ck.split('=')[1] || '');
+    const parts = raw.split('.');
+    if (parts.length >= 4) return `${parts[2]}.${parts[3]}`;
+  } catch {
+    /* storage inaccessibile: il purchase server-side userà un client_id sintetico */
+  }
+  return null;
+}
+
+function resolveInternalFlag(): boolean {
+  try {
+    return localStorage.getItem('localis_internal_traffic') === '1';
+  } catch {
+    return false;
+  }
+}
+
 export function submitCheckoutRedirect(payload: CheckoutRedirectPayload): void {
   const form = document.createElement('form');
   form.method = 'POST';
@@ -47,6 +74,15 @@ export function submitCheckoutRedirect(payload: CheckoutRedirectPayload): void {
   const partnerId = resolveClientPartnerId();
   if (partnerId) {
     appendField(form, 'partnerId', partnerId);
+  }
+
+  const gaClientId = resolveGaClientId();
+  if (gaClientId) {
+    appendField(form, 'gaClientId', gaClientId);
+  }
+
+  if (resolveInternalFlag()) {
+    appendField(form, 'internal', '1');
   }
 
   if (payload.guideSlug) {
