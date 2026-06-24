@@ -10,30 +10,34 @@ export interface Props {
 
 const { name, photo, bio, lang } = Astro.props;
 const eyebrow = lang === 'it' ? 'Dietro questo racconto' : lang === 'de' ? 'Hinter dieser Erzählung' : 'Behind this story';
+// Narratori = persone reali coinvolte nel progetto (i 5 autori di Bari)
 const realNarrators = new Set(['Domenico', 'Domenico Loconsole', 'Filippo', 'Filippo Bellomo', 'Nonno Nicola', 'Rachele Grande', 'Luigi', 'Luigi Loconsole']);
-const isComposite = !realNarrators.has(name);
-const photoNote = isComposite
-  ? lang === 'it'
-    ? 'Ritratto narrativo. Costruito su ricerca e fonti Localis.'
-    : lang === 'de'
-      ? 'Narratives Porträt. Auf Grundlage der Recherchen und Quellen von Localis gestaltet.'
-      : 'Narrative portrait. Created from Localis research and sources.'
-  : lang === 'it'
-    ? 'Persona reale coinvolta nel progetto Localis.'
-    : lang === 'de'
-      ? 'Reale Person, am Projekt Localis beteiligt.'
-      : 'Real person involved in the Localis project.';
-const photoTitle = isComposite
-  ? lang === 'it'
-    ? `${name}: ritratto narrativo costruito su ricerca e fonti Localis.`
-    : lang === 'de'
-      ? `${name}: narratives Porträt auf Grundlage der Recherchen und Quellen von Localis.`
-      : `${name}: narrative portrait created from Localis research and sources.`
-  : lang === 'it'
-    ? `${name}: persona reale coinvolta nel progetto Localis.`
-    : lang === 'de'
-      ? `${name}: reale Person, am Projekt Localis beteiligt.`
-      : `${name}: real person involved in the Localis project.`;
+// Personaggi ricostruiti da ricerca e dati reali, ma esistenza non documentata
+const researchBuilt = new Set(['Tonino', 'La voce del ducato']);
+const kind: 'real' | 'research' | 'anon' = realNarrators.has(name)
+  ? 'real'
+  : researchBuilt.has(name)
+    ? 'research'
+    : 'anon';
+const NOTE: Record<'real' | 'research' | 'anon', Record<Lang, string>> = {
+  real: {
+    it: 'Persona reale coinvolta nel progetto Localis.',
+    en: 'Real person involved in the Localis project.',
+    de: 'Reale Person, am Projekt Localis beteiligt.',
+  },
+  anon: {
+    it: 'Storia vera di una persona reale che ha scelto l\'anonimato. Nome e ritratto di fantasia.',
+    en: 'A true story from a real person who chose to stay anonymous. Fictional name and portrait.',
+    de: 'Eine wahre Geschichte einer realen Person, die anonym bleiben wollte. Name und Porträt sind fiktiv.',
+  },
+  research: {
+    it: 'Personaggio ricostruito da ricerca e dati reali. Non è certo che sia esistito davvero.',
+    en: 'A character reconstructed from research and real data. Whether they truly existed is uncertain.',
+    de: 'Eine aus Recherche und realen Daten rekonstruierte Figur. Ob sie wirklich existierte, ist ungewiss.',
+  },
+};
+const photoNote = NOTE[kind][lang];
+const photoTitle = `${name}: ${photoNote.charAt(0).toLowerCase()}${photoNote.slice(1)}`;
 ---
 <aside class="narrator-card">
   <span class="narrator-eyebrow">{eyebrow}</span>

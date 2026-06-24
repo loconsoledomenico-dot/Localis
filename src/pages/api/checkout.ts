@@ -168,7 +168,7 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
         unit_amount: totalCents,
         product_data: {
           name: PRODUCT_DISPLAY_NAME[product],
-          description: `Audioguide Localis · Puglia · ${guide_slugs.length} guide`,
+          description: `Localis · ${guide_slugs.length} racconti audio · Puglia`,
           metadata: { product },
         },
       },
