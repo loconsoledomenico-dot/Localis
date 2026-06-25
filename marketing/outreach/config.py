@@ -39,3 +39,9 @@ EMAIL_EXCLUDE_PATTERNS = [
 ]
 
 TIPI_VALIDI = ["bar", "hotel", "bb", "infopoint", "negozio", "ristorante"]
+
+# Sequenza follow-up: giorni di attesa prima del tocco successivo, per
+# n_tentativi corrente. n=1 -> dopo 4gg manda follow-up; n=2 -> dopo 6gg
+# manda il break-up. A 3 tentativi totali ci si ferma.
+FOLLOWUP_GIORNI = {1: 4, 2: 6}
+FOLLOWUP_MAX_TENTATIVI = 3

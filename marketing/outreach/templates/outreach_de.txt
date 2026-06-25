@@ -1,0 +1,34 @@
+Betreff: Partnerschaft — LocalisGuide × {nome}
+
+Sehr geehrtes Team,
+
+mein Name ist Luigi Loconsole und ich bin der Gründer von LocalisGuide (localis.guide), einem Audioguide-Dienst für Touristen, die Bari und Apulien besuchen.
+
+Unsere Guides werden von echten Einheimischen erzählt — authentische Stimmen und Geschichten von Menschen, die hier leben — direkt auf dem Smartphone des Gastes verfügbar, ohne App-Download. Wir decken Bari Vecchia, den Alten Hafen, San Nicola und weitere Ziele in Apulien ab, mit Guides auf Italienisch, Englisch und Deutsch.
+
+[TIPO:bar|ristorante]
+Wir würden gerne mit {nome} zusammenarbeiten: ein QR-Code auf den Tischen oder an der Theke würde Ihren internationalen Gästen ermöglichen, die Stadt zu entdecken, während sie sich entspannen.
+[/TIPO]
+
+[TIPO:hotel|bb]
+Wir würden gerne mit {nome} zusammenarbeiten: ein QR-Code an der Rezeption oder im Zimmer würde Ihren Gästen einen authentischen Audioguide der Stadt bieten, gestaltet von Einheimischen.
+[/TIPO]
+
+[TIPO:infopoint]
+Wir würden gerne mit Ihrem Infopoint zusammenarbeiten, den wir als natürlichen Anlaufpunkt für ankommende Touristen sehen.
+[/TIPO]
+
+[TIPO:negozio]
+Wir würden gerne mit {nome} zusammenarbeiten: ein QR-Code im Schaufenster oder im Geschäft würde Touristen anziehen, die authentische lokale Erlebnisse suchen.
+[/TIPO]
+
+Wir sind flexibel bei der Gestaltung:
+- Einfache Option: Wir hinterlegen unsere Flyer/QR-Codes bei Ihnen, ohne Kosten für Sie
+- Partnerschaft: eine Vereinbarung mit 25 % Beteiligung an jedem Kauf, der über Ihren Kanal generiert wird
+
+Gerne stellen wir Ihnen das Produkt persönlich oder in einem Gespräch vor.
+
+Mit freundlichen Grüßen,
+Luigi Loconsole
+Gründer, LocalisGuide
+localis.guide

@@ -1,3 +1,4 @@
+import datetime
 import gspread
 from google.oauth2.service_account import Credentials
 from config import SERVICE_ACCOUNT_FILE, GOOGLE_SHEET_ID, SHEET_CANDIDATI, SHEET_OUTREACH, SHEET_ANALYTICS
@@ -80,6 +81,71 @@ def get_outreach_all() -> list[dict]:
     sheet = get_spreadsheet()
     tab = get_or_create_tab(sheet, SHEET_OUTREACH)
     return tab.get_all_records()
+
+
+def estrai_email_da_records(records: list[dict]) -> set[str]:
+    """Set di email (lowercase) presenti nei record, ignorando le vuote."""
+    return {
+        str(r.get("email", "")).strip().lower()
+        for r in records
+        if str(r.get("email", "")).strip()
+    }
+
+
+def update_outreach_fields(row_index: int, fields: dict):
+    """Aggiorna celle specifiche di una riga Outreach (row_index 0-based sui
+    record, +2 per saltare header e passare a 1-based)."""
+    sheet = get_spreadsheet()
+    tab = get_or_create_tab(sheet, SHEET_OUTREACH)
+    headers = tab.row_values(1)
+    for campo, valore in fields.items():
+        if campo not in headers:
+            raise ValueError(f"Colonna '{campo}' non in Outreach. Headers: {headers}")
+        col = headers.index(campo) + 1
+        tab.update_cell(row_index + 2, col, str(valore))
+
+
+def seleziona_followup(records: list[dict], oggi, giorni_soglia: dict,
+                       max_tentativi: int = 3) -> list[tuple]:
+    """Righe Outreach pronte per un follow-up: gia contattate, senza risposta,
+    con abbastanza giorni dall'ultimo contatto. Pura, niente rete.
+    Ritorna (row_index, record, n_tentativi_corrente)."""
+    pronti = []
+    for i, r in enumerate(records):
+        stato = str(r.get("stato", "")).strip().lower()
+        if stato not in ("inviata", "follow_up"):
+            continue
+        sentiment = str(r.get("sentiment_risposta", "")).strip().lower()
+        if sentiment not in ("", "nessuno"):
+            continue
+        try:
+            n = int(str(r.get("n_tentativi", "1")).strip() or "1")
+        except ValueError:
+            n = 1
+        if n >= max_tentativi:
+            continue
+        soglia = giorni_soglia.get(n)
+        if soglia is None:
+            continue
+        try:
+            ultimo = datetime.date.fromisoformat(
+                str(r.get("data_ultimo_contatto", "")).strip()
+            )
+        except ValueError:
+            continue
+        if (oggi - ultimo).days < soglia:
+            continue
+        pronti.append((i, r, n))
+    return pronti
+
+
+def get_email_conosciute() -> set[str]:
+    """Email già in pipeline: candidati scrapati + contattati/partner.
+    Usata per non riproporre lo stesso contatto a ogni nuovo scrape."""
+    sheet = get_spreadsheet()
+    candidati = get_or_create_tab(sheet, SHEET_CANDIDATI).get_all_records()
+    outreach = get_or_create_tab(sheet, SHEET_OUTREACH).get_all_records()
+    return estrai_email_da_records(candidati) | estrai_email_da_records(outreach)
 
 
 def upsert_analytics(row: dict):

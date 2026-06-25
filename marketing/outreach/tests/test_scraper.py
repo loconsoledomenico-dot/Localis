@@ -29,6 +29,19 @@ def test_build_query():
     assert "bari" in q
     assert "email" in q.lower() or "contatti" in q.lower()
 
+def test_pulisci_nome_rimuove_separatori():
+    from scraper import pulisci_nome
+    assert pulisci_nome("Hotel Belvedere | Sito ufficiale", "") == "Hotel Belvedere"
+    assert pulisci_nome("Hotel Belvedere - Booking.com", "") == "Hotel Belvedere"
+
+def test_pulisci_nome_non_spezza_trattino_interno():
+    from scraper import pulisci_nome
+    assert pulisci_nome("B&B Santa-Teresa", "") == "B&B Santa-Teresa"
+
+def test_pulisci_nome_fallback_dominio():
+    from scraper import pulisci_nome
+    assert pulisci_nome("", "https://www.hotelbelvedere.it/contatti") == "hotelbelvedere"
+
 def test_deduplicazione_dominio():
     from scraper import deduplicazione_per_dominio
     emails = ["info@hotel.it", "prenota@hotel.it", "info@altrohotel.it"]

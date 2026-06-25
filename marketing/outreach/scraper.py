@@ -32,6 +32,34 @@ TIPO_QUERY = {
 }
 
 
+# Separatori tipici nei <title>: pipe, dash/en/em con spazi, due punti.
+# Il trattino richiede spazi su entrambi i lati per non spezzare "Santa-Teresa".
+SEPARATORI_TITOLO = re.compile(r"\s*[|·–—]\s*|\s+-\s+|\s*:\s+")
+
+# Segmenti spazzatura da scartare nel nome (boilerplate SEO / aggregatori)
+NOME_JUNK = (
+    "booking", "tripadvisor", "expedia", "sito ufficiale", "official site",
+    "official website", "home page", "homepage", "benvenuti", "welcome",
+    "contatti", "contact", "prenota", "book now", "prezzi",
+)
+
+
+def pulisci_nome(titolo: str, url: str) -> str:
+    """Estrae un nome leggibile dal <title>: primo segmento non-spazzatura,
+    fallback al dominio se il titolo è vuoto o tutto boilerplate."""
+    titolo = (titolo or "").strip()
+    if titolo:
+        segmenti = [s.strip() for s in SEPARATORI_TITOLO.split(titolo) if s.strip()]
+        for s in segmenti:
+            if not any(j in s.lower() for j in NOME_JUNK):
+                return s[:60]
+        if segmenti:
+            return segmenti[0][:60]
+    # Fallback: label di dominio (es. "hotelbelvedere.it" -> "hotelbelvedere")
+    dominio = re.sub(r"^https?://(www\.)?", "", url or "").split("/")[0]
+    return (dominio.split(".")[0] or url or "")[:60]
+
+
 def estrai_email(testo: str) -> list[str]:
     trovate = EMAIL_REGEX.findall(testo or "")
     risultati = []
@@ -86,7 +114,7 @@ def scrape_candidati(city: str, tipi: list[str], limit: int = 8) -> list[dict]:
             markdown = getattr(r, "markdown", "") or getattr(r, "description", "") or ""
             emails = deduplicazione_per_dominio(estrai_email(markdown))
 
-            nome = (getattr(r, "title", "") or url)[:80]
+            nome = pulisci_nome(getattr(r, "title", "") or "", url)
 
             for email in emails:
                 if email in visti_email:

@@ -9,15 +9,25 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 def cmd_scrape(args):
     from scraper import scrape_candidati
-    from sheets import append_candidato
+    from sheets import append_candidato, get_email_conosciute
     tipi = [t.strip() for t in args.type.split(",")]
     print(f"Scraping: city={args.city}, tipi={tipi}")
     candidati = scrape_candidati(args.city, tipi)
     print(f"Trovati {len(candidati)} candidati")
+
+    # Dedup vs email già scrapate/contattate: niente doppioni a ogni run
+    conosciute = get_email_conosciute()
+    nuovi = 0
+    gia_noti = 0
     for c in candidati:
+        if c["email"].strip().lower() in conosciute:
+            gia_noti += 1
+            continue
         append_candidato(c)
+        conosciute.add(c["email"].strip().lower())
+        nuovi += 1
         print(f"  + {c['nome']} <{c['email']}>")
-    print("Done.")
+    print(f"Done. Nuovi: {nuovi} · Gia noti (skip): {gia_noti}")
 
 
 def cmd_drafts(args):
@@ -61,6 +71,38 @@ def cmd_drafts(args):
     print(f"Bozze create: {len(risultati)}")
 
 
+def cmd_followup(args):
+    from sheets import get_outreach_all, seleziona_followup, update_outreach_fields
+    from drafts import get_gmail_service, crea_bozza_followup
+    from config import FOLLOWUP_GIORNI, FOLLOWUP_MAX_TENTATIVI
+    import datetime
+
+    oggi = datetime.date.today()
+    pronti = seleziona_followup(
+        get_outreach_all(), oggi, FOLLOWUP_GIORNI, FOLLOWUP_MAX_TENTATIVI
+    )
+    if args.id:
+        pronti = [t for t in pronti if str(t[1].get("id")) == str(args.id)]
+
+    if not pronti:
+        print("Nessun follow-up da fare.")
+        return
+
+    print(f"Follow-up pronti: {len(pronti)}")
+    service = get_gmail_service()
+    for row_index, record, n in pronti:
+        variante = f"followup{n}"
+        draft_id = crea_bozza_followup(service, record, variante)
+        update_outreach_fields(row_index, {
+            "stato": "follow_up",
+            "n_tentativi": n + 1,
+            "data_ultimo_contatto": oggi.isoformat(),
+        })
+        print(f"  ~ {record['nome']} <{record['email']}> — "
+              f"tentativo {n + 1} ({variante}) — {draft_id}")
+    print(f"Bozze follow-up create: {len(pronti)}")
+
+
 def cmd_sync(args):
     from sync import sync_da_registry, sync_da_csv
     print("Sync da partners-registry...")
@@ -98,6 +140,9 @@ def main():
     p_drafts = sub.add_parser("drafts", help="Crea bozze Gmail")
     p_drafts.add_argument("--id", help="ID specifico (opzionale)")
 
+    p_fu = sub.add_parser("followup", help="Crea bozze follow-up per chi non ha risposto")
+    p_fu.add_argument("--id", help="ID specifico (opzionale)")
+
     sub.add_parser("sync", help="Aggiorna tab Analytics")
     sub.add_parser("status", help="Stampa sommario")
 
@@ -106,6 +151,8 @@ def main():
         cmd_scrape(args)
     elif args.cmd == "drafts":
         cmd_drafts(args)
+    elif args.cmd == "followup":
+        cmd_followup(args)
     elif args.cmd == "sync":
         cmd_sync(args)
     elif args.cmd == "status":
