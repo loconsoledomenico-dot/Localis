@@ -21,13 +21,6 @@ export function formatPrice(cents: number, currency: string = '€'): string {
 }
 
 /**
- * Format a Date as ISO 8601 date-only (yyyy-mm-dd).
- */
-export function formatDate(date: Date): string {
-  return date.toISOString().split('T')[0];
-}
-
-/**
  * Mask an email for logging so PII never lands in server logs.
  * "buyer@example.com" -> "b***@example.com"
  */
