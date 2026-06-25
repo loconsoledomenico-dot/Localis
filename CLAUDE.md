@@ -20,6 +20,19 @@ Sito audioguide (Astro 6, MDX, Netlify, R2 per audio, pnpm). Risposte in italian
 - Edit fallita per "string not found" → ri-Read la zona esatta, non tentare a memoria.
 - Mai cambiare dati/numeri/prezzi non richiesti. Segnalare prima di correggere.
 
+## Regole di lavoro
+
+- Dichiara le assunzioni, non indovinare.
+- Se qualcosa non è chiaro nel codice o nei dati, chiedi.
+- tocca solo quello che serve per il task
+- modifiche chirurgiche, non toccare parti del file non necessarie al task
+- mostrami solo il diff, non il file intero
+- tieniti semplice, niente astrazioni "per il futuro": risolvi il problema di adesso
+- non fare refactoring a meno che non sia espressamente richiesto.
+- non fare promesse, se non sei sicuro chiedi.
+- non modificare nulla senza aver prima verificato con pnpm check
+
+
 ## Audio
 
 - Produzione/rigenerazione audioguide → usa la skill **`/audio`** (incapsula dry-run, render per-capitolo, background, regole R2).

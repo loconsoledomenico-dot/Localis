@@ -5,7 +5,20 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(C:/Python314/python.exe -c ' *)"
+      "Bash(C:/Python314/python.exe -c ' *)",
+      "Read(//c/Dev/Sites/LocalisGuide/**)",
+      "Bash(curl -sL -o /dev/null -w \"final: %{url_effective} \\(%{http_code}\\)\\\\n\" \"https://localis.guide/q/ar9pl4\")",
+      "Bash(curl -s \"https://localis.guide/q/ar9pl4/\")",
+      "Bash(curl -s \"https://localis.guide/p/tenace-petrol-cagnano/\")",
+      "mcp__plugin_resend_resend__list-domains",
+      "Bash(PYTHONIOENCODING=utf-8 python _send_petrolgas.py)",
+      "Bash(node private/ga4-qr-recent.mjs)",
+      "Bash(GA4_QR_DAYS=14 node --input-type=module -e ' *)",
+      "Bash(node private/ga4-partner-scan-check.mjs 7)",
+      "Bash(node private/digest-data.mjs)",
+      "Bash(PYTHONIOENCODING=utf-8 /c/Python314/python.exe daily_digest.py --dry)",
+      "Bash(PYTHONIOENCODING=utf-8 /c/Python314/python.exe daily_digest.py)",
+      "Bash(PYTHONIOENCODING=utf-8 /c/Python314/python.exe -c ' *)"
     ]
   }
 }

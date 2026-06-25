@@ -55,6 +55,7 @@ public/audio/guides/
 public/audio/guides/backup-r2/
 private/audio/
 scripts/*.mp3
+scripts/reel-pomodori/
 public/video/
 
 # Raw source texts at repo root (final versions live in src/content/scripts/)
@@ -81,3 +82,6 @@ private/gsc-auth-link.html
 # Local sandbox app data
 .sandbox-appdata/
 __pycache__/
+
+# Firecrawl scraped output (local research cache)
+.firecrawl/
