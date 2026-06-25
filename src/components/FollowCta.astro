@@ -1,0 +1,32 @@
+---
+// Ponte QR -> follower. Mostra un invito a seguire IG / entrare nel gruppo FB
+// SOLO se i link social sono configurati in src/lib/social.ts (altrimenti niente).
+import type { Lang } from '../lib/i18n';
+import { SOCIAL, hasSocial } from '../lib/social';
+
+interface Props {
+  lang?: Lang;
+  class?: string;
+}
+const { lang = 'it', class: className = '' } = Astro.props;
+
+const copy = lang === 'de'
+  ? { heading: 'Die Reise geht weiter', body: 'Jede Woche erzählen wir ein Stück Apulien, das auf keiner Karte steht. Komm mit.', ig: 'Auf Instagram folgen', fb: 'Der Gruppe beitreten' }
+  : lang === 'en'
+    ? { heading: 'The journey continues', body: 'Every week we tell a piece of Puglia the maps leave out. Come along.', ig: 'Follow on Instagram', fb: 'Join the group' }
+    : { heading: 'Il viaggio continua', body: 'Ogni settimana raccontiamo un pezzo di Puglia che le mappe non dicono. Vieni con noi.', ig: 'Seguici su Instagram', fb: 'Entra nel gruppo' };
+---
+{hasSocial() && (
+  <section class={`rounded-lg border border-border bg-surface-elev p-lg text-center ${className}`}>
+    <p class="font-display text-xl text-ink mb-2xs">{copy.heading}</p>
+    <p class="text-sm text-ink-muted max-w-prose mx-auto mb-md">{copy.body}</p>
+    <div class="flex flex-wrap items-center justify-center gap-sm">
+      {SOCIAL.instagram && (
+        <a href={SOCIAL.instagram} target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md bg-ink text-surface px-lg py-sm font-semibold text-sm no-underline hover:bg-ink/90 min-h-[44px]">{copy.ig}</a>
+      )}
+      {SOCIAL.fbGroup && (
+        <a href={SOCIAL.fbGroup} target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md border border-border text-ink px-lg py-sm font-semibold text-sm no-underline hover:bg-surface min-h-[44px]">{copy.fb}</a>
+      )}
+    </div>
+  </section>
+)}

@@ -5,6 +5,7 @@ import Eyebrow from '../../components/Eyebrow.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
+import FollowCta from '../../components/FollowCta.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -119,4 +120,6 @@ const welcomeIt =
       />
     </div>
   </section>
+
+  <FollowCta lang="it" class="max-w-wrap mx-auto px-md mt-md mb-2xl" />
 </Layout>

@@ -2,6 +2,7 @@
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
+import FollowCta from '../../components/FollowCta.astro';
 import { verifyAccessToken } from '../../lib/jwt';
 import { canonicalGuideSlugs } from '../../lib/legacy-slugs';
 import { getCollection } from 'astro:content';
@@ -76,6 +77,8 @@ const labels = lang === 'it'
         </section>
       ))}
     </div>
+
+    <FollowCta lang={lang} class="mt-3xl" />
 
     <footer class="mt-3xl pt-lg border-t border-border text-center">
       <p class="text-sm text-ink-muted mb-xs">
