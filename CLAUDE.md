@@ -33,6 +33,12 @@ Sito audioguide (Astro 6, MDX, Netlify, R2 per audio, pnpm). Risposte in italian
 - non modificare nulla senza aver prima verificato con pnpm check
 
 
+## Posizionamento, copy & brand — leggi prima di scrivere
+
+- Prima di OGNI lavoro su copy/posizionamento/brand/contenuti/blog/locandine: **leggi `BRAND.md`** (radice repo) — è il filtro editoriale, ogni pezzo deve passarlo.
+- Contesto e decisioni nelle memorie `project_brand_north_star_baseline` (north-star, baseline GA4, sequencing caldo>SEO>ads) e `project_repositioning_capire_2026_06_25` (manifesto, momento d'ascolto, le 3 frasi a 3 altitudini).
+- Chiodo bloccato: *"Le guide spiegano. Noi raccontiamo."* · "audioguida" solo in title/meta SEO, mai nel copy visibile · categoria ancora da nominare (sessione dedicata).
+
 ## Audio
 
 - Produzione/rigenerazione audioguide → usa la skill **`/audio`** (incapsula dry-run, render per-capitolo, background, regole R2).
