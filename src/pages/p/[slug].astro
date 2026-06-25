@@ -71,7 +71,7 @@ const bundleFeatures =
 
 const welcomeIt =
   partner.data.custom_landing_copy_it ||
-  `Benvenuto. Goditi la Puglia come la racconterebbe chi ci vive, direttamente dalla tua stanza al ${partner.data.display_name}.`;
+  `Benvenuto. Dalla tua stanza al ${partner.data.display_name}, ascolta la Puglia come la racconterebbe chi ci vive — così esci sapendo dove sei.`;
 ---
 <Layout
   title={`Localis · benvenuto da ${partner.data.display_name}`}
@@ -82,7 +82,7 @@ const welcomeIt =
     <div class="max-w-wrap mx-auto px-md py-2xl text-center">
       <Eyebrow class="justify-center mb-md">In collaborazione con {partner.data.display_name}</Eyebrow>
       <h1 class="font-display text-4xl text-ink leading-tight mb-md max-w-prose mx-auto">
-        Ascolta la Puglia come una storia. <em class="text-accent">Mentre sei li.</em>
+        Ascolta la Puglia come una storia. <em class="text-accent">Per capire dove sei.</em>
       </h1>
       <p class="text-lg text-ink-muted max-w-prose mx-auto">{welcomeIt}</p>
     </div>

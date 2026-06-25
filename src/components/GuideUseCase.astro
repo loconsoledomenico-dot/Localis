@@ -14,10 +14,10 @@ const durationLabel = formatDuration(guideDurationSeconds(guide, lang));
 const chapterCount = guide.chapters.length;
 
 const defaultIntro = lang === 'it'
-  ? 'Ascoltala liberamente mentre cammini, oppure parti dal punto consigliato e segui le tappe. Localis non è una navigazione turn-by-turn: ti dà contesto, storia e sguardo sul luogo.'
+  ? 'Ascoltala con calma — in camera prima di uscire, oppure sul posto mentre cammini. Localis non è una navigazione turn-by-turn: ti dà contesto, storia e lo sguardo di chi ci vive, per capire dove sei.'
   : lang === 'de'
-    ? 'Du kannst sie frei anhoeren oder, falls angegeben, am empfohlenen Startpunkt beginnen und den Ort durchqueren, waehrend sich die Geschichte entfaltet. Localis ist keine Turn-by-Turn-Navigation: Nutze die Karte deines Telefons zur Orientierung.'
-    : "You can listen freely, or, where indicated, begin from the suggested starting point and walk through the place as the story unfolds. Localis is not turn-by-turn navigation: use your phone map to find your way.";
+    ? 'Hör sie in Ruhe — im Zimmer, bevor du losgehst, oder vor Ort beim Gehen. Localis ist keine Turn-by-Turn-Navigation: Es gibt dir Kontext, Geschichte und den Blick von jemandem, der hier lebt, damit du verstehst, wo du bist.'
+    : "Listen at your own pace — in your room before heading out, or on location as you walk. Localis is not turn-by-turn navigation: it gives you context, history, and the perspective of someone who lives here, so you understand where you are.";
 
 const introOverride = lang === 'it'
   ? guide.use_case_intro_it
