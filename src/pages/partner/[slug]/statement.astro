@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { fetchPartnerSales, formatEur } from '../../../lib/referral';
+import { loadPartnerRates } from '../../../lib/partner-rates';
 import { getPayouts, sumPayouts, PAYOUT_THRESHOLD_CENTS } from '../../../lib/payouts';
 
 const { slug } = Astro.params;
@@ -27,7 +28,8 @@ if (!partner.data.statement_token || reqToken !== partner.data.statement_token) 
 }
 
 // Fetch only this partner's sales
-const allSales = await fetchPartnerSales();
+const rates = await loadPartnerRates();
+const allSales = await fetchPartnerSales(undefined, rates);
 const sales = allSales
   .filter((s) => s.partner_id === slug)
   .sort((a, b) => b.created.getTime() - a.created.getTime());
