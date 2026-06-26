@@ -5,7 +5,9 @@ Master ledger dei partner referral. Aggiornare manualmente. Numeri da GA4/PostHo
 **Pattern URL QR:** `https://localis.guide/p/<slug>`
 **Vincoli slug:** lowercase, 3-41 caratteri, regex `[a-z0-9][a-z0-9-]{2,40}`; no underscore, no spazi, no maiuscole.
 **Cookie referral:** 30 giorni.
-**Revenue share:** 25% del netto su ogni acquisto attribuito, impostato in `src/pages/api/checkout.ts`.
+**Revenue share:** 25% del **lordo** su ogni acquisto attribuito (`commission_rate` nella scheda partner, default 0.25; il calcolo lavora sul lordo Stripe).
+
+**Tier agente (Antonello):** per i partner procurati dall'agente di commercio si imposta sulla scheda `.mdx` `commission_rate: 0.10` + `agent: antonello`. Lo split diventa 10% al partner + 15% all'agente (totale invariato 25%). Il 15% appare nella dashboard `/admin/referral` (sezione "Commissioni agente") e nel `partner-report.py`. Pagamento agente manuale, fuori dal ledger payout partner.
 
 ---
 
