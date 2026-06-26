@@ -1,5 +1,6 @@
 ---
 import { fetchPartnerSales, groupByPartner, formatEur } from '../../lib/referral';
+import { loadPartnerRates } from '../../lib/partner-rates';
 import {
   getPayouts,
   addPayout,
@@ -103,7 +104,8 @@ let summaries: ReturnType<typeof groupByPartner> = [];
 let error: string | null = null;
 
 try {
-  sales = await fetchPartnerSales(createdAfter);
+  const rates = await loadPartnerRates();
+  sales = await fetchPartnerSales(createdAfter, rates);
   summaries = groupByPartner(sales);
 } catch (err) {
   error = err instanceof Error ? err.message : String(err);
@@ -111,6 +113,8 @@ try {
 
 const totalGross = summaries.reduce((s, p) => s + p.gross_total, 0);
 const totalPayout = summaries.reduce((s, p) => s + p.payout_total, 0);
+const agentSummaries = summaries.filter((p) => p.agent);
+const totalAgentPayout = agentSummaries.reduce((s, p) => s + p.agent_payout_total, 0);
 
 // Pagamenti registrati per partner (saldo = maturato − pagato).
 // NB: il maturato rispetta il filtro ?from=, i pagamenti no — il saldo è
@@ -257,8 +261,12 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
       <div class="kpi-value">{formatEur(totalGross)}</div>
     </div>
     <div class="kpi">
-      <div class="kpi-label">Maturato (25%)</div>
+      <div class="kpi-label">Maturato partner</div>
       <div class="kpi-value">{formatEur(totalPayout)}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Agente (15%)</div>
+      <div class="kpi-value">{formatEur(totalAgentPayout)}</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Già pagato</div>
@@ -415,6 +423,39 @@ const generatedAt = new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome'
       )
     }
   </section>
+
+  <!-- Commissioni agente -->
+  {agentSummaries.length > 0 && (
+    <section>
+      <h2>Commissioni agente (15%)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Agente</th>
+            <th>Partner</th>
+            <th>Vendite</th>
+            <th>Revenue lordo</th>
+            <th>Da pagare (15%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {agentSummaries.map((p) => (
+            <tr>
+              <td>{p.agent}</td>
+              <td><span class="tag">{p.partner_id}</span></td>
+              <td>{p.sales_count}</td>
+              <td>{formatEur(p.gross_total)}</td>
+              <td class="payout">{formatEur(p.agent_payout_total)}</td>
+            </tr>
+          ))}
+          <tr>
+            <td colspan="4" style="text-align:right;font-weight:700">Totale agente</td>
+            <td class="payout" style="font-weight:700">{formatEur(totalAgentPayout)}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  )}
 
   <!-- Tutte le vendite referral (cronologico) -->
   <section>
