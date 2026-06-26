@@ -101,6 +101,7 @@ const partners = defineCollection({
     contact_email: z.email(),
     stripe_account_id: z.string().regex(/^acct_/),
     commission_rate: z.number().min(0).max(0.5).default(0.25),
+    agent: z.string().optional(),
     created_at: z.date(),
     status: z.enum(['active', 'paused', 'terminated']),
     reporting_mode: z.enum(['physical_qr', 'landing_only']).default('physical_qr'),
