@@ -1,5 +1,20 @@
 import { getStripe } from './stripe';
 
+export const AGENT_COMMISSION_RATE = 0.15;
+
+/** Split del lordo (cents) tra partner e agente. Floor sui centesimi. */
+export function splitCommission(
+  grossCents: number,
+  commissionRate: number,
+  hasAgent: boolean,
+  agentRate: number = AGENT_COMMISSION_RATE,
+): { partner: number; agent: number } {
+  return {
+    partner: Math.floor(grossCents * commissionRate),
+    agent: hasAgent ? Math.floor(grossCents * agentRate) : 0,
+  };
+}
+
 export interface PartnerSale {
   session_id: string;
   created: Date;
