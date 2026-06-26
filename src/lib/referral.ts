@@ -1,4 +1,5 @@
 import { getStripe } from './stripe';
+import type { PartnerRate } from './partner-rates';
 
 export const AGENT_COMMISSION_RATE = 0.15;
 
@@ -22,7 +23,9 @@ export interface PartnerSale {
   product: string;
   amount_total: number;   // cents gross
   amount_net: number;     // cents after Stripe fee estimate
-  payout_due: number;     // cents (25% of gross)
+  payout_due: number;     // cents (commission_rate del partner sul lordo)
+  agent: string | null;
+  agent_payout: number;   // cents
   currency: string;
   customer_email: string | null;
 }
@@ -31,7 +34,9 @@ export interface PartnerSummary {
   partner_id: string;
   sales_count: number;
   gross_total: number;  // cents
-  payout_total: number; // cents (25%)
+  payout_total: number; // cents
+  agent: string | null;
+  agent_payout_total: number; // cents
   sales: PartnerSale[];
 }
 
@@ -39,7 +44,10 @@ export interface PartnerSummary {
  * Fetch all completed Stripe checkout sessions that have a partner_id in metadata.
  * Paginates through all sessions (no limit other than created_after if passed).
  */
-export async function fetchPartnerSales(createdAfter?: Date): Promise<PartnerSale[]> {
+export async function fetchPartnerSales(
+  createdAfter?: Date,
+  rates?: Map<string, PartnerRate>,
+): Promise<PartnerSale[]> {
   const stripe = getStripe();
   const sales: PartnerSale[] = [];
 
@@ -58,7 +66,10 @@ export async function fetchPartnerSales(createdAfter?: Date): Promise<PartnerSal
     if (!partner_id) continue;
 
     const gross = session.amount_total ?? 0;
-    const payout = Math.floor(gross * 0.25);
+    const rate = rates?.get(partner_id);
+    const commissionRate = rate?.commission_rate ?? 0.25;
+    const agent = rate?.agent ?? null;
+    const { partner: payout, agent: agentPayout } = splitCommission(gross, commissionRate, agent !== null);
 
     sales.push({
       session_id: session.id,
@@ -68,6 +79,8 @@ export async function fetchPartnerSales(createdAfter?: Date): Promise<PartnerSal
       amount_total: gross,
       amount_net: gross, // net calculation not critical here
       payout_due: payout,
+      agent,
+      agent_payout: agentPayout,
       currency: session.currency ?? 'eur',
       customer_email: session.customer_details?.email ?? null,
     });
@@ -88,6 +101,7 @@ export function groupByPartner(sales: PartnerSale[]): PartnerSummary[] {
       existing.sales_count++;
       existing.gross_total += sale.amount_total;
       existing.payout_total += sale.payout_due;
+      existing.agent_payout_total += sale.agent_payout;
       existing.sales.push(sale);
     } else {
       map.set(sale.partner_id, {
@@ -95,6 +109,8 @@ export function groupByPartner(sales: PartnerSale[]): PartnerSummary[] {
         sales_count: 1,
         gross_total: sale.amount_total,
         payout_total: sale.payout_due,
+        agent: sale.agent,
+        agent_payout_total: sale.agent_payout,
         sales: [sale],
       });
     }
