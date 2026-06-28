@@ -1,0 +1,127 @@
+---
+export const prerender = true;
+import Layout from '../../../components/Layout.astro';
+import Eyebrow from '../../../components/Eyebrow.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import PriceCard from '../../../components/PriceCard.astro';
+import SectionDivider from '../../../components/SectionDivider.astro';
+import FollowCta from '../../../components/FollowCta.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const partners = await getCollection('partners');
+  return partners
+    .filter((p) => p.data.status === 'active')
+    // infopoint-bari ha una landing EN dedicata (route statica): la dinamica la salta.
+    .filter((p) => p.data.slug !== 'infopoint-bari')
+    .map((p) => ({
+      params: { slug: p.data.slug },
+      props: { partner: p },
+    }));
+}
+
+type AreaKey = 'bari' | 'valle' | 'gargano';
+
+const AREA_CITY_MAP: Record<AreaKey, Set<string>> = {
+  bari: new Set(['bari']),
+  valle: new Set(['polignano', 'alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano']),
+  gargano: new Set(['gargano', 'vieste', 'rodi-garganico', 'peschici', 'vico-del-gargano', 'manfredonia', 'isole-tremiti']),
+};
+
+function resolveArea(city: string): AreaKey {
+  for (const [area, cities] of Object.entries(AREA_CITY_MAP) as [AreaKey, Set<string>][]) {
+    if (cities.has(city)) return area;
+  }
+  return 'bari';
+}
+
+const { partner } = Astro.props;
+const slug = partner.data.slug;
+const area = resolveArea(partner.data.city);
+
+const guides = (await getCollection('guides'))
+  .filter((g) => AREA_CITY_MAP[area].has(g.data.city) && g.data.status === 'live')
+  .sort((a, b) => a.data.published_at.getTime() - b.data.published_at.getTime());
+
+const primaryGuideSlug = guides[0]?.data.slug ?? 'bari-vecchia';
+const bundleProduct =
+  area === 'gargano' ? 'gargano-completa'
+  : area === 'valle' ? 'valle-completa'
+  : 'bari-completa';
+
+const bundleFeatures =
+  area === 'gargano'
+    ? [
+        'All 6 Gargano stories',
+        '~3h 20min of storytelling · 6 different landscapes',
+        'Save EUR 9.95 vs single guides',
+        'Unlimited access · No app',
+      ]
+    : area === 'valle'
+      ? [
+          "All 6 Valle d'Itria stories",
+          '~3h 20min of storytelling · 6 different places',
+          'Save EUR 9.95 vs single guides',
+          'Unlimited access · No app',
+        ]
+      : [
+          'All 6 Bari stories',
+          '~2h 20min of storytelling · 6 different voices',
+          'Save EUR 9.95 vs single guides',
+          'Unlimited access · No app',
+        ];
+
+const welcomeEn =
+  partner.data.custom_landing_copy_en ||
+  `Welcome. From your room at ${partner.data.display_name}, hear Puglia the way someone who lives here would tell it — so you step out knowing where you are.`;
+---
+<Layout
+  title={`Localis · welcome from ${partner.data.display_name}`}
+  description={`Narrative audio guides to Puglia. Enjoy a special experience thanks to ${partner.data.display_name}.`}
+  lang="en"
+  langUrlsOverride={{ it: `/p/${slug}/`, en: `/en/p/${slug}/`, de: `/de/p/${slug}/` }}
+>
+  <section class="bg-surface-elev border-b border-border">
+    <div class="max-w-wrap mx-auto px-md py-2xl text-center">
+      <Eyebrow class="justify-center mb-md">In partnership with {partner.data.display_name}</Eyebrow>
+      <h1 class="font-display text-4xl text-ink leading-tight mb-md max-w-prose mx-auto">
+        Hear Puglia as a story. <em class="text-accent">To understand where you are.</em>
+      </h1>
+      <p class="text-lg text-ink-muted max-w-prose mx-auto">{welcomeEn}</p>
+    </div>
+  </section>
+
+  <section class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Available stories" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+      {guides.map((g, i) => (
+        <GuideCard guide={g} lang="en" index={i} />
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-wrap mx-auto px-md py-2xl">
+    <SectionDivider label="Choose your plan" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-md max-w-[44rem] mx-auto">
+      <PriceCard
+        product="single"
+        guideSlug={primaryGuideSlug}
+        lang="en"
+        features={[
+          '1 story of your choice',
+          'Unlimited access',
+          'No app — opens with a link',
+          'Italian and English',
+        ]}
+      />
+      <PriceCard
+        product={bundleProduct}
+        lang="en"
+        primary
+        features={bundleFeatures}
+      />
+    </div>
+  </section>
+
+  <FollowCta lang="en" class="max-w-wrap mx-auto px-md mt-md mb-2xl" />
+</Layout>

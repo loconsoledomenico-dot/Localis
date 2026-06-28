@@ -2,7 +2,7 @@
 export const prerender = true;
 import Layout from '../components/Layout.astro';
 ---
-<Layout title="404 · Localis" lang="it" robots="noindex,nofollow">
+<Layout title="404 · Localis" lang="it" robots="noindex,nofollow" langUrlsOverride={{ it: '/404/' }}>
   <main class="max-w-narrow mx-auto px-md py-3xl text-center">
     <p class="font-display italic text-2xl text-ink-muted mb-md">Questa storia non esiste.</p>
     <h1 class="font-display text-4xl text-ink mb-lg">404</h1>

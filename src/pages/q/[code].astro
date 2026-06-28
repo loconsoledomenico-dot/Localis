@@ -41,6 +41,7 @@ const { redirectTo } = Astro.props as { redirectTo: string | null };
     description="Le audioguide narrative della Puglia."
     lang="it"
     robots="noindex"
+    langUrlsOverride={{ it: Astro.url.pathname }}
   >
     <section class="max-w-wrap mx-auto px-md py-2xl text-center">
       <Eyebrow class="justify-center mb-md">Benvenuto in Localis</Eyebrow>
