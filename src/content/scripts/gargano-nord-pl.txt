@@ -1,0 +1,276 @@
+GARGANO — ZAPOMNIANE WYBRZEŻE
+Głos: Ferdinando, 68 lat, czwarte pokolenie na rodzinnym trabucco, dziś restaurator
+
+=====
+CAP. 1 — INTRO: TRABUCCO
+voice: dante
+
+Usiądź na chwilę na krawędzi. <break time="1.2s"/>
+
+Spójrz w dół. <break time="0.8s"/> Woda jest pod twoimi stopami. <break time="0.8s"/> Belki z jałowca trzymają wszystko razem — <break time="0.5s"/> to samo drewno co wtedy, gdy mój pradziadek budował tę konstrukcję. <break time="0.8s"/> Dziewięćdziesiąt lat soli, wiatru, fal. <break time="0.8s"/> Wciąż trzymają. <break time="1.5s"/>
+
+Nazywam się Ferdinando. <break time="0.8s"/> Sześćdziesiąt osiem lat. <break time="0.8s"/> Czwarte pokolenie na tym trabucco. <break time="0.8s"/> Mój pradziadek zbudował je w latach trzydziestych, <break time="0.5s"/> mój dziadek łowił tu całe życie, <break time="0.5s"/> ojciec też. <break time="0.8s"/> Ja zacząłem w wieku jedenastu lat — <break time="0.5s"/> wstawać o czwartej, <break time="0.5s"/> opuszczać sieci, <break time="0.5s"/> wyciągać to, co było. <break time="1.2s"/>
+
+Trzydzieści lat temu otworzyłem restaurację na trabucco. <break time="0.8s"/> Nie dlatego, że przestałem łowić — <break time="0.5s"/> dlatego, że ryba, którą łowiłem, była tak dobra, <break time="0.5s"/> że warto było ją ugotować tutaj, <break time="0.5s"/> na miejscu, <break time="0.5s"/> z morzem pod spodem. <break time="1.2s"/>
+
+Opowiem ci to wybrzeże tak, jak zna je ktoś, kto spędził tu życie. <break time="0.8s"/> Z trabucco widać wszystko. <break time="0.8s"/> I wszystko się rozumie. <break time="1.5s"/>
+
+=====
+CAP. 2 — TRABUCCHI: MASZYNY DO POŁOWU NA MORZU
+voice: dante
+
+Trabucco to nie chatka na morzu. <break time="1.0s"/>
+
+To maszyna. <break time="1.2s"/>
+
+Maszyna do połowu zbudowana na skale, <break time="0.5s"/> zaprojektowana z precyzją, która zadziwia do dziś. <break time="0.8s"/> Wysięgniki — te długie belki, które rozkładają się wachlarzem nad morzem — <break time="0.5s"/> trzymają sieć. <break time="0.8s"/> Sieć opuszcza się pionowo do wody przez układ lin i przeciwwag. <break time="0.8s"/> Kiedy ryby przepływają nad nią, <break time="0.5s"/> wyciągasz. <break time="1.2s"/>
+
+Siła to siła człowieka — <break time="0.5s"/> żadnych silników, żadnego prądu. <break time="0.8s"/> Układ dźwigni i bloków, który mój pradziadek znał na pamięć <break time="0.5s"/> i którego ja nauczyłem się od ojca <break time="0.5s"/> patrząc, <break time="0.5s"/> nie czytając. <break time="1.2s"/>
+
+Trabucchi na Gargano to rzecz konkretna — <break time="0.5s"/> takich nie znajdziesz nigdzie indziej na świecie. <break time="0.8s"/> Są też w Abruzji i w Molise, <break time="0.5s"/> ale te z Gargano są najstarsze, <break time="0.5s"/> największe, <break time="0.5s"/> najlepiej zbudowane. <break time="1.2s"/>
+
+Wybrzeże między Vieste a Peschici miało ich około pięćdziesięciu. <break time="0.8s"/> Dziś zostało jakieś dwadzieścia, <break time="0.5s"/> prawie wszystkie zamienione w restauracje. <break time="0.8s"/> Ryby wciąż się łowi — <break time="0.5s"/> ale to, co masz wieczorem na talerzu, <break time="0.5s"/> przypłynęło na tej sieci tego samego ranka. <break time="0.8s"/> Nie wydaje mi się to złe. <break time="1.5s"/>
+
+=====
+CAP. 3 — LESINA: JEZIORO MIĘDZY MORZEM A LĄDEM
+voice: dante
+
+Jezioro Lesina to pierwsza niespodzianka północnego Gargano. <break time="1.2s"/>
+
+Jedziesz wzdłuż drogi krajowej i widzisz morze po prawej. <break time="0.8s"/> A potem nagle, po lewej, <break time="0.5s"/> jezioro. <break time="0.8s"/> Czterdzieści dwa kilometry kwadratowe nieruchomej wody, <break time="0.5s"/> oddzielonej od Adriatyku pasem piasku szerokim na kilkaset metrów. <break time="1.2s"/>
+
+Woda jest słonawa — <break time="0.5s"/> ani morska, ani słodka. <break time="0.8s"/> Woda morska wpływa dwoma sztucznymi kanałami, <break time="0.5s"/> słodka spływa z potoków. <break time="0.8s"/> W efekcie powstaje wyjątkowe środowisko — <break time="0.5s"/> węgorze, labraksy, dorady <break time="0.5s"/> rosną w warunkach innych niż na otwartym morzu. <break time="1.2s"/>
+
+Ostrygi z Lesina. <break time="0.8s"/> Słyszałem o nich całe życie. <break time="0.8s"/> Temperatury jeziora są idealne — <break time="0.5s"/> ani za ciepłe, ani za zimne. <break time="0.8s"/> Ostrygi rosną powoli, <break time="0.5s"/> żywią się planktonem jeziora <break time="0.5s"/> i wykształcają smak inny niż jakakolwiek ostryga morska. <break time="0.8s"/> Słodszy, <break time="0.5s"/> z mniejszą ilością jodu, <break time="0.5s"/> z czymś mineralnym, czego nie umiem opisać. <break time="1.2s"/>
+
+Miasteczko Lesina leży na północnym brzegu jeziora. <break time="0.8s"/> Trzy tysiące mieszkańców, <break time="0.5s"/> małe, ale żywe stare miasto, <break time="0.5s"/> kościół Santa Maria Assunta z widokiem na wodę. <break time="0.8s"/> Masowi turyści tu nie docierają — <break time="0.5s"/> to miejsce dla tego, kto szuka czegoś prawdziwego. <break time="1.5s"/>
+
+=====
+CAP. 4 — RODI GARGANICO: CYTRUSY NAD MORZEM
+voice: dante
+
+Rodi Garganico ma najpiękniejszy zapach na Gargano. <break time="1.2s"/>
+
+Zimą, <break time="0.5s"/> kiedy jedziesz w stronę miasteczka, <break time="0.5s"/> czujesz cytrusy, zanim je zobaczysz. <break time="0.8s"/> Pomarańcze, mandarynki, cytryny — <break time="0.5s"/> uprawiane na tarasach schodzących ku morzu <break time="0.5s"/> od stuleci. <break time="1.0s"/>
+
+Położenie jest szczególne. <break time="0.8s"/> Rodi leży na przylądku zwróconym na zachód, na Zatokę Manfredonia. <break time="0.8s"/> Zachód słońca stąd to poważna sprawa — <break time="0.5s"/> słońce zapada w wodę przed tobą, <break time="0.5s"/> wyspy Diomedee na horyzoncie — <break time="0.5s"/> dawna nazwa Tremiti, <break time="0.5s"/> ta, której używali Grecy. <break time="1.2s"/>
+
+Stare miasto jest średniowieczne — <break time="0.5s"/> wąskie uliczki, <break time="0.5s"/> niskie łuki, <break time="0.5s"/> schody schodzące ku portowi. <break time="0.8s"/> Port wciąż należy do rybaków — <break time="0.5s"/> łodzie wypływają nocą <break time="0.5s"/> i wracają rano. <break time="0.8s"/> Ta sama scena co pięćdziesiąt lat temu. <break time="1.2s"/>
+
+Ryba z Rodi jest słynna na całym Gargano. <break time="0.8s"/> Nie z jakiegoś konkretnego powodu — <break time="0.5s"/> dlatego, że rybacy z Rodi naprawdę wypływają każdej nocy, <break time="0.5s"/> przy każdej pogodzie, <break time="0.5s"/> i przywożą to, co znajdą. <break time="0.8s"/> To nie folklor. <break time="0.8s"/> To praca. <break time="1.5s"/>
+
+=====
+CAP. 5 — PESCHICI: MIASTECZKO, KTÓRE NIE SPADA
+voice: dante
+
+Peschici wygląda, jakby od tysiąca lat miało za chwilę spaść do morza. <break time="1.2s"/>
+
+I nie spada. <break time="1.5s"/>
+
+Stare miasto czepia się skalnej ostrogi <break time="0.5s"/> na krawędzi północnego przylądka. <break time="0.8s"/> Białe domy zbudowane są jeden na drugim, <break time="0.5s"/> połączone zewnętrznymi schodami, <break time="0.5s"/> łukami przechodzącymi nad uliczkami, <break time="0.5s"/> tarasami wychodzącymi w pustkę. <break time="1.2s"/>
+
+Normański zamek na szczycie — <break time="0.5s"/> dziesiąty wiek, wciąż stoi, <break time="0.5s"/> wciąż z wieżami. <break time="0.8s"/> Zbudowali go Normanowie, by bronić wybrzeża przed najazdami saraceńskimi. <break time="0.8s"/> Tysiąc lat później wciąż tam jest, <break time="0.5s"/> a widok z góry obejmuje całe wybrzeże aż po Vieste. <break time="1.2s"/>
+
+Latem Peschici wybucha. <break time="0.8s"/> Trzy tysiące mieszkańców staje się pięćdziesięcioma tysiącami. <break time="0.8s"/> Uliczki wypełniają się turystami z Niemiec, Holandii, Włoch. <break time="0.8s"/> Przed restauracjami stoją kolejki. <break time="0.8s"/> Każdy taras to stolik. <break time="1.2s"/>
+
+Zimą Peschici to inne miejsce. <break time="0.8s"/> Są starsi, którzy grają w karty w barze, <break time="0.5s"/> rybacy, którzy naprawiają sieci w porcie, <break time="0.5s"/> dzieci, które bawią się na schodach. <break time="0.8s"/> To prawdziwe miasteczko. <break time="0.8s"/> Nie sceneria. <break time="1.5s"/>
+
+=====
+CAP. 6 — DROGA: RODI-PESCHICI
+voice: dante
+
+Jest droga, której nie zapomnisz. <break time="1.2s"/>
+
+Droga lokalna z Rodi Garganico do Peschici. <break time="0.8s"/> To nie autostrada. <break time="0.8s"/> Nie jest wygodna. <break time="0.8s"/> Miejscami jest wąska, <break time="0.5s"/> ze ślepymi zakrętami <break time="0.5s"/> i pustką po prawej stronie. <break time="0.8s"/> Ale tego, co widzisz z tej drogi, <break time="0.5s"/> nie zobaczysz nigdzie indziej. <break time="1.2s"/>
+
+W pewnym momencie droga się wznosi. <break time="0.8s"/> Przylądek podnosi się nad morzem. <break time="0.8s"/> I nagle, <break time="0.5s"/> za barierką, <break time="0.5s"/> masz pod sobą sto metrów białej skały <break time="0.5s"/> a potem morze. <break time="1.0s"/> Zielone, <break time="0.5s"/> płaskie, <break time="0.5s"/> z zatoczkami, które otwierają się w skale jak nacięcia. <break time="0.8s"/> Diomedee na horyzoncie. <break time="0.8s"/> W niektóre dni, przy czystym niebie, <break time="0.5s"/> czujesz się jak zawieszony. <break time="1.2s"/>
+
+Wzdłuż drogi są miejsca, gdzie można się zatrzymać — <break time="0.5s"/> zatoczki na poboczu, <break time="0.5s"/> jakieś naturalne poszerzenia. <break time="0.8s"/> Ludzie się zatrzymują, <break time="0.5s"/> wysiadają z auta, <break time="0.5s"/> robią zdjęcia. <break time="0.8s"/> Rozumiem to. <break time="0.8s"/> Ja też wciąż się zatrzymuję, <break time="0.5s"/> po czterdziestu latach jeżdżenia tędy. <break time="1.2s"/>
+
+Ale powiem ci jedno. <break time="1.0s"/>
+
+Ta droga jest wąska. <break time="0.8s"/> Zakręty pojawiają się szybko. <break time="0.8s"/> Jeśli się zatrzymujesz, <break time="0.5s"/> zatrzymaj się całkowicie poza jezdnią — <break time="0.5s"/> nie do połowy w środku, do połowy na zewnątrz. <break time="0.8s"/> Latem przejeżdżają kampery, <break time="0.5s"/> autokary, <break time="0.5s"/> motocykle. <break time="0.8s"/> Manewr powrotu może być niebezpieczny, <break time="0.5s"/> jeśli nie patrzysz uważnie. <break time="0.8s"/> Widok wart jest postoju. <break time="0.5s"/> Postój trzeba zrobić spokojnie. <break time="1.5s"/>
+
+Ja zawsze radzę przejechać ją wczesnym rankiem, <break time="0.5s"/> kiedy nie ma jeszcze ruchu. <break time="0.8s"/> Poranne światło na tym wybrzeżu jest inne niż o jakiejkolwiek innej porze. <break time="0.8s"/> Morze jest prawie białe. <break time="0.8s"/> Cienie są długie. <break time="0.8s"/> I jesteś sam. <break time="1.5s"/>
+
+=====
+CAP. 7 — MORZE: GDZIE SIĘ KĄPAĆ
+voice: dante
+
+Problem północnego Gargano polega na tym, że najpiękniejszego morza nie widać z drogi. <break time="1.2s"/>
+
+Wielkich plaż nie ma. <break time="0.8s"/> To, co jest, to zatoczki — <break time="0.5s"/> szczeliny w białej skale, <break time="0.5s"/> dostępne pieszo albo łodzią, <break time="0.5s"/> z wodą, która miejscami jest tak przejrzysta, <break time="0.5s"/> że zdaje się, że jej nie ma. <break time="1.2s"/>
+
+Z Peschici, wzdłuż wybrzeża w stronę Vieste, <break time="0.5s"/> są zatoczki dostępne pieszo, schodząc oznaczonymi ścieżkami. <break time="0.8s"/> To nie są wygodne spacery — <break time="0.5s"/> to zejścia po skale, <break time="0.5s"/> czasem z wykutymi stopniami, <break time="0.5s"/> czasem bez. <break time="0.8s"/> Ale na dole znajdziesz wodę, która nie ma koloru, <break time="0.5s"/> bo jest zbyt przejrzysta, by go mieć. <break time="1.2s"/>
+
+Alternatywą jest wynajem pontonu. <break time="0.8s"/> Z portu w Peschici albo w Rodi <break time="0.5s"/> wynajmuje się ponton nawet bez patentu. <break time="0.8s"/> Dwie godziny na morzu, <break time="0.5s"/> ty wybierasz, gdzie się zatrzymać. <break time="0.8s"/> To najlepszy sposób, żeby zobaczyć to wybrzeże. <break time="0.8s"/> Z morza rozumiesz, jak jest zbudowane. <break time="0.8s"/> Z lądu widzisz tylko drogę. <break time="1.2s"/>
+
+Jedna ważna rzecz: <break time="0.8s"/> najpiękniejsze zatoczki to te bez nazwy. <break time="0.8s"/> Nie znajdziesz ich na Google Maps. <break time="0.8s"/> Znajdziesz je, pytając kogoś z miejsca — <break time="0.5s"/> wypożyczającego łodzie, <break time="0.5s"/> barmana w porcie, <break time="0.5s"/> rybaka, który naprawia sieci. <break time="0.8s"/> Zapytaj: <break time="0.5s"/> a wy gdzie chodzicie się kąpać? <break time="0.8s"/> To jest to miejsce. <break time="1.5s"/>
+
+=====
+CAP. 8 — POCZĄTKI: DLACZEGO ISTNIEJĄ TRABUCCHI
+voice: dante
+
+Mój pradziadek nie zbudował trabucco dlatego, że był romantykiem. <break time="1.2s"/>
+
+Zbudował je, bo był głodny. <break time="1.5s"/>
+
+To wybrzeże jest skaliste. <break time="0.8s"/> Nie ma plaż, na które można wyciągnąć łódź i wypłynąć ze zwykłymi sieciami. <break time="0.8s"/> Dno opada od razu, <break time="0.5s"/> prądy są nieprzewidywalne, <break time="0.5s"/> morze może się podnieść w pół godziny. <break time="0.8s"/> Łowienie z otwartego morza tutaj oznaczało ryzykować życie za każdym razem. <break time="1.2s"/>
+
+Trabucco to odpowiedź na ten problem. <break time="0.8s"/> Budujesz na skale, <break time="0.5s"/> która jest stabilna. <break time="0.8s"/> Opuszczasz sieć z góry na dół, <break time="0.5s"/> bez wypływania na morze. <break time="0.8s"/> Czekasz, aż ryba przepłynie. <break time="0.8s"/> A kiedy przepływa, wyciągasz. <break time="1.2s"/>
+
+Pomysł nie jest garganijski. <break time="0.8s"/> Pochodzi z Bliskiego Wschodu — <break time="0.5s"/> podobne maszyny istniały w Syrii i w Libanie już w średniowieczu. <break time="0.8s"/> Dotarł do Włoch wraz z handlem śródziemnomorskim. <break time="0.8s"/> Na Gargano przyjął się, bo to wybrzeże wydawało się stworzone właśnie dla takich konstrukcji. <break time="1.2s"/>
+
+Nazwa „trabucco” pochodzi ze starofrancuskiego „trabuc” — <break time="0.5s"/> średniowiecznej maszyny wojennej, która miotała kamienie. <break time="0.8s"/> Podobieństwo tkwi w mechanizmie: <break time="0.5s"/> przeciwwagi, <break time="0.5s"/> dźwignie, <break time="0.5s"/> wykalibrowana siła. <break time="0.8s"/> Tyle że zamiast miotać kamienie, <break time="0.5s"/> opuszcza sieci. <break time="1.2s"/>
+
+Mój pradziadek nic z tego nie wiedział. <break time="0.8s"/> Wiedział, że to działa. <break time="0.8s"/> I że tym karmił rodzinę. <break time="0.8s"/> To wystarczy. <break time="1.5s"/>
+
+=====
+CAP. 9 — WYBRZEŻE: MIĘDZY TRABUCCHI A ZATOCZKAMI
+voice: dante
+
+Wybrzeże między Peschici a Vieste jest najpiękniejsze na północnym Gargano. <break time="1.2s"/>
+
+Nie ma szerokich plaż. <break time="0.8s"/> Są zatoczki z białej skały, <break time="0.5s"/> małe, <break time="0.5s"/> dostępne pieszo, schodząc stromymi ścieżkami, <break time="0.5s"/> albo łodzią wzdłuż brzegu. <break time="1.0s"/>
+
+Wzdłuż wybrzeża wciąż są rodzinne trabucchi. <break time="0.8s"/> Te, które nie stały się restauracjami, <break time="0.5s"/> wciąż są w użyciu — <break time="0.5s"/> synowie, wnukowie, <break time="0.5s"/> wciąż łowią tak, jak robiło się zawsze. <break time="0.8s"/> Nie z konieczności. <break time="0.8s"/> Żeby nie zapomnieć, jak się to robi. <break time="1.2s"/>
+
+Moje trabucco jest między Peschici a Vieste. <break time="0.8s"/> Wczesnym rankiem, <break time="0.5s"/> kiedy słońce jest jeszcze nisko, <break time="0.5s"/> woda pod belkami jest zielona i przejrzysta. <break time="0.8s"/> Widzisz dno. <break time="0.8s"/> Widzisz przepływające ryby. <break time="0.8s"/> Potem opuszczasz sieć i czekasz. <break time="1.2s"/>
+
+Mój syn nie chce łowić. <break time="0.8s"/> Studiuje inżynierię w Bolonii. <break time="0.8s"/> Rozumiem to. <break time="0.8s"/> Ale mam nadzieję, że kiedy wraca, <break time="0.5s"/> czasem, <break time="0.5s"/> przychodzi tu ze mną o poranku. <break time="0.8s"/> Żeby nie stracić wątku. <break time="1.5s"/>
+
+=====
+CAP. 10 — KUCHNIA: OD TRABUCCO DO TALERZA
+voice: dante
+
+To, co gotuję na trabucco, nie ma stałego menu. <break time="1.2s"/>
+
+Zależy od tego, co złowiłem. <break time="0.8s"/> Zależy od morza. <break time="0.8s"/> Zależy od pory roku. <break time="1.0s"/>
+
+Jeśli tego ranka weszły makrele, <break time="0.5s"/> je się makrele. <break time="0.8s"/> Jeśli weszły mątwy, <break time="0.5s"/> je się mątwy. <break time="0.8s"/> Jeśli nie weszło nic dobrego, <break time="0.5s"/> je się to od rybaka z poprzedniego dnia. <break time="0.8s"/> Ale rzadko się zdarza, żeby nic nie weszło. <break time="1.2s"/>
+
+Danie, które wychodzi mi najlepiej, to brodetto po garganijsku. <break time="0.8s"/> Ryba mieszana — <break time="0.5s"/> skorpena, ostrosz, kurek, <break time="0.5s"/> co jest — <break time="0.5s"/> z pomidorem, czosnkiem, papryczką chili, <break time="0.5s"/> i nitką dobrej oliwy na koniec. <break time="0.8s"/> Je się to z opieczonym chlebem <break time="0.5s"/> maczanym w wywarze. <break time="0.8s"/> Bez widelca. <break time="0.8s"/> Rękami. <break time="1.2s"/>
+
+Ostrygi z Lesina podaję na surowo. <break time="0.8s"/> Tylko cytryna. <break time="0.8s"/> Kto chce je z sosem, psuje wszystko. <break time="0.8s"/> Ostryga z Lesina ma już wszystko, czego trzeba. <break time="1.2s"/>
+
+Wino to Falanghina z Gargano — <break time="0.5s"/> białe, świeże, <break time="0.5s"/> pachnące cytrusami. <break time="0.8s"/> Produkowane tutaj, <break time="0.5s"/> dwa kilometry stąd. <break time="0.8s"/> Nie musi podróżować. <break time="1.5s"/>
+
+=====
+CAP. 11 — PORY ROKU: PÓŁNOCNE GARGANO POZA SIERPNIEM
+voice: dante
+
+Powiem ci coś, czego większość turystów nie wie. <break time="1.2s"/>
+
+Północne Gargano poza sierpniem to raj. <break time="1.5s"/>
+
+Maj: sady cytrusowe Rodi są jeszcze obładowane. <break time="0.8s"/> Morze jest chłodne, ale nie zimne. <break time="0.8s"/> Trabucchi są otwarte, ale nie zatłoczone. <break time="0.8s"/> Ceny są normalne. <break time="1.0s"/>
+
+Czerwiec: morze się ociepla. <break time="0.8s"/> Zatoczki są na wpół puste. <break time="0.8s"/> Można znaleźć miejsce w restauracji bez rezerwacji z trzytygodniowym wyprzedzeniem. <break time="1.0s"/>
+
+Wrzesień: morze jest najlepsze. <break time="0.8s"/> Turyści wyjechali. <break time="0.8s"/> Restauratorzy gotują spokojniej. <break time="0.8s"/> Można się wyspać. <break time="1.0s"/>
+
+Październik: prawie pusto. <break time="0.8s"/> Światło jest niskie i złote. <break time="0.8s"/> Pobliski las zaczyna zmieniać kolor. <break time="0.8s"/> Morze jest jeszcze dość ciepłe na kąpiel. <break time="0.8s"/> I nie ma nikogo. <break time="1.2s"/>
+
+Sierpień zostawiam Niemcom. <break time="0.8s"/> Szanuję ich — <break time="0.5s"/> przyjeżdżają co roku, <break time="0.5s"/> przywożą dzieci, <break time="0.5s"/> naprawdę kochają to miejsce. <break time="0.8s"/> Ale sierpień to nie prawdziwe Gargano. <break time="0.8s"/> To letnia wersja Gargano. <break time="0.8s"/> Piękna, <break time="0.5s"/> ale nie ta, którą wolę. <break time="1.5s"/>
+
+=====
+CAP. 12 — CO ROBIĆ: RADY FERDINANDA
+voice: dante
+
+Pierwsza rzecz: znajdź trabucco, które jest restauracją, <break time="0.5s"/> i zarezerwuj na kolację. <break time="0.8s"/> Nie na obiad — na kolację. <break time="0.8s"/> Kiedy słońce zapada nad morzem <break time="0.5s"/> i światło robi się pomarańczowe <break time="0.5s"/> a ty jesz świeżą rybę na drewnianych belkach <break time="0.5s"/> z wodą pod stopami — <break time="0.5s"/> to przeżycie, którego nie zapomnisz. <break time="1.2s"/>
+
+Druga rzecz: jedź do Lesina. <break time="0.8s"/> Nie tylko nad jezioro. <break time="0.5s"/> Wejdź do miasteczka. <break time="0.8s"/> Poszukaj kogoś, kto da ci spróbować świeżych ostryg. <break time="0.8s"/> Jeśli znajdziesz je na surowo z cytryną, na miejscu, <break time="0.5s"/> zjedz je. <break time="1.0s"/>
+
+Trzecia rzecz: weź łódź. <break time="0.8s"/> Choćby na dwie godziny. <break time="0.8s"/> Wybrzeże widziane z wody jest zupełnie inne. <break time="0.8s"/> Zatoczki, do których nie dotrzesz z lądu, <break time="0.5s"/> trabucchi widziane z morza, <break time="0.5s"/> groty. <break time="0.8s"/> Warte każdego euro. <break time="1.2s"/>
+
+Czwarta rzecz: wstań wcześnie. <break time="0.8s"/> Północne Gargano wczesnym rankiem, <break time="0.5s"/> przed ósmą, <break time="0.5s"/> to co innego. <break time="0.8s"/> Morze jest płaskie, <break time="0.5s"/> światło niskie, <break time="0.5s"/> nie ma nikogo. <break time="0.8s"/> To jest to, co ja widzę każdego ranka od sześćdziesięciu lat. <break time="0.8s"/> Warte pobudki o szóstej. <break time="1.5s"/>
+
+=====
+CAP. 13 — WĘGORZE Z LESINA: DANIE JEZIORA
+voice: dante
+
+O jeziorze Lesina już mówiłem. <break time="0.8s"/> Ale nie powiedziałem najważniejszego. <break time="1.2s"/>
+
+Węgorze. <break time="1.5s"/>
+
+Jezioro Lesina słynie z węgorzy od stuleci. <break time="0.8s"/> Woda słonawa, <break time="0.5s"/> bogata w składniki odżywcze, <break time="0.5s"/> z łagodnymi temperaturami przez cały rok — <break time="0.5s"/> idealne warunki dla tej ryby, która wędruje, <break time="0.5s"/> która żyje dziesięciolecia, <break time="0.5s"/> która nie daje się łatwo złowić. <break time="1.2s"/>
+
+Węgorza z Lesina je się na różne sposoby. <break time="0.8s"/> Z grilla — <break time="0.5s"/> na ogniu z drewna, <break time="0.5s"/> z solą i cytryną, <break time="0.5s"/> nic więcej. <break time="0.8s"/> W brodetto — <break time="0.5s"/> z pomidorem, cebulą, papryczką chili. <break time="0.8s"/> Smażonego. <break time="0.8s"/> Marynowanego. <break time="0.8s"/> Starzy znad jeziora gotowali go na wszystkie sposoby i żaden nie był zły. <break time="1.2s"/>
+
+Mój ojciec jadł go w każdy piątek. <break time="0.8s"/> Mówił, że węgorz daje siłę na cały tydzień. <break time="0.8s"/> Może i przesadzał. <break time="0.8s"/> Ale miał dziewięćdziesiąt dwa lata, kiedy umarł, <break time="0.5s"/> i nigdy nie przestał pracować na trabucco. <break time="0.8s"/> Coś ten węgorz musiał zdziałać. <break time="1.5s"/>
+
+=====
+CAP. 14 — TURCY U WYBRZEŻY: WIEŻE STRAŻNICZE
+voice: dante
+
+Wzdłuż tego wybrzeża są wieże. <break time="1.2s"/>
+
+Wieże strażnicze, <break time="0.5s"/> zbudowane w szesnastym i siedemnastym wieku przez Hiszpanów, którzy rządzili Królestwem Neapolu. <break time="0.8s"/> Jedna co kilka kilometrów — <break time="0.5s"/> tak, by z chodnika jednej widać było następną. <break time="0.8s"/> Łańcuch kamiennych wartowników. <break time="1.2s"/>
+
+Powód był prosty: <break time="0.8s"/> najazdy osmańskie. <break time="0.8s"/> Tureckie floty regularnie pustoszyły południowe wybrzeża Morza Śródziemnego. <break time="0.8s"/> Wieże służyły do wypatrywania nadpływających statków — <break time="0.5s"/> ogień sygnałowy, <break time="0.5s"/> alarm, <break time="0.5s"/> czas, by się ukryć albo uciec. <break time="1.2s"/>
+
+Wieże wciąż tam są. <break time="0.8s"/> Niektóre odrestaurowane, <break time="0.5s"/> niektóre w ruinie. <break time="0.8s"/> Kiedy pracuję na trabucco i podnoszę wzrok na wybrzeże, <break time="0.5s"/> zawsze widzę dwie albo trzy — <break time="0.5s"/> ciemne sylwetki na zielonym tle. <break time="0.8s"/> Wieki później, <break time="0.5s"/> wciąż tam, patrzące na morze. <break time="1.5s"/>
+
+=====
+CAP. 15 — WIATR: JAK ZMIENIA GARGANO
+voice: dante
+
+Północne Gargano nie zawsze jest takie samo. <break time="1.2s"/>
+
+Tramontana — <break time="0.5s"/> wiatr z północy — <break time="0.5s"/> zmienia wszystko. <break time="1.0s"/>
+
+Kiedy wieje tramontana, <break time="0.8s"/> morze podnosi się w kilka godzin. <break time="0.8s"/> Fale wchodzą do zatoczek. <break time="0.8s"/> Kolor wody zmienia się z turkusowego na ciemnozielony. <break time="0.8s"/> Piana osiada na skałach jak śnieg. <break time="1.2s"/>
+
+Przy tramontanie się nie łowi. <break time="0.8s"/> Nie wypływa się łodzią. <break time="0.8s"/> Nie opuszcza się sieci trabucco — <break time="0.5s"/> ruch wody ją rozrywa. <break time="0.8s"/> Czeka się. <break time="0.8s"/> Chroni się. <break time="0.8s"/> Pije się kawę i patrzy na morze z daleka. <break time="1.2s"/>
+
+Ja nauczyłem się czytać niebo, zanim jeszcze nauczyłem się czytać. <break time="0.8s"/> Ojciec mnie uczył: <break time="0.5s"/> spójrz tam, <break time="0.5s"/> na tę chmurę na północnym zachodzie. <break time="0.8s"/> Patrz, jak się porusza. <break time="0.8s"/> Nie potrzebujesz prognozy w radiu. <break time="0.8s"/> Potrzebujesz patrzeć. <break time="1.5s"/>
+
+=====
+CAP. 16 — ZAPACHY: GARGANO, KTÓREGO NIE WIDAĆ
+voice: dante
+
+Północne Gargano rozpoznasz nawet z zamkniętymi oczami. <break time="1.2s"/>
+
+Latem: żywica sosen, <break time="0.5s"/> słona bryza, <break time="0.5s"/> kwiaty makii. <break time="0.8s"/> Wczesnym rankiem, <break time="0.5s"/> zanim upał wszystko przygniecie, <break time="0.5s"/> powietrze ma zapach, którego nie znajdziesz nigdzie indziej. <break time="1.0s"/>
+
+Wiosną: kwitnące sady cytrusowe Rodi i Vico del Gargano. <break time="0.8s"/> Kwiaty pomarańczy mają mocny zapach, <break time="0.5s"/> prawie słodki, <break time="0.5s"/> który czuć od morza. <break time="0.8s"/> Jeśli przyjeżdżasz w kwietniu albo maju, <break time="0.5s"/> otwórz okna, gdy tylko wjedziesz w rejon sadów. <break time="0.8s"/> Nie pożałujesz. <break time="1.2s"/>
+
+Jesienią: mokre drewno, <break time="0.5s"/> grzyby, <break time="0.5s"/> ziemia po deszczu. <break time="0.8s"/> Las, który oddycha. <break time="1.2s"/>
+
+Ja pracuję na trabucco i zawsze czuję wiatr. <break time="0.8s"/> Nie wszystkie wiatry są takie same. <break time="0.8s"/> Wiatr od lądu niesie sosny. <break time="0.8s"/> Wiatr od morza niesie sól. <break time="0.8s"/> Wiatr z północy niesie chłód i deszcz. <break time="0.8s"/> Każdy wiatr ma swój zapach. <break time="0.8s"/> Po tylu latach <break time="0.5s"/> rozumiem pogodę, zanim spojrzę w niebo. <break time="1.5s"/>
+
+=====
+CAP. 17 — GRANICE: JAK DOBRZE TU ŻYĆ
+voice: dante
+
+Ktoś mnie pyta: ale życie tutaj, nie ciąży ci? <break time="1.2s"/>
+
+Ciąży i nie ciąży. <break time="1.5s"/>
+
+Ciąży zimą — <break time="0.5s"/> kiedy droga jest zamknięta z powodu śniegu, <break time="0.5s"/> kiedy najbliższy szpital jest daleko, <break time="0.5s"/> kiedy chcesz coś kupić, a sklep jest zamknięty. <break time="0.8s"/> Życie w głębi Apulii nie jest proste. <break time="0.8s"/> Brakuje usług, <break time="0.5s"/> brakuje pracy, <break time="0.5s"/> młodzi wyjeżdżają. <break time="0.8s"/> To prawdziwy problem. <break time="1.2s"/>
+
+Ale nie ciąży, kiedy jesteś na trabucco o szóstej rano i morze jest płaskie, a światło niskie. <break time="0.8s"/> Nie ciąży, kiedy znasz wszystkich w miasteczku i nikt nie jest obcy. <break time="0.8s"/> Nie ciąży, kiedy wiesz, że to, co jesz, sam złowiłeś, <break time="0.5s"/> albo wyhodował to ktoś, kogo znasz. <break time="1.2s"/>
+
+To trudna równowaga. <break time="0.8s"/> Nie wiem, czy sprawdza się dla każdego. <break time="0.8s"/> Wiem, że dla mnie się sprawdza. <break time="0.8s"/> I że nigdy nie wyjechałem. <break time="1.5s"/>
+
+=====
+CAP. 18 — ZAKOŃCZENIE: FERDINANDO ŻEGNA
+voice: dante
+
+Mój pradziadek zbudował to trabucco własnymi rękami. <break time="1.0s"/>
+
+Belki z jałowca wyciął w lesie nad Peschici. <break time="0.8s"/> Zniósł je na dół z mułem. <break time="0.8s"/> Zajęło mu to rok. <break time="0.8s"/> Potem łowił tu trzydzieści lat. <break time="0.8s"/> Potem mój dziadek. <break time="0.8s"/> Potem ojciec. <break time="0.8s"/> Potem ja. <break time="1.2s"/>
+
+Cztery pokolenia. <break time="0.8s"/> To samo drewno. <break time="0.8s"/> Ta sama woda. <break time="0.8s"/> Ta sama ryba. <break time="1.5s"/>
+
+Kiedy goście siadają tu wieczorem <break time="0.5s"/> i patrzą na zachód słońca <break time="0.5s"/> i jedzą to, co złowiłem rano, <break time="0.5s"/> myślę, że mój pradziadek by zrozumiał. <break time="0.8s"/> Restauracji może by nie zrozumiał, <break time="0.5s"/> być może. <break time="0.8s"/> Ale zrozumiałby ideę — <break time="0.5s"/> to miejsce jest piękne, <break time="0.5s"/> ryba jest dobra, <break time="0.5s"/> ludzie muszą przyjechać i je zobaczyć. <break time="1.2s"/>
+
+Tego wybrzeża nie trzeba wymyślać. <break time="0.8s"/> Trzeba je tylko zobaczyć. <break time="1.5s"/>
+
+Udanego pobytu na Gargano. <break time="0.8s"/> A jeśli przejeżdżasz obok trabucco, <break time="0.5s"/> zatrzymaj się. <break time="0.8s"/> Warto. <break time="1.5s"/>
+
+Ten przylądek ma inne oblicza. <break time="1.0s"/>
+
+Zatoczki Vieste widziane z wody, <break time="0.5s"/> grota, gdzie archanioł zostawił ślad płaszcza, <break time="0.5s"/> wyspy Lucio Dalli na horyzoncie, <break time="0.5s"/> miasteczka wczepione nad jeziorem. <break time="0.8s"/> Każde ma kogoś, kto je opowiada. <break time="0.8s"/> Kogoś, kto nigdy nie wyjechał. <break time="1.2s"/>
+
+Gargano nie kończy się tutaj. <break time="1.5s"/>
