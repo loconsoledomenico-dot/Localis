@@ -41,8 +41,11 @@ function checkGuide(slug, data, sourceMap, problems) {
     // scalari top-level
     for (const base of SCALAR_BASES) {
       const it = data[`${base}_it`];
+      const enVal = data[`${base}_en`];
+      // un campo è "traducibile" solo se l'EN differisce dall'IT; se EN==IT è un nome proprio
+      const enTranslated = enVal && String(enVal).trim() !== String(it || '').trim();
       if (it && !String(data[`${base}_${lang}`] || '').trim()) add(`manca ${base}_${lang}`);
-      if (it && looksUntranslated(it, data[`${base}_${lang}`])) add(`${base}_${lang} = IT (non tradotto)`);
+      if (it && enTranslated && looksUntranslated(it, data[`${base}_${lang}`])) add(`${base}_${lang} = IT (non tradotto)`);
     }
     // seo.description
     const seoIt = data.seo?.description_it;
@@ -56,7 +59,8 @@ function checkGuide(slug, data, sourceMap, problems) {
     // capitoli
     (data.chapters || []).forEach((ch, i) => {
       if (ch.title_it && !String(ch[`title_${lang}`] || '').trim()) add(`manca chapters[${i}].title_${lang}`);
-      if (ch.title_it && looksUntranslated(ch.title_it, ch[`title_${lang}`])) add(`chapters[${i}].title_${lang} = IT`);
+      const chEnTranslated = ch.title_en && ch.title_en.trim() !== ch.title_it.trim();
+      if (ch.title_it && chEnTranslated && looksUntranslated(ch.title_it, ch[`title_${lang}`])) add(`chapters[${i}].title_${lang} = IT`);
     });
     // script files
     const entry = sourceMap.guides[slug];
