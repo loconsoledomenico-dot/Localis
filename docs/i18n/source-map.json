@@ -1,0 +1,34 @@
+{
+  "_doc": "Sorgente IT canonica per guida (testo attualmente online). L'audit deriva i nomi FR/PL: se il file finisce in '-it.txt' sostituisce -it -> -fr/-pl, altrimenti appende -fr/-pl prima di .txt. I file 'guida-fast' sono confermati canonici perche' hanno gia' le controparti -en/-de che hanno prodotto l'audio EN/DE online.",
+  "guides": {
+    "alberobello":      { "script": ["alberobello-it.txt"] },
+    "cisternino":       { "script": ["cisternino-it.txt"] },
+    "fasano":           { "script": ["fasano-it.txt"] },
+    "gargano-nord":     { "script": ["gargano-nord-it.txt"] },
+    "gargano-paesi":    { "script": ["gargano-paesi-it.txt"] },
+    "gargano-sacro":    { "script": ["gargano-sacro-it.txt"] },
+    "gargano-saline":   { "script": ["gargano-saline-it.txt"] },
+    "gargano-tremiti":  { "script": ["gargano-tremiti-it.txt"] },
+    "gargano-vieste":   { "script": ["gargano-vieste-it.txt"] },
+    "locorotondo":      { "script": ["locorotondo-it.txt"] },
+    "martina-franca":   { "script": ["martina-franca-it.txt"] },
+    "matera":           { "script": ["matera-it.txt"] },
+    "ostuni":           { "script": ["ostuni-it.txt"] },
+    "bari-sotterranea": { "script": ["bari-sotterranea-guida-fast.txt"] },
+    "porto-bari":       { "script": ["porto-bari-guida-fast.txt"] },
+    "san-nicola":       { "script": ["san-nicola-guida-fast.txt"] },
+    "tre-teatri":       { "script": ["tre-teatri-guida-fast.txt"] },
+    "bari-vecchia":     { "script": [
+      "bari-vecchia-domenico-cap1-it.txt",
+      "bari-vecchia-domenico-cap2-it.txt",
+      "bari-vecchia-domenico-cap3-it.txt",
+      "bari-vecchia-domenico-cap4-it.txt",
+      "bari-vecchia-domenico-cap5-it.txt",
+      "bari-vecchia-domenico-cap6-it.txt",
+      "bari-vecchia-domenico-cap7-it.txt",
+      "bari-vecchia-domenico-cap8-it.txt"
+    ] },
+    "bari-tavola":      { "script": ["__CONFERMARE__"] }
+  },
+  "needs_confirmation": ["bari-tavola"]
+}
