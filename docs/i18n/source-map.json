@@ -28,7 +28,17 @@
       "bari-vecchia-domenico-cap7-it.txt",
       "bari-vecchia-domenico-cap8-it.txt"
     ] },
-    "bari-tavola":      { "script": ["__CONFERMARE__"] }
+    "bari-tavola":      { "script": [
+      "bari-tavola-rachele-cap1-it.txt",
+      "bari-tavola-rachele-cap2-it.txt",
+      "bari-tavola-rachele-cap3-it.txt",
+      "bari-tavola-rachele-cap4-it.txt",
+      "bari-tavola-rachele-cap5-it.txt",
+      "bari-tavola-rachele-cap6-it.txt",
+      "bari-tavola-rachele-cap7-it.txt",
+      "bari-tavola-rachele-cap8-it.txt",
+      "bari-tavola-rachele-cap9-it.txt"
+    ] }
   },
-  "needs_confirmation": ["bari-tavola"]
+  "needs_confirmation": []
 }
