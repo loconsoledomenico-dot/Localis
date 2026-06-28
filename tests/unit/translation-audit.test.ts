@@ -1,5 +1,4 @@
 import { describe, it, expect } from 'vitest';
-// @ts-expect-error — modulo JS senza tipi
 import { countBreaks, looksUntranslated, expectedScriptName } from '../../scripts/translation-audit.mjs';
 
 describe('countBreaks', () => {
