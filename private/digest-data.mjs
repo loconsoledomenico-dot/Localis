@@ -44,6 +44,25 @@ const scanPart = await runReport({
 });
 const scansByPartner = rows(scanPart).map((r) => ({ partner: r.dimensionValues[0].value || '(n/d)', scans: num(r) }));
 
+// --- Traffico sito di ieri (non partner): pagine top + canali ---
+const pagesY = await runReport({
+  dateRanges: yRange,
+  dimensions: [{ name: 'pagePath' }],
+  metrics: [{ name: 'screenPageViews' }],
+  orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+  limit: 5,
+});
+const topPages = rows(pagesY).map((r) => ({ path: r.dimensionValues[0].value || '(n/d)', views: num(r) }));
+
+const chanY = await runReport({
+  dateRanges: yRange,
+  dimensions: [{ name: 'sessionDefaultChannelGroup' }],
+  metrics: [{ name: 'sessions' }],
+  orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+  limit: 6,
+});
+const channels = rows(chanY).map((r) => ({ channel: r.dimensionValues[0].value || '(n/d)', sessions: num(r) }));
+
 // --- Git: commit di ieri nei due repo ---
 function commitsSince(repo) {
   try {
@@ -90,7 +109,7 @@ console.log(JSON.stringify({
   date: ymd(yest),
   ga4: {
     sessions: num(totRow, 0), users: num(totRow, 1), pageviews: num(totRow, 2),
-    events, scansByPartner,
+    events, scansByPartner, topPages, channels,
   },
   commits: { localis: commitsSince(LOCALIS), gallery: commitsSince(GALLERY) },
   recontact,

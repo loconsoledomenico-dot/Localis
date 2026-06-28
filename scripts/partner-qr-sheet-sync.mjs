@@ -14,6 +14,7 @@ const totalsSheet = 'Totals';
 const todaySummarySheet = 'Oggi - chiaro';
 const landingOnlySheet = 'Landing - campagne';
 const stripeSheet = 'Stripe - Provvigioni';
+const siteTrafficSheet = 'Traffico sito';
 const legendSheet = 'Legenda';
 const startDate = process.env.GA4_START_DATE || '30daysAgo';
 const endDate = process.env.GA4_END_DATE || 'today';
@@ -597,6 +598,117 @@ async function buildStripeValues(partners) {
   return values;
 }
 
+// Eventi chiave a livello sito (non filtrati per partner).
+const siteEventLabels = [
+  ['qr_scan', 'Scansioni QR'],
+  ['audio_preview_played', 'Ascolti anteprima'],
+  ['preview_start', 'Anteprime avviate'],
+  ['preview_complete', 'Anteprime completate'],
+  ['begin_checkout', 'Checkout iniziati'],
+  ['checkout_error', 'Errori checkout'],
+  ['purchase', 'Acquisti (GA4)'],
+  ['form_submit', 'Form inviati'],
+];
+
+/**
+ * Traffico dell'intero sito (non solo le sessioni attribuite a partner):
+ * totali per giorno, pagine più viste, canali/sorgenti, eventi chiave.
+ * Un solo tab, sezioni impilate come il tab Stripe.
+ */
+async function buildSiteTrafficValues(auth) {
+  const dateRanges = [{ startDate, endDate }];
+  const fmtDur = (s) => `${Math.round(s)}`;
+
+  const daily = await runReport(auth, {
+    dateRanges,
+    dimensions: [{ name: 'date' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }, { name: 'averageSessionDuration' }],
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+  });
+
+  const pages = await runReport(auth, {
+    dateRanges,
+    dimensions: [{ name: 'pagePath' }],
+    metrics: [{ name: 'screenPageViews' }, { name: 'totalUsers' }],
+    orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+    limit: 25,
+  });
+
+  const channels = await runReport(auth, {
+    dateRanges,
+    dimensions: [{ name: 'sessionDefaultChannelGroup' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+  });
+
+  const sources = await runReport(auth, {
+    dateRanges,
+    dimensions: [{ name: 'sessionSource' }, { name: 'sessionMedium' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 15,
+  });
+
+  const events = await runReport(auth, {
+    dateRanges,
+    dimensions: [{ name: 'eventName' }],
+    metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }],
+    dimensionFilter: { filter: { fieldName: 'eventName', inListFilter: { values: siteEventLabels.map(([name]) => name) } } },
+  });
+  const eventCounts = new Map();
+  for (const row of events) {
+    eventCounts.set(row.dimensionValues?.[0]?.value || '', { count: parseMetric(row, 0), users: parseMetric(row, 1) });
+  }
+
+  const values = [];
+  values.push([`TRAFFICO SITO — tutto il sito, non solo partner (${startDate} → ${endDate})`]);
+  values.push([]);
+
+  values.push(['Totali per giorno']);
+  values.push(['Data', 'Sessioni', 'Utenti', 'Pagine viste', 'Durata media sessione (s)']);
+  for (const row of daily) {
+    values.push([dateKey(row.dimensionValues?.[0]?.value || ''), parseMetric(row, 0), parseMetric(row, 1), parseMetric(row, 2), fmtDur(parseMetric(row, 3))]);
+  }
+  if (!daily.length) values.push(['(nessun dato nel range)']);
+
+  values.push([]);
+  values.push(['Pagine più viste (top 25)']);
+  values.push(['Pagina', 'Pagine viste', 'Utenti']);
+  for (const row of pages) {
+    values.push([row.dimensionValues?.[0]?.value || '', parseMetric(row, 0), parseMetric(row, 1)]);
+  }
+  if (!pages.length) values.push(['(nessun dato nel range)']);
+
+  values.push([]);
+  values.push(['Sorgenti / canali']);
+  values.push(['Canale', 'Sessioni', 'Utenti']);
+  for (const row of channels) {
+    values.push([row.dimensionValues?.[0]?.value || '(non impostato)', parseMetric(row, 0), parseMetric(row, 1)]);
+  }
+  if (!channels.length) values.push(['(nessun dato nel range)']);
+
+  values.push([]);
+  values.push(['Top sorgente / mezzo (15)']);
+  values.push(['Sorgente / mezzo', 'Sessioni', 'Utenti']);
+  for (const row of sources) {
+    const src = row.dimensionValues?.[0]?.value || '(non impostato)';
+    const med = row.dimensionValues?.[1]?.value || '(non impostato)';
+    values.push([`${src} / ${med}`, parseMetric(row, 0), parseMetric(row, 1)]);
+  }
+  if (!sources.length) values.push(['(nessun dato nel range)']);
+
+  values.push([]);
+  values.push(['Eventi chiave sito']);
+  values.push(['Evento', 'Conteggio', 'Utenti']);
+  for (const [name, label] of siteEventLabels) {
+    const e = eventCounts.get(name);
+    if (e) values.push([label, e.count, e.users]);
+  }
+  if (![...eventCounts.values()].length) values.push(['(nessun evento nel range)']);
+
+  return values;
+}
+
 function buildLegendValues() {
   return [
     ['Voce', 'Spiegazione'],
@@ -606,6 +718,7 @@ function buildLegendValues() {
     ['Acquisti (GA4)', 'Evento purchase dalla pagina di ringraziamento. Per gli euro fa fede il tab Stripe - Provvigioni.'],
     ['Stripe - Provvigioni', 'Vendite con payment_status=paid da Stripe. La provvigione usa il commission_rate fotografato nei metadata al momento del checkout (default 25%).'],
     ['Landing - campagne', 'Record con reporting_mode: landing_only — attribuzioni di landing/campagna, esclusi dai tab QR-only.'],
+    ['Traffico sito', 'Tutto il traffico del sito (non solo le sessioni attribuite a partner): totali per giorno, pagine più viste, canali/sorgenti ed eventi chiave a livello sito.'],
     ['⚠ Dati prima del 2026-06-12', 'Scansioni e pagine viste risultano 0 e le vendite partner non sono attribuite: il tracciamento è stato riparato quel giorno. Confronti solo da quella data in poi.'],
     ['Eventi legacy rimossi dal report', 'qr_landing_viewed, preview_played, checkout_started, purchase_completed: duplicati storici, gli eventi continuano a esistere in GA4.'],
   ];
@@ -644,7 +757,7 @@ async function ensureSheets(sheets, spreadsheetId) {
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const existing = new Map(spreadsheet.data.sheets.map((sheet) => [sheet.properties.title, sheet.properties.sheetId]));
   const requests = [];
-  for (const title of [todaySummarySheet, stripeSheet, dailySheet, generalSheet, totalsSheet, productsSheet, landingOnlySheet, legendSheet]) {
+  for (const title of [todaySummarySheet, stripeSheet, siteTrafficSheet, dailySheet, generalSheet, totalsSheet, productsSheet, landingOnlySheet, legendSheet]) {
     if (!existing.has(title)) requests.push({ addSheet: { properties: { title } } });
   }
   // Consolidamento 2026-06-12: le copie " - esteso" duplicavano i tab base.
@@ -674,6 +787,7 @@ async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, g
   const todaySummaryId = sheetIds.get(todaySummarySheet);
   const landingOnlyId = sheetIds.get(landingOnlySheet);
   const stripeId = sheetIds.get(stripeSheet);
+  const siteTrafficId = sheetIds.get(siteTrafficSheet);
   const legendId = sheetIds.get(legendSheet);
   const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
   const requests = [
@@ -685,6 +799,7 @@ async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, g
     { repeatCell: { range: { sheetId: todaySummaryId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 12 }, backgroundColor: { red: 0.99, green: 0.95, blue: 0.8 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: todaySummaryId, startRowIndex: 1, endRowIndex: 2 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: stripeId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.85, green: 0.94, blue: 0.86 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
+    { repeatCell: { range: { sheetId: siteTrafficId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true, fontSize: 12 }, backgroundColor: { red: 0.86, green: 0.9, blue: 0.97 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { repeatCell: { range: { sheetId: legendId, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true }, backgroundColor: { red: 0.9, green: 0.93, blue: 0.96 } } }, fields: 'userEnteredFormat(textFormat,backgroundColor)' } },
     { updateSheetProperties: { properties: { sheetId: dailyId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: generalId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
@@ -694,6 +809,8 @@ async function formatSheets(sheets, spreadsheetId, sheetIds, dailyColumnCount, g
     { updateSheetProperties: { properties: { sheetId: todaySummaryId, gridProperties: { frozenRowCount: 2 } }, fields: 'gridProperties.frozenRowCount' } },
     { updateSheetProperties: { properties: { sheetId: stripeId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
     { autoResizeDimensions: { dimensions: { sheetId: stripeId, dimension: 'COLUMNS', startIndex: 0, endIndex: 8 } } },
+    { updateSheetProperties: { properties: { sheetId: siteTrafficId, gridProperties: { frozenRowCount: 1 } }, fields: 'gridProperties.frozenRowCount' } },
+    { autoResizeDimensions: { dimensions: { sheetId: siteTrafficId, dimension: 'COLUMNS', startIndex: 0, endIndex: 5 } } },
     { autoResizeDimensions: { dimensions: { sheetId: legendId, dimension: 'COLUMNS', startIndex: 0, endIndex: 2 } } },
     { autoResizeDimensions: { dimensions: { sheetId: dailyId, dimension: 'COLUMNS', startIndex: 0, endIndex: dailyColumnCount } } },
     { autoResizeDimensions: { dimensions: { sheetId: generalId, dimension: 'COLUMNS', startIndex: 0, endIndex: generalColumnCount } } },
@@ -764,6 +881,7 @@ async function main() {
   const todaySummaryValues = buildTodaySummaryValues(qrRecords);
   const landingOnlyValues = buildLandingOnlyValues(landingOnlyRecords);
   const stripeValues = await buildStripeValues(partners);
+  const siteTrafficValues = await buildSiteTrafficValues(auth);
   const legendValues = buildLegendValues();
   const spreadsheetId = await loadSpreadsheetId(sheets);
   const sheetIds = await ensureSheets(sheets, spreadsheetId);
@@ -775,6 +893,7 @@ async function main() {
   await writeSheet(sheets, spreadsheetId, todaySummarySheet, todaySummaryValues);
   await writeSheet(sheets, spreadsheetId, landingOnlySheet, landingOnlyValues);
   await writeSheet(sheets, spreadsheetId, stripeSheet, stripeValues);
+  await writeSheet(sheets, spreadsheetId, siteTrafficSheet, siteTrafficValues);
   await writeSheet(sheets, spreadsheetId, legendSheet, legendValues);
   await formatSheets(
     sheets,
