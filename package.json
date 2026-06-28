@@ -21,6 +21,7 @@
     "gsc:sites": "node scripts/gsc.mjs sites",
     "gsc:submit-sitemap": "node scripts/gsc.mjs submit-sitemap",
     "ga4:audio": "node scripts/ga4-audio-preview-report.mjs",
+    "i18n:audit": "node scripts/translation-audit.mjs",
     "sheet:auth": "node scripts/google-oauth.mjs",
     "sheet:sync": "node scripts/partner-qr-sheet-sync.mjs",
     "qr:batch": "node scripts/qr-batch.mjs",
