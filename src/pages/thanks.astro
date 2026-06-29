@@ -77,7 +77,7 @@ const allGuides = await getCollection('guides');
 let lang = normalizeLang(Astro.url.searchParams.get('lang'));
 let hasConfirmedPayment = false;
 let fallbackBuyerEmail: string | null = null;
-let purchaseParams: Record<string, string | number | boolean> = {};
+let purchaseParams: Record<string, unknown> = {};
 // Player inline: dopo il pagamento si ascolta QUI, senza passare dall'email.
 let accessToken: string | null = null;
 let purchasedGuides: typeof allGuides = [];
@@ -119,6 +119,7 @@ if (sessionId) {
       value: (session.amount_total || 0) / 100,
       currency: (session.currency || 'eur').toUpperCase(),
       cta_source: 'stripe_success',
+      items: guideSlugs.map((slug) => ({ item_id: slug, item_name: slug, quantity: 1 })),
     };
 
     const matchedGuides = guideSlugs
@@ -244,7 +245,6 @@ const pageTitle = success ? model.pageTitle : fallbackHeading;
       const params = purchaseParams || { session: sessionId || 'unknown' };
       if (typeof window.localisTrack === 'function') {
         window.localisTrack('purchase', params);
-        window.localisTrack('purchase_completed', params);
       } else if (typeof window.plausible === 'function') {
         window.plausible('Checkout Completed', { props: params });
       }

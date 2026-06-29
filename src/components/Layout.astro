@@ -126,20 +126,5 @@ const partnerSlugFromPath = currentPath.match(/^\/(?:(?:en|de)\/)?p\/([a-z0-9][a
 
   <StickyPlayer lang={lang} />
   <CookieBanner lang={lang} />
-
-  <script is:inline define:vars={{ currentPath, lang }}>
-    (function() {
-      try {
-        const landing = window.localisPartnerLanding;
-        if (landing?.partner_id) {
-          const trackKey = `qr_landing_viewed:${landing.partner_id}:${currentPath}:${lang}`;
-          if (!sessionStorage.getItem(trackKey) && typeof window.localisTrack === 'function') {
-            sessionStorage.setItem(trackKey, '1');
-            window.localisTrack('qr_landing_viewed', landing);
-          }
-        }
-      } catch (e) {}
-    })();
-  </script>
 </body>
 </html>

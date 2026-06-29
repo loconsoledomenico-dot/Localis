@@ -21,7 +21,7 @@ const D = (r, i) => r.dimensionValues[i].value;
 const ev = await report({ dimensions: [{ name: 'eventName' }], metrics: [{ name: 'eventCount' }] });
 const count = (name) => ev.filter((r) => D(r, 0) === name).reduce((s, r) => s + N(r, 0), 0);
 const scans = count('qr_scan');
-const checkouts = count('checkout_started');
+const checkouts = count('begin_checkout');
 const sales = count('purchase');
 const conv = scans ? ((sales / scans) * 100).toFixed(1) + '%' : 'n/d';
 

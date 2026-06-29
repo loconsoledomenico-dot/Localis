@@ -240,7 +240,6 @@ const trustLine =
             cta_source: 'price_card',
           };
           window.localisTrack('begin_checkout', params);
-          window.localisTrack('checkout_started', params);
         } else if (typeof window.plausible === 'function') {
           window.plausible('Checkout Started', { props: { product, guideSlug: guideSlug ?? product, lang } });
         }
