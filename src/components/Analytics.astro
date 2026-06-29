@@ -174,7 +174,7 @@ const isProd = import.meta.env.PROD;
               // checkout_error: il flusso a redirect torna con ?checkoutError=1
               // quando la creazione della sessione Stripe fallisce.
               if (usp.get('checkoutError') === '1') {
-                window.localisTrack('checkout_error', { source: 'redirect', landing_path: window.location.pathname });
+                window.localisTrack('checkout_error', { cta_source: 'redirect', landing_path: window.location.pathname });
               }
             } catch (e) {}
           };

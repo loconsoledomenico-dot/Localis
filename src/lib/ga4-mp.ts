@@ -62,7 +62,7 @@ export async function sendGa4Purchase(input: Ga4PurchaseInput): Promise<void> {
     guide_count: input.guideSlugs.length,
     guide_slugs: input.guideSlugs.join(','),
     lang: input.lang,
-    source: 'server_webhook',
+    cta_source: 'server_webhook',
     items: input.guideSlugs.map((slug) => ({ item_id: slug, item_name: slug, quantity: 1 })),
   };
   if (input.trafficType) params.traffic_type = input.trafficType;

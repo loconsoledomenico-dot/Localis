@@ -156,7 +156,7 @@ const t = {
             lang,
             value: (PRODUCT_PRICE_CENTS[product] || 0) / 100,
             currency: 'EUR',
-            source: 'blog',
+            cta_source: 'blog',
           };
           window.localisTrack('begin_checkout', params);
           window.localisTrack('checkout_started', params);
@@ -166,7 +166,7 @@ const t = {
         btn.disabled = false;
         btn.textContent = orig;
         if (typeof window.localisTrack === 'function') {
-          window.localisTrack('checkout_error', { source: 'blog', product, reason: err instanceof Error ? err.message : 'unknown' });
+          window.localisTrack('checkout_error', { cta_source: 'blog', product, reason: err instanceof Error ? err.message : 'unknown' });
         }
         alert(
           lang === 'it' ? 'Impossibile aprire il pagamento. Riprova tra un istante.' :

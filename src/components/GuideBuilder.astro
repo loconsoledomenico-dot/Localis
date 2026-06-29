@@ -661,7 +661,7 @@ const ZONE_ORDER = [
           lang,
           value: checkoutValueCents(product, n) / 100,
           currency: 'EUR',
-          source: 'guide_builder',
+          cta_source: 'guide_builder',
         };
         (window as unknown as { localisTrack: Function }).localisTrack('begin_checkout', params);
         (window as unknown as { localisTrack: Function }).localisTrack('checkout_started', params);

@@ -118,7 +118,7 @@ if (sessionId) {
       lang,
       value: (session.amount_total || 0) / 100,
       currency: (session.currency || 'eur').toUpperCase(),
-      source: 'stripe_success',
+      cta_source: 'stripe_success',
     };
 
     const matchedGuides = guideSlugs
