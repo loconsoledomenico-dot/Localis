@@ -1,0 +1,250 @@
+LOCOROTONDO — OKRĄGŁE MIASTECZKO
+Głos: Francesco, 50 lat, winiarz okrągłego miasteczka
+
+=====
+CAP. 1 — INTRO: VALLE D'ITRIA ZZA SZYBY
+voice: custom-locorotondo
+
+Wjeżdżasz w górę. <break time="1.5s"/>
+
+Właśnie zostawiłeś równinę <break time="0.5s"/> i wjeżdżasz w górę, ku Locorotondo. <break time="0.8s"/> Czterysta dziesięć metrów nad poziomem morza <break time="0.5s"/> — to nie góra, <break time="0.5s"/> ale na tym wzgórzu wiatr wieje zawsze, <break time="0.5s"/> a latem, gdy cała Apulia dusi się z gorąca, <break time="0.5s"/> tutaj jest dobrze. <break time="1.2s"/>
+
+Spójrz w dół, w dolinę, gdy się wspinasz. <break time="0.8s"/> Trulli rozrzucone wśród drzew oliwnych, <break time="0.5s"/> winnice, <break time="0.5s"/> kamienne murki, które dzielą pola na nieregularne kawałki. <break time="0.8s"/> To jest Valle d'Itria <break time="0.5s"/> — naturalna niecka wewnątrz Murgii, <break time="0.5s"/> gdzie przez wieki ludzie uprawiali, budowali, żyli. <break time="1.2s"/>
+
+Ta ciemnozielona linia, którą widzisz na dole? <break time="0.8s"/> To rzędy winorośli. <break time="0.8s"/> Winorośl, która ciągnie się kilometrami, <break time="0.5s"/> przerywana tylko przez drzewa oliwne i murki z kamienia wapiennego układanego na sucho, które oddzielają posiadłości. <break time="0.8s"/> Każdy murek zrobiono ręcznie, <break time="0.5s"/> przesuwając kamień, który wychodził z ziemi przy oraniu. <break time="0.8s"/> To nie dekoracja. <break time="0.5s"/> To znak pracy, która nigdy się nie kończyła. <break time="1.2s"/>
+
+Ja nazywam się Francesco. <break time="0.8s"/> Mam pięćdziesiąt lat, urodziłem się tutaj <break time="0.5s"/> i tu mam swoje gospodarstwo rolne <break time="0.5s"/> — wino, oliwa, i coś jeszcze, o czym opowiem ci później. <break time="0.8s"/> Znam każdy kawałek tej ziemi. <break time="0.8s"/> I teraz ci ją opowiem. <break time="1.2s"/>
+
+Miałem możliwość wyjechać, jak prawie wszyscy tutaj. <break time="0.8s"/> W wieku dwudziestu lat i ja myślałem o Bolonii, o Mediolanie, <break time="0.5s"/> żeby robić coś innego niż winnica. <break time="0.8s"/> Potem zdałem sobie sprawę, że to, co miałem pod stopami, <break time="0.5s"/> było warte więcej niż cokolwiek, co mógłbym znaleźć gdzie indziej. <break time="0.8s"/> To nie sentymentalizm. <break time="0.8s"/> To tak, że gdy naprawdę rozumiesz miejsce — jego ziemię, jego klimat, jego historię — <break time="0.5s"/> nie opuszczasz go tak łatwo. <break time="1.2s"/>
+
+Locorotondo to nie Alberobello. <break time="0.8s"/> Nie znajdziesz ikonicznych trulli, <break time="0.5s"/> tłumów turystów z kijkiem do selfie, <break time="0.5s"/> sklepów z pamiątkami otwartych do jedenastej wieczorem. <break time="0.8s"/> To, co znajdziesz tutaj, to miasteczko, <break time="0.5s"/> które żyło przez tysiąc lat <break time="0.5s"/> bez potrzeby udowadniania czegokolwiek komukolwiek. <break time="0.8s"/> I to widać. <break time="1.5s"/>
+
+=====
+CAP. 2 — LOCUS ROTUNDUS: MIASTECZKO, KTÓRE KRĘCI SIĘ W KÓŁKO
+voice: custom-locorotondo
+
+Nazwa wyjaśnia wszystko: <break time="0.5s"/> Locorotondo. <break time="0.8s"/> Z łaciny locus rotundus <break time="0.5s"/> — miejsce okrągłe. <break time="1.5s"/>
+
+To nie metafora. <break time="0.8s"/> Stare miasto jest dosłownie okrągłe. <break time="0.8s"/> Domy układają się w koncentryczne pierścienie wokół centralnego kościoła, <break time="0.5s"/> jak kręgi na wodzie, gdy wrzucisz do niej kamień. <break time="0.8s"/> Ta forma jest udokumentowana już w dwunastym wieku <break time="0.5s"/> — to nie przypadek, nie urbanistyczny zbieg okoliczności. <break time="0.8s"/> To dokładny wybór tych, którzy zbudowali to miejsce. <break time="1.2s"/>
+
+Początki sięgają okolic roku tysięcznego. <break time="0.8s"/> Najpierw lenno benedyktyńskiego klasztoru w Monopoli, <break time="0.5s"/> potem Kawalerów Świętego Jana z Jerozolimy, <break time="0.5s"/> potem Aragończyków. <break time="0.8s"/> W piętnastym wieku należało do księstwa Tarentu. <break time="0.8s"/> Ostateczną nazwę „Locorotondo” przyjęło dopiero w 1834 <break time="0.5s"/> — wcześniej nazywało się Casale San Giorgio, <break time="0.5s"/> potem Casale Rotondo, <break time="0.5s"/> potem Luogo Rotondo. <break time="0.8s"/> Tysiąc lat historii, cztery różne nazwy, <break time="0.5s"/> ten sam okrągły kształt. <break time="1.2s"/>
+
+Okrągły plan nie powstaje przypadkiem. <break time="0.8s"/> Na wzgórzu najskuteczniejszym sposobem obrony osady <break time="0.5s"/> jest budowanie domów jak ciągłego pierścienia, <break time="0.5s"/> bez przerw, <break time="0.5s"/> ze ścianami zewnętrznymi, które stają się murem obronnym. <break time="0.8s"/> Nie trzeba było osobnego zamku <break time="0.5s"/> — same domy były twierdzą. <break time="1.2s"/>
+
+Chodź bez celu przez dziesięć minut. <break time="0.8s"/> Idź za zakrzywionymi uliczkami. <break time="0.8s"/> Zauważysz, że kręcisz się w kółko <break time="0.5s"/> — dosłownie. <break time="0.8s"/> W Locorotondo się nie gubisz, <break time="0.5s"/> bo prędzej czy później wracasz do punktu wyjścia. <break time="1.5s"/>
+
+=====
+CAP. 2B — SAN GIORGIO I PLAC
+voice: custom-locorotondo
+
+Patronem Locorotondo jest San Giorgio. <break time="1.2s"/>
+
+Nie święty Franciszek, nie Madonna. <break time="0.8s"/> San Giorgio — wojownik, ten ze smokiem. <break time="0.8s"/> A najstarsza nazwa miasteczka, Casale San Giorgio, <break time="0.5s"/> mówi ci to jasno. <break time="0.8s"/> To miejsce założyli ludzie, którzy potrzebowali silnego opiekuna, <break time="0.5s"/> nie łagodnego świętego. <break time="1.2s"/>
+
+Święto patronalne jest 23 czerwca, <break time="0.5s"/> w przeddzień święta San Giorgio. <break time="0.8s"/> Jeśli jesteś tu tego wieczoru, <break time="0.8s"/> nie idź nigdzie. <break time="1.2s"/>
+
+Fajerwerki widać z całej Valle d'Itria. <break time="0.8s"/> Martina Franca, Cisternino, Alberobello — <break time="0.5s"/> z każdego okolicznego wzgórza, tego wieczoru, <break time="0.5s"/> widać kolory nad Locorotondo. <break time="0.8s"/> To jeden z tych momentów, gdy rozumiesz, dlaczego to miejsce istnieje od tysiąca lat: <break time="0.5s"/> bo wciąż ma coś, co warto świętować. <break time="1.2s"/>
+
+Procesja przechodzi okrężnymi uliczkami starego miasta. <break time="0.8s"/> Pomyśl, co to znaczy: <break time="0.5s"/> święty dosłownie okrąża miasteczko w kółko. <break time="0.8s"/> Nie idzie z A do B, <break time="0.5s"/> nie przecina miasteczka w linii prostej. <break time="0.8s"/> Pokonuje pierścień uliczek <break time="0.5s"/> i wraca do punktu wyjścia. <break time="0.8s"/> Jak samo miasteczko. <break time="1.5s"/>
+
+Główny plac to Piazza Vittorio Emanuele. <break time="0.8s"/> Nie jest duży. <break time="0.8s"/> Nie jest monumentalny jak place wielkich miast. <break time="0.8s"/> Ale to serce miasteczka, <break time="0.5s"/> to prawdziwe, <break time="0.5s"/> nie to z pocztówki. <break time="1.2s"/>
+
+Latem, wieczorem, plac wypełnia się w naturalny sposób. <break time="0.8s"/> Starzy siedzą na ławkach, <break time="0.5s"/> dzieci krążą na rowerach po bruku, <break time="0.5s"/> bary wynoszą stoliki prawie do środka placu. <break time="0.8s"/> To nie coś zorganizowanego, to nie wydarzenie. <break time="0.8s"/> To, co dzieje się, gdy ludzie mają miejsce, by być razem. <break time="1.2s"/>
+
+Ja przechodzę tędy prawie co wieczór, latem. <break time="0.8s"/> Siadam, zamawiam coś, <break time="0.5s"/> patrzę. <break time="0.8s"/> Są te same twarze od czasów, gdy byłem dzieckiem, <break time="0.5s"/> plus kilka nowych. <break time="0.8s"/> Ten plac jest jak winnica: <break time="0.5s"/> zmienia się z pory na porę, <break time="0.5s"/> ale zawsze pozostaje sobą. <break time="1.2s"/>
+
+Dwa kościoły porządkują okrągłe miasteczko. <break time="0.8s"/> Kościół Santa Maria della Greca, <break time="0.5s"/> który sięga czternastego wieku, <break time="0.5s"/> jest jednym z punktów stałych okrągłego planu. <break time="0.8s"/> To najstarszy kościół starego miasta. <break time="0.8s"/> Potem jest kościół San Giorgio — <break time="0.5s"/> nowszy, większy, ten od święta. <break time="0.8s"/> Te dwa budynki są kotwicami koła. <break time="0.8s"/> Cała reszta kręci się wokół nich. <break time="1.2s"/>
+
+A gdy zauważysz, że uliczki zawsze sprowadzają cię na plac, <break time="0.5s"/> nie myśl, że się zgubiłeś. <break time="0.8s"/> To miasto działa tak, jak ma działać. <break time="0.8s"/> Kolistość nie jest wadą projektu, <break time="0.5s"/> to jest projekt. <break time="1.5s"/>
+
+=====
+CAP. 3 — CUMMERSE: TO NIE TRULLI
+voice: custom-locorotondo
+
+Spójrz na dachy. <break time="1.5s"/>
+
+Tutaj nie znajdziesz stożków trulli. <break time="0.8s"/> Znajdziesz dachy dwuspadowe, pochyłe, <break time="0.5s"/> pokryte cienkimi płytami z kamienia wapiennego <break time="0.5s"/> — chiancarelle. <break time="0.8s"/> Te domy nazywają się cummerse. <break time="0.8s"/> Pochodzą od łacińskiego cum vertice, <break time="0.5s"/> ze szczytem. <break time="0.8s"/> I są starsze od trulli w kontekście miejskim <break time="0.5s"/> — pierwsze sięgają czternastego wieku. <break time="1.2s"/>
+
+Dlaczego trulli mają dach stożkowy, <break time="0.5s"/> a cummerse dach pochyły? <break time="0.8s"/> Bo tu pada więcej. <break time="1.2s"/>
+
+Murgia dei Trulli jest bardziej wystawiona na wiatr i opady <break time="0.5s"/> niż równina. <break time="0.8s"/> Dach stożkowy źle odprowadza wodę <break time="0.5s"/> — sprawdza się tam, gdzie pada mało. <break time="0.8s"/> Dach o dwóch pochyłych połaciach kieruje wodę na boki, <break time="0.5s"/> zbiera ją w cysternach. <break time="0.8s"/> Praktyczny, wydajny, <break time="0.5s"/> zbudowany dla tego dokładnego klimatu. <break time="1.2s"/>
+
+Cummerse to domy na dwóch poziomach, <break time="0.5s"/> z bardzo stromymi wewnętrznymi schodami. <break time="0.8s"/> Grube ściany, małe okna. <break time="0.8s"/> Zbudowane, by trzymać chłód latem <break time="0.5s"/> i chronić przed wiatrem zimą. <break time="0.8s"/> Każdy szczegół konstrukcyjny odpowiada na realny problem. <break time="1.2s"/>
+
+Małe okna nie są przypadkiem. <break time="0.8s"/> Duże okno wpuszcza sierpniowe słońce — <break time="0.5s"/> a w sierpniu słońce tutaj nie jest przyjacielem, <break time="0.5s"/> nawet na czterystu dziesięciu metrach. <break time="0.8s"/> Małe okno, skierowane na północ albo na wschód, <break time="0.5s"/> wpuszcza światło bez ciepła. <break time="0.8s"/> To była klimatyzacja tamtych czasów. <break time="1.2s"/>
+
+Parter był dla zwierząt i narzędzi. <break time="0.8s"/> Górne piętro dla rodziny. <break time="0.8s"/> Nie z powodu podziału klasowego — <break time="0.5s"/> ale dlatego, że ciepło zwierząt wznosiło się i ogrzewało górne piętro zimą. <break time="0.8s"/> To były domy zaprojektowane jak systemy. <break time="0.8s"/> Każdy element miał funkcję. <break time="1.2s"/>
+
+Gdy widzę turystę fotografującego dachy Locorotondo <break time="0.5s"/> z myślą, że fotografuje coś dekoracyjnego, <break time="0.5s"/> mam ochotę mu powiedzieć: <break time="0.8s"/> fotografujesz wieki praktycznej inżynierii. <break time="0.8s"/> Każda płyta chiancarelli jest tam z jakiegoś powodu. <break time="1.5s"/>
+
+=====
+CAP. 3B — SPÓŁDZIELNIA WINIARSKA
+voice: custom-locorotondo
+
+Locorotondo ma historię winiarską, którą niewielu naprawdę zna. <break time="1.2s"/>
+
+Cantina Sociale w Locorotondo powstaje w latach trzydziestych dwudziestego wieku <break time="0.5s"/> jako spółdzielnia producentów. <break time="0.8s"/> Pomysł był prosty: <break time="0.5s"/> drobni rolnicy przynoszą winogrona, <break time="0.5s"/> winiarnia je przerabia i butelkuje, <break time="0.5s"/> a zyski dzielą się między członków. <break time="0.8s"/> Razem ma się siłę, by kupić sprzęt, <break time="0.5s"/> by wejść na rynki, <break time="0.5s"/> by przetrwać złe lata. <break time="1.2s"/>
+
+Spółdzielnia to forma chłopskiej solidarności. <break time="0.8s"/> To nie firma jak inne. <break time="0.8s"/> To sposób, w jaki mali ludzie <break time="0.5s"/> próbowali nie zniknąć wobec wielkich realiów przemysłowych. <break time="1.2s"/>
+
+Ja dokonałem innego wyboru. <break time="0.8s"/> Mam małe, niezależne gospodarstwo rolne. <break time="0.8s"/> Nazwy ci nie podam, <break time="0.5s"/> bo to nie reklama: <break time="0.5s"/> jesteśmy tu, by zrozumieć ten kraj, <break time="0.5s"/> nie by sprzedawać butelki. <break time="0.8s"/> Wino robię sam, we własnej piwnicy, <break time="0.5s"/> z własnych winogron. <break time="0.8s"/> To wybór, który ma swoją cenę: <break time="0.5s"/> muszę kupować sprzęt, <break time="0.5s"/> muszę wszystkim zarządzać, <break time="0.5s"/> nie mam siatki bezpieczeństwa spółdzielni. <break time="1.2s"/>
+
+Ale korzyścią jest tożsamość. <break time="0.8s"/> Wino spółdzielni jest równe, dobre, niezawodne. <break time="0.8s"/> Wino małego, rzemieślniczego producenta <break time="0.5s"/> ma charakter, <break time="0.5s"/> ma wady i zalety tej konkretnej winnicy, <break time="0.5s"/> tego konkretnego rocznika, <break time="0.5s"/> tych rąk. <break time="0.8s"/> Nie jest lepsze ani gorsze. <break time="0.8s"/> Jest inne. <break time="1.2s"/>
+
+Strefa DOC Locorotondo nie kończy się na gminie. <break time="0.8s"/> Rozciąga się na część Cisternino <break time="0.5s"/> i porcję terytorium Fasano. <break time="0.8s"/> Granicę narysował regulamin z 1969, <break time="0.5s"/> idąc za geologią gleby <break time="0.5s"/> i historycznymi tradycjami uprawy. <break time="0.8s"/> To tożsamość terytorialna, nie tylko etykieta. <break time="1.2s"/>
+
+10 czerwca 1969: <break time="0.8s"/> ta data się liczy. <break time="0.8s"/> Locorotondo DOC to jedno z pierwszych białych win uznanych w Apulii. <break time="0.8s"/> W czasach, gdy Apulia znana była z potężnych czerwonych win, <break time="0.5s"/> z winogron do kupażu, które trafiały na wzmocnienie win Północy, <break time="0.5s"/> ktoś tutaj podniósł rękę i powiedział: <break time="0.5s"/> to białe jest czymś konkretnym, <break time="0.5s"/> rozpoznawalnym, <break time="0.5s"/> powtarzalnym. <break time="0.8s"/> Zasługuje na nazwę. <break time="0.8s"/> Ten wybór ocalił rodzime szczepy tej ziemi. <break time="1.5s"/>
+
+=====
+CAP. 4 — BIEL I WAPNO
+voice: custom-locorotondo
+
+Teraz rozumiesz, dlaczego nazywają je białym miasteczkiem. <break time="1.5s"/>
+
+Wapno jest wszędzie. <break time="0.8s"/> Ściany, stopnie, futryny drzwi. <break time="0.8s"/> Biel tak jednolita, że gdy świeci słońce, oślepia. <break time="0.8s"/> I nie jest tylko estetyczna. <break time="1.2s"/>
+
+Wapno jest antybakteryjne. <break time="0.8s"/> Zanim istniały środki dezynfekujące, <break time="0.5s"/> bielenie ścian wapnem było sposobem, by utrzymać czystość, <break time="0.5s"/> by trzymać choroby z daleka. <break time="0.8s"/> W całych południowych Włoszech tak robiono <break time="0.5s"/> — ale w Locorotondo ta tradycja pozostała żywsza niż gdzie indziej, <break time="0.5s"/> i stała się częścią tożsamości miejsca. <break time="1.2s"/>
+
+Wapno działa, bo jest zasadowe: <break time="0.5s"/> bardzo wysokie pH, <break time="0.5s"/> niezgodne z przetrwaniem grzybów i bakterii. <break time="0.8s"/> To nie nowoczesny pomysł. <break time="0.8s"/> To empiryczna chemia, odkryta przez kogoś, kto zaobserwował, <break time="0.5s"/> że bielone domy mniej chorowały. <break time="0.8s"/> Wieki przed tym, nim zrozumieliśmy, czym jest bakteria. <break time="1.2s"/>
+
+Co roku, przed świętami patronalnymi, <break time="0.5s"/> rodziny bieliły fasady. <break time="0.8s"/> Nie dla turystów. <break time="0.8s"/> Dla miasteczka, dla wspólnoty, <break time="0.5s"/> dla poczucia porządku i szacunku, <break time="0.5s"/> jaki należy się miejscu, w którym żyjesz. <break time="1.2s"/>
+
+To nie było obowiązkowe. <break time="0.8s"/> To była cicha norma społeczna. <break time="0.8s"/> Jeśli nie pobieliłeś swojego domu przed świętem, <break time="0.5s"/> miasteczko to zauważało. <break time="0.8s"/> Nic ci nie mówiło, prawdopodobnie. <break time="0.8s"/> Ale zauważało. <break time="0.8s"/> To rodzaj presji społecznej, która trzyma miasteczka razem. <break time="1.2s"/>
+
+Teraz wciąż to robią, przynajmniej po części. <break time="0.8s"/> I wynikiem jest ta biel, która nigdy nie męczy <break time="0.5s"/> — bo nie jest sztuczna, nie jest farbą, <break time="0.5s"/> nie jest jednolita jak przemysłowy kolor. <break time="0.8s"/> To wapno na kamieniu wapiennym. <break time="0.8s"/> Każda ściana wchłania światło trochę inaczej. <break time="0.8s"/> Rano biel jest zimna, prawie błękitna. <break time="0.5s"/> W południe oślepia. <break time="0.5s"/> Wieczorem staje się złota. <break time="0.8s"/> Ta sama ściana, cztery różne godziny, cztery różne kolory. <break time="1.5s"/>
+
+=====
+CAP. 5 — WINNICA: VERDECA I BIANCO D'ALESSANO
+voice: custom-locorotondo
+
+Teraz opowiem ci o tym, co robię ja. <break time="1.5s"/>
+
+Mojego gospodarstwa, jak ci mówiłem, wolę nie nazywać. <break time="0.8s"/> Produkuję wino, oliwę i coś jeszcze <break time="0.5s"/> — ale dojdźmy najpierw do wina. <break time="1.2s"/>
+
+Locorotondo DOC istnieje od 10 czerwca 1969. <break time="0.8s"/> To jedno z najstarszych białych win uznanych w Apulii. <break time="0.8s"/> Szczepy są dwa: <break time="0.5s"/> Verdeca i Bianco d'Alessano. <break time="1.2s"/>
+
+To rodzime szczepy <break time="0.5s"/> — rosną tu od wieków, <break time="0.5s"/> wyselekcjonowane przez pokolenia rolników, <break time="0.5s"/> którzy zrozumieli, które winogrona najlepiej dopasowują się do tej ziemi. <break time="0.8s"/> Verdeca chce gleb chłodnych i głębokich, <break time="0.5s"/> tych z dna doliny. <break time="0.8s"/> Bianco d'Alessano jest bardziej surowy, <break time="0.5s"/> dobrze rośnie na ubogich, nasłonecznionych grzbietach, <break time="0.5s"/> tych, gdzie nigdy nie posadziłbyś nic innego. <break time="1.2s"/>
+
+Jeden daje winu zapach i smak. <break time="0.8s"/> Drugi daje strukturę i ciało. <break time="0.8s"/> Razem tworzą białe wino o słomkowej żółci, <break time="0.5s"/> czasem z zielonkawymi refleksami, <break time="0.5s"/> delikatnym zapachu, <break time="0.5s"/> wytrawnym smaku z lekko gorzkawym finałem. <break time="1.2s"/>
+
+To nie wino, które krzyczy. <break time="0.8s"/> To wino, które mówi cicho, <break time="0.5s"/> ale gdy zrozumiesz, co ci mówi, <break time="0.5s"/> nie chcesz przestać go słuchać. <break time="1.2s"/>
+
+Winobranie wypada tu zwykle pod koniec sierpnia, na początku września. <break time="0.8s"/> Zależy od rocznika. <break time="0.8s"/> Suche i gorące lato wszystko przyspiesza. <break time="0.8s"/> Lato z deszczem w lipcu przesuwa winobranie o dziesięć dni. <break time="0.8s"/> Nie ma stałych reguł. <break time="0.5s"/> Decyduje winorośl. <break time="0.8s"/> Winiarz obserwuje. <break time="1.2s"/>
+
+Ja próbuję jagód co dzień w ostatnim tygodniu przed zbiorem. <break time="0.8s"/> Nie dla chemicznej analizy, <break time="0.5s"/> choć ją też robię. <break time="0.8s"/> Ale dlatego, że smak mówi ci rzeczy, których refraktometr nie widzi. <break time="0.8s"/> Gdy jagoda daje ci to wrażenie okrągłości, <break time="0.5s"/> gdy kwasowość zmiękła, nie tracąc napięcia, <break time="0.5s"/> gdy skórka dobrze odchodzi od miąższu — <break time="0.5s"/> wtedy zbierasz. <break time="1.2s"/>
+
+Sekret nie tkwi w nowoczesnej piwnicy, <break time="0.5s"/> w wyselekcjonowanych drożdżach, <break time="0.5s"/> w technologii. <break time="0.8s"/> Sekret tkwi w winnicy. <break time="0.8s"/> Krzew Verdeki, który ma dwadzieścia lat korzeni <break time="0.5s"/> w kamieniu wapiennym tego wzgórza, <break time="0.5s"/> wie rzeczy, których żaden podręcznik enologii nie napisał. <break time="1.5s"/>
+
+=====
+CAP. 5B — MIKROKLIMAT I MASSERIE
+voice: custom-locorotondo
+
+Sierpień. <break time="1.2s"/>
+
+Na wybrzeżu adriatyckim, w Bari, w Brindisi, <break time="0.5s"/> jest trzydzieści osiem stopni i ani powiewu wiatru. <break time="0.8s"/> Tu w Locorotondo, <break time="0.5s"/> gdy pracuję w winnicy wczesnym rankiem, <break time="0.5s"/> mam sweter. <break time="0.8s"/> Różnica temperatury między wzgórzem a wybrzeżem <break time="0.5s"/> to sześć, osiem stopni w sierpniu. <break time="0.8s"/> To nie mała różnica. <break time="0.8s"/> To różnica między duszeniem się a pracą. <break time="1.2s"/>
+
+Ten mikroklimat zbudował winiarstwo Locorotondo. <break time="0.8s"/> Chłodne noce spowalniają dojrzewanie winogron, <break time="0.5s"/> zachowują naturalną kwasowość, <break time="0.5s"/> utrzymują najdelikatniejsze zapachy, które gorąco by spaliło. <break time="0.8s"/> Słońce dnia gromadzi cukry. <break time="0.5s"/> Chłód nocy je blokuje. <break time="0.8s"/> Ta równowaga daje charakter Locorotondo DOC. <break time="1.2s"/>
+
+Wiatr ma tu imię. <break time="0.8s"/> Zimą przychodzi tramontana — <break time="0.5s"/> z północy, zimna, sucha. <break time="0.8s"/> Ta, która suszy pranie w godzinę <break time="0.5s"/> i wchodzi ci w kości, jeśli nie jesteś okryty. <break time="0.8s"/> Latem przychodzi ponentino, <break time="0.5s"/> z zachodu-południowego zachodu. <break time="0.8s"/> Łagodniejszy, bardziej wilgotny, <break time="0.5s"/> ten, który przynosi lipcowe chmury. <break time="1.2s"/>
+
+Patrzę na drzewa oliwne, gdy chcę wiedzieć, skąd wieje wiatr. <break time="0.8s"/> Najstarsze oliwki pochyliły się z czasem <break time="0.5s"/> ku południowemu wschodowi. <break time="0.8s"/> Niewiele — drzewo się opiera. <break time="0.5s"/> Ale to minimalne nachylenie mówi ci, jaki jest dominujący wiatr <break time="0.5s"/> na tych grzbietach od dziesięcioleci. <break time="0.8s"/> Drzewo to wiatromierz, który mierzy w skali stulecia. <break time="1.2s"/>
+
+Z winnicy, gdy dzień jest przejrzysty, <break time="0.8s"/> widzę Cisternino na pobliskim wzgórzu — <break time="0.5s"/> jego białe domy odcinające się ostro na zieleni. <break time="0.8s"/> Dalej, na południu, Martina Franca, <break time="0.5s"/> większa, bardziej rozległa. <break time="0.8s"/> A w niektóre letnie dni, gdy wieje z północy <break time="0.5s"/> i powietrze jest czyste, <break time="0.5s"/> widać dachy Alberobello w oddali. <break time="0.8s"/> Trzy gminy, trzy miejscowości, wszystkie widoczne z tej samej winnicy. <break time="0.8s"/> To krajobraz, który mówi o wspólnocie. <break time="1.2s"/>
+
+W dole, w dolinie, są masserie. <break time="0.8s"/> Wielkie domy folwarczne Valle d'Itria, <break time="0.5s"/> zbudowane jak samowystarczalne twierdze. <break time="0.8s"/> Miały wszystko w środku: <break time="0.5s"/> stajnię, magazyn, tłocznię oliwy, cysternę, kaplicę. <break time="0.8s"/> Z masserii nie wychodziło się tygodniami, w pewnych okresach. <break time="0.8s"/> Nie było takiej potrzeby. <break time="1.2s"/>
+
+Wiele jest teraz agroturystyką. <break time="0.8s"/> To nie zło, rozumiejmy się. <break time="0.8s"/> Lepiej, żeby żyły jako agroturystyka <break time="0.5s"/> niż były porzucone. <break time="0.8s"/> Ale pierwotna funkcja była inna: <break time="0.5s"/> były organizacyjnym centrum wiejskiego kraju. <break time="0.8s"/> Masseria zarządzała miejscowymi rolnikami, <break time="0.5s"/> koordynowała siewy i zbiory, <break time="0.5s"/> była punktem odniesienia dla całej okolicznej posiadłości. <break time="1.2s"/>
+
+Masserie doliny mają i winnice, i drzewa oliwne. <break time="0.8s"/> To nie przypadek, i to mądra rzecz. <break time="0.8s"/> Winobrania robi się pod koniec sierpnia-września. <break time="0.5s"/> Oliwki zbiera się w listopadzie-grudniu. <break time="0.8s"/> Te dwie uprawy nie nakładają się w ciężkiej pracy. <break time="0.5s"/> Masseria z obiema <break time="0.5s"/> miała siłę roboczą zajętą produktywnie <break time="0.5s"/> przez sześć miesięcy w roku zamiast trzech. <break time="0.8s"/> Nie rywalizują o ręce. <break time="0.5s"/> Uzupełniają się. <break time="1.5s"/>
+
+=====
+CAP. 6 — OLIWA I LAWENDA
+voice: custom-locorotondo
+
+Dwie rzeczy, które produkuję i o których chcę ci opowiedzieć, <break time="0.5s"/> bo większość ludzi nie wie, jak się je naprawdę robi. <break time="1.5s"/>
+
+Oliwa. <break time="0.8s"/> Valle d'Itria jest krajem oliwnym od tysiącleci. <break time="0.8s"/> Drzew oliwnych tu nie sadzimy <break time="0.5s"/> — już są, niektóre mają setki lat. <break time="0.8s"/> Tłoczenie oliwek <break time="0.5s"/> — proces wyciskania oliwy <break time="0.5s"/> — trzeba zrobić szybko, <break time="0.5s"/> w ciągu kilku godzin od zbioru, <break time="0.5s"/> żeby oliwka się nie utleniła <break time="0.5s"/> i oliwa nie straciła jakości. <break time="0.8s"/> Każda godzina między zbiorem a tłocznią <break time="0.5s"/> to godzina dodatkowej kwasowości w oliwie. <break time="0.8s"/> To powód, dla którego dobra oliwa kosztuje tyle, ile kosztuje. <break time="1.2s"/>
+
+Zbiór oliwek nie robi się maszynami, nie tutaj. <break time="0.8s"/> Nie na tych starych drzewach, <break time="0.5s"/> z nieregularnymi koronami i powyginanymi gałęziami. <break time="0.8s"/> Używa się siatek rozłożonych pod spodem, <break time="0.5s"/> grabi do czesania gałęzi, <break time="0.5s"/> rąk do oliwek, które zostają. <break time="0.8s"/> To powolne. <break time="0.8s"/> To konieczne. <break time="0.8s"/> Wibrująca maszyna sprawiłaby, że kora stuletniej oliwki by pękła. <break time="1.2s"/>
+
+Lawenda. <break time="0.8s"/> To produkt, który najbardziej zadziwia ludzi, <break time="0.5s"/> gdy słyszą o nim wzmiankę. <break time="1.2s"/>
+
+Lawenda lubi dokładnie taką glebę, jaką mamy tutaj: <break time="0.5s"/> wapienną, suchą, dobrze drenowaną, nasłonecznioną. <break time="0.8s"/> To nie egzotyczna roślina dla Apulii <break time="0.5s"/> — to roślina, której świetnie się wiedzie na tym wzgórzu. <break time="1.2s"/>
+
+Olejek eteryczny uzyskuje się przez destylację z parą wodną <break time="0.5s"/> — kwitnące wierzchołki idą do alembika, <break time="0.5s"/> para przechodzi przez kwiaty i unosi ze sobą związki aromatyczne, <break time="0.5s"/> potem się skrapla i oddziela od wody. <break time="0.8s"/> Temperatury kontrolowane poniżej dziewięćdziesięciu pięciu stopni, <break time="0.5s"/> inaczej najdelikatniejsze zapachy się tracą. <break time="1.2s"/>
+
+Wydajność jest bardzo niska. <break time="0.8s"/> Na litr olejku eterycznego z Lavandula angustifolia <break time="0.5s"/> — odmiany najcenniejszej, tej o najsubtelniejszym zapachu <break time="0.5s"/> — trzeba około dwóch tysięcy kilogramów kwiatów. <break time="0.8s"/> To nie błąd w obliczeniach. <break time="0.8s"/> To powód, dla którego prawdziwy olejek eteryczny, <break time="0.5s"/> wytworzony tą metodą, <break time="0.5s"/> nie może kosztować trzech euro. <break time="1.2s"/>
+
+Pola lawendy kwitną w czerwcu. <break time="0.8s"/> Gdy idziesz obok, <break time="0.5s"/> zapach jest inny niż ten, który znasz z kosmetyków. <break time="0.8s"/> Jest bardziej zielony, bardziej trawiasty, <break time="0.5s"/> z czymś niemal leczniczym pod spodem. <break time="0.8s"/> Zapach, który znasz z przemysłowej mydlarni, to wersja uproszczona, <break time="0.5s"/> osłodzona, uczyniona komercyjną. <break time="0.8s"/> Prawdziwy jest bardziej złożony, <break time="0.5s"/> i trzeba trochę czasu, by go docenić. <break time="1.2s"/>
+
+Gdy czujesz zapach lawendy i myślisz „pięknie” <break time="0.5s"/> — wiesz już teraz, ile trudu jest w środku. <break time="1.5s"/>
+
+=====
+CAP. 6B — CO JEŚĆ I GDZIE
+voice: custom-locorotondo
+
+Pomówmy o jedzeniu. <break time="1.2s"/>
+
+Bo w Locorotondo, jak w całej Valle d'Itria, <break time="0.5s"/> jedzenie jest częścią krajobrazu tak samo jak trulli i winnice. <break time="0.8s"/> I są rzeczy, które musisz wiedzieć, zanim usiądziesz do stołu. <break time="1.5s"/>
+
+Pierwsza rzecz: gnumeridde. <break time="1.2s"/>
+
+To jelita jagnięce owinięte wokół podrobów — <break time="0.5s"/> wątroba, płuco, serce — <break time="0.5s"/> potem grillowane na żarze. <break time="0.8s"/> Nie dla słabych żołądków. <break time="0.8s"/> Nie dla tych, którzy potrzebują, by jedzenie było uspokajające. <break time="0.8s"/> To najstarsze jedzenie Murgii. <break time="1.2s"/>
+
+Gdy rolnik ubijał zwierzę, <break time="0.5s"/> nic nie wyrzucał. <break time="0.8s"/> Podroby trzeba było zjeść od razu, <break time="0.5s"/> nie dało się ich przechować. <break time="0.8s"/> Szlachetne części solono, wieszano. <break time="0.8s"/> Ale wątrobę i jelita — te gotowano tego samego dnia. <break time="0.8s"/> Gnumeridde to właśnie to: <break time="0.5s"/> kuchnia pilności i niemarnowania. <break time="1.2s"/>
+
+Jeśli je zamówisz i zjesz, <break time="0.5s"/> nie zapomnisz. <break time="0.8s"/> Na dobre albo na złe. <break time="0.8s"/> Ale mówię ci, że jeśli zjesz je gorące, <break time="0.5s"/> prosto z żaru, <break time="0.5s"/> z kieliszkiem zimnego białego Locorotondo obok, <break time="0.5s"/> to jedna z najprawdziwszych rzeczy, jakie możesz zjeść w Apulii. <break time="1.2s"/>
+
+Druga rzecz: bombette. <break time="1.2s"/>
+
+Zawijańce z wieprzowiny nadziewane serem i przyprawami, <break time="0.5s"/> potem grillowane. <break time="0.8s"/> Technicznie pochodzą z Cisternino — <break time="0.5s"/> z masarni z bezpośrednim paleniskiem, <break time="0.5s"/> masarni-restauracji, gdzie kupujesz mięso przy ladzie <break time="0.5s"/> i gotują ci je na miejscu. <break time="0.8s"/> Ale teraz bombette jesz w całej dolinie. <break time="0.8s"/> Locorotondo włącznie. <break time="1.2s"/>
+
+Jeśli chcesz prawdziwych bombette, <break time="0.5s"/> weź samochód i jedź do Cisternino. <break time="0.8s"/> To dziesięć minut. <break time="0.8s"/> Wejdź do jednej z masarni z paleniskiem na zapleczu, <break time="0.5s"/> usiądź przy jednym z plastikowych stolików, <break time="0.5s"/> zamów mieszane mięso. <break time="0.8s"/> Nie patrz na menu. <break time="0.5s"/> Zapytaj, co mają świeżego. <break time="0.8s"/> To jeden z najczystszych rytuałów kuchni tej ziemi. <break time="1.2s"/>
+
+Wieczorny rytuał Locorotondo latem jest dokładny. <break time="0.8s"/> Najpierw aperitif na placu — <break time="0.5s"/> kieliszek białego Locorotondo, kilka oliwek, kilka tarallini. <break time="0.8s"/> Potem kolacja, późno, po dziewiątej. <break time="0.8s"/> Potem spacer białymi uliczkami starego miasta, <break time="0.5s"/> gdy są prawie puste, a bruk błyszczy pod latarniami. <break time="0.8s"/> Potem może jeszcze jeden kieliszek. <break time="0.8s"/> Potem do domu. <break time="1.2s"/>
+
+Nie rób tego w pośpiechu. <break time="0.8s"/> Aperitifu nie robi się w dwadzieścia minut. <break time="0.5s"/> Kolacji nie robi się w czterdzieści. <break time="0.8s"/> Czas w Locorotondo latem trzeba zwolnić. <break time="0.8s"/> To część doświadczenia. <break time="1.2s"/>
+
+Jedna rzecz: unikaj restauracji przy belwederze <break time="0.5s"/> z laminowanym menu w czterech językach. <break time="0.8s"/> Nie chodzi o to, że jedzenie jest złe. <break time="0.8s"/> Chodzi o to, że jest zbudowane dla tych, którzy nie wracają. <break time="0.8s"/> Szukaj trattorii bardziej w głębi, <break time="0.5s"/> tych, gdzie menu jest pisane ręcznie na tablicy, <break time="0.5s"/> tych, gdzie właściciel pyta cię, skąd jesteś, <break time="0.5s"/> zanim przyniesie ci chleb. <break time="0.8s"/> Tam jesz. <break time="1.5s"/>
+
+=====
+CAP. 7 — PANORAMA: BALKON DOLINY
+voice: custom-locorotondo
+
+Zatrzymaj się tu na chwilę. <break time="1.2s"/>
+
+Spójrz w dół. <break time="1.5s"/>
+
+Cała Valle d'Itria jest pod tobą. <break time="0.8s"/> Trulli Alberobello po prawej, <break time="0.5s"/> Martina Franca po lewej, <break time="0.5s"/> masserie rozrzucone wśród pól, <break time="0.5s"/> rzędy winorośli, <break time="0.5s"/> drzewa oliwne, które nigdy się nie kończą. <break time="1.2s"/>
+
+To jest powód, dla którego Locorotondo zbudowano na tym wzgórzu. <break time="0.8s"/> Nie dla panoramy <break time="0.5s"/> — choć jest piękna. <break time="0.8s"/> Dla kontroli. <break time="0.8s"/> Stąd widzisz wszystko, co porusza się w dolinie. <break time="0.8s"/> Widzisz, kto przybywa, widzisz, gdzie pada, <break time="0.5s"/> widzisz, gdzie płoną pola. <break time="0.8s"/> Przez wieki ten widok był informacją. <break time="0.8s"/> Był władzą. <break time="1.2s"/>
+
+Teraz to belweder z turystami robiącymi sobie zdjęcia. <break time="1.2s"/>
+
+Ale spróbuj spojrzeć na to tak, jak patrzył ktoś tysiąc lat temu, <break time="0.5s"/> bez aparatu, bez telefonu. <break time="0.8s"/> Z odpowiedzialnością za ochronę ludzi, którzy mieszkali na dole. <break time="0.8s"/> Ze świadomością, że ten kamień wapienny pod stopami <break time="0.5s"/> był wszystkim, co mieli. <break time="1.2s"/>
+
+Wyostrz wzrok na rzędy winorośli tam w dole. <break time="0.8s"/> Nie wiesz stąd, jak daleko są. <break time="0.8s"/> Wydają się bliskie, uporządkowane. <break time="0.8s"/> Naprawdę pracuję tam ja, pracują moi sąsiedzi, <break time="0.5s"/> pracuje każdy, kto ma kawałek ziemi w tej dolinie. <break time="0.8s"/> Te rzędy przeszedłem pieszo tysiąc razy. <break time="0.5s"/> Każdy krzew znam. <break time="0.8s"/> Stąd wydają się rysunkiem. <break time="0.5s"/> Z bliska są codzienną pracą. <break time="1.2s"/>
+
+Latem wieczorem, gdy słońce schodzi ku zachodowi, <break time="0.5s"/> światło bierze dachy Valle d'Itria od dołu. <break time="0.8s"/> Stożki trulli stają się złote. <break time="0.8s"/> Wapienne kamienie murków błyszczą. <break time="0.8s"/> To jeden z tych momentów, gdy rozumiesz, dlaczego ta ziemia <break time="0.5s"/> inspirowała malarzy i fotografów przez dziesięciolecia. <break time="0.8s"/> To nie kwestia techniki. <break time="0.5s"/> To tak, że światło tutaj jest inne. <break time="1.2s"/>
+
+Zmienia się trochę to, jak na to patrzysz, prawda? <break time="1.5s"/>
+
+=====
+CAP. 8 — ZAKOŃCZENIE: FRANCESCO ŻEGNA
+voice: custom-locorotondo
+
+No więc <break time="0.5s"/> — Locorotondo. <break time="1.5s"/>
+
+Miasteczko, które kręci się w kółko od tysiąca lat, <break time="0.5s"/> białe domy z pochyłymi dachami zbudowanymi dla deszczu, <break time="0.5s"/> białe wino, które smakuje kamieniem wapiennym i wiatrem, <break time="0.5s"/> oliwa robiona ze starych drzew oliwnych, <break time="0.5s"/> i lawenda, która pachnie cierpliwością. <break time="1.2s"/>
+
+Patron-wojownik, który wraca na plac co 23 czerwca, <break time="0.5s"/> Cantina Cooperativa, która utrzymała przy życiu rodzime szczepy, <break time="0.5s"/> masserie, które latem wracają do życia, <break time="0.5s"/> i plac, gdzie starzy i dzieci wciąż współistnieją bez problemu. <break time="1.2s"/>
+
+To nie miejsce, które cię przytłacza. <break time="0.8s"/> To miejsce, które wchodzi w ciebie powoli, <break time="0.5s"/> jeśli dasz mu czas. <break time="1.2s"/>
+
+Ja wybrałem, by zostać tutaj. <break time="0.8s"/> Nie dlatego, że nie mogłem wyjechać, <break time="0.5s"/> ale dlatego, że zrozumieć miejsce do końca <break time="0.5s"/> — jego ziemię, jego pory roku, jego ludzi — <break time="0.5s"/> jest już samo w sobie całym życiem. <break time="0.8s"/> Jeszcze nie skończyłem się uczyć. <break time="1.2s"/>
+
+Jeśli chcesz zabrać do domu coś konkretnego: <break time="0.8s"/> wstąp do jednej z piwnic w centrum, <break time="0.5s"/> kup butelkę Locorotondo DOC, <break time="0.5s"/> i wypij ją tego samego wieczoru <break time="0.5s"/> — schłodzoną, z czymś prostym. <break time="0.8s"/> Chleb, ser, oliwki. <break time="0.8s"/> Rozumiesz tam wszystko. <break time="1.2s"/>
+
+A jeśli masz jeszcze ochotę się ruszyć, <break time="0.5s"/> Martina Franca jest dziesięć minut stąd. <break time="0.8s"/> Miasto inne niż wszystko, co dziś widziałeś <break time="0.5s"/> — barokowe, muzyczne, z historią, której się nie spodziewasz. <break time="1.2s"/>
+
+Czekam tam na ciebie. <break time="1.5s"/>
