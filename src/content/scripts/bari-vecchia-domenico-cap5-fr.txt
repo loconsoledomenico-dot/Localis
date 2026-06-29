@@ -1,0 +1,147 @@
+Maintenant tu es dans la partie la plus ancienne et la plus tendue vers la mer du bourg.
+<break time="0.8s"/>
+
+Par ici Bari semble presque arriver à son extrémité naturelle.
+<break time="0.8s"/>
+
+La ville finit.
+<break time="0.5s"/>
+
+Devant il reste l'eau.
+<break time="1s"/>
+
+Mais sous tes pieds, en revanche, la ville continue de remonter dans le temps.
+<break time="0.5s"/>
+
+<prosody rate="85%">Très loin en arrière.</prosody>
+<break time="1.5s"/>
+
+Bari n'a pas un grand amphithéâtre au milieu de la rue.
+<break time="0.5s"/>
+
+Elle n'a pas un temple antique qui domine la place et que tout le monde photographie.
+<break time="0.8s"/>
+
+Ici l'antiquité est moins évidente.
+<break time="0.5s"/>
+
+Elle est cachée.
+<break time="0.8s"/>
+
+<prosody rate="88%">Elle est sous une église,
+<break time="0.4s"/>
+dans un monastère,
+<break time="0.4s"/>
+sous un pavement,
+<break time="0.4s"/>
+parmi des fragments de murs, des tombes, des objets, des restes d'habitations et des fondations sur lesquelles au fil des siècles on a continué à construire.</prosody>
+<break time="1.2s"/>
+
+C'est l'un des traits les plus vrais de Bari Vecchia : elle n'a pas effacé complètement ce qu'il y avait avant.
+<break time="0.5s"/>
+
+<emphasis level="moderate">Elle a habité dessus.</emphasis>
+<break time="1.5s"/>
+
+Dans la zone de Santa Scolastica et de Santa Maria del Buon Consiglio émergent les traces d'une histoire très longue.
+<break time="1s"/>
+
+<prosody rate="88%">D'abord la présence des habitants les plus anciens de cette péninsule,
+<break time="0.4s"/>
+puis le monde grec et romain,
+<break time="0.4s"/>
+puis les églises médiévales,
+<break time="0.4s"/>
+puis les monastères,
+<break time="0.4s"/>
+puis la ville qui, tout en changeant, continuait à réutiliser le même espace.</prosody>
+<break time="1.2s"/>
+
+Ailleurs l'histoire est exposée de façon ordonnée, presque didactique.
+<break time="0.5s"/>
+
+Ici non.
+<break time="0.8s"/>
+
+Ici l'histoire se chevauche.
+<break time="1s"/>
+
+C'est un sol au-dessus d'un autre sol,
+<break time="0.4s"/>
+
+un mur qui naît là où il en existait déjà un,
+<break time="0.4s"/>
+
+une église qui conserve sous elle la trace d'un lieu précédent,
+<break time="0.4s"/>
+
+une place où tu marches sans te rendre compte que, dessous, repose un morceau de la ville que tu ne vois plus.
+<break time="1.5s"/>
+
+Mais je veux te raconter une chose moins monumentale et bien plus humaine.
+<break time="1s"/>
+
+Bari était entourée par la mer.
+<break time="0.5s"/>
+
+<prosody rate="88%">Et pourtant elle avait soif.</prosody>
+<break time="1.2s"/>
+
+L'eau salée était partout, mais l'eau bonne à boire était précieuse.
+<break time="0.8s"/>
+
+Pendant des siècles la vie de la ville ancienne dépendit aussi des citernes, privées ou publiques, où l'on recueillait l'eau de pluie.
+<break time="1s"/>
+
+Pense à ce que cela signifiait.
+<break time="0.8s"/>
+
+Aujourd'hui nous ouvrons un robinet sans y penser.
+<break time="0.5s"/>
+
+Alors une saison avec peu de pluie pouvait devenir un problème pour tous.
+<break time="1s"/>
+
+L'eau n'était pas un service invisible.
+<break time="0.5s"/>
+
+C'était une préoccupation quotidienne,
+<break time="0.4s"/>
+
+quelque chose à conserver, protéger, partager.
+<break time="1.2s"/>
+
+Dans cette zone, près du Buon Consiglio, demeure la mémoire d'une citerne destinée aux pauvres gens, construite pour que qui n'avait pas de ressources puisse quand même boire.
+<break time="1s"/>
+
+<prosody rate="88%">Ce détail me frappe toujours.</prosody>
+<break time="1s"/>
+
+Nous sommes habitués à chercher la grande histoire dans les rois, les empereurs, les guerres, les basiliques.
+<break time="0.8s"/>
+
+<prosody pitch="+3%">Mais une ville se reconnaît aussi dans un geste plus simple : quelqu'un qui décide que l'eau ne doit pas être refusée à qui en a besoin.</prosody>
+<break time="1.5s"/>
+
+Regarde encore ce lieu.
+<break time="0.8s"/>
+
+Devant toi la mer,
+<break time="0.4s"/>
+
+sous toi il y a des siècles de Bari,
+<break time="0.5s"/>
+
+et au milieu, entre les grandes histoires et les grandes pierres, il y a la vie concrète de personnes qui devaient trouver chaque jour de l'eau, de la nourriture, un abri et un moyen d'avancer.
+<break time="1.5s"/>
+
+Maintenant nous rentrerons lentement vers l'intérieur du bourg, en direction de la Cathédrale.
+<break time="0.5s"/>
+
+Parce que Bari Vecchia n'était pas seulement une ville entourée de murs.
+<break time="0.5s"/>
+
+C'était aussi une ville couverte d'églises.
+<break time="0.5s"/>
+
+<prosody rate="88%">Une ville où la foi, le pouvoir et la vie quotidienne se tenaient souvent à quelques pas l'un de l'autre.</prosody>

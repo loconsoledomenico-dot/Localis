@@ -1,0 +1,124 @@
+Maintenant arrête-toi près de la Cathédrale San Sabino.
+<break time="1s"/>
+
+Beaucoup de visiteurs arrivent à Bari pour San Nicola, et c'est compréhensible.
+<break time="0.8s"/>
+
+Mais avant la Basilique, avant l'arrivée du saint de Myre, Bari avait déjà son centre religieux et son histoire chrétienne.
+<break time="0.5s"/>
+
+La Cathédrale dédiée à San Sabino fait partie de cette mémoire plus ancienne.
+<break time="1s"/>
+
+Regarde-la.
+<break time="1.2s"/>
+
+Ici aussi la pierre claire, les arcs, les formes sévères du roman des Pouilles racontent une ville qui n'avait pas besoin d'ornements excessifs pour exprimer sa propre force.
+<break time="1.2s"/>
+
+Mais ce que nous avons aujourd'hui du mal à imaginer, c'est combien d'églises il y avait dans la Bari ancienne.
+<break time="0.8s"/>
+
+Les sources parlent de dizaines d'édifices religieux.
+<break time="1s"/>
+
+<prosody rate="88%">Des grandes églises,
+<break time="0.4s"/>
+des petites églises,
+<break time="0.4s"/>
+des monastères,
+<break time="0.4s"/>
+des chapelles,
+<break time="0.4s"/>
+des lieux de culte liés à des familles, des corporations, des communautés différentes.</prosody>
+<break time="1.2s"/>
+
+Si nous pouvions voir Bari en plein Moyen Âge, nous aurions probablement la sensation d'une ville revêtue de pierre sacrée.
+<break time="0.5s"/>
+
+Un entrelacs continu de maisons et de clochers, de ruelles et d'autels, de cours et de processions.
+<break time="1.5s"/>
+
+Mais tu ne dois pas imaginer une ville silencieuse, éternellement recueillie en prière.
+<break time="0.8s"/>
+
+La religion était mêlée à la vie concrète.
+<break time="1s"/>
+
+<prosody rate="88%">Autour des églises on se rencontrait,
+<break time="0.4s"/>
+on signait des actes,
+<break time="0.4s"/>
+on faisait des promesses,
+<break time="0.4s"/>
+on célébrait des mariages,
+<break time="0.4s"/>
+on accompagnait les morts,
+<break time="0.4s"/>
+on demandait protection contre les maladies,
+<break time="0.4s"/>
+on cherchait de l'aide quand la mer ne rendait pas un homme ou quand une famille n'avait pas assez pour vivre.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">À Bari le sacré ne se tenait pas en dehors de la vie.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Il se tenait dedans.</emphasis></prosody>
+<break time="1.5s"/>
+
+Dans la Cathédrale est conservée aussi l'une des images les plus significatives du lien de Bari avec l'Orient : l'Odigitria, la Vierge qui montre le chemin.
+<break time="0.8s"/>
+
+Son nom même vient d'une tradition byzantine.
+<break time="0.8s"/>
+
+Et il est difficile de ne pas penser que cette ville, habituée depuis des siècles à regarder vers l'autre rive de la mer, a reconnu dans cette image quelque chose de profondément sien.
+<break time="1.2s"/>
+
+<prosody rate="88%">Bari était latine et grecque,
+<break time="0.4s"/>
+occidentale et orientale,
+<break time="0.4s"/>
+liée à Rome, mais traversée pendant des siècles par des influences qui arrivaient de l'autre côté de l'Adriatique et de la Méditerranée.</prosody>
+<break time="1s"/>
+
+San Nicola rendra ce lien encore plus évident.
+<break time="0.5s"/>
+
+Mais il ne l'inventera pas.
+<break time="0.5s"/>
+
+La ville le portait déjà en elle.
+<break time="1.5s"/>
+
+Quand tu marches entre la Cathédrale et la Basilique, donc, tu ne passes pas simplement d'une belle église à l'autre.
+<break time="0.8s"/>
+
+Tu traverses deux âmes de la ville.
+<break time="1.2s"/>
+
+San Sabino raconte la Bari la plus ancienne, le siège épiscopal, la continuité de son histoire.
+<break time="0.5s"/>
+
+San Nicola raconte la Bari qui, grâce au saint arrivé de la mer, devient une destination universelle de pèlerins.
+<break time="1s"/>
+
+Entre les deux, dans les ruelles, continue de vivre la vraie ville.
+<break time="0.5s"/>
+
+Celle faite de familles, de boutiques, de mots, de pain, de portes ouvertes et de gens qui n'ont jamais eu besoin de séparer nettement la foi de la journée.
+<break time="1.5s"/>
+
+Maintenant dirige-toi vers Piazza Mercantile.
+<break time="0.8s"/>
+
+Là nous verrons une autre Bari.
+<break time="0.5s"/>
+
+Pas celle du saint,
+<break time="0.4s"/>
+
+pas celle des murs.
+<break time="0.5s"/>
+
+<prosody rate="88%">Mais celle des affaires, du marché et de la honte publique.</prosody>

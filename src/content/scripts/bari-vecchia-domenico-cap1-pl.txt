@@ -1,0 +1,103 @@
+<prosody rate="90%">Ja jestem Domenico.</prosody>
+<break time="1.5s"/>
+
+Jestem z Bari i dorastałem w dzielnicy Libertà, kilka kroków od tego starego miasta.
+<break time="0.8s"/>
+
+Bari Vecchia zawsze miałem obok. Nie jako coś do zwiedzenia raz w życiu, ale jako kawałek miasta, który był tam, blisko, obecny. I może właśnie dlatego, jako dzieciaki, nie od razu zdajemy sobie sprawę, co mamy przed sobą.
+<break time="0.8s"/>
+
+Potem dorastasz. Studiujesz. Wracasz w te same miejsca. I rozumiesz coś, co całkowicie zmienia sposób patrzenia na te kamienie.
+<break time="1.2s"/>
+
+Dziś nazywamy ją Bari Vecchia.
+<break time="1s"/>
+
+<prosody rate="85%" pitch="+4%">Przez wieki natomiast była to <emphasis level="strong">całe</emphasis> Bari.</prosody>
+<break time="2s"/>
+
+Zanim wejdziesz w uliczki, zatrzymaj się przed Castello Svevo.
+<break time="0.5s"/>
+
+Przyjrzyj mu się dobrze.
+<break time="1s"/>
+
+Jest masywny, niemal surowy. Nie wygląda na zbudowany, by przyjmować. Wygląda na zbudowany, by stawiać opór.
+<break time="1s"/>
+
+Nazywamy go Castello Svevo, bo Fryderyk II przebudował go gruntownie i zostawił mu kilka najbardziej rozpoznawalnych znaków: cesarskiego orła na portalu, łuki, kapitele, sale, które uczyniły z twierdzy także miejsce reprezentacji.
+<break time="0.8s"/>
+
+Ale zamek powstał wcześniej.
+<break time="0.8s"/>
+
+A najważniejsze do zrozumienia jest to, że nie zbudowano go tylko po to, by bronić Bari.
+<break time="0.8s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">Służył też do tego, by je kontrolować.</emphasis></prosody>
+<break time="1.5s"/>
+
+W średniowieczu tym miastem trudno było rządzić. Było bogate, dumne, pełne handlu, przywykłe do utrzymywania kontaktów z różnymi światami. Poznało Longobardów, Saracenów, Bizantyjczyków. Żyło, patrząc na morze, ale nie schylając łatwo głowy przed tym, kto próbował nad nim panować.
+<break time="0.8s"/>
+
+Kiedy przybyli Normanowie, Bari stawiło opór.
+<break time="1s"/>
+
+A zamek umieszczono właśnie tutaj, na skraju starego miasta, między lądem a morzem.
+<break time="0.8s"/>
+
+Dość blisko, by je chronić,
+<break time="0.5s"/>
+
+dość duży, by przypominać mu, kto rządzi.
+<break time="1.5s"/>
+
+Spróbuj wyobrazić sobie, jak musiał wyglądać dla mieszkańców miasteczka.
+<break time="0.8s"/>
+
+Nie ładna atrakcja do sfotografowania,
+<break time="0.5s"/>
+
+nie średniowieczna sceneria.
+<break time="0.5s"/>
+
+Ogromna obecność, zamknięta wieżami, otoczona fosą, związana z władzą tego, kto rządził.
+<break time="1s"/>
+
+Zamek nie był naprawdę „mieszkańców Bari”.
+<break time="0.8s"/>
+
+<prosody rate="88%" pitch="+3%">Był czymś, co mieszkańcy Bari <emphasis level="strong">mieli na karku</emphasis>.</prosody>
+<break time="1.2s"/>
+
+Twierdza zbudowana obok ich miasta, ale też przeciw ich wolności.
+<break time="1s"/>
+
+Później Izabela Aragońska i Bona Sforza przekształciłyby go w książęcą rezydencję, otwartą na dwory, artystów i ważne osobistości. Ale pod tą elegancją pozostałoby to samo odczucie: te wieże nie należały do codziennego życia uliczek.
+<break time="0.8s"/>
+
+Patrzyły na nie z góry.
+<break time="1.5s"/>
+
+Teraz odwróć się ku Bari Vecchia.
+<break time="0.8s"/>
+
+Za tymi wąskimi ulicami jest nie tylko stara dzielnica.
+<break time="0.5s"/>
+
+Jest miasto, które przez wieki musiało bronić się przed morzem, przed zdobywcami i czasem także przed tymi, którzy mówili, że chcą nim rządzić.
+<break time="1.2s"/>
+
+Teraz zaczynamy w nie wchodzić.
+<break time="0.8s"/>
+
+Skieruj się ku Strada delle Crociate.
+<break time="0.8s"/>
+
+Nie spiesz się.
+<break time="1s"/>
+
+Ta historia nie zaczyna się od fotografii.
+<break time="0.5s"/>
+
+<prosody rate="85%">Zaczyna się od miasta zamkniętego w swoich murach.</prosody>

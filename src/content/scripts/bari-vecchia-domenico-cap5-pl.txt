@@ -1,0 +1,147 @@
+Teraz jesteś w najstarszej i najbardziej wysuniętej ku morzu części miasteczka.
+<break time="0.8s"/>
+
+W tych stronach Bari zdaje się niemal docierać do swojego naturalnego krańca.
+<break time="0.8s"/>
+
+Miasto się kończy.
+<break time="0.5s"/>
+
+Przed sobą pozostaje woda.
+<break time="1s"/>
+
+Ale pod twoimi stopami miasto cofa się dalej w czasie.
+<break time="0.5s"/>
+
+<prosody rate="85%">Bardzo daleko wstecz.</prosody>
+<break time="1.5s"/>
+
+Bari nie ma wielkiego amfiteatru pośrodku ulicy.
+<break time="0.5s"/>
+
+Nie ma starożytnej świątyni górującej nad placem, którą wszyscy fotografują.
+<break time="0.8s"/>
+
+Tutaj starożytność jest mniej widoczna.
+<break time="0.5s"/>
+
+Jest ukryta.
+<break time="0.8s"/>
+
+<prosody rate="88%">Jest pod kościołem,
+<break time="0.4s"/>
+wewnątrz klasztoru,
+<break time="0.4s"/>
+pod posadzką,
+<break time="0.4s"/>
+wśród fragmentów murów, grobów, przedmiotów, pozostałości domów i fundamentów, na których przez wieki wciąż budowano.</prosody>
+<break time="1.2s"/>
+
+To jedna z najprawdziwszych cech Bari Vecchia: nie wymazało całkowicie tego, co było wcześniej.
+<break time="0.5s"/>
+
+<emphasis level="moderate">Zamieszkało na tym.</emphasis>
+<break time="1.5s"/>
+
+W okolicy Santa Scolastica i Santa Maria del Buon Consiglio wyłaniają się ślady bardzo długiej historii.
+<break time="1s"/>
+
+<prosody rate="88%">Najpierw obecność najdawniejszych mieszkańców tego półwyspu,
+<break time="0.4s"/>
+potem świat grecki i rzymski,
+<break time="0.4s"/>
+potem średniowieczne kościoły,
+<break time="0.4s"/>
+potem klasztory,
+<break time="0.4s"/>
+potem miasto, które zmieniając się, wciąż na nowo wykorzystywało tę samą przestrzeń.</prosody>
+<break time="1.2s"/>
+
+Gdzie indziej historia jest wyłożona w sposób uporządkowany, niemal dydaktyczny.
+<break time="0.5s"/>
+
+Tutaj nie.
+<break time="0.8s"/>
+
+Tutaj historia się nakłada.
+<break time="1s"/>
+
+To posadzka na innej posadzce,
+<break time="0.4s"/>
+
+mur, który powstaje tam, gdzie już jeden istniał,
+<break time="0.4s"/>
+
+kościół, który zachowuje pod sobą ślad wcześniejszego miejsca,
+<break time="0.4s"/>
+
+plac, po którym idziesz, nie zdając sobie sprawy, że pod spodem spoczywa kawałek miasta, którego już nie widzisz.
+<break time="1.5s"/>
+
+Ale chcę ci opowiedzieć coś mniej monumentalnego i znacznie bardziej ludzkiego.
+<break time="1s"/>
+
+Bari było otoczone morzem.
+<break time="0.5s"/>
+
+<prosody rate="88%">A jednak było spragnione.</prosody>
+<break time="1.2s"/>
+
+Słona woda była wszędzie, ale woda dobra do picia była cenna.
+<break time="0.8s"/>
+
+Przez wieki życie starego miasta zależało także od cystern, prywatnych lub publicznych, w których zbierano deszczówkę.
+<break time="1s"/>
+
+Pomyśl, co to znaczyło.
+<break time="0.8s"/>
+
+Dziś odkręcamy kran, nie myśląc o tym.
+<break time="0.5s"/>
+
+Wtedy pora roku z małą ilością deszczu mogła stać się problemem dla wszystkich.
+<break time="1s"/>
+
+Woda nie była niewidzialną usługą.
+<break time="0.5s"/>
+
+Była codziennym zmartwieniem,
+<break time="0.4s"/>
+
+czymś, co trzeba było gromadzić, chronić, dzielić.
+<break time="1.2s"/>
+
+W tej okolicy, blisko Buon Consiglio, pozostaje pamięć o cysternie przeznaczonej dla biednych, zbudowanej po to, by ten, kto nie miał środków, mógł mimo wszystko się napić.
+<break time="1s"/>
+
+<prosody rate="88%">Ten szczegół zawsze mnie porusza.</prosody>
+<break time="1s"/>
+
+Przywykliśmy szukać wielkiej historii w królach, cesarzach, wojnach, bazylikach.
+<break time="0.8s"/>
+
+<prosody pitch="+3%">Ale miasto poznaje się także po prostszym geście: ktoś postanawia, że wody nie wolno odmawiać temu, kto jej potrzebuje.</prosody>
+<break time="1.5s"/>
+
+Spójrz jeszcze na to miejsce.
+<break time="0.8s"/>
+
+Przed tobą morze,
+<break time="0.4s"/>
+
+pod tobą są wieki Bari,
+<break time="0.5s"/>
+
+a pośrodku, między wielkimi historiami a wielkimi kamieniami, jest konkretne życie ludzi, którzy musieli codziennie znaleźć wodę, jedzenie, schronienie i sposób, by iść dalej.
+<break time="1.5s"/>
+
+Teraz powoli wrócimy ku wnętrzu miasteczka, w stronę Katedry.
+<break time="0.5s"/>
+
+Bo Bari Vecchia nie było tylko miastem otoczonym murami.
+<break time="0.5s"/>
+
+Było też miastem pokrytym kościołami.
+<break time="0.5s"/>
+
+<prosody rate="88%">Miastem, w którym wiara, władza i codzienne życie często były o kilka kroków od siebie.</prosody>

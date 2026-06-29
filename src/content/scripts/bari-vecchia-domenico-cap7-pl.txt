@@ -1,0 +1,139 @@
+Teraz zatrzymaj się na Piazza Mercantile.
+<break time="0.8s"/>
+
+Spójrz na plac taki, jaki jest dzisiaj.
+<break time="1s"/>
+
+<prosody rate="90%">Stoliki,
+<break time="0.4s"/>
+ludzie, którzy spacerują,
+<break time="0.4s"/>
+ktoś, kto pije kawę,
+<break time="0.4s"/>
+ktoś, kto siada i przygląda się.</prosody>
+<break time="1s"/>
+
+To jedno z najprzyjemniejszych miejsc Bari Vecchia.
+<break time="1s"/>
+
+Ale gdybyśmy mogli cofnąć się o stulecia, zobaczylibyśmy go innymi oczami.
+<break time="1s"/>
+
+Ten plac był <emphasis level="moderate">praktycznym</emphasis> sercem miasta.
+<break time="0.8s"/>
+
+Tutaj handlowano,
+<break time="0.4s"/>
+
+tutaj spotykali się kupcy, rzemieślnicy, mieszczanie, przybysze,
+<break time="0.4s"/>
+
+tutaj przepływały pieniądze, towary, wiadomości i codzienne kłopoty.
+<break time="1s"/>
+
+Nazwa „Mercantile” mówi dokładnie to: Bari nie było tylko miastem świętych i pielgrzymów.
+<break time="0.8s"/>
+
+<prosody rate="88%">To było miasto, które pracowało,
+<break time="0.4s"/>
+które kupowało,
+<break time="0.4s"/>
+które sprzedawało,
+<break time="0.4s"/>
+które się kłóciło,
+<break time="0.4s"/>
+które domagało się spłaty długów.</prosody>
+<break time="1.5s"/>
+
+Teraz poszukaj kolumny z kamiennym lwem.
+<break time="0.8s"/>
+
+Dziś wielu ludzi ją fotografuje, nie wiedząc naprawdę, co przedstawia.
+<break time="1s"/>
+
+Lew nie stał tam tylko po to, by zdobić plac.
+<break time="0.8s"/>
+
+Przy tej kolumnie wystawiano publicznie tych, którym nie udało się spłacić swoich długów.
+<break time="1s"/>
+
+Kara nie była tylko ekonomiczna.
+<break time="0.5s"/>
+
+<emphasis level="moderate">Była wstydem.</emphasis>
+<break time="1.2s"/>
+
+<prosody rate="88%">Być pokazanym przed całym miastem,
+<break time="0.4s"/>
+być rozpoznanym przez sąsiadów,
+<break time="0.4s"/>
+zobaczyć, jak prywatna porażka zamienia się w publiczne widowisko.</prosody>
+<break time="1.2s"/>
+
+W dialekcie barese pozostała bardzo dosadna pamięć o tej praktyce: powiedzenie przywołujące tego, kogo posyłano, by pokazał lwu tyłek.
+<break time="0.8s"/>
+
+Może to brzmieć jak ludowy żart.
+<break time="0.5s"/>
+
+W rzeczywistości to fragment historii ocalały w języku, długo po tym, jak pierwotny powód był już niemal zapomniany.
+<break time="1.5s"/>
+
+Ten plac dobrze opowiada charakter Bari.
+<break time="0.8s"/>
+
+Miasto pobożne, z pewnością.
+<break time="0.5s"/>
+
+Ale też konkretne,
+<break time="0.4s"/>
+
+praktyczne,
+<break time="0.4s"/>
+
+przywykłe do handlu.
+<break time="0.8s"/>
+
+Zdolne przyjmować pielgrzymów z całego świata przy grobie San Nicola, a kilka metrów dalej wystawiać na publiczny osąd tego, kto nie uszanował długu.
+<break time="1s"/>
+
+<prosody pitch="+3%">Dawne miasto nie było ugładzoną pocztówką.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Było żywe.</emphasis></prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+2%">I właśnie dlatego, że było żywe, było też twarde.</prosody>
+<break time="1.5s"/>
+
+Jest jeszcze jedna rzecz, o której lubię myśleć, gdy tędy przechodzę.
+<break time="0.8s"/>
+
+Place zmieniają funkcję, ale rzadko przestają być miejscem, w którym miasto się rozpoznaje.
+<break time="1s"/>
+
+Wtedy przychodziło się tu, by sprzedawać, kupować, sądzić, słuchać wiadomości.
+<break time="0.5s"/>
+
+Dziś przychodzi się tu, by się spotkać, zjeść, czegoś się napić, spędzić wieczór.
+<break time="0.8s"/>
+
+Zmieniły się obyczaje.
+<break time="0.5s"/>
+
+Ale plac wciąż wykonuje tę samą pracę: trzyma ludzi blisko siebie.
+<break time="1.5s"/>
+
+Teraz, przed częścią końcową, wejdź znów w uliczki.
+<break time="0.5s"/>
+
+Nie szukaj idealnego kierunku.
+<break time="0.5s"/>
+
+Daj się prowadzić ulicom.
+<break time="1s"/>
+
+Ostatnia rzecz, której chcę ci dać posłuchać, to nie zabytek.
+<break time="0.5s"/>
+
+<prosody rate="85%">To głos miasta.</prosody>

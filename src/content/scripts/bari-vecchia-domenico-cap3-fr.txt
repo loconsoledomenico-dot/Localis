@@ -1,0 +1,102 @@
+Maintenant arrête-toi près de la Basilique San Nicola.
+<break time="0.8s"/>
+
+Regarde-la sans entrer tout de suite.
+<break time="1s"/>
+
+Sa pierre claire, sa sévérité, sa force ne sont pas seulement l'expression d'un style architectural.
+<break time="0.8s"/>
+
+Cette basilique naît d'une ambition énorme.
+<break time="0.8s"/>
+
+<prosody rate="88%">Garder un saint capable de changer le destin d'une ville.</prosody>
+<break time="1.5s"/>
+
+Avant l'arrivée des reliques de San Nicola, Bari était déjà importante.
+<break time="0.5s"/>
+
+Elle avait été une grande ville byzantine, reliée à l'Orient, siège du pouvoir impérial dans l'Italie méridionale. Ici circulaient marchands, fonctionnaires, soldats, moines, argent, langues et rites différents.
+<break time="1s"/>
+
+Dans cette zone se dressait le complexe du Catépan, le représentant de l'empire byzantin. Imagine une ville où l'Orient n'était pas un mot exotique, mais une présence quotidienne : dans les commerces, dans les églises, dans les images sacrées, dans les rites, jusque dans la façon de regarder la mer.
+<break time="1.2s"/>
+
+Puis, en 1087, il arriva quelque chose qui allait tout changer.
+<break time="1s"/>
+
+Soixante-deux marins de Bari partirent vers Myre, dans la Turquie actuelle, et revinrent en rapportant avec eux les reliques de San Nicola.
+<break time="1s"/>
+
+Les détails de ce voyage, nous les raconterons dans le guide consacré à la Basilique.
+<break time="0.5s"/>
+
+Ici ce qui m'intéresse, c'est de te faire comprendre ce que cela signifia pour Bari.
+<break time="1.2s"/>
+
+<prosody pitch="+2%">Jusqu'à ce moment, cette ville était surtout un lieu d'où l'on <emphasis level="moderate">passait</emphasis>.</prosody>
+<break time="0.8s"/>
+
+<prosody rate="85%" pitch="+4%">Après San Nicola, elle devint un lieu vers lequel on <emphasis level="strong">venait</emphasis>.</prosody>
+<break time="2s"/>
+
+Des pèlerins de terres lointaines commencèrent à arriver ici pour prier sur la tombe du saint.
+<break time="0.8s"/>
+
+Et quand arrivent les pèlerins, c'est toute la ville qui change.
+<break time="1s"/>
+
+<prosody rate="90%">Il faut de l'hospitalité, de la nourriture, des marchés, des chemins, de la protection, des églises, des hôpitaux, des lieux où s'arrêter.
+<break time="0.8s"/>
+Les trafics changent,
+<break time="0.4s"/>
+les foires changent,
+<break time="0.4s"/>
+le prestige change,
+<break time="0.4s"/>
+change même l'image qu'une ville a d'elle-même.</prosody>
+<break time="1.2s"/>
+
+Bari n'était plus seulement la ville tendue vers l'Orient.
+<break time="0.5s"/>
+
+<prosody pitch="+3%">Elle était devenue le lieu où l'Orient était venu <emphasis level="strong">vivre</emphasis>.</prosody>
+<break time="1.5s"/>
+
+Et aujourd'hui encore tu le sens.
+<break time="0.8s"/>
+
+Dans la crypte de la Basilique prient catholiques et orthodoxes.
+<break time="0.5s"/>
+
+Des personnes qui appartiennent à des traditions différentes arrivent devant le même saint.
+<break time="0.8s"/>
+
+Ce n'est pas une construction moderne faite pour les touristes.
+<break time="0.5s"/>
+
+C'est la continuation d'une histoire ancienne : Bari a toujours été une ville placée entre des mondes différents.
+<break time="1.5s"/>
+
+Quand moi je regarde San Nicola, en tant que Barese, je ne vois pas seulement le patron de la ville.
+<break time="0.8s"/>
+
+Je vois la raison pour laquelle Bari a appris à être connue bien au-delà de ses frontières.
+<break time="0.5s"/>
+
+Je vois le moment où la ville, au lieu de regarder seulement la mer en attendant qui arrivait, est devenue elle-même une destination.
+<break time="1.5s"/>
+
+Maintenant laisse la Basilique derrière toi et dirige-toi vers le rempart.
+<break time="0.5s"/>
+
+Dans un instant tu verras la mer.
+<break time="0.8s"/>
+
+Et il est important de le faire de là.
+<break time="0.8s"/>
+
+Parce que Bari Vecchia n'est pas une ville qui s'est approchée de la mer.
+<break time="0.5s"/>
+
+<prosody rate="85%">C'est une ville qui pendant des siècles s'y est <emphasis level="moderate">appuyée dessus</emphasis>.</prosody>

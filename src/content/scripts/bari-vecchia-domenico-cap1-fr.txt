@@ -1,0 +1,103 @@
+<prosody rate="90%">Moi, je suis Domenico.</prosody>
+<break time="1.5s"/>
+
+Je suis de Bari et j'ai grandi dans le quartier Libertà, à quelques pas de cette ville ancienne.
+<break time="0.8s"/>
+
+Bari Vecchia, je l'ai toujours eue à côté de moi. Pas comme quelque chose à visiter une fois dans sa vie, mais comme un morceau de la ville qui était là, tout près, présent. Et c'est peut-être justement pour ça que, gamins, on ne se rend pas compte tout de suite de ce qu'on a devant soi.
+<break time="0.8s"/>
+
+Puis tu grandis. Tu étudies. Tu reviens aux mêmes endroits. Et tu comprends une chose qui change complètement la façon de regarder ces pierres.
+<break time="1.2s"/>
+
+Aujourd'hui on l'appelle Bari Vecchia.
+<break time="1s"/>
+
+<prosody rate="85%" pitch="+4%">Pendant des siècles, en revanche, c'était <emphasis level="strong">toute</emphasis> Bari.</prosody>
+<break time="2s"/>
+
+Avant d'entrer dans les ruelles, arrête-toi devant le Castello Svevo.
+<break time="0.5s"/>
+
+Regarde-le bien.
+<break time="1s"/>
+
+Il est massif, presque sévère. Il ne semble pas fait pour accueillir. Il semble fait pour résister.
+<break time="1s"/>
+
+Nous l'appelons Castello Svevo parce que Frédéric II le transforma profondément et lui laissa quelques-uns des signes les plus reconnaissables : l'aigle impérial sur le portail, les arcs, les chapiteaux, les salles qui firent de la forteresse aussi un lieu de représentation.
+<break time="0.8s"/>
+
+Mais le château était né avant.
+<break time="0.8s"/>
+
+Et la chose la plus importante à comprendre, c'est qu'il ne fut pas construit seulement pour défendre Bari.
+<break time="0.8s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">Il servait aussi à la contrôler.</emphasis></prosody>
+<break time="1.5s"/>
+
+Au Moyen Âge, cette ville était difficile à commander. Elle était riche, fière, pleine de commerces, habituée à entretenir des rapports avec des mondes différents. Elle avait connu Lombards, Sarrasins, Byzantins. Elle avait vécu en regardant la mer, mais sans courber facilement la tête devant qui cherchait à la dominer.
+<break time="0.8s"/>
+
+Quand arrivèrent les Normands, Bari résista.
+<break time="1s"/>
+
+Et le château fut placé justement ici, à la lisière de la ville ancienne, entre la terre ferme et la mer.
+<break time="0.8s"/>
+
+Assez près pour la protéger,
+<break time="0.5s"/>
+
+assez grand pour lui rappeler qui commandait.
+<break time="1.5s"/>
+
+Essaie d'imaginer comment il devait apparaître aux habitants du bourg.
+<break time="0.8s"/>
+
+Pas une belle attraction à photographier,
+<break time="0.5s"/>
+
+pas un décor médiéval.
+<break time="0.5s"/>
+
+Une présence énorme, fermée par des tours, entourée du fossé, liée au pouvoir de qui gouvernait.
+<break time="1s"/>
+
+Le château n'était pas vraiment « celui des Barese ».
+<break time="0.8s"/>
+
+<prosody rate="88%" pitch="+3%">C'était quelque chose que les Barese <emphasis level="strong">avaient sur le dos</emphasis>.</prosody>
+<break time="1.2s"/>
+
+Une forteresse construite à côté de leur ville, mais aussi contre leur liberté.
+<break time="1s"/>
+
+Plus tard, Isabelle d'Aragon et Bonne Sforza l'auraient transformé en une résidence princière, ouverte aux cours, aux artistes et aux personnages importants. Mais sous cette élégance serait restée la même sensation : ces tours n'appartenaient pas à la vie quotidienne des ruelles.
+<break time="0.8s"/>
+
+Elles l'observaient d'en haut.
+<break time="1.5s"/>
+
+Maintenant tourne-toi vers Bari Vecchia.
+<break time="0.8s"/>
+
+Derrière ces rues étroites il n'y a pas seulement un quartier ancien.
+<break time="0.5s"/>
+
+Il y a une ville qui pendant des siècles a dû se défendre de la mer, des conquérants et, parfois, aussi de qui disait vouloir la gouverner.
+<break time="1.2s"/>
+
+Maintenant nous commençons à y entrer.
+<break time="0.8s"/>
+
+Dirige-toi vers la Strada delle Crociate.
+<break time="0.8s"/>
+
+Ne sois pas pressé.
+<break time="1s"/>
+
+Cette histoire ne commence pas par une photographie.
+<break time="0.5s"/>
+
+<prosody rate="85%">Elle commence par une ville enfermée dans ses murs.</prosody>

@@ -1,0 +1,124 @@
+Teraz zatrzymaj się w pobliżu Katedry San Sabino.
+<break time="1s"/>
+
+Wielu odwiedzających przybywa do Bari dla San Nicola, i to zrozumiałe.
+<break time="0.8s"/>
+
+Ale przed Bazyliką, przed przybyciem świętego z Miry, Bari miało już swoje religijne centrum i swoją chrześcijańską historię.
+<break time="0.5s"/>
+
+Katedra poświęcona San Sabino jest częścią tej dawniejszej pamięci.
+<break time="1s"/>
+
+Popatrz na nią.
+<break time="1.2s"/>
+
+Także tutaj jasny kamień, łuki, surowe formy apulijskiego romanizmu opowiadają o mieście, które nie potrzebowało nadmiernych ozdób, by wyrazić swoją siłę.
+<break time="1.2s"/>
+
+Ale to, co dziś trudno nam sobie wyobrazić, to ile kościołów było w dawnym Bari.
+<break time="0.8s"/>
+
+Źródła mówią o dziesiątkach budowli religijnych.
+<break time="1s"/>
+
+<prosody rate="88%">Wielkie kościoły,
+<break time="0.4s"/>
+małe kościoły,
+<break time="0.4s"/>
+klasztory,
+<break time="0.4s"/>
+kaplice,
+<break time="0.4s"/>
+miejsca kultu związane z rodzinami, cechami, różnymi wspólnotami.</prosody>
+<break time="1.2s"/>
+
+Gdybyśmy mogli zobaczyć Bari w pełnym średniowieczu, mielibyśmy zapewne wrażenie miasta odzianego w święty kamień.
+<break time="0.5s"/>
+
+Nieustanny splot domów i dzwonnic, uliczek i ołtarzy, dziedzińców i procesji.
+<break time="1.5s"/>
+
+Ale nie wyobrażaj sobie miasta cichego, wiecznie pogrążonego w modlitwie.
+<break time="0.8s"/>
+
+Religia była wmieszana w konkretne życie.
+<break time="1s"/>
+
+<prosody rate="88%">Wokół kościołów spotykano się,
+<break time="0.4s"/>
+podpisywano akty,
+<break time="0.4s"/>
+składano obietnice,
+<break time="0.4s"/>
+celebrowano śluby,
+<break time="0.4s"/>
+odprowadzano zmarłych,
+<break time="0.4s"/>
+proszono o ochronę przed chorobami,
+<break time="0.4s"/>
+szukano pomocy, gdy morze nie oddawało człowieka albo gdy rodzina nie miała dość, by przeżyć.</prosody>
+<break time="1.2s"/>
+
+<prosody pitch="+3%">W Bari sacrum nie stało poza życiem.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Stało w jego środku.</emphasis></prosody>
+<break time="1.5s"/>
+
+W Katedrze przechowywany jest też jeden z najbardziej znaczących obrazów więzi Bari ze Wschodem: Odigitria, Matka Boża wskazująca drogę.
+<break time="0.8s"/>
+
+Sama jej nazwa pochodzi z tradycji bizantyjskiej.
+<break time="0.8s"/>
+
+I trudno nie myśleć, że to miasto, od wieków przywykłe patrzeć na drugi brzeg morza, rozpoznało w tym obrazie coś głęboko własnego.
+<break time="1.2s"/>
+
+<prosody rate="88%">Bari było łacińskie i greckie,
+<break time="0.4s"/>
+zachodnie i wschodnie,
+<break time="0.4s"/>
+związane z Rzymem, ale przez wieki przenikane wpływami, które przybywały z drugiej strony Adriatyku i Morza Śródziemnego.</prosody>
+<break time="1s"/>
+
+San Nicola uczyni tę więź jeszcze bardziej widoczną.
+<break time="0.5s"/>
+
+Ale jej nie wymyśli.
+<break time="0.5s"/>
+
+Miasto nosiło ją już w sobie.
+<break time="1.5s"/>
+
+Kiedy więc idziesz między Katedrą a Bazyliką, nie przechodzisz po prostu z jednego pięknego kościoła do drugiego.
+<break time="0.8s"/>
+
+Przechodzisz przez dwie dusze miasta.
+<break time="1.2s"/>
+
+San Sabino opowiada o najdawniejszym Bari, o siedzibie biskupiej, o ciągłości jego historii.
+<break time="0.5s"/>
+
+San Nicola opowiada o Bari, które dzięki świętemu przybyłemu z morza staje się powszechnym celem pielgrzymów.
+<break time="1s"/>
+
+Między nimi, w uliczkach, wciąż żyje prawdziwe miasto.
+<break time="0.5s"/>
+
+To zbudowane z rodzin, warsztatów, słów, chleba, otwartych drzwi i ludzi, którzy nigdy nie potrzebowali wyraźnie oddzielać wiary od codzienności.
+<break time="1.5s"/>
+
+Teraz skieruj się ku Piazza Mercantile.
+<break time="0.8s"/>
+
+Tam zobaczymy inne Bari.
+<break time="0.5s"/>
+
+Nie to świętego,
+<break time="0.4s"/>
+
+nie to murów.
+<break time="0.5s"/>
+
+<prosody rate="88%">Lecz to interesów, targu i publicznego wstydu.</prosody>

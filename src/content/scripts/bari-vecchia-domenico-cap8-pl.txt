@@ -1,0 +1,221 @@
+Teraz idź bez pośpiechu.
+<break time="1s"/>
+
+Jeśli zobaczysz otwarte drzwi, nie wpatruj się w nie natarczywie, ale spróbuj wyczuć, jak cienka zawsze była tu granica między domem a ulicą.
+<break time="1.2s"/>
+
+W wielu miastach stare miasto stało się scenografią.
+<break time="0.5s"/>
+
+Piękne do oglądania, ale oddzielone od prawdziwego życia.
+<break time="1s"/>
+
+Bari Vecchia, mimo wszystkich zmian, wciąż zachowuje coś innego.
+<break time="1s"/>
+
+Tutaj życie co jakiś czas wychodzi na zewnątrz.
+<break time="1.2s"/>
+
+<prosody rate="88%">Krzesło przed drzwiami,
+<break time="0.4s"/>
+głos, który kogoś woła,
+<break time="0.4s"/>
+rozwieszone pranie,
+<break time="0.4s"/>
+zapach gotowania,
+<break time="0.4s"/>
+rozmowa usłyszana mimochodem,
+<break time="0.4s"/>
+biegnące dziecko,
+<break time="0.4s"/>
+kobieta, która się przygląda.</prosody>
+<break time="1.2s"/>
+
+I zdajesz sobie sprawę, że dawne miasto to nie tylko to, które znajdujesz w książkach.
+<break time="0.5s"/>
+
+To także to, które wciąż zamieszkuje te przestrzenie.
+<break time="1.5s"/>
+
+Kiedy byłem młody, dorastając na Libertà, Bari Vecchia nie miało wyczyszczonego, odwiedzanego wizerunku, jaki po części ma dziś.
+<break time="0.8s"/>
+
+Było blisko, ale należało do innego świata niż ten turystycznych spacerów.
+<break time="0.5s"/>
+
+Było miejscem, którego znało się siłę, ale i trudności.
+<break time="1.2s"/>
+
+Potem miasto się zmieniło.
+<break time="0.5s"/>
+
+Przybyło więcej odwiedzających,
+<break time="0.4s"/>
+
+przybyły lokale, trasy, fotografie, nowa uwaga.
+<break time="0.8s"/>
+
+I słusznie, że Bari jest oglądane.
+<break time="0.8s"/>
+
+Ale ryzyko jest takie, że będzie oglądane tylko powierzchownie.
+<break time="0.5s"/>
+
+Że ktoś wróci do domu, pamiętając orecchiette przygotowywane na ulicy, Bazylikę, stoliki i zdjęcie wśród uliczek, nie zrozumiawszy naprawdę miasta, przez które przeszedł.
+<break time="1.2s"/>
+
+Dlatego stworzyliśmy Localis.
+<break time="0.5s"/>
+
+Nie po to, by odebrać piękno wizycie.
+<break time="0.5s"/>
+
+<prosody pitch="+3%"><emphasis level="strong">Po to, by dodać jej głębi.</emphasis></prosody>
+<break time="2s"/>
+
+A jedną z najgłębszych rzeczy, które Bari zachowuje, jest jego dialekt.
+<break time="0.8s"/>
+
+Nie trzeba go całego rozumieć, by przeczuć, ile opowiada o mieście.
+<break time="0.8s"/>
+
+W słowach barese przeszły wieki spotkań i panowań.
+<break time="1s"/>
+
+<prosody rate="88%">Greka,
+<break time="0.4s"/>
+łacina,
+<break time="0.4s"/>
+świat bizantyjski,
+<break time="0.4s"/>
+obecność arabska,
+<break time="0.4s"/>
+Normanowie,
+<break time="0.4s"/>
+Hiszpanie,
+<break time="0.4s"/>
+handel portu,
+<break time="0.4s"/>
+głosy przyniesione przez ludzi, którzy przybywali z morza, i przez ludzi, którzy z Bari odpływali.</prosody>
+<break time="1.2s"/>
+
+Miasto nie zachowuje swojej historii tylko w murach.
+<break time="0.5s"/>
+
+Zachowuje ją także w tym, jak mówi.
+<break time="1s"/>
+
+<prosody rate="88%">W słowie zniekształconym przez czas,
+<break time="0.4s"/>
+w wyrażeniu, którego wciąż się używa, nie wiedząc, skąd pochodzi,
+<break time="0.4s"/>
+w sposobie żartowania,
+<break time="0.4s"/>
+w obeldze,
+<break time="0.4s"/>
+w zdaniu związanym z San Nicola,
+<break time="0.4s"/>
+w pamięci morza, targu, strachu albo głodu.</prosody>
+<break time="1.5s"/>
+
+Pomyśl o lwie, którego właśnie widziałeś na Piazza Mercantile.
+<break time="0.5s"/>
+
+Jego funkcja zniknęła.
+<break time="0.5s"/>
+
+Ale dialektalne zdanie wciąż niosło jego pamięć.
+<break time="1s"/>
+
+Pomyśl o San Nicola.
+<break time="0.5s"/>
+
+Jego Bazylika to nie tylko budowla: święty wchodzi w powiedzenia, w święto, w domy, w sposób, w jaki Bari mówi o sobie samym.
+<break time="1s"/>
+
+Pomyśl o morzu.
+<break time="0.5s"/>
+
+Przez wieki niosło niebezpieczeństwa i bogactwa, a jeszcze dziś barczyk żyje z tym szczególnym poczuciem, że ma przed sobą otwartą drogę ku gdzie indziej.
+<break time="2s"/>
+
+<prosody rate="85%">Może w tym momencie Bari Vecchia zaczyna ci się jawić inaczej.</prosody>
+<break time="1s"/>
+
+Już nie tylko jako splot uliczek pięknych do sfotografowania.
+<break time="0.5s"/>
+
+<prosody rate="88%">Ale jako całe miasto ściśnięte w małej przestrzeni.</prosody>
+<break time="1.2s"/>
+
+<prosody rate="85%">Miasto, które broniło się murami,
+<break time="0.4s"/>
+które nie ufało swojemu zamkowi,
+<break time="0.4s"/>
+które gasiło pragnienie deszczem,
+<break time="0.4s"/>
+które modliło się w dziesiątkach kościołów,
+<break time="0.4s"/>
+które patrzyło ku Konstantynopolowi,
+<break time="0.4s"/>
+które dzięki San Nicola stało się celem świata chrześcijańskiego,
+<break time="0.4s"/>
+które handlowało na placu,
+<break time="0.4s"/>
+które wystawiało dłużników lwu,
+<break time="0.4s"/>
+które wciąż zachowuje swoją historię w słowach, w drzwiach i w codziennych gestach.</prosody>
+<break time="2s"/>
+
+Kiedy wyjdziesz z tych uliczek, przed tobą wróci nowoczesne Bari.
+<break time="0.5s"/>
+
+<prosody rate="88%">Szerokie ulice,
+<break time="0.4s"/>
+sklepy,
+<break time="0.4s"/>
+ruch uliczny,
+<break time="0.4s"/>
+otwarte place.</prosody>
+<break time="0.5s"/>
+
+Miasto, które przez wieki przekroczyło mury i rozrosło się w głąb lądu, aż po dzielnice, w których my także dorastaliśmy.
+<break time="1.2s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Ale wszystko zaczęło się tutaj.</emphasis></prosody>
+<break time="1s"/>
+
+Na tym półwyspie ściśniętym między zamkiem a morzem,
+<break time="0.5s"/>
+
+między San Sabino a San Nicola,
+<break time="0.5s"/>
+
+między słoną wodą, która otaczała miasto, a deszczową wodą, która pozwalała ludziom w nim żyć,
+<break time="0.5s"/>
+
+między strachem przed tymi, którzy przybywali z morza, a potrzebą, by ich przyjąć.
+<break time="2.5s"/>
+
+<prosody rate="85%">Ja jestem Domenico.</prosody>
+<break time="1s"/>
+
+Dorastałem niedaleko stąd, w dzielnicy Libertà.
+<break time="1s"/>
+
+I dziś, opowiadając ci Bari Vecchia, nie chciałem po prostu wskazać ci, co zobaczyć.
+<break time="1s"/>
+
+Chciałem, byś wychodząc z tych uliczek, mógł zabrać ze sobą jedną prostą rzecz.
+<break time="1.5s"/>
+
+Dziś nazywamy ją Bari Vecchia.
+<break time="0.8s"/>
+
+Ale to nie była stara część Bari.
+<break time="0.8s"/>
+
+<prosody rate="82%" pitch="+5%"><emphasis level="strong">To było Bari.</emphasis></prosody>
+<break time="1s"/>
+
+<prosody rate="85%">Cała reszta przyszła później.</prosody>

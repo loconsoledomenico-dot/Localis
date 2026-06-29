@@ -1,0 +1,124 @@
+Teraz idź po murze, mając morze obok siebie.
+<break time="1s"/>
+
+To jeden z najpiękniejszych spacerów w Bari.
+<break time="0.8s"/>
+
+Ale by naprawdę go zrozumieć, musisz w myślach coś usunąć: nowoczesną drogę, która dziś przebiega pod murami.
+<break time="0.8s"/>
+
+Wyobraź sobie, że jej nie ma.
+<break time="1s"/>
+
+Wyobraź sobie kamień miasta, który kończy się niemal wprost w wodzie.
+<break time="1s"/>
+
+<prosody rate="88%">Żadnych samochodów,
+<break time="0.4s"/>
+żadnej wstęgi asfaltu,
+<break time="0.4s"/>
+żadnego wygodnego dystansu między miasteczkiem a morzem.
+<break time="0.8s"/>
+Tylko mur.
+<break time="0.6s"/>
+Pod nim Morze Śródziemne.
+<break time="0.6s"/>
+Za nim całe miasto.</prosody>
+<break time="2s"/>
+
+Dziś patrzymy na morze i myślimy o pięknie.
+<break time="0.8s"/>
+
+Dla dawnego Bari morze było czymś znacznie więcej.
+<break time="0.8s"/>
+
+Było główną drogą.
+<break time="0.8s"/>
+
+<prosody rate="88%">Stamtąd przybywały zboże, towary, pieniądze, wiadomości, pielgrzymi.
+<break time="0.5s"/>
+Stamtąd mogli przybyć także rabusie, żołnierze, epidemie, burze i śmierć.</prosody>
+<break time="1s"/>
+
+Morze dawało utrzymanie.
+<break time="0.5s"/>
+
+Ale nigdy nie było całkiem niewinne.
+<break time="1.5s"/>
+
+Dlatego miasta broniły mury.
+<break time="0.5s"/>
+
+Nie były romantyczną oprawą.
+<break time="0.5s"/>
+
+Były granicą między tym, co należało do miasta, a tym, co mogło je nagle zagrozić.
+<break time="1.5s"/>
+
+Spójrz na Fortino di Sant'Antonio.
+<break time="0.8s"/>
+
+Dziś to miejsce, gdzie ludzie spacerują, patrzą na panoramę, zatrzymują się podczas wydarzeń i robią zdjęcia.
+<break time="0.8s"/>
+
+Ale jego położenie od razu tłumaczy jego funkcję: stąd trzeba było obserwować morze, kontrolować zbliżające się łodzie, bronić wrażliwego punktu miasta.
+<break time="1s"/>
+
+Bari było odsłonięte niemal na całym swoim obwodzie.
+<break time="0.8s"/>
+
+Półwysep może być przepiękny.
+<break time="0.5s"/>
+
+Ale w czasie wojny jest też trudny do obrony.
+<break time="1.5s"/>
+
+Spróbuj pomyśleć o ludziach, którzy mieszkali w domach za tobą.
+<break time="0.8s"/>
+
+Dziecko, które dorastało w tych uliczkach, szybko uczyło się, że morze jest blisko.
+<break time="1s"/>
+
+<prosody rate="88%">Czuło je w zapachu,
+<break time="0.4s"/>
+w wietrze,
+<break time="0.4s"/>
+w głosie mężczyzn wracających z portu,
+<break time="0.4s"/>
+w nagłej ciszy, gdy łódź zwlekała z powrotem,
+<break time="0.4s"/>
+w towarach, które pojawiały się na targach,
+<break time="0.4s"/>
+w obcych słowach, które wchodziły do dialektu,
+<break time="0.4s"/>
+w lęku przed ujrzeniem niepożądanych żagli na horyzoncie.</prosody>
+<break time="1.5s"/>
+
+To rzecz, którą często się gubi, gdy zwiedza się Bari Vecchia pospiesznie.
+<break time="0.8s"/>
+
+Morze nie było panoramą miasta.
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Było obecnością w jego życiu.</emphasis></prosody>
+<break time="1.5s"/>
+
+I jeszcze dziś, jeśli dobrze posłuchasz, ta więź nie zniknęła.
+<break time="0.8s"/>
+
+Bari wciąż żyje zwrócone ku wodzie.
+<break time="0.5s"/>
+
+Nowoczesny port się zmienił. Statki się zmieniły. Mury już nie służą obronie.
+<break time="0.8s"/>
+
+Ale gest pozostał ten sam: dotrzeć tutaj, zatrzymać się, spojrzeć na morze i zapytać, co jest dalej.
+<break time="1.5s"/>
+
+Idź teraz dalej wzdłuż muru ku Santa Scolastica i okolicy Santa Maria del Buon Consiglio.
+<break time="0.5s"/>
+
+Tam odkryjemy, że Bari Vecchia to nie tylko średniowieczne miasto.
+<break time="0.5s"/>
+
+<prosody rate="85%">Pod tymi kamieniami jest znacznie więcej.</prosody>

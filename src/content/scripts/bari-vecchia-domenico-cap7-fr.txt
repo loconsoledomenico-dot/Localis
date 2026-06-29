@@ -1,0 +1,139 @@
+Maintenant arrête-toi sur la Piazza Mercantile.
+<break time="0.8s"/>
+
+Regarde la place telle qu'elle est aujourd'hui.
+<break time="1s"/>
+
+<prosody rate="90%">Des petites tables,
+<break time="0.4s"/>
+des gens qui se promènent,
+<break time="0.4s"/>
+quelqu'un qui prend un café,
+<break time="0.4s"/>
+quelqu'un qui s'assoit et observe.</prosody>
+<break time="1s"/>
+
+C'est l'un des endroits les plus agréables de Bari Vecchia.
+<break time="1s"/>
+
+Mais si nous pouvions revenir en arrière dans les siècles, nous la verrions avec d'autres yeux.
+<break time="1s"/>
+
+Cette place était le cœur <emphasis level="moderate">pratique</emphasis> de la ville.
+<break time="0.8s"/>
+
+Ici on commerçait,
+<break time="0.4s"/>
+
+ici se rencontraient marchands, artisans, citoyens, étrangers,
+<break time="0.4s"/>
+
+ici passaient l'argent, les marchandises, les nouvelles et les problèmes quotidiens.
+<break time="1s"/>
+
+Le nom « Mercantile » dit exactement cela : Bari n'était pas seulement une ville de saints et de pèlerins.
+<break time="0.8s"/>
+
+<prosody rate="88%">C'était une ville qui travaillait,
+<break time="0.4s"/>
+qui achetait,
+<break time="0.4s"/>
+qui vendait,
+<break time="0.4s"/>
+qui se disputait,
+<break time="0.4s"/>
+qui exigeait le paiement des dettes.</prosody>
+<break time="1.5s"/>
+
+Maintenant cherche la colonne avec le lion de pierre.
+<break time="0.8s"/>
+
+Aujourd'hui beaucoup de gens la photographient sans vraiment savoir ce qu'elle représente.
+<break time="1s"/>
+
+Le lion n'était pas là seulement pour décorer la place.
+<break time="0.8s"/>
+
+À cette colonne étaient exposés publiquement ceux qui n'avaient pas réussi à payer leurs dettes.
+<break time="1s"/>
+
+La peine n'était pas seulement économique.
+<break time="0.5s"/>
+
+<emphasis level="moderate">C'était la honte.</emphasis>
+<break time="1.2s"/>
+
+<prosody rate="88%">Être montrés devant la ville,
+<break time="0.4s"/>
+être reconnus par les voisins,
+<break time="0.4s"/>
+voir un échec privé transformé en spectacle public.</prosody>
+<break time="1.2s"/>
+
+Dans le dialecte barese est restée une mémoire très crue de cette pratique : l'expression qui évoquait celui qu'on envoyait montrer son derrière au lion.
+<break time="0.8s"/>
+
+Cela peut sembler une plaisanterie populaire.
+<break time="0.5s"/>
+
+En réalité c'est un fragment d'histoire survécu dans la langue, bien après que la raison d'origine était presque oubliée.
+<break time="1.5s"/>
+
+Cette place raconte bien le caractère de Bari.
+<break time="0.8s"/>
+
+Une ville dévote, certainement.
+<break time="0.5s"/>
+
+Mais aussi concrète,
+<break time="0.4s"/>
+
+pratique,
+<break time="0.4s"/>
+
+habituée au commerce.
+<break time="0.8s"/>
+
+Capable d'accueillir des pèlerins du monde entier devant la tombe de San Nicola, et quelques mètres plus loin d'exposer au jugement public qui n'avait pas honoré une dette.
+<break time="1s"/>
+
+<prosody pitch="+3%">La ville ancienne n'était pas une carte postale apaisée.</prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+4%"><emphasis level="strong">Elle était vivante.</emphasis></prosody>
+<break time="0.5s"/>
+
+<prosody pitch="+2%">Et justement parce qu'elle était vivante, elle était aussi dure.</prosody>
+<break time="1.5s"/>
+
+Il y a une autre chose que j'aime penser quand je passe par ici.
+<break time="0.8s"/>
+
+Les places changent de fonction, mais elles cessent rarement d'être le lieu où la ville se reconnaît.
+<break time="1s"/>
+
+Alors on venait ici pour vendre, acheter, juger, écouter des nouvelles.
+<break time="0.5s"/>
+
+Aujourd'hui on y vient pour se rencontrer, manger, boire un verre, traverser la soirée.
+<break time="0.8s"/>
+
+Les habitudes ont changé.
+<break time="0.5s"/>
+
+Mais la place continue de faire le même travail : tenir les personnes proches.
+<break time="1.5s"/>
+
+Maintenant, avant la partie finale, entre de nouveau dans les ruelles.
+<break time="0.5s"/>
+
+Ne cherche pas une direction parfaite.
+<break time="0.5s"/>
+
+Laisse-toi accompagner par les rues.
+<break time="1s"/>
+
+La dernière chose que je veux te faire écouter n'est pas un monument.
+<break time="0.5s"/>
+
+<prosody rate="85%">C'est la voix de la ville.</prosody>
