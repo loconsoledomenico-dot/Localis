@@ -1,0 +1,206 @@
+MATERA — SASSI
+Głos: Rosa, 78 lat, urodzona w Sasso Caveoso, ewakuowana w 1957, wróciła w 1996
+
+=====
+CAP. 1 — INTRO: PIERWSZE SPOJRZENIE
+voice: jane
+
+Zatrzymaj się tu. <break time="1.2s"/>
+
+Nie patrz jeszcze na telefon. <break time="0.8s"/> Nie szukaj zdjęcia do zrobienia. <break time="0.8s"/> Najpierw patrz. <break time="1.5s"/>
+
+To, co widzisz przed sobą, nie istnieje nigdzie indziej na świecie. <break time="1.2s"/> Tysiące domów wykutych w skale, <break time="0.5s"/> rozłożonych wzdłuż ściany wąwozu, <break time="0.5s"/> jeden nad drugim jak rzędy teatru. <break time="1.0s"/> Dach jednego domu jest dziedzińcem tego nad nim. <break time="0.8s"/> Dziedziniec jednego domu jest dachem tego pod spodem. <break time="1.2s"/>
+
+To miasto ma siedem tysięcy lat. <break time="1.0s"/> To nie sposób mówienia. <break time="0.8s"/> Siedem tysięcy lat ciągłego życia, <break time="0.5s"/> bez przerwy, <break time="0.5s"/> od prehistorii po dziś. <break time="1.2s"/> To jedno z najstarszych nieprzerwanie zamieszkanych miejsc na świecie. <break time="1.5s"/>
+
+Nazywam się Rosa. <break time="0.8s"/> Urodziłam się tutaj w 1948, <break time="0.5s"/> w grocie Sasso Caveoso. <break time="0.8s"/> Miałam dziewięć lat, gdy państwo nas wysłało precz. <break time="0.8s"/> Wróciliśmy w 1996. <break time="0.8s"/> Pięćdziesiąt lat później. <break time="1.5s"/>
+
+Opowiadam ci Matera tak, jak zna ją ten, kto żył w niej w środku. <break time="0.8s"/> Nie tak, jak opisują ją książki. <break time="1.5s"/>
+
+=====
+CAP. 2 — CZYM SĄ SASSI
+voice: jane
+
+Słowo „sassi” może wydawać się dziwne. <break time="0.8s"/> Po włosku sasso znaczy kamień. <break time="0.8s"/> Ale tu Sassi to dzielnice — Sasso Barisano i Sasso Caveoso — <break time="0.5s"/> dwie niecki wykute po bokach Civity, <break time="0.5s"/> centralnego wzgórza, gdzie wznosi się Duomo. <break time="1.2s"/>
+
+Mieszkania nazywają się ipogei. <break time="0.8s"/> Czyli jaskinie. <break time="0.8s"/> Nie budowane — kute. <break time="1.0s"/> Skała, którą widzisz wszędzie, to tuf wapienny, <break time="0.5s"/> miękki kamień, który tnie się dłutem <break time="0.5s"/> i z czasem twardnieje jak beton. <break time="1.2s"/>
+
+Najstarsze domy są całkowicie w skale. <break time="0.8s"/> Te nowsze — powiedzmy z ostatnich pięciu wieków — <break time="0.5s"/> mają fasadę zbudowaną przed wejściem do groty. <break time="0.8s"/> Fasadę z oknem, drzwiami, może balkonem. <break time="0.8s"/> A za nią grotę. <break time="1.2s"/>
+
+Moja matka zawsze mówiła: <break time="0.5s"/> nasz dom miał trzy izby. <break time="0.8s"/> Jedna była w skale, <break time="0.5s"/> jedna była zbudowana z przodu, <break time="0.5s"/> a jedna była niebem. <break time="1.2s"/>
+
+Bo otwarte dziedzińce tutaj nie są pustą przestrzenią. <break time="0.8s"/> Są izbą bez dachu. <break time="0.8s"/> Żyło się w nich, pracowało, spało latem. <break time="1.5s"/>
+
+=====
+CAP. 3 — WODA: SYSTEM, KTÓRY POZWOLIŁ MATERZE PRZETRWAĆ
+voice: jane
+
+Przed całą resztą musisz zrozumieć wodę. <break time="1.2s"/>
+
+Matera jest zbudowana na płaskowyżu z tufu bez rzek, <break time="0.5s"/> bez źródeł, <break time="0.5s"/> bez naturalnych studni. <break time="1.0s"/> Jedyną wodą była ta deszczowa. <break time="1.2s"/>
+
+W siedem tysięcy lat mieszkańcy Sassi rozwinęli najbardziej wyrafinowany system wodny świata starożytnego. <break time="1.2s"/>
+
+Pod każdym domem jest cysterna. <break time="0.8s"/> Wykuta w skale, <break time="0.5s"/> wyłożona cocciopesto — <break time="0.5s"/> mieszanką wapna i pokruszonej terakoty, która nie przepuszcza wody. <break time="1.0s"/> Dachy są pochyłe i kierują deszcz ku rynnom. <break time="0.8s"/> Rynny prowadzą wodę do cystern. <break time="0.8s"/> Cysterny przechowują ją przez miesiące. <break time="1.2s"/>
+
+Ale to nie wszystko. <break time="0.8s"/> Cysterny są połączone ze sobą przez skałę. <break time="0.8s"/> Gdy jedna się napełnia, nadmiar przechodzi do następnej. <break time="0.8s"/> System naczyń połączonych, który przecina cały Sasso. <break time="1.2s"/>
+
+Pod Sasso Caveoso są setki cystern wciąż nietkniętych. <break time="0.8s"/> Niektóre wielkie jak sale gimnastyczne. <break time="0.8s"/> Wielu jeszcze nie zbadano w całości. <break time="1.5s"/>
+
+Gdy jako dziecko szłam po wodę z matką, <break time="0.5s"/> schodziłam wąskimi schodkami w skale <break time="0.5s"/> i docierałam do tej ciemnej i chłodnej przestrzeni, <break time="0.5s"/> gdzie woda odbijała płomień świecy. <break time="1.0s"/> Wydawało się to magią. <break time="0.8s"/> To była inżynieria sprzed dwóch tysięcy lat. <break time="1.5s"/>
+
+=====
+CAP. 4 — ŻYCIE W SASSI: JAK BYŁO NAPRAWDĘ
+voice: jane
+
+Teraz powiem ci, jak naprawdę się żyło. <break time="1.0s"/> Nie tak, jak czyta się w książkach historycznych. <break time="1.2s"/>
+
+Nasza grota miała jedną tylko izbę. <break time="0.8s"/> Około czterdziestu metrów kwadratowych. <break time="0.8s"/> Mieszkali w niej moja babcia, moja matka, mój ojciec, <break time="0.5s"/> pięcioro dzieci i osioł. <break time="1.5s"/>
+
+Osioł to nie żart. <break time="0.8s"/> Zwierzęta spały z rodzinami. <break time="0.8s"/> Nie było wyjścia — stajnia byłaby kolejną grotą do wykucia, <break time="0.5s"/> a kto miał stajnię, był bogaty. <break time="0.8s"/> My nie byliśmy bogaci. <break time="1.2s"/>
+
+Łóżko moich rodziców było na podwyższonym podeście. <break time="0.8s"/> My, dzieci, spaliśmy pod spodem, <break time="0.5s"/> obok osła. <break time="0.8s"/> Zimą ciepło zwierzęcia ogrzewało całą grotę. <break time="1.2s"/>
+
+Nie było prądu aż do lat pięćdziesiątych. <break time="0.8s"/> Nie było bieżącej wody. <break time="0.8s"/> Nie było kanalizacji. <break time="0.8s"/> Latryną była dziura w skale. <break time="1.0s"/>
+
+A jednak. <break time="1.5s"/>
+
+A jednak ja pamiętam tę grotę z czymś, co nie jest wstydem. <break time="0.8s"/> Pamiętam chłód latem, <break time="0.5s"/> gdy na zewnątrz było czterdzieści dwa stopnie, a w skale dwadzieścia. <break time="0.8s"/> Pamiętam ciemność, która nie budziła strachu, <break time="0.5s"/> bo była ciemnością swojską, pełną głosów. <break time="0.8s"/> Pamiętam wspólnotę — <break time="0.5s"/> w tym miejscu, gdzie drzwi otwarte na dziedziniec znaczyły, że możesz wejść. <break time="1.5s"/>
+
+Nie było pięknie. <break time="0.8s"/> Ale było żywo. <break time="1.5s"/>
+
+=====
+CAP. 5 — HAŃBA WŁOCH: EWAKUACJA
+voice: jane
+
+W 1945 lukański pisarz nazwiskiem Carlo Levi wydał książkę. <break time="0.8s"/> Nazywała się Chrystus zatrzymał się w Eboli. <break time="0.8s"/> Nie mówiła o Materze — mówiła o zesłaniu w Lukanii, <break time="0.5s"/> o biedzie Południa. <break time="0.8s"/> Ale obraz, który książka dała światu, <break time="0.5s"/> był obrazem Południa zapomnianego, <break time="0.5s"/> porzuconego przez historię. <break time="1.2s"/>
+
+Potem w 1948 Alcide De Gasperi odwiedził Materę. <break time="0.8s"/> Zobaczył groty, zobaczył rodziny, zobaczył dzieci. <break time="1.0s"/>
+
+Rok później sekretarz Partii Komunistycznej Palmiro Togliatti <break time="0.5s"/> wygłosił wiec w Materze <break time="0.5s"/> i z placu krzyknął: <break time="0.5s"/> „To jest hańba Włoch.” <break time="1.5s"/>
+
+I od tego momentu, przez czterdzieści lat, <break time="0.5s"/> Matera była tym — <break time="0.5s"/> hańbą Włoch. <break time="1.2s"/>
+
+W 1952 uchwalono Ustawę Colombo. <break time="0.8s"/> Przymusowa ewakuacja Sassi. <break time="0.8s"/> Do 1963 piętnaście tysięcy osób <break time="0.5s"/> przeniesiono siłą do nowych dzielnic zbudowanych na równinie. <break time="1.2s"/>
+
+Na mnie przyszło w 1957. <break time="0.8s"/> Miałam dziewięć lat. <break time="0.8s"/> Mój ojciec załadował na wózek to, co mieliśmy — <break time="0.5s"/> materac, garnki, kilka ubrań. <break time="0.8s"/> I zeszliśmy. <break time="0.8s"/> Nie obejrzeliśmy się za siebie. <break time="0.8s"/> Albo może się obejrzeliśmy, ale tego nie pamiętam. <break time="1.2s"/>
+
+Nowy dom miał dwie osobne izby, łazienkę, bieżącą wodę. <break time="0.8s"/> Moja matka płakała przez tydzień. <break time="0.8s"/> Nie wiem, czy z ulgi, czy z bólu. <break time="0.8s"/> Może z obu. <break time="1.5s"/>
+
+=====
+CAP. 6 — KOŚCIOŁY SKALNE: SZTUKA, KTÓREJ NIKT NIE SZUKA
+voice: jane
+
+Teraz zabiorę cię w miejsce, którego większość turystów nie widzi. <break time="1.2s"/>
+
+W Sassi jest ponad sto kościołów skalnych. <break time="0.8s"/> Kościołów wykutych w skale przez mnichów benedyktyńskich i bazyliańskich <break time="0.5s"/> między siódmym a trzynastym wiekiem. <break time="1.2s"/>
+
+Ci mnisi przybyli ze Wschodu — z Syrii, <break time="0.5s"/> z Palestyny, <break time="0.5s"/> z Kapadocji. <break time="0.8s"/> Uciekali przed prześladowaniami, <break time="0.5s"/> szukali samotności, <break time="0.5s"/> znaleźli groty Matery idealne do życia mniszego. <break time="1.2s"/>
+
+A w tych grotach zostawili freski. <break time="1.0s"/>
+
+Kolory, które po tysiącu lat są wciąż żywe — <break time="0.5s"/> czerwień, błękit ultramaryny, ochra. <break time="0.8s"/> Święci o szeroko otwartych oczach, <break time="0.5s"/> którzy patrzą na ciebie z mroku skały. <break time="0.8s"/> Madonna z Dzieciątkiem, <break time="0.5s"/> Chrystus Pantokrator, <break time="0.5s"/> miejscowi święci, o których książki nic nie wiedzą. <break time="1.2s"/>
+
+Najsłynniejszy to Madonna de Idris, <break time="0.5s"/> wykuta w skale o tej samej nazwie, którą widać pośrodku Sasso Caveoso. <break time="0.8s"/> Ale są mniej znane, <break time="0.5s"/> gdzie jesteś praktycznie sam, <break time="0.5s"/> z latarką i ciszą. <break time="1.2s"/>
+
+Jeśli wejdziesz do jednego z tych kościołów i poczekasz, aż oczy przyzwyczają się do mroku, <break time="0.5s"/> zaczynasz rozumieć, dlaczego mnisi wybierali to miejsce. <break time="0.8s"/> To nie tylko chłód. <break time="0.8s"/> To coś w samej skale — <break time="0.5s"/> obecność. <break time="0.8s"/> Nie umiem nazwać tego inaczej. <break time="1.5s"/>
+
+=====
+CAP. 7 — DUOMO I CIVITA
+voice: jane
+
+Idź teraz w górę. <break time="0.8s"/> Ku Civicie. <break time="1.0s"/>
+
+Civita to wzgórze, które oddziela dwa Sassi — Barisano po lewej, <break time="0.5s"/> Caveoso po prawej. <break time="0.8s"/> Na tym wzgórzu była pierwotna osada, <break time="0.5s"/> pierwsze zamieszkane jądro, <break time="0.5s"/> które potem rozszerzyło się, schodząc po obu stronach. <break time="1.2s"/>
+
+Na szczycie jest Duomo. <break time="0.8s"/> Zbudowany między 1230 a 1270, <break time="0.5s"/> w stylu romańskim apulijskim. <break time="0.8s"/> Biała fasada, która lśni w porannym słońcu, <break time="0.5s"/> widać z całego miasta — to wizualny punkt odniesienia Matery. <break time="1.2s"/>
+
+Wewnątrz Duomo jest Madonna della Bruna. <break time="0.8s"/> Patronka Matery. <break time="0.8s"/> Święto obchodzi się co roku 2 lipca <break time="0.5s"/> procesją na triumfalnym wozie, <break time="0.5s"/> która kończy się czymś niezwykłym — <break time="0.5s"/> wierni szturmują wóz i rozrywają go na kawałki. <break time="1.2s"/>
+
+To nie wandalizm. <break time="0.8s"/> To rytuał. <break time="0.8s"/> Kto zaniesie do domu kawałek wozu, ma szczęście na rok. <break time="0.8s"/> Madonnę ratuje się przed szturmem. <break time="0.8s"/> Wóz zostaje poświęcony. <break time="1.2s"/>
+
+Matera rozpoznaje się w tym — <break time="0.5s"/> coś świętego, co kończy zniszczone <break time="0.5s"/> i co odbudowuje się co roku. <break time="0.8s"/> Jak same Sassi. <break time="1.5s"/>
+
+=====
+CAP. 8 — MURGIA TIMONE: STRONA, KTÓREJ NIKT NIE BIERZE POD UWAGĘ
+voice: jane
+
+Przejdź przez wąwóz. <break time="1.0s"/>
+
+Po stronie przeciwnej do Sassi jest Park Murgia Materana. <break time="0.8s"/> Płaskowyż wapiennej skały i śródziemnomorskiego makii, <break time="0.5s"/> który patrzy na Materę z drugiej strony wąwozu. <break time="1.2s"/>
+
+Stamtąd widok jest niepojęty. <break time="1.0s"/>
+
+Widzisz całe miasto wykute we wzgórzu <break time="0.5s"/> i rozumiesz po raz pierwszy, jak naprawdę jest zbudowane. <break time="0.8s"/> Jak domy wspinają się po skale, <break time="0.5s"/> jak dzwonnice wyłaniają się z tkanki grot, <break time="0.5s"/> jak Duomo góruje nad wszystkim ze szczytu Civity. <break time="1.2s"/>
+
+Ale Murgia to nie tylko punkt widokowy. <break time="0.8s"/> To krajobraz, który ma trzy tysiące lat historii. <break time="0.8s"/> Są kościoły skalne i tam — <break time="0.5s"/> Cripta del Peccato Originale, <break time="0.5s"/> z freskami z ósmego wieku, <break time="0.5s"/> które UNESCO nazwało Kaplicą Sykstyńską malarstwa skalnego. <break time="1.2s"/>
+
+Są neolityczne osady obronne. <break time="0.8s"/> Groby jamowe z epoki brązu. <break time="0.8s"/> Ślady osad, które o tysiąclecia wyprzedzają wszystko, co widziałeś w Sassi. <break time="1.2s"/>
+
+Historia Matery nie zaczyna się od Sassi. <break time="0.8s"/> Sassi są niemal niedawne, <break time="0.5s"/> jeśli użyjesz właściwej skali. <break time="1.5s"/>
+
+=====
+CAP. 9 — UNESCO I POWRÓT
+voice: jane
+
+W 1993 stało się coś, czego nikt z nas nie przewidział. <break time="1.2s"/>
+
+UNESCO wpisało Sassi di Matera na listę Światowego Dziedzictwa Ludzkości. <break time="1.2s"/>
+
+Nie hańba Włoch. <break time="0.8s"/> Dziedzictwo ludzkości. <break time="1.5s"/>
+
+Z dnia na dzień sąd o miejscu, w którym się urodziłam, odwrócił się. <break time="0.8s"/> To, co zostało zatarte jako zacofane, <break time="0.5s"/> jako biedne, <break time="0.5s"/> jako niegodne — <break time="0.5s"/> stawało się cennym dobrem do zachowania. <break time="1.2s"/>
+
+Lata dziewięćdziesiąte były dekadą powrotów. <break time="0.8s"/> Rodziny, które zostały wypędzone, <break time="0.5s"/> wróciły, by kupić groty, które zostawiły. <break time="0.8s"/> Groty kosztowały niewiele — nikt ich nie chciał. <break time="0.8s"/> Ale byli tacy, którzy rozumieli. <break time="1.2s"/>
+
+Ja wróciłam w 1996. <break time="0.8s"/> Nie do groty mojej matki — ta była już czyjaś. <break time="0.8s"/> Do innej, niedaleko. <break time="0.8s"/> Wyremontowałam ją, powoli, <break time="0.5s"/> tym, co miałam. <break time="1.0s"/>
+
+Pierwszej nocy, gdy spałam w skale po czterdziestu latach, <break time="0.8s"/> zrozumiałam, że nigdy nie przestałam czuć się nigdzie indziej. <break time="0.8s"/> Jakby cały czas spędzony na zewnątrz <break time="0.5s"/> był tylko czekaniem. <break time="1.5s"/>
+
+=====
+CAP. 10 — MATERA 2019 I DZIŚ
+voice: jane
+
+W 2019 Matera była Europejską Stolicą Kultury. <break time="1.0s"/>
+
+To dziwna rzecz do wyjaśnienia komuś, kto nie zna historii. <break time="0.8s"/> Miasto, które pięćdziesiąt lat wcześniej zostało ewakuowane dekretem <break time="0.5s"/> jako miejsce niegodne zamieszkania — <break time="0.5s"/> stało się stolicą kulturalną Europy. <break time="1.2s"/>
+
+Rok 2019 przyniósł turystów, koncerty, instalacje, <break time="0.5s"/> artystów z całego świata. <break time="0.8s"/> Przyniósł też spekulację, <break time="0.5s"/> potrojone ceny restauracji, <break time="0.5s"/> pensjonaty z grotami zamienionymi w apartamenty z hydromasażem. <break time="1.2s"/>
+
+Nie narzekam. <break time="0.8s"/> Tysiąckroć wolę to <break time="0.5s"/> od zapomnienia. <break time="0.8s"/> Wolę, żeby przyjeżdżali patrzeć, <break time="0.5s"/> niż żeby zapomnieli. <break time="1.2s"/>
+
+Ale jest Matera, która wciąż istnieje za turystyką. <break time="0.8s"/> Zaułki Sasso Barisano w południe, <break time="0.5s"/> gdy turyści śpią. <break time="0.8s"/> Piazza Vittorio Veneto wczesnym rankiem, <break time="0.5s"/> ze starymi, którzy piją kawę. <break time="0.8s"/> Dzieci, które bawią się na stopniach Civity, <break time="0.5s"/> jak ja się tam bawiłam. <break time="1.2s"/>
+
+Tamta Matera wciąż tu jest. <break time="0.8s"/> Musisz tylko wiedzieć, kiedy na nią patrzeć. <break time="1.5s"/>
+
+=====
+CAP. 11 — CO JEŚĆ I GDZIE
+voice: jane
+
+Chleb z Matery ma znak IGP. <break time="0.8s"/> To chleb z pszenicy durum Senatore Cappelli, <break time="0.5s"/> pieczony w piecu opalanym drewnem, <break time="0.5s"/> z twardą skórką, która trzyma się dniami, <break time="0.5s"/> i żółtym, pachnącym miękiszem. <break time="1.0s"/> Ma charakterystyczny kształt — rogala albo wysokiego bochna — <break time="0.5s"/> i wagę od kilograma do dwóch kilogramów. <break time="0.8s"/> Nie kupuje się go na kromki. <break time="0.8s"/> Zabiera się do domu w całości. <break time="1.2s"/>
+
+Crapiata to zupa z mieszanych roślin strączkowych — <break time="0.5s"/> bób, ciecierzyca, soczewica, lędźwian, fasola — <break time="0.5s"/> którą robi się w pierwszy poniedziałek sierpnia <break time="0.5s"/> od wieków na tej ziemi. <break time="0.8s"/> Każda rodzina ma swój przepis. <break time="0.8s"/> Każdy przepis jest najlepszy. <break time="1.2s"/>
+
+Peperone crusco to kolejna rzecz z Matery — <break time="0.5s"/> papryka suszona, a potem smażona w gorącej oliwie, <break time="0.5s"/> aż stanie się chrupiąca jak chipsy. <break time="0.8s"/> Kruszy się ją na chleb, na makaron, na wszystko. <break time="1.0s"/>
+
+Żeby dobrze zjeść bez wielkich wydatków, <break time="0.5s"/> szukaj trattorii w bocznych zaułkach Sasso Barisano. <break time="0.8s"/> Nie tych z menu przetłumaczonym na pięć języków. <break time="0.8s"/> Tych z tablicą pisaną ręcznie <break time="0.5s"/> i właścicielem, który pyta cię, skąd jesteś. <break time="1.5s"/>
+
+=====
+CAP. 12 — ZAKOŃCZENIE: ROSA ŻEGNA
+voice: jane
+
+Siedemdziesiąt osiem lat. <break time="0.8s"/> Urodzona w grocie. <break time="0.8s"/> Ewakuowana siłą. <break time="0.8s"/> Wróciła z wyboru. <break time="1.5s"/>
+
+Gdy ludzie pytają mnie, czy jestem zła na państwo, które nas wysłało precz, <break time="0.5s"/> myślę o tym chwilę. <break time="0.8s"/> A potem mówię: nie. <break time="1.2s"/>
+
+Tamte warunki nie były godne. <break time="0.8s"/> Dzieci chorowały. <break time="0.8s"/> Malaria była jeszcze rzeczywistością. <break time="0.8s"/> Kobiety spędzały życie na noszeniu wody. <break time="0.8s"/> Odejść było trzeba. <break time="1.2s"/>
+
+Ale sposób — <break time="0.5s"/> przymusowy, bez wyjaśnień, bez szacunku — <break time="0.5s"/> ten nie był słuszny. <break time="0.8s"/> Nikogo nie zapytano. <break time="0.8s"/> Nikomu nie dano czasu, by się pożegnać. <break time="0.8s"/> Kazano nam iść, <break time="0.5s"/> i poszliśmy. <break time="1.5s"/>
+
+Matera teraz jest piękna. <break time="0.8s"/> Może zbyt wypielęgnowana, miejscami. <break time="0.8s"/> Ale jest żywa. <break time="0.8s"/> I to się liczy. <break time="1.2s"/>
+
+Jeśli zatrzymasz się tu na chwilę, <break time="0.5s"/> w jakimkolwiek punkcie Sassi, <break time="0.5s"/> i zamkniesz oczy — <break time="0.5s"/> coś czujesz. <break time="0.8s"/> Nie wiem, czy to wiatr w wąwozie, <break time="0.5s"/> czy ciężar historii, <break time="0.5s"/> czy po prostu skała, która oddycha. <break time="1.2s"/>
+
+Ale to czujesz. <break time="1.5s"/>
+
+Dziękuję, że przyszedłeś. <break time="0.8s"/> Daj sobie tyle czasu, ile trzeba. <break time="0.8s"/> Matery nie ogląda się w pośpiechu. <break time="1.5s"/>
