@@ -1,0 +1,246 @@
+ALBEROBELLO — À L'INTÉRIEUR DES TRULLI
+Voix : Concetta, 65 ans, née et grandie dans le Rione Aia Piccola
+
+=====
+CAP. 1 — INTRO : LA PORTE DE LA MAISON
+voice: custom-alberobello
+
+Assieds-toi un moment. <break time="1.2s"/>
+
+Ne cours pas. <break time="0.8s"/> Les trulli ne s'enfuient pas. <break time="0.8s"/> Ils sont là depuis cinq cents ans, <break time="0.5s"/> ils y seront encore quand tu seras parti. <break time="1.2s"/>
+
+Moi, je suis sur cette porte depuis soixante-cinq ans. <break time="0.8s"/> J'y suis née, dans ce trullo. <break time="0.8s"/> Ma mère y est née avant moi. <break time="0.8s"/> Ma grand-mère aussi. <break time="0.8s"/> Trois générations sous ce cône de pierre, <break time="0.5s"/> et le toit n'est jamais tombé. <break time="1.2s"/>
+
+Je m'appelle Concetta. <break time="0.8s"/> Je ne fais pas la guide touristique. <break time="0.8s"/> Je fais la voisine. <break time="0.8s"/> Je te raconte ce que je sais parce que je vis dedans, <break time="0.5s"/> pas parce que je l'ai étudié dans les livres. <break time="1.2s"/>
+
+Tu vois ces touristes qui passent ? <break time="0.8s"/> Ils viennent du monde entier. <break time="0.8s"/> Ils photographient les toits, <break time="0.5s"/> ils achètent les souvenirs, <break time="0.5s"/> ils mangent dans ces restaurants avec le menu en anglais. <break time="0.8s"/> Et ils repartent convaincus d'avoir vu Alberobello. <break time="1.2s"/>
+
+Presque personne ne s'arrête pour regarder la porte. <break time="0.8s"/> Cette porte-ci, basse, <break time="0.5s"/> avec le bois sombre. <break time="0.8s"/> Cette porte que j'ouvre le matin et que je ferme la nuit. <break time="0.8s"/> Par cette porte est passée toute ma vie. <break time="1.2s"/>
+
+La vraie Alberobello est ici. <break time="0.8s"/> Pas dans le dépliant. <break time="1.5s"/>
+
+=====
+CAP. 2 — CE QU'EST UN TRULLO, VRAIMENT
+voice: custom-alberobello
+
+Avant que tu ailles plus loin, <break time="0.5s"/> je veux que tu comprennes une chose. <break time="1.5s"/>
+
+Ce n'est pas un endroit construit pour faire joli. <break time="0.8s"/> C'est un endroit construit pour survivre. <break time="1.2s"/>
+
+Les pierres du toit n'ont pas de mortier. <break time="0.8s"/> Aucun ciment, aucune colle. <break time="0.8s"/> Chaque pierre s'appuie sur celle d'en dessous <break time="0.5s"/> avec une technique qu'on appelle à encorbellement — <break time="0.5s"/> chaque anneau de pierre déborde un peu vers l'intérieur <break time="0.5s"/> par rapport à celui d'en dessous, <break time="0.5s"/> jusqu'à ce que les deux côtés se rejoignent au sommet et que le cercle se ferme. <break time="0.8s"/> Seulement le poids. <break time="0.8s"/> Seulement l'équilibre. <break time="1.2s"/>
+
+Nous, on les appelait casedde. <break time="0.8s"/> Pas « trulli ». <break time="0.8s"/> Trullo est le mot que les étrangers ont mis. <break time="0.8s"/> Ma grand-mère les appelait les casedde, <break time="0.5s"/> et pour elle c'était le mot juste. <break time="1.2s"/>
+
+Et tu sais pourquoi il n'y a pas de mortier ? <break time="0.8s"/> À cause d'un Comte. <break time="1.5s"/>
+
+Nous sommes au seizième siècle. <break time="0.8s"/> Ce territoire appartient aux Comtes Acquaviva d'Aragona, <break time="0.5s"/> seigneurs de Conversano. <break time="0.8s"/> Le Comte amène les familles ici, <break time="0.5s"/> il leur donne la terre à travailler, <break time="0.5s"/> en échange il veut un dixième de la récolte. <break time="1.2s"/>
+
+Le problème, c'est le Roi de Naples. <break time="0.8s"/> Il y avait une loi qui disait : <break time="0.5s"/> si tu construis un nouveau village, <break time="0.5s"/> tu demandes la permission au Roi <break time="0.5s"/> et tu paies les tributs. <break time="0.8s"/> Le Comte ne voulait ni demander ni payer. <break time="1.2s"/>
+
+Alors il trouva la solution : <break time="0.8s"/> des maisons sans mortier. <break time="0.8s"/> Si on peut les démonter, <break time="0.5s"/> ce ne sont pas des maisons stables. <break time="0.8s"/> Si ce ne sont pas des maisons stables, <break time="0.5s"/> ce n'est pas un village. <break time="0.8s"/> Et si ce n'est pas un village, <break time="0.5s"/> le Roi ne doit pas le savoir. <break time="1.2s"/>
+
+Quand le fonctionnaire royal arrivait, <break time="0.8s"/> il suffisait d'enlever le pinacle du toit — <break time="0.5s"/> cette pierre en boule ou en croix que tu vois au sommet — <break time="0.5s"/> et le toit s'effondrait tout seul en un tas de cailloux. <break time="0.8s"/> Le fonctionnaire passait, <break time="0.5s"/> ne trouvait rien, <break time="0.5s"/> s'en allait. <break time="0.8s"/> Le lendemain le maître reconstruisait le toit en quelques heures. <break time="1.2s"/>
+
+Deux cents ans comme ça. <break time="0.8s"/> Deux cents ans de maisons démontables pour ne pas payer les impôts. <break time="0.8s"/> Jusqu'à ce que, le 27 mai 1797, <break time="0.5s"/> sept hommes de ce village allèrent voir le Roi Ferdinand IV à Tarente <break time="0.5s"/> et obtinrent la liberté. <break time="1.2s"/>
+
+À partir de ce jour, on pouvait construire avec du mortier. <break time="0.8s"/> Mais personne ne démolit les trulli. <break time="0.8s"/> C'était leur maison. <break time="0.8s"/> Ils y étaient nés. <break time="1.5s"/>
+
+=====
+CAP. 2B — LA PIERRE ET LA CITERNE
+voice: custom-alberobello
+
+Il y a une chose que presque personne ne te dit. <break time="1.5s"/>
+
+Pour construire un trullo, <break time="0.5s"/> la première chose que tu fais, ce n'est pas le mur. <break time="0.8s"/> C'est la citerne. <break time="1.2s"/>
+
+Sur ce plateau il n'y a pas de rivières. <break time="0.8s"/> Il n'y a pas de sources. <break time="0.8s"/> L'eau de pluie de l'hiver <break time="0.5s"/> est toute l'eau que tu as. <break time="0.8s"/> Si tu ne la recueilles pas, <break time="0.5s"/> tu meurs. <break time="1.2s"/>
+
+Alors tu creusais un grand trou dans le sous-sol, <break time="0.5s"/> en forme de bouteille renversée. <break time="0.8s"/> Il pouvait contenir trente mille, quarante mille litres d'eau. <break time="0.8s"/> Tu l'enduisais de chaux pour l'imperméabiliser. <break time="0.8s"/> Le toit incliné du trullo canalisait la pluie <break time="0.5s"/> à travers des rigoles de pierre <break time="0.5s"/> directement dans la citerne. <break time="1.2s"/>
+
+Et la pierre que tu sortais en creusant ? <break time="0.8s"/> Tu ne la jetais pas. <break time="0.8s"/> Avec cette pierre tu construisais les murs du trullo. <break time="1.2s"/>
+
+Le trou que tu fais en bas <break time="0.5s"/> te donne les matériaux pour construire en haut. <break time="0.8s"/> Rien de gaspillé. <break time="0.8s"/> Rien de transporté de loin. <break time="1.2s"/>
+
+Et puis il y a la chose qui me rend folle avec cette pierre. <break time="0.8s"/> La pierre calcaire respire. <break time="1.2s"/>
+
+Elle est poreuse. <break time="0.8s"/> Elle absorbe l'humidité quand il fait humide <break time="0.5s"/> et la relâche quand il fait sec. <break time="0.8s"/> Cela signifie qu'en été, <break time="0.5s"/> quand dehors il y a trente-huit degrés — <break time="0.5s"/> et ici en été il y en a, <break time="0.5s"/> je te le jure — <break time="0.5s"/> à l'intérieur du trullo la température tourne autour de dix-huit. <break time="0.8s"/> Comme une cave. <break time="0.8s"/> Sans climatisation. <break time="0.8s"/> Sans rien. <break time="1.2s"/>
+
+Ma grand-mère disait que le trullo était frais comme la terre. <break time="0.8s"/> Elle avait raison. <break time="0.8s"/> Et elle ne savait pas l'expliquer comme je te l'explique maintenant, <break time="0.5s"/> mais elle le savait. <break time="1.5s"/>
+
+Le maître trullaro était un spécialiste. <break time="0.8s"/> Ce n'était pas un maçon quelconque. <break time="0.8s"/> Il savait calculer à l'œil où mettre chaque pierre, <break time="0.5s"/> de combien chaque anneau pouvait déborder vers l'intérieur, <break time="0.5s"/> où mettre la pierre de fermeture au sommet. <break time="0.8s"/> Ce métier se transmettait de père en fils. <break time="0.8s"/> Il n'y avait pas d'école. <break time="0.8s"/> Il y avait le chantier et le père qui montrait au fils <break time="0.5s"/> où mettre la main. <break time="1.2s"/>
+
+Le dernier maître trullaro que j'ai connu, moi, <break time="0.5s"/> est mort quand j'étais jeune fille. <break time="0.8s"/> Il en reste encore quelques-uns qui savent faire l'entretien. <break time="0.8s"/> Mais construire un trullo à partir de rien, comme on le faisait autrefois, <break time="0.5s"/> très peu savent le faire. <break time="1.5s"/>
+
+=====
+CAP. 3 — RIONE MONTI : LA VITRINE
+voice: custom-alberobello
+
+Maintenant tu es dans le Rione Monti. <break time="1.5s"/>
+
+Plus de mille trulli. <break time="0.8s"/> Le plus grand ensemble de ces constructions qui existe au monde. <break time="0.8s"/> Depuis 1996 c'est Patrimoine de l'Humanité UNESCO. <break time="0.8s"/> Et dès 1910 il avait été déclaré Monument National. <break time="0.8s"/> Quatre-vingt-dix ans avant l'UNESCO, <break time="0.5s"/> quelqu'un avait déjà compris que cet endroit était spécial. <break time="1.2s"/>
+
+Regarde bien pendant que tu marches. <break time="0.8s"/> Tu vois la différence entre les trulli ? <break time="1.2s"/>
+
+Ceux avec les fenêtres pleines de souvenirs, <break time="0.5s"/> les portes ouvertes sur les boutiques, <break time="0.5s"/> les panneaux en trois langues — <break time="0.5s"/> ceux-là, ils les ont vendus ou loués, <break time="0.5s"/> en général à des gens qui n'y habitent plus depuis des décennies. <break time="1.2s"/>
+
+Puis il y a ceux avec les persiennes fermées, <break time="0.5s"/> un pot de fleurs dehors, <break time="0.5s"/> la pierre un peu plus sombre. <break time="0.8s"/> Ceux-là sont encore habités. <break time="0.8s"/> C'est la maison de quelqu'un. <break time="0.8s"/> Pas une attraction. <break time="1.2s"/>
+
+Les rues du quartier sont irrégulières, <break time="0.5s"/> elles ne suivent pas une grille. <break time="0.8s"/> Elles vont là où disait le terrain, <break time="0.5s"/> là où quelqu'un avait mis son trullo, <break time="0.5s"/> là où c'était commode de passer. <break time="0.8s"/> Il n'y avait pas de plan d'urbanisme. <break time="0.8s"/> Il y avait la nécessité. <break time="1.2s"/>
+
+Et les portes. <break time="0.8s"/> Regarde comme elles sont basses. <break time="0.8s"/> Pas parce que les gens étaient plus petits que vous. <break time="0.8s"/> Parce qu'une petite ouverture <break time="0.5s"/> fait entrer moins de froid l'hiver <break time="0.5s"/> et moins de chaleur l'été. <break time="0.8s"/> Chaque choix dans un trullo a une raison pratique. <break time="0.8s"/> La beauté est venue toute seule, <break time="0.5s"/> comme cela arrive quand les choses sont bien faites. <break time="1.5s"/>
+
+=====
+CAP. 3B — APRÈS 1797
+voice: custom-alberobello
+
+Quand en 1797 Alberobello devint ville libre, <break time="0.8s"/> les gens pouvaient enfin construire avec du mortier. <break time="1.2s"/>
+
+Pensez : vingt ans à devoir abattre le toit chaque fois qu'un fonctionnaire arrivait. <break time="0.8s"/> Vingt ans sans pouvoir enregistrer ta maison, <break time="0.5s"/> sans pouvoir la mettre au nom de tes enfants. <break time="1.2s"/>
+
+Et tu sais ce qu'ils firent, quand enfin ils furent libres ? <break time="1.5s"/>
+
+Ils ne démolirent pas les trulli. <break time="1.2s"/>
+
+Ils ne les abattirent pas pour construire des maisons normales. <break time="0.8s"/> Ils les gardèrent. <break time="0.8s"/> Parce que c'était leur maison. <break time="0.8s"/> Ils y étaient nés. <break time="0.8s"/> La pierre avait la chaleur de leur enfance. <break time="0.8s"/> Démolir un trullo n'avait aucun sens. <break time="0.8s"/> Cela avait du sens de construire plus loin, <break time="0.5s"/> là où il y avait du terrain libre. <break time="1.2s"/>
+
+Et c'est exactement ce qui s'est passé. <break time="0.8s"/> La ville a commencé à grandir hors des quartiers de trulli. <break time="0.8s"/> D'un côté les trulli, intacts. <break time="0.5s"/> De l'autre la ville nouvelle avec les maisons normales, <break time="0.5s"/> les arcades, les grandes fenêtres. <break time="0.8s"/> Cette division existe encore aujourd'hui. <break time="0.8s"/> Il suffit de marcher cinq minutes hors du Rione Monti <break time="0.5s"/> pour se retrouver dans un village quelconque des Pouilles. <break time="0.8s"/> Bars, tabacs, scooters sur le trottoir. <break time="0.8s"/> Normal. <break time="1.2s"/>
+
+Les trulli, ce n'est pas un décret qui les a sauvés. <break time="0.8s"/> Ce sont les gens qui n'avaient pas envie de les abattre. <break time="0.8s"/> Il y avait l'affection pour sa propre maison. <break time="0.8s"/> C'est encore la chose qui m'émeut le plus. <break time="1.5s"/>
+
+=====
+CAP. 4 — LES SYMBOLES SUR LES PINACLES
+voice: custom-alberobello
+
+Lève les yeux. <break time="1.5s"/>
+
+Tu vois ces signes peints à la chaux blanche sur les toits ? <break time="0.8s"/> Des croix, des cœurs, des étoiles, <break time="0.5s"/> des formes que tu ne reconnais pas tout de suite. <break time="0.8s"/> On en a compté plus de deux cents types différents. <break time="1.2s"/>
+
+Et tu sais ce que je te dis ? <break time="0.8s"/> Personne ne sait ce qu'ils signifient vraiment. <break time="1.2s"/>
+
+Il y a beaucoup d'interprétations. <break time="0.8s"/> La chrétienne : le soleil est le Christ, la lune est l'humanité. <break time="0.8s"/> La magique : les symboles du zodiaque protègent la maison. <break time="0.8s"/> La pratique : ce sont les initiales du propriétaire, <break time="0.5s"/> ou ce qu'il cultivait — l'amande, le blé, la vigne. <break time="1.2s"/>
+
+Les guides donnent parfois une réponse précise aux touristes. <break time="0.8s"/> Mais la vérité, c'est que la documentation historique est rare. <break time="0.8s"/> Ces symboles, c'étaient les paysans qui les peignaient, pas les notaires. <break time="0.8s"/> Ils ne laissaient pas d'actes écrits. <break time="1.2s"/>
+
+Ma grand-mère avait une étoile sur le toit. <break time="0.8s"/> J'ai toujours demandé pourquoi. <break time="0.8s"/> Elle me disait : c'est son père qui l'avait mise. <break time="0.8s"/> Et à son père, c'est le sien qui la lui avait mise. <break time="0.8s"/> Le pourquoi, personne ne le savait. <break time="0.8s"/> C'était là, c'est tout. <break time="1.2s"/>
+
+La chaux blanche avec laquelle on les peignait avait aussi une fonction pratique — <break time="0.5s"/> elle reflète le soleil, réduit la chaleur du toit en été. <break time="0.8s"/> Chaque année, après la pluie, la chaux s'efface. <break time="0.8s"/> Au printemps quelqu'un la repeignait, <break time="0.5s"/> comme on blanchit les murs de la maison. <break time="0.8s"/> Un rite. <break time="1.2s"/>
+
+Le mystère fait partie du trullo. <break time="0.8s"/> N'essayez pas de le résoudre — <break time="0.5s"/> regardez-le. <break time="1.5s"/>
+
+=====
+CAP. 5 — AIA PICCOLA : LE VRAI
+voice: custom-alberobello
+
+Maintenant je t'emmène là où j'habite. <break time="1.5s"/>
+
+Traverse la rue principale <break time="0.5s"/> et viens vers le Rione Aia Piccola. <break time="0.8s"/> Environ quatre cents trulli, <break time="0.5s"/> moins de boutiques, moins de touristes, plus de silence. <break time="1.2s"/>
+
+C'est le quartier qui ressemble encore à ce qu'était Alberobello avant l'UNESCO. <break time="0.8s"/> De vraies familles y habitent. <break time="0.8s"/> Les enfants jouent dehors, <break time="0.5s"/> les vieux sont assis sur les chaises devant la porte, <break time="0.5s"/> le chat dort sur le muret. <break time="1.2s"/>
+
+L'été, quand le Rione Monti se vide des touristes et des cars, <break time="0.5s"/> ici il y a encore quelqu'un assis dehors à parler. <break time="0.8s"/> Comme on faisait toujours. <break time="1.2s"/>
+
+La vie dans un trullo n'est pas celle du dépliant. <break time="0.8s"/> L'été ils sont frais — la pierre épaisse tient la chaleur dehors. <break time="0.8s"/> L'hiver l'humidité est un problème. <break time="0.8s"/> Tu ne peux pas faire de grands travaux de rénovation <break time="0.5s"/> sans perdre ce qu'est le trullo. <break time="1.2s"/>
+
+Un trullo traditionnel avait une pièce, parfois deux. <break time="0.8s"/> Toute la famille y habitait : grands-parents, parents, enfants. <break time="0.8s"/> Les animaux étaient dans un trullo séparé, à côté de la maison. <break time="0.8s"/> La chaleur des animaux l'hiver <break time="0.5s"/> réchauffe aussi les murs voisins. <break time="0.8s"/> Cela aussi était un calcul précis, <break time="0.5s"/> même si personne ne l'appelait architecture. <break time="1.2s"/>
+
+Moi, j'y vis encore. <break time="0.8s"/> Avec toutes les difficultés qu'il y a. <break time="0.8s"/> Mais c'est la maison de mes grands-parents, <break time="0.5s"/> et je ne la vends à aucun prix. <break time="1.5s"/>
+
+=====
+CAP. 6 — LE TRULLO SOVRANO
+voice: custom-alberobello
+
+Devant toi il y a le Trullo Sovrano. <break time="0.8s"/> Le seul trullo à deux étages qui existe au monde. <break time="1.5s"/>
+
+Le noyau d'origine remonte au début du dix-septième siècle. <break time="0.8s"/> La partie principale fut construite dans la première moitié du dix-huitième siècle <break time="0.5s"/> pour un prêtre, don Cataldo Perta, <break time="0.5s"/> né en 1744. <break time="0.8s"/> Un homme d'Église assez aisé <break time="0.5s"/> pour pouvoir se permettre quelque chose que personne d'autre n'avait. <break time="1.2s"/>
+
+La coupole centrale est haute de quatorze mètres. <break time="0.8s"/> L'ensemble a douze cônes en tout. <break time="0.8s"/> Et à l'intérieur il y a un escalier en maçonnerie <break time="0.5s"/> qui mène à l'étage du dessus. <break time="0.8s"/> Une chose qui n'existe dans aucun autre trullo. <break time="1.2s"/>
+
+Il y a une différence importante : <break time="0.8s"/> le Trullo Sovrano est construit avec du mortier. <break time="0.8s"/> Ce n'est pas une de ces maisons démontables. <break time="0.8s"/> Don Cataldo était un prêtre, pas un paysan. <break time="0.8s"/> Il n'avait pas peur du fonctionnaire royal. <break time="0.8s"/> Il construisit avec du mortier quand tous les autres ne pouvaient pas. <break time="1.2s"/>
+
+L'ensemble s'appelait Corte Papa Cataldo. <break time="0.8s"/> Les trulli autour étaient les maisons de ses employés. <break time="0.8s"/> Une petite cour, toute en pierre. <break time="1.2s"/>
+
+Ça vaut la visite. <break time="0.8s"/> Entre à l'intérieur si tu peux. <break time="1.5s"/>
+
+=====
+CAP. 6B — LA NOURRITURE DE LA MURGIA
+voice: custom-alberobello
+
+Maintenant je te parle de la nourriture. <break time="1.2s"/> Parce que c'est une chose sérieuse. <break time="1.5s"/>
+
+La nourriture de la Murgia n'est pas une chose séparée des trulli. <break time="0.8s"/> C'est la même logique : <break time="0.5s"/> ce que tu as à disposition, <break time="0.5s"/> utilisé de la façon la plus intelligente possible. <break time="0.8s"/> Rien de gaspillé. <break time="1.2s"/>
+
+Les orecchiette. <break time="0.8s"/> Ce n'est pas une chose pour touristes. <break time="0.8s"/> Je les faisais moi, chaque dimanche matin. <break time="0.8s"/> Ma mère les faisait. <break time="0.8s"/> Ma grand-mère les faisait. <break time="0.8s"/> Farine de blé dur et eau. <break time="0.5s"/> Pas d'œufs. <break time="0.8s"/> Le pouce qui traîne sur la planche rugueuse, <break time="0.5s"/> la pâte qui s'enroule sur elle-même et forme la petite coupe. <break time="1.2s"/>
+
+La forme n'est pas un caprice. <break time="0.8s"/> La petite coupe recueille la sauce à l'intérieur. <break time="0.8s"/> Si elle était plate, la sauce glisserait. <break time="0.8s"/> La forme sert. <break time="0.8s"/> Comme toujours, ici. <break time="1.2s"/>
+
+La meilleure sauce est celle de viande de porc — <break time="0.5s"/> saucisse, braciole, tracchie — <break time="0.5s"/> cuite lentement deux, trois heures. <break time="0.8s"/> Ce n'est pas une sauce rapide. <break time="0.8s"/> C'est une sauce que tu fais le matin <break time="0.5s"/> et qui fait que la maison sent le déjeuner dès neuf heures. <break time="1.2s"/>
+
+Les lampascioni. <break time="0.8s"/> Celui-là, je dois l'expliquer parce que presque personne ne les connaît. <break time="1.5s"/>
+
+C'est le bulbe d'un petit oignon sauvage <break time="0.5s"/> qui pousse dans les champs autour d'Alberobello au printemps. <break time="0.8s"/> C'est amer. <break time="0.8s"/> Très amer. <break time="0.8s"/> On les fait bouillir, on les égoutte, on les aplatit avec un couteau, <break time="0.5s"/> on les fait frire dans une bonne huile avec ail et piment. <break time="0.8s"/> Le résultat a un goût de terre, de champ, de fatigue. <break time="0.8s"/> Ce n'est pas délicat. <break time="0.8s"/> C'est honnête. <break time="1.2s"/>
+
+Pendant des siècles c'était une nourriture pauvre — tu les ramassais parce que tu les trouvais, pas parce que tu les achetais. <break time="0.8s"/> Maintenant on les vend au marché à des prix pas pauvres du tout, <break time="0.5s"/> et les restaurants les mettent au menu comme spécialité. <break time="0.8s"/> C'est toujours comme ça : <break time="0.5s"/> ce qui était la nourriture des pauvres <break time="0.5s"/> devient la nourriture gourmet vingt ans après. <break time="1.2s"/>
+
+Et puis les fèves avec les chicorées. <break time="0.8s"/> C'est le plat que j'aime le plus. <break time="1.2s"/>
+
+Des fèves sèches, mises à tremper la nuit, <break time="0.5s"/> bouillies lentement jusqu'à ce qu'elles se défassent en une purée lisse. <break time="0.8s"/> À côté, les chicorées sauvages bouillies dans l'eau salée : <break time="0.5s"/> amères, vertes, avec cette consistance qui tient. <break time="0.8s"/> De l'huile crue dessus, abondante. <break time="0.8s"/> Du pain d'Altamura. <break time="1.2s"/>
+
+Ce plat ne coûte rien. <break time="0.8s"/> Et il a le goût de tout. <break time="0.8s"/> Il a le goût de cette terre, <break time="0.5s"/> de cette pierre, <break time="0.5s"/> de ces gens qui ont appris à faire le maximum avec le peu. <break time="1.2s"/>
+
+Si tu veux bien manger, <break time="0.8s"/> ne cherche pas les restaurants avec le menu plastifié devant l'entrée. <break time="0.8s"/> Cherche une trattoria dans le Rione Aia Piccola, <break time="0.5s"/> ou juste hors du centre touristique. <break time="0.8s"/> Celles sans panneaux en anglais. <break time="0.8s"/> Celles où le menu change avec ce qu'ils ont cuisiné ce matin-là. <break time="0.8s"/> Les orecchiette faites à la main. <break time="0.8s"/> Les fèves pas en bocal. <break time="1.5s"/>
+
+=====
+CAP. 7 — COMMENT ON VIT DANS UN TRULLO AUJOURD'HUI
+voice: custom-alberobello
+
+On t'a dit que les trulli sont beaux. <break time="0.8s"/> On t'a dit qu'ils sont frais l'été. <break time="0.8s"/> On t'a dit qu'ils sont patrimoine de l'humanité. <break time="1.2s"/>
+
+Ce qu'on ne te dit pas, <break time="0.5s"/> c'est combien c'est difficile d'y habiter aujourd'hui. <break time="1.5s"/>
+
+Moi, je le sais parce que j'y habite. <break time="1.2s"/>
+
+L'hiver l'humidité se sent. <break time="0.8s"/> Cette même pierre poreuse qui l'été te tient au frais <break time="0.5s"/> absorbe l'hiver l'humidité de l'air <break time="0.5s"/> et tu la retrouves sur les murs. <break time="0.8s"/> Il n'y a pas d'isolation thermique comme dans les maisons modernes. <break time="0.8s"/> Le chauffage est un défi. <break time="1.2s"/>
+
+Celui qui a acheté un trullo pour en faire un B&B <break time="0.5s"/> y a dépensé un sacré argent pour le rendre vivable. <break time="0.8s"/> Sols chauffants, murs traités, <break time="0.5s"/> salles de bain aménagées là où il n'y en avait pas. <break time="0.8s"/> Le résultat est souvent magnifique. <break time="0.8s"/> Mais ce n'est plus un trullo comme celui où ma grand-mère a grandi. <break time="1.2s"/>
+
+Il y a toute une réglementation sur la rénovation dans les quartiers historiques. <break time="0.8s"/> Tu ne peux pas faire ce que tu veux. <break time="0.8s"/> Tu dois respecter les matériaux, les techniques, l'aspect extérieur. <break time="0.8s"/> Certains se plaignent. <break time="0.8s"/> Moi je pense que c'est juste comme ça. <break time="0.8s"/> Si tu achètes un trullo et que tu y mets des fenêtres en aluminium, <break time="0.5s"/> tu as acheté le trullo <break time="0.5s"/> mais tu n'as pas compris ce que tu as acheté. <break time="1.2s"/>
+
+Il n'existe pas de maisons de pierre faciles. <break time="0.8s"/> Il existe des gens qui les aiment assez pour y rester. <break time="1.5s"/>
+
+=====
+CAP. 8 — L'ÉGLISE DE SANT'ANTONIO
+voice: custom-alberobello
+
+Maintenant regarde cette église. <break time="1.5s"/>
+
+Elle est construite en forme de trullo. <break time="0.8s"/> La seule église au monde ainsi. <break time="0.8s"/> Le cône principal est haut de vingt et un mètres et demi. <break time="1.2s"/>
+
+C'est don Antonio Lippolis qui la voulut, <break time="0.5s"/> un prêtre d'ici. <break time="0.8s"/> Les habitants du Rione Monti étaient pauvres <break time="0.5s"/> et pour aller à la messe ils devaient faire une longue route. <break time="0.8s"/> Don Antonio voulait une église dans le quartier. <break time="1.2s"/>
+
+Le problème, c'était la protection. <break time="0.8s"/> Depuis 1910 le quartier était Monument National, <break time="0.5s"/> et le règlement ne permettait pas de constructions de style moderne. <break time="0.8s"/> Alors don Antonio fit le choix le plus simple : <break time="0.5s"/> construire en trullo, comme tout le reste. <break time="1.2s"/>
+
+La première pierre fut posée le 1er janvier 1926. <break time="0.8s"/> Inaugurée le 13 juin 1927, <break time="0.5s"/> jour de la fête de Sant'Antonio. <break time="0.8s"/> Quatorze mois de travail. <break time="0.8s"/> Les maîtres trullari étaient tous d'ici : <break time="0.5s"/> Notarnicola, La Sorte, Curri, De Leonardis. <break time="1.2s"/>
+
+Entre à l'intérieur. <break time="0.8s"/> Elle est petite, avec cette lumière recueillie que donnent les cônes de pierre. <break time="0.8s"/> Ce n'est pas une cathédrale. <break time="0.8s"/> C'est une église de quartier, <break time="0.5s"/> faite pour les gens du quartier, <break time="0.5s"/> avec les mêmes mains qui avaient construit les maisons autour. <break time="1.2s"/>
+
+Ma grand-mère y allait à la messe chaque matin. <break time="0.8s"/> Moi j'y suis allée avec elle, enfant. <break time="0.8s"/> Ces bancs de bois, je les connais tous. <break time="1.5s"/>
+
+=====
+CAP. 9 — CLÔTURE : CONCETTA SALUE
+voice: custom-alberobello
+
+Alors. <break time="1.5s"/>
+
+Tu as vu les trulli. <break time="0.8s"/> Tu as entendu l'histoire du Comte qui ne voulait pas payer les impôts. <break time="0.8s"/> Tu as vu les symboles que personne ne sait expliquer tout à fait. <break time="0.8s"/> Tu as vu le quartier des touristes <break time="0.5s"/> et celui où l'on vit encore. <break time="0.8s"/> Tu as entendu parler de la pierre qui respire <break time="0.5s"/> et de la citerne qui te donne les matériaux pour construire. <break time="0.8s"/> Tu as entendu parler de la nourriture qui a le goût de cette terre. <break time="1.2s"/>
+
+Ce que tu emportes chez toi, ce n'est pas une photo — <break time="0.5s"/> celles-là, tu les as déjà. <break time="0.8s"/> Ce que tu emportes chez toi, <break time="0.5s"/> c'est que cet endroit n'est pas un décor. <break time="0.8s"/> C'est une réponse pratique à un problème pratique : <break time="0.5s"/> comment construire une maison quand tu n'as que de la pierre, <break time="0.5s"/> pas d'argent, <break time="0.5s"/> et un maître qui ne veut pas que tu existes. <break time="1.2s"/>
+
+Et comment faire pour que cette maison dure des siècles <break time="0.5s"/> même après que le maître n'est plus là. <break time="1.2s"/>
+
+Avant de partir, <break time="0.8s"/> regarde encore les toits. <break time="0.8s"/> Ces cônes de pierre grise, <break time="0.5s"/> l'un à côté de l'autre, <break time="0.5s"/> les pinacles qui pointent vers le ciel. <break time="0.8s"/> Chacun de ces pinacles a été mis là par une main précise, <break time="0.5s"/> cent, deux cents, trois cents ans plus tôt. <break time="0.8s"/> Sans grue, sans ciment. <break time="0.8s"/> Avec la géométrie, la pierre, et la nécessité. <break time="1.2s"/>
+
+Si tu veux manger comme on mange ici, <break time="0.5s"/> pas comme mangent les touristes, <break time="0.5s"/> va dans le Rione Aia Piccola. <break time="0.8s"/> Orecchiette à la sauce, agneau, lampascioni, fèves avec les chicorées. <break time="0.8s"/> Commande ce qu'ils ont ce jour-là, <break time="0.5s"/> pas ce qui est écrit sur le menu plastifié. <break time="1.2s"/>
+
+Et s'il te reste encore deux heures, <break time="0.5s"/> monte en voiture et va à Locorotondo. <break time="0.8s"/> Quinze minutes d'ici. <break time="0.8s"/> Un autre monde — <break time="0.5s"/> blanc, silencieux, avec le meilleur vin de la vallée. <break time="1.2s"/>
+
+Je t'attends là-bas. <break time="1.5s"/>
