@@ -44,24 +44,39 @@ const scanPart = await runReport({
 });
 const scansByPartner = rows(scanPart).map((r) => ({ partner: r.dimensionValues[0].value || '(n/d)', scans: num(r) }));
 
-// --- Traffico sito di ieri (non partner): pagine top + canali ---
-const pagesY = await runReport({
-  dateRanges: yRange,
+// --- Traffico sito ultimi 7 giorni (non partner): finestra mobile ---
+// "Ieri" col sito a ~0-2 visite/giorno è quasi sempre vuoto: l'organico
+// si vede solo su una finestra più larga. Questa sezione c'è sempre.
+const wRange = [{ startDate: '7daysAgo', endDate: 'today' }];
+
+const tot7 = await runReport({ dateRanges: wRange, metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }] });
+const tot7Row = rows(tot7)[0];
+
+const pages7 = await runReport({
+  dateRanges: wRange,
   dimensions: [{ name: 'pagePath' }],
   metrics: [{ name: 'screenPageViews' }],
   orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
   limit: 5,
 });
-const topPages = rows(pagesY).map((r) => ({ path: r.dimensionValues[0].value || '(n/d)', views: num(r) }));
+const topPages = rows(pages7).map((r) => ({ path: r.dimensionValues[0].value || '(n/d)', views: num(r) }));
 
-const chanY = await runReport({
-  dateRanges: yRange,
+const chan7 = await runReport({
+  dateRanges: wRange,
   dimensions: [{ name: 'sessionDefaultChannelGroup' }],
   metrics: [{ name: 'sessions' }],
   orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
-  limit: 6,
+  limit: 8,
 });
-const channels = rows(chanY).map((r) => ({ channel: r.dimensionValues[0].value || '(n/d)', sessions: num(r) }));
+const channels = rows(chan7).map((r) => ({ channel: r.dimensionValues[0].value || '(n/d)', sessions: num(r) }));
+
+const site7d = {
+  sessions: num(tot7Row, 0),
+  users: num(tot7Row, 1),
+  pageviews: num(tot7Row, 2),
+  channels,
+  topPages,
+};
 
 // --- Git: commit di ieri nei due repo ---
 function commitsSince(repo) {
@@ -109,7 +124,7 @@ console.log(JSON.stringify({
   date: ymd(yest),
   ga4: {
     sessions: num(totRow, 0), users: num(totRow, 1), pageviews: num(totRow, 2),
-    events, scansByPartner, topPages, channels,
+    events, scansByPartner, site7d,
   },
   commits: { localis: commitsSince(LOCALIS), gallery: commitsSince(GALLERY) },
   recontact,
