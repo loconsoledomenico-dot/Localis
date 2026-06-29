@@ -33,6 +33,7 @@
 |---|---|---|
 | **★ Masseria La Chiusa delle More** | Dimora storica / agriturismo di charme, oliveto secolare | **+39 330 543766** · +39 347 0577272 · info@lachiusadellemore.it · [lachiusadellemore.it](https://www.lachiusadellemore.it/) |
 | **★ Dimore di Portadibasso** ⏳ | Albergo diffuso centro storico | via Booking / [sito](https://www.booking.com/hotel/it/foggia-peschici.it.html) — da reperire |
+| **★ Agriturismo Torre dei Preti** | Agriturismo di charme, campagna | **+39 0884 963066** · [torredeipreti.it](https://www.torredeipreti.it/) |
 | Maggiano Boutique Hotel ⏳ | Boutique hotel | da reperire |
 | Il Barone del Mare · Gli Orti di Malva · Locanda della Castellana ⏳ | Charme / piccoli | da reperire |
 
@@ -46,7 +47,8 @@
 | **★ Le Cinque Lune** | B&B di charme, palazzo del 1700, centro storico | **+39 379 1114167** · WhatsApp · form (no email) · [lecinquelunevieste.com](https://www.lecinquelunevieste.com/it/) |
 | **★ Hotel Punta San Francesco** | Hotel centro storico, vista mare | **+39 0884 701422** · info@hotelpuntasanfrancesco.it · [sito](https://www.hotelpuntasanfrancesco.it/) |
 | **Forte Hotel** | Hotel di charme, centro storico | **+39 0884 707574** · info@fortehotelvieste.com · [sito](https://www.fortehotelvieste.com/) |
-| Hotel Seggio · B&B Quintessenza – Charme Rooms · B&B Dimora del Drago · Monsignore B&B ⏳ | Charme / B&B centro storico | da reperire |
+| **★ Il Castellino Relais** | Boutique relais | **+39 0884 702081** · [ilcastellinovieste.it](https://www.ilcastellinovieste.it/) |
+| Hotel Seggio · B&B Quintessenza – Charme Rooms · B&B Dimora del Drago · Monsignore B&B · Poggio di Luna · Magnolia Hotel ⏳ | Charme / B&B centro storico | da reperire |
 
 ---
 
@@ -69,7 +71,8 @@
 
 ## Note operative
 
-- **Priorità outreach:** le ★ con contatto verificato (La Chiusa delle More, Le Cinque Lune, Punta San Francesco, Relais dei Normanni / Palace San Michele) → partire da qui.
+- **Verifica copertura (2026-06-29):** sweep aggregatori (BoutiqueHotel.me Vieste/Peschici/Vico, Italy Traveller) → il Gargano è destinazione **balneare**, quindi la maggioranza delle strutture sono family/beach resort (Le Ginestre, Palm Garden, Corona Beach, Gattarella, Scialì, Portonuovo…) — escluse a ragione. Lo strato boutique-culturale è genuinamente più sottile che in Valle d'Itria. Miss recuperati: **Il Castellino Relais** (Vieste), **Agriturismo Torre dei Preti** (Peschici).
+- **Priorità outreach:** le ★ con contatto verificato (La Chiusa delle More, Torre dei Preti, Le Cinque Lune, Punta San Francesco, Il Castellino Relais, Relais dei Normanni / Palace San Michele) → partire da qui.
 - **Anchor culturali forti** = Monte Sant'Angelo (UNESCO) e Vico del Gargano (borgo): contenuti Localis Gargano già esistenti.
 - **Prefisso 0884** = Gargano: i fissi sopra sono numeri reali della zona.
 - I contatti ⏳ richiedono una seconda passata (sito ufficiale o telefonata a Booking).
