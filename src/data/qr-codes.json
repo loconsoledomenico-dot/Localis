@@ -137,9 +137,11 @@
   },
   {
     "code": "L3EYN6",
-    "partner_slug": null,
+    "partner_slug": "villaggio-costa-ripa",
     "batch": "2026-06-lotto1",
-    "printed_at": "2026-06-15"
+    "printed_at": "2026-06-15",
+    "assigned_at": "2026-06-29",
+    "note": "villaggio turistico Rodi Garganico FG (Gargano) - 2026-06-29"
   },
   {
     "code": "SHQ5WU",

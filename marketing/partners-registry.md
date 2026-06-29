@@ -25,6 +25,7 @@ Master ledger dei partner referral. Aggiornare manualmente. Numeri da GA4/PostHo
 | 008 | `mare-in-casa-polignano` | Mare in casa - Dimora Luxury | Polignano a Mare | B&B | da definire | info@localis.guide | 2026-06-08 | [PNG](qr-codes/mare-in-casa-polignano.png) | QR in camera / reception. |
 | 009 | `masseria-dirupo-noci` | Masseria Dirupo | Zona F 46, 70015 Noci (BA) | Struttura ricettiva + area camper | da definire | info@masseriadirupo.it | 2026-06-22 | [PNG](qr-codes/masseria-dirupo-noci.png) | Azienda Agricola Fratelli Lippolis (Giuseppe Lippolis). Valle d'Itria. P.IVA 07031080729 · +39 329 74 64 564. QR in camera / area camper. |
 | 010 | `biorussi-agriturismo` | Biorussi Agriturismo | Contrada Macchiarotonda, 71010 Carpino (FG) | Agriturismo | da definire | info@biorussi.com | 2026-06-29 | Card neutra `HBV9D2` (`/q/hbv9d2`) | Società Agricola Biorussi srl. Gargano, zona lago di Varano. "Biologico per tradizione". P.IVA 03703600712 · +39 0884 596765 / 348 8895360 · www.biorussi.com. |
+| 011 | `villaggio-costa-ripa` | Villaggio Costa Ripa | Contrada Ripa, 71012 Rodi Garganico (FG) | Villaggio turistico | da definire | info@villaggiocostaripa.it | 2026-06-29 | Card neutra `L3EYN6` (`/q/l3eyn6`) | Gargano. CIN IT071043A100113788. QR in camera / reception. |
 
 ---
 
