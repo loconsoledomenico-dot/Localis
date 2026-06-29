@@ -99,9 +99,11 @@
   },
   {
     "code": "JL3Z46",
-    "partner_slug": null,
+    "partner_slug": "hotel-helios",
     "batch": "2026-06-lotto1",
-    "printed_at": "2026-06-15"
+    "printed_at": "2026-06-15",
+    "assigned_at": "2026-06-29",
+    "note": "hotel 3* Lido del Sole, Rodi Garganico FG (Gargano) - 2026-06-29"
   },
   {
     "code": "GTJCRX",
