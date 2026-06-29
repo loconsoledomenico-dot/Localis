@@ -230,7 +230,8 @@ const labels = {
     audioUrl?: string;
     offlineState: OfflineState;
     startedTracked?: boolean;
-    fullPlayedTracked?: boolean;
+    audioMilestones?: Set<number>;
+    completeTracked?: boolean;
   };
 
   const SPEEDS = [1, 1.25, 1.5, 2, 0.85];
@@ -467,13 +468,14 @@ const labels = {
       p.fill.style.width = `${pct}%`;
       p.cur.textContent = fmtTime(p.audio.currentTime);
       updateMediaSessionPosition(p);
-      if (pct > 80 && !p.fullPlayedTracked) {
-        p.fullPlayedTracked = true;
-        if (typeof window.localisTrack === 'function') {
-          window.localisTrack('guide_audio_80_percent', { guide: p.slug, lang: p.lang });
-        }
-        if (typeof window.plausible === 'function') {
-          window.plausible('Audio Played Full', { props: { guide: p.slug } });
+      // Milestone di ascolto: dove la gente molla il racconto (il cuore del prodotto).
+      const milestones = p.audioMilestones || (p.audioMilestones = new Set());
+      for (const m of [25, 50, 75]) {
+        if (pct >= m && !milestones.has(m)) {
+          milestones.add(m);
+          if (typeof window.localisTrack === 'function') {
+            window.localisTrack(`guide_audio_${m}_percent`, { guide: p.slug, lang: p.lang });
+          }
         }
       }
     });
@@ -481,6 +483,15 @@ const labels = {
     p.audio.addEventListener('ended', () => {
       updateMediaSessionPosition(p);
       setPlayingState(p, false);
+      if (!p.completeTracked) {
+        p.completeTracked = true;
+        if (typeof window.localisTrack === 'function') {
+          window.localisTrack('guide_audio_complete', { guide: p.slug, lang: p.lang });
+        }
+        if (typeof window.plausible === 'function') {
+          window.plausible('Audio Played Full', { props: { guide: p.slug } });
+        }
+      }
     });
 
     p.audio.addEventListener('error', () => showError(p));

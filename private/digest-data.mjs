@@ -78,6 +78,22 @@ const site7d = {
   topPages,
 };
 
+// --- Funnel 7gg: scan -> anteprima -> checkout -> acquisto ---
+const funnelEv = await runReport({
+  dateRanges: wRange,
+  dimensions: [{ name: 'eventName' }],
+  metrics: [{ name: 'eventCount' }],
+  dimensionFilter: { filter: { fieldName: 'eventName', inListFilter: { values: ['qr_scan', 'audio_preview_played', 'begin_checkout', 'purchase'] } } },
+});
+const fc = {};
+for (const r of rows(funnelEv)) fc[r.dimensionValues[0].value] = num(r);
+const funnel7d = {
+  scan: fc.qr_scan || 0,
+  preview: fc.audio_preview_played || 0,
+  checkout: fc.begin_checkout || 0,
+  purchase: fc.purchase || 0,
+};
+
 // --- Git: commit di ieri nei due repo ---
 function commitsSince(repo) {
   try {
@@ -124,7 +140,7 @@ console.log(JSON.stringify({
   date: ymd(yest),
   ga4: {
     sessions: num(totRow, 0), users: num(totRow, 1), pageviews: num(totRow, 2),
-    events, scansByPartner, site7d,
+    events, scansByPartner, site7d, funnel7d,
   },
   commits: { localis: commitsSince(LOCALIS), gallery: commitsSince(GALLERY) },
   recontact,

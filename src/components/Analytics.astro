@@ -187,6 +187,34 @@ const isProd = import.meta.env.PROD;
 
             try { if (typeof window.plausible === 'function') window.plausible(name, { props: params }); } catch (e) {}
           };
+
+          // Scroll depth: fino a dove leggono la pagina (25/50/75/100), una volta
+          // per soglia. Dice se vedono il prezzo/CTA o se ne vanno prima.
+          (function () {
+            try {
+              var sent = {};
+              function check() {
+                var doc = document.documentElement;
+                var scrollable = doc.scrollHeight - window.innerHeight;
+                if (scrollable <= 0) return;
+                var pct = (window.scrollY / scrollable) * 100;
+                [25, 50, 75, 100].forEach(function (m) {
+                  if (pct >= m && !sent[m]) {
+                    sent[m] = true;
+                    if (typeof window.localisTrack === 'function') {
+                      window.localisTrack('scroll_depth', { percent: m, page: location.pathname });
+                    }
+                  }
+                });
+              }
+              var ticking = false;
+              window.addEventListener('scroll', function () {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(function () { check(); ticking = false; });
+              }, { passive: true });
+            } catch (e) {}
+          })();
         </script>
       </>
     )}
