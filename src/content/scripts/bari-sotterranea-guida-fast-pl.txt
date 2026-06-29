@@ -1,0 +1,173 @@
+LOCALIS — PODZIEMNE BARI · pełny skrypt jednogłosowy
+Narratorka: Rosa „la Perpetua” · ton poufny, ludowy, mądry · 50 lat służby w Bazylice San Nicola
+Cel ~25 min @ 150 słów/min (rozszerzalne do 30 min na życzenie)
+=====================================
+
+WPROWADZENIE
+-------------
+voice: angelina
+
+Nazywam się Rosa. <break time="0.5s"/> Dla wszystkich w Bari jestem la Perpetua. <break time="0.6s"/> Pięćdziesiąt lat w Bazylice San Nicola — <break time="0.4s"/> sprzątając, <break time="0.3s"/> porządkując, <break time="0.3s"/> utrzymując zakrystię w ładzie, <break time="0.3s"/> nosząc kawę księżom, gdy przyjeżdżały rosyjskie delegacje. <break time="0.5s"/> Pięćdziesiąt lat. <break time="1.2s"/>
+
+A przez pięćdziesiąt lat, chłopcze, <break time="0.4s"/> widziałam i słyszałam. <break time="0.6s"/> Nie tylko o księżach — <break time="0.3s"/> ech, o nich można by napisać książkę. <break time="0.5s"/> Ale przede wszystkim o kamieniach. <break time="0.6s"/> Bo przez bazylikę przechodzi wszystko: <break time="0.4s"/> archeolodzy, gdy znajdą coś nowego, <break time="0.3s"/> konserwatorzy, gdy otwierają posadzkę, <break time="0.3s"/> historycy z uniwersytetu, którzy przychodzą prowadzić badania, <break time="0.3s"/> robotnicy z magistratu, gdy kopią dół na placu. <break time="0.5s"/> Wszyscy przechodzą tędy. <break time="0.4s"/> Wszyscy opowiadają. <break time="1.0s"/>
+
+A ja tam byłam. <break time="0.4s"/> Sprzątałam, <break time="0.3s"/> słuchałam, <break time="0.3s"/> zapamiętywałam. <break time="1.2s"/>
+
+Teraz powiem ci coś, co w Bari naprawdę mało kto wie: <break time="0.5s"/> pod Bari, które widzisz, <break time="0.3s"/> jest inne. <break time="0.6s"/> Warstwowe. <break time="0.4s"/> Rzymskie, <break time="0.3s"/> wczesnochrześcijańskie, <break time="0.3s"/> bizantyjskie, <break time="0.3s"/> normańskie, <break time="0.3s"/> szwabskie. <break time="0.5s"/> Każda epoka zostawiła kamienie, <break time="0.3s"/> kości, <break time="0.3s"/> mozaiki, <break time="0.3s"/> cysterny, <break time="0.3s"/> więzienia. <break time="0.5s"/> I wszystko to tam jest, <break time="0.3s"/> pod twoimi stopami, <break time="0.3s"/> gdy idziesz nad ławkami Piazza Mercantile. <break time="1.2s"/>
+
+W pół godziny pokażę ci cztery miejsca. <break time="0.5s"/> Krypta San Nicola — <break time="0.3s"/> bo zaczynam od mojego domu. <break time="0.5s"/> Succorpo San Sabino. <break time="0.4s"/> Rzymskie cysterny Piazza Mercantile. <break time="0.4s"/> Podziemia Castello Svevo. <break time="0.5s"/> Cztery przystanki, <break time="0.3s"/> cztery epoki. <break time="1.0s"/>
+
+Chodź. <break time="0.5s"/> Sciamaninn. <break time="2.0s"/>
+
+=====================================
+ROZDZIAŁ 1 — POD BAZYLIKĄ SAN NICOLA
+-------------
+voice: angelina
+
+Zacznijmy od mojego domu. <break time="0.5s"/> Bazyliki San Nicola. <break time="0.5s"/> Ale nie tej, którą widzisz, wchodząc po schodach — <break time="0.4s"/> tę znają wszyscy, <break time="0.3s"/> są oficjalni przewodnicy, <break time="0.3s"/> masz ulotkę. <break time="0.8s"/>
+
+Ja zabieram cię pod spód. <break time="0.5s"/> Do krypty. <break time="1.0s"/>
+
+Wchodzisz do bazyliki, <break time="0.3s"/> skręcasz w prawo przed wielkim ołtarzem <break time="0.3s"/> i schodzisz po schodach ze startego kamienia. <break time="0.5s"/> Trzy, cztery stopnie, <break time="0.3s"/> i już czujesz, że zmienia się powietrze. <break time="0.5s"/> Robi się chłodniejsze, <break time="0.3s"/> pachnie wilgotnym kamieniem, <break time="0.3s"/> starą świecą, <break time="0.3s"/> wiekami. <break time="0.6s"/> To uczucie, które archeolodzy raz mi wyjaśnili: <break time="0.4s"/> nazywają je „oddechem kamienia”. <break time="0.5s"/> Stare kamienie oddychają wilgocią, <break time="0.3s"/> a ta wilgoć to zapach czasu. <break time="1.2s"/>
+
+Schodzisz. <break time="0.5s"/> I stajesz przed grobem San Nicola. <break time="1.2s"/>
+
+Pod niskim ołtarzem, <break time="0.3s"/> za marmurową kratą, <break time="0.3s"/> jest sarkofag. <break time="0.5s"/> W środku są kości, <break time="0.3s"/> które w 1087 roku — <break time="0.4s"/> zapamiętaj tę datę — <break time="0.4s"/> sześćdziesięciu dwóch barskich marynarzy poszło ukraść do Miry, w Turcji. <break time="0.6s"/> Wiem, <break time="0.3s"/> ukraść to brzydkie słowo. <break time="0.4s"/> Księża wolą „translację”. <break time="0.5s"/> Ale powiedzmy sobie prawdę między nami: <break time="0.4s"/> poszli tam, <break time="0.3s"/> rozbili grób, <break time="0.3s"/> wzięli kości, <break time="0.3s"/> załadowali je na statek i wrócili. <break time="0.5s"/> Translacja, oczywiście. <break time="1.2s"/>
+
+Spędziłam pięćdziesiąt lat, sprzątając wokół tego grobu. <break time="0.6s"/> I powiem ci coś, co mało kto wie: <break time="0.4s"/> w środku sarkofagu jest woda. <break time="0.5s"/> Nazywa się manna San Nicola. <break time="0.5s"/> Płynna substancja, która tworzy się naturalnie w kościach świętego. <break time="0.6s"/> Naukowcy ją zbadali — <break time="0.3s"/> to czysta woda, <break time="0.3s"/> ze śladami minerałów. <break time="0.5s"/> Księża zbierają ją raz w roku, <break time="0.3s"/> 9 maja, <break time="0.3s"/> i wlewają do małych fiolek rozdawanych pielgrzymom. <break time="0.5s"/> Od tysiąca lat tak się dzieje. <break time="0.5s"/> Tysiąc lat wody wypływającej z suchych kości. <break time="0.4s"/> Nazwij to, jak chcesz. <break time="1.2s"/>
+
+Teraz spójrz na ziemię. <break time="0.5s"/> Widzisz tę mozaikową posadzkę, <break time="0.3s"/> pod szybą? <break time="0.5s"/> Te małe kamyczki, <break time="0.3s"/> białe, <break time="0.3s"/> zielone, <break time="0.3s"/> czerwone, <break time="0.3s"/> ułożone w rzędy? <break time="0.5s"/> To mozaika bizantyjska, <break time="0.3s"/> z czasów, gdy ta krypta nie była jeszcze kryptą bazyliki — <break time="0.4s"/> był to starszy kościół, <break time="0.3s"/> mniejszy, <break time="0.3s"/> sprzed 1087 roku. <break time="0.5s"/> Na wierzchu zbudowano nową bazylikę, <break time="0.3s"/> ale starą posadzkę zostawili. <break time="0.5s"/> Idziesz po szybie, <break time="0.3s"/> a pod szybą jest Bari dziesiątego wieku. <break time="1.2s"/>
+
+A teraz podnieś wzrok. <break time="0.5s"/> Kolumny. <break time="0.5s"/> Dwadzieścia sześć kolumn podtrzymuje kryptę. <break time="0.5s"/> Przyjrzyj im się dobrze — <break time="0.3s"/> wszystkie są różne. <break time="0.5s"/> Jedna z białego marmuru, <break time="0.3s"/> jedna z różowego granitu, <break time="0.3s"/> jedna z zielonego marmuru z żyłkami, <break time="0.3s"/> jedna ciemna, niemal czarna. <break time="0.5s"/> Wiesz dlaczego? <break time="1.0s"/>
+
+Bo nie powstały, by tu stać. <break time="0.5s"/> To kolumny rzymskie, <break time="0.3s"/> wzięte z rzymskich budowli rozsianych po mieście — <break time="0.3s"/> świątynia, <break time="0.3s"/> forum, <break time="0.3s"/> termy — <break time="0.3s"/> i użyte ponownie. <break time="0.5s"/> Barczycy roku tysięcznego nie marnowali. <break time="0.5s"/> Znajdowali piękne kolumny Rzymian, <break time="0.3s"/> wciąż stojące w ruinach, <break time="0.3s"/> i przynosili je do bazyliki. <break time="0.5s"/> Dla nich to był dobry i darmowy materiał. <break time="0.5s"/> Dla nas to stratygrafia. <break time="1.2s"/>
+
+Powiem ci to ze szczegółem, który opowiedział mi profesor z uniwersytetu lata temu, <break time="0.3s"/> gdy badał kapitele: <break time="0.4s"/> niektóre z tych kolumn mają dwa tysiące lat. <break time="0.6s"/> Rzymskie, cesarskie. <break time="0.5s"/> Dotykasz ich — <break time="0.3s"/> ja polerowałam je przez pięćdziesiąt lat szmatką — <break time="0.3s"/> a pod palcami masz dwa tysiące lat historii. <break time="1.2s"/>
+
+Jedna historia o bazylice, którą ci opowiem, i ruszamy. <break time="0.5s"/> Wiesz, kto tu zszedł, <break time="0.3s"/> przed ten grób? <break time="0.5s"/> Wszyscy. <break time="0.5s"/> Car Mikołaj II — <break time="0.3s"/> tak, ten rosyjski, <break time="0.3s"/> ostatni — <break time="0.3s"/> przybył z pielgrzymką przed rewolucją. <break time="0.5s"/> Papież Jan Paweł II był dwa razy. <break time="0.5s"/> Papież Franciszek w 2018 roku, <break time="0.3s"/> i tego dnia stałam tam, <break time="0.3s"/> z tyłu, <break time="0.3s"/> i patrzyłam. <break time="0.5s"/> Bazylika była pełna delegacji rosyjskich, <break time="0.3s"/> prawosławnych, <break time="0.3s"/> katolickich — <break time="0.3s"/> i wszyscy w ciszy przed tym grobem. <break time="1.2s"/>
+
+Bo widzisz — <break time="0.3s"/> i to mnie zawsze poruszało — <break time="0.4s"/> San Nicola to jeden z niewielu świętych, których lubią wszyscy. <break time="0.5s"/> Katolicy, <break time="0.3s"/> prawosławni, <break time="0.3s"/> nawet muzułmanie, którzy uznają jego postać. <break time="0.5s"/> To święty, który łączy, <break time="0.3s"/> nie dzieli. <break time="0.5s"/> I w tej krypcie, <break time="0.3s"/> tu pośród użytych ponownie rzymskich kolumn i bizantyjskich mozaik, <break time="0.4s"/> codziennie dzieje się rzecz drobna, ale prawdziwa: <break time="0.4s"/> ludzie różnych religii stoją obok siebie <break time="0.3s"/> i modlą się do tego samego świętego. <break time="0.5s"/> Nie przeszkadzając sobie. <break time="0.4s"/> Nawet na siebie nie patrząc. <break time="1.2s"/>
+
+To, <break time="0.3s"/> moim zdaniem, <break time="0.3s"/> jest prawdziwy cud San Nicola. <break time="0.5s"/> Nie woda. <break time="0.4s"/> Nie kości. <break time="0.4s"/> To pokój, który robi się tu na dole, <break time="0.3s"/> codziennie, <break time="0.3s"/> między ludźmi, którzy na zewnątrz toczyliby ze sobą wojnę. <break time="1.5s"/>
+
+Dobrze. <break time="0.4s"/> Teraz wychodzimy. <break time="0.5s"/> Zabiorę cię w inne miejsce pod ziemią — <break time="0.3s"/> do katedry San Sabino. <break time="0.5s"/> I tam pokażę ci, jak czyta się kamień. <break time="0.5s"/> Camìn sciamaninn. <break time="2.0s"/>
+
+=====================================
+ROZDZIAŁ 2 — POD KATEDRĄ SAN SABINO
+-------------
+voice: angelina
+
+Teraz stoimy przed Katedrą San Sabino. <break time="0.5s"/> Tą wielką, <break time="0.3s"/> romańską, <break time="0.3s"/> białą. <break time="0.5s"/> Widzisz ją z zewnątrz — <break time="0.3s"/> czysta fasada, <break time="0.3s"/> rozeta, <break time="0.3s"/> trzy portale. <break time="0.5s"/> Przepiękna, ech, <break time="0.3s"/> o tym się nie dyskutuje. <break time="0.5s"/> Ale my nie przychodzimy dla fasady. <break time="0.5s"/> My wchodzimy, <break time="0.3s"/> przechodzimy przez nawę <break time="0.3s"/> i schodzimy. <break time="0.5s"/> Bo tu na dole dzieje się coś, czego nie ma w żadnym innym kościele Bari: <break time="0.4s"/> czytasz historię jak otwartą książkę. <break time="1.2s"/>
+
+Nazywa się succorpo. <break time="0.5s"/> Znaczy „pod korpusem kościoła”. <break time="0.5s"/> Rodzaj kościoła pod kościołem. <break time="0.5s"/> Sprowadzę cię, chodź. <break time="1.2s"/>
+
+Więc — <break time="0.3s"/> kiedy schodzisz na dół, <break time="0.3s"/> stajesz przed wielką salą, <break time="0.3s"/> z szklanymi posadzkami. <break time="0.5s"/> Dziwne, prawda? <break time="0.5s"/> Idziesz po grubej szybie, <break time="0.3s"/> a pod spodem widzisz kamienie, <break time="0.3s"/> mozaiki, <break time="0.3s"/> fragmenty. <break time="0.5s"/> To, co widzisz pod stopą, nie jest tam umieszczone dla scenografii. <break time="0.5s"/> To prawdziwe fundamenty wcześniejszego kościoła. <break time="0.6s"/> Idziesz po kościele, który istniał tysiąc lat przed romanizmem, który widzisz nad sobą. <break time="1.2s"/>
+
+Wyjaśnię ci to — <break time="0.3s"/> bo gdy archeolog wyjaśnił mi to po raz pierwszy, <break time="0.3s"/> gdy czyścił szyby mokrą szmatką, <break time="0.3s"/> zajęło mi pół godziny, by to pojąć. <break time="0.5s"/> Potem, gdy pojęłam, <break time="0.3s"/> już nigdy nie zapomniałam. <break time="1.2s"/>
+
+W Bari, <break time="0.3s"/> w tym właśnie punkcie, <break time="0.3s"/> budowano kościoły jeden na drugim, <break time="0.3s"/> przez niemal dwa tysiące lat. <break time="0.5s"/> Cztery warstwy, chłopcze. <break time="0.4s"/> Cztery. <break time="1.2s"/>
+
+Pierwsza warstwa — <break time="0.3s"/> najgłębsza, <break time="0.3s"/> najstarsza — <break time="0.3s"/> jest rzymska. <break time="0.5s"/> Rzeczy z Bari, gdy nazywało się jeszcze Barium <break time="0.3s"/> i było rzymską kolonią nad Adriatykiem. <break time="0.5s"/> Resztki posadzki, <break time="0.3s"/> budowli cywilnych. <break time="0.5s"/> Nie wiemy dobrze, co to było, <break time="0.3s"/> ale było czymś publicznym, <break time="0.3s"/> ważnym. <break time="1.0s"/>
+
+Nad rzymską, <break time="0.3s"/> druga warstwa: <break time="0.4s"/> wczesnochrześcijańska bazylika z piątego wieku. <break time="0.6s"/> Pięćset lat po Chrystusie. <break time="0.5s"/> Gdy chrześcijaństwo przybyło oficjalnie, <break time="0.3s"/> barczycy zajęli miejsce, gdzie już było coś publicznego, <break time="0.3s"/> i zbudowali na nim pierwszy wielki kościół chrześcijański. <break time="0.6s"/> I tam dzieje się rzecz niesamowita — <break time="0.3s"/> to, co succorpo pokazuje ci lepiej niż jakiekolwiek inne miejsce we Włoszech. <break time="1.2s"/>
+
+Spójrz na ziemię, <break time="0.3s"/> pod szybę. <break time="0.5s"/> Widzisz tę mozaikę? <break time="0.5s"/> Biała, czarna, czerwona, <break time="0.3s"/> z motywami geometrycznymi, <break time="0.3s"/> a pośrodku figury ryb, <break time="0.3s"/> ptaków, <break time="0.3s"/> kwiatów? <break time="0.5s"/> To oryginalna posadzka bazyliki z piątego wieku. <break time="0.6s"/> Tysiąc pięćset lat temu, <break time="0.3s"/> tu na dole, <break time="0.3s"/> pierwsi barscy chrześcijanie modlili się, idąc po tej mozaice. <break time="0.5s"/> Patrzyli na nią swoimi oczami. <break time="0.5s"/> Teraz patrzysz na nią ty swoimi. <break time="1.2s"/>
+
+Powiem ci to w sposób, który może ci pomoże: <break time="0.4s"/> spróbuj pomyśleć o człowieku z piątego wieku, <break time="0.3s"/> kobiecie takiej jak ja, <break time="0.3s"/> ówczesnej perpetui, <break time="0.3s"/> która myła posadzkę tego samego kościoła szmatką. <break time="0.5s"/> Ten sam kamień. <break time="0.4s"/> To samo miejsce. <break time="0.4s"/> Tylko, <break time="0.3s"/> tysiąc sześćset lat wcześniej. <break time="0.5s"/> Gdy pomyślisz o tym tak — <break time="0.3s"/> trochę kręci się w głowie, prawda? <break time="1.2s"/>
+
+Trzecia warstwa: <break time="0.4s"/> przybywają Bizantyjczycy, <break time="0.3s"/> Arabowie, <break time="0.3s"/> znów chrześcijanie — <break time="0.3s"/> katedra zostaje zniszczona raz, <break time="0.3s"/> odbudowana, <break time="0.3s"/> zniszczona ponownie. <break time="0.5s"/> Bari w średniowieczu było bałaganem. <break time="0.5s"/> Zmieniało właściciela co dwa wieki — <break time="0.3s"/> Bizantyjczycy, <break time="0.3s"/> Arabowie, <break time="0.3s"/> Normanowie, <break time="0.3s"/> Szwabi, <break time="0.3s"/> Andegawenowie. <break time="0.5s"/> Za każdym razem, gdy zmieniał się pan, <break time="0.3s"/> coś się psuło <break time="0.3s"/> i coś budowano na nowo. <break time="1.2s"/>
+
+Czwarta warstwa — <break time="0.3s"/> ta, którą widzisz nad sobą, gdy wychodzisz z succorpo — <break time="0.3s"/> to katedra romańska, <break time="0.3s"/> zbudowana w jedenastym–dwunastym wieku, <break time="0.3s"/> gdy przybyli Normanowie, <break time="0.3s"/> a potem Szwabi, <break time="0.3s"/> i powiedzieli „dość zmian, <break time="0.3s"/> zróbmy coś pięknego, co przetrwa”. <break time="0.5s"/> I przetrwało, istotnie. <break time="0.5s"/> To ta na górze. <break time="0.4s"/> Ta z białą fasadą i rozetą. <break time="1.2s"/>
+
+Wiesz, co ci powiem, <break time="0.3s"/> po pięćdziesięciu latach w bazylice? <break time="0.5s"/> Że w Bari <break time="0.3s"/> wiara nigdy się nie zmieniła, <break time="0.3s"/> zmieniały się kamienie wokół. <break time="0.6s"/> Ludzie przychodzili tu się modlić przed Rzymianami — <break time="0.3s"/> na brzegach nieco bliżej morza, <break time="0.3s"/> zanim wybrzeże się zmieniło. <break time="0.5s"/> Przychodzili się tu modlić za Rzymian, <break time="0.3s"/> gdy „modlić się” znaczyło dziękować bogom przed wypłynięciem statkiem. <break time="0.5s"/> Przychodzili się tu modlić w piątym wieku. <break time="0.4s"/> W jedenastym. <break time="0.4s"/> Dziś. <break time="0.6s"/> Kamienie się zmieniają, <break time="0.3s"/> ludzie, którzy szukają czegoś większego, nie. <break time="1.5s"/>
+
+Jedna rzecz, którą ci powiem, zanim cię wypuszczę. <break time="0.5s"/> Widzisz tę złamaną kolumienkę <break time="0.3s"/> w rogu succorpo? <break time="0.5s"/> Tę, która wygląda jak porzucony kawałek czegoś? <break time="0.5s"/> Nie jest porzucona. <break time="0.5s"/> To resztka ołtarza z piątego wieku. <break time="0.6s"/> Dosłownie: <break time="0.4s"/> kawałek ołtarza, przy którym pierwsi barscy chrześcijanie odprawiali mszę, <break time="0.3s"/> ocalały z tysiąca pięciuset lat trzęsień ziemi, <break time="0.3s"/> najazdów, <break time="0.3s"/> przebudów. <break time="0.5s"/> Widzisz, jak tam leży, <break time="0.3s"/> jakby była niczym? <break time="1.2s"/>
+
+Czasem zatrzymuję się, by na nią popatrzeć, <break time="0.3s"/> i myślę, że cokolwiek zrobiłam przez pięćdziesiąt lat w bazylice — <break time="0.3s"/> sprzątanie, <break time="0.3s"/> porządkowanie, <break time="0.3s"/> służenie, <break time="0.3s"/> nawet słuchanie księży — <break time="0.3s"/> to nic w porównaniu z tym, że ta kolumienka wciąż stoi. <break time="0.6s"/> Ona dopiero spełniła swój obowiązek. <break time="1.5s"/>
+
+Teraz wychodzimy. <break time="0.5s"/> Zabiorę cię na Piazza Mercantile, <break time="0.3s"/> gdzie nad nią są stoliki barów, <break time="0.3s"/> a pod nią woda Rzymian. <break time="0.5s"/> Camìn sciamaninn. <break time="2.0s"/>
+
+=====================================
+ROZDZIAŁ 3 — RZYMSKIE CYSTERNY PIAZZA MERCANTILE
+-------------
+voice: angelina
+
+Jesteśmy. <break time="0.4s"/> Piazza Mercantile. <break time="0.5s"/> Jeden z najpiękniejszych placów Bari, <break time="0.3s"/> powiem ci szczerze — <break time="0.3s"/> przechodzę tędy od sześćdziesięciu lat <break time="0.3s"/> i wciąż lubię się zatrzymać i popatrzeć. <break time="0.5s"/> Kolumna Sprawiedliwości pośrodku, <break time="0.3s"/> rzymski lew w głębi, <break time="0.3s"/> kamienice wokół z łukami. <break time="0.5s"/> Wieczorem zapalają się światła barów, <break time="0.3s"/> ludzie piją aperitif, <break time="0.3s"/> grają muzycy. <break time="1.2s"/>
+
+Dobrze. <break time="0.4s"/> Teraz zrób coś: <break time="0.4s"/> zamiast patrzeć na kamienice, <break time="0.3s"/> spójrz na ziemię. <break time="1.0s"/>
+
+Widzisz te metalowe kraty, <break time="0.3s"/> tam pośrodku bruku? <break time="0.5s"/> Te kraty, które wyglądają jak pokrywy włazów, <break time="0.3s"/> ale są większe, <break time="0.3s"/> zrobione ze starego kutego żelaza, <break time="0.3s"/> a jeśli po nich przejdziesz, czujesz chłodne powietrze idące z dołu? <break time="0.6s"/> Dobrze. <break time="0.5s"/> Pod tymi kratami, <break time="0.3s"/> pod twoimi stopami, <break time="0.3s"/> gdy ty teraz jesteś na Piazza Mercantile i patrzysz na kolumnę, <break time="0.4s"/> jest rzymski akwedukt Bari. <break time="1.5s"/>
+
+Wyjaśnię ci. <break time="0.5s"/> Dwa tysiące lat temu, <break time="0.3s"/> tu, gdzie stoisz, <break time="0.3s"/> byli Rzymianie, którzy zbudowali system wodny. <break time="0.5s"/> Nie ogromny akwedukt jak ten rzymski, ech — <break time="0.3s"/> Bari było małym miastem, <break time="0.3s"/> prowincjonalną kolonią. <break time="0.5s"/> Ale i tutaj Rzymianie zrobili swoje: <break time="0.4s"/> wykuli podziemne cysterny, by zbierać deszczówkę, <break time="0.3s"/> i kanały, by rozprowadzać ją po mieście. <break time="0.5s"/> Wodę do picia, <break time="0.3s"/> do budynków publicznych, <break time="0.3s"/> do term. <break time="1.2s"/>
+
+Te cysterny wciąż istnieją. <break time="0.5s"/> Mają dwa tysiące lat <break time="0.3s"/> i są tam na dole. <break time="0.5s"/> Gdy nad nimi zbudowano średniowiecze, <break time="0.3s"/> a potem renesans, <break time="0.3s"/> a potem epokę nowożytną — <break time="0.3s"/> pod spodem cysterny zostały. <break time="0.5s"/> Czasem napełniały się deszczówką, <break time="0.3s"/> czasem opróżniały, <break time="0.3s"/> ale zawsze tam były, <break time="0.3s"/> nienaruszone, <break time="0.3s"/> wykute w skale. <break time="1.2s"/>
+
+Pewnego razu — <break time="0.3s"/> opowiedział mi to urzędnik z magistratu, który często przychodził do bazyliki w pewnych sprawach — <break time="0.4s"/> robili wykopy na placu, by położyć kable. <break time="0.5s"/> Otworzyli dziurę, <break time="0.3s"/> i schodząc do środka, <break time="0.3s"/> zastali wciąż stojące ściany rzymskich cystern, <break time="0.3s"/> idealne, <break time="0.3s"/> jak dwa tysiące lat temu. <break time="0.6s"/> Tyle że oczywiście za życia oni też nigdy ich nie widzieli. <break time="0.5s"/> Słyszeli, że istnieją, <break time="0.3s"/> w książkach było napisane, <break time="0.3s"/> ale zobaczyć osobiście to co innego. <break time="0.5s"/> Ten urzędnik wrócił blady. <break time="0.5s"/> Wciąż mi powtarzał: <break time="0.3s"/> „Rosa, to niewiarygodne”. <break time="1.5s"/>
+
+Teraz nie możesz zejść na dół — <break time="0.3s"/> nie wolno, <break time="0.3s"/> konserwator zabytków na to nie pozwala. <break time="0.5s"/> Ale możesz zrobić dwie rzeczy. <break time="0.5s"/> Pierwsza: <break time="0.4s"/> patrzysz na kraty <break time="0.3s"/> i próbujesz sobie wyobrazić. <break time="0.5s"/> Pod spodem, <break time="0.3s"/> w ciemności, <break time="0.3s"/> jest kamień, który przez wieki niósł wodę do Bari. <break time="0.5s"/> Druga: <break time="0.4s"/> jest małe miejsce, <break time="0.3s"/> tu naprzeciwko, <break time="0.3s"/> gdzie jeśli pochylisz się, by spojrzeć w dół, zobaczysz mały otwór archeologiczny, <break time="0.3s"/> oświetlony, <break time="0.3s"/> z odsłoniętym kawałkiem dawnego muru. <break time="0.5s"/> Mało turystów go zauważa. <break time="0.5s"/> Ty teraz wiesz, gdzie patrzeć. <break time="1.2s"/>
+
+Powiem ci coś, co zawsze wywołuje u mnie uśmiech. <break time="0.5s"/> Ludzie przechodzą tędy na górze, <break time="0.3s"/> piją aperitif, <break time="0.3s"/> śmieją się, <break time="0.3s"/> robią selfie z kolumną pośrodku. <break time="0.5s"/> Nikt nie patrzy na ziemię. <break time="0.5s"/> A jednak pod ich stopami, <break time="0.3s"/> gdy wznoszą toast Negronim, <break time="0.3s"/> jest najstarsza rzecz w Bari, wciąż stojąca. <break time="0.5s"/> Woda Rzymian. <break time="0.5s"/> Której nie zburzono, <break time="0.3s"/> nie przykryto, <break time="0.3s"/> nie zniszczono. <break time="0.5s"/> Była silniejsza od wszystkich panów, którzy przeszli. <break time="1.5s"/>
+
+I jeszcze jedno, <break time="0.3s"/> zanim odejdziemy. <break time="0.5s"/> Tu na Piazza Mercantile, <break time="0.3s"/> w pewnym miejscu, <break time="0.3s"/> w głębi jest marmurowy lew. <break time="0.5s"/> Ten, do którego dawniej przywiązywano dłużników, <break time="0.3s"/> by publicznie ogłosili się bankrutami <break time="0.3s"/> i publicznie zyskali wstyd. <break time="0.5s"/> Nazywano go „kamieniem sprawiedliwości”. <break time="0.5s"/> To był upokarzający system, <break time="0.3s"/> ale może uczciwy — <break time="0.3s"/> bankructwo było publiczne, <break time="0.3s"/> nie ukryte jak dziś. <break time="1.2s"/>
+
+Ten lew jest z użytego ponownie rzymskiego marmuru. <break time="0.5s"/> Ta sama historia co kolumny krypty San Nicola. <break time="0.5s"/> Barczycy średniowiecza znajdowali rzymskie rzeczy <break time="0.3s"/> i przywracali je do użytku. <break time="0.5s"/> W Bari nic się nie wyrzuca. <break time="0.4s"/> Wszystko się przetwarza. <break time="1.5s"/>
+
+Dobrze. <break time="0.4s"/> Ostatnie miejsce. <break time="0.5s"/> Teraz zabiorę cię do Castello Svevo. <break time="0.5s"/> I tam opowiem ci o podziemiach, <break time="0.3s"/> więzieniach, <break time="0.3s"/> Fryderyku II <break time="0.3s"/> i o historii, którą poznałam od konserwatora — <break time="0.4s"/> historii, której nie opowiadają w oficjalnych wycieczkach. <break time="0.5s"/> Camìn sciamaninn. <break time="2.0s"/>
+
+=====================================
+ROZDZIAŁ 4 — PODZIEMIA CASTELLO SVEVO
+-------------
+voice: angelina
+
+Castello Svevo. <break time="0.5s"/> Jesteśmy. <break time="1.0s"/>
+
+Widzisz, jaki potężny? <break time="0.5s"/> Wygląda jak twierdza postawiona u początku starego miasta, <break time="0.3s"/> naprzeciw morza, <break time="0.3s"/> z grubymi murami. <break time="0.5s"/> Trzy wielkie boki, <break time="0.3s"/> fosa wokół, <break time="0.3s"/> wieże. <break time="0.5s"/> Poważna rzecz. <break time="1.2s"/>
+
+Teraz powiem ci coś, co cię zaskoczy: <break time="0.5s"/> ten zamek — <break time="0.3s"/> ten, który teraz widzisz — <break time="0.3s"/> to nie jest prawdziwy zamek. <break time="0.6s"/> To znaczy, <break time="0.3s"/> to zamek, <break time="0.3s"/> owszem, stoi, <break time="0.3s"/> ale to wynik czterech nałożonych na siebie zamków. <break time="0.6s"/> Ta sama historia co katedra San Sabino. <break time="0.5s"/> W Bari nic nie jest „jednym” — <break time="0.3s"/> wszystko jest „wieloma”. <break time="1.2s"/>
+
+Więc, <break time="0.3s"/> zacznijmy od dna. <break time="0.5s"/> Pod zamkiem, który widzisz dzisiaj, <break time="0.3s"/> jest stratygrafia, która jest samą historią Bari. <break time="1.2s"/>
+
+Warstwa pierwsza, <break time="0.3s"/> najgłębsza, <break time="0.3s"/> jest bizantyjska. <break time="0.5s"/> Bari przez dwieście lat było stolicą katepanatu — <break time="0.3s"/> bizantyjskiej prowincji południowych Włoch. <break time="0.5s"/> Była bizantyjska cytadela wojskowa <break time="0.3s"/> w miejscu, gdzie teraz stoi zamek, <break time="0.3s"/> z wieżami, <break time="0.3s"/> murami, <break time="0.3s"/> magazynami. <break time="1.2s"/>
+
+Warstwa druga: <break time="0.4s"/> przybywają Normanowie. <break time="0.5s"/> Robert Guiscard zdobywa Bari w 1071 roku, <break time="0.3s"/> a potem jego syn Roger II Sycylijski każe zbudować zamek — <break time="0.4s"/> powiedzmy, <break time="0.3s"/> pierwszy „prawdziwy zamek”, który nazywa się zamkiem. <break time="0.5s"/> Mury normańskie, <break time="0.3s"/> wieże normańskie, <break time="0.3s"/> więzienia normańskie. <break time="0.5s"/> Pod dzisiejszymi posadzkami, <break time="0.3s"/> pod salami, <break time="0.3s"/> wciąż jest to wszystko. <break time="1.2s"/>
+
+Warstwa trzecia, <break time="0.3s"/> i tu dochodzimy do tego, od którego zamek nazywa się „Svevo”: <break time="0.5s"/> Fryderyk II Szwabski, <break time="0.3s"/> Puer Apuliae, <break time="0.3s"/> „chłopiec z Apulii” — <break time="0.3s"/> bo wychował się tu na dole, <break time="0.3s"/> w Apulii, <break time="0.3s"/> a Bari było dla niego jak dom. <break time="0.5s"/> Fryderyk II rozbudowuje zamek, <break time="0.3s"/> przekształca go w cesarską rezydencję. <break time="0.5s"/> Przyjeżdżał do Bari, <break time="0.3s"/> zostawał tu na tygodnie. <break time="0.5s"/> Jadł tutaj, <break time="0.3s"/> polował tutaj, <break time="0.3s"/> przyjmował poselstwa tutaj. <break time="0.5s"/> Główne sale, które widzisz na górze, są w większości jego. <break time="0.4s"/> Trzynasty wiek. <break time="1.2s"/>
+
+Warstwa czwarta: <break time="0.4s"/> przybywają Aragończycy, <break time="0.3s"/> Burbonowie, <break time="0.3s"/> epoka nowożytna. <break time="0.5s"/> Zamek staje się więzieniem, <break time="0.3s"/> koszarami, <break time="0.3s"/> magazynem. <break time="0.5s"/> Zmienia funkcję w każdej epoce. <break time="0.5s"/> Przez ostatnie pięćdziesiąt lat stał się muzeum. <break time="1.2s"/>
+
+Cztery warstwy. <break time="0.5s"/> Wszystkie wciąż czytelne w podziemiach. <break time="1.5s"/>
+
+Teraz — <break time="0.3s"/> to, co mało kto wie. <break time="0.5s"/> Opowiedział mi to konserwator, który pracował tu w latach dziewięćdziesiątych, <break time="0.3s"/> gdy przychodził modlić się do bazyliki w niedziele. <break time="1.0s"/>
+
+Gdy otworzyli pewne podziemne pomieszczenia, zamurowane od wieków, <break time="0.3s"/> znaleźli w środku graffiti więźniów. <break time="0.6s"/> Napisy na kamiennych ścianach, <break time="0.3s"/> zostawione przez ludzi zamkniętych tu na dole przez lata. <break time="0.5s"/> Daty — <break time="0.3s"/> niektóre z szesnastego wieku, <break time="0.3s"/> niektóre z siedemnastego. <break time="0.5s"/> Imiona. <break time="0.4s"/> Zdania w dawnej włoszczyźnie, <break time="0.3s"/> po łacinie, <break time="0.3s"/> w dialekcie. <break time="0.5s"/> Krzyże, <break time="0.3s"/> otwarte dłonie jak wota. <break time="0.5s"/> Jeden więzień wyrył, <break time="0.3s"/> gwoździem albo kawałkiem metalu, <break time="0.3s"/> galerę. <break time="0.5s"/> Statek. <break time="0.5s"/> Może rzemiosło, które uprawiał, <break time="0.3s"/> może marzenie o ucieczce przez morze. <break time="0.4s"/> Może jedno i drugie. <break time="1.5s"/>
+
+Te graffiti wciąż tam są. <break time="0.5s"/> Mało turystów je widzi, <break time="0.3s"/> bo są w salach zamku, które nie leżą na normalnej trasie. <break time="0.5s"/> Ale jeśli zapytasz dobrego przewodnika, <break time="0.3s"/> zaprowadzi cię, byś je zobaczył. <break time="0.4s"/> Warto się pofatygować. <break time="1.2s"/>
+
+Powiem ci to tak — <break time="0.3s"/> bo moim zdaniem to jest prawdziwa moc podziemi Bari. <break time="0.6s"/> Na górze są zabytki — <break time="0.3s"/> piękne, <break time="0.3s"/> nienaruszone, <break time="0.3s"/> wyczyszczone dla turystów. <break time="0.5s"/> Pod spodem są ślady prawdziwych ludzi. <break time="0.6s"/> Pielgrzymów sprzed tysiąca lat, którzy modlili się przed mozaiką. <break time="0.5s"/> Sług Rzymian, którzy napełniali cysterny. <break time="0.5s"/> Więźniów szwabskich i aragońskich, którzy wyrywali galerę na ścianie, <break time="0.3s"/> mając nadzieję znów ujrzeć morze. <break time="1.5s"/>
+
+Pod Bari, chłopcze, <break time="0.3s"/> nie ma tylko starych kamieni. <break time="0.5s"/> Są starzy ludzie. <break time="0.5s"/> Ludzie, którzy przeżyli swoje życie tu na górze <break time="0.3s"/> i przeszli tędy, na dole. <break time="0.5s"/> W grobie, <break time="0.3s"/> w celi, <break time="0.3s"/> w piwnicy, <break time="0.3s"/> w krypcie. <break time="0.5s"/> Podziemne Bari to Bari nieznanych. <break time="1.5s"/>
+
+Jedna rzecz, <break time="0.3s"/> zanim skończę. <break time="0.5s"/> Fryderyk II, <break time="0.3s"/> ten szwabski. <break time="0.5s"/> Konserwator powiedział mi raz coś, co mi zostało. <break time="0.5s"/> Powiedział: <break time="0.4s"/> „Wiesz, Rosa, <break time="0.3s"/> Fryderyk przyjeżdżał do Bari głównie zimą. <break time="0.5s"/> Bo na Sycylii było mu za gorąco, <break time="0.3s"/> a w Niemczech za zimno. <break time="0.5s"/> W Bari klimat był w sam raz”. <break time="0.6s"/> Fryderyk II, <break time="0.3s"/> cesarz pół świata, <break time="0.3s"/> wybierał Bari, by mu było dobrze. <break time="0.5s"/> Przebywał w tych salach, <break time="0.3s"/> jadał w tych kuchniach, <break time="0.3s"/> sypiał w tych podziemnych komnatach. <break time="1.2s"/>
+
+Osiemset lat później <break time="0.3s"/> idziesz tam, gdzie szedł on. <break time="0.5s"/> Sciamaninn, <break time="0.3s"/> idź zrobić zdjęcie zamkowi — <break time="0.3s"/> ja tymczasem kończę. <break time="2.0s"/>
+
+=====================================
+OUTRO — TERAZ IDZIESZ INACZEJ
+-------------
+voice: angelina
+
+No więc. <break time="0.5s"/> Skończyliśmy. <break time="1.0s"/>
+
+Widziałeś kryptę San Nicola — <break time="0.3s"/> użyte ponownie rzymskie kolumny, <break time="0.3s"/> bizantyjskie mozaiki, <break time="0.3s"/> kości świętego, który godzi religie. <break time="0.6s"/>
+
+Widziałeś succorpo San Sabino — <break time="0.3s"/> cztery warstwy kościołów, <break time="0.3s"/> jeden na drugim, <break time="0.3s"/> i złamaną kolumienkę z piątego wieku, ważniejszą ode mnie. <break time="0.6s"/>
+
+Widziałeś kraty Piazza Mercantile — <break time="0.3s"/> pod twoimi stopami wodę Rzymian, na którą nikt nie patrzy, pijąc aperitif. <break time="0.6s"/>
+
+Widziałeś podziemia Castello Svevo — <break time="0.3s"/> gdzie pewien więzień, <break time="0.3s"/> wieki temu, <break time="0.3s"/> wyrył galerę, marząc o ucieczce przez morze. <break time="1.2s"/>
+
+Teraz, gdy idziesz po Bari, <break time="0.3s"/> wiesz, co jest pod spodem. <break time="0.5s"/> Nie widzisz już tego samego miasta. <break time="0.5s"/> Widzisz stratygrafię. <break time="0.4s"/> Widzisz ludzi, którzy tędy przeszli. <break time="0.4s"/> Widzisz czas. <break time="1.5s"/>
+
+Żegnam cię. <break time="0.5s"/> I rada — <break time="0.3s"/> gdy wrócisz do Bari, <break time="0.3s"/> wpadnij do bazyliki. <break time="0.6s"/> Mnie nie zastaniesz, <break time="0.3s"/> jestem na emeryturze, <break time="0.5s"/> ale gdy wejdziesz i zejdziesz do krypty, <break time="0.3s"/> i dotkniesz jednej z tych kolumn — <break time="0.3s"/> pomyśl o mnie, <break time="0.3s"/> która polerowałam je przez pięćdziesiąt lat. <break time="0.6s"/> To tak, jakbym trochę trzymała cię za rękę. <break time="1.5s"/>
+
+Dobrej drogi. <break time="0.5s"/> Rosa. <break time="2.0s"/>
