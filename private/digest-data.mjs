@@ -57,9 +57,15 @@ const pages7 = await runReport({
   dimensions: [{ name: 'pagePath' }],
   metrics: [{ name: 'screenPageViews' }],
   orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
-  limit: 5,
+  limit: 20,
 });
-const topPages = rows(pages7).map((r) => ({ path: r.dimensionValues[0].value || '(n/d)', views: num(r) }));
+// Esclude le landing partner (/p/, /en/p/, /de/p/): sono traffico da QR, hanno
+// la loro sezione (funnel + scansioni). Qui contano solo le pagine "sito".
+const isPartnerLanding = (path) => /^\/(?:en\/|de\/)?p\//.test(path);
+const topPages = rows(pages7)
+  .map((r) => ({ path: r.dimensionValues[0].value || '(n/d)', views: num(r) }))
+  .filter((p) => !isPartnerLanding(p.path))
+  .slice(0, 5);
 
 const chan7 = await runReport({
   dateRanges: wRange,
