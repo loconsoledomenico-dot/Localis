@@ -5,6 +5,20 @@
 
 ---
 
+## ✅ Pre-publish check (spunta prima di pubblicare)
+
+Vale per **ogni** pezzo pubblico: blog, copy guida/landing, post IG-FB, locandina, email.
+
+- [ ] **Prospettiva, non informazione** — c'è il *perché* e lo sguardo di chi ci vive (non date/nomi/"cosa vedere").
+- [ ] **Desiderio, non pubblicità** — fa venire voglia di guardare diverso; la vendita è conseguenza, non spinta.
+- [ ] **Umano, non da professore** — tono da bar; lo diresti a un amico così com'è.
+- [ ] **"audioguida" solo in `<title>`/meta**, mai nel copy visibile.
+- [ ] *(solo blog)* firma Domenico + campi `author_*` · link `/fonti` + `/metodo` · FAQ.
+
+Il *perché* di ogni voce è nella sezione **Il filtro** più sotto. Se un check non passa: si riscrive, non si pubblica.
+
+---
+
 ## Il problema (il nemico)
 
 **Ci insegnano a viaggiare. Ma quasi mai a osservare.**
