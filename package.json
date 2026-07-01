@@ -24,6 +24,7 @@
     "i18n:audit": "node scripts/translation-audit.mjs",
     "sheet:auth": "node scripts/google-oauth.mjs",
     "sheet:sync": "node scripts/partner-qr-sheet-sync.mjs",
+    "ga4:canary": "node scripts/ga4-canary.mjs",
     "qr:batch": "node scripts/qr-batch.mjs",
     "qr:assign": "node scripts/qr-assign.mjs",
     "qr:png": "node scripts/qr-png.mjs",
