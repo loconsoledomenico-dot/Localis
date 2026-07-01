@@ -33,7 +33,9 @@ try {
   });
   page.on('console', (m) => {
     const t = m.text();
-    if (/cannot load|Refused to connect|Content Security/i.test(t) && /(analytics\.google\.com|google-analytics\.com)/i.test(t)) {
+    // Solo blocchi dell'endpoint di RACCOLTA (/g/collect): esclude il pixel ads
+    // ga-audiences, che è rumore e non c'entra con la misurazione.
+    if (/cannot load|Refused to connect|Content Security/i.test(t) && /\/g\/collect|\/collect\?/i.test(t)) {
       if (result.cspBlocked.length < 5) result.cspBlocked.push(t.slice(0, 140));
     }
   });
