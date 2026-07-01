@@ -43,9 +43,11 @@
   },
   {
     "code": "MFSBPS",
-    "partner_slug": null,
+    "partner_slug": "infopoint-rodi-garganico",
     "batch": "2026-06-lotto1",
-    "printed_at": "2026-06-15"
+    "printed_at": "2026-06-15",
+    "assigned_at": "2026-07-01",
+    "note": "infopoint Puglia Information - casa comunale Rodi Garganico FG - 2026-07-01"
   },
   {
     "code": "RZHM2E",

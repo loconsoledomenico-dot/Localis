@@ -27,6 +27,7 @@ Master ledger dei partner referral. Aggiornare manualmente. Numeri da GA4/PostHo
 | 010 | `biorussi-agriturismo` | Biorussi Agriturismo | Contrada Macchiarotonda, 71010 Carpino (FG) | Agriturismo | da definire | info@biorussi.com | 2026-06-29 | Card neutra `HBV9D2` (`/q/hbv9d2`) | Società Agricola Biorussi srl. Gargano, zona lago di Varano. "Biologico per tradizione". P.IVA 03703600712 · +39 0884 596765 / 348 8895360 · www.biorussi.com. |
 | 011 | `villaggio-costa-ripa` | Villaggio Costa Ripa | Contrada Ripa, 71012 Rodi Garganico (FG) | Villaggio turistico | da definire | info@villaggiocostaripa.it | 2026-06-29 | Card neutra `L3EYN6` (`/q/l3eyn6`) | Gargano. CIN IT071043A100113788. QR in camera / reception. |
 | 012 | `hotel-helios` | Hotel Helios | Via delle Meduse 57, 71012 Lido del Sole, Rodi Garganico (FG) | Hotel *** | da definire | prenotazionihotelhelios@gmail.com | 2026-06-29 | Card neutra `JL3Z46` (`/q/jl3z46`) | Gargano, Lido del Sole. P.IVA 04460630710 · CIN IT071043A100107823. QR in camera / reception. |
+| 013 | `infopoint-rodi-garganico` | InfoPoint Rodi Garganico | Casa Comunale, 71012 Rodi Garganico (FG) | Info point | 1 desk | info@localis.guide | 2026-07-01 | Card neutra `MFSBPS` (`/q/mfsbps`) | InfoPoint Puglia Information del Comune di Rodi Garganico. Gargano. |
 
 ---
 
