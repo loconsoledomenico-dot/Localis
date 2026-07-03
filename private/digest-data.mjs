@@ -44,6 +44,20 @@ const scanPart = await runReport({
 });
 const scansByPartner = rows(scanPart).map((r) => ({ partner: r.dimensionValues[0].value || '(n/d)', scans: num(r) }));
 
+// Provenienza degli utenti di IERI per canale (a basso volume ≈ per persona).
+const provQ = await runReport({
+  dateRanges: yRange,
+  dimensions: [{ name: 'sessionDefaultChannelGroup' }, { name: 'sessionSource' }],
+  metrics: [{ name: 'totalUsers' }],
+  orderBys: [{ metric: { metricName: 'totalUsers' }, desc: true }],
+  limit: 10,
+});
+const provenance = rows(provQ).map((r) => ({
+  channel: r.dimensionValues[0].value || '(n/d)',
+  source: r.dimensionValues[1].value || '',
+  users: num(r),
+}));
+
 // --- Traffico sito ultimi 7 giorni (non partner): finestra mobile ---
 // "Ieri" col sito a ~0-2 visite/giorno è quasi sempre vuoto: l'organico
 // si vede solo su una finestra più larga. Questa sezione c'è sempre.
@@ -146,7 +160,7 @@ console.log(JSON.stringify({
   date: ymd(yest),
   ga4: {
     sessions: num(totRow, 0), users: num(totRow, 1), pageviews: num(totRow, 2),
-    events, scansByPartner, site7d, funnel7d,
+    events, scansByPartner, provenance, site7d, funnel7d,
   },
   commits: { localis: commitsSince(LOCALIS), gallery: commitsSince(GALLERY) },
   recontact,
