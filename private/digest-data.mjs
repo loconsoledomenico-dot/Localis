@@ -114,6 +114,33 @@ const funnel7d = {
   purchase: fc.purchase || 0,
 };
 
+// --- Scansioni per partner: SERVER (vere, consenso-indipendenti) vs GA4 (consentite) ---
+// GA4 qr_scan scatta solo dopo consenso cookie; il contatore server vede tutto.
+// Il gap = scansioni perse dal gate del consenso (o QR fermo se anche server=0).
+const ga4ScanQ = await runReport({
+  dateRanges: wRange,
+  dimensions: [{ name: 'customEvent:partner_id' }],
+  metrics: [{ name: 'eventCount' }],
+  dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: 'qr_scan' } } },
+});
+const ga4ScanMap = {};
+for (const r of rows(ga4ScanQ)) { const p = r.dimensionValues[0]?.value; if (p && p !== '(not set)') ga4ScanMap[p] = num(r); }
+const srvScanMap = {};
+try {
+  const token = process.env.ADMIN_TOKEN || '';
+  if (token) {
+    const res = await fetch(`https://localis.guide/api/scan-counts?token=${encodeURIComponent(token)}&days=7`);
+    if (res.ok) {
+      const j = await res.json();
+      for (const [k, v] of Object.entries(j.totals || {})) if (!k.startsWith('q:')) srvScanMap[k] = v;
+    }
+  }
+} catch { /* endpoint non raggiungibile: mostra solo GA4 */ }
+const scanCompare = [...new Set([...Object.keys(srvScanMap), ...Object.keys(ga4ScanMap)])]
+  .map((p) => ({ partner: p, server: srvScanMap[p] || 0, ga4: ga4ScanMap[p] || 0 }))
+  .filter((x) => x.server > 0 || x.ga4 > 0)
+  .sort((a, b) => (b.server + b.ga4) - (a.server + a.ga4));
+
 // --- Git: commit di ieri nei due repo ---
 function commitsSince(repo) {
   try {
@@ -160,7 +187,7 @@ console.log(JSON.stringify({
   date: ymd(yest),
   ga4: {
     sessions: num(totRow, 0), users: num(totRow, 1), pageviews: num(totRow, 2),
-    events, scansByPartner, provenance, site7d, funnel7d,
+    events, scansByPartner, provenance, site7d, funnel7d, scanCompare,
   },
   commits: { localis: commitsSince(LOCALIS), gallery: commitsSince(GALLERY) },
   recontact,
