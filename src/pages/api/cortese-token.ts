@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { timingSafeEqual } from 'node:crypto';
+import { createHmac, timingSafeEqual } from 'node:crypto';
 import { generateAccessToken } from '../../lib/jwt';
 import { canonicalGuideSlug } from '../../lib/legacy-slugs';
 import { rateLimit } from '../../lib/rate-limit';
@@ -97,13 +97,33 @@ export const GET: APIRoute = async ({ url, clientAddress }) => {
   return tokenResponse(token, lang, guideSlug, url.searchParams.has('go'));
 };
 
-// ── PAGATO (server-to-server) ───────────────────────────────────────
+// Preflight CORS per la POST (il frontend Cortése invia JSON → preflight).
+export const OPTIONS: APIRoute = async () =>
+  new Response(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Max-Age': '86400',
+    },
+  });
+
+// ── PAGATO ──────────────────────────────────────────────────────────
+// Due modi di autorizzare (l'acquisto è già sul conto camera lato Cortése):
+//  A) secret grezzo (server-to-server, se mai servisse da un backend fidato)
+//  B) firma HMAC (consigliato): il backend Cortése (Supabase, con pgcrypto)
+//     firma (guide_slug\nmarker\nexp) col segreto condiviso; il browser la
+//     inoltra qui. Nessun segreto nel browser, nessuna chiamata HTTP dal DB.
 export const POST: APIRoute = async ({ request }) => {
   const expected = process.env.CORTESE_BRIDGE_SECRET;
   if (!expected || expected.length < 24) return err(500, 'Bridge non configurato');
 
   let body: {
     secret?: string;
+    proof?: string;
+    exp?: number | string;
+    guide_slug?: string;
     guide_slugs?: unknown;
     partner_id?: string;
     marker?: string;
@@ -115,16 +135,31 @@ export const POST: APIRoute = async ({ request }) => {
     return err(400, 'Invalid JSON');
   }
 
-  if (!secretMatches(body.secret, expected)) return err(401, 'Unauthorized');
+  const marker = String(body.marker || 'guest').slice(0, 80);
+  let slugs: string[] = [];
 
-  const slugs = Array.isArray(body.guide_slugs)
-    ? [...new Set(body.guide_slugs.map((s) => canonicalGuideSlug(String(s))).filter(Boolean))]
-    : [];
-  if (slugs.length === 0) return err(400, 'guide_slugs mancante');
+  if (typeof body.secret === 'string' && body.secret.length > 0) {
+    // Modo A — secret grezzo
+    if (!secretMatches(body.secret, expected)) return err(401, 'Unauthorized');
+    slugs = Array.isArray(body.guide_slugs)
+      ? [...new Set(body.guide_slugs.map((s) => canonicalGuideSlug(String(s))).filter(Boolean))]
+      : [];
+  } else if (typeof body.proof === 'string' && body.guide_slug && body.exp != null) {
+    // Modo B — firma HMAC su (guide_slug\nmarker\nexp)
+    const exp = Number(body.exp);
+    if (!Number.isFinite(exp) || exp * 1000 < Date.now()) return err(401, 'Firma scaduta');
+    const base = `${body.guide_slug}\n${marker}\n${exp}`;
+    const good = createHmac('sha256', expected).update(base).digest('hex');
+    if (!hexEq(good, body.proof)) return err(401, 'Firma non valida');
+    slugs = [canonicalGuideSlug(String(body.guide_slug))].filter(Boolean);
+  } else {
+    return err(401, 'Unauthorized');
+  }
+
+  if (slugs.length === 0) return err(400, 'guide_slug mancante');
   if (slugs.length > 30) return err(400, 'Troppe guide in un solo token');
 
   const lang = normLang(body.lang);
-  const marker = String(body.marker || 'guest').slice(0, 80);
   const partnerId = body.partner_id ? String(body.partner_id).slice(0, 80) : null;
 
   const token = generateAccessToken({
@@ -141,4 +176,11 @@ function secretMatches(given: unknown, expected: string): boolean {
   const a = Buffer.from(given);
   const b = Buffer.from(expected);
   return a.length === b.length && timingSafeEqual(a, b);
+}
+
+function hexEq(a: string, b: string): boolean {
+  if (typeof b !== 'string' || a.length !== b.length) return false;
+  const ba = Buffer.from(a, 'hex');
+  const bb = Buffer.from(b, 'hex');
+  return ba.length === bb.length && ba.length > 0 && timingSafeEqual(ba, bb);
 }
