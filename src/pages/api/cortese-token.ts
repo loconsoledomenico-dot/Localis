@@ -38,10 +38,32 @@ function siteBase(): string {
 function normLang(v: string | null | undefined): 'it' | 'en' | 'de' {
   return v === 'en' || v === 'de' ? v : 'it';
 }
-function tokenResponse(token: string, lang: 'it' | 'en' | 'de', guideSlug: string): Response {
-  const accessUrl = `${siteBase()}/access/${token}?lang=${lang}`;
+function accessUrlFor(token: string, lang: 'it' | 'en' | 'de'): string {
+  return `${siteBase()}/access/${token}?lang=${lang}`;
+}
+function tokenResponse(
+  token: string,
+  lang: 'it' | 'en' | 'de',
+  guideSlug: string,
+  redirect: boolean,
+): Response {
+  const accessUrl = accessUrlFor(token, lang);
+  // Modalità redirect: l'app Cortése punta un iframe/link direttamente qui
+  // (?go=1) e viene portata al player, senza fetch cross-origin (niente CORS).
+  if (redirect) {
+    return new Response(null, {
+      status: 302,
+      headers: { Location: accessUrl, 'Cache-Control': 'private, no-store' },
+    });
+  }
   return new Response(JSON.stringify({ token, access_url: accessUrl, guide_slug: guideSlug }), {
-    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'private, no-store' },
+    // CORS aperto: il token gratis è hotel-scoped (nessun rischio), così l'app
+    // Cortése può anche leggerlo via fetch se preferisce.
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'private, no-store',
+      'Access-Control-Allow-Origin': '*',
+    },
   });
 }
 function err(status: number, message: string): Response {
@@ -72,7 +94,7 @@ export const GET: APIRoute = async ({ url, clientAddress }) => {
     stripe_session_id: `cortese:free:${hotel}`,
     partner_id: null, // un omaggio non inquina l'attribuzione rev-share
   });
-  return tokenResponse(token, lang, guideSlug);
+  return tokenResponse(token, lang, guideSlug, url.searchParams.has('go'));
 };
 
 // ── PAGATO (server-to-server) ───────────────────────────────────────
@@ -111,7 +133,7 @@ export const POST: APIRoute = async ({ request }) => {
     stripe_session_id: `cortese:${marker}`,
     partner_id: partnerId, // attribuzione rev-share alla struttura
   });
-  return tokenResponse(token, lang, slugs[0]);
+  return tokenResponse(token, lang, slugs[0], false);
 };
 
 function secretMatches(given: unknown, expected: string): boolean {
