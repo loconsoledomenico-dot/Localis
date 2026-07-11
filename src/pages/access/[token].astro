@@ -57,11 +57,25 @@ const labels = lang === 'it'
         recover: 'Lost the email?',
         recoverLink: 'Recover access',
       };
+
+// Token coniati da Cortése (concierge in hotel): la "email" è un marker tecnico
+// (cortese:free:<hotel> / cortese:room:<n>). Mostriamo un'etichetta elegante al
+// posto della stringa tecnica e nascondiamo il recupero via email — l'ospite non
+// ha un acquisto: riapre la guida dalla sua app Cortése in camera.
+const isCortese = typeof decoded.email === 'string' && decoded.email.startsWith('cortese:');
+const corteseGift = typeof decoded.email === 'string' && decoded.email.startsWith('cortese:free:');
+const corteseSuffix = !isCortese
+  ? decoded.email
+  : lang === 'de'
+    ? (corteseGift ? 'Ein Geschenk Ihrer Unterkunft' : 'Während Ihres Aufenthalts freigeschaltet')
+    : lang === 'en'
+      ? (corteseGift ? 'Compliments of your host' : 'Unlocked during your stay')
+      : (corteseGift ? 'Omaggio della struttura' : 'Sbloccata durante il soggiorno');
 ---
 <Layout title={`${labels.title} - Localis`} description="" lang={lang}>
   <main class="max-w-wrap mx-auto px-md py-2xl">
     <header class="mb-2xl">
-      <Eyebrow class="mb-md">{labels.eyebrow} - {decoded.email}</Eyebrow>
+      <Eyebrow class="mb-md">{labels.eyebrow} - {corteseSuffix}</Eyebrow>
       <h1 class="font-display text-4xl text-ink mb-md">{labels.title}</h1>
       <p class="text-base text-ink-muted max-w-prose">
         {labels.intro}
@@ -84,9 +98,11 @@ const labels = lang === 'it'
       <p class="text-sm text-ink-muted mb-xs">
         {labels.phone}
       </p>
-      <p class="text-sm text-ink-muted">
-        {labels.recover} <a href="/recover" class="text-link hover:text-link-pressed">{labels.recoverLink}</a>.
-      </p>
+      {!isCortese && (
+        <p class="text-sm text-ink-muted">
+          {labels.recover} <a href="/recover" class="text-link hover:text-link-pressed">{labels.recoverLink}</a>.
+        </p>
+      )}
     </footer>
   </main>
 
