@@ -29,7 +29,8 @@ import { rateLimit } from '../../lib/rate-limit';
 // diventerà una config/DB condivisa. La città esatta dell'hotel può non essere
 // nel catalogo: si sceglie la guida di zona più rappresentativa.
 const FREE_GUIDE_BY_HOTEL: Record<string, string> = {
-  'masseria-del-crocifisso': 'alberobello', // Polignano → Valle d'Itria (trulli, UNESCO)
+  'masseria-del-crocifisso': 'alberobello',  // Polignano → Valle d'Itria (trulli, UNESCO)
+  'maison-levante': 'gargano-nord',          // Rodi Garganico → Gargano nord (la sua zona)
 };
 
 function siteBase(): string {
