@@ -72,7 +72,7 @@ const corteseSuffix = !isCortese
       ? (corteseGift ? 'Compliments of your host' : 'Unlocked during your stay')
       : (corteseGift ? 'Omaggio della struttura' : 'Sbloccata durante il soggiorno');
 ---
-<Layout title={`${labels.title} - Localis`} description="" lang={lang}>
+<Layout title={`${labels.title} - Localis`} description="" lang={lang} embedded={isCortese}>
   <main class="max-w-wrap mx-auto px-md py-2xl">
     <header class="mb-2xl">
       <Eyebrow class="mb-md">{labels.eyebrow} - {corteseSuffix}</Eyebrow>
