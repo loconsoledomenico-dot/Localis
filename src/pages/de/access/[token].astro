@@ -1,0 +1,7 @@
+---
+// Il player vive su /access/[token] e parla la lingua via ?lang=.
+// Questa rotta esiste solo perché i link localizzati del sito (/de/…)
+// portavano a un 404: reindirizza alla rotta vera con la lingua giusta.
+const { token } = Astro.params;
+return Astro.redirect(`/access/${token}?lang=de`, 302);
+---
