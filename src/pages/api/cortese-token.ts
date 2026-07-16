@@ -31,6 +31,15 @@ import { rateLimit } from '../../lib/rate-limit';
 const FREE_GUIDE_BY_HOTEL: Record<string, string> = {
   'masseria-del-crocifisso': 'alberobello',  // Polignano → Valle d'Itria (trulli, UNESCO)
   'maison-levante': 'gargano-nord',          // Rodi Garganico → Gargano nord (la sua zona)
+  'trullo-aurora': 'alberobello',            // demo trullo → trulli
+  // Demo Giro 1 Bari (17/07/2026) — la guida omaggio della zona di ciascun prospect
+  'bra-hotel-draft': 'bari-vecchia',
+  'palazzo-calo-draft': 'bari-vecchia',
+  'dilman-draft': 'bari-vecchia',
+  'bari-antica-draft': 'bari-vecchia',
+  'agriturismo-fasano-draft': 'fasano',
+  'lama-san-giorgio-draft': 'bari-tavola',   // agriturismo → il racconto della tavola barese
+  'tenuta-lo-cuoccio-draft': 'bari-vecchia',
 };
 
 function siteBase(): string {
