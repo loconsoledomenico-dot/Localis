@@ -16,7 +16,14 @@ const result = { healthy: null, hits: 0, statuses: [], cspBlocked: [], error: nu
 
 let browser;
 try {
-  browser = await chromium.launch({ headless: true });
+  // Chrome di SISTEMA (channel), non il browser bundle Playwright: quest'ultimo
+  // sparisce agli aggiornamenti (2026-07: chromium_headless_shell mancante →
+  // canary morto). Fallback al bundle se Chrome di sistema non c'è.
+  try {
+    browser = await chromium.launch({ headless: true, channel: 'chrome' });
+  } catch {
+    browser = await chromium.launch({ headless: true });
+  }
   const ctx = await browser.newContext();
   // Consenso pre-impostato: CookieBanner fa partire localisGA4Init da solo.
   await ctx.addInitScript(() => {
