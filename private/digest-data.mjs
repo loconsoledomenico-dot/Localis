@@ -125,17 +125,63 @@ const ga4ScanQ = await runReport({
 });
 const ga4ScanMap = {};
 for (const r of rows(ga4ScanQ)) { const p = r.dimensionValues[0]?.value; if (p && p !== '(not set)') ga4ScanMap[p] = num(r); }
-const srvScanMap = {};
+// Una sola chiamata al contatore server (21gg): serve a scanCompare, alle
+// pagine viste consenso-indipendenti e al confronto con la settimana prima.
+let srv = null;
 try {
   const token = process.env.ADMIN_TOKEN || '';
   if (token) {
-    const res = await fetch(`https://localis.guide/api/scan-counts?token=${encodeURIComponent(token)}&days=7`);
-    if (res.ok) {
-      const j = await res.json();
-      for (const [k, v] of Object.entries(j.totals || {})) if (!k.startsWith('q:')) srvScanMap[k] = v;
-    }
+    const res = await fetch(`https://localis.guide/api/scan-counts?token=${encodeURIComponent(token)}&days=21`);
+    if (res.ok) srv = await res.json();
   }
 } catch { /* endpoint non raggiungibile: mostra solo GA4 */ }
+
+// Finestre di date allineate a GA4: '7daysAgo'..'today' = 8 giorni inclusi.
+const dayBack = (n) => { const d = new Date(today); d.setDate(today.getDate() - n); return ymd(d); };
+const win7 = Array.from({ length: 8 }, (_, i) => dayBack(i));
+const winPrev7 = Array.from({ length: 8 }, (_, i) => dayBack(i + 8));
+
+const srvScanMap = {};
+for (const day of win7) {
+  for (const [k, v] of Object.entries(srv?.byDay?.[day] || {})) {
+    if (!k.startsWith('q:')) srvScanMap[k] = (srvScanMap[k] || 0) + v;
+  }
+}
+
+// Pagine viste lato server: esistono solo dai giorni in cui l'edge function
+// conta. Se non c'è nessun giorno con dati, la sezione non si mostra affatto
+// (meglio niente che uno zero che sembra un crollo).
+const viewsByDay = srv?.views?.byDay || {};
+const viewsAvailable = Object.keys(viewsByDay).length > 0;
+const sumViews = (days) => days.reduce((a, d) => a + (viewsByDay[d] || 0), 0);
+let zeroStreak = 0;
+if (viewsAvailable) {
+  const known = Object.keys(viewsByDay).sort();
+  const oldest = known[0];
+  for (let i = 1; i <= 21; i += 1) {          // parte da ieri, non da oggi
+    const d = dayBack(i);
+    if (d < oldest || (viewsByDay[d] || 0) > 0) break;
+    zeroStreak += 1;
+  }
+}
+const serverViews = viewsAvailable
+  ? {
+      yesterday: viewsByDay[ymd(yest)] || 0,
+      last7d: sumViews(win7),
+      prev7d: sumViews(winPrev7),
+      zeroStreak,
+      topPages21d: Object.entries(srv?.views?.byPath || {})
+        .filter(([p]) => !isPartnerLanding(p))
+        .slice(0, 5)
+        .map(([path, views]) => ({ path, views })),
+    }
+  : null;
+
+// GA4 settimana precedente, per il confronto (non per il valore assoluto).
+const prevRange = [{ startDate: '15daysAgo', endDate: '8daysAgo' }];
+const totPrev = await runReport({ dateRanges: prevRange, metrics: [{ name: 'sessions' }, { name: 'totalUsers' }] });
+const totPrevRow = rows(totPrev)[0];
+const prev7d = { sessions: num(totPrevRow, 0), users: num(totPrevRow, 1) };
 const scanCompare = [...new Set([...Object.keys(srvScanMap), ...Object.keys(ga4ScanMap)])]
   .map((p) => ({ partner: p, server: srvScanMap[p] || 0, ga4: ga4ScanMap[p] || 0 }))
   .filter((x) => x.server > 0 || x.ga4 > 0)
@@ -187,8 +233,11 @@ console.log(JSON.stringify({
   date: ymd(yest),
   ga4: {
     sessions: num(totRow, 0), users: num(totRow, 1), pageviews: num(totRow, 2),
-    events, scansByPartner, provenance, site7d, funnel7d, scanCompare,
+    events, scansByPartner, provenance, site7d, prev7d, funnel7d, scanCompare,
   },
+  // Numeri veri, indipendenti dal consenso cookie. null = endpoint irraggiungibile
+  // o edge function non ancora attiva (in quel caso il digest resta GA4-only).
+  server: { reachable: srv !== null, views: serverViews },
   commits: { localis: commitsSince(LOCALIS), gallery: commitsSince(GALLERY) },
   recontact,
 }, null, 2));
