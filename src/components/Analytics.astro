@@ -7,12 +7,15 @@ const isProd = import.meta.env.PROD;
 ---
 {isProd && (
   <>
-    {/* Plausible — privacy-friendly aggregate */}
+    {/* Plausible — privacy-friendly aggregate.
+        data-exclude: le rotte /access/<token> hanno il JWT nel path (email +
+        session Stripe del cliente) e non vanno tracciate affatto. */}
     <script
       is:inline
       defer
       data-domain={domain}
-      src="https://plausible.io/js/script.tagged-events.js"
+      data-exclude="/access/*, /en/access/*, /de/access/*"
+      src="https://plausible.io/js/script.tagged-events.exclusions.js"
     ></script>
     <script is:inline>
       window.plausible = window.plausible || function() {
@@ -24,6 +27,20 @@ const isProd = import.meta.env.PROD;
       <>
         {/* Analytics SDKs - deferred until cookie consent is given (GDPR Art. 6) */}
         <script define:vars={{ ga4Id, posthogKey, posthogHost }} is:inline>
+          // I link di accesso hanno il JWT nel path (/access/<token>, /en/... , /de/...).
+          // Quel token contiene email del cliente e session id Stripe: non deve
+          // finire in nessun analytics, né come pagina né come referrer.
+          function localisSafePath(p) {
+            return String(p || '').replace(/^(\/(?:en|de))?\/access\/[^/?#]+/, '$1/access/[token]');
+          }
+          function localisSafeUrl(u) {
+            try {
+              const parsed = new URL(u, window.location.origin);
+              parsed.pathname = localisSafePath(parsed.pathname);
+              return parsed.toString();
+            } catch (e) { return u; }
+          }
+
           // Resolve partner_id from URL / cookie / localStorage (no network call yet).
           let _partnerId = null;
           try {
@@ -124,7 +141,13 @@ const isProd = import.meta.env.PROD;
               // partner_id dentro la config: il primo page_view (quello della
               // scansione QR) deve già portare l'attribuzione, non solo gli
               // eventi successivi al gtag('set').
-              gtag('config', ga4Id, { ...baseParams, partner_id: pid, send_page_view: true });
+              gtag('config', ga4Id, {
+                ...baseParams,
+                partner_id: pid,
+                send_page_view: true,
+                page_path: localisSafePath(window.location.pathname + window.location.search),
+                page_location: localisSafeUrl(window.location.href),
+              });
               gtag('set', 'user_properties', { partner_id: pid });
               gtag('set', { ...baseParams, partner_id: pid });
             }
@@ -139,6 +162,17 @@ const isProd = import.meta.env.PROD;
                 capture_pageview: true,
                 autocapture: true,
                 disable_session_recording: isInternalTraffic,
+                // Toglie il JWT dalle proprietà di ogni evento, incluso il primo
+                // pageview e i referrer delle pagine successive.
+                sanitize_properties: function (props) {
+                  ['$current_url', '$initial_current_url', '$referrer', '$initial_referrer'].forEach(function (k) {
+                    if (typeof props[k] === 'string') props[k] = localisSafeUrl(props[k]);
+                  });
+                  ['$pathname', '$initial_pathname'].forEach(function (k) {
+                    if (typeof props[k] === 'string') props[k] = localisSafePath(props[k]);
+                  });
+                  return props;
+                },
               });
               // Etichetta leggibile della provenienza di QUESTA sessione, così ogni
               // session replay è già classificata (qr:{partner} / organic:{motore} /
