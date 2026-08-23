@@ -13,6 +13,10 @@ import type { Context } from '@netlify/edge-functions';
 
 const BOT = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|whatsapp|telegram|preview|headless|lighthouse|monitor|curl|wget|python-requests|axios|node-fetch|okhttp|go-http/i;
 
+// Quante volte rileggere e riprovare quando un'altra richiesta scrive per prima.
+// Oltre questo si rinuncia al conteggio: mai far aspettare la pagina.
+const MAX_ATTEMPTS = 4;
+
 export default async function scanCounter(request: Request, context: Context): Promise<Response> {
   const res = await context.next();
   try {
@@ -34,11 +38,26 @@ export default async function scanCounter(request: Request, context: Context): P
 
     const day = new Date().toISOString().slice(0, 10);
     const store = getStore({ name: 'scan-counts', consistency: 'strong' });
-    const rec = ((await store.get(day, { type: 'json' })) as Record<string, number> | null) || {};
-    if (scanKey) rec[scanKey] = (rec[scanKey] || 0) + 1;
-    rec[viewKey] = (rec[viewKey] || 0) + 1;
-    rec['v:__all'] = (rec['v:__all'] || 0) + 1;
-    await store.setJSON(day, rec);
+
+    // Leggi-modifica-riscrivi su un unico documento giornaliero: due richieste
+    // contemporanee leggevano lo stesso stato e la seconda sovrascriveva la
+    // prima. Con la scrittura condizionale sull'ETag il perdente se ne accorge
+    // e rilegge, invece di cancellare in silenzio il conteggio dell'altro.
+    for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+      const current = await store.getWithMetadata(day, { type: 'json' });
+      const rec = ((current?.data as Record<string, number> | undefined) ?? {}) as Record<string, number>;
+
+      if (scanKey) rec[scanKey] = (rec[scanKey] || 0) + 1;
+      rec[viewKey] = (rec[viewKey] || 0) + 1;
+      rec['v:__all'] = (rec['v:__all'] || 0) + 1;
+
+      const result = current?.etag
+        ? await store.setJSON(day, rec, { onlyIfMatch: current.etag })
+        : await store.setJSON(day, rec, { onlyIfNew: true });
+
+      if (result.modified) break;
+      // Perso: un'altra richiesta ha scritto per prima. Si rilegge e si riprova.
+    }
   } catch {
     /* non bloccare mai la pagina per un errore di conteggio */
   }
