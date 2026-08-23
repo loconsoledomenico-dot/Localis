@@ -12,6 +12,7 @@ import {
   type ProductSlug,
 } from '../../lib/stripe-prices';
 import { getActivePartner } from '../../lib/partners';
+import { sendGa4BeginCheckout } from '../../lib/ga4-mp';
 import type { Lang } from '../../lib/i18n';
 import { hasAllowedOrigin } from '../../lib/request-security';
 import type Stripe from 'stripe';
@@ -254,6 +255,29 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
   try {
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create(sessionParams as Stripe.Checkout.SessionCreateParams);
+
+    // begin_checkout lato server: il gemello client parte solo dopo il consenso
+    // cookie, mentre purchase (dal webhook) parte sempre. Senza questo l'imbuto
+    // in GA4 mostra piu' acquisti che avvii. Deduplicato via transaction_id.
+    // Ha un timeout stretto e non puo' propagare errori: non deve mai
+    // ritardare o rompere il pagamento.
+    await sendGa4BeginCheckout({
+      clientId: body.gaClientId || null,
+      transactionId: session.id,
+      valueCents: totalCents,
+      currency: 'eur',
+      guideSlugs: guide_slugs,
+      product,
+      partnerId: resolvedPartnerId,
+      lang,
+      trafficType: body.internal === '1' ? 'internal' : undefined,
+    }).catch((err: unknown) => {
+      // La funzione gestisce gia' i propri errori, ma sta nel percorso che
+      // incassa: se un giorno lanciasse, un guasto di GA4 impedirebbe di
+      // pagare. Qui la vendita vince sempre sulla sua misura.
+      console.error('[checkout] begin_checkout GA4 non inviato:', err instanceof Error ? err.message : 'unknown');
+    });
+
     if (redirectMode) {
       if (!session.url) {
         return redirectError(url.origin, fallbackCheckoutErrorPath(lang, product, guide_slugs[0]));

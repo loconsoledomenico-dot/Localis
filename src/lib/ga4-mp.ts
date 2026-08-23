@@ -41,36 +41,39 @@ function fallbackClientId(seed: string): string {
   return `${n}.${n}`;
 }
 
-export async function sendGa4Purchase(input: Ga4PurchaseInput): Promise<void> {
-  const mid = measurementId();
-  const apiSecret = process.env.GA4_API_SECRET;
-  if (!mid || !apiSecret) {
-    console.warn('[ga4-mp] GA4_MEASUREMENT_ID/PUBLIC_GA4_ID o GA4_API_SECRET non impostati — purchase server-side saltato');
-    return;
-  }
-
-  const clientId = input.clientId || fallbackClientId(input.transactionId);
-  const value = input.valueCents != null ? input.valueCents / 100 : 0;
-  const currency = (input.currency || 'eur').toUpperCase();
-
+/**
+ * Parametri comuni a purchase e begin_checkout: la coppia va letta insieme in
+ * GA4, quindi devono portare le stesse dimensioni o l'imbuto non si scompone.
+ */
+function commonParams(input: Ga4PurchaseInput, ctaSource: string): Record<string, unknown> {
   const params: Record<string, unknown> = {
     transaction_id: input.transactionId,
-    value,
-    currency,
+    value: input.valueCents != null ? input.valueCents / 100 : 0,
+    currency: (input.currency || 'eur').toUpperCase(),
     partner_id: input.partnerId || '(direct)',
     product: input.product,
     guide_count: input.guideSlugs.length,
     guide_slugs: input.guideSlugs.join(','),
     lang: input.lang,
-    cta_source: 'server_webhook',
+    cta_source: ctaSource,
     items: input.guideSlugs.map((slug) => ({ item_id: slug, item_name: slug, quantity: 1 })),
   };
   if (input.trafficType) params.traffic_type = input.trafficType;
+  return params;
+}
 
-  const body = {
-    client_id: clientId,
-    events: [{ name: 'purchase', params }],
-  };
+async function postToMeasurementProtocol(
+  eventName: string,
+  clientId: string,
+  params: Record<string, unknown>,
+  timeoutMs: number,
+): Promise<void> {
+  const mid = measurementId();
+  const apiSecret = process.env.GA4_API_SECRET;
+  if (!mid || !apiSecret) {
+    console.warn(`[ga4-mp] GA4_MEASUREMENT_ID/PUBLIC_GA4_ID o GA4_API_SECRET non impostati — ${eventName} server-side saltato`);
+    return;
+  }
 
   try {
     const res = await fetch(
@@ -78,15 +81,38 @@ export async function sendGa4Purchase(input: Ga4PurchaseInput): Promise<void> {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ client_id: clientId, events: [{ name: eventName, params }] }),
+        // Il checkout aspetta questa chiamata: meglio perdere un evento che
+        // far attendere chi sta comprando.
+        signal: AbortSignal.timeout(timeoutMs),
       },
     );
     if (!res.ok) {
       const detail = await res.text().catch(() => '');
-      console.error('[ga4-mp] invio purchase fallito', res.status, detail);
+      console.error(`[ga4-mp] invio ${eventName} fallito`, res.status, detail);
     }
   } catch (err) {
-    // Mai propagare: la consegna della guida è già avvenuta a monte.
-    console.error('[ga4-mp] errore invio purchase', err instanceof Error ? err.message : 'unknown');
+    // Mai propagare: la vendita conta piu' della sua misura.
+    console.error(`[ga4-mp] errore invio ${eventName}`, err instanceof Error ? err.message : 'unknown');
   }
+}
+
+export async function sendGa4Purchase(input: Ga4PurchaseInput): Promise<void> {
+  const clientId = input.clientId || fallbackClientId(input.transactionId);
+  await postToMeasurementProtocol('purchase', clientId, commonParams(input, 'server_webhook'), 4000);
+}
+
+/**
+ * `begin_checkout` lato server, dalla creazione della sessione Stripe.
+ *
+ * Perche' esiste: la versione client parte solo dopo il consenso cookie, quindi
+ * conta una frazione degli avvii — mentre `purchase` parte dal webhook e li
+ * conta tutti. Ne risultava un imbuto con piu' acquisti che avvii (misurato il
+ * 23/08: 2 begin_checkout in GA4 contro 9 sessioni reali su Stripe).
+ *
+ * Deduplica: stesso `transaction_id` = id sessione Stripe della versione client.
+ */
+export async function sendGa4BeginCheckout(input: Ga4PurchaseInput): Promise<void> {
+  const clientId = input.clientId || fallbackClientId(input.transactionId);
+  await postToMeasurementProtocol('begin_checkout', clientId, commonParams(input, 'server_checkout'), 1500);
 }
