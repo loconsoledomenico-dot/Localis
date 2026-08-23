@@ -372,7 +372,7 @@ const labels = {
       setPlayingState(p, true);
       if (!p.startedTracked && typeof window.localisTrack === 'function') {
         p.startedTracked = true;
-        window.localisTrack('guide_audio_started', { guide: p.slug, lang: p.lang });
+        window.localisTrack('guide_audio_started', { guide_slug: p.slug, lang: p.lang });
       }
     } catch {
       showError(p);
@@ -518,7 +518,7 @@ const labels = {
         if (pct >= m && !milestones.has(m)) {
           milestones.add(m);
           if (typeof window.localisTrack === 'function') {
-            window.localisTrack(`guide_audio_${m}_percent`, { guide: p.slug, lang: p.lang });
+            window.localisTrack(`guide_audio_${m}_percent`, { guide_slug: p.slug, lang: p.lang });
           }
         }
       }
@@ -530,7 +530,7 @@ const labels = {
       if (!p.completeTracked) {
         p.completeTracked = true;
         if (typeof window.localisTrack === 'function') {
-          window.localisTrack('guide_audio_complete', { guide: p.slug, lang: p.lang });
+          window.localisTrack('guide_audio_complete', { guide_slug: p.slug, lang: p.lang });
         }
         if (typeof window.plausible === 'function') {
           window.plausible('Audio Played Full', { props: { guide: p.slug } });
