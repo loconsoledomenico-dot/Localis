@@ -264,7 +264,9 @@ const isProd = import.meta.env.PROD;
                   if (pct >= m && !sent[m]) {
                     sent[m] = true;
                     if (typeof window.localisTrack === 'function') {
-                      window.localisTrack('scroll_depth', { percent: m, page: location.pathname });
+                      // Niente `page`: GA4 allega gia' pagePath a ogni evento,
+                      // e come parametro custom non era registrato quindi era cieco.
+                      window.localisTrack('scroll_depth', { percent: m });
                     }
                   }
                 });

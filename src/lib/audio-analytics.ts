@@ -79,7 +79,9 @@ export function createAudioAnalyticsTracker(options: AudioTrackerOptions): Audio
     const params: TrackParams = {
       audio_asset_id: audioAssetId,
       audio_context: audioContext,
-      language,
+      // La dimensione registrata in GA4 e' `lang` (come la mandano il player e
+      // il webhook). `language` non e' registrata: restava non interrogabile.
+      lang: language,
       page_path: pagePath,
       audio_duration_seconds: durationSeconds,
       // Backward-compatibility for a GA4 custom metric registered with a missing leading "a".
