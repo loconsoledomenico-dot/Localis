@@ -16,7 +16,8 @@ const { lang } = Astro.props;
     function track(name, params) {
       params = params || {};
       params.lang = lang;
-      params.page = location.pathname;
+      // Niente `page`: GA4 allega gia' pagePath a ogni evento, e come parametro
+      // custom non e' registrato — quindi era un dato cieco.
       try { if (typeof window.localisTrack === 'function') window.localisTrack(name, params); } catch (e) {}
     }
 

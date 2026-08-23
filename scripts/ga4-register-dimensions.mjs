@@ -38,6 +38,11 @@ const WANTED = [
     displayName: 'Motivo errore',
     description: 'Messaggio di errore su checkout_error. Serve a capire perche un pagamento non parte.',
   },
+  {
+    parameterName: 'qr_url',
+    displayName: 'QR URL',
+    description: 'URL completo di atterraggio della scansione QR. Aggiunto da attachAttribution.',
+  },
 ];
 
 async function client() {

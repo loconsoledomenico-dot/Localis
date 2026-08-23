@@ -13,7 +13,7 @@ import { describe, expect, it } from 'vitest';
 const REGISTERED = new Set([
   'audio_asset_id', 'audio_context', 'audio_type', 'cta_source', 'guide_slug',
   'landing_path', 'lang', 'listen_bucket', 'partner_id', 'product', 'qr_path',
-  'qr_source', 'reason', 'traffic_type',
+  'qr_source', 'qr_url', 'reason', 'traffic_type',
 ]);
 
 // Parametri che GA4 gestisce nativamente o che sono metriche, non dimensioni.
@@ -22,6 +22,9 @@ const BUILT_IN = new Set([
   'send_page_view', 'anonymize_ip', 'listen_seconds', 'max_position_seconds',
   'listen_percent', 'audio_duration_seconds', 'udio_duration_seconds',
   'guide_count', 'guide_slugs', 'session', 'percent',
+  // GA4 ricava nativamente sorgente/mezzo/campagna dai utm_* nell'URL:
+  // come parametri d'evento sarebbero un doppione.
+  'utm_source', 'utm_medium', 'utm_campaign', 'utm_content',
 ]);
 
 function sourceFiles(dir: string, acc: string[] = []): string[] {
@@ -33,15 +36,31 @@ function sourceFiles(dir: string, acc: string[] = []): string[] {
   return acc;
 }
 
-/** Nomi di parametro usati nelle chiamate di tracking del client. */
+/**
+ * Nomi di parametro che finiscono in un evento GA4. Due sorgenti, perche' i
+ * parametri non arrivano tutti da oggetti letterali: attachAttribution() ne
+ * aggiunge altri per assegnazione, e la prima versione di questo test non li
+ * vedeva — dava per pulito un `qr_url` che era orfano.
+ */
 function trackedParams(): { param: string; file: string }[] {
   const out: { param: string; file: string }[] = [];
   for (const file of sourceFiles('src')) {
     const src = readFileSync(file, 'utf8');
+    const short = file.split('\\').join('/');
+
+    // 1. oggetti letterali passati a localisTrack(...)
     for (const call of src.matchAll(/localisTrack\(\s*[^,]+,\s*\{([^}]*)\}/g)) {
       for (const key of call[1].matchAll(/(?:^|[\s,{])([a-z_][a-z0-9_]*)\s*:/g)) {
-        out.push({ param: key[1], file: file.split('\\').join('/') });
+        out.push({ param: key[1], file: short });
       }
+    }
+
+    // 2. parametri aggiunti per assegnazione: params.x = ... / if (!params.x)
+    //    Solo nei file che fanno davvero tracking: altrove `params` e' il nome
+    //    generico degli argomenti di Stripe e simili, e darebbe falsi positivi.
+    if (!src.includes('localisTrack')) continue;
+    for (const m of src.matchAll(/params\.([a-z_][a-z0-9_]*)\s*(?:=[^=]|\))/g)) {
+      out.push({ param: m[1], file: short });
     }
   }
   return out;
