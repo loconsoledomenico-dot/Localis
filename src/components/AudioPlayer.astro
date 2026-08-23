@@ -384,8 +384,52 @@ const labels = {
     setPlayingState(p, false);
   }
 
+  /**
+   * Il service worker viene registrato dalla pagina di accesso stessa, quindi
+   * alla PRIMA apertura del link la pagina non e' ancora controllata: install →
+   * activate → clients.claim() arrivano dopo. E la prima apertura e' il caso
+   * normale per un link di accesso. Aspettiamo che il controllo arrivi invece
+   * di rinunciare.
+   */
+  function waitForController(timeoutMs = 10000): Promise<ServiceWorker | null> {
+    if (!('serviceWorker' in navigator)) return Promise.resolve(null);
+    if (navigator.serviceWorker.controller) {
+      return Promise.resolve(navigator.serviceWorker.controller);
+    }
+    return new Promise((resolve) => {
+      let done = false;
+      const finish = (value: ServiceWorker | null) => {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        navigator.serviceWorker.removeEventListener('controllerchange', onChange);
+        resolve(value);
+      };
+      const onChange = () => finish(navigator.serviceWorker.controller);
+      const timer = setTimeout(() => finish(null), timeoutMs);
+      navigator.serviceWorker.addEventListener('controllerchange', onChange);
+      // ready si risolve quando esiste un SW attivo; il claim puo' arrivare
+      // subito prima e non far scattare controllerchange, quindi ricontrolliamo.
+      navigator.serviceWorker.ready
+        .then(() => {
+          if (navigator.serviceWorker.controller) finish(navigator.serviceWorker.controller);
+        })
+        .catch(() => finish(null));
+    });
+  }
+
   async function saveOffline(p: Player): Promise<void> {
-    if (!navigator.serviceWorker?.controller) return;
+    // Prima si dava feedback zero: senza controller la funzione usciva in
+    // silenzio e il pulsante sembrava rotto.
+    setOfflineState(p, 'downloading');
+    p.offlinePctLabel.textContent = `${p.el.dataset.labelDownloading} …`;
+    p.offlineFill.style.width = '0%';
+
+    const controller = await waitForController();
+    if (!controller) {
+      setOfflineState(p, 'interrupted');
+      return;
+    }
 
     // Need the signed URL — fetch it if not yet available
     if (!p.audioUrl) {
@@ -404,7 +448,7 @@ const labels = {
     p.offlinePctLabel.textContent = `${p.el.dataset.labelDownloading} 0%`;
     p.offlineFill.style.width = '0%';
 
-    navigator.serviceWorker.controller.postMessage({
+    controller.postMessage({
       type: 'SAVE_OFFLINE',
       url: p.audioUrl,
       slug: p.slug,
