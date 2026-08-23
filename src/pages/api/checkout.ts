@@ -21,17 +21,53 @@ const VALID_PRODUCTS = new Set<ProductSlug>([
   'bari-completa', 'valle-completa', 'gargano-completa', 'crociera',
 ]);
 
-const PRODUCT_DISPLAY_NAME: Record<ProductSlug, string> = {
-  single:              'Guida Localis',
-  custom:              'Localis - Selezione personalizzata',
-  tris:                'Localis - Pack 3 Guide',
-  sestina:             'Localis - Pack 6 Guide',
-  'puglia-completa':   'Puglia Completa — 18 guide',
-  'bari-completa':     'Localis - Pack 6 Guide (Intera Zona)',
-  'valle-completa':    'Localis - Pack 6 Guide (Intera Zona)',
-  'gargano-completa':  'Localis - Pack 6 Guide (Intera Zona)',
-  crociera:            'Pacchetto Crociera Localis',
+// Nome mostrato sulla pagina di pagamento Stripe. Rispecchia la terminologia
+// che l'utente ha appena letto sul sito nella sua lingua: era sempre in italiano
+// anche per en/de, ed e' l'ultima cosa che si legge prima di pagare.
+// Le tre zone erano indistinguibili ("Intera Zona" per tutte): ora sono nominate.
+const PRODUCT_DISPLAY_NAME: Record<Lang, Record<ProductSlug, string>> = {
+  it: {
+    single:              'Guida Localis',
+    custom:              'Localis - Selezione personalizzata',
+    tris:                'Localis - Pack 3 Guide',
+    sestina:             'Localis - Pack 6 Guide',
+    'puglia-completa':   'Puglia Completa — 18 guide',
+    'bari-completa':     'Localis - Pack 6 Guide — Bari (Intera Zona)',
+    'valle-completa':    'Localis - Pack 6 Guide — Valle d’Itria (Intera Zona)',
+    'gargano-completa':  'Localis - Pack 6 Guide — Gargano (Intera Zona)',
+    crociera:            'Pacchetto Crociera Localis',
+  },
+  en: {
+    single:              'Localis Guide',
+    custom:              'Localis - Custom selection',
+    tris:                'Localis - Pack 3 Guides',
+    sestina:             'Localis - Pack 6 Guides',
+    'puglia-completa':   'Complete Puglia — 18 guides',
+    'bari-completa':     'Localis - Pack 6 Guides — Bari (Complete Area)',
+    'valle-completa':    'Localis - Pack 6 Guides — Valle d’Itria (Complete Area)',
+    'gargano-completa':  'Localis - Pack 6 Guides — Gargano (Complete Area)',
+    crociera:            'Localis Cruise Pack',
+  },
+  de: {
+    single:              'Localis Guide',
+    custom:              'Localis - Individuelle Auswahl',
+    tris:                'Localis - Pack 3',
+    sestina:             'Localis - Pack 6',
+    'puglia-completa':   'Ganz Puglia — 18 Guides',
+    'bari-completa':     'Localis - Pack 6 — Bari (Komplette Zone)',
+    'valle-completa':    'Localis - Pack 6 — Valle d’Itria (Komplette Zone)',
+    'gargano-completa':  'Localis - Pack 6 — Gargano (Komplette Zone)',
+    crociera:            'Localis Kreuzfahrt-Paket',
+  },
 };
+
+// Stessa riga descrittiva di prima, tradotta. "racconti audio" e non
+// "audioguide": BRAND.md vieta "audioguida" nel copy visibile.
+function productDescription(lang: Lang, count: number): string {
+  if (lang === 'en') return `Localis · ${count} audio stories · Puglia`;
+  if (lang === 'de') return `Localis · ${count} Audio-Geschichten · Apulien`;
+  return `Localis · ${count} racconti audio · Puglia`;
+}
 
 const STORED_PRICE_PRODUCTS = new Set<ProductSlug>(['single', 'crociera']);
 
@@ -167,8 +203,8 @@ export const POST: APIRoute = async ({ request, cookies, url }) => {
         currency: 'eur',
         unit_amount: totalCents,
         product_data: {
-          name: PRODUCT_DISPLAY_NAME[product],
-          description: `Localis · ${guide_slugs.length} racconti audio · Puglia`,
+          name: PRODUCT_DISPLAY_NAME[lang][product],
+          description: productDescription(lang, guide_slugs.length),
           metadata: { product },
         },
       },

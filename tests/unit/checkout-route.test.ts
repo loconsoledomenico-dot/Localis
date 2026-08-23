@@ -184,3 +184,70 @@ describe('POST /api/checkout', () => {
     });
   });
 });
+
+// La pagina di pagamento mostrava sempre i nomi italiani, anche a en/de: e' la
+// schermata subito prima del pagamento, e la discrepanza con il sito e' una
+// causa tipica di abbandono.
+describe('POST /api/checkout — nomi prodotto per lingua', () => {
+  beforeEach(() => {
+    createSession.mockReset();
+    createSession.mockResolvedValue({ url: 'https://checkout.stripe.com/c/pay/i18n' });
+    getActivePartner.mockReset();
+    getActivePartner.mockResolvedValue(null);
+  });
+
+  async function productDataFor(product: string, lang: string) {
+    const request = new Request('https://localis.guide/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Origin: 'https://localis.guide' },
+      body: JSON.stringify({ product, lang }),
+    });
+    await POST({
+      request,
+      cookies: { get: () => undefined },
+      url: new URL(request.url),
+    } as never);
+    return createSession.mock.calls[0][0].line_items[0].price_data.product_data;
+  }
+
+  it('usa la terminologia tedesca del sito quando lang=de', async () => {
+    const pd = await productDataFor('bari-completa', 'de');
+
+    expect(pd.name).toContain('Komplette Zone');
+    expect(pd.name).not.toContain('Intera Zona');
+    expect(pd.description).toBe('Localis · 6 Audio-Geschichten · Apulien');
+  });
+
+  it('usa la terminologia inglese del sito quando lang=en', async () => {
+    const pd = await productDataFor('bari-completa', 'en');
+
+    expect(pd.name).toContain('Complete Area');
+    expect(pd.description).toBe('Localis · 6 audio stories · Puglia');
+  });
+
+  it('non cambia nulla per lang=it', async () => {
+    const pd = await productDataFor('bari-completa', 'it');
+
+    expect(pd.name).toContain('Intera Zona');
+    expect(pd.description).toBe('Localis · 6 racconti audio · Puglia');
+  });
+
+  it('nomina la zona invece di chiamarle tutte "Intera Zona"', async () => {
+    const bari = await productDataFor('bari-completa', 'it');
+    createSession.mockClear();
+    const gargano = await productDataFor('gargano-completa', 'it');
+
+    expect(bari.name).toContain('Bari');
+    expect(gargano.name).toContain('Gargano');
+    expect(bari.name).not.toBe(gargano.name);
+  });
+
+  // BRAND.md: "audioguida" solo in title/meta, mai nel copy visibile.
+  it('non usa mai "audioguida" nel copy mostrato su Stripe', async () => {
+    for (const lang of ['it', 'en', 'de']) {
+      createSession.mockClear();
+      const pd = await productDataFor('bari-completa', lang);
+      expect(`${pd.name} ${pd.description}`.toLowerCase()).not.toMatch(/audioguid|audioführer/);
+    }
+  });
+});
