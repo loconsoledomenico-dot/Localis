@@ -3,6 +3,7 @@ export const prerender = true;
 import Layout from '../../components/Layout.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
 import GuideCard from '../../components/GuideCard.astro';
+import HeroAudioSample from '../../components/HeroAudioSample.astro';
 import PriceCard from '../../components/PriceCard.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
 import FollowCta from '../../components/FollowCta.astro';
@@ -24,8 +25,8 @@ const AREA_CITY_MAP: Record<AreaKey, Set<string>> = {
   bari: new Set(['bari']),
   // Polignano sta in Valle d'Itria per scelta commerciale (2026-06-13):
   // a un ospite di Polignano si propongono trulli e borghi, non San Nicola.
-  valle: new Set(['polignano', 'alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano']),
-  gargano: new Set(['gargano', 'vieste', 'rodi-garganico', 'peschici', 'vico-del-gargano', 'manfredonia', 'isole-tremiti']),
+  valle: new Set(['polignano', 'alberobello', 'locorotondo', 'martina-franca', 'cisternino', 'ostuni', 'fasano', 'noci']),
+  gargano: new Set(['gargano', 'vieste', 'rodi-garganico', 'peschici', 'vico-del-gargano', 'manfredonia', 'isole-tremiti', 'carpino', 'cagnano-varano']),
 };
 
 function resolveArea(city: string): AreaKey {
@@ -37,6 +38,16 @@ function resolveArea(city: string): AreaKey {
 
 const { partner } = Astro.props;
 const area = resolveArea(partner.data.city);
+
+// Chi scansiona il QR non ha mai sentito Localis: senza un assaggio qui,
+// gli si chiede di pagare 4,99 EUR al buio. Trailer della zona in cui si
+// trova, non della zona che vende di piu'.
+const AREA_TRAILER: Record<AreaKey, { src: string; slug: string }> = {
+  bari: { src: '/audio/trailers/bari/bari-vecchia-trailer-it.mp3', slug: 'bari-vecchia' },
+  valle: { src: '/audio/trailers/valle-d-itria/alberobello-trailer-it.mp3', slug: 'alberobello' },
+  gargano: { src: '/audio/trailers/gargano/gargano-trailer-it.mp3', slug: 'gargano-vieste' },
+};
+const trailer = AREA_TRAILER[area];
 
 const guides = (await getCollection('guides'))
   .filter((g) => AREA_CITY_MAP[area].has(g.data.city) && g.data.status === 'live')
@@ -86,6 +97,11 @@ const welcomeIt =
         Ascolta la Puglia come una storia. <em class="text-accent">Per capire dove sei.</em>
       </h1>
       <p class="text-lg text-ink-muted max-w-prose mx-auto">{welcomeIt}</p>
+
+      <div class="mt-lg flex flex-col items-center">
+        <HeroAudioSample lang="it" src={trailer.src} guideSlug={trailer.slug} context="partner" />
+        <p class="font-body text-xs text-ink-subtle mt-sm">Anteprima gratuita · nessuna app · offline dopo l&rsquo;acquisto</p>
+      </div>
     </div>
   </section>
 
