@@ -1,3 +1,5 @@
+import { SOCIAL } from './social';
+
 import type { Lang } from './i18n';
 
 export function organizationLD() {
@@ -5,7 +7,12 @@ export function organizationLD() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Localis',
+    // Chi cerca 'localis guide' cerca noi: dichiararlo come nome
+    // alternativo, e legare il profilo omonimo, e' l'unico segnale di
+    // entita' che possiamo dare da qui contro le omonimie.
+    alternateName: 'Localis Guide',
     url: 'https://localis.guide',
+    sameAs: [SOCIAL.instagram].filter(Boolean),
     logo: 'https://localis.guide/favicon.svg',
     founder: [
       { '@type': 'Person', name: 'Domenico Loconsole' },
