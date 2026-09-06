@@ -87,3 +87,6 @@ __pycache__/
 .firecrawl/
 .vercel
 .env.vercel.local
+
+# Codici di recupero Stripe: mai in git
+stripe_backup_code.txt
