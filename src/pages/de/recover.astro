@@ -1,33 +1,34 @@
 ---
 export const prerender = true;
-import Layout from '../components/Layout.astro';
+import Layout from '../../components/Layout.astro';
 ---
-<Layout title="Recupera l'accesso · Localis" lang="it" robots="noindex,nofollow" langUrlsOverride={{ it: '/recover/', en: '/en/recover/', de: '/de/recover/' }}>
+<Layout title="Zugang wiederherstellen · Localis" lang="de" robots="noindex,nofollow" langUrlsOverride={{ it: '/recover/', en: '/en/recover/', de: '/de/recover/' }}>
   <main class="max-w-narrow mx-auto px-md py-3xl">
-    <h1 class="font-display text-4xl text-ink mb-md">Recupera la tua guida</h1>
+    <h1 class="font-display text-4xl text-ink mb-md">Deine Erzählung zurückholen</h1>
     <p class="text-base text-ink-muted mb-xl max-w-prose">
-      Hai perso la mail, o il link ha smesso di funzionare? Scrivi la stessa email che hai usato all&rsquo;acquisto. Il link nuovo arriva in una trentina di secondi.</p>
+      E-Mail verlegt, oder der Link geht nicht mehr? Gib dieselbe Adresse ein, mit der du bezahlt hast. Der neue Link ist in etwa 30 Sekunden da.
+    </p>
 
     <form id="recover-form" class="flex flex-col gap-md max-w-[28rem]">
-      <label for="email" class="text-sm font-semibold text-ink">Email d'acquisto</label>
+      <label for="email" class="text-sm font-semibold text-ink">E-Mail-Adresse vom Kauf</label>
       <input
         type="email"
         id="email"
         name="email"
         required
-        placeholder="tu@esempio.com"
+        placeholder="du@beispiel.com"
         class="px-md py-sm bg-surface border border-border rounded-md text-base focus:border-accent focus:outline-none"
       />
       <button
         type="submit"
         class="px-md py-sm bg-ink text-surface rounded-md font-semibold text-sm hover:bg-ink/90 transition-colors duration-fast"
       >
-        Recupera accesso
+        Link schicken
       </button>
     </form>
 
     <div id="recover-result" class="mt-lg max-w-[28rem] hidden">
-      <p class="text-base text-success">Email inviata. Controlla la tua casella (anche spam).</p>
+      <p class="text-base text-success">E-Mail unterwegs. Schau im Posteingang nach — und im Spam-Ordner.</p>
     </div>
   </main>
 </Layout>
@@ -43,30 +44,30 @@ import Layout from '../components/Layout.astro';
 
     const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
     submit.disabled = true;
-    submit.textContent = 'Invio in corso...';
+    submit.textContent = 'Wird gesendet...';
 
     try {
       const res = await fetch('/api/recover', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, lang: 'it' }),
+        body: JSON.stringify({ email, lang: 'de' }),
       });
 
       if (res.status === 429) {
-        alert('Troppe richieste. Riprova tra un\'ora.');
+        alert('Zu viele Anfragen. Bitte in einer Stunde noch einmal versuchen.');
         submit.disabled = false;
-        submit.textContent = 'Recupera accesso';
+        submit.textContent = 'Link schicken';
         return;
       }
 
-      // We always show success regardless of whether email matched (privacy)
+      // Erfolg wird immer angezeigt, egal ob die E-Mail passt (Datenschutz).
       form.style.display = 'none';
       result?.classList.remove('hidden');
     } catch (err) {
       console.error('[recover]', err);
-      alert('Errore di rete. Riprova.');
+      alert('Netzwerkfehler. Bitte noch einmal versuchen.');
       submit.disabled = false;
-      submit.textContent = 'Recupera accesso';
+      submit.textContent = 'Link schicken';
     }
   });
 </script>
