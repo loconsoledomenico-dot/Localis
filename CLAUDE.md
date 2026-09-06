@@ -47,7 +47,9 @@ Sito audioguide (Astro 6, MDX, Netlify, R2 per audio, pnpm). Risposte in italian
 
 ## Deploy
 
-- **Netlify, NON Vercel.** Push su `main` → deploy automatico. Verifica che il deploy parta davvero.
+- **Vercel, NON Netlify** (migrato 2026-09-06). Push su `main` → deploy automatico. Verifica che il deploy parta davvero.
+- Repo: `luigiloconsole72-creator/Localis` (trasferito da Domenico il 2026-09-06).
+- Storage: Upstash Redis via `src/lib/kv.ts`, non piu' Netlify Blobs.
 
 ## Multilang
 
