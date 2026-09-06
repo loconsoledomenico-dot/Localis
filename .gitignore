@@ -85,3 +85,5 @@ __pycache__/
 
 # Firecrawl scraped output (local research cache)
 .firecrawl/
+.vercel
+.env.vercel.local

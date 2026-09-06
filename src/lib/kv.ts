@@ -33,7 +33,12 @@ let client: Redis | null | undefined;
 function redis(): Redis | null {
   if (client !== undefined) return client;
   const creds = credentials();
-  client = creds ? new Redis({ url: creds.url, token: creds.token }) : null;
+  // automaticDeserialization: false — il client Upstash altrimenti fa
+  // JSON.parse da solo in lettura, e qui i valori SONO gia' stringhe JSON:
+  // tornerebbe un oggetto, String() lo renderebbe '[object Object]' e il
+  // JSON.parse successivo fallirebbe restituendo null. Cioe' un cliente
+  // pagante senza accesso, senza un errore visibile.
+  client = creds ? new Redis({ url: creds.url, token: creds.token, automaticDeserialization: false }) : null;
   return client;
 }
 
