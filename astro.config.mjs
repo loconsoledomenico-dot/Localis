@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
-import netlify from '@astrojs/netlify';
+import vercel from '@astrojs/vercel';
 
 import mdx from '@astrojs/mdx';
 
@@ -10,7 +10,9 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://localis.guide',
   output: 'server',
-  adapter: netlify({
+  adapter: vercel({
+    // L'audio completo delle guide vive su R2, non nel bundle: escluderlo
+    // tiene la funzione leggera (e impedisce che finisca servito per sbaglio).
     excludeFiles: [
       './public/audio/guides/**',
       './public/video/**',

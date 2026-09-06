@@ -2,7 +2,7 @@
 // scan-counter). Protetto da ADMIN_TOKEN. Uso:
 //   /api/scan-counts?token=...&days=14
 import type { APIRoute } from 'astro';
-import { kvGetJSON } from '../../lib/kv';
+import { kvHGetAll } from '../../lib/kv';
 
 export const prerender = false;
 
@@ -25,7 +25,7 @@ export const GET: APIRoute = async ({ url }) => {
     const d = new Date(now);
     d.setUTCDate(now.getUTCDate() - i);
     const day = d.toISOString().slice(0, 10);
-    const rec = await kvGetJSON<Record<string, number>>('scan-counts', day);
+    const rec = await kvHGetAll('scan-counts', day);
     if (!rec || !Object.keys(rec).length) continue;
 
     const scans: Record<string, number> = {};

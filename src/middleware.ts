@@ -1,4 +1,5 @@
 import { defineMiddleware } from 'astro:middleware';
+import { kvHIncrBy } from './lib/kv';
 import {
   LANG_COOKIE_NAME,
   allLangUrls,
@@ -9,6 +10,26 @@ import {
 } from './lib/i18n';
 
 const PARTNER_COOKIE_NAME = 'lg_partner';
+
+// Conteggio scansioni indipendente dal consenso cookie: GA4 e PostHog
+// partono solo dopo l'accettazione e vedono una frazione del traffico
+// (misurato: 5 scansioni su 34). Aggregato per giorno, nessun IP, nessun
+// identificatore: solo un contatore per partner.
+const BOT = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|whatsapp|telegram|preview|headless|lighthouse|monitor|curl|wget|python-requests|axios|node-fetch|okhttp|go-http/i;
+
+async function countScan(request: Request, partnerSlug: string): Promise<void> {
+  try {
+    if (request.method !== 'GET') return;
+    const url = new URL(request.url);
+    if (url.searchParams.get('localis_internal') === '1') return; // canary/test interni
+    const ua = request.headers.get('user-agent') || '';
+    if (!ua || BOT.test(ua)) return;
+    const day = new Date().toISOString().slice(0, 10);
+    await kvHIncrBy('scan-counts', day, partnerSlug);
+  } catch {
+    /* un contatore che fallisce non deve mai impedire la pagina */
+  }
+}
 const MAX_AGE_DAYS = 30;
 const MAX_AGE_SECONDS = MAX_AGE_DAYS * 24 * 60 * 60;
 

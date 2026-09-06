@@ -11,7 +11,11 @@ Disallow: /access/
 Disallow: /api/
 Disallow: /thanks
 Disallow: /access-invalid
+Disallow: /en/access-invalid
+Disallow: /de/access-invalid
 Disallow: /recover
+Disallow: /en/recover
+Disallow: /de/recover
 
 Sitemap: ${sitemapUrl}
 `;

@@ -1,0 +1,9 @@
+# Vercel carica tutto cio' che non e' ignorato da git. private/ non lo e',
+# e pesa 6,3 GB di master audio (private/audio): ogni deploy li spediva,
+# e il deploy del 2026-09-06 e' morto dopo 46 minuti sul caricamento.
+# Il sito non ne importa niente — l'audio pubblicato vive su R2.
+private/
+
+# Non servono al build del sito
+tests/
+docs/
