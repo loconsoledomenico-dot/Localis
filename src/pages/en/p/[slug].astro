@@ -1,5 +1,8 @@
 ---
-export const prerender = true;
+// SSR e non prerender: le scansioni QR vanno contate lato server, e il
+// middleware non gira sulle pagine statiche servite dalla CDN. A questi
+// volumi il costo di rendere a ogni richiesta e' nullo.
+export const prerender = false;
 import Layout from '../../../components/Layout.astro';
 import Eyebrow from '../../../components/Eyebrow.astro';
 import GuideCard from '../../../components/GuideCard.astro';
@@ -8,18 +11,8 @@ import PriceCard from '../../../components/PriceCard.astro';
 import SectionDivider from '../../../components/SectionDivider.astro';
 import FollowCta from '../../../components/FollowCta.astro';
 import { getCollection } from 'astro:content';
+import { getActivePartner } from '../../../lib/partners';
 
-export async function getStaticPaths() {
-  const partners = await getCollection('partners');
-  return partners
-    .filter((p) => p.data.status === 'active')
-    // infopoint-bari ha una landing EN dedicata (route statica): la dinamica la salta.
-    .filter((p) => p.data.slug !== 'infopoint-bari')
-    .map((p) => ({
-      params: { slug: p.data.slug },
-      props: { partner: p },
-    }));
-}
 
 type AreaKey = 'bari' | 'valle' | 'gargano';
 
@@ -36,7 +29,8 @@ function resolveArea(city: string): AreaKey {
   return 'bari';
 }
 
-const { partner } = Astro.props;
+const partner = await getActivePartner(Astro.params.slug ?? '');
+if (!partner) return Astro.rewrite('/404');
 const slug = partner.data.slug;
 const area = resolveArea(partner.data.city);
 
