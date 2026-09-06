@@ -95,9 +95,18 @@ export async function kvHIncrBy(name: string, key: string, field: string, by = 1
 export async function kvHGetAll(name: string, key: string): Promise<Record<string, number>> {
   const r = redis();
   if (!r) return JSON.parse(memory.get(k(name, key)) || '{}') as Record<string, number>;
-  const rec = await r.hgetall<Record<string, string | number>>(k(name, key));
-  if (!rec) return {};
-  return Object.fromEntries(Object.entries(rec).map(([f, v]) => [f, Number(v)]));
+  // Con automaticDeserialization disattivata, hgetall torna l'array piatto
+  // [campo, valore, campo, valore, ...] invece di un oggetto. Va ricomposto
+  // a mano: passarci sopra con Object.entries darebbe gli indici numerici.
+  const raw = await r.hgetall(k(name, key));
+  if (!raw) return {};
+  const out: Record<string, number> = {};
+  if (Array.isArray(raw)) {
+    for (let i = 0; i + 1 < raw.length; i += 2) out[String(raw[i])] = Number(raw[i + 1]);
+  } else {
+    for (const [f, v] of Object.entries(raw as Record<string, unknown>)) out[f] = Number(v);
+  }
+  return out;
 }
 
 /** Solo per i test: svuota il fallback in memoria. */
